@@ -1,0 +1,1159 @@
+{
+  "organization": "CURIUM",
+  "scan_time": "2025-08-31T23:05:11.319403",
+  "statistics": {
+    "total_iocs": 8,
+    "processed": 8,
+    "found_in_vt": 6,
+    "malicious": 5,
+    "suspicious": 0,
+    "harmless": 1,
+    "errors": 2
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "64.235.39.45",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:06.486731",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756568569,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "64.235.36.0/22",
+        "asn": 26277,
+        "as_owner": "SERVERPOINT",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "srvr.x69.lol"
+        },
+        "validity": {
+          "not_after": "2023-12-03 06:43:06",
+          "not_before": "2023-09-04 06:43:07"
+        },
+        "version": "V3",
+        "serial_number": "4416a3baa3c773391f1063438f0bb870a5c",
+        "thumbprint": "f39797a384f137d8938474b340c4ef733ac49e86",
+        "signature_algorithm": null,
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "c405483789ceae31aee606a8c0ec508ec12ce03b4fd825baf1c27f262c6982652e4da0d956150d89a485cf8055b58388c50039af5134d190b7e9baef4067e76a2f9d0e05c6e8a2f9bebd174d84c7aa30bd6b17fe6536e2540085c3ff1623a446d195a1ecf63909f10b17e1e844855f08b913dc44d4f666a6f7b96d4ec5a89e0473edcf1dc257bcd73a9a7bd9d3113fe31d66e2cf7d4538fedcfbc8c0454b0f9c0d7890312a53c1910b6bef8e07745b58d760d89b1044bdd54d5dd6fa444e9bedaa16843ac7d4ed87a2f4f0ca2f38cdda954101315b6837ac2870491005f8ef79725c817e5aabff54cd764c5771271faad75ae20c388eff9effef136e4f4c1333",
+            "exponent": "10001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ad96d86b34e11c2d3d5508f7111adf9d91"
+      },
+      "whois_info": "NetRange: 64.235.32.0 - 64.235.63.255\nCIDR: 64.235.32.0/19\nNetName: PREMIANET\nNetHandle: NET-64-235-32-0-1\nParent: NET64 (NET-64-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: ServerPoint.com (AHOSTI)\nRegDate: 2002-09-11\nUpdated: 2023-04-11\nRef: https://rdap.arin.net/registry/ip/64.235.32.0\nOrgName: ServerPoint.com\nOrgId: AHOSTI\nAddress: 10620 Southern Highlands\r\nAddress: Suite 110-491\nCity: Las Vegas\nStateProv: NV\nPostalCode: 89141\nCountry: US\nRegDate: 2002-06-25\nUpdated: 2023-04-24\nRef: https://rdap.arin.net/registry/entity/AHOSTI\nOrgAbuseHandle: PNA11-ARIN\nOrgAbuseName: PremiaNet Network Abuse\nOrgAbusePhone: +1-888-605-6775 \nOrgAbuseEmail: noc@serverpoint.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/PNA11-ARIN\nOrgNOCHandle: PNA12-ARIN\nOrgNOCName: PremiaNet Network Administration\nOrgNOCPhone: +1-888-605-6775 \nOrgNOCEmail: noc@serverpoint.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/PNA12-ARIN\nOrgTechHandle: PTSD-ARIN\nOrgTechName: PremiaNet Technical Support Division\nOrgTechPhone: +1-888-605-6775 \nOrgTechEmail: noc@serverpoint.com\nOrgTechRef: https://rdap.arin.net/registry/entity/PTSD-ARIN\nRAbuseHandle: PNA11-ARIN\nRAbuseName: PremiaNet Network Abuse\nRAbusePhone: +1-888-605-6775 \nRAbuseEmail: noc@serverpoint.com\nRAbuseRef: https://rdap.arin.net/registry/entity/PNA11-ARIN\nRTechHandle: PTSD-ARIN\nRTechName: PremiaNet Technical Support Division\nRTechPhone: +1-888-605-6775 \nRTechEmail: noc@serverpoint.com\nRTechRef: https://rdap.arin.net/registry/entity/PTSD-ARIN\nRNOCHandle: PNA12-ARIN\nRNOCName: PremiaNet Network Administration\nRNOCPhone: +1-888-605-6775 \nRNOCEmail: noc@serverpoint.com\nRNOCRef: https://rdap.arin.net/registry/entity/PNA12-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "64.235.60.123",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:07.059031",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 2,
+      "harmless_count": 60,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756568554,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "64.235.60.0/23",
+        "asn": 26277,
+        "as_owner": "SERVERPOINT",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "GB",
+          "ST": "Greater Manchester",
+          "L": "Salford",
+          "O": "Sectigo Limited",
+          "CN": "Sectigo RSA Domain Validation Secure Server CA"
+        },
+        "subject": {
+          "CN": "*.msmsvr.com"
+        },
+        "validity": {
+          "not_after": "2023-01-31 23:59:59",
+          "not_before": "2022-01-31 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "e7991fd041bafaa1a9aae78b44aa3389",
+        "thumbprint": "2c13cd5e2dd5e6da7726a44c7e52197c0eac3379",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00a8d07669f294eece7d57b5fcc0fccc7049271d638840e9752da223bbfbfb94977d1e7ec5ed75296957c92634ea43dd1ff1143c529f8c008c0b15785f594f39ef0c8ea4360cabf0a21be1576021983ba12ca4af9600d741388917d1df98218932325946c667a52d5a15422c50bbebf7a032fa25845cbdda399bcb6bf9b8669b26e73481cf3d7ddfc07d707a4c1b0839f99c1bc3aae6a61a46f3085a5f1184a18fcba3c5e9f7abd995b9bd7e37db35901dbb3593b461740adafb514a4d12038f11dc0a3893117182528939814bea121f5dfb09d38718793f0c6fb45a535964629333521505d602e48e2b7db8351016e0fc57982a356326d1318a24178856e69215",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "2ad2ad00000000022c2ad2ad2ad2ad1f4989c319e75da83988253a39553038"
+      },
+      "whois_info": "NetRange: 64.235.32.0 - 64.235.63.255\nCIDR: 64.235.32.0/19\nNetName: PREMIANET\nNetHandle: NET-64-235-32-0-1\nParent: NET64 (NET-64-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: ServerPoint.com (AHOSTI)\nRegDate: 2002-09-11\nUpdated: 2023-04-11\nRef: https://rdap.arin.net/registry/ip/64.235.32.0\nOrgName: ServerPoint.com\nOrgId: AHOSTI\nAddress: 10620 Southern Highlands\r\nAddress: Suite 110-491\nCity: Las Vegas\nStateProv: NV\nPostalCode: 89141\nCountry: US\nRegDate: 2002-06-25\nUpdated: 2023-04-24\nRef: https://rdap.arin.net/registry/entity/AHOSTI\nOrgNOCHandle: PNA12-ARIN\nOrgNOCName: PremiaNet Network Administration\nOrgNOCPhone: +1-888-605-6775 \nOrgNOCEmail: noc@serverpoint.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/PNA12-ARIN\nOrgTechHandle: PTSD-ARIN\nOrgTechName: PremiaNet Technical Support Division\nOrgTechPhone: +1-888-605-6775 \nOrgTechEmail: noc@serverpoint.com\nOrgTechRef: https://rdap.arin.net/registry/entity/PTSD-ARIN\nOrgAbuseHandle: PNA11-ARIN\nOrgAbuseName: PremiaNet Network Abuse\nOrgAbusePhone: +1-888-605-6775 \nOrgAbuseEmail: noc@serverpoint.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/PNA11-ARIN\nRAbuseHandle: PNA11-ARIN\nRAbuseName: PremiaNet Network Abuse\nRAbusePhone: +1-888-605-6775 \nRAbuseEmail: noc@serverpoint.com\nRAbuseRef: https://rdap.arin.net/registry/entity/PNA11-ARIN\nRTechHandle: PTSD-ARIN\nRTechName: PremiaNet Technical Support Division\nRTechPhone: +1-888-605-6775 \nRTechEmail: noc@serverpoint.com\nRTechRef: https://rdap.arin.net/registry/entity/PTSD-ARIN\nRNOCHandle: PNA12-ARIN\nRNOCName: PremiaNet Network Administration\nRNOCPhone: +1-888-605-6775 \nRNOCEmail: noc@serverpoint.com\nRNOCRef: https://rdap.arin.net/registry/entity/PNA12-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "02a3296238a3d127a2e517f4949d31914c15d96726fb4902322c065153b364b2",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:07.882889",
+      "vt_found": true,
+      "malicious_count": 54,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 76,
+      "first_seen": 1555518802,
+      "last_seen": 1754306735,
+      "reputation": -7,
+      "names": [
+        "mscorsvw.exe",
+        "output.124410452.txt",
+        "mscorsvw-Iviz.exe",
+        "9DD7C75B1C175AC99868969449F77D3E"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 15360,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "9dd7c75b1c175ac99868969449f77d3e",
+        "sha1": "b6e99e44806474eb6ffcd32977ef6f3020641c3d",
+        "sha256": "02a3296238a3d127a2e517f4949d31914c15d96726fb4902322c065153b364b2",
+        "ssdeep": "384:enDgmI9k5iZRd/qzhbf1blxF+UutLJM5GKZR:GB5iZRd/ahbf1XbUJMgyR",
+        "tlsh": "T149621905B7E8D336E7BD0A768CB392505272F50A5836E61E7CC9245E0EE3B04C761BA3",
+        "vhash": "214036551511308210171010",
+        "pe_info": {
+          "timestamp": 1535916606,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 20190,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 74546.86,
+              "filetype": "unknown",
+              "entropy": 3.314629316329956,
+              "sha256": "a9d04345bf0212b5d6f6daadc31c5e8cf7c7f3fa81c45ea77ca39d3660fe92f9",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 274774.31,
+              "virtual_address": 8192,
+              "entropy": 5.49,
+              "raw_size": 12288,
+              "flags": "rx",
+              "virtual_size": 12012,
+              "md5": "80501a87d4dbe87a92cfa1fb1c8f8d03"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 162936.0,
+              "virtual_address": 24576,
+              "entropy": 3.43,
+              "raw_size": 2048,
+              "flags": "r",
+              "virtual_size": 1560,
+              "md5": "442eaff5cff61ce3a07726c4220890a1"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 32768,
+              "entropy": 0.08,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "5578025c3c68985476c275cabe52d578"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "assembly",
+          "direct-cpu-clock-access",
+          "long-sleeps",
+          "detect-debug-environment",
+          "runtime-modules"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 31,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "downloader"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/syskit",
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "msil"
+            },
+            {
+              "count": 7,
+              "value": "syskit"
+            },
+            {
+              "count": 6,
+              "value": "jalapeno"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250803",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Win32.AdLoad.tseW"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Gen:Variant.Jalapeno.18220"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "exe.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1733586676f77d3e"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Backdoor-Syskit!9DD7C75B1C17"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Backdoor.Agent.Syskit"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5417",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.1090543"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "07d123364d8d04e3fe0bfa4e0e23ddc7050ef039602ecd72baed70e6553c3ae4",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:08.669209",
+      "vt_found": true,
+      "malicious_count": 54,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 76,
+      "first_seen": 1534781214,
+      "last_seen": 1755595025,
+      "reputation": -8,
+      "names": [
+        "BAK.exe",
+        "Vault.exe.bad",
+        "cscdll.exe.bad",
+        "gpsvc.exe.bad",
+        "usbceip.exe",
+        "D2870D1D08020ED9633E91F91931953B"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 14848,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "d2870d1d08020ed9633e91f91931953b",
+        "sha1": "07b5e2290b68fe40bc2c978a659448a31de4414c",
+        "sha256": "07d123364d8d04e3fe0bfa4e0e23ddc7050ef039602ecd72baed70e6553c3ae4",
+        "ssdeep": "384:WMVzRnhejWWLW1zchBS2WXhbf1J1xF+UIfLJMmj1FWk:WY7zcUhbf1VbUJMmjv",
+        "tlsh": "T1F4621A0177E8C37AC3BD0B794CB3966142B3E6068822DB5E3DC9145E1EE3B45C751BA2",
+        "vhash": "214036551511208210171010",
+        "pe_info": {
+          "timestamp": 1520289259,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 20026,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 65960.17,
+              "filetype": "unknown",
+              "entropy": 3.287815570831299,
+              "sha256": "94e9c3b1c2c7e4a11967be92fb082001269b813d6ec2dae6efa958c10cd21951",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 300454.09,
+              "virtual_address": 8192,
+              "entropy": 5.41,
+              "raw_size": 12288,
+              "flags": "rx",
+              "virtual_size": 11848,
+              "md5": "be65db69cabdd00ef0b40f5a999791d9"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 79725.51,
+              "virtual_address": 24576,
+              "entropy": 4.07,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1440,
+              "md5": "66793089bda6fbe7aaf11360404bd320"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 32768,
+              "entropy": 0.08,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "1c86767b3d4e422cffb342eb2b40815a"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "long-sleeps",
+          "runtime-modules",
+          "direct-cpu-clock-access",
+          "assembly",
+          "detect-debug-environment",
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.msil/ardsow",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 28
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 14
+            },
+            {
+              "value": "ardsow",
+              "count": 6
+            },
+            {
+              "value": "jalapeno",
+              "count": 6
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.Win32.AdLoad.tseW"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Gen:Variant.Jalapeno.18220"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "exe.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.173002387931953b"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Backdoor-Syskit!D2870D1D0802"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Backdoor.Agent.Syskit"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Gen:Variant.Jalapeno.18220"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "d9ac9c950e5495c9005b04843a40f01fa49d5fd49226cb5b03a055232ffc36f3",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:09.277696",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "f71732f997c53fa45eef5c988697eb4aa62c8655d8f0be3268636fc23addd193",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/tortoiseshell-apt-supply-chain"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:09.903403",
+      "vt_found": true,
+      "malicious_count": 50,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1534775774,
+      "last_seen": 1755771251,
+      "reputation": -42,
+      "names": [
+        "mscorsvw.exe",
+        "475500.exe",
+        "D02E828D2451400C93CF17E9D1D495E4",
+        "2c35c9933f71ca52df10ad693077645e",
+        "Kswdmcapp.exe.bad"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 15360,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "d02e828d2451400c93cf17e9d1d495e4",
+        "sha1": "2ab2836d6e1980a7cc46583dd21a953b1f2e57a9",
+        "sha256": "f71732f997c53fa45eef5c988697eb4aa62c8655d8f0be3268636fc23addd193",
+        "ssdeep": "384:QnDgmI9k8ZRd/9zhbf1blxF+UutLJMVRqXWUIeW:sB8ZRd/lhbf1XbUJMfsI",
+        "tlsh": "T1C5620905B7E8D336E7FD0A768CB395505276E50A5836E61E6CC9244E1EE3B04C361BA3",
+        "vhash": "214036551511308210171010",
+        "pe_info": {
+          "timestamp": 1534610675,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 20214,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 77446.24,
+              "filetype": "unknown",
+              "entropy": 3.399196147918701,
+              "sha256": "5344f8b64f24707426a9efa07732785b0e311a253684def7209be501f1147055",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 273529.44,
+              "virtual_address": 8192,
+              "entropy": 5.5,
+              "raw_size": 12288,
+              "flags": "rx",
+              "virtual_size": 12036,
+              "md5": "d004040fa9290020775a2f4554f9297b"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 152252.75,
+              "virtual_address": 24576,
+              "entropy": 3.55,
+              "raw_size": 2048,
+              "flags": "r",
+              "virtual_size": 1628,
+              "md5": "0adce5772b8b12c42626706449fa9f5d"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 32768,
+              "entropy": 0.08,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "d42aa87d57bb752a64f5c72dcb39525d"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "assembly",
+          "runtime-modules",
+          "direct-cpu-clock-access",
+          "long-sleeps",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 13
+            },
+            {
+              "value": "jalapeno",
+              "count": 6
+            },
+            {
+              "value": "syskit",
+              "count": 4
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/jalapeno",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 25
+            },
+            {
+              "value": "downloader",
+              "count": 4
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250821",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Trojan.Win32.AdLoad.tseW"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Gen:Variant.Jalapeno.18220"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "exe.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1735026373d495e4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Backdoor-Syskit!D02E828D2451"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Backdoor.Agent.Syskit"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5429",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.1144667"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://aka.ms/threatactorsblog",
+        "sources": [
+          "https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:10.642795",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 74,
+      "undetected_count": 15,
+      "total_engines": 89,
+      "first_seen": 1681840189,
+      "last_seen": 1681840504,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Xcitium Verdict Cloud": "mobile communications",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://raw.githubusercontent.com/microsoft/mstic/master/PublicFeeds/ThreatActorNaming/MicrosoftMapping.json",
+        "sources": [
+          "https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:11.318990",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    }
+  ]
+}

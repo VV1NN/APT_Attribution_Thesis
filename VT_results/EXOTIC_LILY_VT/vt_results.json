@@ -1,0 +1,3488 @@
+{
+  "organization": "EXOTIC_LILY",
+  "scan_time": "2025-08-31T22:13:18.240510",
+  "statistics": {
+    "total_iocs": 30,
+    "processed": 30,
+    "found_in_vt": 30,
+    "malicious": 30,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 0
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "23.81.246.187",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:12:57.412364",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 2,
+      "harmless_count": 58,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756568540,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "23.81.224.0/19",
+        "asn": 19148,
+        "as_owner": "LEASEWEB-USA-PHX",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "jarm": "29d29d15d29d29d00041d41d0000004b86cf883937e6feb1dd39cad97eaf62"
+      },
+      "whois_info": "Leaseweb USA, Inc. LU (NET-23-81-48-0-2) 23.81.48.0 - 23.83.63.255\nLeaseWeb USA, Inc. Pheonix LUP-4 (NET-23-81-224-0-1) 23.81.224.0 - 23.81.255.255\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "01cc151149b5bf974449b00de08ce7dbf5eca77f55edd00982a959e48d017225",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:12:58.059524",
+      "vt_found": true,
+      "malicious_count": 39,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1646858041,
+      "last_seen": 1756402906,
+      "reputation": -1,
+      "names": [
+        "01cc151149b5bf974449b00de08ce7dbf5eca77f55edd00982a959e48d017225.bin",
+        "Attachments-2239.iso"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 2306048,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data ''",
+        "md5": "c0639fc28663bb3ea08d34769480bf5b",
+        "sha1": "33e9fc0e236babf59664a11a149c85c1696f944f",
+        "sha256": "01cc151149b5bf974449b00de08ce7dbf5eca77f55edd00982a959e48d017225",
+        "ssdeep": "49152:73GD6aFj0Mb8VxOs7t7NgRpvIxDwSAEsqPGRgYmlF4Qn:n5MKzxyDCwSAz1RmF4Q",
+        "tlsh": "T1DFB58D42A3A804E5D9B6C13CC9569617E7F2B8150370DBDF0AA846FA0F237D11EBEB54",
+        "vhash": "b84a83fb60b3ac77edca728b686248f0"
+      },
+      "additional_details": {
+        "tags": [
+          "contains-pe",
+          "isoimage",
+          "calls-wmi",
+          "long-sleeps",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.bumblebee/bumbleloader",
+          "popular_threat_category": [
+            {
+              "count": 23,
+              "value": "trojan"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "bumblebee"
+            },
+            {
+              "count": 2,
+              "value": "bumbleloader"
+            },
+            {
+              "count": 2,
+              "value": "drodiso"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.ZIP.BumbleBee.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "iso.trojan.bumblebee"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "LNK.Trojan.46001.GC"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.ru"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Dump:Generic.BumbleBee.Marte.A.A3BC878D"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5427",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win64.12093"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1fd5326034792c0f0fb00be77629a10ac9162b2f473f96072397a5d639da45dd",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:12:58.758682",
+      "vt_found": true,
+      "malicious_count": 42,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 24,
+      "total_engines": 76,
+      "first_seen": 1647013307,
+      "last_seen": 1755652150,
+      "reputation": -1,
+      "names": [
+        "1fd5326034792c0f0fb00be77629a10ac9162b2f473f96072397a5d639da45dd.bin",
+        "TransferXL-08v3H1HSQVvyP3.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1034077,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=deflate",
+        "md5": "ed902c1796eec0c511682075b8fe63c5",
+        "sha1": "e9f1aa4fdd749854aead68a9566d1b960f4efc90",
+        "sha256": "1fd5326034792c0f0fb00be77629a10ac9162b2f473f96072397a5d639da45dd",
+        "ssdeep": "24576:DEGtDN22ifihJad2/hqk0RsUCbBYTIuw5P4:DE4D429hJe28kJUCzA",
+        "tlsh": "T1402533A39468AB225291B0F73BA9C406EB4B45545EEFE27E106E6351804F313D7FE9C8",
+        "vhash": "ddd500681b42e5a6dbf99caeb6bf5447"
+      },
+      "additional_details": {
+        "tags": [
+          "zip"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.bumblebee/agentb",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 29
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "bumblebee",
+              "count": 9
+            },
+            {
+              "value": "agentb",
+              "count": 2
+            },
+            {
+              "value": "bumbleloader",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.ZIP.BumbleBee.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.39305098"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "zip.trojan.bumblebee"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Win64RI.S30100639"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.ru"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Dump:Generic.BumbleBee.Marte.A.3FF3AFA2"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5428",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "201c4d0070552d9dc06b76ee55479fc0a9dfacb6dbec6bbec5265e04644eebc9",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:12:59.383285",
+      "vt_found": true,
+      "malicious_count": 43,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 76,
+      "first_seen": 1647032543,
+      "last_seen": 1754332982,
+      "reputation": -1,
+      "names": [
+        "201c4d0070552d9dc06b76ee55479fc0a9dfacb6dbec6bbec5265e04644eebc9.bin",
+        "folder-113104.iso"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 2306048,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data ''",
+        "md5": "e114951c5607c67a80be82c980bd720e",
+        "sha1": "7b5a1cddc001844ef446d980813f0653659f850d",
+        "sha256": "201c4d0070552d9dc06b76ee55479fc0a9dfacb6dbec6bbec5265e04644eebc9",
+        "ssdeep": "49152:EaLMh74dfw5MKWe6yXdVgfRY8igxZPqPGETlsE:OsfWltGf5Lxd1ESE",
+        "tlsh": "T1EFB57C46E3A804E4D9B6C13CC9569607E7F2B81517709BDF0AA84AFA0F237D11EBE744",
+        "vhash": "b84a83fb60b3ac77edca728b686248f0"
+      },
+      "additional_details": {
+        "tags": [
+          "contains-pe",
+          "isoimage"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "bumblebee",
+              "count": 11
+            },
+            {
+              "value": "bumbleloader",
+              "count": 2
+            },
+            {
+              "value": "drodiso",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.bumblebee/bumbleloader",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250412",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Trojan.UKP.Generic.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Trojan.BumbleBee.A"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.2.0",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "iso.trojan.bumblebee"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250411",
+            "category": "malicious",
+            "result": "Trojan.Win64RI.S30100639"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Trojan.ru"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Dump:Generic.BumbleBee.Marte.A.BD2E9CF7"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250412",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5336",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win64.11944"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "5ceb28316f29c3912332065eeaaebf59f10d79cd9388ef2a7802b9bb80d797be",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:12:59.951282",
+      "vt_found": true,
+      "malicious_count": 40,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1643645019,
+      "last_seen": 1754332647,
+      "reputation": -1,
+      "names": [
+        "malware.iso",
+        "docs_1205.iso"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 276480,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data ''",
+        "md5": "8331d179757bc08eca2916237fd66ef1",
+        "sha1": "057077d1f32a756492dfe18baff53ca6dd31a378",
+        "sha256": "5ceb28316f29c3912332065eeaaebf59f10d79cd9388ef2a7802b9bb80d797be",
+        "ssdeep": "6144:IpGL6nRr/qJy8CQnzX473venaGyRAU9uBXP:ILn9qJ5rnzoLvong6X",
+        "tlsh": "T19F445C6DAF4C25EAFBEADA335AC97864216B336609935ECC121DA7C90B133617F011DC",
+        "vhash": "07df3d67b3c871df4ce92c2b0f7975bc"
+      },
+      "additional_details": {
+        "tags": [
+          "long-sleeps",
+          "calls-wmi",
+          "contains-pe",
+          "spreader",
+          "isoimage",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "icedid",
+              "count": 7
+            },
+            {
+              "value": "linx",
+              "count": 5
+            },
+            {
+              "value": "bazarloader",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            }
+          ],
+          "suggested_threat_label": "trojan.icedid/linx"
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 68,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "BazaLoader"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250803",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Trojan.ZIP.Icedid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250803",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "iso.trojan.icedid"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250801",
+            "category": "malicious",
+            "result": "LNK.Trojan.46247.GC"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Icedid-FUDT!85326EE9659F"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.133962"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250803",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5416",
+            "engine_update": "20250801",
+            "category": "malicious",
+            "result": "Trojan.IcedID.Win64.1"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "6214e19836c0c3c4bc94e23d6391c45ad87fdd890f6cbd3ab078650455c31dc8",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:00.583461",
+      "vt_found": true,
+      "malicious_count": 40,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 26,
+      "total_engines": 76,
+      "first_seen": 1646405785,
+      "last_seen": 1754489292,
+      "reputation": -2,
+      "names": [
+        "6214e19836c0c3c4bc94e23d6391c45ad87fdd890f6cbd3ab078650455c31dc8.bin",
+        "TransferXL-08jG3ZZyCK5QjM.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1058953,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=deflate",
+        "md5": "f411c1a716639d477d0838bba30a8fbb",
+        "sha1": "8100df98a73a8a037b4085b86ff42af9c438f382",
+        "sha256": "6214e19836c0c3c4bc94e23d6391c45ad87fdd890f6cbd3ab078650455c31dc8",
+        "ssdeep": "24576:v78He7Xb4ZMhMdNI5BhlQmNeDiMkhSripiP4Ln2zt8GtHf4:vYHe7L4WhMQqiMksriN2zKCg",
+        "tlsh": "T13435339CA69C7C9B510234420DCC93187F6C2BE4E6C7DFA87258A197751BF732D48B2A",
+        "vhash": "ddd500681b42e5a6dbf99caeb6bf5447"
+      },
+      "additional_details": {
+        "tags": [
+          "zip"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            }
+          ],
+          "suggested_threat_label": "trojan.bumblebee/emipdiy",
+          "popular_threat_name": [
+            {
+              "value": "bumblebee",
+              "count": 7
+            },
+            {
+              "value": "emipdiy",
+              "count": 5
+            },
+            {
+              "value": "vsnw1da24",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250806",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Trojan.ZIP.BumbleBee.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.39305100"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Win.Malware.Razy-9945588-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "zip.trojan.bumblebee"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.EmipdiyRI.S30100715"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "LNK/Agent-FTB!CAC3161C21FC"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Dump:Generic.BumbleBee.Marte.A.33A05D4B"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250806",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5418",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.Generic.Win32.1651770"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "9eacade8174f008c48ea57d43068dbce3d91093603db0511467c18252f60de32",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:01.219244",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 21,
+      "total_engines": 76,
+      "first_seen": 1646946819,
+      "last_seen": 1756409229,
+      "reputation": -1,
+      "names": [
+        "https_249111.iso",
+        "Attachments-2202.iso"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 2387968,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data ''",
+        "md5": "15f0cb9f3c41a2f79cd72dfa6ae50db8",
+        "sha1": "b3a3a97dd7933343011faaae8462ccbe3b48cbe9",
+        "sha256": "9eacade8174f008c48ea57d43068dbce3d91093603db0511467c18252f60de32",
+        "ssdeep": "49152:2R7M9r/8AmAJXPasx29pSvKtxqJ7w+dIM9qPGrfepLX:RqSv/J7H+M91rmpz",
+        "tlsh": "T14CB57C16A7A804F5C9B6C23CC997960BE7F2B8150770EBEF06A846B90F637D1163E744",
+        "vhash": "b84a83fb60b3ac77edca728b686248f0"
+      },
+      "additional_details": {
+        "tags": [
+          "isoimage",
+          "contains-pe",
+          "detect-debug-environment",
+          "calls-wmi",
+          "long-sleeps"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.bumblebee/dump",
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "bumblebee"
+            },
+            {
+              "count": 6,
+              "value": "dump"
+            },
+            {
+              "count": 6,
+              "value": "marte"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 18,
+              "value": "trojan"
+            },
+            {
+              "count": 4,
+              "value": "downloader"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250828",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Trojan.ZIP.BumbleBee.a!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250828",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Win.Malware.Razy-9945588-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "iso.trojan.bumblebee"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Trojan.EmipdiyRI.S30100715"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Trojan.ru"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Dump:Generic.BumbleBee.Marte.A.4AA9D737"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250828",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5433",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "9fdec91231fe3a709c8d4ec39e25ce8c55282167c561b14917b52701494ac269",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:01.903522",
+      "vt_found": true,
+      "malicious_count": 40,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1643285365,
+      "last_seen": 1754332777,
+      "reputation": -4,
+      "names": [
+        "bazar.iso",
+        "402056___fe6c57b6-12e7-4fbf-881d-22ada5d5c31a.iso",
+        "9fdec91231fe3a709c8d4ec39e25ce8c55282167c561b14917b52701494ac269.sample",
+        "docs_1214.iso",
+        "9fdec91231fe3a709c8d4ec39e25ce8c55282167c561b14917b52701494ac269.bin"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 276480,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data ''",
+        "md5": "b1bde76849fc4801a0369c7097600863",
+        "sha1": "2050daf2e7882297afdd549b61d70d27e79fd836",
+        "sha256": "9fdec91231fe3a709c8d4ec39e25ce8c55282167c561b14917b52701494ac269",
+        "ssdeep": "6144:AWnRr/qJy8CQnzX473venaGyRAU9uBXP:Bn9qJ5rnzoLvong6X",
+        "tlsh": "T16A445B6DAF4C25EAFBEADA335AC97865216B336609935ECC120DA3D90B133617F011DC",
+        "vhash": "07df3d67b3c871df4ce92c2b0f7975bc"
+      },
+      "additional_details": {
+        "tags": [
+          "spreader",
+          "calls-wmi",
+          "contains-pe",
+          "long-sleeps",
+          "isoimage",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 20,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.linx/icedid",
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "linx"
+            },
+            {
+              "count": 3,
+              "value": "icedid"
+            },
+            {
+              "count": 2,
+              "value": "bazarloader"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 64,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "BazaLoader"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250625",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Trojan.ZIP.Linx.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250625",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250624",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "iso.trojan.linx"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250624",
+            "category": "malicious",
+            "result": "LNK.Trojan.46247.GC"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Icedid-FUDT!F7047FDBD3CD"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.133962"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250625",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250624",
+            "category": "malicious",
+            "result": "Heur.BZC.YAX.Linx.51.23C0599F"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c896ee848586dd0c61c2a821a03192a5efef1b4b4e03b48aba18eedab1b864f7",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:02.922590",
+      "vt_found": true,
+      "malicious_count": 40,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 20,
+      "total_engines": 75,
+      "first_seen": 1642594839,
+      "last_seen": 1754324359,
+      "reputation": -1,
+      "names": [
+        "c896ee848586dd0c61c2a821a03192a5efef1b4b4e03b48aba18eedab1b864f7.bin",
+        "docs_1101.img"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 276480,
+        "type_description": "ISO image",
+        "magic": "ISO 9660 CD-ROM filesystem data '                               '",
+        "md5": "f5f69d0658dccfa7b98819d20fe3e37e",
+        "sha1": "45d3ea376271c4858d3e8a5b432c7139b7a964af",
+        "sha256": "c896ee848586dd0c61c2a821a03192a5efef1b4b4e03b48aba18eedab1b864f7",
+        "ssdeep": "6144:rto53dB6ueZWko+SVplPMPP3O/Dnv53x:udbrkoLVwPPE",
+        "tlsh": "T17944AE7876142CD6D67E4277DA86B8DD1373362389ABE8CDA06CB6C30793775EE02904",
+        "vhash": "07df3d67b3c871df4ce92c2b0f7975bc"
+      },
+      "additional_details": {
+        "tags": [
+          "contains-pe",
+          "spreader",
+          "isoimage",
+          "calls-wmi",
+          "detect-debug-environment",
+          "long-sleeps"
+        ],
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 64,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "BazaLoader"
+            ]
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "sandbox_name": "OS X Sandbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "1.3.0.9899",
+            "engine_update": "20230118",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20230118",
+            "category": "malicious",
+            "result": "Trojan.OSX.Linx.4!c"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.59.12300",
+            "engine_update": "20230118",
+            "category": "malicious",
+            "result": "LNK.Starter.76"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.0.0.0",
+            "engine_update": "20230117",
+            "category": "malicious",
+            "result": "Lnk.Trojan.BazarLoader-9936113-2"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20230118",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20230117",
+            "category": "malicious",
+            "result": "LNK.Trojan.46247.GC"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "1.1.3.1",
+            "engine_update": "20230118",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.4.4.52",
+            "engine_update": "20230118",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.4796",
+            "engine_update": "20230117",
+            "category": "malicious",
+            "result": "Trojan.Generic.Win32.1651788"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.23.0.0",
+            "engine_update": "20230116",
+            "category": "malicious",
+            "result": "Trojan.Win64.Agent.qwhyuy"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://23.81.246.187:443",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:03.563248",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 2,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1647598803,
+      "last_seen": 1756255620,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip",
+          "ns-port"
+        ],
+        "categories": {},
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://al-ghurair.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:04.245409",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1647295560,
+      "last_seen": 1756022491,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://amevida.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:04.915727",
+      "vt_found": true,
+      "malicious_count": 11,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1645736616,
+      "last_seen": 1754812830,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://avrobio.co",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:05.885678",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1647538274,
+      "last_seen": 1756581852,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://awsblopharma.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:06.542320",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1647353435,
+      "last_seen": 1755835097,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Parked Site, Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://belcolnd.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:07.473338",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1647538274,
+      "last_seen": 1755835580,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Parked Site, Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://brightlnsight.co",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:08.620456",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 2,
+      "harmless_count": 60,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1647538274,
+      "last_seen": 1754801371,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious, Phishing, Suspicious (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "elevated exposure"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://conlfex.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:09.283879",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1435432322,
+      "last_seen": 1754816195,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing, Suspicious (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://craneveyor.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:09.850817",
+      "vt_found": true,
+      "malicious_count": 13,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1647538271,
+      "last_seen": 1754623339,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://elemblo.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:10.538713",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 67,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1646664185,
+      "last_seen": 1755835973,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Unrated (alphaMountain.ai)"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://faustel.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:11.442707",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1646666752,
+      "last_seen": 1756021588,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "suspicious content"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://kvnational.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:12.205603",
+      "vt_found": true,
+      "malicious_count": 14,
+      "suspicious_count": 1,
+      "harmless_count": 56,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1647277114,
+      "last_seen": 1756408513,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "suspicious content"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://lagauge.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:13.005948",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1647538273,
+      "last_seen": 1755616489,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://lsoplexis.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:13.652240",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1647538273,
+      "last_seen": 1755835709,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://missionbio.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:14.363188",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1647538274,
+      "last_seen": 1756582958,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://modernmeadow.co",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:15.068428",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1564156522,
+      "last_seen": 1756022272,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://opontia.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:15.734232",
+      "vt_found": true,
+      "malicious_count": 12,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1644859834,
+      "last_seen": 1755834774,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "suspicious content"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://phxmfg.co",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:16.332418",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1646508875,
+      "last_seen": 1754812651,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://prmflltration.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:16.910990",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1647538271,
+      "last_seen": 1754812543,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://revergy.us",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:17.611952",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 1,
+      "harmless_count": 61,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1645228869,
+      "last_seen": 1754812548,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://richllndmetals.com",
+        "sources": [
+          "https://blog.google/threat-analysis-group/exposing-initial-access-broker-ties-conti/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:18.239853",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1646412627,
+      "last_seen": 1756021708,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,799 @@
+\begin{ZhChapter}
+
+\chapter{研究方法}
+\label{ch:methodology}
+
+\section{系統概述}
+\label{sec:system-overview}
+
+進階持續性威脅（Advanced Persistent Threat, APT）組織之歸因分析，長期以來面臨兩項根本性挑戰。其一，傳統基於機器學習分類器之歸因方法，將入侵指標（Indicators of Compromise, IoC）編碼為固定維度之特徵向量後送入監督式分類模型進行訓練與預測。然而，此種範式不僅要求大量已標註之訓練樣本，且在新興 APT 組織出現時需重新訓練模型，擴展性受到嚴重制約。更根本的問題在於，固定維度向量無法有效保留 IoC 之間的基礎設施關聯結構——例如惡意檔案與其回連之命令與控制（Command and Control, C2）伺服器之間的聯結、網域名稱與 IP 位址之間的 DNS 解析紀錄等——而此類拓撲結構恰恰是資安鑑識分析師進行歸因推理時最仰賴的證據。其二，現有歸因方法多屬被動式分析，僅能回答「此攻擊來自何方」，卻無法進一步推論「該攻擊者下一步可能動用哪些基礎設施」，缺乏從歸因結果延伸至事前威脅預警之能力。
+
+為因應上述挑戰，本研究提出 \textbf{DeepPath}——一個基於威脅情資圖譜（Cyber Threat Intelligence Knowledge Graph）之子圖相似度比對框架。DeepPath 的核心設計理念，係將每個 APT 組織的歷史威脅情資建構為異質資訊網路（Heterogeneous Information Network, HIN），稱為\textbf{原型子圖（Prototype Subgraph）}；面對未知來源之入侵事件時，系統同樣將其 IoC 建構為\textbf{查詢子圖（Query Subgraph）}，隨後透過三層次漸進式子圖相似度引擎（Three-Level Progressive Subgraph Similarity Engine），從節點身份、節點屬性、鄰域結構三個維度逐層比對兩圖之相似程度，最終輸出歸因排名與信心度分數。
+
+DeepPath 框架之設計具備以下兩項核心學術貢獻：
+
+\textbf{第一，高可解釋性之白箱歸因機制。}不同於圖神經網路（Graph Neural Network, GNN）等深度學習方法將圖結構壓縮至低維嵌入空間，導致歸因決策難以追溯與解釋，DeepPath 的三層相似度引擎在每一層次均保留完整的匹配證據——Level~1 記錄共享之 IoC 實體、Level~2 記錄屬性相似之節點配對、Level~3 記錄結構對應之鄰域匹配。此種設計使得歸因結果可直接回溯至具體的技術證據，符合資安鑑識（Digital Forensics）領域對證據鏈完整性之要求，亦有利於分析師進行人工審查與交叉驗證。
+
+\textbf{第二，從被動歸因昇華為主動威脅預警。}在成功歸因之後，DeepPath 進一步計算查詢子圖與最佳匹配原型子圖之差集（Subgraph Difference），識別出該 APT 組織歷史上曾使用、但當前事件中尚未被觀測到的基礎設施節點（如潛在的 C2 IP、惡意網域或攻擊工具雜湊值），並為每個預測節點賦予基於拓撲距離與節點重要性的信心度分數。此項能力使 DeepPath 不僅是歸因工具，更是一個具備前瞻性防禦價值的威脅預測框架。
+
+此外，DeepPath 在工程設計上採用\textbf{無需訓練之相似度比對範式}：系統不需預先訓練任何模型參數，新增 APT 組織時僅需將其 Prototype 子圖以 JSON 格式加入系統即可立即參與歸因比對，具備優異的增量擴展性（Incremental Scalability）。此項特性在威脅情資領域尤為重要，因新興 APT 組織之情資往往在短時間內大量湧現，要求歸因系統具備快速納入新組織知識之能力。
+
+本章以下各節將依序闡述 DeepPath 框架之四階段系統架構（第~\ref{sec:four-phases} 節）、三層次子圖相似度引擎之演算法細節與數學定義（第~\ref{sec:similarity-engine} 節）、歸因推理機制（第~\ref{sec:attribution} 節）、子圖差集威脅預測方法（第~\ref{sec:threat-prediction} 節）、評估方法與實驗設計（第~\ref{sec:evaluation} 節）、門檻與超參數彙整（第~\ref{sec:hyperparameters} 節）、以及實作細節（第~\ref{sec:implementation} 節）。
+
+
+%% ================================================================
+\section{四階段系統架構}
+\label{sec:four-phases}
+
+DeepPath 框架之完整處理流程可劃分為四個階段，各階段之間形成嚴格的資料流管線（Data Pipeline），前一階段之輸出即為後一階段之輸入。圖~\ref{fig:architecture} 呈現此四階段架構之整體概觀。
+
+% TODO: 插入系統架構圖
+%\begin{figure*}[htbp]
+%    \centering
+%    \includegraphics[width=1\textwidth]{figures/deeppath_architecture.png}
+%    \caption{DeepPath 四階段系統架構概觀}
+%    \label{fig:architecture}
+%\end{figure*}
+
+\subsection{Phase~1：威脅情資獲取（CTI Ingestion）}
+\label{subsec:phase1}
+
+DeepPath 系統接受兩類威脅情資輸入，分別對應建構原型子圖與查詢子圖之需求：
+
+\textbf{已知 APT 組織輸入路徑。}系統自公開威脅情資來源萃取各 APT 組織之歷史入侵指標，包括 MITRE ATT\&CK 框架所記錄之攻擊技術與程序（Tactics, Techniques, and Procedures, TTP）、資安廠商所發布之威脅分析報告（如 FireEye、CrowdStrike、Kaspersky 等）、以及開源威脅情資平台（如 AlienVault OTX）之 Pulse 資料。萃取之 IoC 類型涵蓋惡意檔案雜湊值（MD5、SHA-256、SHA-1）、命令與控制伺服器之 IP 位址（IPv4、IPv6）、惡意網域名稱（Domain、Hostname）、以及 MITRE ATT\&CK 攻擊技術識別碼。這些 IoC 經過清洗、去重及類型正規化處理後，作為建構各 APT 組織原型子圖之種子節點。
+
+\textbf{未知威脅事件輸入路徑。}當資安分析師面對一起來源不明之入侵事件時，可將從開源情資（Open Source Intelligence, OSINT）或數位鑑識跡證中蒐集到的一組 IoC 輸入系統，系統將其建構為查詢子圖，並透過後續階段之匹配引擎進行歸因推理。
+
+\textbf{IoC 類型正規化。}為確保跨來源之 IoC 可進行一致性比對，系統定義了一套類型正規化規則，將異質的原始 IoC 類型映射至統一的節點類型（Node Type）體系，如表~\ref{tab:ioc-normalization} 所示。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{IoC 類型正規化對照表}
+    \label{tab:ioc-normalization}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l l l}
+        \hline
+        \textbf{原始類型} & \textbf{正規化後節點類型} & \textbf{說明} \\
+        \hline
+        \texttt{md5}, \texttt{sha256}, \texttt{sha1} & \texttt{file} & 惡意檔案雜湊值 \\
+        \texttt{ip}, \texttt{ipv4}, \texttt{ipv6} & \texttt{ip} & 命令與控制伺服器地址 \\
+        \texttt{domain}, \texttt{hostname} & \texttt{domain} & 惡意網域 \\
+        \texttt{T1xxx}（ATT\&CK ID） & \texttt{ttp} & MITRE ATT\&CK 攻擊技術 \\
+        \texttt{url}, \texttt{email}, \texttt{cve} 等 & —（過濾） & 不納入圖建構 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+此項正規化設計之學術合理性在於：節點類型體系之統一是後續 Phase~3 中 type-aware 特徵向量設計之前提——唯有在節點類型一致的條件下，同類型節點之屬性特徵才具有可比較性，不同類型節點之特徵維度差異才能被有效隔離。
+
+\subsection{Phase~2：異質圖擴張與建構（HIN Construction \& Enrichment）}
+\label{subsec:phase2}
+
+Phase~1 產出之種子 IoC 僅構成圖的節點集合，尚缺乏節點之間的邊（Edge）資訊。然而，APT 組織之基礎設施關聯結構——惡意檔案與其回連之 C2 伺服器、網域名稱與其解析之 IP 位址、母體程式與其釋放之子檔案——恰恰是歸因分析中最具鑑別力的特徵。因此，Phase~2 的核心任務為透過外部威脅情資 API 進行\textbf{關聯擴充（Relationship Enrichment）}，將孤立的 IoC 節點擴張為具備豐富邊資訊之異質圖。
+
+本研究整合兩個互補之威脅情資資料源，以最大化可獲得之圖結構資訊：
+
+\subsubsection{VirusTotal API 擴充}
+
+VirusTotal（以下簡稱 VT）作為全球最大之惡意軟體多引擎掃描平台，提供兩類關鍵資訊。其一為\textbf{節點屬性擴充}：對每個 IoC 查詢其 VT 掃描結果，取得各引擎之偵測判定（\texttt{malicious\_count}、\texttt{suspicious\_count}、\texttt{harmless\_count}、\texttt{undetected\_count}）及社群信譽評分（\texttt{reputation}），為後續 Level~2 屬性相似度計算提供特徵基礎。其二為\textbf{關聯邊擴充}：透過 VT Relationships API，查詢 IoC 之間的真實基礎設施關聯，包括檔案所聯繫之 IP 位址（\texttt{contacted\_ips}）、檔案所聯繫之網域（\texttt{contacted\_domains}）、檔案所釋放之子檔案（\texttt{dropped\_files}）、以及網域與 IP 之間的 DNS 解析紀錄（\texttt{resolutions}）。這些關聯關係直接反映了攻擊者在網路層與主機層的基礎設施部署，是構成圖結構之核心邊類型。
+
+VT API 之每日配額限制（500 requests/day）構成了資料蒐集之主要瓶頸。為有效管理 API 用量，系統實作了磁碟快取機制（Disk Cache）與斷點續傳功能（Resume），確保已查詢之 IoC 不會重複消耗配額，並支援跨日分批蒐集。
+
+\subsubsection{AlienVault OTX API 擴充}
+
+為突破 VT API 之配額限制，本系統額外整合 AlienVault OTX（Open Threat Exchange）作為第二資料源。OTX 平台無明確之每日配額限制，可在短時間內大量蒐集關聯資料。OTX 提供之邊類型包括：\texttt{passive\_dns}（被動 DNS 解析紀錄，語義上對應 VT 之 \texttt{resolutions}）及 \texttt{malware}（與 IoC 關聯之惡意軟體樣本，語義上對應 VT 之 \texttt{contacted\_ips}/\texttt{contacted\_domains} 的反向關聯）。此外，OTX 亦提供攻擊者標籤（Adversary Tags）、Pulse 關聯及地理資訊等輔助情資。
+
+兩個資料源之邊具有語義上的互補性與可合併性。表~\ref{tab:api-comparison} 彙整了兩個資料源之規格比較。透過融合兩個資料源，系統可大幅增加可用之邊數量，進而提升 Phase~3 中 Level~3 鄰域結構比對之有效性。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{VirusTotal 與 OTX API 規格比較}
+    \label{tab:api-comparison}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l l l}
+        \hline
+        \textbf{規格項目} & \textbf{VirusTotal API} & \textbf{AlienVault OTX API} \\
+        \hline
+        每日配額 & 500 requests/day & 無明確限制 \\
+        速率限制 & 4 requests/sec & 5 requests/sec \\
+        邊類型 & \texttt{resolutions}, \texttt{contacted\_ips}, & \texttt{passive\_dns}, \texttt{malware} \\
+               & \texttt{contacted\_domains}, \texttt{dropped\_files} & \\
+        額外資訊 & malicious/suspicious/harmless 分數、reputation & adversary 標籤、pulse 關聯、geo \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\subsubsection{子圖建構與儲存}
+
+完成關聯擴充後，系統將每個 APT 組織之所有 IoC 節點及其關聯邊整合為一個有向異質資訊網路，以 JSON 格式序列化儲存為\textbf{原型子圖（Prototype Subgraph）}。系統內部以 NetworkX 有向圖（\texttt{DiGraph}）作為圖的記憶體表示：每個節點攜帶類型（type）、原始值（value）及 VT/OTX 查詢所得之屬性；每條邊攜帶關聯類型（relationship）。節點之唯一識別碼統一採用 \texttt{\{type\}\_\{value\}} 格式編碼，確保跨圖比對時可透過 value 欄位精確進行身份匹配。
+
+\textbf{邊來源品質控管。}本研究特別注重圖結構之真實性。每個 Prototype JSON 均標記 \texttt{edge\_source} 欄位，以區分邊之來源性質。僅有來自 \texttt{vt\_relationships} 或 \texttt{otx\_relationships} 之邊反映真實的基礎設施關聯關係；而某些早期實驗中基於報告共現（Co-occurrence）所推斷之邊（標記為 \texttt{co\_occurrence}），因其不反映實際的網路通訊或 DNS 解析行為，系統在歸因實驗中自動予以排除。此外，為避免資訊量不足之子圖干擾歸因結果，系統設定最低邊數門檻 $\text{MIN\_EDGES}$（預設為 20）：邊數低於此門檻之 Prototype 將被過濾，不參與歸因比對。此項設計之合理性在於，邊數過少的子圖缺乏足夠的拓撲結構資訊，僅能依賴 Level~1（身份匹配）與 Level~2（屬性匹配）進行比對，Level~3（鄰域結構）幾近失效，且在 Level~2 之雙向 Greedy Matching 中易受大型子圖之干擾而產生偏誤。
+
+\subsection{Phase~3：多層次子圖匹配引擎}
+\label{subsec:phase3-overview}
+
+Phase~3 為 DeepPath 框架之核心運算階段，亦是本研究之主要學術貢獻所在。給定一個查詢子圖與所有候選原型子圖，系統透過三層次漸進式子圖相似度引擎——分別從節點身份（Level~1）、節點屬性（Level~2）、鄰域結構（Level~3）三個維度——逐層比對兩圖之相似程度，最終以加權求和方式聚合為全局相似度分數。
+
+此三層次設計之學術動機源於資安鑑識實務中歸因推理的層次性：最直接且最強的歸因證據為共享的入侵指標（如相同的惡意檔案雜湊值或 C2 IP 位址，對應 Level~1）；次之為行為特徵的相似性（如偵測率分布、信譽評分模式之相近，對應 Level~2）；再次之為基礎設施部署模式的結構相似性（如類似的 DNS 解析拓撲或檔案釋放鏈，對應 Level~3）。此種漸進式設計確保了系統能充分利用各層次之歸因信號，且三層之間具有排他性——Level~1 已匹配之節點不參與 Level~2 比對，Level~1 與 Level~2 已匹配之節點不參與 Level~3 比對——避免對同一證據之重複計分。
+
+值得特別強調的是，本引擎在 Level~2 與 Level~3 均引入\textbf{雙向匹配（Bidirectional Matching）與 F1 聚合}機制，以解決查詢子圖與原型子圖之間規模差異所導致的 Size Bias 問題。在傳統的單向 Greedy Matching 中，大型原型子圖因節點數量龐大而天然具有較高的匹配機率，導致系統傾向於將查詢結果偏向大圖。雙向 F1 聚合透過同時計算正向（查詢$\rightarrow$原型）之 Precision 與反向（原型$\rightarrow$查詢）之 Recall，以調和平均數（Harmonic Mean）消弭此種不公平優勢，確保歸因判定不受子圖規模之不當影響。此項設計之數學定義將於第~\ref{sec:similarity-engine} 節詳細闡述。
+
+基於全局相似度分數之排名結果，系統依據預設之歸因門檻進行最終判定：若最高分數達到門檻，則將查詢子圖歸屬於分數最高之 APT 組織；否則判定為未知組織（Unknown Actor），表示當前 Prototype 知識庫中不存在足夠匹配之候選者。此種門檻機制賦予系統拒絕歸因之能力，避免在證據不足時產生誤判，體現了資安鑑識中「寧可不判、不可錯判」之審慎原則。
+
+\subsection{Phase~4：威脅預測與輸出（Threat Forecasting \& Reporting）}
+\label{subsec:phase4-overview}
+
+在 Phase~3 成功歸因之後，DeepPath 進入其獨特的第四階段——\textbf{威脅預測（Threat Forecasting）}。此階段之核心思想為：若查詢子圖已被歸因至某 APT 組織，則該組織之原型子圖中存在但查詢子圖中未觀測到的節點，即代表該攻擊者歷史上曾使用、但在當前事件中尚未被發現的基礎設施。這些節點構成了「潛在的下一步威脅」，對防禦方具有極高的預警價值。
+
+系統透過計算原型子圖與查詢子圖之\textbf{子圖差集（Subgraph Difference）}，識別出所有未被觀測之節點，並為每個差集節點計算一個威脅信心度分數。該信心度分數同時考量兩個因素：其一為該節點與已匹配節點之間的拓撲距離——距離越近，表示該節點越可能與當前攻擊活動直接相關；其二為該節點在原型子圖中的連結度（Degree Centrality）——連結度越高，表示該節點在攻擊者歷史活動中被越頻繁使用，是攻擊基礎設施之核心樞紐。系統最終依信心度降序輸出威脅預測清單，供資安分析師優先檢查與部署防禦措施。
+
+此項威脅預測能力使 DeepPath 超越了傳統歸因框架的被動分析定位，\textbf{將歸因結果轉化為可行動之防禦情資（Actionable Defensive Intelligence）}。在實務場景中，防禦團隊可根據預測清單，事先對高信心度之 C2 IP 位址實施網路封鎖、對可疑網域啟動 DNS Sinkhole、對潛在惡意檔案雜湊值部署端點偵測規則，從而在攻擊者啟用這些基礎設施之前搶先建立防線。此種從「事後歸因」到「事前預警」的範式轉移，是本研究之重要學術貢獻之一。
+
+最終，Phase~4 輸出一份完整的歸因報告，包含：歸因排名（所有候選 APT 組織之全局相似度分數與各層分數明細）、歸因判定結果（最佳匹配組織或 Unknown）、三層匹配證據（共享 IoC 實體清單、屬性相似節點配對、結構對應匹配）、以及威脅預測清單（按信心度排序之潛在威脅節點）。報告之每一項判定均可追溯至具體的技術證據，確保歸因推理之透明性與可驗證性，滿足資安鑑識之嚴謹標準。
+
+
+%% ================================================================
+\section{三層次子圖相似度引擎}
+\label{sec:similarity-engine}
+
+本節闡述 DeepPath 框架之核心學術貢獻——三層次漸進式子圖相似度引擎之演算法細節與數學定義。本引擎之設計目標，在於從身份（Identity）、屬性（Attribute）、結構（Structure）三個遞進維度，系統性地量化查詢子圖與候選原型子圖之間的相似程度，最終輸出一個可解釋且具鑑別力的全局相似度分數。
+
+\subsection{圖譜的形式化定義}
+\label{subsec:graph-formal}
+
+在闡述各層次之演算法之前，本研究首先對異質資訊網路及相關符號進行嚴謹的形式化定義。
+
+\noindent\textbf{定義 3.1（異質資訊網路）。}本研究將 APT 組織之威脅情資建模為一個異質資訊網路（Heterogeneous Information Network, HIN），定義為一個四元組：
+\begin{equation}
+    G = (V, E, \phi, \psi)
+    \label{eq:hin-def}
+\end{equation}
+其中：
+\begin{itemize}
+    \item $V$ 為節點集合（Node Set），每個節點 $v \in V$ 代表一個入侵指標（IoC）或攻擊技術（TTP）實體。
+    \item $E \subseteq V \times V$ 為有向邊集合（Directed Edge Set），每條邊 $e = (v_i, v_j) \in E$ 代表兩個實體之間的基礎設施關聯。
+    \item $\phi: V \rightarrow \mathcal{T}_V$ 為節點類型映射函數（Node Type Mapping），將每個節點映射至其所屬之類型，其中節點類型集合 $\mathcal{T}_V = \{\texttt{file}, \texttt{ip}, \texttt{domain}, \texttt{ttp}, \texttt{cti}\}$。
+    \item $\psi: E \rightarrow \mathcal{T}_E$ 為邊類型映射函數（Edge Type Mapping），將每條邊映射至其關聯類型，其中邊類型集合 $\mathcal{T}_E = \{\texttt{contacted\_ips}, \texttt{contacted\_domains}, \texttt{dropped\_files}, \texttt{resolutions}, \texttt{passive\_dns}, \texttt{malware}\}$。
+\end{itemize}
+由於 $|\mathcal{T}_V| > 1$ 且 $|\mathcal{T}_E| > 1$，此圖滿足異質資訊網路之定義條件，即節點類型與邊類型之數量皆大於一。
+
+\noindent\textbf{定義 3.2（節點屬性函數）。}對每個節點 $v \in V$，定義屬性函數 $\text{attr}(v)$ 回傳該節點所攜帶之屬性集合。具體而言，每個節點至少攜帶以下共有屬性：
+\begin{itemize}
+    \item $\text{type}(v) \in \mathcal{T}_V$：節點類型。
+    \item $\text{value}(v) \in \Sigma^*$：節點原始值（如 MD5 雜湊、IP 位址字串、網域名稱等）。
+\end{itemize}
+此外，依節點類型不同，各節點另攜帶來自 VirusTotal 或 OTX 查詢所得之領域特有屬性（Domain-Specific Attributes），例如 \texttt{malicious}、\texttt{suspicious}、\texttt{reputation} 等。這些屬性將於第~\ref{subsec:level2} 節之特徵向量設計中詳述。
+
+\noindent\textbf{定義 3.3（原型子圖與查詢子圖）。}設已知 APT 組織集合為 $\mathcal{A} = \{A_1, A_2, \ldots, A_K\}$，對每個組織 $A_k$，其歷史威脅情資所建構之異質資訊網路稱為\textbf{原型子圖}，記為：
+\begin{equation}
+    G_p^{(k)} = (V_p^{(k)}, E_p^{(k)}, \phi, \psi), \quad k = 1, 2, \ldots, K
+    \label{eq:prototype-def}
+\end{equation}
+給定一組來源未知的入侵指標所建構之異質資訊網路，稱為\textbf{查詢子圖}，記為：
+\begin{equation}
+    G_q = (V_q, E_q, \phi, \psi)
+    \label{eq:query-def}
+\end{equation}
+歸因問題即為：在所有候選原型子圖 $\{G_p^{(1)}, G_p^{(2)}, \ldots, G_p^{(K)}\}$ 中，找出與 $G_q$ 最相似者，或判定 $G_q$ 不屬於任何已知組織。
+
+\noindent\textbf{定義 3.4（有效節點集合）。}為排除不具備跨圖比較意義之 CTI 容器節點，定義有效節點集合：
+\begin{equation}
+    \hat{V} = \{v \in V : \phi(v) \neq \texttt{cti}\}
+    \label{eq:valid-nodes}
+\end{equation}
+CTI 容器節點之 value 欄位為內部唯一識別碼（如 \texttt{cti\_apt28\_1}），在跨圖比對中永遠不會產生匹配，若將其納入集合運算之分母，將導致相似度分數虛假地降低。因此，後續三個層次之比對均僅作用於有效節點集合 $\hat{V}$。
+
+
+\subsection{Level~1：節點身份匹配（Node Identity Matching）}
+\label{subsec:level1}
+
+Level~1 為三層引擎中訊號最強且最直接之比對層次。其核心思想為：若兩個子圖共享相同的 IoC 實體——即存在相同的惡意檔案雜湊值、C2 IP 位址或惡意網域——則幾乎可以確定兩者來自同一攻擊活動或同一攻擊者。此種基於共享基礎設施之歸因邏輯，在資安鑑識實務中被廣泛採用，其可信度源於攻擊者重複使用基礎設施之行為慣性（Infrastructure Reuse Pattern）。
+
+\noindent\textbf{定義 3.5（節點身份相似度）。}給定查詢子圖之有效節點值集合 $\hat{V}_q^{\text{val}} = \{\text{value}(v) : v \in \hat{V}_q\}$ 與原型子圖之有效節點值集合 $\hat{V}_p^{\text{val}} = \{\text{value}(v) : v \in \hat{V}_p\}$，Level~1 相似度定義為兩集合之 Jaccard 相似係數（Jaccard Similarity Coefficient）：
+\begin{equation}
+    S_1(G_q, G_p) = J(\hat{V}_q^{\text{val}}, \hat{V}_p^{\text{val}}) = \frac{|\hat{V}_q^{\text{val}} \cap \hat{V}_p^{\text{val}}|}{|\hat{V}_q^{\text{val}} \cup \hat{V}_p^{\text{val}}|}
+    \label{eq:level1}
+\end{equation}
+其中：
+\begin{itemize}
+    \item $\hat{V}_q^{\text{val}} \cap \hat{V}_p^{\text{val}}$ 為兩圖共享之 IoC 值集合，即交集。其元素為同時出現在查詢子圖與原型子圖中的相同入侵指標。
+    \item $\hat{V}_q^{\text{val}} \cup \hat{V}_p^{\text{val}}$ 為兩圖所有不重複之 IoC 值的聯集。
+    \item 當 $|\hat{V}_q^{\text{val}} \cup \hat{V}_p^{\text{val}}| = 0$ 時（即兩圖均無有效節點），定義 $S_1 = 0$。
+\end{itemize}
+
+Jaccard 係數之值域為 $[0, 1]$，$S_1 = 0$ 表示兩圖無任何共享 IoC，$S_1 = 1$ 表示兩圖之有效節點完全重疊。
+
+\textbf{採用 Jaccard 係數之合理性。}本研究選擇 Jaccard 係數而非簡單的交集計數（Intersection Count）作為 Level~1 之度量，係基於以下考量：Jaccard 係數透過聯集作為分母進行正規化，天然地消弭了子圖規模差異之影響。若僅計算 $|\hat{V}_q^{\text{val}} \cap \hat{V}_p^{\text{val}}|$，則節點數量龐大之原型子圖將因基數效應（Base Rate Effect）而天然具有較高之交集計數，導致歸因結果偏向大型子圖。Jaccard 係數之分母項隨子圖規模等比增長，有效抵消了此種偏誤。
+
+\textbf{排除 CTI 節點之必要性。}設 CTI 節點集合為 $V^{\texttt{cti}} = \{v \in V : \phi(v) = \texttt{cti}\}$。CTI 節點之 value 為系統內部生成之唯一識別碼，不同圖之 CTI 節點 value 永遠互不相同，即：
+\begin{equation}
+    \forall\, v_q \in V_q^{\texttt{cti}},\; \forall\, v_p \in V_p^{\texttt{cti}}:\; \text{value}(v_q) \neq \text{value}(v_p)
+    \label{eq:cti-exclusion}
+\end{equation}
+若將 CTI 節點納入計算，交集不受影響（因 CTI 節點永不匹配），但聯集將因納入不具比較意義之 CTI 節點而虛增，導致 Jaccard 係數被人為壓低。
+
+\textbf{實驗設計之影響。}值得注意的是，在 Leave-One-Out 驗證實驗中，查詢子圖之節點係從原型子圖中抽出，抽出後不再存在於縮減後之原型子圖。因此，$\hat{V}_q^{\text{val}} \cap \hat{V}_p^{\text{val}}$ 在此實驗設計下通常趨近於零，Level~1 分數近乎為零。此為實驗設計之預期行為而非系統缺陷——Leave-One-Out 實驗之目的在於評估 Level~2 與 Level~3 在缺乏直接身份匹配信號時之歸因能力。在真實應用場景中（如 Holdout IoC 實驗），查詢 IoC 直接取自完整原型子圖，Level~1 將產生有意義之非零分數。
+
+Level~1 匹配成功之節點對記錄於歸因證據之 \texttt{matched\_nodes} 欄位，供後續追溯。這些已匹配之節點將從 Level~2 之候選節點池中排除，避免重複計分。
+
+
+\subsection{Level~2：節點屬性相似度（Type-Aware Attribute Similarity）}
+\label{subsec:level2}
+
+對 Level~1 未匹配之剩餘有效節點，Level~2 從屬性特徵之角度衡量節點之間的相似程度。其核心直覺在於：即使兩個 IoC 之值不同（例如兩個不同的惡意檔案雜湊值），但若其在 VirusTotal 上呈現相似的偵測率分布、相近的信譽評分、以及類似的引擎判定模式，則可合理推斷兩者具有相似的惡意行為特徵，可能源自同一攻擊者之工具庫。
+
+\subsubsection{Type-Aware 特徵向量設計}
+
+不同類型之 IoC 具有截然不同的屬性語義與維度空間。例如，檔案節點之屬性包括多引擎偵測結果，而 IP 節點之屬性包括自治系統號碼（ASN）與地理位置。若將所有類型之節點統一編碼為相同維度之特徵向量（如透過類型 one-hot 編碼拼接），則類型資訊將主宰向量之距離計算，掩蓋真正有鑑別力的屬性差異。
+
+為解決此問題，本研究提出 \textbf{Type-Aware} 特徵向量設計——僅在相同類型之節點之間進行屬性比對，不同類型之節點不互相比較。此設計確保餘弦相似度之計算在語義一致之特徵空間中進行，避免跨類型比較所產生的語義失配（Semantic Mismatch）。
+
+\noindent\textbf{定義 3.6（Type-Aware 特徵向量）。}對每個有效節點 $v \in \hat{V}$，依其類型 $\phi(v)$ 定義特徵向量映射函數 $\mathbf{f}: \hat{V} \rightarrow \mathbb{R}^{d_{\phi(v)}}$，其中 $d_{\phi(v)}$ 為類型 $\phi(v)$ 所對應之特徵維度。各類型之特徵向量定義如下：
+
+\textbf{（一）File 節點}（$d_{\texttt{file}} = 6$）：
+\begin{equation}
+    \mathbf{f}(v) = \left( \frac{m}{72},\; \frac{s}{72},\; \frac{h}{72},\; \frac{u}{72},\; \frac{\text{clamp}(r, -100, 100)}{100},\; \frac{m}{\max(m{+}s{+}h{+}u,\; 1)} \right)
+    \label{eq:file-feature}
+\end{equation}
+其中 $m$、$s$、$h$、$u$ 分別為 VirusTotal 各偵測引擎判定為 malicious、suspicious、harmless、undetected 之數量，$r$ 為 VT 社群信譽評分（reputation），最後一維為偵測率（detection ratio），即惡意引擎數佔總引擎數之比率。除數 72 為 VirusTotal 主流引擎數量之近似值，用於將計數正規化至 $[0, 1]$ 區間；$\text{clamp}(r, -100, 100)$ 確保 reputation 值被截斷至 $[-100, 100]$ 後再除以 100，正規化至 $[-1, 1]$ 範圍。$\max(m{+}s{+}h{+}u, 1)$ 中之除零保護確保當所有引擎計數皆為零時，偵測率回傳 0 而非產生除零錯誤。
+
+\textbf{（二）Domain 節點}（$d_{\texttt{domain}} = 5$）：
+\begin{equation}
+    \mathbf{f}(v) = \left( \frac{m}{72},\; \frac{s}{72},\; \frac{h}{72},\; \frac{\text{clamp}(r, -100, 100)}{100},\; w \right)
+    \label{eq:domain-feature}
+\end{equation}
+其中 $w \in \{0, 1\}$ 為布林值，表示該網域是否具備 WHOIS 註冊資訊。Domain 節點不包含 \texttt{undetected} 維度與偵測率維度，因 VT 對網域之掃描引擎數量與檔案不同，且 WHOIS 資訊之有無本身即為網域可疑性之重要指標。
+
+\textbf{（三）IP 節點}（$d_{\texttt{ip}} = 6$）：
+\begin{equation}
+    \mathbf{f}(v) = \left( \frac{m}{72},\; \frac{s}{72},\; \frac{h}{72},\; \frac{\text{clamp}(r, -100, 100)}{100},\; \min\!\left(\frac{a}{100000},\; 1.0\right),\; \frac{\text{hash}(c) \bmod 100}{100} \right)
+    \label{eq:ip-feature}
+\end{equation}
+其中 $a$ 為自治系統號碼（Autonomous System Number, ASN），透過除以 100,000 並截斷至上限 1.0 進行正規化；$c$ 為國家代碼字串（如 ``US''、``RU''），透過雜湊函數取模後正規化至 $[0, 1)$ 區間。ASN 正規化之設計反映了以下資安觀察：同一 APT 組織傾向於在特定自治系統中部署 C2 基礎設施，ASN 之相近性可作為歸因之輔助信號。國家代碼之雜湊正規化則將類別型變數轉換為連續數值，使其能納入餘弦相似度之向量計算。
+
+\textbf{（四）TTP 節點}（$d_{\texttt{ttp}} = 14$）：
+\begin{equation}
+    \mathbf{f}(v) = \text{one-hot}(\text{tactic}(v),\; 14)
+    \label{eq:ttp-feature}
+\end{equation}
+其中 $\text{tactic}(v)$ 為 MITRE ATT\&CK 技術識別碼所對應之主要戰術階段（Primary Tactic），系統內建涵蓋 200 餘項常見 Technique 之 ID-to-Tactic 映射表。14 個維度分別對應 MITRE ATT\&CK 框架之 14 個戰術階段：Reconnaissance、Resource Development、Initial Access、Execution、Persistence、Privilege Escalation、Defense Evasion、Credential Access、Discovery、Lateral Movement、Collection、Command and Control、Exfiltration、Impact。未知之 Technique ID 回傳全零向量 $\mathbf{0} \in \mathbb{R}^{14}$。
+
+\textbf{（五）CTI 節點}不參與 Level~2 比對，不定義特徵向量。
+
+表~\ref{tab:feature-vectors} 彙整了各節點類型之特徵向量規格。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{各節點類型之 Type-Aware 特徵向量規格}
+    \label{tab:feature-vectors}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l c l}
+        \hline
+        \textbf{節點類型} & \textbf{維度} & \textbf{特徵向量組成} \\
+        \hline
+        \texttt{file}   & 6  & $m/72$, $s/72$, $h/72$, $u/72$, $r/100$, detection\_ratio \\
+        \texttt{domain} & 5  & $m/72$, $s/72$, $h/72$, $r/100$, has\_whois \\
+        \texttt{ip}     & 6  & $m/72$, $s/72$, $h/72$, $r/100$, asn\_norm, country\_hash \\
+        \texttt{ttp}    & 14 & ATT\&CK tactic one-hot（14 維） \\
+        \texttt{cti}    & —  & 不參與 Level~2 比對 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+
+\subsubsection{餘弦相似度與除零保護}
+
+\noindent\textbf{定義 3.7（餘弦相似度）。}給定兩個同類型節點 $v_q \in \hat{V}_q$ 與 $v_p \in \hat{V}_p$，其中 $\phi(v_q) = \phi(v_p)$，兩者之屬性相似度以特徵向量之餘弦相似度（Cosine Similarity）衡量：
+\begin{equation}
+    \cos(\mathbf{f}(v_q), \mathbf{f}(v_p)) = \frac{\mathbf{f}(v_q) \cdot \mathbf{f}(v_p)}{\|\mathbf{f}(v_q)\| \cdot \|\mathbf{f}(v_p)\|}
+    \label{eq:cosine}
+\end{equation}
+其中 $\mathbf{f}(v_q) \cdot \mathbf{f}(v_p) = \sum_{i=1}^{d} f_i(v_q) \cdot f_i(v_p)$ 為內積運算，$\|\mathbf{f}(v)\| = \sqrt{\sum_{i=1}^{d} f_i(v)^2}$ 為歐幾里得範數（Euclidean Norm），$d = d_{\phi(v)}$ 為該類型之特徵維度。
+
+\textbf{除零保護機制。}當任一節點之特徵向量為零向量（$\|\mathbf{f}(v)\| = 0$），即該節點之所有屬性值均為零或缺失時，分母將為零。此時系統定義：
+\begin{equation}
+    \cos(\mathbf{f}(v_q), \mathbf{f}(v_p)) = 0, \quad \text{if } \|\mathbf{f}(v_q)\| = 0 \text{ or } \|\mathbf{f}(v_p)\| = 0
+    \label{eq:cosine-zero}
+\end{equation}
+此保護機制確保系統在面對屬性缺失之節點時仍能穩定運行，不會因除零錯誤而中斷。在資安實務中，屬性缺失之情況並不罕見——例如新註冊之網域可能尚未被 VT 掃描，其所有偵測計數皆為零。
+
+\textbf{採用餘弦相似度之合理性。}本研究選擇餘弦相似度而非歐氏距離（Euclidean Distance）作為屬性比對之度量，原因在於：餘弦相似度衡量的是兩個向量在方向上的一致性，而非絕對數值的接近程度。在威脅情資之脈絡下，此特性尤為重要——兩個惡意檔案可能因提交至 VT 的時間不同而具有不同的絕對偵測數（如 54/72 vs.\ 27/36），但其偵測「模式」（各類引擎判定之比例分布）仍可能高度一致。餘弦相似度能捕捉此種比例層面之相似性，而歐氏距離則會因絕對數值之差異而錯判兩者為不相似。
+
+
+\subsubsection{雙向 Greedy Matching 與 F1 聚合}
+
+Level~2 之整體分數並非簡單地將所有節點對之餘弦相似度取平均，而是採用\textbf{雙向 Greedy Matching}（Bidirectional Greedy Matching）機制搭配 \textbf{F1 聚合}（F1 Aggregation），以解決查詢子圖與原型子圖之間規模不對稱所導致的 Size Bias 問題。
+
+\noindent\textbf{定義 3.8（Level~2 匹配門檻）。}設 Level~2 之餘弦相似度門檻為 $\tau_2$（預設 $\tau_2 = 0.6$）。僅當兩個同類型節點之餘弦相似度達到此門檻時，該匹配才被視為有效：
+\begin{equation}
+    \text{match}_2(v_q, v_p) = \begin{cases} 1, & \text{if } \phi(v_q) = \phi(v_p) \text{ and } \cos(\mathbf{f}(v_q), \mathbf{f}(v_p)) \geq \tau_2 \\ 0, & \text{otherwise} \end{cases}
+    \label{eq:l2-threshold}
+\end{equation}
+門檻 $\tau_2 = 0.6$ 之設定意味著兩個節點之特徵向量在方向上需具有至少 60\% 之一致性方可被視為相似。此門檻值之最終合理性將透過消融實驗加以驗證。
+
+\noindent\textbf{定義 3.9（Forward Matching — Precision 方向）。}設查詢子圖中 Level~1 未匹配之有效節點集合為 $\hat{V}_q^{(2)}$，原型子圖中 Level~1 未匹配之有效節點集合為 $\hat{V}_p^{(2)}$。Forward Matching 計算查詢子圖中有多少比例之節點能在原型子圖中找到足夠相似的配對。
+
+對每個類型 $t \in \mathcal{T}_V \setminus \{\texttt{cti}\}$，將 $\hat{V}_q^{(2)}$ 與 $\hat{V}_p^{(2)}$ 分別按類型分組：
+\begin{equation}
+    \hat{V}_q^{(2,t)} = \{v \in \hat{V}_q^{(2)} : \phi(v) = t\}, \quad \hat{V}_p^{(2,t)} = \{v \in \hat{V}_p^{(2)} : \phi(v) = t\}
+\end{equation}
+
+對每個查詢節點 $v_q \in \hat{V}_q^{(2,t)}$，以 Greedy Best-Match 策略在 $\hat{V}_p^{(2,t)}$ 中選取餘弦相似度最高且尚未被配對之節點 $v_p^*$：
+\begin{equation}
+    v_p^* = \arg\max_{v_p \in \hat{V}_p^{(2,t)} \setminus \mathcal{M}_p} \cos(\mathbf{f}(v_q), \mathbf{f}(v_p))
+    \label{eq:greedy-match}
+\end{equation}
+其中 $\mathcal{M}_p$ 為已被配對之原型節點集合。若 $\cos(\mathbf{f}(v_q), \mathbf{f}(v_p^*)) \geq \tau_2$，則 $(v_q, v_p^*)$ 構成一組有效匹配，$v_p^*$ 加入 $\mathcal{M}_p$，不再參與後續配對（一對一約束）。Forward Matching 之 Precision 定義為：
+\begin{equation}
+    P_2 = \frac{\displaystyle\sum_{t \in \mathcal{T}_V \setminus \{\texttt{cti}\}} \left|\left\{v_q \in \hat{V}_q^{(2,t)} : \exists\, v_p^* \in \hat{V}_p^{(2,t)},\; \cos(\mathbf{f}(v_q), \mathbf{f}(v_p^*)) \geq \tau_2\right\}\right|}{|\hat{V}_q^{(2)}|}
+    \label{eq:l2-precision}
+\end{equation}
+直觀而言，$P_2$ 反映查詢子圖中的節點在原型子圖中被「涵蓋」的程度。
+
+\noindent\textbf{定義 3.10（Backward Matching — Recall 方向）。}方向相反，計算原型子圖中有多少比例之節點能在查詢子圖中找到足夠相似的配對。匹配邏輯與 Forward Matching 對稱，以原型節點為起點，在查詢節點中尋找最佳配對：
+\begin{equation}
+    R_2 = \frac{\displaystyle\sum_{t \in \mathcal{T}_V \setminus \{\texttt{cti}\}} \left|\left\{v_p \in \hat{V}_p^{(2,t)} : \exists\, v_q^* \in \hat{V}_q^{(2,t)},\; \cos(\mathbf{f}(v_p), \mathbf{f}(v_q^*)) \geq \tau_2\right\}\right|}{|\hat{V}_p^{(2)}|}
+    \label{eq:l2-recall}
+\end{equation}
+$R_2$ 反映原型子圖中的節點在查詢子圖中被「回溯匹配」的程度。
+
+\noindent\textbf{定義 3.11（Level~2 相似度 — F1 聚合）。}Level~2 之最終相似度分數定義為 $P_2$ 與 $R_2$ 之調和平均數（Harmonic Mean），即 F1-Score：
+\begin{equation}
+    S_2(G_q, G_p) = \begin{cases} \displaystyle\frac{2 \times P_2 \times R_2}{P_2 + R_2}, & \text{if } P_2 + R_2 > 0 \\[8pt] 0, & \text{if } P_2 + R_2 = 0 \end{cases}
+    \label{eq:level2}
+\end{equation}
+
+\textbf{Size Bias 修正之原理。}F1 聚合之核心價值在於平衡正向與反向匹配。考慮以下典型情境：一個包含 30 個節點之查詢子圖與一個包含 850 個節點之大型原型子圖進行比對。在 Forward Matching 中，查詢子圖之多數節點均可能在大型原型子圖中找到屬性相似的配對，故 $P_2$ 可能很高。然而在 Backward Matching 中，大型原型子圖之 850 個節點中僅有極少數能在 30 個查詢節點中找到配對，故 $R_2$ 將很低。F1 聚合透過調和平均數有效降低了大型原型子圖之不公平優勢，使歸因判定不受子圖規模之不當影響。此機制在數學上等價於同時要求雙方的節點匹配覆蓋率均達到一定水準，而非僅滿足單方之涵蓋要求。
+
+
+\subsection{Level~3：鄰域結構相似度（Neighborhood Structure Similarity）}
+\label{subsec:level3}
+
+Level~3 為三層引擎中最深層次之比對，作用於 Level~1 與 Level~2 均未匹配之剩餘節點。其核心假設為：即使兩個節點之身份不同且屬性不夠相似，但若它們在各自的子圖中具有相似的「鄰域環境」（Neighborhood Context）——即其 1-hop 鄰居群在組成結構上具有可比性——則可推斷兩者在攻擊基礎設施中扮演相似的功能角色。
+
+此種結構層面之比對具有明確的資安鑑識意義。例如，兩個不同的 C2 IP 位址，雖然其值不同（Level~1 不匹配）、VT 偵測率可能有差異（Level~2 未達門檻），但若兩者皆連接到大量類似的惡意網域且被類似數量的惡意檔案所聯繫，則從攻擊基礎設施之拓撲角色而言，兩者極可能是同一攻擊者在不同時期或不同攻擊活動中所部署之功能等價節點。
+
+\noindent\textbf{定義 3.12（1-hop 鄰居集合）。}對有向圖 $G$ 中之節點 $v$，定義其 1-hop 鄰居集合為所有前驅節點（Predecessors）與後繼節點（Successors）之聯集：
+\begin{equation}
+    \mathcal{N}(v) = \{u \in V : (u, v) \in E\} \cup \{u \in V : (v, u) \in E\}
+    \label{eq:1hop}
+\end{equation}
+並定義鄰居值集合為：
+\begin{equation}
+    \mathcal{N}^{\text{val}}(v) = \{\text{value}(u) : u \in \mathcal{N}(v),\; \text{value}(u) \neq \emptyset\}
+    \label{eq:neighbor-val}
+\end{equation}
+其中過濾掉 value 為空之鄰居節點，確保集合運算之有效性。
+
+Level~3 同樣採用\textbf{雙向匹配與 F1 聚合}消除 Size Bias，其匹配邏輯包含兩種子策略，依優先順序嘗試：
+
+\subsubsection{Match Type 2.1.1：鄰居值 Jaccard 匹配}
+
+\noindent\textbf{定義 3.13（鄰居 Jaccard 相似度）。}對查詢節點 $v_q$ 與原型節點 $v_p$，計算兩者之 1-hop 鄰居值集合之 Jaccard 相似度：
+\begin{equation}
+    J_{\mathcal{N}}(v_q, v_p) = \frac{|\mathcal{N}^{\text{val}}(v_q) \cap \mathcal{N}^{\text{val}}(v_p)|}{|\mathcal{N}^{\text{val}}(v_q) \cup \mathcal{N}^{\text{val}}(v_p)|}
+    \label{eq:neighbor-jaccard}
+\end{equation}
+若 $J_{\mathcal{N}}(v_q, v_p) \geq \tau_{3a}$（預設 $\tau_{3a} = 0.2$），則判定匹配成功。門檻 $\tau_{3a}$ 設定為相對寬鬆的 0.2，反映了以下設計考量：兩個節點即使僅共享少數鄰居，已足以暗示其在拓撲結構中之關聯性。當 $|\mathcal{N}^{\text{val}}(v_q) \cup \mathcal{N}^{\text{val}}(v_p)| = 0$ 時（即兩節點皆無有效鄰居），定義 $J_{\mathcal{N}} = 0$。
+
+
+\subsubsection{Match Type 2.1.2：鄰居統計摘要 Cosine Fallback}
+
+當 Jaccard 不足以達成匹配時，系統退而採用鄰居之統計摘要向量進行餘弦相似度比較，作為退路機制（Fallback Mechanism）。
+
+\noindent\textbf{定義 3.14（鄰居統計摘要向量）。}對節點 $v$ 之 1-hop 鄰居集合 $\mathcal{N}(v)$，定義固定 8 維之統計摘要向量 $\mathbf{g}(v) \in \mathbb{R}^{8}$：
+\begin{equation}
+    \mathbf{g}(v) = \left( g_1,\; g_2,\; g_3,\; g_4,\; g_5,\; g_6,\; g_7,\; g_8 \right)
+    \label{eq:neighbor-summary}
+\end{equation}
+各維度之定義如下：
+
+\begin{equation}
+    g_1 = \min\!\left(\frac{|\mathcal{N}(v)|}{20},\; 1.0\right)
+    \label{eq:g1}
+\end{equation}
+為正規化後之鄰居數量。除數 20 為經驗上限值，超過 20 個鄰居之節點均截斷為 1.0，避免極端高度數節點主宰此維度。
+
+\begin{equation}
+    g_2 = \frac{|\{u \in \mathcal{N}(v) : \phi(u) = \texttt{file}\}|}{|\mathcal{N}(v)|}, \quad g_3 = \frac{|\{u \in \mathcal{N}(v) : \phi(u) = \texttt{domain}\}|}{|\mathcal{N}(v)|}, \quad g_4 = \frac{|\{u \in \mathcal{N}(v) : \phi(u) = \texttt{ip}\}|}{|\mathcal{N}(v)|}
+    \label{eq:g234}
+\end{equation}
+分別為鄰居中 \texttt{file}、\texttt{domain}、\texttt{ip} 類型節點之比例，反映鄰域之類型組成分布。
+
+\begin{equation}
+    g_5 = \frac{1}{|\mathcal{N}(v)|} \sum_{u \in \mathcal{N}(v)} \frac{\text{malicious}(u)}{72}, \qquad g_6 = \frac{1}{|\mathcal{N}(v)|} \sum_{u \in \mathcal{N}(v)} \frac{\text{reputation}(u)}{100}
+    \label{eq:g56}
+\end{equation}
+分別為鄰居之平均 malicious 分數與平均 reputation 分數（正規化後），反映鄰域之整體惡意程度。
+
+\begin{equation}
+    g_7 = \frac{|\{u \in \mathcal{N}(v) : \text{malicious}(u) > 0\}|}{|\mathcal{N}(v)|}, \qquad g_8 = \frac{|\{u \in \mathcal{N}(v) : \text{reputation}(u) < 0\}|}{|\mathcal{N}(v)|}
+    \label{eq:g78}
+\end{equation}
+分別為鄰居中被至少一個引擎判定為惡意之比例，以及信譽為負之比例，反映鄰域中具備明確惡意特徵之節點密度。
+
+當 $|\mathcal{N}(v)| = 0$（即節點無鄰居）時，定義 $\mathbf{g}(v) = \mathbf{0} \in \mathbb{R}^{8}$。
+
+表~\ref{tab:neighbor-summary} 彙整了鄰居統計摘要向量之各維度規格。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{鄰居統計摘要向量之 8 維規格}
+    \label{tab:neighbor-summary}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c l l}
+        \hline
+        \textbf{維度} & \textbf{說明} & \textbf{正規化方式} \\
+        \hline
+        $g_1$ & 鄰居數量 & $\min(\text{count}/20,\; 1.0)$ \\
+        $g_2$ & \texttt{file} 類型鄰居比例 & count / total \\
+        $g_3$ & \texttt{domain} 類型鄰居比例 & count / total \\
+        $g_4$ & \texttt{ip} 類型鄰居比例 & count / total \\
+        $g_5$ & 平均 malicious 分數 & $\text{mean}(\text{malicious}) / 72$ \\
+        $g_6$ & 平均 reputation 分數 & $\text{mean}(\text{reputation}) / 100$ \\
+        $g_7$ & malicious $> 0$ 之鄰居比例 & count / total \\
+        $g_8$ & reputation $< 0$ 之鄰居比例 & count / total \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\textbf{採用固定維度統計摘要之合理性。}一個直覺的替代方案為直接計算所有鄰居之 type-aware 特徵向量的平均值。然而，此方案面臨維度不一致之根本障礙——不同類型之鄰居具有不同的特徵維度（$d_{\texttt{file}} = 6$、$d_{\texttt{domain}} = 5$、$d_{\texttt{ip}} = 6$），無法直接進行向量平均。固定 8 維之統計摘要向量透過捕捉鄰域的規模、類型組成分布、與惡意程度分布三個面向，以統一維度概括鄰域之整體特徵，實現了跨類型鄰居之可比較性。
+
+若兩個節點之鄰居統計摘要向量的餘弦相似度達到門檻 $\tau_{3b}$（預設 $\tau_{3b} = 0.5$），則判定 Fallback 匹配成功：
+\begin{equation}
+    \text{match}_{3b}(v_q, v_p) = \begin{cases} 1, & \text{if } \cos(\mathbf{g}(v_q), \mathbf{g}(v_p)) \geq \tau_{3b} \\ 0, & \text{otherwise} \end{cases}
+    \label{eq:l3-fallback}
+\end{equation}
+
+
+\subsubsection{匹配優先順序與 Greedy 約束}
+
+對每個 source 節點，Level~3 之匹配策略依以下優先順序執行：
+\begin{enumerate}
+    \item 首先嘗試所有候選 target 節點之 Match Type 2.1.1（鄰居值 Jaccard）。
+    \item 若 Jaccard 均未達門檻 $\tau_{3a}$，再計算 Match Type 2.1.2（鄰居統計摘要 Cosine Fallback）。
+    \item 在所有產生有效匹配之候選中，選取分數最高者作為最終配對。
+    \item Greedy Matching 保證一對一配對約束——已被成功匹配之 target 節點不再參與後續配對。
+\end{enumerate}
+
+
+\subsubsection{Level~3 之雙向 F1 聚合}
+
+\noindent\textbf{定義 3.15（Level~3 相似度）。}設 Level~1 與 Level~2 均未匹配之查詢節點集合為 $\hat{V}_q^{(3)}$，原型節點集合為 $\hat{V}_p^{(3)}$。Level~3 之 Precision、Recall 與 F1 分數定義如下：
+\begin{equation}
+    P_3 = \frac{|\text{ForwardMatches}_3|}{|\hat{V}_q^{(3)}|}, \qquad R_3 = \frac{|\text{BackwardMatches}_3|}{|\hat{V}_p^{(3)}|}
+    \label{eq:l3-pr}
+\end{equation}
+\begin{equation}
+    S_3(G_q, G_p) = \begin{cases} \displaystyle\frac{2 \times P_3 \times R_3}{P_3 + R_3}, & \text{if } P_3 + R_3 > 0 \\[8pt] 0, & \text{if } P_3 + R_3 = 0 \end{cases}
+    \label{eq:level3}
+\end{equation}
+其中 $\text{ForwardMatches}_3$ 為正向匹配（查詢$\rightarrow$原型）成功之節點對集合，$\text{BackwardMatches}_3$ 為反向匹配（原型$\rightarrow$查詢）成功之節點對集合。
+
+
+\subsection{全局相似度分數聚合}
+\label{subsec:global-score}
+
+三個層次之相似度分數透過線性加權求和聚合為全局相似度分數。
+
+\noindent\textbf{定義 3.16（全局相似度分數）。}給定查詢子圖 $G_q$ 與候選原型子圖 $G_p$，全局相似度分數定義為：
+\begin{equation}
+    S(G_q, G_p) = w_1 \cdot S_1(G_q, G_p) + w_2 \cdot S_2(G_q, G_p) + w_3 \cdot S_3(G_q, G_p)
+    \label{eq:global-score}
+\end{equation}
+其中權重向量 $\mathbf{w} = (w_1, w_2, w_3)$ 滿足約束條件：
+\begin{equation}
+    w_1 + w_2 + w_3 = 1, \quad w_i \geq 0,\; \forall\, i \in \{1, 2, 3\}
+    \label{eq:weight-constraint}
+\end{equation}
+
+預設權重為 $w_1 = 0.40$、$w_2 = 0.35$、$w_3 = 0.25$，反映三個層次之歸因信號強度遞減特性：Level~1 之 IoC 身份匹配為最直接之歸因證據，具有最高之鑑別力；Level~2 之屬性相似度次之，提供行為特徵層面之比對信號；Level~3 之鄰域結構相似度最弱，但在前兩層信號不足時提供額外之區分資訊。
+
+預設權重之設定為初始假設值，不具備先驗之文獻依據。為驗證其合理性並尋找最佳組合，本研究設計了系統性之 Grid Search 實驗（詳見第~\ref{subsec:exp5} 節），窮舉所有滿足式~(\ref{eq:weight-constraint}) 且步長為 0.05 之權重組合（共 66 種），以 MRR（Mean Reciprocal Rank）為最佳化目標，實證確定最終權重。
+
+
+%% ================================================================
+\section{APT 歸因推理}
+\label{sec:attribution}
+
+\subsection{歸因判定函數}
+\label{subsec:attribution-function}
+
+\noindent\textbf{定義 3.17（歸因判定）。}給定查詢子圖 $G_q$、候選原型子圖集合 $\mathcal{G}_p = \{G_p^{(1)}, G_p^{(2)}, \ldots, G_p^{(K)}\}$、以及歸因門檻 $\theta$（預設 $\theta = 0.3$），歸因結果定義為下列分段函數：
+\begin{equation}
+    \text{Attribution}(G_q) = \begin{cases} A_{k^*}, & \text{if } S_{\max} \geq \theta \\[4pt] \texttt{Unknown}, & \text{if } S_{\max} < \theta \end{cases}
+    \label{eq:attribution}
+\end{equation}
+其中：
+\begin{equation}
+    k^* = \arg\max_{k \in \{1, 2, \ldots, K\}} S(G_q, G_p^{(k)}), \qquad S_{\max} = S(G_q, G_p^{(k^*)})
+    \label{eq:best-match}
+\end{equation}
+
+$A_{k^*}$ 為分數最高之原型子圖所對應的 APT 組織。門檻 $\theta$ 之存在賦予系統\textbf{拒絕歸因之能力}——當所有候選者之相似度分數均未達門檻時，系統判定查詢子圖不屬於任何已知 APT 組織，輸出 \texttt{Unknown}。此機制在資安鑑識實務中至關重要：強行將不明攻擊歸因至已知組織，可能導致錯誤的戰略判斷與防禦資源誤配。門檻 $\theta$ 之最佳值透過 Threshold Sensitivity 分析（詳見第~\ref{subsec:exp6} 節）實證確定。
+
+\subsection{歸因流程}
+\label{subsec:attribution-flow}
+
+APTAttributor 模組之完整歸因流程如下：
+
+\begin{enumerate}
+    \item \textbf{載入與篩選 Prototype 集合。}從 Prototype 目錄載入所有有效之 APT 原型子圖。系統自動排除 \texttt{edge\_source} $=$ \texttt{co\_occurrence} 之 Prototype（邊結構不反映真實的基礎設施關聯），以及邊數低於 $\text{MIN\_EDGES}$ 門檻之 Prototype（資訊量不足以支撐有效之結構比對）。
+    \item \textbf{逐一計算全局相似度。}對每個通過篩選之原型子圖 $G_p^{(k)}$，透過三層相似度引擎計算 $S(G_q, G_p^{(k)})$，同時記錄各層之分數明細 $(S_1^{(k)}, S_2^{(k)}, S_3^{(k)})$ 及匹配證據。
+    \item \textbf{排名與判定。}將所有候選者按 $S$ 值降序排列，輸出 Top-K 排名，並依據門檻 $\theta$ 進行歸因判定。
+    \item \textbf{證據輸出。}歸因報告包含各層之匹配證據：Level~1 之共享 IoC 實體清單（\texttt{matched\_nodes}）、Level~2 之屬性相似節點配對（\texttt{similar\_nodes}）、Level~3 之結構對應匹配（\texttt{structural\_matches}），確保歸因推理之每一步均可追溯至具體的技術證據。
+\end{enumerate}
+
+
+%% ================================================================
+\section{子圖差集與下一步威脅預測}
+\label{sec:threat-prediction}
+
+在成功歸因之後（$S_{\max} \geq \theta$），DeepPath 進入其獨特的威脅預測階段。此階段之核心創新在於將歸因結果「反轉」為防禦預警——利用最佳匹配之原型子圖作為攻擊者之歷史知識庫，推論其尚未在當前事件中被觀測到的潛在威脅。
+
+\subsection{子圖差集}
+\label{subsec:subgraph-diff}
+
+\noindent\textbf{定義 3.18（子圖差集）。}設最佳匹配之原型子圖為 $G_p^{(k^*)}$，定義差集節點集合為：
+\begin{equation}
+    \Delta(G_q, G_p^{(k^*)}) = \left\{v \in V_p^{(k^*)} : \text{value}(v) \notin \left\{\text{value}(u) : u \in V_q\right\}\right\}
+    \label{eq:subgraph-diff}
+\end{equation}
+即原型子圖中存在但查詢子圖中未觀測到的所有節點。這些節點代表該 APT 組織歷史上曾使用過的基礎設施——包括 C2 伺服器之 IP 位址、惡意網域名稱、攻擊工具之檔案雜湊值、以及攻擊技術（TTP）等——而在當前入侵事件中尚未被偵測到。
+
+\subsection{威脅信心度計算}
+\label{subsec:confidence}
+
+差集中之節點並非同等重要。某些節點可能與當前攻擊活動高度相關，而另一些節點可能屬於攻擊者在遙遠過去之不相關行動。為量化此差異，系統為每個差集節點計算一個威脅信心度分數。
+
+\noindent\textbf{定義 3.19（威脅信心度）。}對每個差集節點 $v \in \Delta$，定義威脅信心度為：
+\begin{equation}
+    C(v) = \alpha \cdot \frac{1}{1 + d_{\text{hop}}(v)} + \beta \cdot d_{\text{norm}}(v)
+    \label{eq:confidence}
+\end{equation}
+其中：
+\begin{itemize}
+    \item $\alpha = 0.6$、$\beta = 0.4$ 為兩項之權重係數，滿足 $\alpha + \beta = 1$。
+    \item $d_{\text{hop}}(v)$ 為\textbf{拓撲距離項}（Topological Proximity），定義為節點 $v$ 到最近已匹配節點之最短路徑長度：
+    \begin{equation}
+        d_{\text{hop}}(v) = \min_{u \in \mathcal{M}_p^{(1)}} \text{shortest\_path\_length}(v, u;\; G_p^{\text{undirected}})
+        \label{eq:hop-dist}
+    \end{equation}
+    其中 $\mathcal{M}_p^{(1)}$ 為 Level~1 匹配對中原型子圖側之節點集合，最短路徑在原型子圖之無向化版本上以廣度優先搜尋（BFS）計算。若所有匹配節點對 $v$ 均不可達（即不存在連通路徑），定義 $d_{\text{hop}}(v) = 999$，使該項趨近於零。
+    \item $d_{\text{norm}}(v)$ 為\textbf{節點重要性項}（Node Importance），定義為正規化後的節點度數：
+    \begin{equation}
+        d_{\text{norm}}(v) = \frac{\deg(v)}{\max_{u \in V_p^{(k^*)}} \deg(u)}
+        \label{eq:degree-norm}
+    \end{equation}
+    其中 $\deg(v)$ 為節點 $v$ 在有向圖中的度數（入度加出度），分母為原型子圖中所有節點之最大度數。
+\end{itemize}
+
+\textbf{距離衰減之資安意義。}第一項 $\frac{1}{1+d_{\text{hop}}}$ 具有距離反比衰減特性：當 $d_{\text{hop}} = 0$ 時（即該節點本身即為已匹配節點之直接鄰居），此項取最大值 1.0；當 $d_{\text{hop}} = 1$ 時，降至 0.5；當 $d_{\text{hop}} = 2$ 時，降至 0.33，以此類推。此衰減模型反映了一項重要的資安觀察：攻擊者之基礎設施具有空間局部性（Spatial Locality），即與當前活動直接相連的基礎設施節點，在近期被啟用之機率遠高於拓撲上遙遠的節點。
+
+\textbf{節點度數之資安意義。}第二項 $d_{\text{norm}}$ 捕捉節點在攻擊者歷史基礎設施中的樞紐程度（Hub Centrality）。高度數之節點通常為攻擊者長期使用的核心 C2 伺服器或主要惡意網域，連結了大量的攻擊工具與基礎設施，其被再次啟用之可能性較高。
+
+\textbf{兩項權重之設計假設。}$\alpha = 0.6 > \beta = 0.4$ 之設定，反映了本研究之假設：拓撲接近度比統計頻率更具預測價值——一個距離當前攻擊活動僅一步之遙的低度數節點，其威脅性通常高於一個拓撲上遙遠但歷史上頻繁使用的高度數節點。此假設之合理性將在實驗章節中透過威脅預測之 Precision/Recall 分析加以驗證。
+
+
+%% ================================================================
+\section{評估方法}
+\label{sec:evaluation}
+
+\subsection{歸因準確度指標}
+\label{subsec:attribution-metrics}
+
+本研究採用下列指標評估歸因系統之準確度，如表~\ref{tab:attribution-metrics} 所示。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{歸因準確度評估指標}
+    \label{tab:attribution-metrics}
+    \renewcommand\arraystretch{1.3}
+    \begin{tabular}{l l l}
+        \hline
+        \textbf{指標} & \textbf{定義} & \textbf{說明} \\
+        \hline
+        Top-1 Accuracy & $\frac{\text{Top-1 正確數}}{\text{已知 APT 樣本數}}$ & 最佳匹配即為正確 APT 的比例 \\[4pt]
+        Top-3 Accuracy & $\frac{\text{Top-3 包含正確 APT 的次數}}{\text{已知 APT 樣本數}}$ & 前 3 名包含正確 APT 的比例 \\[4pt]
+        Top-5 Accuracy & $\frac{\text{Top-5 包含正確 APT 的次數}}{\text{已知 APT 樣本數}}$ & 前 5 名包含正確 APT 的比例 \\[4pt]
+        MRR & $\frac{1}{N}\sum_{i=1}^{N}\frac{1}{\text{rank}_i}$ & 正確 APT 排名的倒數平均 \\[4pt]
+        Unknown 偵測率 & $\frac{\text{正確判定 Unknown 的次數}}{\text{Unknown 樣本數}}$ & 未知樣本被正確拒絕的比例 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+此外，本研究繪製 APT $\times$ APT 之多類別混淆矩陣（含 Unknown 類），分析哪些 APT 組織容易被互相混淆。
+
+\textbf{重要設計決策：}Unknown 樣本（ground truth 為 ``Unknown'' 者）只計入 Unknown 偵測率和混淆矩陣，\textbf{不納入 Top-K 和 MRR 的分母}，因為 rankings 中永遠不會出現 ``Unknown'' 這個選項，將其納入分母會不公平地拉低指標。
+
+\subsection{威脅預測準確度指標}
+\label{subsec:prediction-metrics}
+
+威脅預測之準確度以下列指標衡量：
+\begin{equation}
+    \text{Prediction Precision} = \frac{|\text{predicted} \cap \text{actual}|}{|\text{predicted}|}
+    \label{eq:pred-precision}
+\end{equation}
+\begin{equation}
+    \text{Prediction Recall} = \frac{|\text{predicted} \cap \text{actual}|}{|\text{actual}|}
+    \label{eq:pred-recall}
+\end{equation}
+\begin{equation}
+    \text{Prediction F1} = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+    \label{eq:pred-f1}
+\end{equation}
+威脅預測的 Precision 和 Recall 先對每個查詢單獨計算，再取平均。
+
+\subsection{實驗設計}
+\label{subsec:experiments}
+
+\subsubsection{實驗 1：Leave-One-Out 歸因}
+\label{subsec:exp1}
+
+對每個 APT 的 Prototype 子圖，隨機抽取 30\% 節點作為查詢子圖（query），剩餘 70\% 作為縮減後的 Prototype（reduced prototype），最少抽取 3 個節點。Query 的邊嚴格保留兩端均在 query 節點集合的邊；Reduced Prototype 的邊保留至少一端在 prototype 節點集合的邊（寬鬆策略，保留更多結構資訊）。每個 APT 重複 5 次（不同隨機種子，seed $= 42 + \text{trial}$），以降低隨機性影響。歸因時，query 需在所有 APT 的 Prototype（含自己的 reduced prototype）中找到正確匹配。歸因門檻在實驗中設為 $\theta = 0.1$（低於預設 0.3），以確保更多歸因結果有輸出排名供分析。
+
+\subsubsection{實驗 2：消融實驗（Ablation Study）}
+\label{subsec:exp2}
+
+測試不同層次組合和權重配置對歸因準確度的影響，如表~\ref{tab:ablation} 所示。消融實驗同樣使用 5 次隨機重複。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{消融實驗之權重配置}
+    \label{tab:ablation}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l c c c l}
+        \hline
+        \textbf{配置} & $w_1$ & $w_2$ & $w_3$ & \textbf{目的} \\
+        \hline
+        L1 only       & 1.00 & 0.00 & 0.00 & 驗證純身份匹配的能力 \\
+        L1+L2         & 0.55 & 0.45 & 0.00 & 驗證屬性相似度的貢獻 \\
+        L1+L2+L3（預設）& 0.40 & 0.35 & 0.25 & 完整三層引擎 \\
+        Equal         & 0.33 & 0.33 & 0.34 & 等權重基線 \\
+        L2 heavy      & 0.20 & 0.60 & 0.20 & 驗證過度依賴 L2 的影響 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\subsubsection{實驗 3：分數分布分析}
+\label{subsec:exp3}
+
+統計正確歸因和錯誤歸因的分數分布（mean、std、min、max），並計算兩者的差距（gap $= \text{mean}_{\text{correct}} - \text{mean}_{\text{wrong}}$），用以評估系統的區分度。同時細分到各 APT 的正確分數統計。
+
+\subsubsection{實驗 4：Holdout IoC 歸因（開放集場景）}
+\label{subsec:exp4}
+
+從 APT$_A$ 的完整 Prototype 中隨機抽取 $N$ 個 IoC 建立 query（只抽 type 不為 \texttt{cti} 且有 value 的節點）。Prototype pool 只包含其他 APT 的完整 Prototype（不含 APT$_A$ 自己），模擬真實場景：分析師取得少量 IoC，需判斷它們最可能來自哪個已知 APT。與 Leave-One-Out 的差別在於：query 的 IoC value 直接來自 Prototype，因此 Level~1 有機會產生非零分數。分別以 $N = 5, 10, 20$ 測試，觀察 Level~1 信號隨 IoC 數量的變化趨勢。歸因門檻設為 0.05（極低），確保能輸出排名供分析。
+
+\subsubsection{實驗 5：權重 Grid Search}
+\label{subsec:exp5}
+
+對 $w_1, w_2, w_3$（$w_1 + w_2 + w_3 = 1$，步長 0.05）的所有組合進行窮舉搜索，以 MRR 為最佳化目標，找出最佳權重組合。共 66 種權重組合 $\times$ 所有 APT $\times$ 1 trial $= 528+$ 次歸因。
+
+\subsubsection{實驗 6：歸因門檻敏感度分析}
+\label{subsec:exp6}
+
+對門檻 $\theta \in \{0.05, 0.10, 0.15, \ldots, 0.55\}$（共 11 個值），分別計算 Precision、Recall 和 F1-Score，繪製 Threshold-Precision-Recall-F1 曲線，確定最佳歸因門檻。
+
+
+%% ================================================================
+\section{門檻與超參數彙整}
+\label{sec:hyperparameters}
+
+表~\ref{tab:hyperparameters} 彙整了 DeepPath 框架中所有門檻與超參數之設定。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{DeepPath 框架之門檻與超參數彙整}
+    \label{tab:hyperparameters}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l c c l l}
+        \hline
+        \textbf{超參數} & \textbf{符號} & \textbf{預設值} & \textbf{說明} & \textbf{驗證方式} \\
+        \hline
+        Level~1 權重     & $w_1$      & 0.40 & 身份匹配之信號權重 & Grid Search \\
+        Level~2 權重     & $w_2$      & 0.35 & 屬性相似度之信號權重 & Grid Search \\
+        Level~3 權重     & $w_3$      & 0.25 & 結構相似度之信號權重 & Grid Search \\
+        L2 cosine 門檻   & $\tau_2$   & 0.6  & 屬性匹配最低 cosine 值 & 消融實驗 \\
+        L3 鄰居 Jaccard  & $\tau_{3a}$& 0.2  & 鄰居值匹配最低 Jaccard 值 & 消融實驗 \\
+        L3 鄰居 cosine   & $\tau_{3b}$& 0.5  & 鄰居摘要匹配最低 cosine 值 & 消融實驗 \\
+        歸因門檻         & $\theta$   & 0.3  & 低於此分數判定為 Unknown & 門檻敏感度分析 \\
+        最低邊數         & MIN\_EDGES & 20   & 過濾邊數不足之 Prototype & 資料品質控管 \\
+        Query 比例       & —          & 0.30 & 抽出作為 query 之節點比例 & 固定 \\
+        最少抽取數       & —          & 3    & 即使 30\% 不足 3 個仍抽 3 個 & 固定 \\
+        實驗重複次數     & —          & 5    & 每組實驗之隨機重複次數 & 固定 \\
+        隨機種子         & —          & 42   & 基礎隨機種子（trial $i$ 用 $42+i$） & 固定 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+
+%% ================================================================
+\section{實作細節}
+\label{sec:implementation}
+
+\subsection{技術選型}
+
+表~\ref{tab:tech-stack} 列出本研究之技術選型。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{DeepPath 技術選型}
+    \label{tab:tech-stack}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l l}
+        \hline
+        \textbf{元件} & \textbf{技術} \\
+        \hline
+        程式語言 & Python 3.12 \\
+        圖資料結構 & NetworkX DiGraph \\
+        數值計算 & NumPy \\
+        評估指標 & scikit-learn（confusion\_matrix） \\
+        威脅情資來源 & VirusTotal API v3 + AlienVault OTX API \\
+        環境管理 & uv（Python 套件管理） \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\subsection{模組架構}
+
+DeepPath 之核心程式碼由以下模組組成：
+\begin{itemize}
+    \item \textbf{SubgraphSimilarity}（\texttt{similarity.py}）：實作三層相似度引擎，透過 \texttt{\_build\_graph()} 靜態方法自建 NetworkX DiGraph，不依賴外部圖建構模組。內部管理 MITRE ATT\&CK Technique ID $\rightarrow$ Tactic 的映射表（涵蓋 200 餘項常見 Technique）。
+    \item \textbf{APTAttributor}（\texttt{predictor.py}）：管理 Prototype 子圖集合，執行歸因推理與威脅預測。支援動態新增 Prototype、批量歸因、Prototype 序列化。初始化時 prototype 目錄不存在會靜默建立。
+    \item \textbf{CTIEvaluator}（\texttt{evaluator.py}）：計算 Top-K Accuracy、MRR、混淆矩陣等歸因評估指標，以及威脅預測的 Precision/Recall/F1。
+\end{itemize}
+
+\subsection{演算法複雜度分析}
+\label{subsec:complexity}
+
+設查詢子圖有 $n_q$ 個節點，Prototype 有 $n_p$ 個節點，候選 Prototype 數量為 $K$，表~\ref{tab:complexity} 列出各層次之計算複雜度。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{各層次之計算複雜度}
+    \label{tab:complexity}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l l l}
+        \hline
+        \textbf{層次} & \textbf{單次比對複雜度} & \textbf{說明} \\
+        \hline
+        Level~1 & $O(n_q + n_p)$ & 集合操作（建立 value set + Jaccard） \\
+        Level~2 & $O(n_q \cdot n_p)$ & 每個 query 節點遍歷同型 proto 節點 \\
+        Level~3 & $O(n_q \cdot n_p \cdot d)$ & 需額外比較鄰居集合，$d$ 為平均鄰居數 \\
+        全局 & $O(K \cdot n_q \cdot n_p \cdot d)$ & 對 $K$ 個候選 Prototype 各計算一次 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+由於 APT Prototype 子圖的規模通常在數百至數千節點之間，且 $K$ 一般小於 20，因此整體歸因計算可在數秒內完成，無需 GPU 加速。
+
+
+\subsection{與現有方法之比較}
+\label{subsec:comparison}
+
+表~\ref{tab:method-comparison} 將 DeepPath 與現有主流歸因方法進行系統性比較。
+
+\begin{table*}[htbp]
+    \centering
+    \caption{DeepPath 與現有歸因方法之比較}
+    \label{tab:method-comparison}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{l c c c c}
+        \hline
+        \textbf{特性} & \textbf{傳統 ML} & \textbf{規則式 IoC} & \textbf{GNN} & \textbf{DeepPath} \\
+        \hline
+        特徵表示     & 固定維度向量 & IoC 黑名單 & 圖嵌入向量 & 子圖 \\
+        訓練需求     & 需標註資料 & 無需訓練 & 需大量圖樣本 & 無需訓練 \\
+        新 APT 擴展  & 需重新訓練 & 新增規則 & 需重訓/微調 & 新增 JSON \\
+        結構資訊     & 不考慮 & 不考慮 & 訊息傳遞 & 三層漸進比對 \\
+        威脅預測     & 不支援 & 不支援 & 不直接支援 & 子圖差集 \\
+        可解釋性     & 低 & 高 & 低 & 中高 \\
+        Size Bias    & 需特徵工程 & 不適用 & 圖正規化 & 雙向 F1 \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+DeepPath 在無需訓練、增量擴展、可解釋性、以及威脅預測能力等面向，較傳統方法具有明顯優勢。其以子圖作為比對單位，天然保留了 IoC 之間的拓撲結構資訊；透過三層漸進式匹配，在不同粒度層次提供互補的歸因信號；雙向 F1 聚合機制則從數學層面解決了子圖規模不對稱之偏誤問題。
+
+\end{ZhChapter}

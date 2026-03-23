@@ -1,0 +1,81 @@
+{
+  "indicator": "173.212.228.121",
+  "type": "ip",
+  "passive_dns": [
+    {
+      "hostname": "vinechurch.uk",
+      "first": "2022-06-25T13:14:42",
+      "last": "2022-06-25T13:26:25",
+      "record_type": "A"
+    },
+    {
+      "hostname": "dev.ctiw.uk",
+      "first": "2022-06-20T05:30:06",
+      "last": "2023-02-15T21:58:35",
+      "record_type": "A"
+    },
+    {
+      "hostname": "ctiw.uk",
+      "first": "2022-05-12T16:26:09",
+      "last": "2023-03-09T16:24:41",
+      "record_type": "A"
+    },
+    {
+      "hostname": "dev.vinechurch.uk",
+      "first": "2022-04-20T14:33:07",
+      "last": "2023-02-15T21:58:42",
+      "record_type": "A"
+    }
+  ],
+  "malware": [
+    {
+      "hash": "feda78f1dff8bd9d850a154a627bcfb4041dc36c325be0db436ca85fe565f767",
+      "detections": {
+        "avast": null,
+        "avg": null,
+        "clamav": "Win.Trojan.CrimsonRAT-7591455-0",
+        "msdefender": "Backdoor:MSIL/CrimsonRat.C!MTB"
+      }
+    },
+    {
+      "hash": "b5db0dd322656c19a05bc78f3ce1d8bed30e72fb8c1ac5071fce4afa720f2696",
+      "detections": {
+        "avast": "Win32:WormX-gen\\ [Wrm]",
+        "avg": null,
+        "clamav": "Win.Spyware.CrimsonRat-9859228-0",
+        "msdefender": null
+      }
+    },
+    {
+      "hash": "7a07fbc4903e443f237fc7c99976a8cdb751a983860ea17b891a8c617a820ad0",
+      "detections": {
+        "avast": "Win32:Malware-gen",
+        "avg": null,
+        "clamav": "Win.Trojan.CrimsonRAT-7591455-0",
+        "msdefender": "Backdoor:MSIL/CrimsonRat.A!MTB"
+      }
+    },
+    {
+      "hash": "aa839a4cbf91fc6d10883a5a4c419772980645c01093b6bb77a5c0dd385315b6",
+      "detections": {
+        "avast": "Win32:Malware-gen",
+        "avg": null,
+        "clamav": null,
+        "msdefender": null
+      }
+    }
+  ],
+  "geo": {
+    "country_code": "DE",
+    "country_name": "Germany",
+    "city": "Nuremberg",
+    "asn": "AS51167 contabo gmbh",
+    "latitude": 49.405,
+    "longitude": 11.1617
+  },
+  "pulses": 2,
+  "adversary": [
+    "Multiple",
+    "MuddyWater, UNC1549, Mosses Staff"
+  ]
+}

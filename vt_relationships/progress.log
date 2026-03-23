@@ -1,0 +1,393 @@
+2026-03-17T10:19:08 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-17T10:19:08 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-17T10:19:08 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-17T10:19:08 [INFO] org-filter     : ['Kimsuky']
+2026-03-17T10:19:08 [INFO] daily-limit    : 500
+2026-03-17T10:19:08 [INFO] stop-on-quota  : True
+2026-03-17T10:19:08 [INFO] dry-run        : True
+2026-03-17T10:19:08 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-17T10:19:08 [INFO] Scanned 1 orgs | Unique SHA256: 48 | IPs: 21 | Domains: 102
+2026-03-17T10:19:08 [INFO] Phase 2: Checking cache...
+2026-03-17T10:19:08 [INFO] ============================================================
+2026-03-17T10:19:08 [INFO]   Orgs to process     : 1
+2026-03-17T10:19:08 [INFO]   Unique SHA256 files :      48  (global cached: 0)
+2026-03-17T10:19:08 [INFO]   Unique IPs          :      21  (global cached: 0)
+2026-03-17T10:19:08 [INFO]   Unique Domains      :     102  (global cached: 2)
+2026-03-17T10:19:08 [INFO]   Total API calls     :     315  (remaining: 313)
+2026-03-17T10:19:08 [INFO]   Estimated days      : 0.6  at 500/day
+2026-03-17T10:19:08 [INFO] ============================================================
+2026-03-17T10:19:08 [INFO] Dry run complete. No API calls made.
+2026-03-17T10:20:29 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-17T10:20:29 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-17T10:20:29 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-17T10:20:29 [INFO] org-filter     : ['Kimsuky']
+2026-03-17T10:20:29 [INFO] daily-limit    : 270
+2026-03-17T10:20:29 [INFO] stop-on-quota  : True
+2026-03-17T10:20:29 [INFO] dry-run        : False
+2026-03-17T10:20:29 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-17T10:20:29 [INFO] Scanned 1 orgs | Unique SHA256: 48 | IPs: 21 | Domains: 102
+2026-03-17T10:20:29 [INFO] Phase 2: Checking cache...
+2026-03-17T10:20:29 [INFO] ============================================================
+2026-03-17T10:20:29 [INFO]   Orgs to process     : 1
+2026-03-17T10:20:29 [INFO]   Unique SHA256 files :      48  (global cached: 0)
+2026-03-17T10:20:29 [INFO]   Unique IPs          :      21  (global cached: 0)
+2026-03-17T10:20:29 [INFO]   Unique Domains      :     102  (global cached: 2)
+2026-03-17T10:20:29 [INFO]   Total API calls     :     315  (remaining: 313)
+2026-03-17T10:20:29 [INFO]   Estimated days      : 1.2  at 270/day
+2026-03-17T10:20:29 [INFO] ============================================================
+2026-03-17T10:20:29 [INFO] ─── Org: Kimsuky ───
+2026-03-17T10:20:29 [INFO]   Phase 3a [Kimsuky]: Querying 48 files (4 endpoints each)...
+2026-03-17T10:53:45 [WARNING] 429 Rate limited (#1). Waiting 60s...
+2026-03-17T10:54:46 [WARNING] 429 Rate limited (#2). Waiting 120s...
+2026-03-17T10:56:48 [WARNING] 429 Rate limited (#3). Waiting 300s...
+2026-03-17T11:02:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Read timed out. (read timeout=30)
+2026-03-17T11:02:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1020b3350>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:03:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1020b34d0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:03:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/contacted_domains?limit=40
+2026-03-17T11:03:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x102566f00>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:04:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1025652e0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:04:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1025657f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:05:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/dropped_files?limit=40
+2026-03-17T11:05:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x102508650>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:05:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x102508140>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:06:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x102567fb0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:06:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/c4632a721fedc9f3af926e8b8edac787470ae133f0bccbff00f5fb16ca007f6b/execution_parents?limit=40
+2026-03-17T11:06:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ee70>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:07:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c110>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:07:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c6e0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:08:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_ips?limit=40
+2026-03-17T11:08:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d070>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:08:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224db80>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:09:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c560>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:09:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/contacted_domains?limit=40
+2026-03-17T11:09:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224dca0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:10:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224cc50>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:10:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224f0e0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:11:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/dropped_files?limit=40
+2026-03-17T11:11:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1026407d0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:11:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1026403b0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:12:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1026400e0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:12:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/d88c5695ccd83dce6729b84c8c43e8a804938a7ab7cfeccaa0699d6b1f81c95c/execution_parents?limit=40
+2026-03-17T11:12:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c170>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:13:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224f710>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:13:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ec60>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:14:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_ips?limit=40
+2026-03-17T11:14:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224f200>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:14:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ea50>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:15:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d760>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:15:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/contacted_domains?limit=40
+2026-03-17T11:15:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e2d0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:16:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c950>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:16:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c8f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:17:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/dropped_files?limit=40
+2026-03-17T11:17:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224deb0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:17:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c680>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:18:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e210>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:18:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/dadba54d9771a13ae4598fcff3e15a5cccdfd63c0d3362786c54abf621088519/execution_parents?limit=40
+2026-03-17T11:18:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224cb90>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:19:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d7f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:19:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d0d0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:20:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_ips?limit=40
+2026-03-17T11:20:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e030>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:20:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e090>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:21:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224f5f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:21:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/contacted_domains?limit=40
+2026-03-17T11:21:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c9e0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:22:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224fef0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:22:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e5d0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:23:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/dropped_files?limit=40
+2026-03-17T11:23:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224e840>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:23:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c5f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:24:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d6a0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:24:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/db7574e43c6d47698c02e56cf99ac054ae495ec3bdeac48f635acbe065da3af7/execution_parents?limit=40
+2026-03-17T11:24:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224fec0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:25:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224fe60>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:25:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224df40>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:26:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_ips?limit=40
+2026-03-17T11:26:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224f650>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:26:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224fb90>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:27:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_domains?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224d700>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:27:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/contacted_domains?limit=40
+2026-03-17T11:27:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224cc20>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:28:18 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ca40>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:28:48 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/dropped_files?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224c8f0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:29:18 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/dropped_files?limit=40
+2026-03-17T11:29:18 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224cf80>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:29:48 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ea80>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:30:18 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/execution_parents?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224caa0>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-17T11:30:48 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/e2372f2c2d5d32758c9917b1c9d5edc3387c74f1fa2e96a4a6e6477d97826e43/execution_parents?limit=40
+2026-03-17T11:30:48 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e/contacted_ips?limit=40 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10224ef60>: Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-18T11:19:11 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:11 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:11 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:11 [INFO] org-filter     : ['Kimsuky']
+2026-03-18T11:19:11 [INFO] daily-limit    : 500
+2026-03-18T11:19:11 [INFO] stop-on-quota  : True
+2026-03-18T11:19:11 [INFO] dry-run        : True
+2026-03-18T11:19:11 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:11 [INFO] Scanned 1 orgs | Unique SHA256: 48 | IPs: 21 | Domains: 102
+2026-03-18T11:19:11 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:11 [INFO] ============================================================
+2026-03-18T11:19:11 [INFO]   Orgs to process     : 1
+2026-03-18T11:19:11 [INFO]   Unique SHA256 files :      48  (global cached: 38)
+2026-03-18T11:19:11 [INFO]   Unique IPs          :      21  (global cached: 0)
+2026-03-18T11:19:11 [INFO]   Unique Domains      :     102  (global cached: 2)
+2026-03-18T11:19:11 [INFO]   Total API calls     :     315  (remaining: 161)
+2026-03-18T11:19:11 [INFO]   Estimated days      : 0.3  at 500/day
+2026-03-18T11:19:11 [INFO] ============================================================
+2026-03-18T11:19:11 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:20 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:20 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:20 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:20 [INFO] org-filter     : ['APT29']
+2026-03-18T11:19:20 [INFO] daily-limit    : 500
+2026-03-18T11:19:20 [INFO] stop-on-quota  : True
+2026-03-18T11:19:20 [INFO] dry-run        : True
+2026-03-18T11:19:20 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:20 [INFO] Scanned 1 orgs | Unique SHA256: 360 | IPs: 159 | Domains: 135
+2026-03-18T11:19:20 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO]   Orgs to process     : 1
+2026-03-18T11:19:20 [INFO]   Unique SHA256 files :     360  (global cached: 5)
+2026-03-18T11:19:20 [INFO]   Unique IPs          :     159  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique Domains      :     135  (global cached: 15)
+2026-03-18T11:19:20 [INFO]   Total API calls     :   1,734  (remaining: 1,699)
+2026-03-18T11:19:20 [INFO]   Estimated days      : 3.4  at 500/day
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:20 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:20 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:20 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:20 [INFO] org-filter     : ['Turla']
+2026-03-18T11:19:20 [INFO] daily-limit    : 500
+2026-03-18T11:19:20 [INFO] stop-on-quota  : True
+2026-03-18T11:19:20 [INFO] dry-run        : True
+2026-03-18T11:19:20 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:20 [INFO] Scanned 1 orgs | Unique SHA256: 77 | IPs: 4 | Domains: 62
+2026-03-18T11:19:20 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO]   Orgs to process     : 1
+2026-03-18T11:19:20 [INFO]   Unique SHA256 files :      77  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique IPs          :       4  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique Domains      :      62  (global cached: 5)
+2026-03-18T11:19:20 [INFO]   Total API calls     :     374  (remaining: 369)
+2026-03-18T11:19:20 [INFO]   Estimated days      : 0.7  at 500/day
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:20 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:20 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:20 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:20 [INFO] org-filter     : ['Lazarus_Group']
+2026-03-18T11:19:20 [INFO] daily-limit    : 500
+2026-03-18T11:19:20 [INFO] stop-on-quota  : True
+2026-03-18T11:19:20 [INFO] dry-run        : True
+2026-03-18T11:19:20 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:20 [INFO] Scanned 1 orgs | Unique SHA256: 127 | IPs: 66 | Domains: 159
+2026-03-18T11:19:20 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO]   Orgs to process     : 1
+2026-03-18T11:19:20 [INFO]   Unique SHA256 files :     127  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique IPs          :      66  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique Domains      :     159  (global cached: 11)
+2026-03-18T11:19:20 [INFO]   Total API calls     :     733  (remaining: 722)
+2026-03-18T11:19:20 [INFO]   Estimated days      : 1.4  at 500/day
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:20 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:20 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:20 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:20 [INFO] org-filter     : ['OceanLotus']
+2026-03-18T11:19:20 [INFO] daily-limit    : 500
+2026-03-18T11:19:20 [INFO] stop-on-quota  : True
+2026-03-18T11:19:20 [INFO] dry-run        : True
+2026-03-18T11:19:20 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:20 [INFO] Scanned 0 orgs | Unique SHA256: 0 | IPs: 0 | Domains: 0
+2026-03-18T11:19:20 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO]   Orgs to process     : 0
+2026-03-18T11:19:20 [INFO]   Unique SHA256 files :       0  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique IPs          :       0  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique Domains      :       0  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Total API calls     :       0  (remaining: 0)
+2026-03-18T11:19:20 [INFO]   Estimated days      : 0.0  at 500/day
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:20 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:20 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:20 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:20 [INFO] org-filter     : ['APT32']
+2026-03-18T11:19:20 [INFO] daily-limit    : 500
+2026-03-18T11:19:20 [INFO] stop-on-quota  : True
+2026-03-18T11:19:20 [INFO] dry-run        : True
+2026-03-18T11:19:20 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:20 [INFO] Scanned 1 orgs | Unique SHA256: 57 | IPs: 62 | Domains: 95
+2026-03-18T11:19:20 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO]   Orgs to process     : 1
+2026-03-18T11:19:20 [INFO]   Unique SHA256 files :      57  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique IPs          :      62  (global cached: 0)
+2026-03-18T11:19:20 [INFO]   Unique Domains      :      95  (global cached: 3)
+2026-03-18T11:19:20 [INFO]   Total API calls     :     385  (remaining: 382)
+2026-03-18T11:19:20 [INFO]   Estimated days      : 0.8  at 500/day
+2026-03-18T11:19:20 [INFO] ============================================================
+2026-03-18T11:19:20 [INFO] Dry run complete. No API calls made.
+2026-03-18T11:19:48 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T11:19:48 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T11:19:48 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T11:19:48 [INFO] org-filter     : ['Kimsuky', 'Turla']
+2026-03-18T11:19:48 [INFO] daily-limit    : 500
+2026-03-18T11:19:48 [INFO] stop-on-quota  : True
+2026-03-18T11:19:48 [INFO] dry-run        : False
+2026-03-18T11:19:48 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T11:19:48 [INFO] Scanned 2 orgs | Unique SHA256: 125 | IPs: 25 | Domains: 163
+2026-03-18T11:19:48 [INFO] Phase 2: Checking cache...
+2026-03-18T11:19:48 [INFO] ============================================================
+2026-03-18T11:19:48 [INFO]   Orgs to process     : 2
+2026-03-18T11:19:48 [INFO]   Unique SHA256 files :     125  (global cached: 38)
+2026-03-18T11:19:48 [INFO]   Unique IPs          :      25  (global cached: 0)
+2026-03-18T11:19:48 [INFO]   Unique Domains      :     163  (global cached: 6)
+2026-03-18T11:19:48 [INFO]   Total API calls     :     688  (remaining: 530)
+2026-03-18T11:19:48 [INFO]   Estimated days      : 1.1  at 500/day
+2026-03-18T11:19:48 [INFO] ============================================================
+2026-03-18T11:19:48 [INFO] ─── Org: Kimsuky ───
+2026-03-18T11:19:48 [INFO]   Phase 3a [Kimsuky]: Querying 10 files (4 endpoints each)...
+2026-03-18T11:29:34 [INFO]   [files/Kimsuky] 10/10 done | calls: 40 | any_rel: 90.0%
+2026-03-18T11:29:34 [INFO]   Phase 3b [Kimsuky]: Querying 21 IPs...
+2026-03-18T11:34:51 [INFO]   [ips/Kimsuky] 21/21 done | with_resolutions: 100.0%
+2026-03-18T11:34:51 [INFO]   Phase 3c [Kimsuky]: Querying 102 domains...
+2026-03-18T11:37:34 [WARNING] 429 Rate limited (#1). Waiting 60s...
+2026-03-18T11:38:36 [WARNING] 429 Rate limited (#2). Waiting 120s...
+2026-03-18T11:40:36 [WARNING] 429 Rate limited (#3). Waiting 300s...
+2026-03-18T11:45:37 [WARNING] 429 Rate limited (#4). Waiting 600s...
+2026-03-18T11:55:37 [WARNING] 429 Rate limited (#5). Waiting 600s...
+2026-03-18T12:22:39 [WARNING] Network error (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-18T12:23:10 [WARNING] 429 Rate limited (#6). Waiting 600s...
+2026-03-18T12:33:11 [WARNING] 429 Rate limited (#7). Waiting 600s...
+2026-03-18T12:43:11 [WARNING] 429 Rate limited (#8). Waiting 600s...
+2026-03-18T12:53:06 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-18T12:53:06 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-18T12:53:06 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-18T12:53:06 [INFO] org-filter     : ['Kimsuky', 'Turla']
+2026-03-18T12:53:06 [INFO] daily-limit    : 450
+2026-03-18T12:53:06 [INFO] stop-on-quota  : True
+2026-03-18T12:53:06 [INFO] dry-run        : False
+2026-03-18T12:53:06 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-18T12:53:06 [INFO] Scanned 2 orgs | Unique SHA256: 125 | IPs: 25 | Domains: 163
+2026-03-18T12:53:06 [INFO] Phase 2: Checking cache...
+2026-03-18T12:53:06 [INFO] ============================================================
+2026-03-18T12:53:06 [INFO]   Orgs to process     : 2
+2026-03-18T12:53:06 [INFO]   Unique SHA256 files :     125  (global cached: 48)
+2026-03-18T12:53:06 [INFO]   Unique IPs          :      25  (global cached: 21)
+2026-03-18T12:53:06 [INFO]   Unique Domains      :     163  (global cached: 16)
+2026-03-18T12:53:06 [INFO]   Total API calls     :     688  (remaining: 459)
+2026-03-18T12:53:06 [INFO]   Estimated days      : 1.0  at 450/day
+2026-03-18T12:53:06 [INFO] ============================================================
+2026-03-18T12:53:06 [INFO] ─── Org: Kimsuky ───
+2026-03-18T12:53:06 [INFO]   Phase 3c [Kimsuky]: Querying 91 domains...
+2026-03-18T12:53:07 [WARNING] 429 Rate limited (#1). Waiting 60s...
+2026-03-18T12:54:07 [WARNING] 429 Rate limited (#2). Waiting 120s...
+2026-03-18T12:56:08 [WARNING] 429 Rate limited (#3). Waiting 300s...
+2026-03-18T13:01:08 [WARNING] 429 Rate limited (#4). Waiting 600s...
+2026-03-19T09:05:06 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-19T09:05:06 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-19T09:05:06 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-19T09:05:06 [INFO] org-filter     : ['APT29', 'APT32', 'Kimsuky', 'Lazarus_Group', 'Turla']
+2026-03-19T09:05:06 [INFO] daily-limit    : 500
+2026-03-19T09:05:06 [INFO] stop-on-quota  : True
+2026-03-19T09:05:06 [INFO] dry-run        : True
+2026-03-19T09:05:06 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-19T09:05:06 [INFO] Scanned 5 orgs | Unique SHA256: 669 | IPs: 312 | Domains: 529
+2026-03-19T09:05:06 [INFO] Phase 2: Checking cache...
+2026-03-19T09:05:06 [INFO] ============================================================
+2026-03-19T09:05:06 [INFO]   Orgs to process     : 5
+2026-03-19T09:05:06 [INFO]   Unique SHA256 files :     669  (global cached: 53)
+2026-03-19T09:05:06 [INFO]   Unique IPs          :     312  (global cached: 21)
+2026-03-19T09:05:06 [INFO]   Unique Domains      :     529  (global cached: 30)
+2026-03-19T09:05:06 [INFO]   Total API calls     :   3,517  (remaining: 3,254)
+2026-03-19T09:05:06 [INFO]   Estimated days      : 6.5  at 500/day
+2026-03-19T09:05:06 [INFO] ============================================================
+2026-03-19T09:05:06 [INFO] Dry run complete. No API calls made.
+2026-03-19T09:12:53 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-19T09:12:53 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-19T09:12:53 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-19T09:12:53 [INFO] org-filter     : ['APT29', 'APT32', 'Kimsuky', 'Lazarus_Group', 'Turla']
+2026-03-19T09:12:53 [INFO] daily-limit    : 500
+2026-03-19T09:12:53 [INFO] stop-on-quota  : True
+2026-03-19T09:12:53 [INFO] dry-run        : False
+2026-03-19T09:12:53 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-19T09:12:53 [INFO] Scanned 5 orgs | Unique SHA256: 669 | IPs: 312 | Domains: 529
+2026-03-19T09:12:53 [INFO] Phase 2: Checking cache...
+2026-03-19T09:12:53 [INFO] ============================================================
+2026-03-19T09:12:53 [INFO]   Orgs to process     : 5
+2026-03-19T09:12:53 [INFO]   Unique SHA256 files :     669  (global cached: 53)
+2026-03-19T09:12:53 [INFO]   Unique IPs          :     312  (global cached: 21)
+2026-03-19T09:12:53 [INFO]   Unique Domains      :     529  (global cached: 30)
+2026-03-19T09:12:53 [INFO]   Total API calls     :   3,517  (remaining: 3,254)
+2026-03-19T09:12:53 [INFO]   Estimated days      : 6.5  at 500/day
+2026-03-19T09:12:53 [INFO] ============================================================
+2026-03-19T09:12:53 [INFO] ─── Org: APT29 ───
+2026-03-19T09:12:53 [INFO]   Phase 3a [APT29]: Querying 360 files (4 endpoints each)...
+2026-03-19T09:25:34 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-19T09:25:34 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-19T09:25:34 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-19T09:25:34 [INFO] org-filter     : all
+2026-03-19T09:25:34 [INFO] daily-limit    : 500
+2026-03-19T09:25:34 [INFO] stop-on-quota  : True
+2026-03-19T09:25:34 [INFO] dry-run        : True
+2026-03-19T09:25:34 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-19T09:25:34 [WARNING] Missing: /Users/vv1n/Documents/thesis/VT_results/.vt_cache/vt_results.json
+2026-03-19T09:25:34 [INFO] Scanned 172 orgs | Unique SHA256: 5,345 | IPs: 2,002 | Domains: 4,660
+2026-03-19T09:25:34 [INFO] Phase 2: Checking cache...
+2026-03-19T09:25:34 [INFO] ============================================================
+2026-03-19T09:25:34 [INFO]   Orgs to process     : 172
+2026-03-19T09:25:34 [INFO]   Unique SHA256 files :   5,345  (global cached: 300)
+2026-03-19T09:25:34 [INFO]   Unique IPs          :   2,002  (global cached: 73)
+2026-03-19T09:25:34 [INFO]   Unique Domains      :   4,660  (global cached: 361)
+2026-03-19T09:25:34 [INFO]   Total API calls     :  28,042  (remaining: 26,408)
+2026-03-19T09:25:34 [INFO]   Estimated days      : 52.8  at 500/day
+2026-03-19T09:25:34 [INFO] ============================================================
+2026-03-19T09:25:34 [INFO] Dry run complete. No API calls made.
+2026-03-19T10:51:43 [INFO]   [files/APT29] 100/360 done | calls: 396 | any_rel: 83.8%
+2026-03-19T11:17:43 [INFO] ⏸ 已達每日限額 500 次，進度已儲存。下次執行時會自動從斷點續傳。
+2026-03-19T11:17:43 [INFO] 已完成 API calls: 500
+2026-03-20T15:57:52 [INFO] vt-results-dir : /Users/vv1n/Documents/thesis/VT_results
+2026-03-20T15:57:52 [INFO] output-dir     : /Users/vv1n/Documents/thesis/vt_relationships
+2026-03-20T15:57:52 [INFO] ioc-types      : ['domain', 'file', 'ip']
+2026-03-20T15:57:52 [INFO] org-filter     : ['APT29', 'APT32', 'Kimsuky', 'Lazarus_Group', 'Turla']
+2026-03-20T15:57:52 [INFO] daily-limit    : 500
+2026-03-20T15:57:52 [INFO] stop-on-quota  : True
+2026-03-20T15:57:52 [INFO] dry-run        : False
+2026-03-20T15:57:52 [INFO] Phase 1: Scanning VT results to collect IoCs...
+2026-03-20T15:57:52 [INFO] Scanned 5 orgs | Unique SHA256: 669 | IPs: 312 | Domains: 529
+2026-03-20T15:57:52 [INFO] Phase 2: Checking cache...
+2026-03-20T15:57:52 [INFO] ============================================================
+2026-03-20T15:57:52 [INFO]   Orgs to process     : 5
+2026-03-20T15:57:52 [INFO]   Unique SHA256 files :     669  (global cached: 202)
+2026-03-20T15:57:52 [INFO]   Unique IPs          :     312  (global cached: 21)
+2026-03-20T15:57:52 [INFO]   Unique Domains      :     529  (global cached: 30)
+2026-03-20T15:57:52 [INFO]   Total API calls     :   3,517  (remaining: 2,658)
+2026-03-20T15:57:52 [INFO]   Estimated days      : 5.3  at 500/day
+2026-03-20T15:57:52 [INFO] ============================================================
+2026-03-20T15:57:52 [INFO] ─── Org: APT29 ───
+2026-03-20T15:57:52 [INFO]   Phase 3a [APT29]: Querying 209 files (4 endpoints each)...
+2026-03-20T16:23:29 [WARNING] Network error (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-20T16:36:10 [WARNING] Network error (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-20T17:55:16 [INFO]   [files/APT29] 100/209 done | calls: 396 | any_rel: 75.8%
+2026-03-20T18:00:01 [WARNING] Network error (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-20T18:15:48 [WARNING] Network error (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-20T18:29:16 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/afbd1f13132c2f047861b2ea90c18d546a326dbfca4dfeffd8b4ebf852204275/execution_parents?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T18:29:46 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/afbd1f13132c2f047861b2ea90c18d546a326dbfca4dfeffd8b4ebf852204275/execution_parents?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T19:57:29 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/afbd1f13132c2f047861b2ea90c18d546a326dbfca4dfeffd8b4ebf852204275/execution_parents?limit=40
+2026-03-20T19:57:29 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_ips?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T19:57:59 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_ips?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T20:46:21 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_ips?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T20:58:56 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_ips?limit=40
+2026-03-20T20:58:56 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_domains?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T21:48:23 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_domains?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T21:59:54 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_domains?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T22:32:53 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/contacted_domains?limit=40
+2026-03-20T22:32:53 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/dropped_files?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T23:00:51 [WARNING] Network error (attempt 2/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/dropped_files?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T23:23:06 [WARNING] Network error (attempt 3/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/dropped_files?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-03-20T23:23:36 [ERROR] All 3 error retries exhausted: https://www.virustotal.com/api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/dropped_files?limit=40
+2026-03-20T23:23:36 [WARNING] Network error (attempt 1/3): HTTPSConnectionPool(host='www.virustotal.com', port=443): Max retries exceeded with url: /api/v3/files/b06285f7a30f4905801572deda68afa4e1f8dfa733ce9ff985ecbf1847f78db6/execution_parents?limit=40 (Caused by NameResolutionError("HTTPSConnection(host='www.virustotal.com', port=443): Failed to resolve 'www.virustotal.com' ([Errno 8] nodename nor servname provided, or not known)"))

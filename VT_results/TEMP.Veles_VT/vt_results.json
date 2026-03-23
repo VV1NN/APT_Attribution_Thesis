@@ -1,0 +1,322 @@
+{
+  "organization": "TEMP.Veles",
+  "scan_time": "2025-08-31T23:29:39.098397",
+  "statistics": {
+    "total_iocs": 5,
+    "processed": 5,
+    "found_in_vt": 2,
+    "malicious": 0,
+    "suspicious": 0,
+    "harmless": 1,
+    "errors": 3
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "8.8.8.8",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:29:35.701486",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 62,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756654168,
+      "reputation": 561,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "8.8.8.0/24",
+        "asn": 15169,
+        "as_owner": "GOOGLE",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Google Trust Services",
+          "CN": "WR2"
+        },
+        "subject": {
+          "CN": "dns.google"
+        },
+        "validity": {
+          "not_after": "2025-11-03 19:23:16",
+          "not_before": "2025-08-11 19:23:17"
+        },
+        "version": "V3",
+        "serial_number": "e312d1cde8d32ed10abd3df958dbea5b",
+        "thumbprint": "bb68b2d6339f8628eef36c8d6f9b9d4c3ae810ba",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "f11b0e7e78031c692e19d2f3a2efba68e091ebf5f879f2a439d0cacd21807d6292426b94d660b0debbf58543b6f3f433e165410670712ae97ba7c7feee5051193955d018ef7f162951ddf6e1238142fcd5f45d063458f42c71523b2dc4f9d471f7aaceca6aa9b9dc484050e254af65fc87f53d547957d99ae9322357e2c660412949df38ff8a9a3286b180344e234e7a9a3e134a831b6be26fd97a7621c2bbe5898a4775375a14aa9815827deb046d83399c777cd1eb684a815c17f8889af0c9aa81afee0e4b3a1b35cb50cd776a27feefec2d502531b488a75eab31e84643ef5514fe44a7410baa58b8b0bcc93a75b6220ec9001db2269ce956f528d05e9673",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "29d3fd00029d29d00042d43d00041d598ac0c1012db967bb1ad0ff2491b3ae"
+      },
+      "whois_info": "NetRange: 8.8.8.0 - 8.8.8.255\nCIDR: 8.8.8.0/24\nNetName: GOGL\nNetHandle: NET-8-8-8-0-2\nParent: NET8 (NET-8-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Google LLC (GOGL)\nRegDate: 2023-12-28\nUpdated: 2023-12-28\nRef: https://rdap.arin.net/registry/ip/8.8.8.0\nOrgName: Google LLC\nOrgId: GOGL\nAddress: 1600 Amphitheatre Parkway\nCity: Mountain View\nStateProv: CA\nPostalCode: 94043\nCountry: US\nRegDate: 2000-03-30\nUpdated: 2019-10-31\nComment: Please note that the recommended way to file abuse complaints are located in the following links. \nComment: \nComment: To report abuse and illegal activity: https://www.google.com/contact/\nComment: \nComment: For legal requests: http://support.google.com/legal \nComment: \nComment: Regards, \nComment: The Google Team\nRef: https://rdap.arin.net/registry/entity/GOGL\nOrgTechHandle: ZG39-ARIN\nOrgTechName: Google LLC\nOrgTechPhone: +1-650-253-0000 \nOrgTechEmail: arin-contact@google.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ZG39-ARIN\nOrgAbuseHandle: ABUSE5250-ARIN\nOrgAbuseName: Abuse\nOrgAbusePhone: +1-650-253-0000 \nOrgAbuseEmail: network-abuse@google.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE5250-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "timestamp": 1694383565,
+            "details": "AsyncRAT botnet C2 server (confidence level: 100%)",
+            "title": "ThreatFox IOCs for 2023-09-10",
+            "severity": "medium",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "87.245.143.140",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2018/10/triton-attribution-russian-government-owned-lab-most-likely-built-tools.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:29:36.365422",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 94,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1748196185,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "87.245.143.0/24",
+        "asn": 8732,
+        "as_owner": "JSC Comcor",
+        "country": "RU",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 87.245.143.136 - 87.245.143.143\nnetname: COMCOR-B2B-Clients\ndescr: Network for COMCOR-B2B-Clients\ncountry: RU\nadmin-c: CN4342-RIPE\ntech-c: CN4342-RIPE\nstatus: ASSIGNED PA\nmnt-by: AS8732-MNT\ncreated: 2018-11-09T18:29:37Z\nlast-modified: 2018-11-09T18:29:37Z\nsource: RIPE # Filtered\nrole: COMCOR NOC\naddress: Russia, 117535, Moscow\naddress: Varshavskoe Road, 133\nphone: +7 (495) 411-73-33\nremarks: ----------------------------------------------\nremarks: COMCOR (TM AKADO-Telecom) working hours:\nremarks: 09am-6pm MSK/MSD (GMT+3/+4) work days\nremarks: ----------------------------------------------\nnic-hdl: CN4342-RIPE\nmnt-by: AS8732-MNT\ncreated: 2018-11-02T16:46:57Z\nlast-modified: 2018-11-02T16:46:57Z\nsource: RIPE # Filtered\nroute: 87.245.128.0/18\ndescr: comcor.ru\norigin: AS8732\nmnt-by: AS8732-MNT\ncreated: 2005-08-26T06:11:40Z\nlast-modified: 2005-08-26T06:11:40Z\nsource: RIPE # Filtered\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://2010.Use",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:29:37.345161",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://\\Windows\\SysWOW64\\config\\systemprofile\\AppData\\Roaming\\Thinstall.",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:29:37.898873",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://\\repos\\main\\ssh2.Use",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:29:39.097704",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    }
+  ]
+}

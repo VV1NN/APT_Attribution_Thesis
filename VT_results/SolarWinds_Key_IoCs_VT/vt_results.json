@@ -1,0 +1,947 @@
+{
+  "organization": "SolarWinds_Key_IoCs",
+  "scan_time": "2025-11-10T10:46:36.495269",
+  "statistics": {
+    "total_iocs": 7,
+    "processed": 7,
+    "found_in_vt": 6,
+    "malicious": 6,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 1
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "domain",
+        "value": "avsvmcloud.com",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUNBURST",
+          "Supply Chain Attack",
+          "APT29",
+          "NOBELIUM"
+        ],
+        "association": "SUNBURST",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:31.068023",
+      "vt_found": true,
+      "malicious_count": 14,
+      "suspicious_count": 0,
+      "harmless_count": 50,
+      "undetected_count": 31,
+      "total_engines": 95,
+      "first_seen": null,
+      "last_seen": 1762737498,
+      "reputation": -128,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "Go Daddy Secure Certificate Authority - G2",
+          "L": "Scottsdale",
+          "O": "GoDaddy.com, Inc.",
+          "ST": "Arizona",
+          "OU": "http://certs.godaddy.com/repository/"
+        },
+        "subject": {
+          "OU": "Domain Control Validated",
+          "CN": "u4f-accept.unit4cloud.com"
+        },
+        "validity": {
+          "not_after": "2021-06-05 15:02:35",
+          "not_before": "2020-06-05 15:02:35"
+        },
+        "version": "V3",
+        "serial_number": "b0f9785eb708f06c",
+        "thumbprint": "811262978229ce896fe9784e7d7d4b9dc6197669",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00aa9e44e600b17e4869966f22551aa591844d0bb9a32efddf05b9c21728f3c576b0e8e493c15405f1870945321501a94b7f5634e14c821f582a9a3a0af08c05e562cbfb046a18b76167e9ff1696e017ed8e8ccf636d98188e346c1b1f47d4d22f1a140c5ce2526f6f8ae0f8e22c665f5373d29d43a14f0a0255577b9988bb1560ebd5650f796b8c56c2574f8fec8e4aa11ef52277c584c1e1288b7b0ccf7373caa096572d19452bf910c584364a04e50c5edaa3b6294738bacffc8c652f83b2e556254bc536a917dce3c48eda375b77ce8953f34a020123d0a8ac0f20f66231ca6ccefbabae1adcc99b18e88084e65c1befd0ffdde40030a972a52520bdbe1379",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "00002d00000004d04c00002d04d00093a98f05502169c8eef3eb0f465ffd74"
+      },
+      "whois_info": "Creation Date: 2018-07-25T11:38:29Z\nDNSSEC: unsigned\nDomain Name: AVSVMCLOUD.COM\nDomain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nName Server: SUNBURST-NS-A.SINKHOLE.SHADOWSERVER.ORG\nName Server: SUNBURST-NS-B.SINKHOLE.SHADOWSERVER.ORG\nRegistrar Abuse Contact Email: abuse@rolr.eu\nRegistrar Abuse Contact Phone: +31.206717452\nRegistrar IANA ID: 2482\nRegistrar URL: http://www.rolr.eu\nRegistrar WHOIS Server: whois.rolr.uk\nRegistrar: Stichting Registrar of Last Resort Foundation\nRegistry Domain ID: 2289718834_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2026-07-25T11:38:29Z\nUpdated Date: 2025-06-25T13:01:16Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "BitDefender": "misc",
+          "Dr.Web": "known infection source",
+          "Sophos": "command and control"
+        },
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ChainPatrol": {
+            "method": "blacklist",
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "domain",
+        "value": "databasegalore.com",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUNBURST/BEACON",
+          "Supply Chain Attack",
+          "APT29",
+          "NOBELIUM"
+        ],
+        "association": "SUNBURST/BEACON",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:32.703472",
+      "vt_found": true,
+      "malicious_count": 13,
+      "suspicious_count": 0,
+      "harmless_count": 52,
+      "undetected_count": 30,
+      "total_engines": 95,
+      "first_seen": null,
+      "last_seen": 1762741417,
+      "reputation": -54,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "DE",
+          "O": "None",
+          "CN": "localhost"
+        },
+        "subject": {
+          "C": "DE",
+          "O": "None",
+          "CN": "localhost"
+        },
+        "validity": {
+          "not_after": "2042-03-24 15:56:45",
+          "not_before": "2014-11-07 15:56:45"
+        },
+        "version": "V3",
+        "serial_number": "d2bdb975e5e90017",
+        "thumbprint": "0f64ae8a25ca7fdc078971dc9309666e99027a10",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "b7518665371ee362e00dd6e52f7758f3445a5f20d7d0b83aa8687dd56b69af80d117a797ba871f181a9a42c1950f6560771b24d9399638fdf0015e0b39df36288d43231c19b4d318253d105e06f79020cee1c552c1ba09755c58357c37331310fdca79695b094f05d398a954256d72c77c4e00dc386f770f4ef59b5f3835f0a8f632a8cb28d694cfdc7b121a6a3566e9cd1716df3f10e4450591083f3bab2e95c3510811a904a54e39e65ef78ce9c2df3461be46cbcbb404a33c5e2b8129779b2816f94b96e2e2a0ad23fa3155e56df1048904518582a67e0b7fc63e9d56f930e5f402e4f96c1ddef77105a6b5e5dc138f4e50e1c869d4d4e8b6d79c9c1540ab",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "00014d00000021d00042d000000000e509480767eb7706e117e2bbca13c859"
+      },
+      "whois_info": "Admin City: Reykjavik\nAdmin Country: IS\nAdmin Email: c9d73ef50d9e1dcbs@mail.withheldforprivacy.com\nAdmin Organization: Withheld for Privacy Purposes\nAdmin Postal Code: 101\nAdmin State/Province: Capital Region\nCreation Date: 2019-12-14T12:47:15.00Z\nCreation Date: 2019-12-14T12:47:15Z\nDNSSEC: unsigned\nDomain Name: DATABASEGALORE.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nDomain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\nDomain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\nDomain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\nDomain name: databasegalore.com\nName Server: SINKHOLE-00.SHADOWSERVER.ORG\nName Server: SINKHOLE-01.SHADOWSERVER.ORG\nName Server: SINKHOLE-02.SHADOWSERVER.ORG\nName Server: SINKHOLE-03.SHADOWSERVER.ORG\nName Server: SINKHOLE-04.SHADOWSERVER.ORG\nName Server: SINKHOLE-A.SHADOWSERVER.ORG\nName Server: SINKHOLE-B.SHADOWSERVER.ORG\nName Server: sinkhole-00.shadowserver.org\nName Server: sinkhole-01.shadowserver.org\nName Server: sinkhole-02.shadowserver.org\nName Server: sinkhole-03.shadowserver.org\nName Server: sinkhole-04.shadowserver.org\nName Server: sinkhole-a.shadowserver.org\nName Server: sinkhole-b.shadowserver.org\nRegistrant City: ddbf76e4e8cee320\nRegistrant Country: IS\nRegistrant Email: c9d73ef50d9e1dcbs@mail.withheldforprivacy.com\nRegistrant Fax Ext: 3432650ec337c945\nRegistrant Fax: 3432650ec337c945\nRegistrant Name: 12dab2e482f2c209\nRegistrant Organization: b3e8b765589988d9\nRegistrant Phone Ext: 3432650ec337c945\nRegistrant Phone: 1c9a7bcdeaf95e9f\nRegistrant Postal Code: f206c9d9737ad45d\nRegistrant State/Province: 3e0204199d8ebf9c\nRegistrant Street: c6523241936df1ba\nRegistrar Abuse Contact Email: abuse@namecheap.com\nRegistrar Abuse Contact Phone: +1.6613102107\nRegistrar Abuse Contact Phone: +1.9854014545\nRegistrar IANA ID: 1068\nRegistrar Registration Expiration Date: 2024-12-14T12:47:15.00Z\nRegistrar URL: http://www.namecheap.com\nRegistrar WHOIS Server: whois.namecheap.com\nRegistrar: NAMECHEAP INC\nRegistrar: NameCheap, Inc.\nRegistry Domain ID: 2467023904_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2025-12-14T12:47:15Z\nTech City: Reykjavik\nTech Country: IS\nTech Email: c9d73ef50d9e1dcbs@mail.withheldforprivacy.com\nTech Organization: Withheld for Privacy Purposes\nTech Postal Code: 101\nTech State/Province: Capital Region\nUpdated Date: 2023-12-15T08:17:18.00Z\nUpdated Date: 2024-12-15T08:16:25Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ChainPatrol": {
+            "method": "blacklist",
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "domain",
+        "value": "deftsecurity.com",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUNBURST",
+          "Supply Chain Attack",
+          "APT29",
+          "NOBELIUM"
+        ],
+        "association": "SUNBURST",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:33.381663",
+      "vt_found": true,
+      "malicious_count": 15,
+      "suspicious_count": 0,
+      "harmless_count": 49,
+      "undetected_count": 31,
+      "total_engines": 95,
+      "first_seen": null,
+      "last_seen": 1762741415,
+      "reputation": -55,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "DE",
+          "O": "None",
+          "CN": "localhost"
+        },
+        "subject": {
+          "C": "DE",
+          "O": "None",
+          "CN": "localhost"
+        },
+        "validity": {
+          "not_after": "2042-03-24 15:56:45",
+          "not_before": "2014-11-07 15:56:45"
+        },
+        "version": "V3",
+        "serial_number": "d2bdb975e5e90017",
+        "thumbprint": "0f64ae8a25ca7fdc078971dc9309666e99027a10",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "b7518665371ee362e00dd6e52f7758f3445a5f20d7d0b83aa8687dd56b69af80d117a797ba871f181a9a42c1950f6560771b24d9399638fdf0015e0b39df36288d43231c19b4d318253d105e06f79020cee1c552c1ba09755c58357c37331310fdca79695b094f05d398a954256d72c77c4e00dc386f770f4ef59b5f3835f0a8f632a8cb28d694cfdc7b121a6a3566e9cd1716df3f10e4450591083f3bab2e95c3510811a904a54e39e65ef78ce9c2df3461be46cbcbb404a33c5e2b8129779b2816f94b96e2e2a0ad23fa3155e56df1048904518582a67e0b7fc63e9d56f930e5f402e4f96c1ddef77105a6b5e5dc138f4e50e1c869d4d4e8b6d79c9c1540ab",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "21d00000021d00000000000000000071cb725684915449637ac7667bc9e8a3"
+      },
+      "whois_info": "Creation Date: 2019-02-11T01:08:04Z\nDNSSEC: unsigned\nDomain Name: DEFTSECURITY.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nDomain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\nDomain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\nDomain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\nName Server: SINKHOLE-00.SHADOWSERVER.ORG\nName Server: SINKHOLE-01.SHADOWSERVER.ORG\nName Server: SINKHOLE-02.SHADOWSERVER.ORG\nName Server: SINKHOLE-03.SHADOWSERVER.ORG\nName Server: SINKHOLE-04.SHADOWSERVER.ORG\nName Server: SINKHOLE-A.SHADOWSERVER.ORG\nName Server: SINKHOLE-B.SHADOWSERVER.ORG\nRegistrar Abuse Contact Email: abuse@namesilo.com\nRegistrar Abuse Contact Phone: +1.4805240066\nRegistrar IANA ID: 1479\nRegistrar URL: http://www.namesilo.com\nRegistrar WHOIS Server: whois.namesilo.com\nRegistrar: NameSilo, LLC\nRegistry Domain ID: 2359797865_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2026-02-11T01:08:04Z\nUpdated Date: 2025-02-11T08:50:15Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ChainPatrol": {
+            "method": "blacklist",
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "162.223.31.184",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "BEACON",
+          "C2 Infrastructure",
+          "APT29",
+          "NOBELIUM"
+        ],
+        "association": "BEACON",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:34.214647",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 33,
+      "total_engines": 95,
+      "first_seen": null,
+      "last_seen": 1759388309,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "162.223.28.0/22",
+        "asn": 46261,
+        "as_owner": "QUICKPACKET",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "QuickPacket, LLC QP-IPV4-5 (NET-162-223-28-0-1) 162.223.28.0 - 162.223.31.255\nQuickPacket, LLC QP-IPV4-LAX (NET-162-223-28-0-2) 162.223.28.0 - 162.223.31.255\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ChainPatrol": {
+            "method": "blacklist",
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "13.57.184.217",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUNBURST",
+          "C2 Infrastructure",
+          "APT29",
+          "NOBELIUM"
+        ],
+        "association": "SUNBURST",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:35.120604",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 32,
+      "total_engines": 95,
+      "first_seen": null,
+      "last_seen": 1762224505,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "13.32.0.0/11",
+        "asn": 16509,
+        "as_owner": "AMAZON-02",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "*.supabase.co"
+        },
+        "validity": {
+          "not_after": "2023-05-30 02:01:14",
+          "not_before": "2023-03-01 02:01:15"
+        },
+        "version": "V3",
+        "serial_number": "305fc292b2e5f9176cfa2dfa58b09e40cb",
+        "thumbprint": "45c750fd4fc2298aea7928d8bc8768156fce1c3d",
+        "signature_algorithm": null,
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "c100ab88d86ce0b59051736b89b5682aa3c91aac96c41ccc503e42f1c6733c889a816df2e40ef8d7a01b9c94ca6f770f92291d57ff102ba59b65e1b2af09a103a20b8e14f5b439a051a8e9921cc9673b198680bd30a1db8f7c3acf693c30bcca869d29e0eb22860dc2780c0e326666e9204d653536d4855b0d07bf3ff0af8184ef92bfc55d625c15a2dfe648e8b6ee0b966732083ebbea12da42d4138916ba40e914bfce6e2d4406bfe21f5af68bf8ef88853de4a5a47e7d2e570c4977d6608792e06a772610fcc8a0ea2df956bef2c998f929901242b64f3bcf002501d43ce08fa449f55f737ee34849659e7cb79fc75918b8769c02cfdf4923f6805fd46b99",
+            "exponent": "10001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "15d3fd16d29d29d00042d43d0000009e5d3a316e7cccd6bbfaf756c222effa"
+      },
+      "whois_info": "NetRange: 13.24.0.0 - 13.59.255.255\nCIDR: 13.32.0.0/12, 13.48.0.0/13, 13.24.0.0/13, 13.56.0.0/14\nNetName: AT-88-Z\nNetHandle: NET-13-24-0-0-1\nParent: NET13 (NET-13-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Amazon Technologies Inc. (AT-88-Z)\nRegDate: 2020-08-05\nUpdated: 2021-02-10\nRef: https://rdap.arin.net/registry/ip/13.24.0.0\nOrgName: Amazon Technologies Inc.\nOrgId: AT-88-Z\nAddress: 410 Terry Ave N.\nCity: Seattle\nStateProv: WA\nPostalCode: 98109\nCountry: US\nRegDate: 2011-12-08\nUpdated: 2024-01-24\nComment: All abuse reports MUST include:\r\nComment: * src IP\r\nComment: * dest IP (your IP)\r\nComment: * dest port\r\nComment: * Accurate date/timestamp and timezone of activity\r\nComment: * Intensity/frequency (short log extracts)\r\nComment: * Your contact details (phone and email) Without these we will be unable to identify the correct owner of the IP address at that point in time.\nRef: https://rdap.arin.net/registry/entity/AT-88-Z\nOrgNOCHandle: AANO1-ARIN\nOrgNOCName: Amazon AWS Network Operations\nOrgNOCPhone: +1-206-555-0000 \nOrgNOCEmail: amzn-noc-contact@amazon.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/AANO1-ARIN\nOrgRoutingHandle: ARMP-ARIN\nOrgRoutingName: AWS RPKI Management POC\nOrgRoutingPhone: +1-206-555-0000 \nOrgRoutingEmail: aws-rpki-routing-poc@amazon.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/ARMP-ARIN\nOrgRoutingHandle: IPROU3-ARIN\nOrgRoutingName: IP Routing\nOrgRoutingPhone: +1-206-555-0000 \nOrgRoutingEmail: aws-routing-poc@amazon.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/IPROU3-ARIN\nOrgAbuseHandle: AEA8-ARIN\nOrgAbuseName: Amazon EC2 Abuse\nOrgAbusePhone: +1-206-555-0000 \nOrgAbuseEmail: trustandsafety@support.aws.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/AEA8-ARIN\nOrgTechHandle: ANO24-ARIN\nOrgTechName: Amazon EC2 Network Operations\nOrgTechPhone: +1-206-555-0000 \nOrgTechEmail: amzn-noc-contact@amazon.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ANO24-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/13.57.184.217/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/13.57.184.217\n\nPostal Code: 95141\n\nReverse Domain Lookup: ec2-13-57-184-217.us-west-1.compute.amazonaws.com\n\nClassification Description: Legitimate IP, which doesn't serve any malicious purpose.",
+            "severity": "low",
+            "timestamp": 1692286326,
+            "title": "SolarWinds Attribution: Are We Getting Ahead of Ourselves?",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ChainPatrol": {
+            "method": "blacklist",
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "e0b9eda35f01c1540134aba9195e7e6393286dde3e001fce36fb661cc346b91d",
+        "source": "Microsoft & GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUNBURST",
+          "Backdoor",
+          "Malware",
+          "APT29"
+        ],
+        "association": "SUNBURST",
+        "confidence": "high",
+        "description": "SolarWinds.Orion.Core.BusinessLayer.dll (Malicious DLL)"
+      },
+      "vt_query_time": "2025-11-10T10:46:35.875591",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71",
+        "source": "GuidePoint Security - SolarWinds Supply Chain Attack Report",
+        "first_seen": "2020-12-13",
+        "tags": [
+          "SolarWinds",
+          "SUPERNOVA",
+          "Malware",
+          "APT29"
+        ],
+        "association": "SUPERNOVA",
+        "confidence": "high"
+      },
+      "vt_query_time": "2025-11-10T10:46:36.494344",
+      "vt_found": true,
+      "malicious_count": 62,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 10,
+      "total_engines": 76,
+      "first_seen": 1606247735,
+      "last_seen": 1762681716,
+      "reputation": -268,
+      "names": [
+        "App_Web_logoimagehandler.ashx.b6031896.dll",
+        "Cuc4dick.exe",
+        "c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71",
+        "c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71.dll",
+        "badd",
+        "supernova_trojan.dll",
+        "App_Web_logoimagehandler.bin",
+        "c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71.exe",
+        "supernova",
+        "partmgr.sys"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 7680,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "56ceb6d0011d87b6e4d7023d7ef85676",
+        "sha1": "75af292f34789a1c782ea36c7127bf6106f595e8",
+        "sha256": "c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71",
+        "ssdeep": "192:8/SqRzbt0GBDawA5uT8wSlyDDGTBNFkQ:8/SyHKGBDax5uThDD6BNr",
+        "tlsh": "T17EF1EA1A77DC971FE5F64B34BCB2835102B5F2856A13DB6D1C88029DDC633804A62FE2",
+        "vhash": "37303655151d0101250021",
+        "pe_info": {
+          "timestamp": 1585041370,
+          "imphash": "dae02f32a21e03ce65412f6e56942daa",
+          "machine_type": 332,
+          "entry_point": 13502,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 58599.39,
+              "filetype": "unknown",
+              "entropy": 3.282289743423462,
+              "sha256": "5d9511b7573d12bf6867cc8546a277832f62e9a8a7e84aea0393a68cba8f6f3d",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 144106.34,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 5632,
+              "entropy": 5.29,
+              "virtual_size": 5316,
+              "md5": "9002a963c87901397a986c3333d09627"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 123376.5,
+              "virtual_address": 16384,
+              "flags": "r",
+              "raw_size": 1024,
+              "entropy": 2.58,
+              "virtual_size": 796,
+              "md5": "78888431b10a2bf283387437a750bca3"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 24576,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.08,
+              "virtual_size": 12,
+              "md5": "45ded0a8dacde15cb402adfe11b0fe3e"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorDllMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll",
+          "assembly",
+          "checks-user-input",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 41
+            }
+          ],
+          "suggested_threat_label": "trojan.sunburst/supernova",
+          "popular_threat_name": [
+            {
+              "value": "sunburst",
+              "count": 20
+            },
+            {
+              "value": "supernova",
+              "count": 16
+            },
+            {
+              "value": "msil",
+              "count": 15
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "SUPERNOVA"
+            ],
+            "confidence": 64
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20251109",
+            "category": "malicious",
+            "result": "W32.Common.082B8DD1"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20251109",
+            "category": "malicious",
+            "result": "Trojan.Win32.Sunburst.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20251109",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20251107",
+            "category": "malicious",
+            "result": "Win.Countermeasure.SUPERNOVA-9808999-1"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20251109",
+            "category": "malicious",
+            "result": "dll.trojan.sunburst"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20251108",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1730980559f85676"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20251108",
+            "category": "malicious",
+            "result": "Trojan-Sunburst!56CEB6D0011D"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20251108",
+            "category": "malicious",
+            "result": "Trojan.MSIL.SunBurst"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20251027",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20251108",
+            "category": "malicious",
+            "result": "Trojan.Supernova.A"
+          }
+        }
+      }
+    }
+  ]
+}

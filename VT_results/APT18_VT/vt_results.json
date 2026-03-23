@@ -1,0 +1,3049 @@
+{
+  "organization": "APT18",
+  "scan_time": "2025-08-31T18:35:18.586800",
+  "statistics": {
+    "total_iocs": 16,
+    "processed": 16,
+    "found_in_vt": 6,
+    "malicious": 6,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 10
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "985eba97e12c3e5bce9221631fb66d68",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:05.414596",
+      "vt_found": true,
+      "malicious_count": 62,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 10,
+      "total_engines": 76,
+      "first_seen": 1435675092,
+      "last_seen": 1747768182,
+      "reputation": -2,
+      "names": [
+        "CAT",
+        "719484___1eca70d7-d83b-4de6-a807-a9afbf22d81d.exe",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b_.json",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b_ (1).json",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b",
+        "anti_virus_updates.exe",
+        "vpnclient-winx64-msi-5.0.07.0290-k9.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "985eba97e12c3e5bce9221631fb66d68",
+        "sha1": "0e989a0867d6385ed0eda780a86a9229ac5b809e",
+        "sha256": "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b",
+        "ssdeep": "1536:jio39PCxQEu0gMGo5Xd7unk7dKI/9mMTMc+:j7PGQElgMGo5XJuXDMTMc+",
+        "tlsh": "T153C3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665614,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517833.19,
+              "virtual_address": 4096,
+              "entropy": 4.23,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "2c712cda26b734e075de29b663bc2b39"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3079759.0,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "b6a8aad24983db6d9749d1adecdc8a16"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "runtime-modules",
+          "checks-user-input",
+          "checks-network-adapters",
+          "direct-cpu-clock-access",
+          "peexe",
+          "long-sleeps"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 23,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            },
+            {
+              "count": 2,
+              "value": "ransomware"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 9,
+              "value": "blocker"
+            },
+            {
+              "count": 7,
+              "value": "cerbu"
+            },
+            {
+              "count": 5,
+              "value": "roseam"
+            }
+          ],
+          "suggested_threat_label": "trojan.blocker/cerbu"
+        },
+        "sandbox_verdicts": {
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Win32:Malware-gen"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.202",
+            "engine_update": "20250423",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!985EBA97E12C"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!985EBA97E12C"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250424",
+            "category": "malicious",
+            "result": "Unsafe"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "d0f79de7bd194c1843e7411c473e4288",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:06.547385",
+      "vt_found": true,
+      "malicious_count": 61,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 11,
+      "total_engines": 76,
+      "first_seen": 1435710282,
+      "last_seen": 1747773698,
+      "reputation": -1,
+      "names": [
+        "CAT",
+        "470874___0c58a5e4-3d0f-4e70-9a75-ace7de71746c.exe",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16_.json",
+        "d0f79de7bd194c1843e7411c473e4288_black",
+        "6c66fbfa3c3743e5779b1f41b5d37c2c2d94c095",
+        "tools.exe",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16.exe",
+        "326b5dfa775f7479862c8896e1906ba95e530f9b",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "d0f79de7bd194c1843e7411c473e4288",
+        "sha1": "326b5dfa775f7479862c8896e1906ba95e530f9b",
+        "sha256": "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16",
+        "ssdeep": "1536:wMo39PCxQEu0oMGo5PY7unk7dKI/9mMnMc+:wtPGQEloMGo5P+uXDMnMc+",
+        "tlsh": "T179C3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665433,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517852.94,
+              "virtual_address": 4096,
+              "entropy": 4.22,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "f99301ae557b6294efd65625ef6ce14f"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3080615.5,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "ece4c34c7702fbd24eb0a77e12dde82c"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.blocker/cerbu",
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "blocker"
+            },
+            {
+              "count": 7,
+              "value": "cerbu"
+            },
+            {
+              "count": 7,
+              "value": "roseam"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 21,
+              "value": "trojan"
+            },
+            {
+              "count": 5,
+              "value": "ransomware"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "undetected",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.202",
+            "engine_update": "20250423",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!D0F79DE7BD19"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!D0F79DE7BD19"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "Malware.AI.3172116700"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "e5414c5215c9305feeebbe0dbee43567",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:07.651448",
+      "vt_found": true,
+      "malicious_count": 61,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 11,
+      "total_engines": 76,
+      "first_seen": 1435677837,
+      "last_seen": 1744625231,
+      "reputation": -2,
+      "names": [
+        "CAT",
+        "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094_.json",
+        "e5414c5215c9305feeebbe0dbee43567_black",
+        "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094.exe",
+        "vpnclient.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "e5414c5215c9305feeebbe0dbee43567",
+        "sha1": "459d35058d4a5c8ca84638a5ea8fcbc2d4e0c772",
+        "sha256": "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094",
+        "ssdeep": "1536:Ypo39PCxQEu0oMGo5/17unk7dKI/9mMLMc+:YAPGQEloMGo5/BuXDMLMc+",
+        "tlsh": "T1BAC3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665793,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517826.0,
+              "virtual_address": 4096,
+              "entropy": 4.23,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "456cd97a25796039d9216edc8ababf00"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3079263.5,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "b4e2cc2c763cd3f17154f93b597a0577"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "long-sleeps",
+          "checks-user-input",
+          "direct-cpu-clock-access"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.blocker/cerbu",
+          "popular_threat_name": [
+            {
+              "value": "blocker",
+              "count": 12
+            },
+            {
+              "value": "cerbu",
+              "count": 7
+            },
+            {
+              "value": "roseam",
+              "count": 6
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            },
+            {
+              "value": "ransomware",
+              "count": 6
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "undetected",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Win32:Malware-gen"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.200",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!E5414C5215C9"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!E5414C5215C9"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Malware.AI.3172116700"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:08.536074",
+      "vt_found": true,
+      "malicious_count": 61,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 11,
+      "total_engines": 76,
+      "first_seen": 1435677837,
+      "last_seen": 1744625231,
+      "reputation": -2,
+      "names": [
+        "CAT",
+        "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094_.json",
+        "e5414c5215c9305feeebbe0dbee43567_black",
+        "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094.exe",
+        "vpnclient.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "e5414c5215c9305feeebbe0dbee43567",
+        "sha1": "459d35058d4a5c8ca84638a5ea8fcbc2d4e0c772",
+        "sha256": "1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094",
+        "ssdeep": "1536:Ypo39PCxQEu0oMGo5/17unk7dKI/9mMLMc+:YAPGQEloMGo5/BuXDMLMc+",
+        "tlsh": "T1BAC3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665793,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517826.0,
+              "virtual_address": 4096,
+              "entropy": 4.23,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "456cd97a25796039d9216edc8ababf00"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3079263.5,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "b4e2cc2c763cd3f17154f93b597a0577"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "long-sleeps",
+          "checks-user-input",
+          "direct-cpu-clock-access"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "blocker",
+              "count": 12
+            },
+            {
+              "value": "cerbu",
+              "count": 7
+            },
+            {
+              "value": "roseam",
+              "count": 6
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            },
+            {
+              "value": "ransomware",
+              "count": 6
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.blocker/cerbu"
+        },
+        "sandbox_verdicts": {
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "undetected",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Win32:Malware-gen"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.200",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250413",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!E5414C5215C9"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250412",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!E5414C5215C9"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250414",
+            "category": "malicious",
+            "result": "Malware.AI.3172116700"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:09.164827",
+      "vt_found": true,
+      "malicious_count": 61,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 11,
+      "total_engines": 76,
+      "first_seen": 1435710282,
+      "last_seen": 1747773698,
+      "reputation": -1,
+      "names": [
+        "CAT",
+        "470874___0c58a5e4-3d0f-4e70-9a75-ace7de71746c.exe",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16_.json",
+        "d0f79de7bd194c1843e7411c473e4288_black",
+        "6c66fbfa3c3743e5779b1f41b5d37c2c2d94c095",
+        "tools.exe",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16.exe",
+        "326b5dfa775f7479862c8896e1906ba95e530f9b",
+        "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "d0f79de7bd194c1843e7411c473e4288",
+        "sha1": "326b5dfa775f7479862c8896e1906ba95e530f9b",
+        "sha256": "4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16",
+        "ssdeep": "1536:wMo39PCxQEu0oMGo5PY7unk7dKI/9mMnMc+:wtPGQEloMGo5P+uXDMnMc+",
+        "tlsh": "T179C3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665433,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517852.94,
+              "virtual_address": 4096,
+              "entropy": 4.22,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "f99301ae557b6294efd65625ef6ce14f"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3080615.5,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "ece4c34c7702fbd24eb0a77e12dde82c"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 21
+            },
+            {
+              "value": "ransomware",
+              "count": 5
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "blocker",
+              "count": 11
+            },
+            {
+              "value": "cerbu",
+              "count": 7
+            },
+            {
+              "value": "roseam",
+              "count": 7
+            }
+          ],
+          "suggested_threat_label": "trojan.blocker/cerbu"
+        },
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "undetected",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.202",
+            "engine_update": "20250423",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!D0F79DE7BD19"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!D0F79DE7BD19"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "Malware.AI.3172116700"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:10.164385",
+      "vt_found": true,
+      "malicious_count": 62,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 10,
+      "total_engines": 76,
+      "first_seen": 1435675092,
+      "last_seen": 1747768182,
+      "reputation": -2,
+      "names": [
+        "CAT",
+        "719484___1eca70d7-d83b-4de6-a807-a9afbf22d81d.exe",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b_.json",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b_ (1).json",
+        "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b",
+        "anti_virus_updates.exe",
+        "vpnclient-winx64-msi-5.0.07.0290-k9.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126976,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "985eba97e12c3e5bce9221631fb66d68",
+        "sha1": "0e989a0867d6385ed0eda780a86a9229ac5b809e",
+        "sha256": "9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b",
+        "ssdeep": "1536:jio39PCxQEu0gMGo5Xd7unk7dKI/9mMTMc+:j7PGQElgMGo5XJuXDMTMc+",
+        "tlsh": "T153C3965F9B0806EFD3A8E97035507F9DB1E6FC0B462065F8F6B5E0671016913226AE2F",
+        "vhash": "015046151d551bze15lz9fz",
+        "pe_info": {
+          "timestamp": 1435665614,
+          "imphash": "53f7d489c21079f3039817feb1b0a825",
+          "machine_type": 332,
+          "entry_point": 8416,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 47569.81,
+              "filetype": "unknown",
+              "entropy": 2.8239495754241943,
+              "sha256": "4b42002e026584d79a8700d247397e8b39d79744fa6dabdfde9d2ab80ae7e238",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 26769.08,
+              "filetype": "unknown",
+              "entropy": 2.5584399700164795,
+              "sha256": "ffd9b48eeb36e492268056fa57ec0106406baf928a35afecd3af7a7e9c5fa2b5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19260.56,
+              "filetype": "unknown",
+              "entropy": 3.335556983947754,
+              "sha256": "3fa985b3500f15753276261b92f26b969d15f0caf5de54e366020a66cae5f187",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33978.25,
+              "filetype": "unknown",
+              "entropy": 3.10558819770813,
+              "sha256": "c3a2b3e261e664e056f2d337b2f14bd2039d07b9368337aa8402d1da13ff127f",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8297.54,
+              "filetype": "unknown",
+              "entropy": 1.3992928266525269,
+              "sha256": "440ecc9ff52292808d7d8efc424f2548689fc9e6e7219c9e3e236b542837f0c8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 2345.29,
+              "filetype": "ICO",
+              "entropy": 2.370859146118164,
+              "sha256": "b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 65559.88,
+              "filetype": "unknown",
+              "entropy": 3.3404765129089355,
+              "sha256": "7840fb87ed2c92fbe18657c8462f8c093c97d6b0a57f3d233b4c0a367933cf2e",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 4,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_STRING": 1,
+            "RT_DIALOG": 2,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 517833.19,
+              "virtual_address": 4096,
+              "entropy": 4.23,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 4930,
+              "md5": "2c712cda26b734e075de29b663bc2b39"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 306237.38,
+              "virtual_address": 12288,
+              "entropy": 3.94,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2862,
+              "md5": "024a0a6316a94a7b5cbae08f38cba83b"
+            },
+            {
+              "name": ".data",
+              "chi2": 3079759.0,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 106496,
+              "flags": "rw",
+              "virtual_size": 103108,
+              "md5": "b6a8aad24983db6d9749d1adecdc8a16"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 499917.62,
+              "virtual_address": 122880,
+              "entropy": 2.65,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3032,
+              "md5": "2332283542092fd3cbe6414055ba187b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS98 (6.0) SP6 build 8804 count=3",
+            "[---] Unmarked objects count=133",
+            "[C++] VS98 (6.0) build 8168 count=3",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0x13, version: 8034 count=4",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0x4, version: 8047 count=2",
+            "id: 0x4, version: 9782 count=3"
+          ],
+          "rich_pe_header_hash": "39f006aaaafd3a254f62e87b3a2292ee",
+          "import_list": [
+            {
+              "library_name": "MFC42.DLL",
+              "imported_functions": [
+                "Ord(1089)",
+                "Ord(1134)",
+                "Ord(1146)",
+                "Ord(1168)",
+                "Ord(1200)",
+                "Ord(1576)",
+                "Ord(1727)",
+                "Ord(1775)",
+                "Ord(2055)",
+                "Ord(2124)",
+                "Ord(2379)",
+                "Ord(2385)",
+                "Ord(2396)",
+                "Ord(2446)",
+                "Ord(2512)",
+                "Ord(2514)",
+                "Ord(2554)",
+                "Ord(2621)",
+                "Ord(2648)",
+                "Ord(2725)",
+                "Ord(2863)",
+                "Ord(2976)",
+                "Ord(2982)",
+                "Ord(2985)",
+                "Ord(3079)",
+                "Ord(3081)",
+                "Ord(3136)",
+                "Ord(3147)",
+                "Ord(324)",
+                "Ord(3259)",
+                "Ord(3262)",
+                "Ord(3346)",
+                "Ord(3597)",
+                "Ord(3738)",
+                "Ord(3749)",
+                "Ord(3798)",
+                "Ord(3825)",
+                "Ord(3830)",
+                "Ord(3831)",
+                "Ord(3922)",
+                "Ord(4078)",
+                "Ord(4079)",
+                "Ord(4080)",
+                "Ord(4160)",
+                "Ord(4234)",
+                "Ord(4274)",
+                "Ord(4353)",
+                "Ord(4376)",
+                "Ord(4407)",
+                "Ord(4424)",
+                "Ord(4425)",
+                "Ord(4441)",
+                "Ord(4465)",
+                "Ord(4486)",
+                "Ord(4622)",
+                "Ord(4627)",
+                "Ord(4673)",
+                "Ord(4698)",
+                "Ord(470)",
+                "Ord(4710)",
+                "Ord(4837)",
+                "Ord(4853)",
+                "Ord(4998)",
+                "Ord(5065)",
+                "Ord(5163)",
+                "Ord(5199)",
+                "Ord(5241)",
+                "Ord(5261)",
+                "Ord(5265)",
+                "Ord(5277)",
+                "Ord(5280)",
+                "Ord(5289)",
+                "Ord(5300)",
+                "Ord(5302)",
+                "Ord(5307)",
+                "Ord(540)",
+                "Ord(561)",
+                "Ord(5714)",
+                "Ord(5731)",
+                "Ord(6052)",
+                "Ord(6374)",
+                "Ord(6375)",
+                "Ord(6376)",
+                "Ord(641)",
+                "Ord(755)",
+                "Ord(800)",
+                "Ord(815)",
+                "Ord(823)",
+                "Ord(825)"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__CxxFrameHandler",
+                "__dllonexit",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_onexit",
+                "_setmbcp",
+                "_snprintf",
+                "_XcptFilter",
+                "exit",
+                "fclose",
+                "fopen",
+                "fwrite"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateThread",
+                "DeleteFileA",
+                "ExpandEnvironmentStringsA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "ReadFile",
+                "SetFilePointer",
+                "Sleep",
+                "WaitForSingleObject",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AppendMenuA",
+                "DrawIcon",
+                "EnableWindow",
+                "GetClientRect",
+                "GetSystemMenu",
+                "GetSystemMetrics",
+                "IsIconic",
+                "LoadIconA",
+                "SendMessageA"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "runtime-modules",
+          "checks-user-input",
+          "checks-network-adapters",
+          "direct-cpu-clock-access",
+          "peexe",
+          "long-sleeps"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 23,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            },
+            {
+              "count": 2,
+              "value": "ransomware"
+            }
+          ],
+          "suggested_threat_label": "trojan.blocker/cerbu",
+          "popular_threat_name": [
+            {
+              "count": 9,
+              "value": "blocker"
+            },
+            {
+              "count": 7,
+              "value": "cerbu"
+            },
+            {
+              "count": 5,
+              "value": "roseam"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Trojan.Win32.Blocker.tp2D"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Win32:Malware-gen"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.202",
+            "engine_update": "20250423",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Cerbu.3446"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250429",
+            "category": "malicious",
+            "result": "exe.trojan.blocker"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "TrojanAPT.Pisldr.DR4"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!985EBA97E12C"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250428",
+            "category": "malicious",
+            "result": "GenericRXCF-AQ!985EBA97E12C"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250424",
+            "category": "malicious",
+            "result": "Unsafe"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://it-desktop.com/vpn/cisco/vpnclient.exe</em></p><p><em>hXXp://wangke99.tgk.delldns.com/tools.exe</em></p><p>These",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:10.726020",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.bloomberg.com/news/articles/2014-08-21/chinese-hackers-vacuum-data-from-u-s-health-industry\">APT-18</a",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:11.744364",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.secureworks.com/resources/blog/vertical-hopscotch/\">TG-0416</a",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:12.937129",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.secureworks.com/resources/blog/where-you-at-indicators-of-lateral-movement-using-at-exe-on-windows-7-systems/\">lateral",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:13.774463",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://cdn.filestackcontent.com/aGPJtCnaS5emrMHeTapm\"/></p><p>While",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:14.408181",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://cdn.filestackcontent.com/b3ahC1fdRsSOlUWmLnHx\"/></p><p>Adding",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:15.348906",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://cdn.filestackcontent.com/fbKoMJoVSwWd1evTDsRM\"/></p><p>This",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:15.917562",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.virustotal.com/en/file/1b341dab023de64598d80456349db146aafe9b9e2ec24490c7d0ac881cecc094/analysis/\">e5414c5215c9305feeebbe0dbee43567</a",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:16.493317",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.virustotal.com/en/file/4d62caef1ca8f4f9aead7823c95228a52852a1145ca6aaa58ad8493e042aed16/analysis/\">d0f79de7bd194c1843e7411c473e4288",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:17.608827",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.virustotal.com/en/file/9200f80c08b21ebae065141f0367f9c88f8fed896b0b4af9ec30fc98c606129b/analysis/\">985eba97e12c3e5bce9221631fb66d68</a></p><p",
+        "sources": [
+          "https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop"
+        ]
+      },
+      "vt_query_time": "2025-08-31T18:35:18.586490",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    }
+  ]
+}

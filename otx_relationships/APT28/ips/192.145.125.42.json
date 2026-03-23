@@ -1,0 +1,44 @@
+{
+  "indicator": "192.145.125.42",
+  "type": "ip",
+  "passive_dns": [
+    {
+      "hostname": "as9009.analytics.benocs.com",
+      "first": "2022-03-29T02:26:01",
+      "last": "2023-07-23T02:42:21",
+      "record_type": "A"
+    }
+  ],
+  "malware": [
+    {
+      "hash": "d134d16bced32880bfb5804ed9d280861968ec8a9145b7040b56d17d90e5c82d",
+      "detections": {
+        "avast": "ELF:Mirai-FY\\ [Trj]",
+        "avg": null,
+        "clamav": "Unix.Trojan.Gafgyt-6735924-0",
+        "msdefender": "Backdoor:Linux/Mirai.N!MTB"
+      }
+    },
+    {
+      "hash": "7ddb915b83263aae65ee0a73fca08201fbf2e474c6025949f5ccb806111b29a6",
+      "detections": {
+        "avast": "Win64:Malware-gen",
+        "avg": null,
+        "clamav": null,
+        "msdefender": "VirTool:Win64/Atosev.A"
+      }
+    }
+  ],
+  "geo": {
+    "country_code": "DE",
+    "country_name": "Germany",
+    "city": "Frankfurt am Main",
+    "asn": "AS9009 m247 ltd",
+    "latitude": 50.1049,
+    "longitude": 8.6295
+  },
+  "pulses": 3,
+  "adversary": [
+    "APT28"
+  ]
+}

@@ -1,0 +1,2094 @@
+{
+  "organization": "Whitefly",
+  "scan_time": "2025-08-31T19:07:15.209387",
+  "statistics": {
+    "total_iocs": 16,
+    "processed": 16,
+    "found_in_vt": 5,
+    "malicious": 5,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 11
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "394df628b3c8977661c8bebea593e148",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:02.920441",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "51862c3615e2f8a807b1d59f3aef3507",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:03.534148",
+      "vt_found": true,
+      "malicious_count": 44,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 28,
+      "total_engines": 76,
+      "first_seen": 1540278236,
+      "last_seen": 1749312621,
+      "reputation": 0,
+      "names": [
+        "QtCore4.dll"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 10240,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "md5": "51862c3615e2f8a807b1d59f3aef3507",
+        "sha1": "c9e439cc2ce0be7f79764aeddc07064a95c13f2f",
+        "sha256": "ed3cd71eaca603a00e4c0804dc34d84dc38c6c1e1c1f43af0568fb162c44c995",
+        "ssdeep": "192:tcRqI55r7WkC3dJ6xxipMV+d9xrOR3X+EqSEWS/LFoSCZ9pKIjX:GRqM7B8L6xxiyO9dOtusSKSOp",
+        "tlsh": "T17922093D798700A2D54C4EF25E87C19A1D7E932373E21177FB714A1A0EC0273FAA6269",
+        "vhash": "114056655d15555az14nz1az17023",
+        "pe_info": {
+          "timestamp": 1488268940,
+          "imphash": "960bcbf6540c535ee97c5e85efe2e1f7",
+          "machine_type": 332,
+          "entry_point": 6105,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 36380.86,
+              "virtual_address": 4096,
+              "entropy": 6.1,
+              "raw_size": 3584,
+              "flags": "rx",
+              "virtual_size": 3480,
+              "md5": "439f0504323dc51209e86662859a83fb"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 85132.12,
+              "virtual_address": 8192,
+              "entropy": 5.21,
+              "raw_size": 3584,
+              "flags": "r",
+              "virtual_size": 3467,
+              "md5": "5f0d176f85226d08b24e6d414d733d7d"
+            },
+            {
+              "name": ".data",
+              "chi2": 94668.0,
+              "virtual_address": 12288,
+              "entropy": 1.31,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 952,
+              "md5": "1f485c22d0017189de8abfcefaf68a88"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8721.5,
+              "virtual_address": 16384,
+              "entropy": 5.2,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "f23d6d9d724979e234d92accc82cc5f4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 8627.0,
+              "virtual_address": 20480,
+              "entropy": 5.57,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 476,
+              "md5": "62f99bed8ccd7efaa1aaab2eb216545a"
+            }
+          ],
+          "exports": [
+            "??0QCoreApplication@@QAE@AAHPAPAD@Z",
+            "??0QLibrary@@QAE@ABVQString@@PAVQObject@@@Z",
+            "??0QString@@QAE@ABV0@@Z",
+            "??1QByteArray@@QAE@XZ",
+            "??1QCoreApplication@@UAE@XZ",
+            "??1QLibrary@@UAE@XZ",
+            "??1QString@@QAE@XZ",
+            "??4QString@@QAEAAV0@ABV0@@Z",
+            "??8QString@@QBE_NABV0@@Z",
+            "??8QString@@QBE_NABVQLatin1String@@@Z",
+            "?allocate@QVectorData@@SAPAU1@HH@Z",
+            "?append@QListData@@QAEPAPAXXZ",
+            "?append@QString@@QAEAAV1@ABV1@@Z",
+            "?applicationDirPath@QCoreApplication@@SA?AVQString@@XZ",
+            "?codecForCStrings@QString@@0PAVQTextCodec@@A",
+            "?detach@QByteArray@@QAEXXZ",
+            "?detach_grow@QListData@@QAEPAUData@1@PAHH@Z",
+            "?free@QString@@CAXPAUData@1@@Z",
+            "?free@QVectorData@@SAXPAU1@H@Z",
+            "?fromAscii@QString@@SA?AV1@PBDH@Z",
+            "?fromAscii_helper@QString@@CAPAUData@1@PBDH@Z",
+            "?fromWCharArray@QString@@SA?AV1@PBGH@Z",
+            "?load@QLibrary@@QAE_NXZ",
+            "?mid@QString@@QBE?AV1@HH@Z",
+            "?qBadAlloc@@YAXXZ",
+            "?qFree@@YAXPAX@Z",
+            "?qMemSet@@YAPAXPAXHI@Z",
+            "?qWinMain@@YAXPAUHINSTANCE__@@0PADHAAHAAV?$QVector@PAD@@@Z",
+            "?reallocate@QVectorData@@SAPAU1@PAU1@HHH@Z",
+            "?resolve@QLibrary@@QAEPAXPBD@Z",
+            "?shared_null@QListData@@2UData@1@A",
+            "?startDetached@QProcess@@SA_NABVQString@@ABVQStringList@@@Z",
+            "?startsWith@QString@@QBE_NABV1@W4CaseSensitivity@Qt@@@Z",
+            "?toAscii@QString@@QBE?AVQByteArray@@XZ",
+            "?toLocal8Bit@QString@@QBE?AVQByteArray@@XZ"
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=12",
+            "[C++] VS2008 build 21022 count=4",
+            "[IMP] VS2005 build 50727 count=5",
+            "[---] Unmarked objects count=44",
+            "[EXP] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 21022 count=1"
+          ],
+          "rich_pe_header_hash": "915f1f313f54003fcc527b56ddd9958a",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "ExitProcess",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetFileSize",
+                "GetModuleFileNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "QueryPerformanceCounter",
+                "ReadFile",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "??3@YAXPAX@Z",
+                "?_type_info_dtor_internal_method@type_info@@QAEXXZ",
+                "?terminate@@YAXXZ",
+                "__clean_type_info_names_internal",
+                "__CppXcptFilter",
+                "__dllonexit",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_encoded_null",
+                "_except_handler4_common",
+                "_initterm",
+                "_initterm_e",
+                "_lock",
+                "_malloc_crt",
+                "_onexit",
+                "_unlock",
+                "free",
+                "malloc",
+                "memcpy",
+                "memset"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 5,
+              "value": "dllhijack"
+            },
+            {
+              "count": 5,
+              "value": "plugx"
+            },
+            {
+              "count": 3,
+              "value": "whitefly"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 26,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.dllhijack/plugx"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.Win32.DLLhijack.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "dll.trojan.dllhijack"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1747738629ef3507"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Generic trojan.nn"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Backdoor.PlugX.A"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5375",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.1077452"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "79bef92272c7d1c6236a03c26a0804cc",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:04.187706",
+      "vt_found": true,
+      "malicious_count": 55,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 17,
+      "total_engines": 76,
+      "first_seen": 1557458558,
+      "last_seen": 1749299910,
+      "reputation": 0,
+      "names": [
+        "MSVCR110.dll",
+        "extracted_at_0x16508.exe",
+        "deactivated-PositionRequirement-SeniorCivilEngineer.docx-53c1fd5ac99b5690b278ffcc5a49a598.bin.00016508_2600.dll",
+        "79bef92272c7d1c6236a03c26a0804cc",
+        "export_results3.txt",
+        "MSVCR110.dll_",
+        "MSVCR110.dll_danger",
+        "MSVCR110.dll.extracted"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 9728,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "md5": "79bef92272c7d1c6236a03c26a0804cc",
+        "sha1": "a72a4db4188b49942b442379e1b4f30049d2d2f7",
+        "sha256": "d784a12fec628860433c28caa353bb52923f39d072437393629039fa4b2ec8ad",
+        "ssdeep": "192:y14sMryjQUic5kslkhivLqcnlo2+9r3X+EqoIoOLXi/sW6Hr6j:y+1UiK2Ezqc+/9TuVoOTikrO",
+        "tlsh": "T1F8122B39AD474472CF6C0EF5AE9386675A7C261333A13277B360925A0EC5343D4B3179",
+        "vhash": "193056655d15555az14nz1az26026",
+        "pe_info": {
+          "timestamp": 1514344410,
+          "imphash": "b2de24ccb6e704a3d804236934928d5b",
+          "machine_type": 332,
+          "entry_point": 6175,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 41282.7,
+              "virtual_address": 4096,
+              "entropy": 6.03,
+              "raw_size": 3584,
+              "flags": "rx",
+              "virtual_size": 3448,
+              "md5": "31be69af0e4a7f310f80b91c0f6b1320"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 104840.51,
+              "virtual_address": 8192,
+              "entropy": 4.87,
+              "raw_size": 3072,
+              "flags": "r",
+              "virtual_size": 2846,
+              "md5": "5889dbd8b4c0fac2145559b9e7414ba7"
+            },
+            {
+              "name": ".data",
+              "chi2": 122532.0,
+              "virtual_address": 12288,
+              "entropy": 0.28,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 872,
+              "md5": "38a465ab13e516ac4d90e19854e125b5"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8721.5,
+              "virtual_address": 16384,
+              "entropy": 5.2,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "f23d6d9d724979e234d92accc82cc5f4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 13444.0,
+              "virtual_address": 20480,
+              "entropy": 5.2,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 432,
+              "md5": "4847eec05a41a645c9705e90250209f4"
+            }
+          ],
+          "exports": [
+            "??1type_info@@UAE@XZ",
+            "??2@YAPAXI@Z",
+            "??3@YAXPAX@Z",
+            "?terminate@@YAXXZ",
+            "_XcptFilter",
+            "__crtGetShowWindowMode",
+            "__crtSetUnhandledExceptionFilter",
+            "__crtTerminateProcess",
+            "__crtUnhandledException",
+            "__dllonexit",
+            "__set_app_type",
+            "__setusermatherr",
+            "__wgetmainargs",
+            "_amsg_exit",
+            "_calloc_crt",
+            "_cexit",
+            "_commode",
+            "_configthreadlocale",
+            "_controlfp_s",
+            "_crt_debugger_hook",
+            "_except_handler4_common",
+            "_exit",
+            "_fmode",
+            "_initterm",
+            "_initterm_e",
+            "_invoke_watson",
+            "_lock",
+            "_onexit",
+            "_purecall",
+            "_snwprintf_s",
+            "_unlock",
+            "_wcmdln",
+            "exit",
+            "free",
+            "malloc",
+            "memcpy",
+            "memset",
+            "srand"
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=14",
+            "[C++] VS2008 build 21022 count=2",
+            "[IMP] VS2005 build 50727 count=5",
+            "[---] Unmarked objects count=59",
+            "[EXP] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 21022 count=1"
+          ],
+          "rich_pe_header_hash": "c8ba303e0b5e9b8bf9d6f75235e112f5",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "ExitProcess",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetFileSize",
+                "GetModuleFileNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "QueryPerformanceCounter",
+                "ReadFile",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "??2@YAPAXI@Z",
+                "??3@YAXPAX@Z",
+                "?_type_info_dtor_internal_method@type_info@@QAEXXZ",
+                "?terminate@@YAXXZ",
+                "__clean_type_info_names_internal",
+                "__CppXcptFilter",
+                "__dllonexit",
+                "__set_app_type",
+                "__setusermatherr",
+                "__wgetmainargs",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_calloc_crt",
+                "_cexit",
+                "_configthreadlocale",
+                "_controlfp_s",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_encoded_null",
+                "_except_handler4_common",
+                "_exit",
+                "_initterm",
+                "_initterm_e",
+                "_invoke_watson",
+                "_lock",
+                "_malloc_crt",
+                "_onexit",
+                "_purecall",
+                "_snwprintf_s",
+                "_unlock",
+                "_XcptFilter",
+                "exit",
+                "free",
+                "malloc",
+                "memcpy",
+                "memset",
+                "srand"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll",
+          "detect-debug-environment",
+          "checks-user-input"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 33,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.whitefly/bkdr",
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "whitefly"
+            },
+            {
+              "count": 2,
+              "value": "bkdr"
+            },
+            {
+              "count": 2,
+              "value": "occamy"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 3,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.Win32.Whitefly.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.208",
+            "engine_update": "20250528",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.41292880"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "dll.trojan.whitefly"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17327432990804cc"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Generic trojan.nn"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.41292880"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5375",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "b4a7049b90503534d494970851bdda62",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:04.835390",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "eab0a521aa7cac62d98d78ef845a8319",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:05.994774",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "263dc5a8121d20403beeeea452b6f33d51d41c6842d9d19919def1f1cb13226c",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:06.780543",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "6e874ac92c7061300b402dc616a1095fa7d13c8a18c8a3ea5b30ffa832a7372c",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:07.528356",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "7de8b8b314f2d2fb54f8f8ad4bba435e8fc58b894b1680e5028c90c0a524ccd9",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:08.449958",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "93c9310f3984d96f53f226f5177918c4ca78b2070d5843f08d2cf351e8c239d5",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:09.081620",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "9d9a6337c486738edf4e5d1790c023ba172ce9b039df1b7b9720ed4c4c9ade90",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:09.986442",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "a196dfe4ef7d422aadf1709b12511ae82cb96aad030422b00a9c91fb60a12f17",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:10.907795",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "b2b2e900aa2e96ff44610032063012aa0435a47a5b416c384bd6e4e58a048ac9",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:11.831474",
+      "vt_found": true,
+      "malicious_count": 57,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 15,
+      "total_engines": 76,
+      "first_seen": 1473425107,
+      "last_seen": 1756329719,
+      "reputation": -7,
+      "names": [
+        "jLnsXEF1AH7NHPxsaRI8Mhnaf5Nf9B",
+        "2820653437D5935D94FCB0C997D6F13C",
+        "agent_win32.exe",
+        "b2b2e900aa2e96ff44610032063012aa0435a47a5b416c384bd6e4e58a048ac9_unpacked",
+        "agent_Win32.exe",
+        "agent.exe",
+        "partmgr.sys",
+        "bkclean.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 63488,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows",
+        "md5": "2820653437d5935d94fcb0c997d6f13c",
+        "sha1": "5c0b49e4c2671805e78948aa30beb21aa45346d2",
+        "sha256": "b2b2e900aa2e96ff44610032063012aa0435a47a5b416c384bd6e4e58a048ac9",
+        "ssdeep": "768:kO9FDI/xwFkZjHFCNEOla8trgJo6HTcAs2UNddE5hIJDpzMhh6R:/DOP7FCKOlFGJoKoAs2f5hWpghh",
+        "tlsh": "T16E53400AF10385B5C5B293B141CBC67BD211AA1985276F2EFB4F4E38F77F5429C29229",
+        "vhash": "0640875d15551c0d1d1d1bzf1ftz17z",
+        "pe_info": {
+          "timestamp": 39451216,
+          "imphash": "45542ffb2c15f2c917453f6db10121d3",
+          "machine_type": 332,
+          "entry_point": 4736,
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 470691.16,
+              "virtual_address": 4096,
+              "entropy": 5.7,
+              "raw_size": 41984,
+              "flags": "rx",
+              "virtual_size": 41892,
+              "md5": "b183d22e137e9a704ce006769a056882"
+            },
+            {
+              "name": ".data",
+              "chi2": 95213.0,
+              "virtual_address": 49152,
+              "entropy": 1.22,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 444,
+              "md5": "9f6cb07b521791b1a5cafbfc769c3272"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 75409.34,
+              "virtual_address": 53248,
+              "entropy": 5.29,
+              "raw_size": 6144,
+              "flags": "r",
+              "virtual_size": 6140,
+              "md5": "c23ce294d8c5cbbf32654e312e17c6f8"
+            },
+            {
+              "name": ".eh_fram",
+              "chi2": 399302.56,
+              "virtual_address": 61440,
+              "entropy": 4.46,
+              "raw_size": 10752,
+              "flags": "r",
+              "virtual_size": 10376,
+              "md5": "728f700468ae7a7318c21cb44663f2ae"
+            },
+            {
+              "name": ".bss",
+              "chi2": -1.0,
+              "virtual_address": 73728,
+              "entropy": 0.0,
+              "raw_size": 0,
+              "flags": "rw",
+              "virtual_size": 72476,
+              "md5": "d41d8cd98f00b204e9800998ecf8427e"
+            },
+            {
+              "name": ".idata",
+              "chi2": 80603.25,
+              "virtual_address": 147456,
+              "entropy": 4.36,
+              "raw_size": 2048,
+              "flags": "rw",
+              "virtual_size": 1724,
+              "md5": "62424c050d229d19179b45cca598b6a3"
+            },
+            {
+              "name": ".CRT",
+              "chi2": 127511.0,
+              "virtual_address": 151552,
+              "entropy": 0.11,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 24,
+              "md5": "34aaefab3a2aa1636359b86c92c9bb9f"
+            },
+            {
+              "name": ".tls",
+              "chi2": 124498.0,
+              "virtual_address": 155648,
+              "entropy": 0.23,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 32,
+              "md5": "9deeb4837fac6b302366e7b344586e98"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CreateProcessA",
+                "CreateThread",
+                "DeleteCriticalSection",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "GetLastError",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "InitializeCriticalSection",
+                "LeaveCriticalSection",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TlsGetValue",
+                "VirtualProtect",
+                "VirtualQuery"
+              ]
+            },
+            {
+              "library_name": "msvcrt.dll",
+              "imported_functions": [
+                "__getmainargs",
+                "__p__environ",
+                "__p__fmode",
+                "__set_app_type",
+                "_cexit",
+                "_iob",
+                "_onexit",
+                "_setmode",
+                "abort",
+                "atexit",
+                "atoi",
+                "calloc",
+                "fclose",
+                "fopen",
+                "fprintf",
+                "fread",
+                "free",
+                "fwrite",
+                "getenv",
+                "malloc",
+                "memcpy",
+                "memset",
+                "printf",
+                "putchar",
+                "puts",
+                "signal",
+                "sprintf",
+                "strcpy",
+                "strlen",
+                "strncpy",
+                "vfprintf"
+              ]
+            },
+            {
+              "library_name": "WS2_32.dll",
+              "imported_functions": [
+                "WSASocketA"
+              ]
+            },
+            {
+              "library_name": "WSOCK32.DLL",
+              "imported_functions": [
+                "__WSAFDIsSet",
+                "accept",
+                "bind",
+                "connect",
+                "gethostbyname",
+                "htonl",
+                "htons",
+                "inet_ntoa",
+                "listen",
+                "recv",
+                "select",
+                "send",
+                "shutdown",
+                "WSAGetLastError",
+                "WSAStartup"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "checks-user-input",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 27,
+              "value": "hacktool"
+            },
+            {
+              "count": 13,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "hacktool.earthworm/aiae",
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "earthworm"
+            },
+            {
+              "count": 2,
+              "value": "aiae"
+            },
+            {
+              "count": 2,
+              "value": "cryptinject"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 98
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250803",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Hacktool.Win32.Earthworm.3!c"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Win32:Trojan-gen"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Application.Hacktool.BAD"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "exe.hacktool.generic"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1735007670d6f13c"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250803",
+            "category": "malicious",
+            "result": "Generic Trojan.em"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Agent.Occamy.A"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Unsafe"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "d784a12fec628860433c28caa353bb52923f39d072437393629039fa4b2ec8ad",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:12.503260",
+      "vt_found": true,
+      "malicious_count": 55,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 17,
+      "total_engines": 76,
+      "first_seen": 1557458558,
+      "last_seen": 1749299910,
+      "reputation": 0,
+      "names": [
+        "MSVCR110.dll",
+        "extracted_at_0x16508.exe",
+        "deactivated-PositionRequirement-SeniorCivilEngineer.docx-53c1fd5ac99b5690b278ffcc5a49a598.bin.00016508_2600.dll",
+        "79bef92272c7d1c6236a03c26a0804cc",
+        "export_results3.txt",
+        "MSVCR110.dll_",
+        "MSVCR110.dll_danger",
+        "MSVCR110.dll.extracted"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 9728,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "md5": "79bef92272c7d1c6236a03c26a0804cc",
+        "sha1": "a72a4db4188b49942b442379e1b4f30049d2d2f7",
+        "sha256": "d784a12fec628860433c28caa353bb52923f39d072437393629039fa4b2ec8ad",
+        "ssdeep": "192:y14sMryjQUic5kslkhivLqcnlo2+9r3X+EqoIoOLXi/sW6Hr6j:y+1UiK2Ezqc+/9TuVoOTikrO",
+        "tlsh": "T1F8122B39AD474472CF6C0EF5AE9386675A7C261333A13277B360925A0EC5343D4B3179",
+        "vhash": "193056655d15555az14nz1az26026",
+        "pe_info": {
+          "timestamp": 1514344410,
+          "imphash": "b2de24ccb6e704a3d804236934928d5b",
+          "machine_type": 332,
+          "entry_point": 6175,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 41282.7,
+              "virtual_address": 4096,
+              "entropy": 6.03,
+              "raw_size": 3584,
+              "flags": "rx",
+              "virtual_size": 3448,
+              "md5": "31be69af0e4a7f310f80b91c0f6b1320"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 104840.51,
+              "virtual_address": 8192,
+              "entropy": 4.87,
+              "raw_size": 3072,
+              "flags": "r",
+              "virtual_size": 2846,
+              "md5": "5889dbd8b4c0fac2145559b9e7414ba7"
+            },
+            {
+              "name": ".data",
+              "chi2": 122532.0,
+              "virtual_address": 12288,
+              "entropy": 0.28,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 872,
+              "md5": "38a465ab13e516ac4d90e19854e125b5"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8721.5,
+              "virtual_address": 16384,
+              "entropy": 5.2,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "f23d6d9d724979e234d92accc82cc5f4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 13444.0,
+              "virtual_address": 20480,
+              "entropy": 5.2,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 432,
+              "md5": "4847eec05a41a645c9705e90250209f4"
+            }
+          ],
+          "exports": [
+            "??1type_info@@UAE@XZ",
+            "??2@YAPAXI@Z",
+            "??3@YAXPAX@Z",
+            "?terminate@@YAXXZ",
+            "_XcptFilter",
+            "__crtGetShowWindowMode",
+            "__crtSetUnhandledExceptionFilter",
+            "__crtTerminateProcess",
+            "__crtUnhandledException",
+            "__dllonexit",
+            "__set_app_type",
+            "__setusermatherr",
+            "__wgetmainargs",
+            "_amsg_exit",
+            "_calloc_crt",
+            "_cexit",
+            "_commode",
+            "_configthreadlocale",
+            "_controlfp_s",
+            "_crt_debugger_hook",
+            "_except_handler4_common",
+            "_exit",
+            "_fmode",
+            "_initterm",
+            "_initterm_e",
+            "_invoke_watson",
+            "_lock",
+            "_onexit",
+            "_purecall",
+            "_snwprintf_s",
+            "_unlock",
+            "_wcmdln",
+            "exit",
+            "free",
+            "malloc",
+            "memcpy",
+            "memset",
+            "srand"
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=14",
+            "[C++] VS2008 build 21022 count=2",
+            "[IMP] VS2005 build 50727 count=5",
+            "[---] Unmarked objects count=59",
+            "[EXP] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 21022 count=1"
+          ],
+          "rich_pe_header_hash": "c8ba303e0b5e9b8bf9d6f75235e112f5",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "ExitProcess",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetFileSize",
+                "GetModuleFileNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "QueryPerformanceCounter",
+                "ReadFile",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "??2@YAPAXI@Z",
+                "??3@YAXPAX@Z",
+                "?_type_info_dtor_internal_method@type_info@@QAEXXZ",
+                "?terminate@@YAXXZ",
+                "__clean_type_info_names_internal",
+                "__CppXcptFilter",
+                "__dllonexit",
+                "__set_app_type",
+                "__setusermatherr",
+                "__wgetmainargs",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_calloc_crt",
+                "_cexit",
+                "_configthreadlocale",
+                "_controlfp_s",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_encoded_null",
+                "_except_handler4_common",
+                "_exit",
+                "_initterm",
+                "_initterm_e",
+                "_invoke_watson",
+                "_lock",
+                "_malloc_crt",
+                "_onexit",
+                "_purecall",
+                "_snwprintf_s",
+                "_unlock",
+                "_XcptFilter",
+                "exit",
+                "free",
+                "malloc",
+                "memcpy",
+                "memset",
+                "srand"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll",
+          "detect-debug-environment",
+          "checks-user-input"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.whitefly/bkdr",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 33
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "whitefly",
+              "count": 11
+            },
+            {
+              "value": "bkdr",
+              "count": 2
+            },
+            {
+              "value": "occamy",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 3,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.Win32.Whitefly.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.208",
+            "engine_update": "20250528",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.41292880"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "dll.trojan.whitefly"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17327432990804cc"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Generic trojan.nn"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.41292880"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5375",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "dda22de8ad7d807cdac8c269b7e3b35a3021dcbff722b3d333f2a12d45d9908d",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:13.380880",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "ed3cd71eaca603a00e4c0804dc34d84dc38c6c1e1c1f43af0568fb162c44c995",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:14.289358",
+      "vt_found": true,
+      "malicious_count": 44,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 28,
+      "total_engines": 76,
+      "first_seen": 1540278236,
+      "last_seen": 1749312621,
+      "reputation": 0,
+      "names": [
+        "QtCore4.dll"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 10240,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "md5": "51862c3615e2f8a807b1d59f3aef3507",
+        "sha1": "c9e439cc2ce0be7f79764aeddc07064a95c13f2f",
+        "sha256": "ed3cd71eaca603a00e4c0804dc34d84dc38c6c1e1c1f43af0568fb162c44c995",
+        "ssdeep": "192:tcRqI55r7WkC3dJ6xxipMV+d9xrOR3X+EqSEWS/LFoSCZ9pKIjX:GRqM7B8L6xxiyO9dOtusSKSOp",
+        "tlsh": "T17922093D798700A2D54C4EF25E87C19A1D7E932373E21177FB714A1A0EC0273FAA6269",
+        "vhash": "114056655d15555az14nz1az17023",
+        "pe_info": {
+          "timestamp": 1488268940,
+          "imphash": "960bcbf6540c535ee97c5e85efe2e1f7",
+          "machine_type": 332,
+          "entry_point": 6105,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 36380.86,
+              "virtual_address": 4096,
+              "entropy": 6.1,
+              "raw_size": 3584,
+              "flags": "rx",
+              "virtual_size": 3480,
+              "md5": "439f0504323dc51209e86662859a83fb"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 85132.12,
+              "virtual_address": 8192,
+              "entropy": 5.21,
+              "raw_size": 3584,
+              "flags": "r",
+              "virtual_size": 3467,
+              "md5": "5f0d176f85226d08b24e6d414d733d7d"
+            },
+            {
+              "name": ".data",
+              "chi2": 94668.0,
+              "virtual_address": 12288,
+              "entropy": 1.31,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 952,
+              "md5": "1f485c22d0017189de8abfcefaf68a88"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8721.5,
+              "virtual_address": 16384,
+              "entropy": 5.2,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "f23d6d9d724979e234d92accc82cc5f4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 8627.0,
+              "virtual_address": 20480,
+              "entropy": 5.57,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 476,
+              "md5": "62f99bed8ccd7efaa1aaab2eb216545a"
+            }
+          ],
+          "exports": [
+            "??0QCoreApplication@@QAE@AAHPAPAD@Z",
+            "??0QLibrary@@QAE@ABVQString@@PAVQObject@@@Z",
+            "??0QString@@QAE@ABV0@@Z",
+            "??1QByteArray@@QAE@XZ",
+            "??1QCoreApplication@@UAE@XZ",
+            "??1QLibrary@@UAE@XZ",
+            "??1QString@@QAE@XZ",
+            "??4QString@@QAEAAV0@ABV0@@Z",
+            "??8QString@@QBE_NABV0@@Z",
+            "??8QString@@QBE_NABVQLatin1String@@@Z",
+            "?allocate@QVectorData@@SAPAU1@HH@Z",
+            "?append@QListData@@QAEPAPAXXZ",
+            "?append@QString@@QAEAAV1@ABV1@@Z",
+            "?applicationDirPath@QCoreApplication@@SA?AVQString@@XZ",
+            "?codecForCStrings@QString@@0PAVQTextCodec@@A",
+            "?detach@QByteArray@@QAEXXZ",
+            "?detach_grow@QListData@@QAEPAUData@1@PAHH@Z",
+            "?free@QString@@CAXPAUData@1@@Z",
+            "?free@QVectorData@@SAXPAU1@H@Z",
+            "?fromAscii@QString@@SA?AV1@PBDH@Z",
+            "?fromAscii_helper@QString@@CAPAUData@1@PBDH@Z",
+            "?fromWCharArray@QString@@SA?AV1@PBGH@Z",
+            "?load@QLibrary@@QAE_NXZ",
+            "?mid@QString@@QBE?AV1@HH@Z",
+            "?qBadAlloc@@YAXXZ",
+            "?qFree@@YAXPAX@Z",
+            "?qMemSet@@YAPAXPAXHI@Z",
+            "?qWinMain@@YAXPAUHINSTANCE__@@0PADHAAHAAV?$QVector@PAD@@@Z",
+            "?reallocate@QVectorData@@SAPAU1@PAU1@HHH@Z",
+            "?resolve@QLibrary@@QAEPAXPBD@Z",
+            "?shared_null@QListData@@2UData@1@A",
+            "?startDetached@QProcess@@SA_NABVQString@@ABVQStringList@@@Z",
+            "?startsWith@QString@@QBE_NABV1@W4CaseSensitivity@Qt@@@Z",
+            "?toAscii@QString@@QBE?AVQByteArray@@XZ",
+            "?toLocal8Bit@QString@@QBE?AVQByteArray@@XZ"
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=12",
+            "[C++] VS2008 build 21022 count=4",
+            "[IMP] VS2005 build 50727 count=5",
+            "[---] Unmarked objects count=44",
+            "[EXP] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 21022 count=1"
+          ],
+          "rich_pe_header_hash": "915f1f313f54003fcc527b56ddd9958a",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "ExitProcess",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetFileSize",
+                "GetModuleFileNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "QueryPerformanceCounter",
+                "ReadFile",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "??3@YAXPAX@Z",
+                "?_type_info_dtor_internal_method@type_info@@QAEXXZ",
+                "?terminate@@YAXXZ",
+                "__clean_type_info_names_internal",
+                "__CppXcptFilter",
+                "__dllonexit",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_encoded_null",
+                "_except_handler4_common",
+                "_initterm",
+                "_initterm_e",
+                "_lock",
+                "_malloc_crt",
+                "_onexit",
+                "_unlock",
+                "free",
+                "malloc",
+                "memcpy",
+                "memset"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 26
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "dllhijack",
+              "count": 5
+            },
+            {
+              "value": "plugx",
+              "count": 5
+            },
+            {
+              "value": "whitefly",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.dllhijack/plugx"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Trojan.Win32.DLLhijack.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250607",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "dll.trojan.dllhijack"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1747738629ef3507"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Generic trojan.nn"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250607",
+            "category": "malicious",
+            "result": "Backdoor.PlugX.A"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5375",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.1077452"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "f562e9270098851dc716e3f17dbacc7f9e2f98f03ec5f1242b341baf1f7d544c",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/whitefly-espionage-singapore"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:07:15.208659",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    }
+  ]
+}

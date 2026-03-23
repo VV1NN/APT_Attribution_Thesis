@@ -1,0 +1,1570 @@
+{
+  "organization": "BlackOasis",
+  "scan_time": "2025-08-31T23:21:48.698856",
+  "statistics": {
+    "total_iocs": 11,
+    "processed": 11,
+    "found_in_vt": 11,
+    "malicious": 6,
+    "suspicious": 0,
+    "harmless": 5,
+    "errors": 0
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "email",
+        "value": "intelreports@kaspersky.com",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/",
+          "https://securelist.com/apt-trends-report-q2-2017/79332/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:42.676914",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 28,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756652361,
+      "reputation": 78,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "BE",
+          "O": "GlobalSign nv-sa",
+          "CN": "GlobalSign RSA OV SSL CA 2018"
+        },
+        "subject": {
+          "C": "CH",
+          "ST": "Zürich",
+          "L": "Zürich",
+          "O": "Kaspersky Lab Switzerland GmbH",
+          "CN": "kaspersky.com"
+        },
+        "validity": {
+          "not_after": "2026-02-15 09:06:03",
+          "not_before": "2025-01-14 09:06:04"
+        },
+        "version": "V3",
+        "serial_number": "305203d8ffa7a1750b7f023c",
+        "thumbprint": "be4dc419998975e5572405b239ba3b6d62607f5f",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "b0432263d3efaba6eec6c045cc9c7e1bc5bf2a54ca69c767da6facf15288f4468faae56f04c3aa2ac038fada3f7dbbe1b99c53b861c017929ee7ac02fffe33e1944cf961bf90f1390ab462242d9abbd8abeccbb8957687611f6561d7e1a970251a4508eb2128c9168aeef5a99630fe7800d48f29300858e3500389af8e1819b2a59889a66fbd2938c8198ce3b827034e29d6d5607e01dee07cd8a65d21473ddf0038c8505cfed9ef65a6112ba663787d73e69e7c816f5b0ccb7eb76285312382279b6ac4ee2409f25599579cf9748499016b9f80cce61fc237ce8120ac849dbe423f30b9842872a900266363a5f01d50bdf458f1d2b2658f3b38eed81e822789",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "15d15d15d00000000043d43d00043d563be2940eee31d73b097dd8e30ba854"
+      },
+      "whois_info": "Admin City: Moscow\nAdmin Country: RU\nAdmin Email: b1ebeba4890b217ds@kaspersky.com\nAdmin Organization: Joint Stock Company Kaspersky Lab\nAdmin Postal Code: 125212\nAdmin State/Province: Moscow\nCreation Date: 1997-10-09T04:00:00Z\nDNSSEC: unsigned\nDomain Name: KASPERSKY.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nName Server: NS1.KASPERSKYLABS.NET\nName Server: NS2.KASPERSKYLABS.COM\nName Server: NS3.KASPERSKYLABS.ORG\nName Server: ns1.kasperskylabs.net\nName Server: ns2.kasperskylabs.com\nName Server: ns3.kasperskylabs.org\nRegistrant City: 04154ce0aa2604d4\nRegistrant Country: RU\nRegistrant Email: b1ebeba4890b217ds@kaspersky.com\nRegistrant Fax Ext: 3432650ec337c945\nRegistrant Fax: a9dbb7bc520ff63b\nRegistrant Name: 3c51727f82ba7216\nRegistrant Organization: 620618f8b983478c\nRegistrant Phone Ext: 3432650ec337c945\nRegistrant Phone: a9dbb7bc520ff63b\nRegistrant Postal Code: 4a002af85e55b878\nRegistrant State/Province: 04154ce0aa2604d4\nRegistrant Street: b03c28443b769b2b\nRegistrar Abuse Contact Email: tld-abuse@nic.ru\nRegistrar Abuse Contact Phone: +7.4959944601\nRegistrar Abuse Contact Phone: +74950091333\nRegistrar IANA ID: 463\nRegistrar Registration Expiration Date: 2025-10-07T21:00:00Z\nRegistrar URL: http://nic.ru\nRegistrar URL: http://www.nic.ru\nRegistrar WHOIS Server: whois.nic.ru\nRegistrar: Regional Network Information Center, JSC dba RU-CENTER\nRegistry Domain ID: 1161465_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2025-10-08T04:00:00Z\nTech City: Moscow\nTech Country: RU\nTech Email: b1ebeba4890b217ds@kaspersky.com\nTech Organization: Joint Stock Company Kaspersky Lab\nTech Postal Code: 125212\nTech State/Province: Moscow\nUpdated Date: 2025-04-16T08:38:34Z\nUpdated Date: 2025-04-16T08:38:35Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "email",
+        "value": "tointelreports@kaspersky.com",
+        "sources": [
+          "https://securelist.com/apt-trends-report-q2-2017/79332/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:43.347857",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 28,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756652361,
+      "reputation": 78,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "BE",
+          "O": "GlobalSign nv-sa",
+          "CN": "GlobalSign RSA OV SSL CA 2018"
+        },
+        "subject": {
+          "C": "CH",
+          "ST": "Zürich",
+          "L": "Zürich",
+          "O": "Kaspersky Lab Switzerland GmbH",
+          "CN": "kaspersky.com"
+        },
+        "validity": {
+          "not_after": "2026-02-15 09:06:03",
+          "not_before": "2025-01-14 09:06:04"
+        },
+        "version": "V3",
+        "serial_number": "305203d8ffa7a1750b7f023c",
+        "thumbprint": "be4dc419998975e5572405b239ba3b6d62607f5f",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "b0432263d3efaba6eec6c045cc9c7e1bc5bf2a54ca69c767da6facf15288f4468faae56f04c3aa2ac038fada3f7dbbe1b99c53b861c017929ee7ac02fffe33e1944cf961bf90f1390ab462242d9abbd8abeccbb8957687611f6561d7e1a970251a4508eb2128c9168aeef5a99630fe7800d48f29300858e3500389af8e1819b2a59889a66fbd2938c8198ce3b827034e29d6d5607e01dee07cd8a65d21473ddf0038c8505cfed9ef65a6112ba663787d73e69e7c816f5b0ccb7eb76285312382279b6ac4ee2409f25599579cf9748499016b9f80cce61fc237ce8120ac849dbe423f30b9842872a900266363a5f01d50bdf458f1d2b2658f3b38eed81e822789",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "15d15d15d00000000043d43d00043d563be2940eee31d73b097dd8e30ba854"
+      },
+      "whois_info": "Admin City: Moscow\nAdmin Country: RU\nAdmin Email: b1ebeba4890b217ds@kaspersky.com\nAdmin Organization: Joint Stock Company Kaspersky Lab\nAdmin Postal Code: 125212\nAdmin State/Province: Moscow\nCreation Date: 1997-10-09T04:00:00Z\nDNSSEC: unsigned\nDomain Name: KASPERSKY.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nName Server: NS1.KASPERSKYLABS.NET\nName Server: NS2.KASPERSKYLABS.COM\nName Server: NS3.KASPERSKYLABS.ORG\nName Server: ns1.kasperskylabs.net\nName Server: ns2.kasperskylabs.com\nName Server: ns3.kasperskylabs.org\nRegistrant City: 04154ce0aa2604d4\nRegistrant Country: RU\nRegistrant Email: b1ebeba4890b217ds@kaspersky.com\nRegistrant Fax Ext: 3432650ec337c945\nRegistrant Fax: a9dbb7bc520ff63b\nRegistrant Name: 3c51727f82ba7216\nRegistrant Organization: 620618f8b983478c\nRegistrant Phone Ext: 3432650ec337c945\nRegistrant Phone: a9dbb7bc520ff63b\nRegistrant Postal Code: 4a002af85e55b878\nRegistrant State/Province: 04154ce0aa2604d4\nRegistrant Street: b03c28443b769b2b\nRegistrar Abuse Contact Email: tld-abuse@nic.ru\nRegistrar Abuse Contact Phone: +7.4959944601\nRegistrar Abuse Contact Phone: +74950091333\nRegistrar IANA ID: 463\nRegistrar Registration Expiration Date: 2025-10-07T21:00:00Z\nRegistrar URL: http://nic.ru\nRegistrar URL: http://www.nic.ru\nRegistrar WHOIS Server: whois.nic.ru\nRegistrar: Regional Network Information Center, JSC dba RU-CENTER\nRegistry Domain ID: 1161465_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2025-10-08T04:00:00Z\nTech City: Moscow\nTech Country: RU\nTech Email: b1ebeba4890b217ds@kaspersky.com\nTech Organization: Joint Stock Company Kaspersky Lab\nTech Postal Code: 125212\nTech State/Province: Moscow\nUpdated Date: 2025-04-16T08:38:34Z\nUpdated Date: 2025-04-16T08:38:35Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "21.0.0.226",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:43.943841",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 34,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756504115,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "21.0.0.0/8",
+        "asn": 749,
+        "as_owner": "DNIC-AS-00749",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "NetRange: 21.0.0.0 - 21.255.255.255\nCIDR: 21.0.0.0/8\nNetName: DNIC-SNET-021\nNetHandle: NET-21-0-0-0-1\nParent: ()\nNetType: Direct Allocation\nOriginAS: \nOrganization: DoD Network Information Center (DNIC)\nRegDate: 1991-07-01\nUpdated: 2009-06-19\nRef: https://rdap.arin.net/registry/ip/21.0.0.0\nOrgName: DoD Network Information Center\nOrgId: DNIC\nAddress: 3990 E. Broad Street\nCity: Columbus\nStateProv: OH\nPostalCode: 43218\nCountry: US\nRegDate: \nUpdated: 2025-03-13\nRef: https://rdap.arin.net/registry/entity/DNIC\nOrgAbuseHandle: REGIS10-ARIN\nOrgAbuseName: Registration\nOrgAbusePhone: +1-844-347-2457 \nOrgAbuseEmail: disa.columbus.ns.mbx.arin-registrations@mail.mil\nOrgAbuseRef: https://rdap.arin.net/registry/entity/REGIS10-ARIN\nOrgTechHandle: MIL-HSTMST-ARIN\nOrgTechName: Network DoD\nOrgTechPhone: +1-844-347-2457 \nOrgTechEmail: disa.columbus.ns.mbx.hostmaster-dod-nic@mail.mil\nOrgTechRef: https://rdap.arin.net/registry/entity/MIL-HSTMST-ARIN\nOrgTechHandle: REGIS10-ARIN\nOrgTechName: Registration\nOrgTechPhone: +1-844-347-2457 \nOrgTechEmail: disa.columbus.ns.mbx.arin-registrations@mail.mil\nOrgTechRef: https://rdap.arin.net/registry/entity/REGIS10-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "BlackOasis",
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/21.0.0.226/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/21.0.0.226",
+            "severity": "low",
+            "timestamp": 1692282847
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "89.45.67.107",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:44.517518",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 0,
+      "harmless_count": 55,
+      "undetected_count": 29,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756269914,
+      "reputation": -7,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "89.45.67.0/24",
+        "asn": 44901,
+        "as_owner": "Belcloud LTD",
+        "country": "BG",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Let's Encrypt",
+          "CN": "R3"
+        },
+        "subject": {
+          "CN": "www.emailverifier.scptg.com"
+        },
+        "validity": {
+          "not_after": "2024-07-25 06:48:08",
+          "not_before": "2024-04-26 06:48:09"
+        },
+        "version": "V3",
+        "serial_number": "3ff2f92e0e6f58a7e623d3a4969c6bec04f",
+        "thumbprint": "d46eff558c614e54cf8f2192be86687372d5e7b1",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "EC",
+          "ec": {
+            "oid": "secp256r1",
+            "pub": "3059301306072a8648ce3d020106082a8648ce3d030107034200049b8a5c469b9d8bd70f6e84e24dd05551d019e5f3b80cce309cc76a454c5d8f1f0ba54a0fab5857875b921d6acf1e95c4ccb93bedeb462ce64044c9ff7732c70a"
+          }
+        },
+        "jarm": "28d28d28d00028d00028d28d28d28d96d86b34e11c2d3d5508f7111adf9d91"
+      },
+      "whois_info": "inetnum: 89.45.67.0 - 89.45.67.255\nnetname: BZ-FASTSERV-20051129\ncountry: BG\norg: ORG-FSI1-RIPE\nadmin-c: QL56-RIPE\ntech-c: QL56-RIPE\nstatus: ALLOCATED PA\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: QHoster\nmnt-lower: QHoster\nmnt-domains: QHoster\nmnt-routes: belcloud\ncreated: 2015-03-30T11:26:20Z\nlast-modified: 2016-07-25T15:26:57Z\nsource: RIPE\norganisation: ORG-FSI1-RIPE\norg-name: Fast Serv Inc.\ncountry: BZ\norg-type: LIR\naddress: 1 Mapp Street\naddress: 00000\naddress: Belize City\naddress: BELIZE\nphone: +18774231155\nabuse-c: QL56-RIPE\nmnt-ref: QHoster\nmnt-by: RIPE-NCC-HM-MNT\nmnt-ref: RIPE-NCC-HM-MNT\nmnt-by: QHoster\ncreated: 2014-11-14T13:37:10Z\nlast-modified: 2020-12-16T13:17:42Z\nsource: RIPE # Filtered\nrole: Fast Serv Inc. d.b.a. QHoster.com\naddress: 1 Mapp Street\naddress: Belize City, Belize\nphone: +18774231155\nabuse-mailbox: abuse@QHoster.com\nnic-hdl: QL56-RIPE\nmnt-by: QHoster\nadmin-c: MD21847-RIPE\ntech-c: MD21847-RIPE\ncreated: 2014-03-09T23:57:28Z\nlast-modified: 2016-04-09T16:31:51Z\nsource: RIPE # Filtered\nroute: 89.45.67.0/24\ndescr: QHoster\norigin: AS44901\nmnt-by: belcloud\ncreated: 2016-07-22T14:12:45Z\nlast-modified: 2016-07-22T14:12:45Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "4a49135d2ecc07085a8b7c5925a36c0a",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:45.225783",
+      "vt_found": true,
+      "malicious_count": 63,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 9,
+      "total_engines": 77,
+      "first_seen": 1507844740,
+      "last_seen": 1743890178,
+      "reputation": -358,
+      "names": [
+        "16070014b86f2254dcf273bbce78fb6eca43df9a6fc3c6ab85ec8f06a4063b06.bin.sample",
+        "ff.exe",
+        "4a49135d2ecc07085a8b7c5925a36c0a.virus",
+        "localfile~",
+        "979b4d81aae6f2f0b1b997d81e242c6cf908fad1",
+        "16070014B86F2254DCF273BBCE78FB6ECA43DF9A6FC3C6AB85EC8F06A4063B06",
+        "4a49135d2ecc07085a8b7c5925a36c0a"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1380864,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "4a49135d2ecc07085a8b7c5925a36c0a",
+        "sha1": "949da212307259f53b17eb19b353e7c1051fba82",
+        "sha256": "16070014b86f2254dcf273bbce78fb6eca43df9a6fc3c6ab85ec8f06a4063b06",
+        "ssdeep": "24576:T69osJP2l89UWjbr1X+EdJF377v8PyLka32yE2yQcKimHKfkiycMSR0:m91I8tdJDFL7v4yLkEcTQ5XKfkPch0",
+        "tlsh": "T1FD5523726A500A15F3984FB5454AF6E409093D7093A42A8FF0BEBDB2F5725938F7B01E",
+        "vhash": "0160467d557551z53z40010171z1gz12fz",
+        "pe_info": {
+          "timestamp": 1476446420,
+          "imphash": "e2916e61cf628d68810ab9d391b657f4",
+          "machine_type": 332,
+          "entry_point": 44644,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 426.57,
+              "filetype": "unknown",
+              "entropy": 7.997948169708252,
+              "sha256": "7ecfa6fe0f44e368c7a1a761a9be224e242d5e9a952db2295fe0f7275e61140e",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 397.52,
+              "filetype": "unknown",
+              "entropy": 7.998037815093994,
+              "sha256": "e1e0b87698035dd3269472546e5005b3ddb28bf5a6a7fc92d8fc8668578d162b",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 340.26,
+              "filetype": "unknown",
+              "entropy": 7.9983229637146,
+              "sha256": "d04d526a610ad1ce3bf9834e290edfe318e0ec576a670fd659e09643b189ee7a",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 408.26,
+              "filetype": "unknown",
+              "entropy": 7.998012542724609,
+              "sha256": "a9039a89cca8b5ab2777089e96615270edfa86776a7aefd81ee87dc646da348c",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 397.3,
+              "filetype": "unknown",
+              "entropy": 7.998340129852295,
+              "sha256": "591c6085a15c1752f6a88a0f3113dc04b51989a95e06397fd099e8f64b3543cf",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 349.97,
+              "filetype": "unknown",
+              "entropy": 7.998521327972412,
+              "sha256": "1ccf4033f2770073aa02687b5adaa9e2560ff3817fa9b78b92f5ceec06e96bd0",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 365.81,
+              "filetype": "unknown",
+              "entropy": 7.998467922210693,
+              "sha256": "b3801116cbfd98f830a337e272ed7868d8a96eae52250b064139a18c898a801f",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 377.49,
+              "filetype": "unknown",
+              "entropy": 7.998432159423828,
+              "sha256": "42b28c3725125c6c5da4d8a89e36a21d9fac634bc179701871150ba71d2762bd",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 37274.06,
+              "filetype": "unknown",
+              "entropy": 2.9067046642303467,
+              "sha256": "aec1aa9d3771941bebfa03c1c5b72f175d3d496a93c0899290ac228ddc8fe841",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 21213.19,
+              "filetype": "unknown",
+              "entropy": 2.566765546798706,
+              "sha256": "c611fb6b15ae7939ecbe1d7663a795f466f075cc39c8fbdee46fb7c5e9c46c6e",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 142006.42,
+              "filetype": "unknown",
+              "entropy": 4.35477876663208,
+              "sha256": "0a4938500c6f3d33430c7fed3c2271a78b34ee727a78475eb6d1a435f4a00bdb",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 58818.0,
+              "filetype": "unknown",
+              "entropy": 5.175014019012451,
+              "sha256": "2ae3c5d4d767d49adf27595ac6e6c282cba327b4cdb89f9dc2a735c314eb7d18",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 132448.34,
+              "filetype": "unknown",
+              "entropy": 3.477484941482544,
+              "sha256": "b1f2927559496473b1bd7ca8d8cb21b67e56eefa87fc06945eba67c71d268645",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 727625.62,
+              "filetype": "unknown",
+              "entropy": 2.831557273864746,
+              "sha256": "10f2dfcb31c0f0816447923633e79ef4ff7ca1bf89d5f6984e4cce62615ea729",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 277938.62,
+              "filetype": "unknown",
+              "entropy": 3.441967725753784,
+              "sha256": "aec3c266b0f119a982069893611ffd2cdd271fdbcf915b17fdf9b00d445676c9",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 52035.11,
+              "filetype": "unknown",
+              "entropy": 4.058734893798828,
+              "sha256": "7ad7dd241cc84dad41c3f1ee55c9272bd835e6172e6144423af4be38ce3fe2a1",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 8017.59,
+              "filetype": "ICO",
+              "entropy": 2.811582565307617,
+              "sha256": "0f8e66b41e930335fa661b03299b12d6e7d8f04e7e35a117cb6966b9d1258497",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 7649.37,
+              "filetype": "XML",
+              "entropy": 4.888586521148682,
+              "sha256": "e2579b41e66b855a24d9d147d91dfacf031f1097dc10a8c8481958d236e2c7a5",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 18
+          },
+          "resource_types": {
+            "RT_BITMAP": 8,
+            "RT_GROUP_ICON": 1,
+            "RT_MANIFEST": 1,
+            "RT_ICON": 8
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 440093.47,
+              "virtual_address": 4096,
+              "entropy": 7.35,
+              "raw_size": 122880,
+              "flags": "rx",
+              "virtual_size": 122880,
+              "md5": "4bc69458238c1b6a08822ca4b300cc65"
+            },
+            {
+              "name": ".data",
+              "chi2": 324391.12,
+              "virtual_address": 126976,
+              "entropy": 4.87,
+              "raw_size": 5120,
+              "flags": "rw",
+              "virtual_size": 8192,
+              "md5": "6c568a52811ee4f6da3ed0cc1899c0f3"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 29181.21,
+              "virtual_address": 135168,
+              "entropy": 7.99,
+              "raw_size": 1250816,
+              "flags": "r",
+              "virtual_size": 1250600,
+              "md5": "498d868e15fcde79aadd90e13ed0ce6b"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 29264.0,
+              "virtual_address": 1388544,
+              "entropy": 5.29,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 4096,
+              "md5": "6bb00332798b1d3fc31e566c6135a802"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2005 build 50727 count=2",
+            "[C++] VS2005 build 50727 count=16",
+            "[---] Unmarked objects count=133",
+            "[ASM] VS2005 build 50727 count=12",
+            "[ C ] VS2005 build 50727 count=88",
+            "[RES] VS2005 build 50727 count=1",
+            "[LNK] VS2005 build 50727 count=1",
+            "id: 0x13, version: 9049 count=11",
+            "id: 0x7e, version: 50727 count=1"
+          ],
+          "rich_pe_header_hash": "e3d53ccbede382437e91080ef5ab5e4a",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "ExitProcess",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetModuleHandleA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsBadReadPtr",
+                "QueryPerformanceCounter",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc"
+              ]
+            },
+            {
+              "library_name": "GDI32.dll",
+              "imported_functions": [
+                "BitBlt",
+                "CreateCompatibleBitmap",
+                "CreateCompatibleDC",
+                "SelectObject"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "BeginPaint",
+                "CreateWindowExW",
+                "DefWindowProcW",
+                "DispatchMessageW",
+                "EndPaint",
+                "GetDC",
+                "GetMessageW",
+                "GetSystemMetrics",
+                "LoadBitmapW",
+                "LoadCursorW",
+                "MoveWindow",
+                "PostQuitMessage",
+                "RegisterClassExW",
+                "ReleaseDC",
+                "SendMessageW",
+                "ShowWindow",
+                "TranslateMessage",
+                "UpdateWindow"
+              ]
+            },
+            {
+              "library_name": "msvcrt.dll",
+              "imported_functions": [
+                "?terminate@@YAXXZ",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "__wgetmainargs",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_cexit",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_snwprintf",
+                "_wcsicmp",
+                "_wcsnicmp",
+                "_XcptFilter",
+                "exit",
+                "memcpy",
+                "memset",
+                "wcsncat",
+                "wcsncpy",
+                "wcsrchr"
+              ]
+            },
+            {
+              "library_name": "ntdll.dll",
+              "imported_functions": [
+                "RtlUnwind"
+              ]
+            },
+            {
+              "library_name": "COMCTL32.dll",
+              "imported_functions": [
+                "CreateToolbarEx",
+                "ImageList_Add",
+                "ImageList_Create",
+                "ImageList_Destroy",
+                "InitCommonControlsEx"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "detect-debug-environment",
+          "persistence",
+          "checks-user-input",
+          "peexe",
+          "checks-disk-space"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.finspy/finfish",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 34
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "finspy",
+              "count": 14
+            },
+            {
+              "value": "finfish",
+              "count": 10
+            },
+            {
+              "value": "bkdr",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 68,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250405",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250405",
+            "category": "malicious",
+            "result": "Trojan.Win32.Finfish.toZr"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.200",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250405",
+            "category": "malicious",
+            "result": "Gen:Variant.Backdoor.FinSpy.3"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250405",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250404",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1726711934a36c0a"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250405",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.IStartSurf.tc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250405",
+            "category": "malicious",
+            "result": "Backdoor.Finfish.gen"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250404",
+            "category": "malicious",
+            "result": "Gen:Variant.Backdoor.FinSpy.3"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://89.45.67.107",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:45.828143",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1507837698,
+      "last_seen": 1754947075,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "command and control",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "travel"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1692282847,
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/89.45.67.107/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/89.45.67.107\n\nPostal Code: 1000",
+            "severity": "low",
+            "title": "BlackOasis"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://89.45.67.107/rss/5uzosoff0u.iaf",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:46.392664",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 7,
+      "total_engines": 72,
+      "first_seen": 1507819821,
+      "last_seen": 1736773850,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Netcraft": {
+            "method": "blacklist",
+            "engine_name": "Netcraft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Forcepoint ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "CRDF": {
+            "method": "blacklist",
+            "engine_name": "CRDF",
+            "category": "malicious",
+            "result": "malicious"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://89.45.67.107/rss/mo.exe",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:46.955418",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 18,
+      "total_engines": 91,
+      "first_seen": 1507819456,
+      "last_seen": 1706426235,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "Sophos": "command and control",
+          "Forcepoint ThreatSeeker": "travel",
+          "Webroot": "Malware Sites"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1692282846,
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/http://89.45.67.107/rss/mo.exe/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/http://89.45.67.107/rss/mo.exe\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "title": "BlackOasis"
+          }
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://helpx.adobe.com/security/products/flash-player/apsb17-32.html",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:47.598436",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1508198478,
+      "last_seen": 1753481446,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "external-resources",
+          "iframes"
+        ],
+        "categories": {
+          "BitDefender": "business",
+          "Xcitium Verdict Cloud": "computing & technology",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV170018",
+        "sources": [
+          "https://securelist.com/blackoasis-apt-and-new-targeted-attacks-leveraging-zero-day-exploit/82732/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:48.129474",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 8,
+      "total_engines": 72,
+      "first_seen": 1578796868,
+      "last_seen": 1579220318,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Netcraft": {
+            "method": "blacklist",
+            "engine_name": "Netcraft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Forcepoint ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CRDF": {
+            "method": "blacklist",
+            "engine_name": "CRDF",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.youtube.com/watch?v=JS4tbSWQb90&width=640&height=360",
+        "sources": [
+          "https://securelist.com/apt-trends-report-q2-2017/79332/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:21:48.698641",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 8,
+      "total_engines": 72,
+      "first_seen": 1578789881,
+      "last_seen": 1579219211,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Netcraft": {
+            "method": "blacklist",
+            "engine_name": "Netcraft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Forcepoint ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CRDF": {
+            "method": "blacklist",
+            "engine_name": "CRDF",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    }
+  ]
+}

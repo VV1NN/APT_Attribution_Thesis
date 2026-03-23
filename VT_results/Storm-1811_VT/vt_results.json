@@ -1,0 +1,5284 @@
+{
+  "organization": "Storm-1811",
+  "scan_time": "2025-08-31T22:50:33.535473",
+  "statistics": {
+    "total_iocs": 45,
+    "processed": 45,
+    "found_in_vt": 42,
+    "malicious": 29,
+    "suspicious": 2,
+    "harmless": 6,
+    "errors": 3
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "15.235.218.150",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:00.707225",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 62,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756372991,
+      "reputation": -2,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "15.235.0.0/16",
+        "asn": 16276,
+        "as_owner": "OVH SAS",
+        "country": "SG",
+        "continent": "AS",
+        "regional_internet_registry": "APNIC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "CN": "AnyNet Root CA 2",
+          "O": "philandro Software GmbH",
+          "C": "DE"
+        },
+        "subject": {
+          "CN": "AnyNet Relay",
+          "O": "philandro Software GmbH",
+          "C": "DE"
+        },
+        "validity": {
+          "not_after": "2029-02-24 21:07:28",
+          "not_before": "2019-02-27 21:07:28"
+        },
+        "version": "V1",
+        "serial_number": "a38ef91fe779419d",
+        "thumbprint": "99a26bf32c7d1982d5705dc664a35a3be488bd4c",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "EC",
+          "ec": {
+            "oid": "secp256r1",
+            "pub": "3059301306072a8648ce3d020106082a8648ce3d03010703420004568b2cab4b0ce10f1c31572d41aa8e0796fdbb3b033f1ccba0e8464a3b5604027e8c2d4decdc6c50f1598ba3587be506357483370798b918b25551f65942dcd9"
+          }
+        },
+        "jarm": "07d3fd16d00000000042d3fd07d41dcd7a385e47cf4e00b8dd12b7bb3e094c"
+      },
+      "whois_info": "inetnum: 15.0.0.0 - 15.255.255.255\nnetname: IANA-NETBLOCK-15\ndescr: This network range is not allocated to APNIC.\ndescr:\ndescr: If your whois search has returned this message, then you have\ndescr: searched the APNIC whois database for an address that is\ndescr: allocated by another Regional Internet Registry (RIR).\ndescr:\ndescr: Please search the other RIRs at whois.arin.net or whois.ripe.net\ndescr: for more information about that range.\ncountry: AU\nadmin-c: IANA1-AP\ntech-c: IANA1-AP\nremarks: For general info on spam complaints email spam@apnic.net.\nremarks: For general info on hacking & abuse complaints email abuse@apnic.net.\nmnt-by: MAINT-APNIC-AP\nmnt-lower: MAINT-APNIC-AP\nstatus: ALLOCATED PORTABLE\nlast-modified: 2008-09-04T06:51:28Z\nsource: APNIC\nrole: Internet Assigned Numbers Authority\naddress: see http://www.iana.org.\nadmin-c: IANA1-AP\ntech-c: IANA1-AP\nnic-hdl: IANA1-AP\nremarks: For more information on IANA services\nremarks: go to IANA web site at http://www.iana.org.\nmnt-by: MAINT-APNIC-AP\nlast-modified: 2018-06-22T22:34:30Z\nsource: APNIC\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "195.123.233.42",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:01.326425",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756269111,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "195.123.232.0/21",
+        "asn": 204957,
+        "as_owner": "Green Floid LLC",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "Let's Encrypt Authority X3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "watotomemphis.com"
+        },
+        "validity": {
+          "not_after": "2021-02-22 02:47:18",
+          "not_before": "2020-11-24 02:47:18"
+        },
+        "version": "V3",
+        "serial_number": "3d721b0556916341132fdd331e1d0dd2a19",
+        "thumbprint": "d362261b718b5ef901a1309f39fd0667852f1383",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 4096,
+            "modulus": "00c48f24c9740004a0a87a983c9dcc9a8702301d8e638120cda8cc2e38b6bebe6b831475bf27d35b282e6ef973050ee3253cb3b6d8d3e2ade9abb32dbfb4666137497516a5913c8ae20a36c2e3840610f777d265ad3be0cbc79e157ef2e49fde39f6604406a96ce7ba5793e43e21122abd60aaba7345764ee85daf33d6c2885dc3917edbc539620b2aba36b5a6f61f21254b4150c83de435c7edfb66e3fb089287a36b4d95207dea165b8c6658a94db6d2226782f275eb2365c95a657011b051e083018e1c3525679747a1ceeb7e99ab1e14ead223e6d39f75b5e43bdff7c2c1c3b5a736439cebe6287894959d6bb77d0030385c8c339e02b53e31de7f96c0122afdd29bf5b61671b0bf6f1b692aea837a29ba44ba3abcc6a9a8a7e7b39715b160817cbee65cede23cdbf014d67dcd576e474782b442c4c44a73b838f160f2e1cd6506c938a47100f646837a34f650af0e5833b2375b0bd3a6321036c45677df0f5c543ad7db38a04b6c2ab642da296ca0d813e039ab7d7ba4c0b21afd63e62f1a31354e9b0af9631ccd6298415a42ae812190ed3484462d1cfb545084979a84a18b50080b804f109ae06620995716f2df545ec4486c9fc6291552d627cefa5ea17fe1190aeea389be43f621db17ca6e99c550b002867ebabfa91608028b154c39388a21df9b3cb673cae51d0a966b04a619e1d6e5fccc1cc022886746e5b7f2ff",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "3fd3fd15d3fd3fd0003fd3fd3fd3fd702ac1a9ea65e9f562ea5c694b57d82a"
+      },
+      "whois_info": "NetRange: 195.0.0.0 - 195.255.255.255\nCIDR: 195.0.0.0/8\nNetName: RIPE-CBLK3\nNetHandle: NET-195-0-0-0-1\nParent: ()\nNetType: Allocated to RIPE NCC\nOriginAS: \nOrganization: RIPE Network Coordination Centre (RIPE)\nRegDate: 1996-03-25\nUpdated: 2025-02-10\nComment: These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.\nRef: https://rdap.arin.net/registry/ip/195.0.0.0\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nResourceLink: whois.ripe.net\nOrgName: RIPE Network Coordination Centre\nOrgId: RIPE\nAddress: P.O. Box 10096\nCity: Amsterdam\nStateProv: \nPostalCode: 1001EB\nCountry: NL\nRegDate: \nUpdated: 2013-07-29\nRef: https://rdap.arin.net/registry/entity/RIPE\nReferralServer: whois.ripe.net\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nOrgAbuseHandle: ABUSE3850-ARIN\nOrgAbuseName: Abuse Contact\nOrgAbusePhone: +31205354444 \nOrgAbuseEmail: abuse@ripe.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE3850-ARIN\nOrgTechHandle: RNO29-ARIN\nOrgTechName: RIPE NCC Operations\nOrgTechPhone: +31 20 535 4444 \nOrgTechEmail: hostmaster@ripe.net\nOrgTechRef: https://rdap.arin.net/registry/entity/RNO29-ARIN\nRTechHandle: RIPE-NCC-ARIN\nRTechName: RIPE NCC Hostmaster\nRTechPhone: +31 20 535 4444 \nRTechEmail: search-ripe-ncc-not-arin@ripe.net\nRTechRef: https://rdap.arin.net/registry/entity/RIPE-NCC-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "195.123.233.55",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:01.940732",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 1,
+      "harmless_count": 57,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756640638,
+      "reputation": -2,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "195.123.232.0/21",
+        "asn": 204957,
+        "as_owner": "Green Floid LLC",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Let's Encrypt",
+          "CN": "E6"
+        },
+        "subject": {
+          "CN": "hid-usa.toptraffic.ru"
+        },
+        "validity": {
+          "not_after": "2025-10-16 21:30:17",
+          "not_before": "2025-07-18 21:30:18"
+        },
+        "version": "V3",
+        "serial_number": "5d7b5936a5c226f1c4a408fb8d5ac45e59a",
+        "thumbprint": "b5230ea60ae0cbeba73f25cc0956cdf1c692a372",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "EC",
+          "ec": {
+            "oid": "secp256r1",
+            "pub": "3059301306072a8648ce3d020106082a8648ce3d0301070342000428229b9b758330bc817af9f58793f89920b4ecc58014fc4fa54e6dd31e78b21d8bd1b5931150db821991fa977b23cf68bf66d11c57cef5068e48e470d3d65039"
+          }
+        },
+        "jarm": "28d28d28d00028d00042d42d0000005a3e96c1dfa4bdb24b8b3c04cae18cc3"
+      },
+      "whois_info": "NetRange: 195.0.0.0 - 195.255.255.255\nCIDR: 195.0.0.0/8\nNetName: RIPE-CBLK3\nNetHandle: NET-195-0-0-0-1\nParent: ()\nNetType: Allocated to RIPE NCC\nOriginAS: \nOrganization: RIPE Network Coordination Centre (RIPE)\nRegDate: 1996-03-25\nUpdated: 2025-02-10\nComment: These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.\nRef: https://rdap.arin.net/registry/ip/195.0.0.0\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nResourceLink: whois.ripe.net\nOrgName: RIPE Network Coordination Centre\nOrgId: RIPE\nAddress: P.O. Box 10096\nCity: Amsterdam\nStateProv: \nPostalCode: 1001EB\nCountry: NL\nRegDate: \nUpdated: 2013-07-29\nRef: https://rdap.arin.net/registry/entity/RIPE\nReferralServer: whois.ripe.net\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nOrgAbuseHandle: ABUSE3850-ARIN\nOrgAbuseName: Abuse Contact\nOrgAbusePhone: +31205354444 \nOrgAbuseEmail: abuse@ripe.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE3850-ARIN\nOrgTechHandle: RNO29-ARIN\nOrgTechName: RIPE NCC Operations\nOrgTechPhone: +31 20 535 4444 \nOrgTechEmail: hostmaster@ripe.net\nOrgTechRef: https://rdap.arin.net/registry/entity/RNO29-ARIN\nRTechHandle: RIPE-NCC-ARIN\nRTechName: RIPE NCC Hostmaster\nRTechPhone: +31 20 535 4444 \nRTechEmail: search-ripe-ncc-not-arin@ripe.net\nRTechRef: https://rdap.arin.net/registry/entity/RIPE-NCC-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "20.115.96.90",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:02.623011",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756417695,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "20.64.0.0/10",
+        "asn": 8075,
+        "as_owner": "MICROSOFT-CORP-MSN-AS-BLOCK",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "NetRange: 20.33.0.0 - 20.128.255.255\nCIDR: 20.33.0.0/16, 20.40.0.0/13, 20.34.0.0/15, 20.128.0.0/16, 20.48.0.0/12, 20.64.0.0/10, 20.36.0.0/14\nNetName: MSFT\nNetHandle: NET-20-33-0-0-1\nParent: NET20 (NET-20-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Microsoft Corporation (MSFT)\nRegDate: 2017-10-18\nUpdated: 2021-12-14\nRef: https://rdap.arin.net/registry/ip/20.33.0.0\nOrgName: Microsoft Corporation\nOrgId: MSFT\nAddress: One Microsoft Way\nCity: Redmond\nStateProv: WA\nPostalCode: 98052\nCountry: US\nRegDate: 1998-07-10\nUpdated: 2025-06-10\nComment: To report suspected security issues specific to traffic emanating from Microsoft online services, including the distribution of malicious content or other illicit or illegal material through a Microsoft online service, please submit reports to:\r\nComment: * https://cert.microsoft.com. \r\nComment: \r\nComment: For SPAM and other abuse issues, such as Microsoft Accounts, please contact:\r\nComment: * abuse@microsoft.com. \r\nComment: \r\nComment: To report security vulnerabilities in Microsoft products and services, please contact:\r\nComment: * secure@microsoft.com. \r\nComment: \r\nComment: For legal and law enforcement-related requests, please contact:\r\nComment: * msndcc@microsoft.com\r\nComment: \r\nComment: For routing, peering or DNS issues, please \r\nComment: contact:\r\nComment: * IOC@microsoft.com\nRef: https://rdap.arin.net/registry/entity/MSFT\nOrgAbuseHandle: MAC74-ARIN\nOrgAbuseName: Microsoft Abuse Contact\nOrgAbusePhone: +1-425-882-8080 \nOrgAbuseEmail: abuse@microsoft.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/MAC74-ARIN\nOrgRoutingHandle: CHATU3-ARIN\nOrgRoutingName: Chaturmohta, Somesh \nOrgRoutingPhone: +1-425-882-8080 \nOrgRoutingEmail: someshch@microsoft.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/CHATU3-ARIN\nOrgTechHandle: MRPD-ARIN\nOrgTechName: Microsoft Routing, Peering, and DNS\nOrgTechPhone: +1-425-882-8080 \nOrgTechEmail: IOC@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/MRPD-ARIN\nOrgTechHandle: BEDAR6-ARIN\nOrgTechName: Bedard, Dawn \nOrgTechPhone: +1-425-538-6637 \nOrgTechEmail: dabedard@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/BEDAR6-ARIN\nOrgTechHandle: IPHOS5-ARIN\nOrgTechName: IPHostmaster, IPHostmaster \nOrgTechPhone: +1-425-538-6637 \nOrgTechEmail: iphostmaster@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/IPHOS5-ARIN\nOrgTechHandle: SINGH683-ARIN\nOrgTechName: Singh, Prachi \nOrgTechPhone: +1-425-707-5601 \nOrgTechEmail: pracsin@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/SINGH683-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "38.180.142.249",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:03.347166",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756600688,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "38.180.142.0/24",
+        "asn": 29802,
+        "as_owner": "HVC-AS",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "PSINet, Inc. COGENT-A (NET-38-0-0-0-1) 38.0.0.0 - 38.255.255.255\n3NT SOLUTIONS LLP 3NT-CGNT-NET-1 (NET-38-180-0-0-1) 38.180.0.0 - 38.180.255.255\n3NT SOLUTIONS LLP CLOUD-NETWORK-US (NET-38-180-142-0-1) 38.180.142.0 - 38.180.142.255\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "5.161.245.155",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:04.011699",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 57,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756269288,
+      "reputation": -29,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "5.161.0.0/16",
+        "asn": 213230,
+        "as_owner": "Hetzner Online GmbH",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "CN": "TRAEFIK DEFAULT CERT"
+        },
+        "subject": {
+          "CN": "TRAEFIK DEFAULT CERT"
+        },
+        "validity": {
+          "not_after": "2026-08-04 11:30:19",
+          "not_before": "2025-08-04 11:30:19"
+        },
+        "version": "V3",
+        "serial_number": "3e8924b471e71302eae4c388a82d7298",
+        "thumbprint": "c462c0604ff0b8744d75f23a23c6773ef6cd6e1f",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "a320f4f5cc0d6687a2f3d4fa0ba032dc7f6a4d291de1d6f49c25f90775c0d6e09728dc97f7589912839c1b8f5b1ac51de38999fc393403e4a3f17ff7b6d9be0ccaa8585187419d41a66ebff7553ea95dc890aa24391ee405dc02adaa1be3ddb9be1b5132ea836cc8c250bcabb0a56c00919ce90173f65d0d661ab907c97b324a9ecdc94786e87f7f257a9fbbd290ba4508b5d1c7dcfaff64d96d99db91b3193a7004a2d2841fc982006b26f9a39e6f187e90e42ddb9c7d55ca03d485147ff5564c6d0a03e1e1e3b5ab2c68850bcc04170611f51270133931dd387aa4b0b00d9b42f7666a412a71d6e1e859dfc3a6499c275966d4a88d99c64ba45d96ffe30571",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6"
+      },
+      "whois_info": "NetRange: 5.0.0.0 - 5.255.255.255\nCIDR: 5.0.0.0/8\nNetName: RIPE-5\nNetHandle: NET-5-0-0-0-1\nParent: ()\nNetType: Allocated to RIPE NCC\nOriginAS: \nOrganization: RIPE Network Coordination Centre (RIPE)\nRegDate: 2010-11-30\nUpdated: 2025-02-10\nComment: These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.\nRef: https://rdap.arin.net/registry/ip/5.0.0.0\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nResourceLink: whois.ripe.net\nOrgName: RIPE Network Coordination Centre\nOrgId: RIPE\nAddress: P.O. Box 10096\nCity: Amsterdam\nStateProv: \nPostalCode: 1001EB\nCountry: NL\nRegDate: \nUpdated: 2013-07-29\nRef: https://rdap.arin.net/registry/entity/RIPE\nReferralServer: whois.ripe.net\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nOrgAbuseHandle: ABUSE3850-ARIN\nOrgAbuseName: Abuse Contact\nOrgAbusePhone: +31205354444 \nOrgAbuseEmail: abuse@ripe.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE3850-ARIN\nOrgTechHandle: RNO29-ARIN\nOrgTechName: RIPE NCC Operations\nOrgTechPhone: +31 20 535 4444 \nOrgTechEmail: hostmaster@ripe.net\nOrgTechRef: https://rdap.arin.net/registry/entity/RNO29-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "self-signed"
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "77.246.101.135",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:04.818635",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756269103,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "77.246.96.0/20",
+        "asn": 216071,
+        "as_owner": "Servers Tech Fzco",
+        "country": "NL",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 77.246.101.0 - 77.246.101.255\nnetname: VDSINA\ncountry: NL\ngeoloc: 52.309711 4.935438\ndescr: Amsterdam, Netherlands\ngeofeed: https://vdsina.com/geofeed_as216071.csv\norg: ORG-STF2-RIPE\nadmin-c: SK15998-RIPE\ntech-c: SK15998-RIPE\nstatus: ASSIGNED PA\nmnt-by: vdsina-mnt\ncreated: 2023-03-01T07:27:57Z\nlast-modified: 2024-01-24T16:08:16Z\nsource: RIPE\norganisation: ORG-STF2-RIPE\norg-name: SERVERS TECH FZCO\ncountry: AE\norg-type: LIR\naddress: Ifza Business Park DDP, Building 1, office number 36298-001\naddress: 336469\naddress: Dubai\naddress: UNITED ARAB EMIRATES\nphone: +971525386329\nadmin-c: SK15998-RIPE\ntech-c: SK15998-RIPE\nabuse-c: AR72995-RIPE\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: servers-tech-mnt\ncreated: 2023-10-25T09:55:19Z\nlast-modified: 2024-01-22T19:59:59Z\nsource: RIPE # Filtered\nmnt-ref: servers-tech-mnt\nrole: SERVERS TECH FZCO\naddress: UNITED ARAB EMIRATES\naddress: Dubai\naddress: 336469\naddress: Ifza Business Park DDP, Building 1, office number 36298-001\nnic-hdl: SK15998-RIPE\nmnt-by: lir-ae-servers-tech-1-MNT\ncreated: 2023-10-25T09:55:18Z\nlast-modified: 2024-07-10T12:05:37Z\nsource: RIPE # Filtered\nroute: 77.246.101.0/24\norigin: AS216071\nmnt-by: servers-tech-mnt\ncreated: 2023-11-13T08:10:29Z\nlast-modified: 2023-11-13T08:10:29Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "91.90.195.52",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:05.495354",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756417696,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "91.90.195.0/24",
+        "asn": 204957,
+        "as_owner": "Green Floid LLC",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "chat.youtube-busines.com"
+        },
+        "validity": {
+          "not_after": "2022-12-27 15:10:14",
+          "not_before": "2022-09-28 15:10:15"
+        },
+        "version": "V3",
+        "serial_number": "032d8e14c82d97d8ea796073ca5a7e33146f",
+        "thumbprint": "14dcf49c56d528db2cb90b1feedae4f704a89887",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00d433b1988cb7f76771ac5b11e4058bdf785daffeb5c3fad181ac4d5e1d4d626786045298245ee8c40fd264320a2ef71bf2f11e4287aeb12eb68ee133dda6ea7898ce10f44c86f253db10cd0462506ac9ae8278d2288f957087fb0aaeda3d366f62f9fad038a3afc9b34d360eb324e7179bf6d937d635d9fdf58465c018a296402f8d45f07aee4c9149a20b8d40bf0952866b83f490f9b66948f0d42e36018f216a160a002bda1099be19288f5506ab5d6858a3c906425393a0547cedecd0335b5267c99953f43faf8234d993c71f29d015c2257f7411affb7aa8341653594ba5fb86a918f51efbb89feda9c48901b01d29092fd36a2ac83e5b428faa65f0f5e5",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "3fd3fd0003fd3fd21c42d42d000000307ee0eb468e9fdb5cfcd698a80a67ef"
+      },
+      "whois_info": "NetRange: 91.0.0.0 - 91.255.255.255\nCIDR: 91.0.0.0/8\nNetName: 91-RIPE\nNetHandle: NET-91-0-0-0-1\nParent: ()\nNetType: Allocated to RIPE NCC\nOriginAS: \nOrganization: RIPE Network Coordination Centre (RIPE)\nRegDate: 2005-06-30\nUpdated: 2025-02-10\nComment: These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.\nRef: https://rdap.arin.net/registry/ip/91.0.0.0\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nResourceLink: whois.ripe.net\nOrgName: RIPE Network Coordination Centre\nOrgId: RIPE\nAddress: P.O. Box 10096\nCity: Amsterdam\nStateProv: \nPostalCode: 1001EB\nCountry: NL\nRegDate: \nUpdated: 2013-07-29\nRef: https://rdap.arin.net/registry/entity/RIPE\nReferralServer: whois.ripe.net\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nOrgTechHandle: RNO29-ARIN\nOrgTechName: RIPE NCC Operations\nOrgTechPhone: +31 20 535 4444 \nOrgTechEmail: hostmaster@ripe.net\nOrgTechRef: https://rdap.arin.net/registry/entity/RNO29-ARIN\nOrgAbuseHandle: ABUSE3850-ARIN\nOrgAbuseName: Abuse Contact\nOrgAbusePhone: +31205354444 \nOrgAbuseEmail: abuse@ripe.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE3850-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "0f9156f91c387e7781603ed716dcdc3f5342ece96e155115708b1662b0f9b4d0",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:06.458222",
+      "vt_found": true,
+      "malicious_count": 20,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 43,
+      "total_engines": 77,
+      "first_seen": 1714080514,
+      "last_seen": 1754463262,
+      "reputation": 0,
+      "names": [
+        "a.bat"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 253,
+        "type_description": "DOS batch file",
+        "magic": "DOS batch file, ASCII text, with CRLF line terminators",
+        "md5": "01a6490c66c026f75051642382d47d62",
+        "sha1": "3531adb13fd2ac77bfb8bbba53994805913ffd9b",
+        "sha256": "0f9156f91c387e7781603ed716dcdc3f5342ece96e155115708b1662b0f9b4d0",
+        "ssdeep": "6:hYvMqGsLGaFY6DFNen/wKfUI4K6fR68rpW4Vi4YRzJFI240Rgv:WLGaFBzen/wKfU/Z68wCc050Rgv",
+        "tlsh": "T1CED0A71E202680B02F190FD9F9ADEB9DF83650450A4DBDF590C200B56943C7071EFD9C"
+      },
+      "additional_details": {
+        "tags": [
+          "bat"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 8,
+              "value": "trojan"
+            },
+            {
+              "count": 7,
+              "value": "downloader"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "dllinject"
+            },
+            {
+              "count": 2,
+              "value": "vsnw10e24"
+            }
+          ],
+          "suggested_threat_label": "trojan.dllinject/vsnw10e24"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20240918",
+            "category": "malicious",
+            "result": "Trojan.Script.DllInject.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20240918",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20240918",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.1.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240918",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240917",
+            "category": "malicious",
+            "result": "BAT/Downloader.gen.f"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240917",
+            "category": "malicious",
+            "result": "BAT/Downloader.gen.f"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240918",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1ad05a4a849d7ed09e2efb38f5424523651baf3326b5f95e05f6726f564ccc30",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:07.229795",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 62,
+      "total_engines": 76,
+      "first_seen": 1713987880,
+      "last_seen": 1754463473,
+      "reputation": 0,
+      "names": [
+        "u.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 4011923,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=AES Encrypted",
+        "md5": "696dc013b2d978bc100171496148db1b",
+        "sha1": "ae366b3c9338d1f96daf4f71cc95b0ea7d573fa0",
+        "sha256": "1ad05a4a849d7ed09e2efb38f5424523651baf3326b5f95e05f6726f564ccc30",
+        "ssdeep": "98304:TRlxUSXASm4jym2bbwHmvHF2okyFPh29Nb:nxXxjyKwqyTyb",
+        "tlsh": "T1F7063344B235BBE38761D89B5DAC38E6DD54B860AC15BB328ACC2E82D45EF5D44F023D",
+        "vhash": "663529776b175f99b2278dc622c6b6be"
+      },
+      "additional_details": {
+        "tags": [
+          "zip",
+          "encrypted"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250730",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5415",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1cb1864314262e71de1565e198193877ef83e98823a7da81eb3d59894b5a4cfb",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:09.126028",
+      "vt_found": true,
+      "malicious_count": 18,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 42,
+      "total_engines": 76,
+      "first_seen": 1715282781,
+      "last_seen": 1754463185,
+      "reputation": 0,
+      "names": [
+        "filtersinstall.bat"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 5638,
+        "type_description": "DOS batch file",
+        "magic": "DOS batch file, ASCII text, with CRLF line terminators",
+        "md5": "e1bcd15824471b3afc9981fd81bfdb98",
+        "sha1": "b24904a91d9c3ce2c6e4d506ca173f98bb5f7a0a",
+        "sha256": "1cb1864314262e71de1565e198193877ef83e98823a7da81eb3d59894b5a4cfb",
+        "ssdeep": "96:bQUIJQMMlTlEjqyoL1mGiQt/Yf5izYYe8sL7ymkmObzv5vCzNvCiJi9/JiGjZptm:kUIJQM+TlIMLsGnt/Yf5/h0zv27JGJ3Y",
+        "tlsh": "T100C17416BD9318B1DEA14710F1224581BB2DF1876F223CAA3363486C563B5E59B7D2CE"
+      },
+      "additional_details": {
+        "tags": [
+          "bat",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.dats",
+          "popular_threat_name": [
+            {
+              "value": "dats",
+              "count": 4
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 6
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 99
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Trojan.Script.Dats.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Application.Generic.3715526"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "batch.trojan.dats"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250730",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.zq"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Application.Generic.3715526"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Application.Generic.3715526"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "2ec12f4ee375087c921be72f3bd87e6e12a2394e8e747998676754c9e3e9798e",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:09.808797",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "35456f84bc88854f16e316290104d71a1f350e84b479eebd6fbb2f77d36bca8a",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:10.371350",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "59f1c5fe47c1733b84360a72e419a07315fbae895dd23c1e32f1392e67313859",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:11.018894",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "6f31cf7a11189c683d8455180b4ee6a60781d2e3f3aadf3ecc86f578d480cfa9",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:11.797190",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 72,
+      "total_engines": 76,
+      "first_seen": 1702940045,
+      "last_seen": 1756577443,
+      "reputation": 0,
+      "names": [
+        "sshd.exe",
+        "nck76.exe",
+        "is-CVIJT.tmp",
+        "master.exe",
+        "owsfr.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1343920,
+        "type_description": "Win32 EXE",
+        "magic": "PE32+ executable (console) x86-64, for MS Windows",
+        "md5": "6615ea2fa3b879d27687a7ce917e93b0",
+        "sha1": "8d4f19b221751297b0c3a10f105772d7286c9411",
+        "sha256": "6f31cf7a11189c683d8455180b4ee6a60781d2e3f3aadf3ecc86f578d480cfa9",
+        "ssdeep": "24576:1FbpQCgnGN1o4w+fkWq8tRluDV7e1WFu+dVVv9m6octogu9RyH:1LQCgnGN1PfkkgVi1OuCQ6octm6",
+        "tlsh": "T17D559E6566E500E8D5B7D074C68666A7FAF1B42013747EEF0DA89A222F33EE0133E715",
+        "vhash": "016076655d156515555293z22za3fz85z24z1d7z",
+        "pe_info": {
+          "timestamp": 1702485639,
+          "imphash": "f4b3fde8d45d3569d6514408e8b02df7",
+          "machine_type": 34404,
+          "entry_point": 760272,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 36075.91,
+              "filetype": "unknown",
+              "entropy": 3.2847182750701904,
+              "sha256": "fc6228c33955d0659fed679e479b5eeb0f100fd16d519c2f07ddcfe625958274",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 13476.1,
+              "filetype": "unknown",
+              "entropy": 5.194203853607178,
+              "sha256": "4458f8eb741d95ef6bf44900966b32499717021fa21e8a7df3d04460b91dc401",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 12131.8,
+            "filetype": "unknown",
+            "entropy": 7.488813877105713,
+            "offset": 1333760,
+            "md5": "d068fa0a15d40d005ab78985fcdc7a4b",
+            "size": 10160
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 6671778.0,
+              "virtual_address": 4096,
+              "entropy": 6.42,
+              "raw_size": 945664,
+              "flags": "rx",
+              "virtual_size": 945344,
+              "md5": "fd8d8bcb6d77f62f769e9231d50992d5"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 16526192.0,
+              "virtual_address": 950272,
+              "entropy": 4.94,
+              "raw_size": 336896,
+              "flags": "r",
+              "virtual_size": 336562,
+              "md5": "92f33dc69eee218b968f53db81303203"
+            },
+            {
+              "name": ".data",
+              "chi2": 950269.19,
+              "virtual_address": 1290240,
+              "entropy": 2.6,
+              "raw_size": 7680,
+              "flags": "rw",
+              "virtual_size": 157857,
+              "md5": "e993f89518ad6fb066db229a8c332095"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 683511.25,
+              "virtual_address": 1449984,
+              "entropy": 6.13,
+              "raw_size": 35840,
+              "flags": "r",
+              "virtual_size": 35724,
+              "md5": "4197b5dcb93ce251e9cac130e4d78b64"
+            },
+            {
+              "name": "_RDATA",
+              "chi2": 17152.0,
+              "virtual_address": 1486848,
+              "entropy": 4.16,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 512,
+              "md5": "f9b2791020a63e58e7deb3e96bd480db"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 60733.44,
+              "virtual_address": 1490944,
+              "entropy": 4.76,
+              "raw_size": 2560,
+              "flags": "r",
+              "virtual_size": 2216,
+              "md5": "8af17cb7d919c960acc7b84a222e6361"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 37613.59,
+              "virtual_address": 1495040,
+              "entropy": 5.17,
+              "raw_size": 3584,
+              "flags": "r",
+              "virtual_size": 3132,
+              "md5": "f81612657fa80554e70a62cdb11af934"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2022 v17.7.5 build 32825 count=3",
+            "[---] Unmarked objects count=432",
+            "[ C ] VS2022 v17.7.5 build 32825 count=8",
+            "[LTC] VS2022 v17.7.5 build 32825 count=160",
+            "[RES] VS2022 v17.7.5 build 32825 count=1",
+            "[---] Resource count=1",
+            "[LNK] VS2022 v17.7.5 build 32825 count=1",
+            "id: 0x105, version: 30795 count=219",
+            "id: 0xfd, version: 32533 count=6",
+            "id: 0x105, version: 32533 count=40",
+            "id: 0x104, version: 32533 count=18",
+            "id: 0x103, version: 32533 count=8",
+            "id: 0x103, version: 30795 count=9",
+            "id: 0x104, version: 30795 count=14",
+            "id: 0x101, version: 30795 count=16"
+          ],
+          "rich_pe_header_hash": "53f8cc4d95573bc399fdaaf8a6fd3055",
+          "import_list": [
+            {
+              "library_name": "libcrypto.dll",
+              "imported_functions": [
+                "AES_encrypt",
+                "AES_set_encrypt_key",
+                "arc4random_buf",
+                "arc4random_uniform",
+                "BIO_free",
+                "BIO_new",
+                "BIO_s_mem",
+                "BIO_write",
+                "BN_bin2bn",
+                "BN_bn2bin",
+                "BN_clear_free",
+                "BN_cmp",
+                "BN_CTX_free",
+                "BN_CTX_new",
+                "BN_div",
+                "BN_dup",
+                "BN_free",
+                "BN_hex2bn",
+                "BN_is_bit_set",
+                "BN_is_negative",
+                "BN_new",
+                "BN_num_bits",
+                "BN_set_flags",
+                "BN_set_word",
+                "BN_sub",
+                "BN_value_one",
+                "DH_compute_key",
+                "DH_free",
+                "DH_generate_key",
+                "DH_get0_key",
+                "DH_get0_pqg",
+                "DH_new",
+                "DH_set0_pqg",
+                "DH_set_length",
+                "DH_size",
+                "DSA_do_sign",
+                "DSA_do_verify",
+                "DSA_free",
+                "DSA_generate_key",
+                "DSA_generate_parameters_ex",
+                "DSA_get0_key",
+                "DSA_get0_pqg",
+                "DSA_new",
+                "DSA_set0_key",
+                "DSA_set0_pqg",
+                "DSA_SIG_free",
+                "DSA_SIG_get0",
+                "DSA_SIG_new",
+                "DSA_SIG_set0",
+                "EC_GROUP_cmp",
+                "EC_GROUP_free",
+                "EC_GROUP_get_curve_name",
+                "EC_GROUP_get_degree",
+                "EC_GROUP_get_order",
+                "EC_GROUP_method_of",
+                "EC_GROUP_new_by_curve_name",
+                "EC_GROUP_set_asn1_flag",
+                "EC_KEY_free",
+                "EC_KEY_generate_key",
+                "EC_KEY_get0_group",
+                "EC_KEY_get0_private_key",
+                "EC_KEY_get0_public_key",
+                "EC_KEY_new_by_curve_name",
+                "EC_KEY_set_asn1_flag",
+                "EC_KEY_set_group",
+                "EC_KEY_set_private_key",
+                "EC_KEY_set_public_key",
+                "EC_METHOD_get_field_type",
+                "EC_POINT_clear_free",
+                "EC_POINT_cmp",
+                "EC_POINT_free",
+                "EC_POINT_get_affine_coordinates_GFp",
+                "EC_POINT_is_at_infinity",
+                "EC_POINT_mul",
+                "EC_POINT_new",
+                "EC_POINT_oct2point",
+                "EC_POINT_point2oct",
+                "ECDH_compute_key",
+                "ECDSA_do_sign",
+                "ECDSA_do_verify",
+                "ECDSA_SIG_free",
+                "ECDSA_SIG_get0",
+                "ECDSA_SIG_new",
+                "ECDSA_SIG_set0",
+                "ERR_get_error",
+                "ERR_peek_error",
+                "ERR_peek_last_error",
+                "EVP_aes_128_cbc",
+                "EVP_aes_128_ctr",
+                "EVP_aes_128_gcm",
+                "EVP_aes_192_cbc",
+                "EVP_aes_192_ctr",
+                "EVP_aes_256_cbc",
+                "EVP_aes_256_ctr",
+                "EVP_aes_256_gcm",
+                "EVP_Cipher",
+                "EVP_CIPHER_CTX_ctrl",
+                "EVP_CIPHER_CTX_free",
+                "EVP_CIPHER_CTX_get_iv",
+                "EVP_CIPHER_CTX_iv_length",
+                "EVP_CIPHER_CTX_key_length",
+                "EVP_CIPHER_CTX_new",
+                "EVP_CIPHER_CTX_set_key_length",
+                "EVP_CipherInit",
+                "EVP_des_ede3_cbc",
+                "EVP_Digest",
+                "EVP_DigestFinal_ex",
+                "EVP_DigestInit_ex",
+                "EVP_DigestUpdate",
+                "EVP_md5",
+                "EVP_MD_block_size",
+                "EVP_MD_CTX_copy_ex",
+                "EVP_MD_CTX_free",
+                "EVP_MD_CTX_md",
+                "EVP_MD_CTX_new",
+                "EVP_PKEY_base_id",
+                "EVP_PKEY_free",
+                "EVP_PKEY_get1_DSA",
+                "EVP_PKEY_get1_EC_KEY",
+                "EVP_PKEY_get1_RSA",
+                "EVP_sha1",
+                "EVP_sha256",
+                "EVP_sha384",
+                "EVP_sha512",
+                "explicit_bzero",
+                "gettimeofday",
+                "OpenSSL_version",
+                "OpenSSL_version_num",
+                "PEM_read_bio_PrivateKey",
+                "RAND_bytes",
+                "RAND_poll",
+                "RAND_seed",
+                "RAND_status",
+                "RSA_blinding_on",
+                "RSA_free",
+                "RSA_generate_key_ex",
+                "RSA_get0_crt_params",
+                "RSA_get0_factors",
+                "RSA_get0_key",
+                "RSA_new",
+                "RSA_public_decrypt",
+                "RSA_set0_crt_params",
+                "RSA_set0_factors",
+                "RSA_set0_key",
+                "RSA_sign",
+                "RSA_size",
+                "timegm"
+              ]
+            },
+            {
+              "library_name": "USERENV.dll",
+              "imported_functions": [
+                "LoadUserProfileW"
+              ]
+            },
+            {
+              "library_name": "CRYPT32.dll",
+              "imported_functions": [
+                "CryptBinaryToStringA",
+                "CryptStringToBinaryA"
+              ]
+            },
+            {
+              "library_name": "WS2_32.dll",
+              "imported_functions": [
+                "bind",
+                "closesocket",
+                "FreeAddrInfoW",
+                "GetAddrInfoW",
+                "gethostname",
+                "getnameinfo",
+                "getpeername",
+                "getservbyname",
+                "getsockname",
+                "getsockopt",
+                "htonl",
+                "htons",
+                "inet_ntoa",
+                "inet_ntop",
+                "listen",
+                "ntohl",
+                "ntohs",
+                "setsockopt",
+                "shutdown",
+                "socket",
+                "WSACleanup",
+                "WSADuplicateSocketW",
+                "WSAGetLastError",
+                "WSAGetOverlappedResult",
+                "WSAIoctl",
+                "WSARecv",
+                "WSASend",
+                "WSASocketW",
+                "WSAStartup"
+              ]
+            },
+            {
+              "library_name": "Secur32.dll",
+              "imported_functions": [
+                "FreeContextBuffer",
+                "InitSecurityInterfaceW",
+                "LsaConnectUntrusted",
+                "LsaDeregisterLogonProcess",
+                "LsaFreeReturnBuffer",
+                "LsaLogonUser",
+                "LsaLookupAuthenticationPackage",
+                "LsaRegisterLogonProcess"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "AssignProcessToJobObject",
+                "Beep",
+                "CancelIo",
+                "CancelIoEx",
+                "CancelSynchronousIo",
+                "CancelWaitableTimer",
+                "CloseHandle",
+                "CompareStringW",
+                "CopyFileW",
+                "CreateDirectoryW",
+                "CreateEventA",
+                "CreateFileA",
+                "CreateFileW",
+                "CreateJobObjectW",
+                "CreateNamedPipeA",
+                "CreateProcessW",
+                "CreateThread",
+                "CreateWaitableTimerA",
+                "CreateWaitableTimerW",
+                "DeleteCriticalSection",
+                "DeleteFileW",
+                "DeviceIoControl",
+                "DuplicateHandle",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "ExitThread",
+                "ExpandEnvironmentStringsW",
+                "FileTimeToSystemTime",
+                "FillConsoleOutputAttribute",
+                "FillConsoleOutputCharacterA",
+                "FindClose",
+                "FindFirstFileExW",
+                "FindNextFileW",
+                "FlsAlloc",
+                "FlsFree",
+                "FlsGetValue",
+                "FlsSetValue",
+                "FlushFileBuffers",
+                "FormatMessageA",
+                "FormatMessageW",
+                "FreeEnvironmentStringsW",
+                "FreeLibrary",
+                "FreeLibraryAndExitThread",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetComputerNameW",
+                "GetConsoleCursorInfo",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetConsoleScreenBufferInfo",
+                "GetConsoleWindow",
+                "GetCPInfo",
+                "GetCurrentDirectoryW",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetDateFormatW",
+                "GetDiskFreeSpaceExW",
+                "GetDriveTypeW",
+                "GetEnvironmentStringsW",
+                "GetEnvironmentVariableW",
+                "GetExitCodeProcess",
+                "GetFileAttributesExW",
+                "GetFileAttributesW",
+                "GetFileInformationByHandle",
+                "GetFileSizeEx",
+                "GetFileType",
+                "GetFinalPathNameByHandleW",
+                "GetFullPathNameW",
+                "GetLastError",
+                "GetLocalTime",
+                "GetLogicalDriveStringsW",
+                "GetModuleFileNameW",
+                "GetModuleHandleExW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemDirectoryW",
+                "GetSystemTime",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount64",
+                "GetTimeFormatW",
+                "GetTimeZoneInformation",
+                "GetWindowsDirectoryW",
+                "HeapAlloc",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "InitializeSListHead",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryExW",
+                "LoadLibraryW",
+                "LocalFree",
+                "MultiByteToWideChar",
+                "OpenProcess",
+                "OpenThread",
+                "PeekNamedPipe",
+                "QueryPerformanceCounter",
+                "QueueUserAPC",
+                "RaiseException",
+                "ReadConsoleInputW",
+                "ReadConsoleOutputA",
+                "ReadConsoleW",
+                "ReadFile",
+                "ReadFileEx",
+                "RemoveDirectoryW",
+                "ResetEvent",
+                "RtlCaptureContext",
+                "RtlLookupFunctionEntry",
+                "RtlPcToFileHeader",
+                "RtlUnwind",
+                "RtlUnwindEx",
+                "RtlVirtualUnwind",
+                "ScrollConsoleScreenBufferA",
+                "SetConsoleCtrlHandler",
+                "SetConsoleCursorInfo",
+                "SetConsoleCursorPosition",
+                "SetConsoleMode",
+                "SetConsoleScreenBufferSize",
+                "SetConsoleTextAttribute",
+                "SetConsoleWindowInfo",
+                "SetCurrentDirectoryW",
+                "SetEndOfFile",
+                "SetEnvironmentVariableW",
+                "SetEvent",
+                "SetFileAttributesW",
+                "SetFilePointerEx",
+                "SetHandleInformation",
+                "SetInformationJobObject",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SetWaitableTimer",
+                "Sleep",
+                "SleepEx",
+                "SystemTimeToTzSpecificLocalTime",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VerifyVersionInfoW",
+                "VerSetConditionMask",
+                "WaitForMultipleObjectsEx",
+                "WaitForSingleObject",
+                "WaitForSingleObjectEx",
+                "WideCharToMultiByte",
+                "WriteConsoleOutputA",
+                "WriteConsoleW",
+                "WriteFile",
+                "WriteFileEx"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "GetWindowPlacement",
+                "ShowWindow"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "AdjustTokenPrivileges",
+                "AllocateAndInitializeSid",
+                "AllocateLocallyUniqueId",
+                "CheckTokenMembership",
+                "ConvertSidToStringSidA",
+                "ConvertSidToStringSidW",
+                "ConvertStringSecurityDescriptorToSecurityDescriptorW",
+                "CopySid",
+                "CreateProcessAsUserW",
+                "CreateRestrictedToken",
+                "CreateWellKnownSid",
+                "DuplicateToken",
+                "EqualSid",
+                "EventRegister",
+                "EventUnregister",
+                "EventWrite",
+                "EventWriteTransfer",
+                "FreeSid",
+                "GetAce",
+                "GetLengthSid",
+                "GetNamedSecurityInfoW",
+                "GetSidIdentifierAuthority",
+                "GetTokenInformation",
+                "IsValidAcl",
+                "IsValidSecurityDescriptor",
+                "IsValidSid",
+                "IsWellKnownSid",
+                "LookupAccountNameW",
+                "LookupAccountSidW",
+                "LookupPrivilegeValueA",
+                "LsaManageSidNameMapping",
+                "LsaNtStatusToWinError",
+                "OpenProcessToken",
+                "RegCloseKey",
+                "RegCreateKeyExW",
+                "RegEnumValueW",
+                "RegisterServiceCtrlHandlerW",
+                "RegOpenKeyExW",
+                "RegQueryValueExW",
+                "SetServiceStatus",
+                "StartServiceCtrlDispatcherW"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "overlay",
+          "peexe",
+          "signed",
+          "detect-debug-environment",
+          "idle",
+          "64bits"
+        ],
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 99,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ],
+            "sandbox_name": "C2AE"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5424",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "71d50b74f81d27feefbc2bc0f631b0ed7fcdf88b1abbd6d104e66638993786f8",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:12.387358",
+      "vt_found": true,
+      "malicious_count": 32,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 30,
+      "total_engines": 76,
+      "first_seen": 1714068619,
+      "last_seen": 1756579319,
+      "reputation": 0,
+      "names": [
+        "u.bat"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 657,
+        "type_description": "DOS batch file",
+        "magic": "DOS batch file, ASCII text, with CRLF line terminators",
+        "md5": "be91cd27924b64563c4d790bb4292179",
+        "sha1": "cd41f4f69df53e33944d053c75296c805e41380c",
+        "sha256": "71d50b74f81d27feefbc2bc0f631b0ed7fcdf88b1abbd6d104e66638993786f8",
+        "ssdeep": "12:2FpVFjzen/wKfUyMaX14CcemTL9Czd/ChQP68yZ5umlrS/cgAaqpJvfBAR:iB3KuyM9emTL9CzFaQPYplUcgxMvps",
+        "tlsh": "T18101998A314312F47A580FD8E52D885ABC7A1098161D2882848231F9B207CBC13BFAFC"
+      },
+      "additional_details": {
+        "tags": [
+          "bat"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 8,
+              "value": "dllinject"
+            },
+            {
+              "count": 2,
+              "value": "batdl"
+            },
+            {
+              "count": 2,
+              "value": "vsnw10e24"
+            }
+          ],
+          "suggested_threat_label": "trojan.dllinject/batdl",
+          "popular_threat_category": [
+            {
+              "count": 19,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan.Script.DllInject.a!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.72772554"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "batch.trojan.dllinject"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "cld.script.trojan.1716232445"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "BAT/Downloader.gen.f"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan.Downloader.BAT.A"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5435",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "76f959205d0a0c40f3200e174db6bb030a1fde39b0a190b6188d9c10a0ca07c8",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:13.055119",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 58,
+      "total_engines": 76,
+      "first_seen": 1715110830,
+      "last_seen": 1750367220,
+      "reputation": 0,
+      "names": [
+        "a3.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 740,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "md5": "44d85fbf046f8b32a1cc24ce265930d4",
+        "sha1": "fc59fab55f6f2705527ac5cb4282390a1686c5bf",
+        "sha256": "76f959205d0a0c40f3200e174db6bb030a1fde39b0a190b6188d9c10a0ca07c8",
+        "ssdeep": "12:5jic3DolV+gMieuRKd4dSl/8DfQaeNAlCDqA+PYTZ6iYnuaAh0kYSftwDtK3DilX:9NkKieuRKKdSUYDqAZ62P0GUmOlX",
+        "tlsh": "T1B40165B94D7E44C0D7CFC1A4A84A7399D5F1D02F114774D97E6BE0115E008515DA1B30",
+        "vhash": "493b546942937d6a29d55b07dd2b49e8"
+      },
+      "additional_details": {
+        "tags": [
+          "encrypted",
+          "zip"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5228",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "93058bd5fe5f046e298e1d3655274ae4c08f07a8b6876e61629ae4a0b510a2f7",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:13.917030",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 64,
+      "total_engines": 76,
+      "first_seen": 1714080767,
+      "last_seen": 1754463270,
+      "reputation": -1,
+      "names": [
+        "a.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1999140,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "md5": "f9a37da5c10317e9b69d2199c9e34984",
+        "sha1": "893384de883db97c39a12899cc96afdcfb11f09c",
+        "sha256": "93058bd5fe5f046e298e1d3655274ae4c08f07a8b6876e61629ae4a0b510a2f7",
+        "ssdeep": "49152:IW+Am7/6LxyXxyqMsazp5IlymGshJ7MMwNPqzP8:j+R7/fxMsgrIlcszZwNY0",
+        "tlsh": "T17E95339394C6F0C1002A6C05B9F499E28844B0B749BC63CBC3968FA9F4AF157947E77B",
+        "vhash": "7bf6f87e0007521660582e2104925822"
+      },
+      "additional_details": {
+        "tags": [
+          "zip",
+          "encrypted"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250801",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250801",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250801",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250801",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250801",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5415",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "a47718693dc12f061692212a354afba8ca61590d8c25511c50cfecf73534c750",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:14.794248",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 64,
+      "total_engines": 76,
+      "first_seen": 1714771351,
+      "last_seen": 1750367255,
+      "reputation": 0,
+      "names": [
+        "download",
+        "a.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 3831162,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "md5": "dd5ca5a7ac24182e4cd4536f18fa082e",
+        "sha1": "8c2835c5bb264384f69ab4b98327c2ea1733eb3a",
+        "sha256": "a47718693dc12f061692212a354afba8ca61590d8c25511c50cfecf73534c750",
+        "ssdeep": "98304:W4Q8fLSbD8HhVL5RAMS26IDPvm58gaTR87aovJc:W4JztvL/ZSBKm58gaTcq",
+        "tlsh": "T1280633B1F7D8235FDA7CB965F830A8ABD5AC013331E82997622CF8C0745E5D625129B3",
+        "vhash": "2979e9fa0d666b7229529b7a818c4f6a"
+      },
+      "additional_details": {
+        "tags": [
+          "zip",
+          "encrypted"
+        ],
+        "sample_analysis_results": {
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": null,
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.1.0",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20241031",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5227",
+            "engine_update": "20241030",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c18e7709866f8b1a271a54407973152be1036ad3b57423101d7c3da98664d108",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:15.421334",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 65,
+      "total_engines": 76,
+      "first_seen": 1715029342,
+      "last_seen": 1750367124,
+      "reputation": 0,
+      "names": [
+        "s.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1530575,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "md5": "ce941a52712ce0ad70a4ff72f6d0d993",
+        "sha1": "3c15dc87c92987afd92d50a23341a98621fbcd9b",
+        "sha256": "c18e7709866f8b1a271a54407973152be1036ad3b57423101d7c3da98664d108",
+        "ssdeep": "24576:+k8MyvcVau0efgBNZZH+xjoOHXpTMgBLNewz3sL/MdU6ecbP2nPZvRjQtdKe:+kiv3uHoBB+xjoO3pYq5e7jMdocz2h14",
+        "tlsh": "T1BC6533438A96863EF6D371159011D297E4573B4A2AB9D84230324C66FA707E2B42F77F",
+        "vhash": "2979e9fa0d666b7229529b7a818c4f6a"
+      },
+      "additional_details": {
+        "tags": [
+          "zip",
+          "encrypted"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5228",
+            "engine_update": "20241101",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.1.1",
+            "engine_update": "20241102",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://15.235.218.150",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:16.596053",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 31,
+      "total_engines": 97,
+      "first_seen": 1714406927,
+      "last_seen": 1745491421,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "iframes",
+          "multiple-redirects",
+          "ip",
+          "contains-gzip",
+          "trackers",
+          "external-resources"
+        ],
+        "categories": {
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://195.123.233.42",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:17.222124",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1520598386,
+      "last_seen": 1754347135,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://195.123.233.55",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:17.854402",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1714647027,
+      "last_seen": 1756094751,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "compromised websites. information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://20.115.96.90",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:18.771305",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 2,
+      "harmless_count": 66,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1715279687,
+      "last_seen": 1753867773,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Unrated (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "not recommended"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://38.180.142.249",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:19.360530",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 64,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1714652683,
+      "last_seen": 1754195763,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://5.161.245.155",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:19.949951",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 31,
+      "total_engines": 97,
+      "first_seen": 1494190805,
+      "last_seen": 1754357415,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://77.246.101.135",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:20.677507",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 65,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1715620925,
+      "last_seen": 1751201599,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://91.90.195.52",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:21.337874",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 64,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1565836217,
+      "last_seen": 1752573930,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "compromised websites. shopping"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://antispam2.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:22.057313",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1467894570,
+      "last_seen": 1755604591,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Business/Economy, Malicious (alphaMountain.ai)",
+          "BitDefender": "business",
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "compromised websites. malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://antispam3.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:22.730865",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1717183327,
+      "last_seen": 1752876708,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "compromised websites. malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://greekpool.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/",
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:23.359446",
+      "vt_found": true,
+      "malicious_count": 13,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1448023814,
+      "last_seen": 1756316158,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "BitDefender": "sports",
+          "Sophos": "command and control",
+          "Webroot": "Bot Nets",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://instance-olqdnn-relay.screenconnect.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:23.975825",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 65,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1714749345,
+      "last_seen": 1750693103,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Information Technology (alphaMountain.ai)",
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://limitedtoday.com",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:24.640860",
+      "vt_found": true,
+      "malicious_count": 11,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1625187026,
+      "last_seen": 1754842053,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "command and control",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "C2/Generic-A",
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://realsepnews.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:25.506128",
+      "vt_found": true,
+      "malicious_count": 13,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1709335020,
+      "last_seen": 1756516941,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://rewilivak13.com",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:26.169724",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1701096098,
+      "last_seen": 1750972996,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Webroot": "Bot Nets"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://thetrailbig.net",
+        "sources": [
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:26.822976",
+      "vt_found": true,
+      "malicious_count": 14,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 24,
+      "total_engines": 97,
+      "first_seen": 1715097025,
+      "last_seen": 1754852953,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "C2/Generic-A",
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://upd5.pro",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:27.449629",
+      "vt_found": true,
+      "malicious_count": 15,
+      "suspicious_count": 1,
+      "harmless_count": 56,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1713300270,
+      "last_seen": 1756515382,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "title": "Activity related to QAKBOT",
+            "severity": "high",
+            "timestamp": 1713441952,
+            "details": "This DOMAIN is used by QAKBOT. Qakbot, also known as QBot, Pinkslipbot, and Quakbot, is a Banking Trojan malware designed to steal banking credentials, online banking session information, personal details of the victim, or any other banking data. Although early versions of Qbot were spotted all the way back in 2009, today it continues to be active and features worm-like abilities to spread over networks, supports advanced web-injections techniques, and has a persistence mechanism that some researchers believe to be one of the best in its class. Additionally, the Trojan has anti-VM, anti-debug and anti-sandbox functionally that makes research and analysis quite difficult.",
+            "source": "Cluster25"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://upd7.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/",
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:28.331742",
+      "vt_found": true,
+      "malicious_count": 14,
+      "suspicious_count": 1,
+      "harmless_count": 56,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1557178515,
+      "last_seen": 1755239121,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "compromised websites. application and software download"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://upd7a.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/",
+          "https://www.rapid7.com/blog/post/2024/05/10/ongoing-social-engineering-campaign-linked-to-black-basta-ransomware-operators"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:29.076928",
+      "vt_found": true,
+      "malicious_count": 16,
+      "suspicious_count": 1,
+      "harmless_count": 54,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1715263906,
+      "last_seen": 1756120211,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://upd9.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:29.770195",
+      "vt_found": true,
+      "malicious_count": 14,
+      "suspicious_count": 1,
+      "harmless_count": 57,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1563095015,
+      "last_seen": 1756445225,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "compromised websites. information technology"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://zziveastnews.com",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:30.352208",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 27,
+      "total_engines": 97,
+      "first_seen": 1714721924,
+      "last_seen": 1756597429,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://aka.ms/threatintelblog",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:30.991536",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1681830395,
+      "last_seen": 1755562585,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://thecyberwire.com/podcasts/microsoft-threat-intelligence",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:31.683502",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1696862809,
+      "last_seen": 1755576045,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "third-party-cookies",
+          "external-resources",
+          "iframes"
+        ],
+        "categories": {
+          "BitDefender": "business",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://twitter.com/MsftSecIntel",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:32.348708",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1586491629,
+      "last_seen": 1753298587,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "iframes"
+        ],
+        "categories": {
+          "BitDefender": "im",
+          "Dr.Web": "social networks",
+          "Sophos": "social networks",
+          "Forcepoint ThreatSeeker": "social web - twitter"
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "title": "Crouching Yeti: Appendixes",
+            "severity": "low",
+            "timestamp": 1692389347,
+            "details": "Contextual Indicators: Domain is classified as Social Networking\n\nContextual Indicators: The URL is known benign by Check Point's Threat Cloud\n\nContextual Indicators: The domain is popular among websites with good reputation\n\nContextual Indicators: The domain’s Cisco Umbrella rank is 312\n\nContextual Indicators: The domain is popular in the world\n\nContextual Indicators: The domain’s Alexa rank is 7\n\nCreated On: 2000-01-21\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/3c8b2bbd5af1180dab341c61a990008400c0f4734771d1618913d1a8fa55c929/detection\n\nClassification Description: Legitimate website which does not serve any malicious purpose.",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.linkedin.com/showcase/microsoft-threat-intelligence",
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:50:33.534468",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 67,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1713687550,
+      "last_seen": 1755575982,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "trackers",
+          "iframes",
+          "third-party-cookies",
+          "password-input"
+        ],
+        "categories": {
+          "BitDefender": "socialnetworks",
+          "Sophos": "business networking",
+          "Forcepoint ThreatSeeker": "social web - linkedin",
+          "Xcitium Verdict Cloud": "professional networking "
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "severity": "low",
+            "details": "Contextual Indicators: Domain is classified as Social Networking\n\nContextual Indicators: The domain’s Cisco Umbrella rank is 228\n\nContextual Indicators: The URL is known benign by Check Point's Threat Cloud\n\nContextual Indicators: The domain is popular among websites with good reputation\n\nContextual Indicators: The domain’s Alexa rank is 12\n\nContextual Indicators: The domain is popular in the world\n\nCreated On: 2002-11-02\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/www.linkedin.com/detection\n\nClassification Description: Legitimate website which does not serve any malicious purpose.",
+            "timestamp": 1693898544,
+            "title": "Phishing Attachment IOC",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

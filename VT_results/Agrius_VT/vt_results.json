@@ -1,0 +1,361 @@
+{
+  "organization": "Agrius",
+  "scan_time": "2025-08-31T17:02:40.952285",
+  "statistics": {
+    "total_iocs": 4,
+    "processed": 4,
+    "found_in_vt": 3,
+    "malicious": 1,
+    "suspicious": 0,
+    "harmless": 2,
+    "errors": 1
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "aa19839b1b6a846a847c5f4f2a2e8e634caeebeeff7af59865aecca1d7d9f43c",
+        "sources": [
+          "https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:38.683704",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://easyupload.io",
+        "sources": [
+          "https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:39.438688",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1546291083,
+      "last_seen": 1756293976,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "iframes",
+          "trackers",
+          "third-party-cookies",
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "File Sharing/Storage (alphaMountain.ai)",
+          "BitDefender": "business",
+          "Sophos": "personal network storage",
+          "Forcepoint ThreatSeeker": "personal network storage and backup"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://ufile.io",
+        "sources": [
+          "https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:40.306223",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 67,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1469704066,
+      "last_seen": 1754932141,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "multiple-redirects",
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "File Sharing/Storage (alphaMountain.ai)",
+          "BitDefender": "filesharing",
+          "Xcitium Verdict Cloud": "online storage",
+          "Sophos": "personal network storage",
+          "Forcepoint ThreatSeeker": "personal network storage and backup"
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "source": "Cluster25",
+            "timestamp": 1692806638,
+            "details": "This DOMAIN is used by SMOKELOADER",
+            "severity": "high",
+            "title": "Activity related to SMOKELOADER"
+          },
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1693500967,
+            "details": "Created On: 2016:07:26 14:39:02\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/7a271132f51feebfb932f0969c8e033caecd5915bd0fbbf901a5115a9badf833/detection\n\nClassification Description: Legitimate website which does not serve any malicious purpose.",
+            "severity": "low",
+            "title": "MC-000150-MW: Indicators of Compromise Associated with Hive  Ransomware"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/",
+        "sources": [
+          "https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:40.951891",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 67,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1684980029,
+      "last_seen": 1756099948,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "iframes",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Xcitium Verdict Cloud": "blogs & wikis"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

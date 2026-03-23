@@ -1,0 +1,1683 @@
+{
+  "organization": "Inception",
+  "scan_time": "2025-08-31T19:06:03.637845",
+  "statistics": {
+    "total_iocs": 17,
+    "processed": 17,
+    "found_in_vt": 13,
+    "malicious": 13,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 4
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "108.170.52.158",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:50.019440",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 56,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756339911,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "108.170.0.0/18",
+        "asn": 20454,
+        "as_owner": "SSASN2",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Let's Encrypt",
+          "CN": "R11"
+        },
+        "subject": {
+          "CN": "ga.insurertravelsae.com"
+        },
+        "validity": {
+          "not_after": "2025-02-20 17:07:33",
+          "not_before": "2024-11-22 17:07:34"
+        },
+        "version": "V3",
+        "serial_number": "3390290b8a4ac81c7631d6c215ea7c79baa",
+        "thumbprint": "98985bdfe4f4d720a94b3ee45673400f3aa1ff43",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "e164fb6a8281c22586ea2154ced66e24e470215a706565bfd146d16a5504d3efc14a643b983e11f518f62a5c6450a3423ccb31cb4814312ec35869b4db4c26bc33dcb5ab76173b37fb938df56ef040fea3d12ac3138428a766c6c1aefa3f2513a35af7d81c6dda0a27791439c045c904d2a10f18470e0b0b337a0b60c6bf652c25aced93effef7913322638ba23d20b2487a947aaf6b5021ebbf51fefa0a9eec956a6097a9703646db2caaac5db56463e5a73d69d47f5f37e8fd28bf7c621bd07aca4b19cae96495bc9f9bbdf4886b35fdb908e77f80c4a9d60a148e9e36445d6528ed6b257abecf6a82264d34d162597f1852ecb9b415af0903ed0cffb7aa9b",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "25d25d00025d25d22c25d25d25d25dd67503cb8836da6e35829b1e18acf30e"
+      },
+      "whois_info": "NetRange: 108.170.0.0 - 108.170.63.255\nCIDR: 108.170.0.0/18\nNetName: SS8\nNetHandle: NET-108-170-0-0-1\nParent: NET108 (NET-108-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: SECURED SERVERS LLC (SSL-65)\nRegDate: 2012-01-23\nUpdated: 2012-01-23\nRef: https://rdap.arin.net/registry/ip/108.170.0.0\nOrgName: SECURED SERVERS LLC\nOrgId: SSL-65\nAddress: 2353 W University Bldg A\nCity: Tempe\nStateProv: AZ\nPostalCode: 85281\nCountry: US\nRegDate: 2003-12-08\nUpdated: 2025-07-07\nRef: https://rdap.arin.net/registry/entity/SSL-65\nReferralServer: rwhois://rwhois.securedservers.com:4321\nOrgTechHandle: IPADM294-ARIN\nOrgTechName: IPADMIN\nOrgTechPhone: +1-480-422-2031 \nOrgTechEmail: ipadmin@phoenixnap.com\nOrgTechRef: https://rdap.arin.net/registry/entity/IPADM294-ARIN\nOrgAbuseHandle: ABUSE1536-ARIN\nOrgAbuseName: Abuse\nOrgAbusePhone: +1-480-422-2022 \nOrgAbuseEmail: abuse@phoenixnap.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE1536-ARIN\nOrgTechHandle: PETRO182-ARIN\nOrgTechName: Petrovic, Dragan \nOrgTechPhone: +35677548965 \nOrgTechEmail: draganp@phoenixnap.com\nOrgTechRef: https://rdap.arin.net/registry/entity/PETRO182-ARIN\nOrgTechHandle: MUSGR48-ARIN\nOrgTechName: Musgrave, Brian \nOrgTechPhone: +1-480-401-0309 \nOrgTechEmail: brianmu@phoenixnap.com\nOrgTechRef: https://rdap.arin.net/registry/entity/MUSGR48-ARIN\nOrgTechHandle: MONTE41-ARIN\nOrgTechName: Montebello, Adrian \nOrgTechPhone: +35679305305 \nOrgTechEmail: adrianm@phoenixnap.com\nOrgTechRef: https://rdap.arin.net/registry/entity/MONTE41-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "188.165.62.40",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:51.347301",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 2,
+      "harmless_count": 54,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756317575,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "188.165.0.0/16",
+        "asn": 16276,
+        "as_owner": "OVH SAS",
+        "country": "NL",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "kalasivut.net"
+        },
+        "validity": {
+          "not_after": "2021-03-27 09:00:10",
+          "not_before": "2020-12-27 09:00:10"
+        },
+        "version": "V3",
+        "serial_number": "36d40b3c1fa32fe9bf2dac9befb8b0eef29",
+        "thumbprint": "ea069c16d99bccd92bc544f4743418af99c74472",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00dddb32f1653fe115c47471a35e0f86ed39223aa42827c70eaabeb515c847b505238bbbfa6abf275ebea4eb9a0cfbd6171a2153d6f1f675485d1515ec48350a2b9f359b533f2ef8718f89cfdbb85ca067228c6cba982665f7c505a0ed39639d10bbc6dd8d06b5e6e3da27351be092be29035ad3974f3c7eb134573c100424891c20fe8961b56add39e10c495cc65b282d007457cb9e3dafa54c5d29c1b8b8bc6352dfc11e0fd0d35822fd331ae406ac6002cf550678a9d6d6bc05c1f278ce0fa703cfcbb272b9c9fd1d036a8bae34ece880641571f746829b0c32eb98b36fb8eb1845af781d9dd4d515969bca3237f7fc13a0fab1fee0a5498a5a55cb83e0658f",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "29d29d15d29d29d21c29d29d29d29dc80334825071f8ff93376ac14c5a331f"
+      },
+      "whois_info": "inetnum: 188.165.0.0 - 188.165.255.255\nnetname: FR-OVH-20090605\ncountry: FR\norg: ORG-OS3-RIPE\nadmin-c: OK217-RIPE\ntech-c: OTC2-RIPE\nstatus: ALLOCATED PA\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: OVH-MNT\nmnt-routes: OVH-MNT\nmnt-domains: OVH-MNT\ncreated: 2009-06-05T07:51:37Z\nlast-modified: 2017-01-11T08:00:07Z\nsource: RIPE # Filtered\norganisation: ORG-OS3-RIPE\norg-name: OVH SAS\ncountry: FR\norg-type: LIR\naddress: 2 rue Kellermann\naddress: 59100\naddress: Roubaix\naddress: FRANCE\nphone: +33972101007\nadmin-c: OTC2-RIPE\nadmin-c: OK217-RIPE\nadmin-c: GM84-RIPE\nabuse-c: AR15333-RIPE\nmnt-ref: OVH-MNT\nmnt-ref: RIPE-NCC-HM-MNT\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: OVH-MNT\ncreated: 2004-04-17T11:23:17Z\nlast-modified: 2020-12-16T10:24:51Z\nsource: RIPE # Filtered\nrole: OVH Technical Contact\naddress: OVH SAS\naddress: 2 rue Kellermann\naddress: 59100 Roubaix\naddress: France\nadmin-c: OK217-RIPE\ntech-c: GM84-RIPE\ntech-c: SL10162-RIPE\nnic-hdl: OTC2-RIPE\nabuse-mailbox: abuse@ovh.net\nmnt-by: OVH-MNT\ncreated: 2004-01-28T17:42:29Z\nlast-modified: 2014-09-05T10:47:15Z\nsource: RIPE # Filtered\nperson: Octave Klaba\naddress: OVH SAS\naddress: 2 rue Kellermann\naddress: 59100 Roubaix\naddress: France\nphone: +33 9 74 53 13 23\nnic-hdl: OK217-RIPE\nmnt-by: OVH-MNT\ncreated: 1970-01-01T00:00:00Z\nlast-modified: 2017-10-30T21:44:51Z\nsource: RIPE # Filtered\nroute: 188.165.0.0/16\ndescr: OVH ISP\ndescr: Paris, France\norigin: AS16276\nmnt-by: OVH-MNT\ncreated: 2009-06-08T16:23:41Z\nlast-modified: 2009-06-08T16:23:41Z\nsource: RIPE # Filtered\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "200.122.128.208",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:52.265069",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 1,
+      "harmless_count": 55,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756317576,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "200.122.128.0/18",
+        "asn": 3790,
+        "as_owner": "RADIOGRAFICA COSTARRICENSE",
+        "country": "CR",
+        "continent": "NA",
+        "regional_internet_registry": "LACNIC"
+      },
+      "certificate_info": {},
+      "whois_info": "Socket not responding: [Errno 111] Connection refused",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "51.255.139.194",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:53.187839",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756317576,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "51.254.0.0/15",
+        "asn": 16276,
+        "as_owner": "OVH SAS",
+        "country": "FR",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 51.255.139.192 - 51.255.139.207\nnetname: OVH_172213836\ncountry: PT\ndescr: Failover Ips\norg: ORG-AR97-RIPE\nadmin-c: OTC6-RIPE\ntech-c: OTC6-RIPE\nstatus: LEGACY\nmnt-by: OVH-MNT\ncreated: 2018-03-30T14:35:26Z\nlast-modified: 2018-03-30T14:35:26Z\nsource: RIPE\norganisation: ORG-AR97-RIPE\norg-name: Apexgrand Robert\norg-type: OTHER\naddress: 50 Leicester Road\naddress: AB52 6XY AULTON\naddress: GB\nphone: +33.567013848\nabuse-c: ACRO10646-RIPE\nmnt-ref: OVH-MNT\nmnt-by: OVH-MNT\ncreated: 2017-10-16T10:33:13Z\nlast-modified: 2017-10-30T14:45:19Z\nsource: RIPE # Filtered\nrole: OVH PT Technical Contact\naddress: OVH Hosting LDA\naddress: Avenida Miguel Bombarda, 133 - 6�A\naddress: 1050-164 Lisboa\naddress: Portugal\nadmin-c: OK217-RIPE\ntech-c: GM84-RIPE\nnic-hdl: OTC6-RIPE\nabuse-mailbox: abuse@ovh.net\nmnt-by: OVH-MNT\ncreated: 2008-12-23T17:48:44Z\nlast-modified: 2008-12-23T17:48:44Z\nsource: RIPE # Filtered\nroute: 51.254.0.0/15\ndescr: OVH\norigin: AS16276\nmnt-by: OVH-MNT\ncreated: 2015-05-28T17:50:05Z\nlast-modified: 2015-05-28T17:50:05Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "13de9678279b6ce6d81aeb32c0dd9f7458ad1f92aee17f3e052be9f06d473bed",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:54.107974",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "2bcb8a4ddc2150b25a44c292db870124c65687444f96e078f575da69bbf018e0",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:55.031985",
+      "vt_found": true,
+      "malicious_count": 31,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 31,
+      "total_engines": 75,
+      "first_seen": 1532077737,
+      "last_seen": 1717859173,
+      "reputation": 0,
+      "names": [
+        "QvtCy0LXRgdGC0LrQsC5kb2M=?="
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 9857,
+        "type_description": "Office Open XML Document",
+        "magic": "Microsoft Word 2007+",
+        "md5": "ff07f9f5373855f1c48c1f9a48fe6d52",
+        "sha1": "08bfa3f7d0b8674701a7de564995834b26c73dd0",
+        "sha256": "2bcb8a4ddc2150b25a44c292db870124c65687444f96e078f575da69bbf018e0",
+        "ssdeep": "192:AEhMLD3WkToq2yGQPOnD2h0vJo/fo7KuUevnA6Ngsd9AzTB171v6C9vXx2HO:AqMD3WWELhvJo/fAZl7qzTPQIXx2HO",
+        "tlsh": "T182127C74C796D935C51790F882BA23A0F60EDC07DBAAF723640D70894E89E956B06C3E",
+        "vhash": "24f07a29e58695c5cd88209dd0d43ce3"
+      },
+      "additional_details": {
+        "tags": [
+          "docx",
+          "exploit",
+          "cve-2017-0199",
+          "calls-wmi"
+        ],
+        "sandbox_verdicts": {
+          "DOCGuard": {
+            "category": "malicious",
+            "sandbox_name": "DOCGuard",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20230906",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20230906",
+            "category": "malicious",
+            "result": "Trojan.MSWord.Agent.4!c"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.0.27",
+            "engine_update": "20230906",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20230822",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20230905",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "1.1.3.1",
+            "engine_update": "20230906",
+            "category": "malicious",
+            "result": "Exploit.CVE-2017-0199"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20230906",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20230906",
+            "category": "malicious",
+            "result": "Trojan.Agent.DTDG"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.23.0.0",
+            "engine_update": "20230818",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.113.49508",
+            "engine_update": "20230906",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "49dbcf1fc8d3381e495089f396727a959885c1dd2ab6cd202cf3c4dbd1d27c4f",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:55.953432",
+      "vt_found": true,
+      "malicious_count": 31,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 36,
+      "total_engines": 76,
+      "first_seen": 1540466079,
+      "last_seen": 1756346808,
+      "reputation": -1,
+      "names": [
+        "ooxml_malicious_document_1744",
+        "609422-1571147514.docx",
+        "609422-1571147574.docx",
+        "Occupied Crimea Europe grey zone.doc"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 10203,
+        "type_description": "Office Open XML Document",
+        "magic": "Microsoft Word 2007+",
+        "md5": "a9220ec80024b1900f3234a9c5823896",
+        "sha1": "7bbf678f17558457cc4ee1622888bee68c30c873",
+        "sha256": "49dbcf1fc8d3381e495089f396727a959885c1dd2ab6cd202cf3c4dbd1d27c4f",
+        "ssdeep": "192:cEhMLT3WJ03snJ8tACD2h0v8YO9aWDjEhrcSQ2315SzN0sIXxQxr:cq0T3WvCrhv8YO9aGwhrc4l500sIXxQN",
+        "tlsh": "T143227D31C6189632C75312B9A0F71A79F7601C92A789EFCA396852CC9D725872B53E05",
+        "vhash": "94b5de00cced8e6db5d9ed4a01321804"
+      },
+      "additional_details": {
+        "tags": [
+          "exploit",
+          "docx",
+          "cve-2017-0199"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "dtbs",
+              "count": 6
+            },
+            {
+              "value": "subdoc",
+              "count": 5
+            },
+            {
+              "value": "cve20170199",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.dtbs/subdoc",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 16
+            },
+            {
+              "value": "downloader",
+              "count": 6
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Trojan.MSWord.Subdoc.a!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Trojan.Agent.DTBS"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "docx.trojan.subdoc"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Downloader-FGR.d"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Exploit.CVE-2017-0199"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5433",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250825",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "687ee860fd5cd9902b441c26d72788d5a52052d03047a9b071808fc4c53a7e8b",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:56.624349",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "72eb022f395cc15bbe9582ee02f977ea0692932461a8b0bd608d9f0971125999",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:57.487959",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "8aef4975d9c51821c4fa8ee1cbfe9c1f4a88c8784427d467ea99b2c1dabe15ae",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:58.410214",
+      "vt_found": true,
+      "malicious_count": 25,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 34,
+      "total_engines": 76,
+      "first_seen": 1541516727,
+      "last_seen": 1717859017,
+      "reputation": -77,
+      "names": [
+        "8aef4975d9c51821c4fa8ee1cbfe9c1f4a88c8784427d467ea99b2c1dabe15ae_unpacked",
+        "payload_unmodified.dat"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 9258,
+        "type_description": "Powershell",
+        "magic": "data",
+        "md5": "a9220b25961f5151b9df0eb1cceab94b",
+        "sha1": "ef13f73882dfb4d85139544c5526fdd1c75003db",
+        "sha256": "8aef4975d9c51821c4fa8ee1cbfe9c1f4a88c8784427d467ea99b2c1dabe15ae",
+        "ssdeep": "192:dyxkwpKMgg9Gg/bWKvSc3HbuVxSlpyx0YVD2StEHPq:dyxkwpKMgg9Gg/bWKvX3bkEzyx0YVD2C",
+        "tlsh": "T14F12CC507BF80604F7B76F15A9BE58255A7B3DA6AD32CE2D4018098D06F2A54F872F33",
+        "vhash": "6eb8a1015f7ad435c8535a30ef2fa59c"
+      },
+      "additional_details": {
+        "tags": [
+          "exe-pattern"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20231230",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20231231",
+            "category": "malicious",
+            "result": "Trojan.PowerShell.Agent.l!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20231231",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.34837618"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.2.1.0",
+            "engine_update": "20231230",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20230822",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20231230",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20231231",
+            "category": "malicious",
+            "result": "Trojan-PWS.c"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "1.1.3.1",
+            "engine_update": "20231231",
+            "category": "malicious",
+            "result": "Trojan.PowerShell.Agent"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20231231",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5024",
+            "engine_update": "20231229",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "8b212ee2d65c4da033c39aebaf59cc51ade45f32f4d91d1daa0bd367889f934d",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:59.184657",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 21,
+      "total_engines": 76,
+      "first_seen": 1539175872,
+      "last_seen": 1755593508,
+      "reputation": -1,
+      "names": [
+        "ae8fbf3984a876d7b4fb82ba84768a99.json",
+        "1.rtf"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 48854,
+        "type_description": "Rich Text Format",
+        "magic": "Rich Text Format data, version 1, ANSI, code page 1252, default middle east language ID 1025",
+        "md5": "ae8fbf3984a876d7b4fb82ba84768a99",
+        "sha1": "4e7644747278a1c06c5891315f883c32ddaa0a35",
+        "sha256": "8b212ee2d65c4da033c39aebaf59cc51ade45f32f4d91d1daa0bd367889f934d",
+        "ssdeep": "384:Az9FiRF+FYlPF8FRLeiSANAVgVJ0GGCKndO0ybfnirQQPtb5pTsgMnoh9d4dA0iw:AzfLeiLiEOWfnirQQ1b5poitrnrNg",
+        "tlsh": "T1E923BEA8BE44A850C6CB7CAAE52E7F591321F252FFC3C67101EBD3F9C9319199A090C5",
+        "vhash": "8ab5d2ff59323b0db4e357a76d2824cad"
+      },
+      "additional_details": {
+        "tags": [
+          "html-control",
+          "ole-embedded",
+          "exploit",
+          "rtf",
+          "cve-2017-11882"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "boxter"
+            },
+            {
+              "count": 2,
+              "value": "cve2017"
+            },
+            {
+              "count": 2,
+              "value": "cve201711882"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 9,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.boxter/cve2017"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.MSOffice.Boxter.3!c"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "rtf.exploit-kit.boxter"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Exp.RTF.Heur.Gen.A"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Exploit-CVE2017-11882.bb"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Exploit.CVE-2017-11882"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5427",
+            "engine_update": "20250818",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Malware.Generic-RTF.Save.c5a892ae"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "cc64a68ba52283f6cf5521cf75567b3c5b5143f324d37c59906ee63f1bbafcaf",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:05:59.985101",
+      "vt_found": true,
+      "malicious_count": 29,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 33,
+      "total_engines": 76,
+      "first_seen": 1534142221,
+      "last_seen": 1747481240,
+      "reputation": 0,
+      "names": [
+        "=?UTF-8?B?0KHQsNC90LrRhtC40LguZG9j?="
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 17963,
+        "type_description": "Office Open XML Document",
+        "magic": "Microsoft Word 2007+",
+        "md5": "f411d5bdadfe7ccd406d6777d94616ca",
+        "sha1": "80ada1da69ee9fc853336edaada8eac6529cc95e",
+        "sha256": "cc64a68ba52283f6cf5521cf75567b3c5b5143f324d37c59906ee63f1bbafcaf",
+        "ssdeep": "384:HVdqrvhcZklhvCXOwDAHvc1B1Iy+p4S14YxnNW:erh1C+wovny+T4wnNW",
+        "tlsh": "T17182C075F25D9610C22370B6D0BE0660F7FACC8AA762E34BB51975CA9586F400F9BC48",
+        "vhash": "1893bd68cb4a9da3a635d5e6a7bfb18b"
+      },
+      "additional_details": {
+        "tags": [
+          "docx",
+          "calls-wmi",
+          "exploit",
+          "cve-2017-0199"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.dtdd/ddedownloader",
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "dtdd"
+            },
+            {
+              "count": 4,
+              "value": "ddedownloader"
+            },
+            {
+              "count": 2,
+              "value": "msword"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 14,
+              "value": "trojan"
+            },
+            {
+              "count": 4,
+              "value": "downloader"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DOCGuard": {
+            "category": "malicious",
+            "sandbox_name": "DOCGuard",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240223",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20240223",
+            "category": "malicious",
+            "result": "Trojan.MSWord.DDEDownloader.a!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20240223",
+            "category": "malicious",
+            "result": "Trojan.Agent.DTDD"
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240223",
+            "category": "malicious",
+            "result": "Trojan.Agent.DTDD"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240222",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240222",
+            "category": "malicious",
+            "result": "Downloader-FGR.d"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240223",
+            "category": "malicious",
+            "result": "Downloader-FGR.d"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240223",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20240222",
+            "category": "malicious",
+            "result": "Trojan.Agent.DTDD"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.23.0.0",
+            "engine_update": "20240129",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "d547773733abef19f2720d4def2356d62a532f64bcb002fb2b799e9ae39f805f",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:06:01.021848",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://108.170.52.158",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:06:01.702444",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1502233875,
+      "last_seen": 1752235696,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://188.165.62.40",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:06:02.294847",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 2,
+      "harmless_count": 61,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1541470767,
+      "last_seen": 1752241736,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://200.122.128.208",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:06:02.943656",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 63,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1540221770,
+      "last_seen": 1752241158,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+          "Dr.Web": "known infection source"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://51.255.139.194",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/unit42-inception-attackers-target-europe-year-old-office-vulnerability/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T19:06:03.637073",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 65,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1541452893,
+      "last_seen": 1755330361,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

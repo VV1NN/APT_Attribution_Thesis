@@ -1,0 +1,4747 @@
+{
+  "organization": "Higaisa",
+  "scan_time": "2025-08-31T23:23:59.704894",
+  "statistics": {
+    "total_iocs": 34,
+    "processed": 34,
+    "found_in_vt": 32,
+    "malicious": 29,
+    "suspicious": 0,
+    "harmless": 3,
+    "errors": 2
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "45.76.6.149",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/",
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:37.905265",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 0,
+      "harmless_count": 55,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756387227,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "45.76.0.0/15",
+        "asn": 20473,
+        "as_owner": "AS-VULTR",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "DigiCert Inc",
+          "OU": "www.digicert.com",
+          "CN": "RapidSSL TLS ECC CA G1"
+        },
+        "subject": {
+          "CN": "*.wpmudev.host"
+        },
+        "validity": {
+          "not_after": "2026-06-04 23:59:59",
+          "not_before": "2025-06-05 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "a0563658eb40abd03732830953e3989",
+        "thumbprint": "da71226e22295641172e5c8e64d64d9a9c748d78",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "EC",
+          "ec": {
+            "oid": "secp256r1",
+            "pub": "3059301306072a8648ce3d020106082a8648ce3d03010703420004e32aec71b125f802d5c5519ff3fc5b4508f960cab9fa5dd282780cb1ced3ea05565a3507ccee5a7f6055291df16a3b14ba16124016591c7cc30ceb2e0a383519"
+          }
+        },
+        "jarm": "28d28d28d00028d00042d42d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5"
+      },
+      "whois_info": "The Constant Company, LLC CONSTANT (NET-45-76-0-0-1) 45.76.0.0 - 45.77.255.255\nVultr Holdings, LLC NET-45-76-6-0-23 (NET-45-76-6-0-1) 45.76.6.0 - 45.76.7.255\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "21a51a834372ab11fba72fb865d6830e",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:38.585490",
+      "vt_found": true,
+      "malicious_count": 37,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 74,
+      "first_seen": 1584268444,
+      "last_seen": 1746343404,
+      "reputation": -79,
+      "names": [
+        "covid.pdf.lnk",
+        "g4ZokyumBB2gDn.tmp"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1160121,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut",
+        "md5": "21a51a834372ab11fba72fb865d6830e",
+        "sha1": "9ceb6e0e4ad0a2c03751d0563a82a79ebb94ec95",
+        "sha256": "95489af84596a21b6fcca078ed10746a32e974a84d0daed28cc56e77c38cc5a8",
+        "ssdeep": "24576:2D9JuasgfxPmNirQ2dRqZJuH3eBf9mddWoX+KIKoIkVrI:2DzuOxPm0iZLKIKRkq",
+        "tlsh": "T1C9352335FDA63F70DB382B3811B3EE0E27B243A11848D2F50BC55487217DF9169AAAD5"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "lnk"
+        ],
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 50,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "LnkMalicious"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "1.3.0.9899",
+            "engine_update": "20220404",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20220409",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Generic.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20220409",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.33547486"
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "32.44.1.0",
+            "engine_update": "20220409",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.33547486"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "14.00",
+            "engine_update": "20220409",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37109"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20220409",
+            "category": "malicious",
+            "result": "LNK/Downloader.cd"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.2.2.27",
+            "engine_update": "20220408",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.9.0.0",
+            "engine_update": "20220401",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.5.41744",
+            "engine_update": "20220409",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.5.41745",
+            "engine_update": "20220409",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "28bfed8776c0787e9da3a2004c12b09a",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:39.186544",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2ffb817ff7ddcfa216da31f50e199df1",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:40.129869",
+      "vt_found": true,
+      "malicious_count": 30,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 32,
+      "total_engines": 77,
+      "first_seen": 1589306397,
+      "last_seen": 1713362151,
+      "reputation": 0,
+      "names": [
+        "Project link and New copyright policy.rar"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 130586,
+        "type_description": "RAR",
+        "magic": "RAR archive data, v5",
+        "md5": "2ffb817ff7ddcfa216da31f50e199df1",
+        "sha1": "51277838c0492012065ad38abe02e7be9410df7a",
+        "sha256": "c3a45aaf6ba9f2a53d26a96406b6c34a56f364abe1dd54d55461b9cc5b9d9a04",
+        "ssdeep": "3072:kdzkA1jIAy6wne0rISQ6pAwUrdU4nwis1AJxUnhapw:WzkARIe0rISQ6pX4nwj1AJxUnht",
+        "tlsh": "T10AD312730B969096EB2A92EF8D3BB2921241CD94CE1DD67AE0355F1F26660FB03C4817"
+      },
+      "additional_details": {
+        "tags": [
+          "rar"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "winlnk",
+              "count": 4
+            },
+            {
+              "value": "higaisa",
+              "count": 2
+            },
+            {
+              "value": "winnti",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            }
+          ],
+          "suggested_threat_label": "trojan.winlnk/higaisa"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 50,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "LnkMalicious"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.ZIP.WinLNK.4!c"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.62.1180",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.MulDrop12.19473"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.3.0.0",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.43290679"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "PDF.Phish.38053"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "LNK/Downloader.ce"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5070",
+            "engine_update": "20240313",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "45278d4ad4e0f4a891ec99283df153c3",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:40.798087",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 25,
+      "total_engines": 76,
+      "first_seen": 1589319049,
+      "last_seen": 1754402824,
+      "reputation": -1,
+      "names": [
+        "Conversations - iOS - Swipe Icons - Zeplin.lnk",
+        "45278d4ad4e0f4a891ec99283df153c3",
+        "g4ZokyumB2DC.tmp"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 69204,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Relative path, Has command line arguments, Icon number=0, ctime=Mon May 11 08:03:01 2020, mtime=Mon May 11 08:03:01 2020, atime=Mon May 11 08:03:01 2020, length=0, window=hidenormalshowminimized",
+        "md5": "45278d4ad4e0f4a891ec99283df153c3",
+        "sha1": "d500cec0ce5358751f3371b69a4a9bc402df8af4",
+        "sha256": "c0a0266f6df7f1235aeb4aad554e505320560967248c9c5cce7409fc77b56bd5",
+        "ssdeep": "1536:/bakXVUACPoQ6JS3QCge9GBN9yxPPYhKhETasWhU3iKBn/5Hndaf0:nUACJQnJBN9wBudWSbN/Vd+0",
+        "tlsh": "T167630123D587A714D6B49EB8356BAA49BC9DF307CC25F8AC4608C09A1409761DC9EF3F",
+        "vhash": "8933288afaa3355969d1d802d126b05d"
+      },
+      "additional_details": {
+        "tags": [
+          "high-entropy",
+          "abused-exe-pattern",
+          "long-command-line-arguments",
+          "lnk",
+          "hiding-window",
+          "large-file",
+          "direct-cpu-clock-access"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.droid/winlnk",
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "droid"
+            },
+            {
+              "count": 4,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "higaisa"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 27,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            },
+            {
+              "count": 2,
+              "value": "downloader"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.kg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5417",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Downloader.Script.195"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250804",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "4a4a223893c67b9d34392670002d58d7",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:41.466234",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 21,
+      "total_engines": 76,
+      "first_seen": 1590818103,
+      "last_seen": 1755164962,
+      "reputation": -1,
+      "names": [
+        "Curriculum Vitae_WANG LEI_Hong Kong Polytechnic University.pdf.lnk",
+        "dcd2531aa89a99f009a740eab43d2aa2b8c1ed7c8d7e755405039f3a235e23a6",
+        "4a4a223893c67b9d34392670002d58d7"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 310888,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Description string, Has Relative path, Has command line arguments, Icon number=0, ctime=Thu May 28 02:35:19 2020, mtime=Thu May 28 02:35:19 2020, atime=Thu May 28 02:35:19 2020, length=0, window=hidenormalshowminimized",
+        "md5": "4a4a223893c67b9d34392670002d58d7",
+        "sha1": "281c1b196cd992906d8583e64011dc28d9c52e3c",
+        "sha256": "dcd2531aa89a99f009a740eab43d2aa2b8c1ed7c8d7e755405039f3a235e23a6",
+        "ssdeep": "6144:rNUAriEMavMpsfiTn3lmm5pH+EODmvoyGjkmTWkF8DCE546:nXMpBr3ldVdvL8TWkF8V546",
+        "tlsh": "T1676423753EDB5F39672C92B9457C7F1C098415BA89897CE4A862CBC93843BC1CB1982D",
+        "vhash": "0ab79cbd2de014b4356f6ad72be124cb"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "long-command-line-arguments",
+          "hiding-window",
+          "high-entropy",
+          "executes-dropped-file",
+          "lnk",
+          "abused-exe-pattern",
+          "large-file"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 25,
+              "value": "trojan"
+            },
+            {
+              "count": 5,
+              "value": "dropper"
+            },
+            {
+              "count": 4,
+              "value": "downloader"
+            }
+          ],
+          "suggested_threat_label": "trojan.droid/winlnk",
+          "popular_threat_name": [
+            {
+              "count": 9,
+              "value": "droid"
+            },
+            {
+              "count": 3,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "lnkobf"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "lnk.trojan.droid"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.fg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250814",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "4dcd2e0287e0292a1ad71cbfdf99726e",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:42.142839",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 62,
+      "total_engines": 77,
+      "first_seen": 1725356948,
+      "last_seen": 1756287792,
+      "reputation": 0,
+      "names": [
+        "Curriculum Vitae_WANG LEI_Hong Kong Polytechnic University.pdf",
+        "4DCD2E0287E0292A1AD71CBFDF99726E.pdf"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 188329,
+        "type_description": "PDF",
+        "magic": "PDF document, version 1.3, 2 pages",
+        "md5": "4dcd2e0287e0292a1ad71cbfdf99726e",
+        "sha1": "7b6b01e9f726ab0b5f94cd68687d4787008cd7f5",
+        "sha256": "d4df4b58ee241e276ea03235445c04d1a28e48ec8b6e2599a56f6c4b8af3269b",
+        "ssdeep": "3072:7FvHNCanokkKzPPptewKE4D0pRB1l8oGVt5yIcmJldlmCLJYZIKgKTxWd5kv9l:7BtrnoHKzXEEBvBEbVjycmCFYuKgFd5q",
+        "tlsh": "T1000402A8F459D85CF8CFA822113B794C8B5C7037F1E56400FD3F464A26925A7F42BAA7",
+        "vhash": "901ec000e6a34de06df5905495e372217"
+      },
+      "additional_details": {
+        "tags": [
+          "pdf"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.2.0",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250402",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "RDN/Generic.dx"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250403",
+            "category": "malicious",
+            "result": "RDN/Generic.dx"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250403",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5331",
+            "engine_update": "20250402",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "997ab0b59d865c4bd63cc55b5e9c8b48",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:42.756350",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1590818104,
+      "last_seen": 1753384149,
+      "reputation": 0,
+      "names": [
+        "International English Language Testing System certificate.pdf.lnk",
+        "997ab0b59d865c4bd63cc55b5e9c8b48"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 87672,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Description string, Has Relative path, Has command line arguments, Icon number=0, ctime=Tue May 26 09:18:16 2020, mtime=Tue May 26 09:18:16 2020, atime=Tue May 26 09:18:16 2020, length=0, window=hidenormalshowminimized",
+        "md5": "997ab0b59d865c4bd63cc55b5e9c8b48",
+        "sha1": "0f1f2431ecccb980f7d93b9af52139d0d508510f",
+        "sha256": "c613487a5fc65b3b4ca855980e33dd327b3f37a61ce0809518ba98b454ebf68b",
+        "ssdeep": "1536:p7ITv0ieV7Qw/xqz7fb+QHJXrpY/5HqzeqqPGk1kGH3ZkODj3xiSOj2H2mpzDGKm:p72vBm//xm7a6JW58OPGk1XHiODjESGN",
+        "tlsh": "T11C83021050DC3DADD74E9ABB61728E9F227B6602E484EF1A1188CDCB70938203B1DFA5",
+        "vhash": "86001645949c2c4dcf56aebc0672795d"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "large-file",
+          "long-command-line-arguments",
+          "abused-exe-pattern",
+          "executes-dropped-file",
+          "high-entropy",
+          "hiding-window",
+          "lnk"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.erqv/winlnk",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 26
+            },
+            {
+              "value": "downloader",
+              "count": 5
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "erqv",
+              "count": 6
+            },
+            {
+              "value": "winlnk",
+              "count": 5
+            },
+            {
+              "value": "lnkobf",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.WinLNK.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "lnk.trojan.winlnk"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.mg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "a140420e12b68c872fe687967ac5ddbe",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:43.406026",
+      "vt_found": true,
+      "malicious_count": 33,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 29,
+      "total_engines": 76,
+      "first_seen": 1591628019,
+      "last_seen": 1741864938,
+      "reputation": 0,
+      "names": [
+        "a140420e12b68c872fe687967ac5ddbe",
+        "6f321380cbb195459514b7ae3265d453.tmp",
+        "c0a0266f6df7f1235aeb4aad554e505320560967248c9c5cce7409fc77b56bd5_unpacked_persister",
+        "0deb252a5048c3371358618750813e947458c77e651c729b9d51363f3d16b583.bin",
+        "34fDFkfSD32.bin",
+        "34fdfkfsd32.js"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1112,
+        "type_description": "JavaScript",
+        "magic": "ASCII text, with very long lines (385u), with CRLF line terminators",
+        "md5": "a140420e12b68c872fe687967ac5ddbe",
+        "sha1": "f50b624ba6eb9d3947f22cf7f95a6f70b7c463d3",
+        "sha256": "0deb252a5048c3371358618750813e947458c77e651c729b9d51363f3d16b583",
+        "ssdeep": "24:Yjwr+OjQmOjrYNlAHraUzOjwSuNicd9PoA3gHlYipq64Q/s9Z:Ycrx4RKcvNiczIaiM6TcZ",
+        "tlsh": "T17E21F0A1BC06D095EE77374682741BC988E320433988C7913244889C9F69838C6BEACB",
+        "vhash": "14a96a3436d55902690b87384ec0e787"
+      },
+      "additional_details": {
+        "tags": [
+          "javascript"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 13
+            },
+            {
+              "value": "downloader",
+              "count": 8
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "biom",
+              "count": 8
+            },
+            {
+              "value": "winnti",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.biom/winnti"
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20241203",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20241203",
+            "category": "malicious",
+            "result": "Trojan.JS.Agent.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20241203",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20241203",
+            "category": "malicious",
+            "result": "Heur.BZC.UGZ.Biom.13.477FFEDA"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.1.0",
+            "engine_update": "20241202",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20241203",
+            "category": "malicious",
+            "result": "javascript.unknown.biom"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20241202",
+            "category": "malicious",
+            "result": "JS.Downloader.38120"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20241203",
+            "category": "malicious",
+            "result": "BehavesLike.JS.Exploit.zm"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20241202",
+            "category": "malicious",
+            "result": "Downloader-FCAH!A140420E12B6"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20241203",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "a29408dbedf1e5071993dca4a9266f5c",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:44.028616",
+      "vt_found": true,
+      "malicious_count": 45,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 28,
+      "total_engines": 77,
+      "first_seen": 1590740855,
+      "last_seen": 1747778422,
+      "reputation": 0,
+      "names": [
+        "svchast.exe",
+        "a29408dbedf1e5071993dca4a9266f5c"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 50688,
+        "type_description": "Win32 EXE",
+        "magic": "PE32+ executable (GUI) x86-64, for MS Windows",
+        "md5": "a29408dbedf1e5071993dca4a9266f5c",
+        "sha1": "ed0d4baa22dfadf41484955a823aaa095470e6d7",
+        "sha256": "a251069b3fccd528cf2ce8ed36d814e974068fb4a1d9a5e67a4eb8fffa09e938",
+        "ssdeep": "768:D60ulMYxbNvTU5KgHbE3Z/krmN2l4pYz7lJqzM/X9EQ2/gLkDMX81KHuGWspljaK:F+NNvT7BxMl57lJqItERoF0Kgspld",
+        "tlsh": "T122334A0A73E044F4E6679235C9F29A10E773B8621775934F536483A62FA33819D3E736",
+        "vhash": "054066655d1515551az3f!z",
+        "pe_info": {
+          "timestamp": 1535446675,
+          "imphash": "43073314868b55b634ac1e6f50b3caa6",
+          "machine_type": 34404,
+          "entry_point": 5756,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 3958.65,
+              "filetype": "unknown",
+              "entropy": 4.795973777770996,
+              "sha256": "49a60be4b95b6d30da355a0c124af82b35000bce8f24f957d1c09ead47544a1e",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 230747.78,
+              "virtual_address": 4096,
+              "entropy": 6.35,
+              "raw_size": 30720,
+              "flags": "rx",
+              "virtual_size": 30616,
+              "md5": "31bdf9363e76ccbd9c12f4b7f3860e95"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 589357.56,
+              "virtual_address": 36864,
+              "entropy": 4.66,
+              "raw_size": 10752,
+              "flags": "r",
+              "virtual_size": 10526,
+              "md5": "bd223772ae44bcbc96e924bfedc914a4"
+            },
+            {
+              "name": ".data",
+              "chi2": 687082.12,
+              "virtual_address": 49152,
+              "entropy": 2.16,
+              "raw_size": 4608,
+              "flags": "rw",
+              "virtual_size": 9280,
+              "md5": "fa379e2d4b55afcbb0e3e9500c20750f"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 172362.5,
+              "virtual_address": 61440,
+              "entropy": 3.88,
+              "raw_size": 2048,
+              "flags": "r",
+              "virtual_size": 1764,
+              "md5": "0729b65ebe24b6a15a5a86eb2afa0447"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 5223.0,
+              "virtual_address": 65536,
+              "entropy": 5.09,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 436,
+              "md5": "27a705a02aee3351e851d9a3f4e2749a"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 123288.0,
+              "virtual_address": 69632,
+              "entropy": 2.41,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 682,
+              "md5": "6885616c45ec66abc7fe8d435971ba34"
+            }
+          ],
+          "compiler_product_versions": [
+            "[C++] VS2010 build 30319 count=22",
+            "[ C ] VS2010 build 30319 count=75",
+            "[ASM] VS2010 build 30319 count=9",
+            "[IMP] VS2008 SP1 build 30729 count=3",
+            "[---] Unmarked objects count=73",
+            "[LNK] VS2010 build 30319 count=1",
+            "id: 0xaf, version: 30319 count=1"
+          ],
+          "rich_pe_header_hash": "d810c8d5d24e698b7d6497089ef25c0d",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CompareStringW",
+                "CreateFileA",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "FlsAlloc",
+                "FlsFree",
+                "FlsGetValue",
+                "FlsSetValue",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStringsW",
+                "GetFileSize",
+                "GetFileType",
+                "GetLastError",
+                "GetModuleFileNameA",
+                "GetModuleFileNameW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetTimeZoneInformation",
+                "GetVersion",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSetInformation",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryW",
+                "MultiByteToWideChar",
+                "QueryPerformanceCounter",
+                "ReadFile",
+                "RtlCaptureContext",
+                "RtlLookupFunctionEntry",
+                "RtlUnwindEx",
+                "RtlVirtualUnwind",
+                "SetEnvironmentVariableA",
+                "SetHandleCount",
+                "SetLastError",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc",
+                "WideCharToMultiByte",
+                "WriteFile"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "64bits",
+          "assembly",
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.silfpb",
+          "popular_threat_name": [
+            {
+              "value": "silfpb",
+              "count": 3
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 23
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240605",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20240605",
+            "category": "malicious",
+            "result": "Trojan.Win32.Small.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.149",
+            "engine_update": "20240531",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20240605",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240605",
+            "category": "malicious",
+            "result": "Generic.mg.a29408dbedf1e507"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240604",
+            "category": "malicious",
+            "result": "Trojan.GenericRI.S31419187"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240605",
+            "category": "malicious",
+            "result": "Generic trojan.jw"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240605",
+            "category": "malicious",
+            "result": "Generic .jw"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20240530",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5127",
+            "engine_update": "20240604",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win64.5467"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "aa67b7141327c0fad9881597c76282c0",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:44.802724",
+      "vt_found": true,
+      "malicious_count": 30,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 29,
+      "total_engines": 74,
+      "first_seen": 1585275595,
+      "last_seen": 1721367154,
+      "reputation": -64,
+      "names": [
+        "aa67b7141327c0fad9881597c76282c0.virobj",
+        "20200308-sitrep-48-covid-19.pdf.lnk"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1160121,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut",
+        "md5": "aa67b7141327c0fad9881597c76282c0",
+        "sha1": "2ea6ee7b3bbcfb06da23627f76df93c69061af59",
+        "sha256": "d67ab3d7e09ee705111ee707c528c18a1caab04ab77a5f2b2b58ba58be7f3060",
+        "ssdeep": "24576:CQjIcFyV0dxCboFKK6irgwX7tkErksUJnUXo7B5jj86X:CQRAoXBXJxmJn3n3X",
+        "tlsh": "T1FF35333E6F7774BED6684038604BDF2D5DF1AE97C400C69AAFC654C71088E0587AEAD4"
+      },
+      "additional_details": {
+        "tags": [
+          "checks-network-adapters",
+          "runtime-modules",
+          "direct-cpu-clock-access",
+          "lnk",
+          "detect-debug-environment"
+        ],
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "1.3.0.9899",
+            "engine_update": "20220404",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20220408",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Generic.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20220408",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.42906333"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.10.2019.1",
+            "engine_update": "20211026",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "14.00",
+            "engine_update": "20220408",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "1.1.3.1",
+            "engine_update": "20220408",
+            "category": "malicious",
+            "result": "Trojan.Downloader.LnK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.2.2.27",
+            "engine_update": "20220408",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.9.0.0",
+            "engine_update": "20220401",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.5.41729",
+            "engine_update": "20220408",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.5.41729",
+            "engine_update": "20220408",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "c657e04141252e39b9fa75489f6320f5",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:45.425459",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 25,
+      "total_engines": 76,
+      "first_seen": 1589319051,
+      "last_seen": 1753380088,
+      "reputation": -1,
+      "names": [
+        "Tokbox icon - Odds and Ends - iOS - Zeplin.lnk",
+        "c657e04141252e39b9fa75489f6320f5"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 69204,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Relative path, Has command line arguments, Icon number=0, ctime=Mon May 11 08:09:03 2020, mtime=Mon May 11 08:09:03 2020, atime=Mon May 11 08:09:03 2020, length=0, window=hidenormalshowminimized",
+        "md5": "c657e04141252e39b9fa75489f6320f5",
+        "sha1": "9b638f77634f535e52527d43ad850133788bfb0c",
+        "sha256": "1074654a3f3df73f6e0fd0ad81597c662b75c273c92dc75c5a6bea81f093ef81",
+        "ssdeep": "1536:JbQ+XVUACPoQ6JS3QCge9GBN9yxPPYhKhETasWhU3iKBn/5HndaAGA:NUACJQnJBN9wBudWSbN/VdoA",
+        "tlsh": "T121630223A1C76618D6B09EBC355BD549BD5CE603CC7AE8AC4604D09E1419B60DC9EF3F",
+        "vhash": "8933288afaa3355969d1d802d126b05d"
+      },
+      "additional_details": {
+        "tags": [
+          "long-command-line-arguments",
+          "long-sleeps",
+          "direct-cpu-clock-access",
+          "hiding-window",
+          "abused-exe-pattern",
+          "executes-dropped-file",
+          "large-file",
+          "lnk",
+          "high-entropy"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 26,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            },
+            {
+              "count": 2,
+              "value": "downloader"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "droid"
+            },
+            {
+              "count": 4,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "higaisa"
+            }
+          ],
+          "suggested_threat_label": "trojan.droid/winlnk"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "lnk.trojan.winlnk"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.kg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5410",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "Trojan.Downloader.Script.210"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250721",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1074654a3f3df73f6e0fd0ad81597c662b75c273c92dc75c5a6bea81f093ef81",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:46.031847",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 25,
+      "total_engines": 76,
+      "first_seen": 1589319051,
+      "last_seen": 1753380088,
+      "reputation": -1,
+      "names": [
+        "Tokbox icon - Odds and Ends - iOS - Zeplin.lnk",
+        "c657e04141252e39b9fa75489f6320f5"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 69204,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Relative path, Has command line arguments, Icon number=0, ctime=Mon May 11 08:09:03 2020, mtime=Mon May 11 08:09:03 2020, atime=Mon May 11 08:09:03 2020, length=0, window=hidenormalshowminimized",
+        "md5": "c657e04141252e39b9fa75489f6320f5",
+        "sha1": "9b638f77634f535e52527d43ad850133788bfb0c",
+        "sha256": "1074654a3f3df73f6e0fd0ad81597c662b75c273c92dc75c5a6bea81f093ef81",
+        "ssdeep": "1536:JbQ+XVUACPoQ6JS3QCge9GBN9yxPPYhKhETasWhU3iKBn/5HndaAGA:NUACJQnJBN9wBudWSbN/VdoA",
+        "tlsh": "T121630223A1C76618D6B09EBC355BD549BD5CE603CC7AE8AC4604D09E1419B60DC9EF3F",
+        "vhash": "8933288afaa3355969d1d802d126b05d"
+      },
+      "additional_details": {
+        "tags": [
+          "long-command-line-arguments",
+          "long-sleeps",
+          "direct-cpu-clock-access",
+          "hiding-window",
+          "abused-exe-pattern",
+          "executes-dropped-file",
+          "large-file",
+          "lnk",
+          "high-entropy"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "droid",
+              "count": 7
+            },
+            {
+              "value": "winlnk",
+              "count": 4
+            },
+            {
+              "value": "higaisa",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 26
+            },
+            {
+              "value": "dropper",
+              "count": 3
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.droid/winlnk"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "lnk.trojan.winlnk"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.kg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5410",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "Trojan.Downloader.Script.210"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250721",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "50d081e526beeb61dc6180f809d6230e7cc56d9a2562dd0f7e01f7c6e73388d9",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:46.632552",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 23,
+      "total_engines": 77,
+      "first_seen": 1590739434,
+      "last_seen": 1722336005,
+      "reputation": -1,
+      "names": [
+        "Curriculum Vitae_WANG LEI_Hong Kong Polytechnic University.pdf.lnk"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 1668,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Description string, Has command line arguments, Icon number=0, ctime=Thu May 28 02:35:19 2020, mtime=Thu May 28 02:35:19 2020, atime=Thu May 28 02:35:19 2020, length=0, window=hidenormalshowminimized",
+        "md5": "b32a91f20a3efdbcfef53a578ae760ce",
+        "sha1": "e02a0449c500603de8613e1565eba68027ad0c5e",
+        "sha256": "50d081e526beeb61dc6180f809d6230e7cc56d9a2562dd0f7e01f7c6e73388d9",
+        "ssdeep": "48:8aMD5z2yB3Nt3Kg0v83KZFfLT+RNC5dg5:8aM9CyB3N4g0vzZFfLT+RNP",
+        "tlsh": "T1BC31862536FD0B04F3BA863716B9D7444A39B862E932EB6C0511D2CD39219409D2AF3B",
+        "vhash": "b31d0e10907777bc6268fcdaf2ed90b6"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "hiding-window",
+          "abused-exe-pattern",
+          "executes-dropped-file",
+          "long-sleeps",
+          "long-command-line-arguments",
+          "lnk"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 23
+            },
+            {
+              "value": "downloader",
+              "count": 4
+            }
+          ],
+          "suggested_threat_label": "trojan.erqv/winlnk",
+          "popular_threat_name": [
+            {
+              "value": "erqv",
+              "count": 7
+            },
+            {
+              "value": "winlnk",
+              "count": 4
+            },
+            {
+              "value": "higaisa",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240313",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Agent.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.3.0.0",
+            "engine_update": "20240313",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240312",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240312",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.zr"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "LNK/Downloader.ce"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240313",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5069",
+            "engine_update": "20240312",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c0a0266f6df7f1235aeb4aad554e505320560967248c9c5cce7409fc77b56bd5",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:47.260605",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 25,
+      "total_engines": 76,
+      "first_seen": 1589319049,
+      "last_seen": 1754402824,
+      "reputation": -1,
+      "names": [
+        "Conversations - iOS - Swipe Icons - Zeplin.lnk",
+        "45278d4ad4e0f4a891ec99283df153c3",
+        "g4ZokyumB2DC.tmp"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 69204,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Relative path, Has command line arguments, Icon number=0, ctime=Mon May 11 08:03:01 2020, mtime=Mon May 11 08:03:01 2020, atime=Mon May 11 08:03:01 2020, length=0, window=hidenormalshowminimized",
+        "md5": "45278d4ad4e0f4a891ec99283df153c3",
+        "sha1": "d500cec0ce5358751f3371b69a4a9bc402df8af4",
+        "sha256": "c0a0266f6df7f1235aeb4aad554e505320560967248c9c5cce7409fc77b56bd5",
+        "ssdeep": "1536:/bakXVUACPoQ6JS3QCge9GBN9yxPPYhKhETasWhU3iKBn/5Hndaf0:nUACJQnJBN9wBudWSbN/Vd+0",
+        "tlsh": "T167630123D587A714D6B49EB8356BAA49BC9DF307CC25F8AC4608C09A1409761DC9EF3F",
+        "vhash": "8933288afaa3355969d1d802d126b05d"
+      },
+      "additional_details": {
+        "tags": [
+          "high-entropy",
+          "abused-exe-pattern",
+          "long-command-line-arguments",
+          "lnk",
+          "hiding-window",
+          "large-file",
+          "direct-cpu-clock-access"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            },
+            {
+              "value": "dropper",
+              "count": 3
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "droid",
+              "count": 7
+            },
+            {
+              "value": "winlnk",
+              "count": 4
+            },
+            {
+              "value": "higaisa",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.droid/winlnk"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.kg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5417",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Downloader.Script.195"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250804",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c3a45aaf6ba9f2a53d26a96406b6c34a56f364abe1dd54d55461b9cc5b9d9a04",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:47.890407",
+      "vt_found": true,
+      "malicious_count": 30,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 32,
+      "total_engines": 77,
+      "first_seen": 1589306397,
+      "last_seen": 1713362151,
+      "reputation": 0,
+      "names": [
+        "Project link and New copyright policy.rar"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 130586,
+        "type_description": "RAR",
+        "magic": "RAR archive data, v5",
+        "md5": "2ffb817ff7ddcfa216da31f50e199df1",
+        "sha1": "51277838c0492012065ad38abe02e7be9410df7a",
+        "sha256": "c3a45aaf6ba9f2a53d26a96406b6c34a56f364abe1dd54d55461b9cc5b9d9a04",
+        "ssdeep": "3072:kdzkA1jIAy6wne0rISQ6pAwUrdU4nwis1AJxUnhapw:WzkARIe0rISQ6pX4nwj1AJxUnht",
+        "tlsh": "T10AD312730B969096EB2A92EF8D3BB2921241CD94CE1DD67AE0355F1F26660FB03C4817"
+      },
+      "additional_details": {
+        "tags": [
+          "rar"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.winlnk/higaisa",
+          "popular_threat_name": [
+            {
+              "count": 4,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "higaisa"
+            },
+            {
+              "count": 2,
+              "value": "winnti"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 19,
+              "value": "trojan"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 50,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "LnkMalicious"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "7.5",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.ZIP.WinLNK.4!c"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.62.1180",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.MulDrop12.19473"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.3.0.0",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240314",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.43290679"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "PDF.Phish.38053"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240313",
+            "category": "malicious",
+            "result": "LNK/Downloader.ce"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240314",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5070",
+            "engine_update": "20240313",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "c613487a5fc65b3b4ca855980e33dd327b3f37a61ce0809518ba98b454ebf68b",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:48.475325",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 22,
+      "total_engines": 76,
+      "first_seen": 1590818104,
+      "last_seen": 1753384149,
+      "reputation": 0,
+      "names": [
+        "International English Language Testing System certificate.pdf.lnk",
+        "997ab0b59d865c4bd63cc55b5e9c8b48"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 87672,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Description string, Has Relative path, Has command line arguments, Icon number=0, ctime=Tue May 26 09:18:16 2020, mtime=Tue May 26 09:18:16 2020, atime=Tue May 26 09:18:16 2020, length=0, window=hidenormalshowminimized",
+        "md5": "997ab0b59d865c4bd63cc55b5e9c8b48",
+        "sha1": "0f1f2431ecccb980f7d93b9af52139d0d508510f",
+        "sha256": "c613487a5fc65b3b4ca855980e33dd327b3f37a61ce0809518ba98b454ebf68b",
+        "ssdeep": "1536:p7ITv0ieV7Qw/xqz7fb+QHJXrpY/5HqzeqqPGk1kGH3ZkODj3xiSOj2H2mpzDGKm:p72vBm//xm7a6JW58OPGk1XHiODjESGN",
+        "tlsh": "T11C83021050DC3DADD74E9ABB61728E9F227B6602E484EF1A1188CDCB70938203B1DFA5",
+        "vhash": "86001645949c2c4dcf56aebc0672795d"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "large-file",
+          "long-command-line-arguments",
+          "abused-exe-pattern",
+          "executes-dropped-file",
+          "high-entropy",
+          "hiding-window",
+          "lnk"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.erqv/winlnk",
+          "popular_threat_category": [
+            {
+              "count": 26,
+              "value": "trojan"
+            },
+            {
+              "count": 5,
+              "value": "downloader"
+            },
+            {
+              "count": 2,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 6,
+              "value": "erqv"
+            },
+            {
+              "count": 5,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "lnkobf"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.WinLNK.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "lnk.trojan.winlnk"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.mg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250724",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.ERQV"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "dcd2531aa89a99f009a740eab43d2aa2b8c1ed7c8d7e755405039f3a235e23a6",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:49.064587",
+      "vt_found": true,
+      "malicious_count": 41,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 21,
+      "total_engines": 76,
+      "first_seen": 1590818103,
+      "last_seen": 1755164962,
+      "reputation": -1,
+      "names": [
+        "Curriculum Vitae_WANG LEI_Hong Kong Polytechnic University.pdf.lnk",
+        "dcd2531aa89a99f009a740eab43d2aa2b8c1ed7c8d7e755405039f3a235e23a6",
+        "4a4a223893c67b9d34392670002d58d7"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 310888,
+        "type_description": "Windows shortcut",
+        "magic": "MS Windows shortcut, Item id list present, Has Description string, Has Relative path, Has command line arguments, Icon number=0, ctime=Thu May 28 02:35:19 2020, mtime=Thu May 28 02:35:19 2020, atime=Thu May 28 02:35:19 2020, length=0, window=hidenormalshowminimized",
+        "md5": "4a4a223893c67b9d34392670002d58d7",
+        "sha1": "281c1b196cd992906d8583e64011dc28d9c52e3c",
+        "sha256": "dcd2531aa89a99f009a740eab43d2aa2b8c1ed7c8d7e755405039f3a235e23a6",
+        "ssdeep": "6144:rNUAriEMavMpsfiTn3lmm5pH+EODmvoyGjkmTWkF8DCE546:nXMpBr3ldVdvL8TWkF8V546",
+        "tlsh": "T1676423753EDB5F39672C92B9457C7F1C098415BA89897CE4A862CBC93843BC1CB1982D",
+        "vhash": "0ab79cbd2de014b4356f6ad72be124cb"
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "long-command-line-arguments",
+          "hiding-window",
+          "high-entropy",
+          "executes-dropped-file",
+          "lnk",
+          "abused-exe-pattern",
+          "large-file"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.droid/winlnk",
+          "popular_threat_name": [
+            {
+              "count": 9,
+              "value": "droid"
+            },
+            {
+              "count": 3,
+              "value": "winlnk"
+            },
+            {
+              "count": 2,
+              "value": "lnkobf"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 25,
+              "value": "trojan"
+            },
+            {
+              "count": 5,
+              "value": "dropper"
+            },
+            {
+              "count": 4,
+              "value": "downloader"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.WinLNK.Droid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "lnk.trojan.droid"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "LNK.Trojan.Agent.37985"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "BehavesLike.Trojan.fg"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250814",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "df999d24bde96decdbb65287ca0986db98f73b4ed477e18c3ef100064bceba6d",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:49.711134",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 26,
+      "total_engines": 76,
+      "first_seen": 1590805415,
+      "last_seen": 1753340496,
+      "reputation": 0,
+      "names": [
+        "615400.lnk",
+        "CV_Colliers.rar"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 307402,
+        "type_description": "RAR",
+        "magic": "RAR archive data, v5",
+        "md5": "278d191d794f84034c90bf9a3068d51e",
+        "sha1": "a04cc29ba0f37607e25e55875b4b02779675a80a",
+        "sha256": "df999d24bde96decdbb65287ca0986db98f73b4ed477e18c3ef100064bceba6d",
+        "ssdeep": "6144:jremjhbbCt08Zl2qiAbM2x37JrIJYmDFt8rjND6HQPlOjdfYIkX6D5P:jZjhyt08rniAbV1SYEfoRE+OjFJkK9P",
+        "tlsh": "T15464237EAB2F0E764AD5A298C11D30C04D07E761C2C98D0FFA80A7D694736FEB5A51D4"
+      },
+      "additional_details": {
+        "tags": [
+          "rar"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "droid"
+            },
+            {
+              "count": 2,
+              "value": "lnkobf"
+            },
+            {
+              "count": 2,
+              "value": "winlnk"
+            }
+          ],
+          "suggested_threat_label": "trojan.droid/lnkobf",
+          "popular_threat_category": [
+            {
+              "count": 26,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "downloader"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 50,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "LnkMalicious"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250723",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "Trojan.ZIP.Droid.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250723",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "rar.trojan.droid"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250723",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "LNK/Downloader.ce"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250724",
+            "category": "malicious",
+            "result": "Trojan.Agent.LNK.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250723",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250723",
+            "category": "malicious",
+            "result": "Trojan.LNK.Droid.2.Gen"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.76.6.149",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/",
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:50.369827",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1501502544,
+      "last_seen": 1755308788,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "command and control"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs",
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/45.76.6.149/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/45.76.6.149\n\nPostal Code: 08854",
+            "severity": "low",
+            "timestamp": 1692282807
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://goodhk.azurewebsites.net",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:51.077836",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1590891718,
+      "last_seen": 1754824327,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs",
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nContextual Indicators: Domain is classified as Spyware / Malicious Sites\n\nCreated On: 2012-01-24\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "timestamp": 1692282807
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://goodhk.azurewebsites.net/inter.php",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:51.671699",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 26,
+      "total_engines": 96,
+      "first_seen": 1590785743,
+      "last_seen": 1740074996,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "multiple-redirects"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious, Phishing (alphaMountain.ai)",
+          "Xcitium Verdict Cloud": "computing & technology",
+          "Sophos": "command and control",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A",
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "severity": "high",
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nContextual Indicators: Domain is classified as Spyware / Malicious Sites\n\nCreated On: 2012-01-24\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "timestamp": 1692282807,
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://sixindent.epizy.com",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:52.345421",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1591017543,
+      "last_seen": 1753645539,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Hosting, Malicious (alphaMountain.ai)",
+          "Sophos": "dynamic dns and isp sites",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1692282806,
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nCreated On: 2013:08:19 00:00:00\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://sixindent.epizy.com/inter.php",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:53.112127",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1591019263,
+      "last_seen": 1747176563,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Hosting, Malicious (alphaMountain.ai)",
+          "Sophos": "command and control",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1692282806,
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nCreated On: 2013:08:19 00:00:00\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.comcleanner.info",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:53.696457",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 62,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1591284719,
+      "last_seen": 1754017837,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "command and control",
+          "Webroot": "Phishing and Other Frauds",
+          "Forcepoint ThreatSeeker": "web infrastructure"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs",
+            "details": "Contextual Indicators: Known malicious website\n\nContextual Indicators: Domain is classified as 'malicious'\n\nContextual Indicators: Domain is classified as Spyware / Malicious Sites\n\nCreated On: 2021-08-27\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "timestamp": 1692282807
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://zeplin.atwebpages.com",
+        "sources": [
+          "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:54.274113",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1591284719,
+      "last_seen": 1755497073,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "third-party-cookies"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "web hosting"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1692282807,
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nContextual Indicators: Domain is classified as Spyware / Malicious Sites\n\nCreated On: 2007:05:11 00:00:00\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://zeplin.atwebpages.com/inter.php",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:54.831018",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 2,
+      "harmless_count": 58,
+      "undetected_count": 27,
+      "total_engines": 96,
+      "first_seen": 1591385503,
+      "last_seen": 1740075032,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious, Phishing (alphaMountain.ai)",
+          "Sophos": "command and control",
+          "Forcepoint ThreatSeeker": "web hosting"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A",
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs",
+            "details": "Contextual Indicators: Domain is classified as 'malicious web sites'\n\nContextual Indicators: Known compromised domain\n\nContextual Indicators: Known malicious website\n\nContextual Indicators: Domain is classified as Spyware / Malicious Sites\n\nCreated On: 2007:05:11 00:00:00\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/detection\n\nClassification Description: URL that may infect its visitors with malware.",
+            "severity": "high",
+            "timestamp": 1692282807
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://45.76.6.149/msdn.cpp",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:55.635593",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 29,
+      "total_engines": 96,
+      "first_seen": 1591385504,
+      "last_seen": 1743010606,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "ip"
+        ],
+        "categories": {
+          "Xcitium Verdict Cloud": "technical information",
+          "Sophos": "command and control",
+          "Forcepoint ThreatSeeker": "business and economy"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "crowdsourced_context": [
+          {
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/45.76.6.149/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/45.76.6.149\n\nPostal Code: 08854",
+            "timestamp": 1692282807,
+            "severity": "low",
+            "title": "New LNK attack tied to Higaisa APT discovered - Malwarebytes Labs _ Malwarebytes Labs",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://app.zeplin.io/project/5b5741802f3131c3a63057a4/screen/5b589f697e44cee37e0e61df",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:56.175800",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 28,
+      "total_engines": 96,
+      "first_seen": 1591385504,
+      "last_seen": 1740100015,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "external-resources",
+          "iframes",
+          "third-party-cookies"
+        ],
+        "categories": {
+          "BitDefender": "webmail",
+          "Xcitium Verdict Cloud": "software-hardware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://comcleanner.info/msdn.cpp",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:56.883884",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 14,
+      "total_engines": 90,
+      "first_seen": 1591900867,
+      "last_seen": 1713296352,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Sophos": "command and control",
+          "Xcitium Verdict Cloud": "media sharing",
+          "Forcepoint ThreatSeeker": "suspicious content"
+        },
+        "threat_names": [
+          "C2/Generic-A"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:57.445852",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 72,
+      "undetected_count": 25,
+      "total_engines": 97,
+      "first_seen": 1303749234,
+      "last_seen": 1756651058,
+      "reputation": 288,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Information Technology (alphaMountain.ai)",
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [
+          "malware_download"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://jsproxy.dll",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:58.162575",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://msdn.microsoft.com",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:59.076030",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1423337148,
+      "last_seen": 1756577856,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "multiple-redirects",
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Business/Economy, Information Technology (alphaMountain.ai)",
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.google.com",
+        "sources": [
+          "https://www.zscaler.com/blogs/security-research/return-higaisa-apt"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:23:59.704289",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1281524160,
+      "last_seen": 1756650650,
+      "reputation": 404,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "searchengines",
+          "Sophos": "search engines",
+          "Forcepoint ThreatSeeker": "search engines and portals"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

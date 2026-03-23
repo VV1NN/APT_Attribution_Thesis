@@ -1,0 +1,1248 @@
+{
+  "organization": "Windshift",
+  "scan_time": "2025-08-31T17:56:42.320471",
+  "statistics": {
+    "total_iocs": 11,
+    "processed": 11,
+    "found_in_vt": 9,
+    "malicious": 6,
+    "suspicious": 1,
+    "harmless": 2,
+    "errors": 2
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "8.8.8.8",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:33.105746",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756634165,
+      "reputation": 561,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "8.8.8.0/24",
+        "asn": 15169,
+        "as_owner": "GOOGLE",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Google Trust Services",
+          "CN": "WR2"
+        },
+        "subject": {
+          "CN": "dns.google"
+        },
+        "validity": {
+          "not_after": "2025-11-03 19:23:16",
+          "not_before": "2025-08-11 19:23:17"
+        },
+        "version": "V3",
+        "serial_number": "e312d1cde8d32ed10abd3df958dbea5b",
+        "thumbprint": "bb68b2d6339f8628eef36c8d6f9b9d4c3ae810ba",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "f11b0e7e78031c692e19d2f3a2efba68e091ebf5f879f2a439d0cacd21807d6292426b94d660b0debbf58543b6f3f433e165410670712ae97ba7c7feee5051193955d018ef7f162951ddf6e1238142fcd5f45d063458f42c71523b2dc4f9d471f7aaceca6aa9b9dc484050e254af65fc87f53d547957d99ae9322357e2c660412949df38ff8a9a3286b180344e234e7a9a3e134a831b6be26fd97a7621c2bbe5898a4775375a14aa9815827deb046d83399c777cd1eb684a815c17f8889af0c9aa81afee0e4b3a1b35cb50cd776a27feefec2d502531b488a75eab31e84643ef5514fe44a7410baa58b8b0bcc93a75b6220ec9001db2269ce956f528d05e9673",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "29d3fd00029d29d00042d43d00041d598ac0c1012db967bb1ad0ff2491b3ae"
+      },
+      "whois_info": "NetRange: 8.8.8.0 - 8.8.8.255\nCIDR: 8.8.8.0/24\nNetName: GOGL\nNetHandle: NET-8-8-8-0-2\nParent: NET8 (NET-8-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Google LLC (GOGL)\nRegDate: 2023-12-28\nUpdated: 2023-12-28\nRef: https://rdap.arin.net/registry/ip/8.8.8.0\nOrgName: Google LLC\nOrgId: GOGL\nAddress: 1600 Amphitheatre Parkway\nCity: Mountain View\nStateProv: CA\nPostalCode: 94043\nCountry: US\nRegDate: 2000-03-30\nUpdated: 2019-10-31\nComment: Please note that the recommended way to file abuse complaints are located in the following links. \nComment: \nComment: To report abuse and illegal activity: https://www.google.com/contact/\nComment: \nComment: For legal requests: http://support.google.com/legal \nComment: \nComment: Regards, \nComment: The Google Team\nRef: https://rdap.arin.net/registry/entity/GOGL\nOrgTechHandle: ZG39-ARIN\nOrgTechName: Google LLC\nOrgTechPhone: +1-650-253-0000 \nOrgTechEmail: arin-contact@google.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ZG39-ARIN\nOrgAbuseHandle: ABUSE5250-ARIN\nOrgAbuseName: Abuse\nOrgAbusePhone: +1-650-253-0000 \nOrgAbuseEmail: network-abuse@google.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE5250-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "timestamp": 1694383565,
+            "details": "AsyncRAT botnet C2 server (confidence level: 100%)",
+            "title": "ThreatFox IOCs for 2023-09-10",
+            "severity": "medium",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "576648e32a3d8b82ca71961b7a986505",
+        "sources": [
+          "https://www.scribd.com/document/661837258/WINDSHIFT-summit-archive-1554718868"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:34.025158",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "4613f5b1e172cb08d6a2e7f2186e2fdd875b24e5",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:34.948822",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 30,
+      "total_engines": 76,
+      "first_seen": 1490820478,
+      "last_seen": 1754401254,
+      "reputation": 0,
+      "names": [
+        "ad282e5ba2bc06a128eb20da753350278a2e47ab545fdab808e94a2ff7b4061e",
+        "VirusShare_36284fdcd2c9cf53973adcae9d5144d1",
+        "36284fdcd2c9cf53973adcae9d5144d1.virus",
+        "Meeting_Agenda.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 252284,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+        "md5": "36284fdcd2c9cf53973adcae9d5144d1",
+        "sha1": "4613f5b1e172cb08d6a2e7f2186e2fdd875b24e5",
+        "sha256": "ad282e5ba2bc06a128eb20da753350278a2e47ab545fdab808e94a2ff7b4061e",
+        "ssdeep": "6144:KDY6w9qtblTi2V1UIQ70PtsTKGVwb+3G8DwiP:KDTttZVCIU0Pt+K4wb+W8DD",
+        "tlsh": "T1C63422978EAC0C3AF19925FDC8461C19D63FB369A040DD0D474F0687299660ABA45AFF",
+        "vhash": "961384dc2fcc24562b216bfcd64b3c7e"
+      },
+      "additional_details": {
+        "tags": [
+          "revoked-cert",
+          "signed",
+          "zip",
+          "contains-macho",
+          "mac-app"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.windtail/laoshu",
+          "popular_threat_category": [
+            {
+              "count": 21,
+              "value": "trojan"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "windtail"
+            },
+            {
+              "count": 6,
+              "value": "laoshu"
+            },
+            {
+              "count": 2,
+              "value": "dangeroussig"
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.ZIP.WindTail.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "zip.trojan.macos"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "RDN/Generic.osx"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Trojan.OSX.WindTail"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5417",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Agent.OSX.247"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "6d1614617732f106d5ab01125cb8e57119f29d91",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:35.868908",
+      "vt_found": true,
+      "malicious_count": 40,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 28,
+      "total_engines": 76,
+      "first_seen": 1495897645,
+      "last_seen": 1755715594,
+      "reputation": -62,
+      "names": [
+        "ebba0fd56ad6f861e7103b9dcbbb21353a9d48fa40d23eb83efd78523b5b40d3",
+        "Scandal_Report_2017.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 252445,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+        "md5": "ff044de5e7a58d5125ba822ca379db2d",
+        "sha1": "6d1614617732f106d5ab01125cb8e57119f29d91",
+        "sha256": "ebba0fd56ad6f861e7103b9dcbbb21353a9d48fa40d23eb83efd78523b5b40d3",
+        "ssdeep": "6144:Fdz0Sn8qtblTi2V1UIQ70PtsTKGVwb+3G8Dwi4:FdjrttZVCIU0Pt+K4wb+W8Dc",
+        "tlsh": "T1283412AB82E82D13D1AEB8BD90051D2EC77F3285F144E95D554A06CF39EB90EB1025EF",
+        "vhash": "961384dc2fcc24562b216bfcd64b3c7e"
+      },
+      "additional_details": {
+        "tags": [
+          "mac-app",
+          "zip",
+          "contains-macho",
+          "revoked-cert",
+          "signed"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.windtail/laoshu",
+          "popular_threat_name": [
+            {
+              "value": "windtail",
+              "count": 11
+            },
+            {
+              "value": "laoshu",
+              "count": 8
+            },
+            {
+              "value": "dangeroussig",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 23
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.ZIP.WindTail.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "zip.trojan.laoshu"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "RDN/Generic.osx"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5428",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.Agent.OSX.99"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "758f10bd7c69bd2c0b38fd7d523a816db4addd90",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3D.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:36.791923",
+      "vt_found": true,
+      "malicious_count": 39,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 25,
+      "total_engines": 76,
+      "first_seen": 1490820374,
+      "last_seen": 1755356748,
+      "reputation": 0,
+      "names": [
+        "usrnode"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 109376,
+        "type_description": "Mach-O",
+        "magic": "Mach-O 64-bit x86_64 executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|BINDS_TO_WEAK|PIE>",
+        "md5": "c68a856ec8f4529147ce9fd3a77d7865",
+        "sha1": "758f10bd7c69bd2c0b38fd7d523a816db4addd90",
+        "sha256": "ceebf77899d2676193dbb79e660ad62d97220fd0a54380804bc3737c77407d2f",
+        "ssdeep": "3072:tavEKd29tfKWp18xEq+xN/1Zx2Q5jp9zlY:HKd29th2xKHbjp9O",
+        "tlsh": "T1B0B35C677720488ADCCC8038896FD35287A5FC9A5E19730E1796E7447FF4FB2AA0650E",
+        "vhash": "593a6a7b8e9f20ab785dcb9163eaa74d"
+      },
+      "additional_details": {
+        "tags": [
+          "macho",
+          "64bits",
+          "revoked-cert",
+          "signed",
+          "invalid-signature"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 23
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "laoshu",
+              "count": 13
+            },
+            {
+              "value": "windtail",
+              "count": 9
+            },
+            {
+              "value": "dangeroussig",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.laoshu/windtail"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250816",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.OSX.LaoShu.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Osx.Revoked.Certificate-7166908-1"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "macho.trojan.laoshu"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250815",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250815",
+            "category": "malicious",
+            "result": "RDN/Generic.osx"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.OSX.WindTail"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250816",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "da342c4ca1b2ab31483c6f2d43cdcc195dfe481b",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:37.796471",
+      "vt_found": true,
+      "malicious_count": 38,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 29,
+      "total_engines": 76,
+      "first_seen": 1490820244,
+      "last_seen": 1755710113,
+      "reputation": 0,
+      "names": [
+        "190fde5eca774936d78e37f73b2ff1fa",
+        "d3baa6af5bbb9318126dc62a7dcab19d1dd5592c30ea552c21361d0cc0ebe2f5",
+        "Final_Presentation.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 189321,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+        "md5": "190fde5eca774936d78e37f73b2ff1fa",
+        "sha1": "da342c4ca1b2ab31483c6f2d43cdcc195dfe481b",
+        "sha256": "d3baa6af5bbb9318126dc62a7dcab19d1dd5592c30ea552c21361d0cc0ebe2f5",
+        "ssdeep": "3072:A9HrUQDGzWvlNjmoVg/1DUKfbF1Qmrk3aKGraQ/Et45nHZQ4ZNu19vc:A9LczOlN/NKfBS+faY2snWsu1+",
+        "tlsh": "T1AF04128117E46A35FF56C1BA58688E357832E1C9D8C8E84E9C68DF985F27073BDC7098",
+        "vhash": "961384dc2fcc24562b216bfcd64b3c7e"
+      },
+      "additional_details": {
+        "tags": [
+          "contains-macho",
+          "mac-app",
+          "signed",
+          "zip",
+          "revoked-cert"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 13,
+              "value": "laoshu"
+            },
+            {
+              "count": 8,
+              "value": "windtail"
+            },
+            {
+              "count": 2,
+              "value": "dangeroussig"
+            }
+          ],
+          "suggested_threat_label": "trojan.laoshu/windtail",
+          "popular_threat_category": [
+            {
+              "count": 21,
+              "value": "trojan"
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.ZIP.LaoShu.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "zip.trojan.laoshu"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "RDN/Generic.osx"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.OSX.WindTail"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "df2a83dc0ae09c970e7318b93d95041395976da7",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:38.605901",
+      "vt_found": true,
+      "malicious_count": 42,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 26,
+      "total_engines": 76,
+      "first_seen": 1498125107,
+      "last_seen": 1755711650,
+      "reputation": 0,
+      "names": [
+        "dde5d98f6ee472f3779ece1cc44e18243c0eb4d12f8abc4b56f559da50d896db",
+        "NPC_Agenda_230617.zip"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 252256,
+        "type_description": "ZIP",
+        "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+        "md5": "6aa546f5a0831cf49ec6509c5002a1c6",
+        "sha1": "df2a83dc0ae09c970e7318b93d95041395976da7",
+        "sha256": "dde5d98f6ee472f3779ece1cc44e18243c0eb4d12f8abc4b56f559da50d896db",
+        "ssdeep": "6144:LlbtzMDPiqtblTi2V1UIQ70PtsTKGVwb+3G8Dwiy:LENttZVCIU0Pt+K4wb+W8DW",
+        "tlsh": "T1023423EF4B782A23C6AA5179C4450C21D3FF7356A190C61F169F05493EA390EF682D6F",
+        "vhash": "961384dc2fcc24562b216bfcd64b3c7e"
+      },
+      "additional_details": {
+        "tags": [
+          "mac-app",
+          "signed",
+          "revoked-cert",
+          "contains-macho",
+          "zip"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "laoshu",
+              "count": 12
+            },
+            {
+              "value": "windtail",
+              "count": 10
+            },
+            {
+              "value": "cmyvd",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.laoshu/windtail",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 24
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.ZIP.LaoShu.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "zip.trojan.laoshu"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250819",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "RDN/Generic.osx"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.OSX.WindTail"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MAC.WindTail.A"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://flux2key.com/liaROelcOeVvfjN/fsfSQNrIyxeRvXH.php?very=%@&xnvk=%@",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html",
+          "https://objective-see.com/blog/blog_0x3D.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:39.556516",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 5,
+      "total_engines": 69,
+      "first_seen": 1546503975,
+      "last_seen": 1546503988,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwarePatrol": {
+            "method": "blacklist",
+            "engine_name": "MalwarePatrol",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Netcraft": {
+            "method": "blacklist",
+            "engine_name": "Netcraft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Forcepoint ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://flux2key.com/liaROelcOeVvfjN/fsfSQNrIyxeRvXH.php?very=MTUwMTIwMTkxNDI0MDc1&xnvk=ss",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3D.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:40.477043",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://example.com/upload.cgi",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3D.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:41.502098",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 6,
+      "total_engines": 69,
+      "first_seen": 1556291841,
+      "last_seen": 1743597759,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwarePatrol": {
+            "method": "blacklist",
+            "engine_name": "MalwarePatrol",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Netcraft": {
+            "method": "blacklist",
+            "engine_name": "Netcraft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Forcepoint ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://t.co/nQ7tHZm4Ec",
+        "sources": [
+          "https://objective-see.com/blog/blog_0x3B.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:56:42.319769",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 1,
+      "harmless_count": 70,
+      "undetected_count": 24,
+      "total_engines": 95,
+      "first_seen": 1717859099,
+      "last_seen": 1717859712,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "iframes",
+          "third-party-cookies",
+          "trackers"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Xcitium Verdict Cloud": "social networking",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "social web - twitter"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

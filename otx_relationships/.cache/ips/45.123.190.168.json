@@ -1,0 +1,53 @@
+{
+  "indicator": "45.123.190.168",
+  "type": "ip",
+  "passive_dns": [
+    {
+      "hostname": "onedrive-jp.com",
+      "first": "2018-11-08T23:00:00",
+      "last": "2018-11-08T23:00:00",
+      "record_type": "A"
+    }
+  ],
+  "malware": [
+    {
+      "hash": "088ae5b44c425c09a53b5e1b448e61a31a77e7507966e31ff863d3b93fb71028",
+      "detections": {
+        "avast": null,
+        "avg": null,
+        "clamav": "Win.Malware.Metasploit-10022275-0",
+        "msdefender": "Trojan:Win64/Meterpreter.B"
+      }
+    },
+    {
+      "hash": "0d9bf60c3d44c65150988d280963e60802831794a70fb458515decd85158088d",
+      "detections": {
+        "avast": "ELF:WellMess-A\\ [Trj]",
+        "avg": null,
+        "clamav": "Unix.Trojan.WellMess-6706034-0",
+        "msdefender": "Trojan:Linux/WellMess.A!MTB"
+      }
+    },
+    {
+      "hash": "49bfff6b91ee71bbf8fd94829391a36b844ffba104c145e01c92732ada52c8ba",
+      "detections": {
+        "avast": null,
+        "avg": null,
+        "clamav": "Unix.Trojan.WellMess-6706034-0",
+        "msdefender": null
+      }
+    }
+  ],
+  "geo": {
+    "country_code": "LT",
+    "country_name": "Lithuania",
+    "city": "Kaunas",
+    "asn": "AS133398 tele asia limited",
+    "latitude": 54.9038,
+    "longitude": 23.8924
+  },
+  "pulses": 1,
+  "adversary": [
+    "APT29"
+  ]
+}

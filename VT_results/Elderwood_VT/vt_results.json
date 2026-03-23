@@ -1,0 +1,455 @@
+{
+  "organization": "Elderwood",
+  "scan_time": "2025-08-31T22:03:21.898808",
+  "statistics": {
+    "total_iocs": 4,
+    "processed": 4,
+    "found_in_vt": 4,
+    "malicious": 0,
+    "suspicious": 2,
+    "harmless": 1,
+    "errors": 0
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "email",
+        "value": "isavailable@www.symantec.com",
+        "sources": [
+          "https://web.archive.org/web/20190717233006/http:/www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/the-elderwood-project.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:03:20.137439",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756648801,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "DigiCert Inc",
+          "CN": "DigiCert TLS RSA SHA256 2020 CA1"
+        },
+        "subject": {
+          "C": "US",
+          "ST": "California",
+          "L": "Palo Alto",
+          "O": "Broadcom Inc.",
+          "CN": "www.broadcom.com"
+        },
+        "validity": {
+          "not_after": "2026-04-03 23:59:59",
+          "not_before": "2025-04-03 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "4858d4a23e66c69d139a667f14965fa",
+        "thumbprint": "5c09329120cdb4b726cd07cef79fd85d9922eaf6",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "916bc7af62598965290e2466badc71e5dff4e3f56603d78b47db2242baed8ef3b93ea7812ee279f192e93c45cdf8109c3e99e6bcb803e3994dc1088a8019830d5804668dea93ea048fb051fe8c1ed8b2c08a262e5f0ba4320d8bd54a859aa29cc8437c99dcd6c1a76d694a5b51a31761c3834cac838618443cef272907720fb68a8bcca1ad261b7b4b2cf725e00e62dd3b0c92c1da4061f84bd5c2d508422d5dd3fb799e09ca67e14dbdcd6df5891636cf44252e9b747d9d463504531d02e69474af5c775b7b313347214ab6f8985a5d67dfdef1825862cf94aaa8e64b89187228ef2bc8d438bdd1675a6ac94599af929d9f96e3d8d1a6a202e3a07069d62755",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "29d3fd00029d29d00042d43d00041d5de67cc9954cc85372523050f20b5007"
+      },
+      "whois_info": "Creation Date: 1992-11-24T05:00:00Z\nDNSSEC: unsigned\nDomain Name: SYMANTEC.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nDomain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\nDomain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\nDomain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\nName Server: EDNS161.ULTRADNS.BIZ\nName Server: EDNS161.ULTRADNS.COM\nName Server: EDNS161.ULTRADNS.NET\nName Server: EDNS161.ULTRADNS.ORG\nRegistrar Abuse Contact Email: domainabuse@cscglobal.com\nRegistrar Abuse Contact Phone: 8887802723\nRegistrar IANA ID: 299\nRegistrar URL: http://cscdbs.com\nRegistrar WHOIS Server: whois.corporatedomains.com\nRegistrar: CSC Corporate Domains, Inc.\nRegistry Domain ID: 1132827_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2026-11-23T05:00:00Z\nUpdated Date: 2024-03-07T20:44:57Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "crowdsourced_context": [
+          {
+            "severity": "low",
+            "details": "Contextual Indicators: The URL is known benign by Check Point's Threat Cloud\n\nContextual Indicators: The domain’s Cisco Umbrella rank is 2390\n\nCreated On: 1992-11-24\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/4733f07fc86c153e4a3684d94e4f1627d01760bfd3596533c931ff59cc574d7d/detection\n\nClassification Description: Legitimate website which does not serve any malicious purpose.",
+            "timestamp": 1692401968,
+            "title": "CMSY10",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "71.6.217.131",
+        "sources": [
+          "https://web.archive.org/web/20190717233006/http:/www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/the-elderwood-project.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:03:20.702593",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 94,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1719307150,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "71.6.128.0/17",
+        "asn": 10439,
+        "as_owner": "CARINET",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "CariNet, Inc. CARINET-5 (NET-71-6-128-0-1) 71.6.128.0 - 71.6.255.255\nCariNet, Inc. NET-26 (NET-71-6-217-128-1) 71.6.217.128 - 71.6.217.191\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "The elderwood project",
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/71.6.217.131/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/71.6.217.131\n\nPostal Code: 92123",
+            "severity": "low",
+            "timestamp": 1692664390
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://twitter.com/threatintel",
+        "sources": [
+          "https://web.archive.org/web/20190717233006/http:/www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/the-elderwood-project.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:03:21.295815",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 1,
+      "harmless_count": 72,
+      "undetected_count": 18,
+      "total_engines": 91,
+      "first_seen": 1390201423,
+      "last_seen": 1707632089,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "im",
+          "Sophos": "social networks",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "social web - twitter"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.symantec.com/connect/symantec-blogs/sr",
+        "sources": [
+          "https://web.archive.org/web/20190717233006/http:/www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/the-elderwood-project.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:03:21.898415",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 1,
+      "harmless_count": 73,
+      "undetected_count": 17,
+      "total_engines": 91,
+      "first_seen": 1424373957,
+      "last_seen": 1707632118,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "multiple-redirects"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "title": "CMSY10",
+            "details": "Contextual Indicators: The URL is known benign by Check Point's Threat Cloud\n\nContextual Indicators: The domain’s Cisco Umbrella rank is 2390\n\nCreated On: 1992-11-24\n\nVirusTotal Link: https://www.virustotal.com/gui/domain/4733f07fc86c153e4a3684d94e4f1627d01760bfd3596533c931ff59cc574d7d/detection\n\nClassification Description: Legitimate website which does not serve any malicious purpose.",
+            "severity": "low",
+            "timestamp": 1692401968
+          }
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "indicator": "145.239.120.88",
+  "type": "ip",
+  "passive_dns": [
+    {
+      "hostname": "yourl.bid",
+      "first": "2018-06-17T22:00:00",
+      "last": "2018-06-17T22:00:00",
+      "record_type": "A"
+    }
+  ],
+  "malware": [
+    {
+      "hash": "23c44f7b45abbaed13445984bf39b00cbda5f025d17c943a1da2563d0f5fc713",
+      "detections": {
+        "avast": "Win32:Malware-gen",
+        "avg": null,
+        "clamav": "Win.Ransomware.Cerber-5970045-0",
+        "msdefender": "Ransom:Win32/Cerber"
+      }
+    },
+    {
+      "hash": "bd4fb7528041b9a6dd07d47890527426a9d8ae8e640318272d5eefff15b37916",
+      "detections": {
+        "avast": null,
+        "avg": null,
+        "clamav": null,
+        "msdefender": "Trojan:Win32/Swrort.A"
+      }
+    }
+  ],
+  "geo": {
+    "country_code": "FR",
+    "country_name": "France",
+    "city": null,
+    "asn": "AS16276 ovh sas",
+    "latitude": 48.8582,
+    "longitude": 2.3387
+  },
+  "pulses": 4,
+  "adversary": [
+    "APT35, Charming Kitten, Mint Sandstorm, Cobalt Mirage",
+    "Rocket Kitten"
+  ]
+}

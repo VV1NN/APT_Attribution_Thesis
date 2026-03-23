@@ -1,0 +1,1584 @@
+{
+  "organization": "admin@338",
+  "scan_time": "2025-08-31T17:02:38.023708",
+  "statistics": {
+    "total_iocs": 14,
+    "processed": 14,
+    "found_in_vt": 12,
+    "malicious": 5,
+    "suspicious": 1,
+    "harmless": 6,
+    "errors": 2
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "59.188.0.197",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:26.938763",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754299348,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "59.188.0.0/20",
+        "asn": 17444,
+        "as_owner": "HKBN Enterprise Solutions Limited",
+        "country": "HK",
+        "continent": "AS",
+        "regional_internet_registry": "APNIC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 59.188.0.192 - 59.188.0.223\nnetname: TCL-INT-HK\ndescr: TCL INTERNATIONAL - Internet Access\ncountry: HK\nadmin-c: NC315-AP\ntech-c: NC315-AP\ntech-c: TMT21-AP\nabuse-c: AH1343-AP\nstatus: ASSIGNED NON-PORTABLE\nmnt-by: MAINT-HK-HKBNESL\nmnt-irt: IRT-HKBNESL-HK\nlast-modified: 2024-02-02T02:37:24Z\nsource: APNIC\nirt: IRT-HKBNESL-HK\naddress: HKBN Enterprise Solutions Limited\naddress: 15/F, 18 Kin Hong Street, Trans Asia Centre, Kwai Chung, Kln\ne-mail: esabuse@hkbnes.net\nabuse-mailbox: esabuse@hkbnes.net\nadmin-c: TMT21-AP\ntech-c: IDC1-AP\ntech-c: NC315-AP\nauth: # Filtered\nremarks: esabuse@hkbnes.net was validated on 2025-02-21\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2025-02-21T01:42:45Z\nsource: APNIC\nrole: ABUSE HKBNESLHK\ncountry: ZZ\naddress: HKBN Enterprise Solutions Limited\naddress: 15/F, 18 Kin Hong Street, Trans Asia Centre, Kwai Chung, Kln\nphone: +000000000\ne-mail: esabuse@hkbnes.net\nadmin-c: TMT21-AP\ntech-c: IDC1-AP\ntech-c: NC315-AP\nnic-hdl: AH1343-AP\nremarks: Generated from irt object IRT-HKBNESL-HK\nremarks: esabuse@hkbnes.net was validated on 2025-02-21\nabuse-mailbox: esabuse@hkbnes.net\nmnt-by: APNIC-ABUSE\nlast-modified: 2025-02-21T01:43:01Z\nsource: APNIC\nperson: Network Management Center\nnic-hdl: NC315-AP\ne-mail: nmcdata@hkbnes.net\naddress: Hong Kong\nphone: + 852 - 2130-0120\nfax-no: + 852 - 2133 2175\ncountry: HK\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2021-09-08T05:17:18Z\nsource: APNIC\nperson: Tsang Man To\naddress: 15/F, 18 Kin Hong Street, Trans Asia Centre, Kwai Chung, Kln\ncountry: HK\nphone: +852-39993146\ne-mail: to.tsang@hkbn.com.hk\nnic-hdl: TMT21-AP\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2022-04-06T02:06:33Z\nsource: APNIC\nroute: 59.188.0.0/24\norigin: AS10103\ndescr: New World Telecommunications Limited\n Hong Kong Broadband Network Ltd\n 15/F, Trans Asia Centre\n 18 Kin Hong Street,\n Kwai Chung, N.T.\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2021-09-08T05:49:22Z\nsource: APNIC\nroute: 59.188.0.0/24\ndescr: NWT Route Object\norigin: AS17444\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2021-09-08T05:49:21Z\nsource: APNIC\nroute: 59.188.0.0/24\norigin: AS9269\ndescr: New World Telecommunications Limited\n Hong Kong Broadband Network Ltd\n 15/F, Trans Asia Centre\n 18 Kin Hong Street,\n Kwai Chung, N.T.\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2021-09-08T05:49:22Z\nsource: APNIC\nroute: 59.188.0.0/24\norigin: AS9381\ndescr: New World Telecommunications Limited\n Hong Kong Broadband Network Ltd\n 15/F, Trans Asia Centre\n 18 Kin Hong Street,\n Kwai Chung, N.T.\nmnt-by: MAINT-HK-HKBNESL\nlast-modified: 2021-09-08T05:49:23Z\nsource: APNIC\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/59.188.0.197/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/59.188.0.197",
+            "severity": "low",
+            "timestamp": 1692738758,
+            "title": "cve 2015 2545",
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "0beb957923df2c885d29a9c1743dd94b",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:27.577163",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "6495b384748188188d09e9d5a0c401a4",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:28.181254",
+      "vt_found": true,
+      "malicious_count": 26,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 28,
+      "total_engines": 73,
+      "first_seen": 1440494667,
+      "last_seen": 1741865189,
+      "reputation": 0,
+      "names": [
+        "admin@338_6495B384748188188D09E9D5A0C401A4",
+        "6495B384748188188D09E9D5A0C401A4",
+        "6495b384748188188d09e9d5a0c401a4.doc",
+        "lpKfmoKHlj4vpl5zms6jntYTpgZ7kv6HooYzli5UuZG9j?="
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 88144,
+        "type_description": "unknown",
+        "magic": "data",
+        "md5": "6495b384748188188d09e9d5a0c401a4",
+        "sha1": "3599124dbffe88198646edb45160208fd0002134",
+        "sha256": "810106e404e0e1147c99a50e7f2df20f9c0d9d1742fa53cf1ececd31b32cac23",
+        "ssdeep": "1536:f+bnSRUWaZZjJfRFzWKNQJNFPv/q6kaK3f:q/fDoVFIf",
+        "tlsh": "T14C83A5B8DDAC7BB8EB1367BDA00850972D1D6E5387CB46320FB2BBDB8DE91900045576"
+      },
+      "additional_details": {
+        "tags": [
+          "cve-2012-0158",
+          "exploit",
+          "attachment"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "1.3.0.9899",
+            "engine_update": "20211109",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "4.2",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Hacktool.MSWord.CVE-2012-0158.3!c"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "0.104.1.0",
+            "engine_update": "20211109",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "32.44.1.0",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exploit.CVE-2012-0158.Gen"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "14.00",
+            "engine_update": "20211109",
+            "category": "malicious",
+            "result": "Exp.OLE.MNKIT"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exploit-FWN!DD039497ADCB"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.2.2.27",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.4492",
+            "engine_update": "20211109",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "11.227.39239",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "11.227.39239",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "79b68cdd0044edd4fbf8067b22878644",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:30.639874",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "b9208a5b0504cb2283b1144fc455eaaa",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:31.204617",
+      "vt_found": true,
+      "malicious_count": 28,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 33,
+      "total_engines": 76,
+      "first_seen": 1440494323,
+      "last_seen": 1756323648,
+      "reputation": 1,
+      "names": [
+        "d330aa8ffb37ac93f81862b29b869d90d1dbf5ee9f3de1a5ea39e364699eb6f7.doc",
+        "B9208A5B0504CB2283B1144FC455EAAA",
+        "5ZG95YWs5rCR6YGL5YuVIOaIkeWAkeeahOeVsOixoS5kb2M=?="
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 94800,
+        "type_description": "unknown",
+        "magic": "data",
+        "md5": "b9208a5b0504cb2283b1144fc455eaaa",
+        "sha1": "514f89b2db139267e22508ee69f8b14110b1b4a6",
+        "sha256": "d330aa8ffb37ac93f81862b29b869d90d1dbf5ee9f3de1a5ea39e364699eb6f7",
+        "ssdeep": "768:f+Dv8KSRPVwiCWasuYOjJfVcoZFzhAK1VmEFxPv3VPvPv3vYad1ckI1MZh:f+bnSRUWaZZjJftFzWKvDfFPv/bGkKMb",
+        "tlsh": "T1CC93A4B89DAD7BB9EB0337BDA00450972D1D6E5387CB46320FB2BBDB8DE91A00045576"
+      },
+      "additional_details": {
+        "tags": [
+          "attachment",
+          "exploit",
+          "cve-2012-0158"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 12,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.expl/msword",
+          "popular_threat_name": [
+            {
+              "count": 2,
+              "value": "expl"
+            },
+            {
+              "count": 2,
+              "value": "msword"
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Trojan.UKP.MSWord.3!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.39825977"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "unknown.trojan.generic"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Exp.OLE.MNKIT"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250827",
+            "category": "malicious",
+            "result": "Exploit.CVE-2012-0158"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250827",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5432",
+            "engine_update": "20250826",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "d76261ba3b624933a6ebb5dd73758db4",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:32.168137",
+      "vt_found": true,
+      "malicious_count": 60,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 12,
+      "total_engines": 76,
+      "first_seen": 1445565536,
+      "last_seen": 1754510625,
+      "reputation": -54,
+      "names": [
+        "admin@338_D76261BA3B624933A6EBB5DD73758DB4",
+        "ea93e3209f56a069f8dbd210b4a1a9429ce76b761940f4ace743b79b67a7c9b6.json",
+        "ea93e3209f56a069f8dbd210b4a1a9429ce76b761940f4ace743b79b67a7c9b6_unpacked",
+        "ea93e3209f56a069f8dbd210b4a1a9429ce76b761940f4ace743b79b67a7c9b6",
+        "D76261BA3B624933A6EBB5DD73758DB4",
+        "LOWBALL-ea93e3209f56a069f8dbd210b4a1a9429ce76b761940f4ace743b79b67a7c9b6",
+        "78512e6b3b70f064ac3065d68d1405d305e815ce_time.ex",
+        "exe.ex",
+        "d76261ba3b624933a6ebb5dd73758db4.BIN",
+        "dai_time.exe_"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 20480,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "d76261ba3b624933a6ebb5dd73758db4",
+        "sha1": "78512e6b3b70f064ac3065d68d1405d305e815ce",
+        "sha256": "ea93e3209f56a069f8dbd210b4a1a9429ce76b761940f4ace743b79b67a7c9b6",
+        "ssdeep": "96:ZvbWpZcej353wHNsPaYnW/DYjPc3bT0hdjosZamfeIo1PtboynPwoyT:l5eyNsPSDymsZKP1oynPbk",
+        "tlsh": "T1A99241CB1BAEAC91FF0422B4598E06FD126E29DA2557FCCAFE04DE61453E163D12190B",
+        "vhash": "024036551d1bz81bjz13z61z27z",
+        "pe_info": {
+          "timestamp": 1440411992,
+          "imphash": "8ffb1351f79e7b347a8ab4ddb1995372",
+          "machine_type": 332,
+          "entry_point": 9346,
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 331199.94,
+              "virtual_address": 4096,
+              "entropy": 4.82,
+              "raw_size": 8192,
+              "flags": "rx",
+              "virtual_size": 5660,
+              "md5": "a7cc80972f499538a52571bc144c3423"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 685481.5,
+              "virtual_address": 12288,
+              "entropy": 1.8,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1186,
+              "md5": "12f2b05baeef33735a8c04a9d98f012c"
+            },
+            {
+              "name": ".data",
+              "chi2": 753225.62,
+              "virtual_address": 16384,
+              "entropy": 1.42,
+              "raw_size": 4096,
+              "flags": "rw",
+              "virtual_size": 1008,
+              "md5": "fe4a3c016e2039e988e41a540861448c"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ C ] VS98 (6.0) build 8168 count=11",
+            "[LNK] VS98 (6.0) imp/exp build 8168 count=2",
+            "[---] Unmarked objects count=39",
+            "[---] Unmarked objects (old) count=12",
+            "[C++] VS98 (6.0) build 8168 count=2",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0x13, version: 8034 count=4"
+          ],
+          "rich_pe_header_hash": "84fd6dd259af85a7c2b115f05c117207",
+          "import_list": [
+            {
+              "library_name": "WININET.dll",
+              "imported_functions": [
+                "HttpOpenRequestA",
+                "HttpSendRequestA",
+                "InternetCloseHandle",
+                "InternetConnectA",
+                "InternetOpenA",
+                "InternetReadFile"
+              ]
+            },
+            {
+              "library_name": "urlmon.dll",
+              "imported_functions": [
+                "ObtainUserAgentString"
+              ]
+            },
+            {
+              "library_name": "WS2_32.dll",
+              "imported_functions": [
+                "gethostname",
+                "WSAStartup"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "??2@YAPAXI@Z",
+                "??3@YAXPAX@Z",
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_XcptFilter",
+                "atoi",
+                "exit",
+                "fclose",
+                "fopen",
+                "fread",
+                "fseek",
+                "ftell",
+                "fwrite",
+                "rand",
+                "rewind",
+                "srand",
+                "strncmp",
+                "time"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "DeleteFileA",
+                "GetEnvironmentVariableA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "lstrcpyA",
+                "Sleep"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "peexe",
+          "checks-network-adapters",
+          "runtime-modules",
+          "direct-cpu-clock-access",
+          "spreader",
+          "long-sleeps"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.dynamer/lowball",
+          "popular_threat_category": [
+            {
+              "count": 27,
+              "value": "trojan"
+            },
+            {
+              "count": 9,
+              "value": "downloader"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 5,
+              "value": "dynamer"
+            },
+            {
+              "count": 3,
+              "value": "lowball"
+            },
+            {
+              "count": 2,
+              "value": "bkdr"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Trojan.Win32.Dynamer.a!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Backdoor.RAT.F"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "exe.trojan.dynamer"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Downloader.mz"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Backdoor.RAT.F"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250805",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5419",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Downloader.Small.Win32.91267"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "ec19ed7cddf92984906325da59f75351",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:32.872958",
+      "vt_found": true,
+      "malicious_count": 25,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 32,
+      "total_engines": 73,
+      "first_seen": 1440494323,
+      "last_seen": 1742221353,
+      "reputation": 0,
+      "names": [
+        "admin@338_EC19ED7CDDF92984906325DA59F75351",
+        "EC19ED7CDDF92984906325DA59F75351",
+        "5Y+K5YWs5L2ILmRvYw==?="
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 90192,
+        "type_description": "unknown",
+        "magic": "data",
+        "md5": "ec19ed7cddf92984906325da59f75351",
+        "sha1": "9aadd8ff72f33758a5c3460a5f9aa72d27bcb431",
+        "sha256": "feef1f69de01c9f82380cab2ef239422f6b08d462a15368eab2a42643bb44d57",
+        "ssdeep": "1536:f+bnSRUWaZZjJfhFzWKR6vkFPv/MgjDfs:q/fTV6cVC",
+        "tlsh": "T18093A3B8DDAD7BB9EB0327BDA04450972D1D6E1387CB46320FB2BBDB8DE91A00045576"
+      },
+      "additional_details": {
+        "tags": [
+          "cve-2012-0158",
+          "exploit",
+          "attachment"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "1.3.0.9899",
+            "engine_update": "20211109",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "4.2",
+            "engine_update": "20211111",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.52.8270",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exploit.CVE-2012-0158"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "32.44.1.0",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exploit.CVE-2012-0158.Gen"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "14.00",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exp.OLE.MNKIT"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "1.1.3.1",
+            "engine_update": "20211110",
+            "category": "malicious",
+            "result": "Exploit.CVE-2012-0158"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.2.2.27",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.4493",
+            "engine_update": "20211110",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.9.0.0",
+            "engine_update": "20211103",
+            "category": "malicious",
+            "result": "Exploit.Generic-Doc.SAVE.exp5"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://accounts.serveftp.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:34.271339",
+      "vt_found": true,
+      "malicious_count": 10,
+      "suspicious_count": 0,
+      "harmless_count": 58,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1438851197,
+      "last_seen": 1754736324,
+      "reputation": -47,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Phishing (alphaMountain.ai)",
+          "BitDefender": "sinkholed",
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "dynamic dns. web hosting"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "phishing"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://sinosphere.blogs.nytimes.com/2014/06/18/pro-democracy-media-companys-websites-attacked/",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:34.852191",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1574894456,
+      "last_seen": 1751548532,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "password-input",
+          "trackers",
+          "multiple-redirects",
+          "external-resources",
+          "iframes"
+        ],
+        "categories": {
+          "BitDefender": "news",
+          "Sophos": "news",
+          "Forcepoint ThreatSeeker": "news and media"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.bbc.com/news/world-asia-china-34070695",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:35.418625",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1578733419,
+      "last_seen": 1751550435,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "iframes",
+          "external-resources",
+          "third-party-cookies",
+          "trackers"
+        ],
+        "categories": {
+          "BitDefender": "radiomusic",
+          "Sophos": "news",
+          "Forcepoint ThreatSeeker": "news and media"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.ejinsight.com/20150831-hku-concern-group-raises-proxy-fears-in-key-vote/",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:36.096905",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1574894468,
+      "last_seen": 1751563953,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "third-party-cookies",
+          "trackers",
+          "multiple-redirects",
+          "iframes",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "news",
+          "Sophos": "news",
+          "Forcepoint ThreatSeeker": "news and media"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.scmp.com/news/hong-kong/education-community/article/1862423/surprise-move-chair-university-hong-kong",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:36.727809",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1578791652,
+      "last_seen": 1751544371,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources",
+          "trackers",
+          "multiple-redirects",
+          "third-party-cookies",
+          "iframes"
+        ],
+        "categories": {
+          "BitDefender": "news",
+          "Sophos": "news",
+          "Forcepoint ThreatSeeker": "news and media"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.fireeye.com/blog/threat-research/2014/03/spear-phishing-the-news-cycle-apt-actors-leverage-interest-in-the-disappearance-of-malaysian-flight-mh-370.html",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:37.311377",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1449007258,
+      "last_seen": 1753474951,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "third-party-cookies",
+          "iframes",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Xcitium Verdict Cloud": "computing & technology",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/11/china-based-threat.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:02:38.023204",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 1,
+      "harmless_count": 71,
+      "undetected_count": 19,
+      "total_engines": 91,
+      "first_seen": 1456937051,
+      "last_seen": 1707631823,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "downloads-pdf"
+        ],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Xcitium Verdict Cloud": "information security"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    }
+  ]
+}

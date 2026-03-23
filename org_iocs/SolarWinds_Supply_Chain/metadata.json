@@ -1,0 +1,52 @@
+{
+  "campaign": "SolarWinds Supply Chain Attack",
+  "campaign_aliases": [
+    "SUNBURST",
+    "Solorigate"
+  ],
+  "threat_actors": [
+    "APT29",
+    "NOBELIUM",
+    "UNC2452",
+    "Cozy Bear"
+  ],
+  "malware_families": [
+    "SUNBURST",
+    "TEARDROP",
+    "SUPERNOVA",
+    "Cobalt Strike BEACON"
+  ],
+  "attack_vectors": [
+    "Supply Chain Compromise",
+    "Trojanized Software Update",
+    "Software Supply Chain Attack"
+  ],
+  "targeted_software": "SolarWinds Orion Platform",
+  "cve": [
+    "CVE-2020-10148"
+  ],
+  "report_source": "GuidePoint Security",
+  "report_title": "SolarWinds Supply Chain Attack: Indicators of Compromise (IOCs)",
+  "report_date": "2021-01-08",
+  "extraction_date": "2025-11-10T10:27:28.210089",
+  "mitre_attack": {
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Command and Control",
+      "Lateral Movement"
+    ],
+    "techniques": [
+      "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+      "T1071.001 - Application Layer Protocol: Web Protocols",
+      "T1053.005 - Scheduled Task/Job: Scheduled Task",
+      "T1105 - Ingress Tool Transfer",
+      "T1140 - Deobfuscate/Decode Files or Information"
+    ]
+  },
+  "references": [
+    "https://www.guidepointsecurity.com/blog/solarwinds-supply-chain-attack/",
+    "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/",
+    "https://github.com/fireeye/sunburst_countermeasures"
+  ]
+}

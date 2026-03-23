@@ -1,0 +1,3049 @@
+{
+  "sha256": "522fd9b35323af55113455d823571f71332e53dde988c2eb41395cf6b0c15805",
+  "query_time": "2026-03-12T07:20:56.222318+00:00",
+  "contacted_ips": [],
+  "contacted_domains": [],
+  "dropped_files": [],
+  "execution_parents": [
+    {
+      "id": "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae",
+      "attributes": {
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          },
+          {
+            "description": "Detects win.seduploader.",
+            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
+            "ruleset_name": "win.seduploader_auto",
+            "rule_name": "win_seduploader_auto",
+            "ruleset_id": "008e64e385",
+            "match_in_subfile": true,
+            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
+          },
+          {
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "match_date": 1772612807,
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "Yara Rule for mvtband.dll malware",
+            "author": "CSE CybSec Enterprise - Z-Lab",
+            "ruleset_name": "apt_sofacy_hospitality",
+            "rule_name": "APT28_HospitalityMalware_mvtband_file",
+            "ruleset_id": "0001fb05a6",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "description": "Detects Sofacy malware reported in October 2017",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_name": "apt_sofacy_oct17_camp",
+            "rule_name": "Sofacy_Oct17_2",
+            "ruleset_id": "000a82d523",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload2",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          }
+        ],
+        "size": 341504,
+        "last_submission_date": 1526379434,
+        "creation_date": 1506994560,
+        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
+        "magika": "DOC",
+        "last_modification_date": 1772620003,
+        "names": [
+          "f52ea8f238e57e49bfae304bd656ad98.doc",
+          "94B288154E3D0225F86BB3C012FA8D63",
+          "myvtfile.exe",
+          "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae"
+        ],
+        "first_seen_itw_date": 1508785459,
+        "last_analysis_results": {
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.MSWord.MSWord.a!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.251",
+            "engine_update": "20260226",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Doc.Dropper.Agent-6347329-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "doc.trojan.w97m"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "OLE.Downloader.3611"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Downloader-FBZU!94B288154E3D"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Downloader.VBA.gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.211",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5555",
+            "engine_update": "20260302",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Generic-Macro.Save.2a85275e"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.39.58768",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.39.58769",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20251219",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "2580b8d:2580b8d:feb7c46:feb7c46",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "OMacro/Downloader"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "malicious",
+            "result": "VBA.Trojan-Downloader.Agent.cak"
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1157",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M.Downloader"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Win32/Sednit.BN trojan"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.W97M.POWLOAD.SMEST"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan-Downloader.MSWord.Agent.bpe"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Ole2.Vbs-heuristic.druvzi"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M.S.Dropper.341504"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "OLE.Win32.Macro.703856"
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Troj/DocDrp-BT"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Malware.W97M/Agent.5014791"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.75.2070",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.Siggen.1052"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.W97M.POWLOAD.SMEST"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.14023",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen (B)"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.43732AVA:64.30770",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1772604037",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Agent.5014791"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan[Downloader]/MSOffice.APT28"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Win32.Troj.Unknown.a"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.240.174",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38457",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "HEUR.VBA.A.1"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.23-113518602",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Troj/DocDrp-BT"
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.26010.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "TrojanDownloader:O97M/Donoff"
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Downldr.gen"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.29.1.10604",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Dropper"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "malicious",
+            "result": "suspicious"
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.5.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Script.Casur.A"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2026-03-04.02",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Suspicious/W97M.DRP.Gen"
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Dropper.[APT28]Agent/VBA!1.D9E0 (CLASSIC)"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Downloader-FBZU!94B288154E3D"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.5.3.1",
+            "engine_update": "20251224",
+            "category": "malicious",
+            "result": "Static AI - Suspicious OLE"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Trojan.Malware.11973.susgen"
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "MSWord/MalwThreat!8d63FT"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan:MSOffice/Downloader.yo"
+          },
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20260303",
+            "category": "failure",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "260303-02",
+            "engine_update": "20260303",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20260123",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20251216",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20260303",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.754",
+            "engine_update": "20260301",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.10.0",
+            "engine_update": "20260224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20260302",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "w97m"
+            },
+            {
+              "count": 4,
+              "value": "msword"
+            },
+            {
+              "count": 2,
+              "value": "apt28"
+            }
+          ],
+          "suggested_threat_label": "trojan.w97m/msword",
+          "popular_threat_category": [
+            {
+              "count": 17,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            },
+            {
+              "count": 4,
+              "value": "dropper"
+            }
+          ]
+        },
+        "type_tag": "doc",
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
+          "doc"
+        ],
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 84,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ]
+          },
+          "DOCGuard": {
+            "category": "malicious",
+            "sandbox_name": "DOCGuard",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 6,
+          "medium": 7,
+          "low": 1
+        },
+        "trid": [
+          {
+            "file_type": "Perfect Keyboard macro set",
+            "probability": 38.7
+          },
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 32.2
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 20.4
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 8.6
+          }
+        ],
+        "type_description": "MS Word Document",
+        "tags": [
+          "doc",
+          "macros",
+          "write-file",
+          "open-file",
+          "handle-file",
+          "auto-open",
+          "calls-wmi",
+          "environ",
+          "run-file",
+          "long-sleeps",
+          "malware"
+        ],
+        "times_submitted": 36,
+        "magic": "ERROR: Output buffer space exceeded 1034+93u",
+        "meaningful_name": "f52ea8f238e57e49bfae304bd656ad98.doc",
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 6,
+            "low": 1
+          },
+          "SOC Prime Threat Detection Marketplace": {
+            "critical": 0,
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          }
+        },
+        "vhash": "8f863667845b292bcbe53bef6ea3813d",
+        "unique_sources": 17,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "critical",
+            "rule_id": "90c63349e180656f865f6206a06dbee57bd3226b32eb61fba3e6c7c4452d4e1d",
+            "rule_source": "Joe Security Rule Set (GitHub)",
+            "rule_title": "Execute DLL with spoofed extension",
+            "rule_description": "Execute DLL with spoofed extension",
+            "rule_author": "Joe Security",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\rundll32.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Mason\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "53f67594c85a67cef198b525b556658fa4e46d1e49901472adbc8b7f0ba475a8",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Bad Opsec Defaults Sacrificial Processes With Improper Arguments",
+            "rule_description": "Detects attackers using tooling with bad opsec defaults.\nE.g. spawning a sacrificial process to inject a capability into the process without taking into account how the process is normally run.\nOne trivial example of this is using rundll32.exe without arguments as a sacrificial process (default in CS, now highlighted by c2lint), running WerFault without arguments (Kraken - credit am0nsec), and other examples.\n",
+            "rule_author": "Oleg Kolesnikov @securonix invrep_de, oscd.community, Florian Roth (Nextron Systems), Christian Burkard (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6676ee2bf136155325337ad27ca431e57ff815b4fbddfaf94908c8ae566aa5b6",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Binaries Write Suspicious Extensions",
+            "rule_description": "Detects Windows executables that writes files with suspicious extensions",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\netwf.bat"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6a6edfdea6536f74ea66bf73682ed52f4b86435793ed76ff38e3ab0523f029f5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Microsoft Office Child Process",
+            "rule_description": "Detects a suspicious process spawning from one of the Microsoft Office suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, FPT.EagleEye Team, Vadim Khrykov, Cyb3rEng, Michael Haag, Christopher Peacock @securepeacock, @scythe_io",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "87574dead19ceb246e10ccb4cb4fd5009c71c46de0d77965d2170bfafc2c3b14",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Execution Without CommandLine Parameters",
+            "rule_description": "Detects suspicious start of rundll32.exe without any parameters as found in CobaltStrike beacon activity",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "b7eb83db20f6f8b5f580e107c2b6816110a31869a94de5e2797d917335d9fbc0",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Call by Ordinal",
+            "rule_description": "Detects suspicious calls of DLLs in rundll32.dll exports by ordinal",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\netwf.bat\" \"\"\"",
+                  "CommandLine": "rundll32.exe   \"C:\\Users\\george\\AppData\\Local\\netwf.dll\",#1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "c4e0758476210a09a3e470db05d2cbec0aebd511e48d351685c75970566f894f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Splwow64 Without Params",
+            "rule_description": "Detects suspicious Splwow64.exe process without any command line parameters",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\splwow64.exe",
+                  "Image": "C:\\Windows\\splwow64.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "2fd6d2b16365ba7157eee4934b406ac7d530b4ec62cc1b45c69ee4f07989f139",
+            "rule_source": "SOC Prime Threat Detection Marketplace",
+            "rule_title": "LOLBAS rundll32 without expected arguments (via cmdline)",
+            "rule_description": "Detects use of rundll32 as a LOLBAS binary where rundll32 is passed unexpected arguments such as a .iso instead of .dll (i.e. rundll32.exe test.iso, evilexport).",
+            "rule_author": "SOC Prime Team",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Mason\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "4725cdcf2dfdd90c3aa0d331fae77d6ac8021c254701744a01444af04e9a0e69",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Internet Connection",
+            "rule_description": "Detects a rundll32 that communicates with public IP addresses",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "SourceIsIpv6": "true",
+                  "DestinationPort": "53",
+                  "Initiated": "true",
+                  "Protocol": "udp",
+                  "SourceIp": "c0a8:20c:1:1a:98c0:4409:8cb7:ffff",
+                  "DestinationIsIpv6": "true",
+                  "EventID": "3",
+                  "DestinationPortName": "domain",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "51518",
+                  "DestinationIp": "808:808:a0a:a0a:a0a:40a:80a:710"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "DestinationIp": "108.177.120.100",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.12",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "DestinationHostname": "jz-in-f100.1e100.net",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "DestinationIsIpv6": "false",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "49774",
+                  "Initiated": "true"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "Initiated": "true",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.12",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "DestinationIsIpv6": "false",
+                  "DestinationHostname": "58x158x177x102.ap58.ftth.ucom.ne.jp",
+                  "DestinationIp": "58.158.177.102",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "49775",
+                  "SourceHostname": "DESKTOP-B0T93D6.local"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.12",
+                  "DestinationIsIpv6": "false",
+                  "EventID": "3",
+                  "DestinationHostname": "jz-in-f100.1e100.net",
+                  "Initiated": "true",
+                  "DestinationPortName": "https",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "49778",
+                  "DestinationIp": "108.177.120.100"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "Initiated": "true",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.12",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "DestinationIp": "58.158.177.102",
+                  "DestinationIsIpv6": "false",
+                  "DestinationHostname": "58x158x177x102.ap58.ftth.ucom.ne.jp",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "49779",
+                  "SourceHostname": "DESKTOP-B0T93D6.local"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7f5d257abc981b5eddb52d4a9a02fb66201226935cf3d39177c8a81c3a3e8dd4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Persistence Via COM Search Order Hijacking",
+            "rule_description": "Detects potential COM object hijacking leveraging the COM Search Order",
+            "rule_author": "Maxime Thiebaut (@0xThiebaut), oscd.community, C\u00e9dric Hien",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "T1122",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ddraw.dll",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001_Classes\\WOW6432Node\\CLSID\\{BCDE0395-E52F-467C-8E3D-C4579291692E}\\InprocServer32\\(Default)"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\ipconfig.exe /flushdns >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\netsh.exe interface ip delete arpcache >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /getactivescheme > C:\\Windows\\TEMP\\PowerPlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /query 381b4222-f694-41f0-9685-ff5bb260df2e > C:\\Windows\\TEMP\\HighPerformancePlan.log",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "aa1c4ee10caaa9d521b34246c51e0c22c8af0a4b7fdb1cdd9faf1182ef6dd14c",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Common Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split), wagga (name)",
+            "match_context": [
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Details": "C:\\Users\\george\\AppData\\Local\\netwf.bat",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Environment\\UserInitMprLogonScript"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "acfdd695b50334901b76498dea74721b8b3767958af4dfdb031aebc613d6ff72",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential WWlib.DLL Sideloading",
+            "rule_description": "Detects potential DLL sideloading of \"wwlib.dll\"",
+            "rule_author": "X__Junior (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "ImageLoaded": "c:\\program files\\microsoft office\\root\\office16\\wwlib.dll"
+                }
+              },
+              {
+                "values": {
+                  "ImageLoaded": "c:\\program files (x86)\\microsoft office\\office14\\wwlib.dll"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "e7856bac967038b016efab8e4f315a2f16ccd6ba62f20d73df0ad3826fe654a3",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Execution With Uncommon DLL Extension",
+            "rule_description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
+            "rule_author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\rundll32.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Mason\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "e77646c39db7fa011a5223aeb73c738046787fc7f62a99394e883d76a54341f7",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CMD Shell Output Redirect",
+            "rule_description": "Detects the use of the redirection character \">\" to redicrect information in commandline",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\ipconfig.exe /flushdns >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\netsh.exe interface ip delete arpcache >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /getactivescheme > C:\\Windows\\TEMP\\PowerPlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /query 381b4222-f694-41f0-9685-ff5bb260df2e > C:\\Windows\\TEMP\\HighPerformancePlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
+        "last_analysis_stats": {
+          "malicious": 47,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 12
+        },
+        "md5": "94b288154e3d0225f86bb3c012fa8d63",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "sha256": "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae",
+        "crowdsourced_ids_stats": {
+          "info": 0,
+          "high": 1,
+          "medium": 0,
+          "low": 1
+        },
+        "tlsh": "T13A74AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D58334",
+        "last_analysis_date": 1772608606,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
+            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
+            ],
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "2201d8e006f8f005a6b415f61e677532"
+                ],
+                "ja3s": [
+                  "4192c0a946c5bd9b544b4656d9f624a4"
+                ]
+              },
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2022323"
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA STREAM FIN out of window",
+            "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM FIN out of window\"; stream-event:fin_out_of_window; classtype:protocol-command-decode; sid:2210038; rev:2;)",
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_source": "Suricata",
+            "rule_id": "1:2210038"
+          }
+        ],
+        "reputation": -86,
+        "sha1": "4873bafe44cff06845faa0ce7c270c4ce3c9f7b9",
+        "filecondis": {
+          "dhash": "00203d3c0e251930",
+          "raw_md5": "74930a07e6f18e39a24aedbc5625297b"
+        },
+        "first_submission_date": 1507797401,
+        "type_extension": "doc"
+      }
+    },
+    {
+      "id": "efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52",
+      "attributes": {
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          },
+          {
+            "description": "Detects win.seduploader.",
+            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
+            "ruleset_name": "win.seduploader_auto",
+            "rule_name": "win_seduploader_auto",
+            "ruleset_id": "008e64e385",
+            "match_in_subfile": true,
+            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
+          },
+          {
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "match_date": 1772612293,
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "Yara Rule for mvtband.dll malware",
+            "author": "CSE CybSec Enterprise - Z-Lab",
+            "ruleset_name": "apt_sofacy_hospitality",
+            "rule_name": "APT28_HospitalityMalware_mvtband_file",
+            "ruleset_id": "0001fb05a6",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "description": "Detects Sofacy malware reported in October 2017",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_name": "apt_sofacy_oct17_camp",
+            "rule_name": "Sofacy_Oct17_2",
+            "ruleset_id": "000a82d523",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload2",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          }
+        ],
+        "size": 341504,
+        "last_submission_date": 1600967077,
+        "creation_date": 1506994560,
+        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
+        "magika": "DOC",
+        "last_modification_date": 1772619488,
+        "names": [
+          "VirusShare_f52ea8f238e57e49bfae304bd656ad98",
+          "F52EA8F238E57E49BFAE304BD656AD98",
+          "f52ea8f238e57e49bfae304bd656ad98.doc"
+        ],
+        "first_seen_itw_date": 1508287092,
+        "last_analysis_results": {
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.MSWord.MSWord.a!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.251",
+            "engine_update": "20260226",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Doc.Dropper.Agent-6347239-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "doc.trojan.w97m"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "OLE.Downloader.3611"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Downloader-FBZU!F52EA8F238E5"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Downloader.VBA.gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.211",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Generic-Macro.Save.2a85275e"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.39.58768",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.39.58769",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20251219",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "malicious",
+            "result": "VBA.Trojan-Downloader.Agent.cak"
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1157",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M.Downloader"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Win32/Sednit.BN trojan"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.W97M.POWLOAD.SMEST"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan-Downloader.MSWord.Agent.bpe"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.Ole2.Vbs-heuristic.druvzi"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M.S.Dropper.341504.A"
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Dropper.[APT28]Agent/VBA!1.D9E0 (CLASSIC)"
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Troj/DocDrp-CJ"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Malware.W97M/Agent.5014791"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.75.2070",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.Siggen.1052"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5555",
+            "engine_update": "20260302",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan.W97M.POWLOAD.SMEST"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.14023",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen (B)"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "2580b8d:2580b8d:feb7c46:feb7c46",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "OMacro/Downloader"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.43732AVA:64.30770",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Exploit.MSOffice.2.Gen"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1772604037",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Agent.5014791"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Trojan[Downloader]/MSOffice.APT28"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Win32.Troj.Unknown.a"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.240.174",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38457",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "HEUR.VBA.A.1"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.23-113518602",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Troj/DocDrp-CJ"
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.26010.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "TrojanDownloader:O97M/Donoff"
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Downldr.gen"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.29.1.10604",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "W97M/Dropper"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "malicious",
+            "result": "suspicious"
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.5.1",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Trojan.Script.Casur.A"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2026-03-04.02",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Suspicious/W97M.DRP.Gen"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "OLE.Win32.Macro.703856"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20260304",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Downloader-FBZU!F52EA8F238E5"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.5.3.1",
+            "engine_update": "20251224",
+            "category": "malicious",
+            "result": "Static AI - Suspicious OLE"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260303",
+            "category": "malicious",
+            "result": "Trojan.Malware.11973.susgen"
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "MSWord/MalwThreat!ad98FT"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260304",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20260303",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan:MSOffice/Downloader.yo"
+          },
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20260303",
+            "category": "failure",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "260303-02",
+            "engine_update": "20260303",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20260123",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20251216",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20260303",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.754",
+            "engine_update": "20260301",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.10.0",
+            "engine_update": "20260224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20260302",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20260304",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "w97m"
+            },
+            {
+              "count": 4,
+              "value": "msword"
+            },
+            {
+              "count": 2,
+              "value": "apt28"
+            }
+          ],
+          "suggested_threat_label": "trojan.w97m/msword",
+          "popular_threat_category": [
+            {
+              "count": 17,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            },
+            {
+              "count": 4,
+              "value": "dropper"
+            }
+          ]
+        },
+        "type_tag": "doc",
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
+          "doc"
+        ],
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 92,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ]
+          },
+          "DOCGuard": {
+            "category": "malicious",
+            "sandbox_name": "DOCGuard",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 6,
+          "medium": 7,
+          "low": 1
+        },
+        "trid": [
+          {
+            "file_type": "Perfect Keyboard macro set",
+            "probability": 38.7
+          },
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 32.2
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 20.4
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 8.6
+          }
+        ],
+        "type_description": "MS Word Document",
+        "tags": [
+          "auto-open",
+          "environ",
+          "doc",
+          "run-file",
+          "long-sleeps",
+          "macros",
+          "malware",
+          "calls-wmi",
+          "handle-file",
+          "open-file",
+          "write-file"
+        ],
+        "times_submitted": 33,
+        "magic": "ERROR: Output buffer space exceeded 1034+93u",
+        "meaningful_name": "VirusShare_f52ea8f238e57e49bfae304bd656ad98",
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 6,
+            "low": 1
+          },
+          "SOC Prime Threat Detection Marketplace": {
+            "critical": 0,
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          }
+        },
+        "vhash": "8f863667845b292bcbe53bef6ea3813d",
+        "unique_sources": 17,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "critical",
+            "rule_id": "90c63349e180656f865f6206a06dbee57bd3226b32eb61fba3e6c7c4452d4e1d",
+            "rule_source": "Joe Security Rule Set (GitHub)",
+            "rule_title": "Execute DLL with spoofed extension",
+            "rule_description": "Execute DLL with spoofed extension",
+            "rule_author": "Joe Security",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\rundll32.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "53f67594c85a67cef198b525b556658fa4e46d1e49901472adbc8b7f0ba475a8",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Bad Opsec Defaults Sacrificial Processes With Improper Arguments",
+            "rule_description": "Detects attackers using tooling with bad opsec defaults.\nE.g. spawning a sacrificial process to inject a capability into the process without taking into account how the process is normally run.\nOne trivial example of this is using rundll32.exe without arguments as a sacrificial process (default in CS, now highlighted by c2lint), running WerFault without arguments (Kraken - credit am0nsec), and other examples.\n",
+            "rule_author": "Oleg Kolesnikov @securonix invrep_de, oscd.community, Florian Roth (Nextron Systems), Christian Burkard (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6676ee2bf136155325337ad27ca431e57ff815b4fbddfaf94908c8ae566aa5b6",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Binaries Write Suspicious Extensions",
+            "rule_description": "Detects Windows executables that writes files with suspicious extensions",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\netwf.bat",
+                  "EventID": "11"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6a6edfdea6536f74ea66bf73682ed52f4b86435793ed76ff38e3ab0523f029f5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Microsoft Office Child Process",
+            "rule_description": "Detects a suspicious process spawning from one of the Microsoft Office suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, FPT.EagleEye Team, Vadim Khrykov, Cyb3rEng, Michael Haag, Christopher Peacock @securepeacock, @scythe_io",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "87574dead19ceb246e10ccb4cb4fd5009c71c46de0d77965d2170bfafc2c3b14",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Execution Without CommandLine Parameters",
+            "rule_description": "Detects suspicious start of rundll32.exe without any parameters as found in CobaltStrike beacon activity",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "b7eb83db20f6f8b5f580e107c2b6816110a31869a94de5e2797d917335d9fbc0",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Call by Ordinal",
+            "rule_description": "Detects suspicious calls of DLLs in rundll32.dll exports by ordinal",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\netwf.bat\" \"\"\"",
+                  "CommandLine": "rundll32.exe   \"C:\\Users\\george\\AppData\\Local\\netwf.dll\",#1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "c4e0758476210a09a3e470db05d2cbec0aebd511e48d351685c75970566f894f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Splwow64 Without Params",
+            "rule_description": "Detects suspicious Splwow64.exe process without any command line parameters",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\splwow64.exe",
+                  "CommandLine": "C:\\Windows\\splwow64.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "2fd6d2b16365ba7157eee4934b406ac7d530b4ec62cc1b45c69ee4f07989f139",
+            "rule_source": "SOC Prime Threat Detection Marketplace",
+            "rule_title": "LOLBAS rundll32 without expected arguments (via cmdline)",
+            "rule_description": "Detects use of rundll32 as a LOLBAS binary where rundll32 is passed unexpected arguments such as a .iso instead of .dll (i.e. rundll32.exe test.iso, evilexport).",
+            "rule_author": "SOC Prime Team",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\WINDOWS\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\WINDOWS\\SysWOW64\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "4725cdcf2dfdd90c3aa0d331fae77d6ac8021c254701744a01444af04e9a0e69",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Internet Connection",
+            "rule_description": "Detects a rundll32 that communicates with public IP addresses",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationIsIpv6": "false",
+                  "EventID": "3",
+                  "DestinationPortName": "https",
+                  "DestinationHostname": "ie-in-f113.1e100.net",
+                  "Initiated": "true",
+                  "SourcePort": "49777",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "DestinationIp": "142.250.159.113"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "true",
+                  "DestinationPort": "53",
+                  "DestinationIp": "808:808:44a:644:22:48:0:6",
+                  "Protocol": "udp",
+                  "SourceIp": "c0a8:20b:488b:ded:98b0:d005:4be:ffff",
+                  "DestinationIsIpv6": "true",
+                  "EventID": "3",
+                  "DestinationPortName": "domain",
+                  "SourcePort": "52014",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Initiated": "true"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "DestinationIp": "58.158.177.102",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "Initiated": "true",
+                  "DestinationIsIpv6": "false",
+                  "SourcePort": "49778",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourceHostname": "DESKTOP-B0T93D6.local"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "DestinationIsIpv6": "false",
+                  "Initiated": "true",
+                  "DestinationIp": "74.125.202.103",
+                  "SourcePort": "49783",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "DestinationHostname": "io-in-f103.1e100.net"
+                }
+              },
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "DestinationIp": "58.158.177.102",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationPortName": "https",
+                  "EventID": "3",
+                  "DestinationIsIpv6": "false",
+                  "Initiated": "true",
+                  "DestinationHostname": "58x158x177x102.ap58.ftth.ucom.ne.jp",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "SourcePort": "49784",
+                  "SourceHostname": "DESKTOP-B0T93D6.local"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7f5d257abc981b5eddb52d4a9a02fb66201226935cf3d39177c8a81c3a3e8dd4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Persistence Via COM Search Order Hijacking",
+            "rule_description": "Detects potential COM object hijacking leveraging the COM Search Order",
+            "rule_author": "Maxime Thiebaut (@0xThiebaut), oscd.community, C\u00e9dric Hien",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "T1122",
+                  "EventID": "13",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ddraw.dll",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001_Classes\\WOW6432Node\\CLSID\\{BCDE0395-E52F-467C-8E3D-C4579291692E}\\InprocServer32\\(Default)"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\ipconfig.exe /flushdns >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\netsh.exe interface ip delete arpcache >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /getactivescheme > C:\\Windows\\TEMP\\PowerPlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /query 381b4222-f694-41f0-9685-ff5bb260df2e > C:\\Windows\\TEMP\\HighPerformancePlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "aa1c4ee10caaa9d521b34246c51e0c22c8af0a4b7fdb1cdd9faf1182ef6dd14c",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Common Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split), wagga (name)",
+            "match_context": [
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "Details": "C:\\Users\\george\\AppData\\Local\\netwf.bat",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Environment\\UserInitMprLogonScript"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "acfdd695b50334901b76498dea74721b8b3767958af4dfdb031aebc613d6ff72",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential WWlib.DLL Sideloading",
+            "rule_description": "Detects potential DLL sideloading of \"wwlib.dll\"",
+            "rule_author": "X__Junior (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "ImageLoaded": "c:\\program files\\microsoft office\\root\\office16\\wwlib.dll"
+                }
+              },
+              {
+                "values": {
+                  "ImageLoaded": "c:\\program files (x86)\\microsoft office\\office14\\wwlib.dll"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "e7856bac967038b016efab8e4f315a2f16ccd6ba62f20d73df0ad3826fe654a3",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Execution With Uncommon DLL Extension",
+            "rule_description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
+            "rule_author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Users\\george\\AppData\\Local\\netwf.dat\",KlpSvc",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\rundll32.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Olivia\\AppData\\Local\\netwf.dat,KlpSvc"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe C:\\Users\\Elijah\\AppData\\Local\\netwf.dat,KlpSvc",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "1",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "e77646c39db7fa011a5223aeb73c738046787fc7f62a99394e883d76a54341f7",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CMD Shell Output Redirect",
+            "rule_description": "Detects the use of the redirection character \">\" to redicrect information in commandline",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\ipconfig.exe /flushdns >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\System32\\cmd.exe /c C:\\Windows\\System32\\netsh.exe interface ip delete arpcache >C:\\Windows\\TEMP\\ipconfig.out 2>&1",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /getactivescheme > C:\\Windows\\TEMP\\PowerPlan.log",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\rempl\\sedlauncher.exe\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\powercfg.exe /query 381b4222-f694-41f0-9685-ff5bb260df2e > C:\\Windows\\TEMP\\HighPerformancePlan.log",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\rempl\\sedlauncher.exe",
+                  "IntegrityLevel": "System",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
+        "last_analysis_stats": {
+          "malicious": 47,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 12
+        },
+        "md5": "f52ea8f238e57e49bfae304bd656ad98",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "sha256": "efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52",
+        "crowdsourced_ids_stats": {
+          "info": 0,
+          "high": 1,
+          "medium": 0,
+          "low": 0
+        },
+        "tlsh": "T19274AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D54334",
+        "last_analysis_date": 1772607572,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
+            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "2201d8e006f8f005a6b415f61e677532"
+                ],
+                "ja3s": [
+                  "4192c0a946c5bd9b544b4656d9f624a4"
+                ]
+              },
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
+            ],
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_id": "1:2022323"
+          }
+        ],
+        "reputation": -101,
+        "sha1": "169c8f3e3d22e192c108bc95164d362ce5437465",
+        "filecondis": {
+          "dhash": "00203d3c0e251930",
+          "raw_md5": "64cc74f6b99e82b04f207af7f009d4a1"
+        },
+        "first_submission_date": 1507724535,
+        "type_extension": "doc"
+      }
+    }
+  ],
+  "errors": []
+}

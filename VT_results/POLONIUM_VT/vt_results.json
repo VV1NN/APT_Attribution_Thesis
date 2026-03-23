@@ -1,0 +1,2874 @@
+{
+  "organization": "POLONIUM",
+  "scan_time": "2025-08-31T22:25:37.810484",
+  "statistics": {
+    "total_iocs": 28,
+    "processed": 28,
+    "found_in_vt": 28,
+    "malicious": 20,
+    "suspicious": 0,
+    "harmless": 8,
+    "errors": 0
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "135.125.147.170",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:19.871258",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 0,
+      "harmless_count": 57,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754321888,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "135.125.0.0/16",
+        "asn": 16276,
+        "as_owner": "OVH SAS",
+        "country": "FR",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Let's Encrypt",
+          "CN": "E6"
+        },
+        "subject": {
+          "CN": "qgqpx3n9.filter.evo-shield.com"
+        },
+        "validity": {
+          "not_after": "2024-11-28 00:04:29",
+          "not_before": "2024-08-30 00:04:30"
+        },
+        "version": "V3",
+        "serial_number": "4d4dd2b829b8ee67256a44a90fa1053b14c",
+        "thumbprint": "e9d4296c0f424c80ad852ee2736381c9be04dafc",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "EC",
+          "ec": {
+            "oid": "secp256r1",
+            "pub": "3059301306072a8648ce3d020106082a8648ce3d0301070342000443562a08f5a81bb6b2d46f51f358bc45a326cb6cb8bce8935788de62a6a0ac35135f741c764d7959d6ac69d7f5315c54891d99dd91651caf784811ccb3872467"
+          }
+        },
+        "jarm": "1dd40d40d00040d1dc1dd40d1dd40d3446fb8839649f251e5083970c44ad30"
+      },
+      "whois_info": "inetnum: 135.125.147.160 - 135.125.147.175\nnetname: OVH_317660375\ncountry: DE\ndescr: Failover Ips\norg: ORG-PO36-RIPE\nadmin-c: OTC13-RIPE\ntech-c: OTC13-RIPE\nstatus: ASSIGNED PA\nmnt-by: OVH-MNT\ncreated: 2020-12-29T16:02:26Z\nlast-modified: 2020-12-29T16:02:26Z\nsource: RIPE\norganisation: ORG-PO36-RIPE\norg-name: Evolution Host Ltd\norg-type: OTHER\naddress: Evolution Host, 1st Floor, Unit 1B, Robinhood Industrial Estate\naddress: D12 Dublin\naddress: IE\nphone: +353.851531134\nabuse-c: ACRO45010-RIPE\nmnt-ref: OVH-MNT\nmnt-by: OVH-MNT\ncreated: 2015-09-17T15:22:04Z\nlast-modified: 2021-12-04T23:19:13Z\nsource: RIPE # Filtered\nrole: OVH DE Technical Contact\naddress: OVH GmbH\naddress: St. Johanner Str. 41-43\naddress: 66111 Saarbrucken\naddress: Deutschland\nadmin-c: OK217-RIPE\ntech-c: GM84-RIPE\nnic-hdl: OTC13-RIPE\nabuse-mailbox: abuse@ovh.net\nmnt-by: OVH-MNT\ncreated: 2009-09-16T16:09:57Z\nlast-modified: 2021-02-26T13:07:37Z\nsource: RIPE # Filtered\nroute: 135.125.128.0/17\norigin: AS16276\nmnt-by: OVH-MNT\ncreated: 2020-11-03T13:34:30Z\nlast-modified: 2020-11-03T13:34:30Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "tor"
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "172.96.188.51",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:20.601622",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756424288,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "172.96.188.0/24",
+        "asn": 32475,
+        "as_owner": "SINGLEHOP-LLC",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "www.coincassoapp.com"
+        },
+        "validity": {
+          "not_after": "2022-06-04 08:39:11",
+          "not_before": "2022-03-06 08:39:12"
+        },
+        "version": "V3",
+        "serial_number": "41dd4c253a4a06ce72d9f60ee45164a5fc4",
+        "thumbprint": "40589f3ea07c37f9cd09ccdc3a5d09d172684019",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00d107c79b281ae823569ac864d1f641141082ec2ae306489295cf97b17333bebba24cc698237d60e81ef5c43a5224da0a7c7f707919c113f05b0b155282df008f3f5669cd5d6037af1e07370203348c715af1a957e937c1410bb0bf4a276d0f300f2b4b502de88530e25d0cd01010c88f0fcf5a0c56274e4e5b55bcfc93c1104cea2169606b857f10313da6d7046234d25af55d96f4da5b47028fa8a06b659e62833d45dc0dda167f0988990a19cd6cce9fd3e4a26dbe08c3d4619340aa95186b3e0b835efa45379024befe196ac21e45eb2e28b329a3586eda82627e9178b3dd1572969a48f5241798960e343c30a71b7582ac6370c941c6c28a32ae95aede03",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "3fd3fd0003fd3fd21c42d42d000000307ee0eb468e9fdb5cfcd698a80a67ef"
+      },
+      "whois_info": "NetRange: 172.96.184.0 - 172.96.191.255\nCIDR: 172.96.184.0/21\nNetName: HH-63\nNetHandle: NET-172-96-184-0-1\nParent: NET172 (NET-172-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: AS36114, AS53340\nOrganization: Hawk Host Inc. (HH-63)\nRegDate: 2017-02-24\nUpdated: 2017-02-24\nRef: https://rdap.arin.net/registry/ip/172.96.184.0\nOrgName: Hawk Host Inc.\nOrgId: HH-63\nAddress: 100 Consilium Place\nAddress: Suite 200\nCity: Scarborough\nStateProv: ON\nPostalCode: M1H 3E3\nCountry: CA\nRegDate: 2012-08-30\nUpdated: 2023-11-14\nRef: https://rdap.arin.net/registry/entity/HH-63\nOrgNOCHandle: NETWO7575-ARIN\nOrgNOCName: Network Operations\nOrgNOCPhone: +1-800-859-8803 \nOrgNOCEmail: noc@as20068.net\nOrgNOCRef: https://rdap.arin.net/registry/entity/NETWO7575-ARIN\nOrgTechHandle: NETWO7575-ARIN\nOrgTechName: Network Operations\nOrgTechPhone: +1-800-859-8803 \nOrgTechEmail: noc@as20068.net\nOrgTechRef: https://rdap.arin.net/registry/entity/NETWO7575-ARIN\nOrgAbuseHandle: NETWO7576-ARIN\nOrgAbuseName: Network Abuse\nOrgAbusePhone: +1-800-859-8803 \nOrgAbuseEmail: netabuse@as20068.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/NETWO7576-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "185.244.129.109",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:21.511641",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 58,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756424288,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "185.244.129.0/24",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 185.244.129.0 - 185.244.129.255\nnetname: ECOMPUTE-COM\ncountry: RO\nadmin-c: IR2458-RIPE\ntech-c: IR2458-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\ncreated: 2018-02-24T17:43:24Z\nlast-modified: 2020-12-23T09:29:47Z\nsource: RIPE\nperson: Ionescu Razvan\naddress: Str 23 August, nr 75, Pav. Adm. Etaj 1,Biroul nr 5. Buftea,ROMANIA\nphone: +40770946498\nnic-hdl: IR2458-RIPE\nmnt-by: gwhost\ncreated: 2018-02-24T17:18:48Z\nlast-modified: 2018-02-24T17:18:48Z\nsource: RIPE\nroute: 185.244.129.0/24\norigin: AS204641\nmnt-by: gwhost\ncreated: 2018-02-24T17:26:21Z\nlast-modified: 2018-02-24T17:26:21Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "185.244.129.79",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:22.132447",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 60,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756480603,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "185.244.129.0/24",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 185.244.129.0 - 185.244.129.255\nnetname: ECOMPUTE-COM\ncountry: RO\nadmin-c: IR2458-RIPE\ntech-c: IR2458-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\ncreated: 2018-02-24T17:43:24Z\nlast-modified: 2020-12-23T09:29:47Z\nsource: RIPE\nperson: Ionescu Razvan\naddress: Str 23 August, nr 75, Pav. Adm. Etaj 1,Biroul nr 5. Buftea,ROMANIA\nphone: +40770946498\nnic-hdl: IR2458-RIPE\nmnt-by: gwhost\ncreated: 2018-02-24T17:18:48Z\nlast-modified: 2018-02-24T17:18:48Z\nsource: RIPE\nroute: 185.244.129.0/24\norigin: AS204641\nmnt-by: gwhost\ncreated: 2018-02-24T17:26:21Z\nlast-modified: 2018-02-24T17:26:21Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "45.80.149.108",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:22.747898",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756401420,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "45.80.148.0/22",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "jarm": "15d3fd16d29d29d00042d43d000000ea552d307cdd65a9a94fec1293390a04"
+      },
+      "whois_info": "inetnum: 45.80.149.0 - 45.80.149.255\norg: ORG-HS246-RIPE\nnetname: ECOMPUTE-COM\ncountry: NL\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:44:13Z\nlast-modified: 2020-12-23T09:27:42Z\nsource: RIPE\norganisation: ORG-HS246-RIPE\norg-name: HOSTGW SRL\ncountry: RO\norg-type: LIR\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nabuse-c: AR52668-RIPE\nmnt-ref: mnt-ro-hostgw-1\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:03Z\nlast-modified: 2020-12-23T09:14:31Z\nsource: RIPE # Filtered\nperson: Razvan Ionescu\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nnic-hdl: RI1904-RIPE\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:02Z\nlast-modified: 2019-05-15T12:41:03Z\nsource: RIPE\nroute: 45.80.149.0/24\norigin: AS204641\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:52:23Z\nlast-modified: 2019-05-15T13:52:23Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "45.80.149.57",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:23.425990",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756547221,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "45.80.148.0/22",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "L": "Houston",
+          "CN": "cPanel, Inc. Certification Authority",
+          "O": "cPanel, Inc.",
+          "ST": "TX"
+        },
+        "subject": {
+          "CN": "www.signonbankofamerica.tk"
+        },
+        "validity": {
+          "not_after": "2021-06-27 23:59:59",
+          "not_before": "2021-03-29 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "7e757cc69f95cc0dc35b6238ea38559b",
+        "thumbprint": "7bbb35d99c5663e5c8a4c904297c1f7dacae39b2",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00bf66892b159925cd28e746357cae879207579f1679e96c678ace4bddf85ff9e5ff41e261e8de8574f991700e4bd12c5515e7fa2d61aae61d54ec9a639be2f8a4a826c452c50bf61bc4f712446230e432224b5a6a46167cdc573a6ce9f106ec5107290a239319f593a6fead298bc41c2b04ac4b6954ac1aa237752f5c1d5d5b8bd8f09b1a54b75cd98044f35d04bac8c2951fc204da1478c3aa4e73cab486eb373b153f57a6ebb7aa721957c0e020d0cb5e3d542975f4cef2492ce47d670c4585391d33c8be2a8e5b5eccb245b2bf95f316ad5492c2a711c6907432aa7a93b79abfb0a2b3495ba1c9d55d24e37698fd54ed32290f802da9a14ff54c95870a933d",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "15d3fd16d29d29d00015d3fd15d29d291d9a5cb49fb6a2290d7663155bd150"
+      },
+      "whois_info": "inetnum: 45.80.149.0 - 45.80.149.255\norg: ORG-HS246-RIPE\nnetname: ECOMPUTE-COM\ncountry: NL\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:44:13Z\nlast-modified: 2020-12-23T09:27:42Z\nsource: RIPE\norganisation: ORG-HS246-RIPE\norg-name: HOSTGW SRL\ncountry: RO\norg-type: LIR\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nabuse-c: AR52668-RIPE\nmnt-ref: mnt-ro-hostgw-1\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:03Z\nlast-modified: 2020-12-23T09:14:31Z\nsource: RIPE # Filtered\nperson: Razvan Ionescu\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nnic-hdl: RI1904-RIPE\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:02Z\nlast-modified: 2019-05-15T12:41:03Z\nsource: RIPE\nroute: 45.80.149.0/24\norigin: AS204641\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:52:23Z\nlast-modified: 2019-05-15T13:52:23Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "45.80.149.68",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:24.107419",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 29,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756476550,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "45.80.148.0/22",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "bsdunix.us"
+        },
+        "validity": {
+          "not_after": "2021-09-22 08:57:54",
+          "not_before": "2021-06-24 08:57:55"
+        },
+        "version": "V3",
+        "serial_number": "45af644474ce29b52a559df3deb36d654a9",
+        "thumbprint": "b2ca3072a958addfa1dc7eaea5a6b0db8e04a6b0",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00f385b8d0770e0f27db76eb9f4408d04bcfc9d25776cf9bb8d90865cfaf1214dea8c0537b11db687beeacf91ef788639cbf3e27c232a2fc67b2ae49aa377fcafd25ef7e44ae8ee678609b5b6812496d8fa67475bdb21d962fd014189cf77fafb04087f740a4347fe1b4df88d3b7147718b40c65f7b8f94de18bd3c984c8f72bf860fc8d6f93558eeb25dca328756bd3b2e6b632a9dc777e765b81bb2553d7d97891671fb2e44777490f4ee1f2b8fb3dd25052d6b75d546cd740c282c2c6118a355eafd756659035cc87a7934a95cd8cfe28fc235d6552919f2784c720bb1d41f9704736d7c505248119a77ab604a2caea050084cf3d0a3aa0b0d277b2b32dfc47",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "15d2ad16d29d29d00015d2ad15d29dce1c3a13ea772a5e6542f21e67daf369"
+      },
+      "whois_info": "inetnum: 45.80.149.0 - 45.80.149.255\norg: ORG-HS246-RIPE\nnetname: ECOMPUTE-COM\ncountry: NL\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:44:13Z\nlast-modified: 2020-12-23T09:27:42Z\nsource: RIPE\norganisation: ORG-HS246-RIPE\norg-name: HOSTGW SRL\ncountry: RO\norg-type: LIR\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nabuse-c: AR52668-RIPE\nmnt-ref: mnt-ro-hostgw-1\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:03Z\nlast-modified: 2020-12-23T09:14:31Z\nsource: RIPE # Filtered\nperson: Razvan Ionescu\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nnic-hdl: RI1904-RIPE\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:02Z\nlast-modified: 2019-05-15T12:41:03Z\nsource: RIPE\nroute: 45.80.149.0/24\norigin: AS204641\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:52:23Z\nlast-modified: 2019-05-15T13:52:23Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "malicious",
+            "result": "malware"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "45.80.149.71",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:24.674011",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 61,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754906950,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "45.80.148.0/22",
+        "asn": 204641,
+        "as_owner": "HOSTGW SRL",
+        "country": "RO",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 45.80.149.0 - 45.80.149.255\norg: ORG-HS246-RIPE\nnetname: ECOMPUTE-COM\ncountry: NL\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nstatus: ASSIGNED PA\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:44:13Z\nlast-modified: 2020-12-23T09:27:42Z\nsource: RIPE\norganisation: ORG-HS246-RIPE\norg-name: HOSTGW SRL\ncountry: RO\norg-type: LIR\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nadmin-c: RI1904-RIPE\ntech-c: RI1904-RIPE\nabuse-c: AR52668-RIPE\nmnt-ref: mnt-ro-hostgw-1\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:03Z\nlast-modified: 2020-12-23T09:14:31Z\nsource: RIPE # Filtered\nperson: Razvan Ionescu\naddress: Strada 23 August, nr 75, Pavilionul Administrativ, Etaj 1\naddress: 070000\naddress: Buftea\naddress: ROMANIA\nphone: +440770946498\nnic-hdl: RI1904-RIPE\nmnt-by: mnt-ro-hostgw-1\ncreated: 2019-05-15T12:41:02Z\nlast-modified: 2019-05-15T12:41:03Z\nsource: RIPE\nroute: 45.80.149.0/24\norigin: AS204641\nmnt-by: gwhost\nmnt-by: mnt-ro-hostgw-1\nmnt-by: ro-gwhost-1-mnt\ncreated: 2019-05-15T13:52:23Z\nlast-modified: 2019-05-15T13:52:23Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "51.83.246.73",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:25.365597",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 61,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1753937472,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "51.83.0.0/16",
+        "asn": 16276,
+        "as_owner": "OVH SAS",
+        "country": "FR",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "siemashop.pl"
+        },
+        "validity": {
+          "not_after": "2023-10-04 08:08:49",
+          "not_before": "2023-07-06 08:08:50"
+        },
+        "version": "V3",
+        "serial_number": "4d510c6c8078c3f6ef2b420e053f6559716",
+        "thumbprint": "a8285ecdc7f8c9433cbcd184087bc937870f3bda",
+        "signature_algorithm": null,
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "b888e01fa68dff036ab062b99ae44ec3f39b33e4f8289e6b9405553867bf03febd73ce0348c6d8925193c70eb6e72742caa031a727e619868ffc3ef9fe40ee024dab7088b99e91d28b3ddda4621b6c16e99e591fb4c5bd86cde3134accb88b4d855059ac63e900dca277981d311310de52ff5571da3d2b2801c5eaf7c9cde48bef4ce7d326c548391af648343e5bdd4c4f38daa00b822045d9539febd387178faba0686338b0cd66952d16b1ef9603bf5c805a8886d548b4e1f7594103b7b25b8bde2e10f4bd38193048d6f03090dd59f48111319da077f7678a4e8a0d000d9ab577676800e951044f512da0b876282585f61bbfe31d3469416700c8ee2f5af5",
+            "exponent": "10001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "2ad2ad0002ad2ad22c42d42d0000008a5941c13f67e0c0a2c8a36bfeef6920"
+      },
+      "whois_info": "inetnum: 51.83.246.72 - 51.83.246.79\nnetname: OVH_243893558\ncountry: PL\ndescr: Failover Ips\norg: ORG-ISZO79-RIPE\nadmin-c: OTC12-RIPE\ntech-c: OTC12-RIPE\nstatus: LEGACY\nmnt-by: OVH-MNT\ncreated: 2022-11-08T13:23:56Z\nlast-modified: 2022-11-08T13:23:56Z\nsource: RIPE\norganisation: ORG-ISZO79-RIPE\norg-name: Ideo Sp. z o.o. Ziemowit Michno\norg-type: OTHER\naddress: ul. Nad Przyrwa 13\naddress: 35-234 Rzeszow\naddress: PL\nphone: +48.178602186\nabuse-c: ACRO5901-RIPE\nmnt-ref: OVH-MNT\nmnt-by: OVH-MNT\ncreated: 2017-04-08T11:14:03Z\nlast-modified: 2017-10-30T14:51:37Z\nsource: RIPE # Filtered\nrole: OVH PL Technical Contact\naddress: OVH Sp. z o. o.\naddress: ul. Swobodna 1\naddress: 54-088 Wroclaw\naddress: Poland\nadmin-c: OK217-RIPE\ntech-c: GM84-RIPE\nnic-hdl: OTC12-RIPE\nabuse-mailbox: abuse@ovh.net\nmnt-by: OVH-MNT\ncreated: 2009-09-16T16:09:56Z\nlast-modified: 2019-08-08T07:50:01Z\nsource: RIPE # Filtered\nroute: 51.83.0.0/16\norigin: AS16276\nmnt-by: OVH-MNT\ncreated: 2019-02-13T09:04:13Z\nlast-modified: 2019-02-13T09:04:13Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://135.125.147.170:80",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:26.111023",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1620899595,
+      "last_seen": 1751915806,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites. business and economy"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://172.96.188.51",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:26.756697",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 64,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1753105147,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://185.244.129.109",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:27.335566",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 65,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1753249571,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Unrated (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "not recommended"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://185.244.129.79:63047",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:27.961511",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 29,
+      "total_engines": 96,
+      "first_seen": 1654307037,
+      "last_seen": 1737742790,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ns-port",
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://185.244.129.79:80",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:28.577476",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 65,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1754070672,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.80.149.108:63047",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:29.120752",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 81,
+      "undetected_count": 13,
+      "total_engines": 96,
+      "first_seen": 1654307021,
+      "last_seen": 1654307032,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "Comodo Valkyrie Verdict": "unknown"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.80.149.108:80",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:29.894953",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1755278039,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.80.149.57:63047",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:30.722742",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 81,
+      "undetected_count": 12,
+      "total_engines": 96,
+      "first_seen": 1654306964,
+      "last_seen": 1654306977,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "Webroot": "Phishing and Other Frauds",
+          "Comodo Valkyrie Verdict": "unknown"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.80.149.68:63047",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:31.418342",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 0,
+      "harmless_count": 70,
+      "undetected_count": 13,
+      "total_engines": 90,
+      "first_seen": 1654281686,
+      "last_seen": 1666562318,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://45.80.149.71:80",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:32.058895",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 66,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1752502243,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://51.83.246.73",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:33.089403",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 1,
+      "harmless_count": 64,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1654187382,
+      "last_seen": 1751207042,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "malicious web sites. shopping"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "suspicious",
+            "result": "suspicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/CommonSecurityLog/CreepyDriveRequestSequence.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:33.667420",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 86,
+      "undetected_count": 9,
+      "total_engines": 95,
+      "first_seen": 1654187329,
+      "last_seen": 1719573339,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/CommonSecurityLog/CreepyDriveURLs.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:34.229885",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187329,
+      "last_seen": 1719573338,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/CommonSecurityLog/CreepySnailURLParameters.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:34.797795",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187330,
+      "last_seen": 1719573338,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/tree/master/Detections/MultipleDataSources/B64IPInURLFromMDE.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:35.375348",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187330,
+      "last_seen": 1719573339,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/tree/master/Detections/MultipleDataSources/B64UserInWebURIFromMDE.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:35.956451",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187330,
+      "last_seen": 1719573338,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/tree/master/Detections/MultipleDataSources/POLONIUMIPIoC.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:36.667605",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187330,
+      "last_seen": 1719573339,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/CommonSecurityLog/B64IPInURL.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:37.242053",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187329,
+      "last_seen": 1719573339,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/CommonSecurityLog/RiskyCommandB64EncodedInUrl.yaml",
+        "sources": [
+          "https://www.microsoft.com/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:25:37.809383",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 87,
+      "undetected_count": 8,
+      "total_engines": 95,
+      "first_seen": 1654187330,
+      "last_seen": 1719573338,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Dr.Web": "social networks",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Comodo Valkyrie Verdict": "mobile communications"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    }
+  ]
+}

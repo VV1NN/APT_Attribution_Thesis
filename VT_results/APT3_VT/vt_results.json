@@ -1,0 +1,3837 @@
+{
+  "organization": "APT3",
+  "scan_time": "2025-08-31T17:49:06.440383",
+  "statistics": {
+    "total_iocs": 30,
+    "processed": 30,
+    "found_in_vt": 25,
+    "malicious": 22,
+    "suspicious": 0,
+    "harmless": 3,
+    "errors": 5
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "email",
+        "value": "upinfo@attackresearch.com",
+        "sources": [
+          "http://carnal0wnage.attackresearch.com/2012/09/more-on-aptsim.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:39.097988",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756574211,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "O": "Let's Encrypt",
+          "CN": "R10"
+        },
+        "subject": {
+          "CN": "attackresearch.com"
+        },
+        "validity": {
+          "not_after": "2025-10-10 22:18:27",
+          "not_before": "2025-07-12 22:18:28"
+        },
+        "version": "V3",
+        "serial_number": "51d39c55b2c818a6a30af0f38f08207ffe3",
+        "thumbprint": "8c381bb4af2592aff60f53221ef8a73098d544b1",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "cce4a3f09095e63fa88cfd6f930fffbc9de5e62cbb6c256ba835d7908ba2269d3d53b170614d7bf722c0a68b10a5761390b78cab13450b59dfb42a5f66f4a542aa8f0488638dc4e5cb1df802e3a89a6510f2c422fbdafbb0447390b1b5dbcbc9368902bd11d0fc5b9874c53e6a5b444a9fdedb79b502015c93b4dd6e949d1757ea8ac0310fc38c10c3d37931e1bf98cdfba3efe62ab471b098f99595e22784462e22273a87074bad2d2f22ceab13a5f5531dc893ccc1ef86598f1ddfbc9260b6b45b1459c19f9f8980f71a781c7fdc35b5e57eef82f92e8482978054f17be2529568f670ec0b106134d4ea1adc1fda8d1a8f2c1cb84dfc0cee6f6a2f1508544d",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6"
+      },
+      "whois_info": "Admin City: Reykjavik\nAdmin Country: IS\nAdmin Email: b3a890a6f3173695s@withheldforprivacy.com\nAdmin Organization: Privacy service provided by Withheld for Privacy ehf\nAdmin Postal Code: 101\nAdmin State/Province: Capital Region\nCreation Date: 2008-11-08T07:56:49.00Z\nCreation Date: 2008-11-08T07:56:49Z\nDNSSEC: unsigned\nDomain Name: ATTACKRESEARCH.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nDomain name: attackresearch.com\nName Server: DNS1.REGISTRAR-SERVERS.COM\nName Server: DNS2.REGISTRAR-SERVERS.COM\nName Server: dns1.registrar-servers.com\nName Server: dns2.registrar-servers.com\nRegistrant City: ddbf76e4e8cee320\nRegistrant Country: IS\nRegistrant Email: b3a890a6f3173695s@withheldforprivacy.com\nRegistrant Fax Ext: 3432650ec337c945\nRegistrant Fax: 3432650ec337c945\nRegistrant Name: 37bfbc24cafea5d2\nRegistrant Organization: 4b7a0912c26a13e2\nRegistrant Phone Ext: 3432650ec337c945\nRegistrant Phone: 1c9a7bcdeaf95e9f\nRegistrant Postal Code: f206c9d9737ad45d\nRegistrant State/Province: 3e0204199d8ebf9c\nRegistrant Street: c6523241936df1ba\nRegistrar Abuse Contact Email: abuse@namecheap.com\nRegistrar Abuse Contact Phone: +1.6613102107\nRegistrar Abuse Contact Phone: +1.9854014545\nRegistrar IANA ID: 1068\nRegistrar Registration Expiration Date: 2025-11-08T07:56:49.00Z\nRegistrar URL: http://www.namecheap.com\nRegistrar WHOIS Server: whois.namecheap.com\nRegistrar: NAMECHEAP INC\nRegistrar: NameCheap, Inc.\nRegistry Domain ID: 1527636611_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2025-11-08T07:56:49Z\nTech City: Reykjavik\nTech Country: IS\nTech Email: b3a890a6f3173695s@withheldforprivacy.com\nTech Organization: Privacy service provided by Withheld for Privacy ehf\nTech Postal Code: 101\nTech State/Province: Capital Region\nUpdated Date: 2024-10-09T05:45:30.98Z\nUpdated Date: 2024-10-09T05:45:30Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Business/Economy, Information Technology, Information/Computer Security (alphaMountain.ai)",
+          "BitDefender": "blogs",
+          "Forcepoint ThreatSeeker": "computer security"
+        },
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "104.151.248.173",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:40.017697",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754385190,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "104.151.224.0/19",
+        "asn": 399268,
+        "as_owner": "CVT",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {},
+      "whois_info": "NetRange: 104.151.224.0 - 104.151.255.255\nCIDR: 104.151.224.0/19\nNetName: CVT-24\nNetHandle: NET-104-151-224-0-1\nParent: NET104 (NET-104-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Coosa Valley Technologies Inc (CVT-24)\nRegDate: 2021-01-20\nUpdated: 2022-05-05\nRef: https://rdap.arin.net/registry/ip/104.151.224.0\nOrgName: Coosa Valley Technologies Inc\nOrgId: CVT-24\nAddress: 69680 AL Highway 77\nCity: Talladega\nStateProv: AL\nPostalCode: 35160\nCountry: US\nRegDate: 2020-12-01\nUpdated: 2025-07-22\nRef: https://rdap.arin.net/registry/entity/CVT-24\nOrgNOCHandle: ITDEP269-ARIN\nOrgNOCName: IT Department\nOrgNOCPhone: +1-256-649-4669 \nOrgNOCEmail: it@coosavalleytech.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/ITDEP269-ARIN\nOrgTechHandle: ITDEP269-ARIN\nOrgTechName: IT Department\nOrgTechPhone: +1-256-649-4669 \nOrgTechEmail: it@coosavalleytech.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ITDEP269-ARIN\nOrgAbuseHandle: ITDEP269-ARIN\nOrgAbuseName: IT Department\nOrgAbusePhone: +1-256-649-4669 \nOrgAbuseEmail: it@coosavalleytech.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ITDEP269-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "192.157.198.103",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:40.942088",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754385190,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "192.157.192.0/18",
+        "asn": 12479,
+        "as_owner": "Orange Espagne SA",
+        "country": "ES",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 192.157.192.0 - 192.157.223.255\nnetname: OrangeEspagne-FTTH\ndescr: Orange Espagne FTTH Users\ncountry: ES\norg: ORG-ULt1-RIPE\nadmin-c: HA1067-RIPE\ntech-c: HT874-RIPE\ngeoloc: 40.4234964 -3.7427184\nlanguage: ES\nstatus: ASSIGNED PA\nmnt-by: UNI2-MNT\nmnt-lower: UNI2-MNT\nmnt-routes: UNI2-MNT\ncreated: 2020-12-22T15:40:12Z\nlast-modified: 2020-12-22T15:40:12Z\nsource: RIPE\norganisation: ORG-ULt1-RIPE\norg-name: Orange Espagne SA\ncountry: ES\norg-type: LIR\naddress: Paseo del Club Deportivo 1- Edificio 8. Planta 1\n Parque Empresarial La Finca\naddress: 28223\naddress: Madrid\naddress: SPAIN\nphone: +34912521200\nfax-no: +34656155743\nadmin-c: HA1067-RIPE\nadmin-c: HAF10-RIPE\nadmin-c: HLF7-RIPE\ntech-c: MVM79-RIPE\ntech-c: HA1067-RIPE\nabuse-c: AFH12-RIPE\nmnt-ref: RIPE-NCC-HM-MNT\nmnt-ref: UNI2-MNT\nmnt-by: UNI2-MNT\nmnt-by: RIPE-NCC-HM-MNT\ncreated: 2004-04-17T11:18:28Z\nlast-modified: 2024-12-16T15:55:04Z\nsource: RIPE # Filtered\nperson: Angel Luis Gonzalez\naddress: Parque Empresarial La Finca\naddress: Edificio 8\naddress: Paseo del Club Deportivo, 1\naddress: 28223 Pozuelo de Alarcon\naddress: Madrid, Spain\nphone: +34 91 1784000\nnic-hdl: HA1067-RIPE\nmnt-by: UNI2-MNT\ncreated: 2005-08-19T09:44:04Z\nlast-modified: 2020-02-19T07:48:46Z\nsource: RIPE # Filtered\nperson: Hostmaster 1 Technician\naddress: Company France Telecom Espa�a\naddress: Paseo del Club Deportivo, 1 , Edif 8 Par. Empre. La Finca\naddress: 28223\naddress: Pozuelo de Alarcon, Madrid\nphone: +34 911785400\nfax-no: +34 91 2521603\nnic-hdl: HT874-RIPE\nmnt-by: UNI2-MNT\ncreated: 2005-08-22T12:52:40Z\nlast-modified: 2024-01-25T09:52:53Z\nsource: RIPE # Filtered\nroute: 192.157.192.0/19\norigin: AS12479\ndescr: ES-UNI2-20100212\nremarks: spam, abuse reportsmailto: abuse@orange.es\nmnt-by: UNI2-MNT\ncreated: 2020-12-22T15:40:12Z\nlast-modified: 2020-12-22T15:40:12Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "title": "Operation DoubleTap",
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/192.157.198.103/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/192.157.198.103\n\nPostal Code: 90017",
+            "severity": "low",
+            "timestamp": 1692673070,
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "192.184.60.229",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:41.619316",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754385191,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "192.184.32.0/19",
+        "asn": 16509,
+        "as_owner": "AMAZON-02",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "AT",
+          "CN": "ZeroSSL RSA Domain Secure Site CA",
+          "O": "ZeroSSL"
+        },
+        "subject": {
+          "CN": "hipk.vip"
+        },
+        "validity": {
+          "not_after": "2022-05-20 23:59:59",
+          "not_before": "2022-02-19 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "881b5fb32ed53275a156c7572143aa4e",
+        "thumbprint": "527b6dd1a42a9b89e3badb10f0e725472a9bdf6c",
+        "signature_algorithm": "sha384RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00b690005a1735865d4807e1d1ef21b57726ae43dae46be33e0411c16e9385e3e9d6429a781c9e8771ee6712923b3fca89ba23b9de93abef215e5ce27b684d11b35c8023b88b622ecd398caeadfab9ccc6ced34b448f1f5c4354f8f207c1967116c593600cb9c2e3b8a35538c4e4e7cc612bef40ba2f5139b62f8eda049377ec8a2e279f779fcff3c02911ead85284d94d9c8147b3c7d23c9fc9545a37cd33eb113ca6263bedcdefa2ddb5b3d47666063b52d7aaa32059cc6af08f60d59e7079ec63cb5b13f08301d0dbe35c940f642640d3d4fcb0e50a77c9965c193de2331fec1f6c90bce0a5e90c0c704305d3efb9bf24bb8dcbe52c23282c23876cbab91a01",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "3fd3fd0003fd3fd21c42d42d000000f816eaea5c28bd7b1d0104ee7676bfe1"
+      },
+      "whois_info": "NetRange: 192.184.32.0 - 192.184.63.255\nCIDR: 192.184.32.0/19\nNetName: AMAZO-4\nNetHandle: NET-192-184-32-0-1\nParent: NET192 (NET-192-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Amazon.com, Inc. (AMAZO-4)\nRegDate: 2023-12-06\nUpdated: 2023-12-06\nRef: https://rdap.arin.net/registry/ip/192.184.32.0\nOrgName: Amazon.com, Inc.\nOrgId: AMAZO-4\nAddress: Amazon Web Services, Inc.\r\nAddress: P.O. Box 81226\nCity: Seattle\nStateProv: WA\nPostalCode: 98108-1226\nCountry: US\nRegDate: 2005-09-29\nUpdated: 2022-09-30\nComment: For details of this service please see\nComment: http://ec2.amazonaws.com\nRef: https://rdap.arin.net/registry/entity/AMAZO-4\nOrgRoutingHandle: ARMP-ARIN\nOrgRoutingName: AWS RPKI Management POC\nOrgRoutingPhone: +1-206-555-0000 \nOrgRoutingEmail: aws-rpki-routing-poc@amazon.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/ARMP-ARIN\nOrgNOCHandle: AANO1-ARIN\nOrgNOCName: Amazon AWS Network Operations\nOrgNOCPhone: +1-206-555-0000 \nOrgNOCEmail: amzn-noc-contact@amazon.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/AANO1-ARIN\nOrgAbuseHandle: AEA8-ARIN\nOrgAbuseName: Amazon EC2 Abuse\nOrgAbusePhone: +1-206-555-0000 \nOrgAbuseEmail: trustandsafety@support.aws.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/AEA8-ARIN\nOrgTechHandle: ANO24-ARIN\nOrgTechName: Amazon EC2 Network Operations\nOrgTechPhone: +1-206-555-0000 \nOrgTechEmail: amzn-noc-contact@amazon.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ANO24-ARIN\nOrgRoutingHandle: IPROU3-ARIN\nOrgRoutingName: IP Routing\nOrgRoutingPhone: +1-206-555-0000 \nOrgRoutingEmail: aws-routing-poc@amazon.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/IPROU3-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "198.55.115.71",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:42.230312",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 60,
+      "undetected_count": 33,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754385189,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "198.55.112.0/22",
+        "asn": 203020,
+        "as_owner": "HostRoyale Technologies Pvt Ltd",
+        "country": "BO",
+        "continent": "SA",
+        "regional_internet_registry": "LACNIC"
+      },
+      "certificate_info": {},
+      "whois_info": "NetRange: 198.55.96.0 - 198.55.127.255\nCIDR: 198.55.96.0/19\nNetName: HOSTP-7\nNetHandle: NET-198-55-96-0-1\nParent: NET198 (NET-198-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: HostPapa (HOSTP-7)\nRegDate: 2025-01-30\nUpdated: 2025-05-14\nComment: Geofeed https://geofeeds.oniaas.io/geofeeds.csv\nRef: https://rdap.arin.net/registry/ip/198.55.96.0\nOrgName: HostPapa\nOrgId: HOSTP-7\nAddress: 325 Delaware Avenue\nAddress: Suite 300\nCity: Buffalo\nStateProv: NY\nPostalCode: 14202\nCountry: US\nRegDate: 2016-06-06\nUpdated: 2024-04-26\nRef: https://rdap.arin.net/registry/entity/HOSTP-7\nOrgAbuseHandle: NETAB23-ARIN\nOrgAbuseName: NETABUSE\nOrgAbusePhone: +1-905-315-3455 \nOrgAbuseEmail: net-abuse-global@hostpapa.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/NETAB23-ARIN\nOrgTechHandle: NETTE9-ARIN\nOrgTechName: NETTECH\nOrgTechPhone: +1-905-315-3455 \nOrgTechEmail: net-tech-global@hostpapa.com\nOrgTechRef: https://rdap.arin.net/registry/entity/NETTE9-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "crowdsourced_context": [
+          {
+            "title": "Operation DoubleTap",
+            "details": "VirusTotal Link: https://www.virustotal.com/gui/ip-address/198.55.115.71/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/198.55.115.71\n\nPostal Code: 90014",
+            "severity": "low",
+            "timestamp": 1692673071,
+            "source": "ArcSight Threat Intelligence"
+          }
+        ],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "210.109.99.64",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:43.089272",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1754385199,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "210.109.96.0/21",
+        "asn": 9952,
+        "as_owner": "Hostway IDC",
+        "country": "KR",
+        "continent": "AS",
+        "regional_internet_registry": "APNIC"
+      },
+      "certificate_info": {},
+      "whois_info": "inetnum: 210.109.0.0 - 210.109.255.255\nnetname: SEJONG\ndescr: SEJONG NETWORKS\ncountry: KR\nadmin-c: IM686-AP\ntech-c: IM686-AP\nstatus: ALLOCATED PORTABLE\nmnt-by: MNT-KRNIC-AP\nmnt-irt: IRT-KRNIC-KR\nlast-modified: 2024-09-10T08:50:07Z\nsource: APNIC\nirt: IRT-KRNIC-KR\naddress: 9, Jinheung-gil, Naju-si, Jeollanam-do\ne-mail: irt@nic.or.kr\nabuse-mailbox: irt@nic.or.kr\nadmin-c: IM574-AP\ntech-c: IM574-AP\nauth: # Filtered\nremarks: irt@nic.or.kr was validated on 2020-04-09\nmnt-by: MNT-KRNIC-AP\nlast-modified: 2025-04-10T04:49:23Z\nsource: APNIC\nperson: IP Manager\naddress: 12 Gwacheon-daero 7-gil, Gwacheon-si, Gyeonggi-do\ncountry: KR\nphone: +82-2-1688-2200\ne-mail: ip@sejongnetworks.com\nnic-hdl: IM686-AP\nmnt-by: MNT-KRNIC-AP\nlast-modified: 2024-09-10T08:42:02Z\nsource: APNIC\ninetnum: 210.109.0.0 - 210.109.255.255\nnetname: SEJONG-KR\ndescr: SEJONG NETWORKS\ncountry: KR\nadmin-c: IA10-KR\ntech-c: IM10-KR\nstatus: ALLOCATED PORTABLE\nmnt-by: MNT-KRNIC-AP\nmnt-irt: IRT-KRNIC-KR\nchanged: hostmaster@nic.or.kr 20240912\nremarks: This information has been partially mirrored by APNIC from\nremarks: KRNIC. To obtain more specific information, please use the\nremarks: KRNIC whois server at whois.kisa.or.kr.\nsource: KRNIC\nperson: IP Manager\naddress: 12 Gwacheon-daero 7-gil, Gwacheon-si, Gyeonggi-do\naddress: (Galhyeondong)\ncountry: KR\nphone: +82-2-1688-2200\ne-mail: ip@sejongnetworks.com\nnic-hdl: IA10-KR\nmnt-by: MNT-KRNIC-AP\nchanged: hostmaster@nic.or.kr 20240912\nremarks: This information has been partially mirrored by APNIC from\nremarks: KRNIC. To obtain more specific information, please use the\nremarks: KRNIC whois server at whois.kisa.or.kr.\nsource: KRNIC\nperson: IP Manager\naddress: 12 Gwacheon-daero 7-gil, Gwacheon-si, Gyeonggi-do\naddress: (Galhyeondong)\ncountry: KR\nphone: +82-2-1688-2200\ne-mail: ip@sejongnetworks.com\nnic-hdl: IM10-KR\nmnt-by: MNT-KRNIC-AP\nchanged: hostmaster@nic.or.kr 20240912\nremarks: This information has been partially mirrored by APNIC from\nremarks: KRNIC. To obtain more specific information, please use the\nremarks: KRNIC whois server at whois.kisa.or.kr.\nsource: KRNIC\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2fab77a3ff40e4f6d9b5b7e813c618e4",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:44.013403",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "492a839a3bf9c61b7065589a18c5aa8d",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:44.935737",
+      "vt_found": true,
+      "malicious_count": 57,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 15,
+      "total_engines": 76,
+      "first_seen": 1416693688,
+      "last_seen": 1752231813,
+      "reputation": 0,
+      "names": [
+        "0cdffe44d23ce95f39828916650fbc4c5491d229.codex",
+        "object3186.application%2fx-ms-dos-executable",
+        "492a839a3bf9c61b7065589a18c5aa8d",
+        "41254ecde7f99da911c86a37c947cb173fefde86983ca5084fc3948c7fc2d474.exe",
+        "4377deaab278d893f28d7e1c898ffa1c",
+        "file",
+        "VirusShare_492a839a3bf9c61b7065589a18c5aa8d",
+        "myfile.exe",
+        "BMYVYGUC.exe",
+        "17Z744QY.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 12288,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "492a839a3bf9c61b7065589a18c5aa8d",
+        "sha1": "0cdffe44d23ce95f39828916650fbc4c5491d229",
+        "sha256": "41254ecde7f99da911c86a37c947cb173fefde86983ca5084fc3948c7fc2d474",
+        "ssdeep": "192:qdXBvanTlQRJ4Zyt19e0ADl+b6n32gF2BJJ90qgfMj1:qJNanSD44t1s0UU6n3yBh",
+        "tlsh": "T108423A0F895D84B1F3A0187343BB92A6CB7F855233C1ACDBAB8069144D253E5C47E6AE",
+        "vhash": "014056555d15555az24hz23zfaz1f1z",
+        "pe_info": {
+          "timestamp": 1416385553,
+          "imphash": "9342d18e7d315117f23db7553d59a9d1",
+          "machine_type": 332,
+          "entry_point": 7382,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 82590.73,
+              "virtual_address": 4096,
+              "entropy": 5.69,
+              "raw_size": 5120,
+              "flags": "rx",
+              "virtual_size": 4676,
+              "md5": "81a39959d8f6f58f9c997dd51fcaf86b"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 123334.9,
+              "virtual_address": 12288,
+              "entropy": 4.86,
+              "raw_size": 3584,
+              "flags": "r",
+              "virtual_size": 3132,
+              "md5": "389860956980ee27f78376f242a82441"
+            },
+            {
+              "name": ".data",
+              "chi2": 119604.0,
+              "virtual_address": 16384,
+              "entropy": 0.37,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 952,
+              "md5": "7497569c9fb9696a8c38c3497439fcaf"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8745.0,
+              "virtual_address": 20480,
+              "entropy": 5.19,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "7079162aad779260b75483ba99199c40"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 47144.0,
+              "virtual_address": 24576,
+              "entropy": 4.71,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 784,
+              "md5": "e189fda9a47774f56945f641ffeec461"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=20",
+            "[C++] VS2008 build 21022 count=2",
+            "[IMP] VS2005 build 50727 count=7",
+            "[---] Unmarked objects count=84",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x8a, version: 21022 count=2"
+          ],
+          "rich_pe_header_hash": "9fb3353c42ec68b678be1cc1500cc4a0",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateProcessA",
+                "CreateThread",
+                "ExitProcess",
+                "FreeLibrary",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThread",
+                "GetCurrentThreadId",
+                "GetEnvironmentVariableA",
+                "GetLastError",
+                "GetModuleFileNameA",
+                "GetNativeSystemInfo",
+                "GetProcAddress",
+                "GetShortPathNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetVersionExA",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "LoadLibraryA",
+                "LocalAlloc",
+                "LocalFree",
+                "lstrcatA",
+                "lstrcpyA",
+                "QueryPerformanceCounter",
+                "SetPriorityClass",
+                "SetThreadPriority",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "TerminateThread",
+                "UnhandledExceptionFilter",
+                "VirtualFree",
+                "WaitForSingleObject"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "CallNextHookEx",
+                "CallWindowProcA",
+                "CreatePopupMenu",
+                "CreateWindowExA",
+                "DefWindowProcA",
+                "DestroyMenu",
+                "DestroyWindow",
+                "EndMenu",
+                "InsertMenuItemA",
+                "PostMessageA",
+                "RegisterClassA",
+                "SetWindowLongA",
+                "SetWindowsHookExA",
+                "TrackPopupMenu",
+                "UnhookWindowsHook"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHChangeNotify",
+                "ShellExecuteExA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "?terminate@@YAXXZ",
+                "__dllonexit",
+                "__getmainargs",
+                "__initenv",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_cexit",
+                "_configthreadlocale",
+                "_controlfp_s",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_except_handler4_common",
+                "_exit",
+                "_initterm",
+                "_initterm_e",
+                "_invoke_watson",
+                "_lock",
+                "_onexit",
+                "_unlock",
+                "_XcptFilter",
+                "exit",
+                "memset",
+                "printf",
+                "strcpy_s",
+                "strstr",
+                "vprintf"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "checks-user-input",
+          "detect-debug-environment",
+          "cve-2014-4113",
+          "peexe",
+          "exploit",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "tepfer",
+              "count": 10
+            },
+            {
+              "value": "apolmy",
+              "count": 5
+            },
+            {
+              "value": "dianti",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.tepfer/apolmy",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 31
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 99,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "Trojan.Win32.Tepfer.3!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.214",
+            "engine_update": "20250702",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "Trojan.Generic.36473674"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "exe.trojan.tepfer"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1732775183c5aa8d"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "Trojan-FFIG!492A839A3BF9"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250711",
+            "category": "malicious",
+            "result": "Trojan.Agent.11264.B"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5401",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Trojan.Tepfer.Win32.86624"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "5a0c4e1925c76a959ab0588f683ab437",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:45.857330",
+      "vt_found": true,
+      "malicious_count": 59,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 12,
+      "total_engines": 76,
+      "first_seen": 1416693640,
+      "last_seen": 1755592919,
+      "reputation": -1,
+      "names": [
+        "726fdaa229d66673b61ad86f102d21f4980a50e0.codex",
+        "5a0c4e1925c76a959ab0588f683ab437",
+        "ec4e7727a2b92386e1126e73ccd76753a8fb93b57ea760ebbbdf2a1ed6dd7947",
+        "vti-rescan",
+        "install.exe",
+        "ec4e7727a2b92386e1126e73ccd76753a8fb93b57ea760ebbbdf2a1ed6dd7947.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 46592,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "5a0c4e1925c76a959ab0588f683ab437",
+        "sha1": "726fdaa229d66673b61ad86f102d21f4980a50e0",
+        "sha256": "ec4e7727a2b92386e1126e73ccd76753a8fb93b57ea760ebbbdf2a1ed6dd7947",
+        "ssdeep": "768:BD0X4hdufanO4Cs0roYbBjOav4lZMxj2Dp:BDGDfay9BixS2V",
+        "tlsh": "T1EF238D09DB9A8062E37D0AB182B3871187FDF2227391AAEF5F50940A1E733D1D4777A5",
+        "vhash": "044056555d15551az21hz2gz1c1z",
+        "pe_info": {
+          "timestamp": 1416387310,
+          "imphash": "6b8611f8148a6b51e37fd68e75b6a81c",
+          "machine_type": 332,
+          "entry_point": 5530,
+          "resource_details": [
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 372106.22,
+              "filetype": "DOS EXE",
+              "entropy": 5.480807781219482,
+              "sha256": "41254ecde7f99da911c86a37c947cb173fefde86983ca5084fc3948c7fc2d474",
+              "type": "EXE"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 547542.69,
+              "filetype": "DOS EXE",
+              "entropy": 5.152637481689453,
+              "sha256": "7d25e096554e5cce66254e619bec6f40853b38557f9ea5b491855683618f7ba1",
+              "type": "EXE"
+            },
+            {
+              "lang": "CHINESE SIMPLIFIED",
+              "chi2": 414154.12,
+              "filetype": "DOS EXE",
+              "entropy": 5.050780296325684,
+              "sha256": "42b489b27da71175179e0510770f407c7c8a9e8a29c7fb8ea53ad53dd3f47a24",
+              "type": "EXE"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6079.4,
+              "filetype": "unknown",
+              "entropy": 5.020695209503174,
+              "sha256": "9f2fc067639866642bb1a73fb43006d233e569d25566b16dedec472fe5d3c5c3",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1,
+            "CHINESE SIMPLIFIED": 3
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "EXE": 3
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 51590.31,
+              "virtual_address": 4096,
+              "entropy": 5.7,
+              "raw_size": 3072,
+              "flags": "rx",
+              "virtual_size": 2788,
+              "md5": "8c93821b97ed9395cf69733ff5ab3f40"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 106324.81,
+              "virtual_address": 8192,
+              "entropy": 4.64,
+              "raw_size": 2560,
+              "flags": "r",
+              "virtual_size": 2212,
+              "md5": "f80ed2ba1a15b4c49d3824aea5dded7a"
+            },
+            {
+              "name": ".data",
+              "chi2": 120094.0,
+              "virtual_address": 12288,
+              "entropy": 0.35,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 904,
+              "md5": "e2b23683a8b8935f281d74e560c5fad8"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 1319979.88,
+              "virtual_address": 16384,
+              "entropy": 5.4,
+              "raw_size": 38400,
+              "flags": "r",
+              "virtual_size": 38240,
+              "md5": "cf3a9f4432c71bd1c07f9d4b5bca8034"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 100933.0,
+              "virtual_address": 57344,
+              "entropy": 3.26,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 636,
+              "md5": "0ad5d4c44ac345b40b091ea6098a032b"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=20",
+            "[C++] VS2008 build 21022 count=2",
+            "[IMP] VS2005 build 50727 count=5",
+            "[---] Unmarked objects count=63",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x8a, version: 21022 count=2"
+          ],
+          "rich_pe_header_hash": "34a59bac4742b6511b90246798e417c4",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "FindResourceA",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThread",
+                "GetCurrentThreadId",
+                "GetEnvironmentVariableA",
+                "GetModuleFileNameA",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetShortPathNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GlobalAlloc",
+                "GlobalFree",
+                "InterlockedCompareExchange",
+                "InterlockedExchange",
+                "IsDebuggerPresent",
+                "LoadResource",
+                "LockResource",
+                "lstrcatA",
+                "lstrcpyA",
+                "QueryPerformanceCounter",
+                "SetPriorityClass",
+                "SetThreadPriority",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "WinExec",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHChangeNotify",
+                "ShellExecuteExA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "?terminate@@YAXXZ",
+                "__dllonexit",
+                "__getmainargs",
+                "__initenv",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_access",
+                "_adjust_fdiv",
+                "_amsg_exit",
+                "_cexit",
+                "_configthreadlocale",
+                "_controlfp_s",
+                "_crt_debugger_hook",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_except_handler4_common",
+                "_exit",
+                "_initterm",
+                "_initterm_e",
+                "_invoke_watson",
+                "_lock",
+                "_onexit",
+                "_unlock",
+                "_XcptFilter",
+                "exit",
+                "memcpy"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "detect-debug-environment",
+          "checks-user-input",
+          "runtime-modules",
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 28,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "dropper"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 8,
+              "value": "apolmy"
+            },
+            {
+              "count": 4,
+              "value": "dianti"
+            },
+            {
+              "count": 3,
+              "value": "tepfer"
+            }
+          ],
+          "suggested_threat_label": "trojan.apolmy/dianti"
+        },
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.Win32.Apolmy.3!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Dropped:Trojan.Generic.36473674"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "exe.trojan.apolmy"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17323283673ab437"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan-FFIG!5A0C4E1925C7"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Dropped:Trojan.Generic.36473674"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Dropper.Win32.Dianti.V3r7"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "5c08957f05377004376e6a622406f9aa",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:46.778852",
+      "vt_found": true,
+      "malicious_count": 51,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 76,
+      "first_seen": 1416693688,
+      "last_seen": 1754669229,
+      "reputation": 0,
+      "names": [
+        "Client.exe",
+        "7582cedd4f69a27cb09db643e31d3bfdf1aabdb4.codex",
+        "test.exe",
+        "5C08957F05377004376E6A622406F9AA.exe",
+        "5C08957F05377004376E6A622406F9AA.dll",
+        "5c08957f05377004376e6a622406f9aa",
+        "42b489b27da71175179e0510770f407c7c8a9e8a29c7fb8ea53ad53dd3f47a24",
+        "vti-rescan",
+        "file"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 11264,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "5c08957f05377004376e6a622406f9aa",
+        "sha1": "7582cedd4f69a27cb09db643e31d3bfdf1aabdb4",
+        "sha256": "42b489b27da71175179e0510770f407c7c8a9e8a29c7fb8ea53ad53dd3f47a24",
+        "ssdeep": "192:WbFq4rwMKDv1xUp2aCA1tW5wqCPu6fM90lRY:Eq4ri1oCaW5wZPucM90lR",
+        "tlsh": "T1BC32B618FBEACA22C57F4B74687393110775F726EA22CB9F4C89080E6C3BB519954B70",
+        "vhash": "2140365515190a49b0020",
+        "pe_info": {
+          "timestamp": 1416307763,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 16750,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 57254.89,
+              "filetype": "unknown",
+              "entropy": 3.202638626098633,
+              "sha256": "0aa0cfa3033aa336e385e091560a499cb8969da60a5b090e665bd52bbbefd61d",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "c0085eb467d2fc9c9f395047e057183b3cd1503a4087d0db565161c13527a76f",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 212997.7,
+              "virtual_address": 8192,
+              "entropy": 5.47,
+              "raw_size": 8704,
+              "flags": "rx",
+              "virtual_size": 8564,
+              "md5": "eece2f4b9c930609a153136153e001f1"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 91471.16,
+              "virtual_address": 24576,
+              "entropy": 3.86,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1328,
+              "md5": "040fde4945e540d26618554818e218df"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 32768,
+              "entropy": 0.08,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "8c71c94cab8b02e092f9c54a3d373082"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "direct-cpu-clock-access",
+          "detect-debug-environment",
+          "runtime-modules",
+          "peexe",
+          "assembly"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 6,
+              "value": "msil"
+            },
+            {
+              "count": 6,
+              "value": "tedy"
+            },
+            {
+              "count": 5,
+              "value": "occamy"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 27,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "downloader"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/tedy"
+        },
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan.Win32.Occamy.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Gen:Variant.Tedy.175300"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "exe.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250807",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.173373811206f9aa"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan-FFIG!5C08957F0537"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan.Agent.11264.B"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Malware.AI.3448882284"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5420",
+            "engine_update": "20250807",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "6b8611f8148a6b51e37fd68e75b6a81c",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:47.819507",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "744a17a3bc6dbd535f568ef1e87d8b9a",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:48.498598",
+      "vt_found": true,
+      "malicious_count": 56,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 16,
+      "total_engines": 76,
+      "first_seen": 1416693686,
+      "last_seen": 1753747521,
+      "reputation": 0,
+      "names": [
+        "73170f48b96d124168ca90ca2be2fcb50475cfa9.codex",
+        "744a17a3bc6dbd535f568ef1e87d8b9a",
+        "W1AN6PIW.exe",
+        "9JC3EW0G.exe",
+        "doc.exe",
+        "7d25e096554e5cce66254e619bec6f40853b38557f9ea5b491855683618f7ba1-dropped.bin",
+        "7d25e096554e5cce66254e619bec6f40853b38557f9ea5b491855683618f7ba1",
+        "myfile.exe",
+        "34G4EU33.exe",
+        "vti-rescan"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 13824,
+        "type_description": "Win32 EXE",
+        "magic": "PE32+ executable (GUI) x86-64, for MS Windows",
+        "md5": "744a17a3bc6dbd535f568ef1e87d8b9a",
+        "sha1": "73170f48b96d124168ca90ca2be2fcb50475cfa9",
+        "sha256": "7d25e096554e5cce66254e619bec6f40853b38557f9ea5b491855683618f7ba1",
+        "ssdeep": "192:PnB2eOzXrEHjshSL9vPjBZNfH14E7ROfJ3Ed8GAMFyPQGups:PjAOjc+zX18ad8GDk",
+        "tlsh": "T1E6523A01C75B0091E22A85B5C2B38A12D5F9761227953AEF5F70F0522FB31E3A5BB3D4",
+        "vhash": "014066551d1515551az25hz23zfaz1c1z",
+        "pe_info": {
+          "timestamp": 1416385545,
+          "imphash": "2fab77a3ff40e4f6d9b5b7e813c618e4",
+          "machine_type": 34404,
+          "entry_point": 8064,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6088.43,
+              "filetype": "unknown",
+              "entropy": 5.024030685424805,
+              "sha256": "93cec4eed0318327e6fa8ddba6ec9ad551ad335e02168b835ef171a7fa55abd7",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 84937.37,
+              "virtual_address": 4096,
+              "entropy": 5.74,
+              "raw_size": 5632,
+              "flags": "rx",
+              "virtual_size": 5425,
+              "md5": "d5f4b74372e38801e33ac994b62d0179"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 253652.73,
+              "virtual_address": 12288,
+              "entropy": 4.39,
+              "raw_size": 4608,
+              "flags": "r",
+              "virtual_size": 4152,
+              "md5": "8352741686cdaa255cffc6bf67321e6a"
+            },
+            {
+              "name": ".data",
+              "chi2": 116709.0,
+              "virtual_address": 20480,
+              "entropy": 0.47,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 1600,
+              "md5": "090b842649d599df7838c8a8883a25fc"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 42427.0,
+              "virtual_address": 24576,
+              "entropy": 3.52,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 444,
+              "md5": "b9fafa504c6a8432a16c1429532de4b6"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 8720.5,
+              "virtual_address": 28672,
+              "entropy": 5.19,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 688,
+              "md5": "df7207a96744cd407d0a4b54ba0c6df0"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 124498.0,
+              "virtual_address": 32768,
+              "entropy": 0.23,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 60,
+              "md5": "ef89218d16d2bdb2ce06c62e4ce60281"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] VS2008 build 21022 count=2",
+            "[ASM] VS2008 build 21022 count=1",
+            "[ C ] VS2008 build 21022 count=16",
+            "[C++] VS2008 build 21022 count=2",
+            "[IMP] VS2005 build 50727 count=7",
+            "[---] Unmarked objects count=82",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x8a, version: 21022 count=2"
+          ],
+          "rich_pe_header_hash": "d088357705e8c406206a6c7abe175979",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateProcessA",
+                "CreateThread",
+                "ExitProcess",
+                "FreeLibrary",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThread",
+                "GetCurrentThreadId",
+                "GetEnvironmentVariableA",
+                "GetLastError",
+                "GetModuleFileNameA",
+                "GetNativeSystemInfo",
+                "GetProcAddress",
+                "GetShortPathNameA",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetVersionExA",
+                "IsDebuggerPresent",
+                "LoadLibraryA",
+                "LocalAlloc",
+                "LocalFree",
+                "lstrcatA",
+                "lstrcpyA",
+                "QueryPerformanceCounter",
+                "RtlCaptureContext",
+                "RtlLookupFunctionEntry",
+                "RtlVirtualUnwind",
+                "SetPriorityClass",
+                "SetThreadPriority",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "TerminateThread",
+                "UnhandledExceptionFilter",
+                "VirtualFree",
+                "WaitForSingleObject"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "CallNextHookEx",
+                "CallWindowProcA",
+                "CreatePopupMenu",
+                "CreateWindowExA",
+                "DefWindowProcA",
+                "DestroyMenu",
+                "DestroyWindow",
+                "EndMenu",
+                "InsertMenuItemA",
+                "PostMessageA",
+                "RegisterClassA",
+                "SetWindowLongPtrA",
+                "SetWindowsHookExA",
+                "TrackPopupMenu",
+                "UnhookWindowsHook"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHChangeNotify",
+                "ShellExecuteExA"
+              ]
+            },
+            {
+              "library_name": "MSVCR90.dll",
+              "imported_functions": [
+                "?terminate@@YAXXZ",
+                "__C_specific_handler",
+                "__crt_debugger_hook",
+                "__dllonexit",
+                "__getmainargs",
+                "__initenv",
+                "__set_app_type",
+                "__setusermatherr",
+                "_amsg_exit",
+                "_cexit",
+                "_commode",
+                "_configthreadlocale",
+                "_decode_pointer",
+                "_encode_pointer",
+                "_exit",
+                "_fmode",
+                "_initterm",
+                "_initterm_e",
+                "_lock",
+                "_onexit",
+                "_unlock",
+                "_XcptFilter",
+                "exit",
+                "memset",
+                "printf",
+                "strcpy_s",
+                "strstr",
+                "vprintf"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "assembly",
+          "peexe",
+          "self-delete",
+          "64bits",
+          "checks-user-input"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 14,
+              "value": "apolmy"
+            },
+            {
+              "count": 3,
+              "value": "dianti"
+            },
+            {
+              "count": 2,
+              "value": "akhu"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 33,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "pua"
+            }
+          ],
+          "suggested_threat_label": "trojan.apolmy/dianti"
+        },
+        "sandbox_verdicts": {
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "Trojan.Win32.Apolmy.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250728",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "Trojan.Generic.12194654"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "exe.trojan.apolmy"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250727",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "Trojan-FFIG!744A17A3BC6D"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "Trojan.Agent.11264.B"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5412",
+            "engine_update": "20250728",
+            "category": "malicious",
+            "result": "Trojan.Dianti.Win64.12"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "8849538ef1c3471640230605c2623c67",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:49.348760",
+      "vt_found": true,
+      "malicious_count": 63,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 9,
+      "total_engines": 76,
+      "first_seen": 1416795293,
+      "last_seen": 1750845215,
+      "reputation": -81,
+      "names": [
+        "487f8944313e5780898c5b3a33bf8eab040c51a4.codex",
+        "8849538ef1c3471640230605c2623c67.BIN",
+        "48271640",
+        "output.48271640.txt",
+        "854c6ba97b4bd01246ac6ef9258135d2337e6938676421131b6793abf339fa94",
+        "854c6ba97b4bd01246ac6ef9258135d2337e6938676421131b6793abf339fa94.exe",
+        "VirusShare_8849538ef1c3471640230605c2623c67",
+        "39694bb0c41de7a46252195d06fde3a26813e37c",
+        "BXYZH957.exe",
+        "faoontmhtc.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 102400,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "8849538ef1c3471640230605c2623c67",
+        "sha1": "487f8944313e5780898c5b3a33bf8eab040c51a4",
+        "sha256": "854c6ba97b4bd01246ac6ef9258135d2337e6938676421131b6793abf339fa94",
+        "ssdeep": "1536:5jXBIMH+P+JRvY1jHHKWqNIs4WVFDmEgJl+bIIijcLmYxY:5jXBIMH+P+YtKQs4UFipJwIhcLmYxY",
+        "tlsh": "T17AA35B68C615AF38EE6C49B36EC32AD7E768107716C7D1BE282FB2D55835233E818581",
+        "vhash": "015046151d155048z161gz1lz",
+        "pe_info": {
+          "timestamp": 1411661399,
+          "imphash": "b7211d5b42ca0f33c9e98d0bf4fe0d08",
+          "machine_type": 332,
+          "entry_point": 5752,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 1657419.62,
+              "filetype": "unknown",
+              "entropy": 6.081387519836426,
+              "sha256": "c3bc879498b4fdfcb40b41a323342669bbf187b4a2bb785f8460d64dcf9d03e1",
+              "type": "BINARY"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "BINARY": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 338427.12,
+              "virtual_address": 4096,
+              "entropy": 3.75,
+              "raw_size": 4096,
+              "flags": "rx",
+              "virtual_size": 2064,
+              "md5": "067be05e82a910212c834a7c35d9a3f7"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 638568.0,
+              "virtual_address": 8192,
+              "entropy": 2.02,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1304,
+              "md5": "555eafff77ca2323ee81fe7852854611"
+            },
+            {
+              "name": ".data",
+              "chi2": 1015005.25,
+              "virtual_address": 12288,
+              "entropy": 0.17,
+              "raw_size": 4096,
+              "flags": "rw",
+              "virtual_size": 124,
+              "md5": "8e81ef7dc6463b2ccdaf6606b696591a"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 2172216.5,
+              "virtual_address": 16384,
+              "entropy": 5.88,
+              "raw_size": 86016,
+              "flags": "r",
+              "virtual_size": 82032,
+              "md5": "fb33424eb8bbc0de3e2d69d7b3acc66f"
+            }
+          ],
+          "compiler_product_versions": [
+            "[IMP] Windows Server 2003 SP1 DDK build 4035 count=9",
+            "[---] Unmarked objects count=46",
+            "[C++] VS98 (6.0) build 8168 count=1",
+            "[RES] VS98 (6.0) SP6 cvtres build 1736 count=1",
+            "id: 0xc, version: 7291 count=1",
+            "id: 0xa, version: 8047 count=11",
+            "id: 0xe, version: 7299 count=1",
+            "id: 0x4, version: 8047 count=2"
+          ],
+          "rich_pe_header_hash": "bc108623ddfdfabce1b92c398a36d59d",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateProcessA",
+                "CreateToolhelp32Snapshot",
+                "FindResourceA",
+                "FreeLibrary",
+                "GetCurrentProcess",
+                "GetLastError",
+                "GetModuleHandleA",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "LoadLibraryA",
+                "LoadResource",
+                "LockResource",
+                "OpenProcess",
+                "Process32First",
+                "Process32Next",
+                "SetFilePointer",
+                "SetLastError",
+                "SizeofResource",
+                "Sleep",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "AdjustTokenPrivileges",
+                "CreateProcessAsUserA",
+                "LookupPrivilegeValueA",
+                "OpenProcessToken"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHGetSpecialFolderPathA"
+              ]
+            },
+            {
+              "library_name": "MPR.dll",
+              "imported_functions": [
+                "WNetGetUserA"
+              ]
+            },
+            {
+              "library_name": "MSVCRT.dll",
+              "imported_functions": [
+                "__getmainargs",
+                "__p__commode",
+                "__p__fmode",
+                "__set_app_type",
+                "__setusermatherr",
+                "_acmdln",
+                "_adjust_fdiv",
+                "_controlfp",
+                "_except_handler3",
+                "_exit",
+                "_initterm",
+                "_stricmp",
+                "_XcptFilter",
+                "exit",
+                "sprintf",
+                "strstr"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "checks-user-input",
+          "long-sleeps",
+          "direct-cpu-clock-access",
+          "persistence",
+          "detect-debug-environment",
+          "runtime-modules",
+          "peexe",
+          "checks-network-adapters"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.pirpi/akhw",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 34
+            },
+            {
+              "value": "dropper",
+              "count": 4
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "pirpi",
+              "count": 5
+            },
+            {
+              "value": "akhw",
+              "count": 2
+            },
+            {
+              "value": "sbfk",
+              "count": 2
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agent.lyzF"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250625",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.71440574"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "exe.trojan.inject"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250624",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1733739029623c67"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Generic.cm"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250625",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.71440574"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250612",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5387",
+            "engine_update": "20250624",
+            "category": "malicious",
+            "result": "Trojan.Inject.Win32.169961"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "9342d18e7d315117f23db7553d59a9d1",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:50.155561",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:50.778489",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://<subdomain>.<legitdomain>.<TLD>/<directory>/<alphanumericID>.html",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/06/operation-clandestine-wolf-adobe-flash-zero-day.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:51.692460",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://blog.orange.tw/2019/02/abusing-meta-programming-for-unauthenticated-rce.html",
+        "sources": [
+          "http://carnal0wnage.attackresearch.com/2012/09/more-on-aptsim.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:52.289765",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1550665207,
+      "last_seen": 1750396060,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "third-party-cookies",
+          "iframes",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "misc",
+          "Forcepoint ThreatSeeker": "real estate"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://inform.bedircati.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:53.228322",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 96,
+      "first_seen": 1398782041,
+      "last_seen": 1740043570,
+      "reputation": -55,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Sophos": "spyware and malware"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://join.playboysplus.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:54.038641",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 96,
+      "first_seen": 1416423857,
+      "last_seen": 1736948017,
+      "reputation": -40,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Forcepoint ThreatSeeker": "sex"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://join.playboysplus.com/signup/",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:55.465632",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 96,
+      "first_seen": 1416421464,
+      "last_seen": 1739410755,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "sex"
+        },
+        "threat_names": [
+          "Exp/20146332-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://pn.lamb-site.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:56.301949",
+      "vt_found": true,
+      "malicious_count": 2,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 31,
+      "total_engines": 96,
+      "first_seen": 1414979468,
+      "last_seen": 1740043575,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "parked"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://securitywap.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:56.880441",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1401821643,
+      "last_seen": 1754435571,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Business/Economy, Malicious (alphaMountain.ai)"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://walterclean.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:58.131736",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 1,
+      "harmless_count": 62,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1402394302,
+      "last_seen": 1754046178,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Forcepoint ThreatSeeker": "elevated exposure"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.exploit-db.com/exploits/35230/",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:59.066307",
+      "vt_found": true,
+      "malicious_count": 6,
+      "suspicious_count": 1,
+      "harmless_count": 65,
+      "undetected_count": 19,
+      "total_engines": 91,
+      "first_seen": 1423517892,
+      "last_seen": 1707632117,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "multiple-redirects",
+          "external-resources",
+          "iframes",
+          "dom-modification",
+          "trackers"
+        ],
+        "categories": {
+          "Sophos": "hacking",
+          "BitDefender": "computersandsoftware",
+          "Xcitium Verdict Cloud": "software-hardware",
+          "Forcepoint ThreatSeeker": "computer security",
+          "Dr.Web": "known infection source"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.playboysplus.com/install/install.exe",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:48:59.985911",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 53,
+      "undetected_count": 7,
+      "total_engines": 63,
+      "first_seen": 1434724361,
+      "last_seen": null,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Websense ThreatSeeker": "malicious web sites. advanced malware payloads"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZDB Zeus": {
+            "method": "blacklist",
+            "engine_name": "ZDB Zeus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwarePatrol": {
+            "method": "blacklist",
+            "engine_name": "MalwarePatrol",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ZCloudsec": {
+            "method": "blacklist",
+            "engine_name": "ZCloudsec",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Websense ThreatSeeker": {
+            "method": "blacklist",
+            "engine_name": "Websense ThreatSeeker",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Zerofox": {
+            "method": "blacklist",
+            "engine_name": "Zerofox",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://www.walterclean.com",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2014/11/operation_doubletap.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:49:00.909708",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1402397097,
+      "last_seen": 1751056317,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://blog.orange.tw/2019/01/hacking-jenkins-part-1-play-with-dynamic-routing.html",
+        "sources": [
+          "http://carnal0wnage.attackresearch.com/2012/09/more-on-aptsim.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:49:03.673828",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 65,
+      "undetected_count": 31,
+      "total_engines": 97,
+      "first_seen": 1547643002,
+      "last_seen": 1750398210,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "misc",
+          "Forcepoint ThreatSeeker": "real estate"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://helpx.adobe.com/security/products/flash-player/apsb15-14.html",
+        "sources": [
+          "https://www.fireeye.com/blog/threat-research/2015/06/operation-clandestine-wolf-adobe-flash-zero-day.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:49:04.336991",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 68,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1435084977,
+      "last_seen": 1753083744,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "trackers",
+          "iframes",
+          "external-resources"
+        ],
+        "categories": {
+          "BitDefender": "business",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "information technology",
+          "Xcitium Verdict Cloud": "computing & technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.exploit-db.com/exploits/46453",
+        "sources": [
+          "http://carnal0wnage.attackresearch.com/2012/09/more-on-aptsim.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:49:05.518427",
+      "vt_found": true,
+      "malicious_count": 4,
+      "suspicious_count": 0,
+      "harmless_count": 57,
+      "undetected_count": 5,
+      "total_engines": 66,
+      "first_seen": 1551280282,
+      "last_seen": 1551290404,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "marketing",
+          "Forcepoint ThreatSeeker": "computer security",
+          "Dr.Web": "known infection source"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareDomainList": {
+            "method": "blacklist",
+            "engine_name": "MalwareDomainList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "zvelo": {
+            "method": "blacklist",
+            "engine_name": "zvelo",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://www.youtube.com/watch?v=-LGR63yCTts",
+        "sources": [
+          "http://carnal0wnage.attackresearch.com/2012/09/more-on-aptsim.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T17:49:06.438546",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 72,
+      "undetected_count": 8,
+      "total_engines": 80,
+      "first_seen": 1589242165,
+      "last_seen": 1589242176,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Botvrij.eu": {
+            "method": "blacklist",
+            "engine_name": "Botvrij.eu",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "IPsum": {
+            "method": "blacklist",
+            "engine_name": "IPsum",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CLEAN MX": {
+            "method": "blacklist",
+            "engine_name": "CLEAN MX",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "DNS8": {
+            "method": "blacklist",
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "NotMining": {
+            "method": "blacklist",
+            "engine_name": "NotMining",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "securolytics": {
+            "method": "blacklist",
+            "engine_name": "securolytics",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwarePatrol": {
+            "method": "blacklist",
+            "engine_name": "MalwarePatrol",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalSilo": {
+            "method": "blacklist",
+            "engine_name": "MalSilo",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    }
+  ]
+}

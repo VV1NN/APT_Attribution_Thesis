@@ -1,0 +1,1874 @@
+{
+  "organization": "Poseidon_Group",
+  "scan_time": "2025-08-31T22:13:34.231762",
+  "statistics": {
+    "total_iocs": 13,
+    "processed": 13,
+    "found_in_vt": 9,
+    "malicious": 8,
+    "suspicious": 0,
+    "harmless": 1,
+    "errors": 4
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "email",
+        "value": "atintelreports@kaspersky.com",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:26.124429",
+      "vt_found": true,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 66,
+      "undetected_count": 28,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756648156,
+      "reputation": 78,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {
+        "issuer": {
+          "C": "BE",
+          "O": "GlobalSign nv-sa",
+          "CN": "GlobalSign RSA OV SSL CA 2018"
+        },
+        "subject": {
+          "C": "CH",
+          "ST": "Zürich",
+          "L": "Zürich",
+          "O": "Kaspersky Lab Switzerland GmbH",
+          "CN": "kaspersky.com"
+        },
+        "validity": {
+          "not_after": "2026-02-15 09:06:03",
+          "not_before": "2025-01-14 09:06:04"
+        },
+        "version": "V3",
+        "serial_number": "305203d8ffa7a1750b7f023c",
+        "thumbprint": "be4dc419998975e5572405b239ba3b6d62607f5f",
+        "signature_algorithm": null,
+        "public_key": {
+          "algorithm": "RSA",
+          "rsa": {
+            "modulus": "b0432263d3efaba6eec6c045cc9c7e1bc5bf2a54ca69c767da6facf15288f4468faae56f04c3aa2ac038fada3f7dbbe1b99c53b861c017929ee7ac02fffe33e1944cf961bf90f1390ab462242d9abbd8abeccbb8957687611f6561d7e1a970251a4508eb2128c9168aeef5a99630fe7800d48f29300858e3500389af8e1819b2a59889a66fbd2938c8198ce3b827034e29d6d5607e01dee07cd8a65d21473ddf0038c8505cfed9ef65a6112ba663787d73e69e7c816f5b0ccb7eb76285312382279b6ac4ee2409f25599579cf9748499016b9f80cce61fc237ce8120ac849dbe423f30b9842872a900266363a5f01d50bdf458f1d2b2658f3b38eed81e822789",
+            "exponent": "10001",
+            "key_size": 2048
+          }
+        },
+        "jarm": "15d15d15d00000000000000000000060e4631d31b8b81537f3d3173b71710c"
+      },
+      "whois_info": "Admin City: Moscow\nAdmin Country: RU\nAdmin Email: b1ebeba4890b217ds@kaspersky.com\nAdmin Organization: Joint Stock Company Kaspersky Lab\nAdmin Postal Code: 125212\nAdmin State/Province: Moscow\nCreation Date: 1997-10-09T04:00:00Z\nDNSSEC: unsigned\nDomain Name: KASPERSKY.COM\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nName Server: NS1.KASPERSKYLABS.NET\nName Server: NS2.KASPERSKYLABS.COM\nName Server: NS3.KASPERSKYLABS.ORG\nName Server: ns1.kasperskylabs.net\nName Server: ns2.kasperskylabs.com\nName Server: ns3.kasperskylabs.org\nRegistrant City: 04154ce0aa2604d4\nRegistrant Country: RU\nRegistrant Email: b1ebeba4890b217ds@kaspersky.com\nRegistrant Fax Ext: 3432650ec337c945\nRegistrant Fax: a9dbb7bc520ff63b\nRegistrant Name: 3c51727f82ba7216\nRegistrant Organization: 620618f8b983478c\nRegistrant Phone Ext: 3432650ec337c945\nRegistrant Phone: a9dbb7bc520ff63b\nRegistrant Postal Code: 4a002af85e55b878\nRegistrant State/Province: 04154ce0aa2604d4\nRegistrant Street: b03c28443b769b2b\nRegistrar Abuse Contact Email: tld-abuse@nic.ru\nRegistrar Abuse Contact Phone: +7.4959944601\nRegistrar Abuse Contact Phone: +74950091333\nRegistrar IANA ID: 463\nRegistrar Registration Expiration Date: 2025-10-07T21:00:00Z\nRegistrar URL: http://nic.ru\nRegistrar URL: http://www.nic.ru\nRegistrar WHOIS Server: whois.nic.ru\nRegistrar: Regional Network Information Center, JSC dba RU-CENTER\nRegistry Domain ID: 1161465_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2025-10-08T04:00:00Z\nTech City: Moscow\nTech Country: RU\nTech Email: b1ebeba4890b217ds@kaspersky.com\nTech Organization: Joint Stock Company Kaspersky Lab\nTech Postal Code: 125212\nTech State/Province: Moscow\nUpdated Date: 2025-04-16T08:38:34Z\nUpdated Date: 2025-04-16T08:38:35Z",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "0a870c900e6db25a0e0a65b8545656d4",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:26.993140",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2c4aeacd3f7b587c599c2c4b5c1475da",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:27.675124",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2ce818518ca5fd03cbacb26173aa60ce",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:28.206798",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2fd8bb121a048e7c9e29040f9a9a6eee",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:28.831381",
+      "vt_found": true,
+      "malicious_count": 64,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 9,
+      "total_engines": 77,
+      "first_seen": 1455215449,
+      "last_seen": 1754324683,
+      "reputation": -20,
+      "names": [
+        "d9ff4b5011881b39a6db6b062e2cbdb614ea1d9b.codex"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 142848,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "2fd8bb121a048e7c9e29040f9a9a6eee",
+        "sha1": "d9ff4b5011881b39a6db6b062e2cbdb614ea1d9b",
+        "sha256": "c7edceaab254f0f3de37b1c836b5c0d1c9580a685cb294f7780e1f97f585442b",
+        "ssdeep": "3072:54kxrCYP/3mdmOz3wm6P8m+GXj41B55hq:5JxCYP/3bQFoj41Vh",
+        "tlsh": "T1B3D37CA23AD4C5B1C209143344F6AB73761AF6761761D4D37BD90A6AAD303E2F83E352",
+        "vhash": "015046655d155068z5b7z3099z1hz",
+        "pe_info": {
+          "timestamp": 1297803768,
+          "imphash": "11b577f060510748b24324058286c3b1",
+          "machine_type": 332,
+          "entry_point": 20735,
+          "resource_details": [
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 39722.9,
+              "filetype": "unknown",
+              "entropy": 6.097262859344482,
+              "sha256": "12378ec51db16277b8376c7f17f1a4cab5a02f92ff16a08e19d8d873bc8a22e8",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 1848.8,
+              "filetype": "ICO",
+              "entropy": 1.819240689277649,
+              "sha256": "494e4fd717fa1ee0c5c7bb3b4e28fdab4b7f6e95b4f9865f5ab86f03f62ae62c",
+              "type": "RT_GROUP_ICON"
+            }
+          ],
+          "resource_langs": {
+            "PORTUGUESE BRAZILIAN": 2
+          },
+          "resource_types": {
+            "RT_ICON": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 592834.25,
+              "virtual_address": 4096,
+              "entropy": 6.58,
+              "raw_size": 108544,
+              "flags": "rx",
+              "virtual_size": 108341,
+              "md5": "351618ac7ae34479e9ce4a28b2a995e3"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 828971.69,
+              "virtual_address": 114688,
+              "entropy": 5.19,
+              "raw_size": 26112,
+              "flags": "r",
+              "virtual_size": 25706,
+              "md5": "e054f5eb8441ea41563965aee64d69fb"
+            },
+            {
+              "name": ".data",
+              "chi2": 675687.81,
+              "virtual_address": 143360,
+              "entropy": 2.36,
+              "raw_size": 4608,
+              "flags": "rw",
+              "virtual_size": 11516,
+              "md5": "3eb90341e0d8af0f81d680b739300659"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 77813.79,
+              "virtual_address": 155648,
+              "entropy": 5.62,
+              "raw_size": 2560,
+              "flags": "r",
+              "virtual_size": 2400,
+              "md5": "1bf13ba082c43a616909ac343668c441"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ASM] VS2008 SP1 build 30729 count=24",
+            "[ C ] VS2008 SP1 build 30729 count=103",
+            "[C++] VS2008 SP1 build 30729 count=52",
+            "[ C ] VS2005 build 50727 count=2",
+            "[IMP] VS2005 build 50727 count=11",
+            "[---] Unmarked objects count=122",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 SP1 build 30729 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 30729 count=11"
+          ],
+          "rich_pe_header_hash": "852531254203f83614ab022d8f044d43",
+          "import_list": [
+            {
+              "library_name": "urlmon.dll",
+              "imported_functions": [
+                "URLDownloadToFileA"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringA",
+                "CompareStringW",
+                "CreateFileA",
+                "CreateMutexA",
+                "CreatePipe",
+                "CreateProcessA",
+                "DeleteCriticalSection",
+                "DuplicateHandle",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "FindResourceA",
+                "FindResourceExA",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsA",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineA",
+                "GetComputerNameA",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStrings",
+                "GetEnvironmentStringsW",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetModuleFileNameA",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoA",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetVersionExA",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapDestroy",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSection",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadResource",
+                "LockResource",
+                "lstrcmpiA",
+                "lstrlenA",
+                "MultiByteToWideChar",
+                "PeekNamedPipe",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetEnvironmentVariableA",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetLastError",
+                "SetProcessWorkingSetSize",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc",
+                "VirtualFree",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleA",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetUserNameA",
+                "RegCloseKey",
+                "RegCreateKeyA",
+                "RegOpenKeyExA",
+                "RegQueryValueExA",
+                "RegSetValueExA"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CoCreateInstance",
+                "CoInitialize",
+                "CoUninitialize"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "SafeArrayAccessData",
+                "SafeArrayCreateVector",
+                "SafeArrayUnaccessData",
+                "SysAllocString",
+                "SysAllocStringLen",
+                "SysFreeString",
+                "SysStringLen",
+                "VariantClear",
+                "VariantInit"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "checks-user-input",
+          "peexe",
+          "nxdomain",
+          "direct-cpu-clock-access",
+          "long-sleeps",
+          "runtime-modules",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            }
+          ],
+          "suggested_threat_label": "trojan.webdor/fragtor",
+          "popular_threat_name": [
+            {
+              "value": "webdor",
+              "count": 11
+            },
+            {
+              "value": "fragtor",
+              "count": 7
+            },
+            {
+              "value": "nhopro",
+              "count": 5
+            }
+          ]
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250324",
+            "category": "malicious",
+            "result": "W32.AgenttBTTc.Worm"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250324",
+            "category": "malicious",
+            "result": "Trojan.Win32.Webdor.m!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250324",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250324",
+            "category": "malicious",
+            "result": "Gen:Variant.Fragtor.628585"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250324",
+            "category": "malicious",
+            "result": "exe.backdoor.webdor"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17260553519a6eee"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250324",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.NetLoader.ch"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Artemis!2FD8BB121A04"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250109",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5323",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Backdoor.Nhopro.Win32.3"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "4cc1b23daaaac6bf94f99f309854ea10",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:29.454120",
+      "vt_found": true,
+      "malicious_count": 55,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 77,
+      "first_seen": 1455215358,
+      "last_seen": 1754324776,
+      "reputation": -20,
+      "names": [
+        "a6e8b6d0a736884e3bd5e5a7734cd71b2a8f7ebc.codex"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 131072,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "4cc1b23daaaac6bf94f99f309854ea10",
+        "sha1": "a6e8b6d0a736884e3bd5e5a7734cd71b2a8f7ebc",
+        "sha256": "9d4dc409564943764dacd6cec5b3eb46c39c5a813c37fec699b73305595c9428",
+        "ssdeep": "3072:39vcC2QLv/ZOBnoAaRteKj31B4DL5YPRY9MzW4UtI+:Nu42Kj312X5Ca9gdN",
+        "tlsh": "T1A7D37C4239C6C9B1C744047344E5D767B322EA3A6764DAC3BF980E5EE9612C2B93F385",
+        "vhash": "015046655d155068z5d7z3095z11z102fz",
+        "pe_info": {
+          "timestamp": 1161106064,
+          "imphash": "65d8f1cc64a6e2c75d5d25acb50afede",
+          "machine_type": 332,
+          "entry_point": 58852,
+          "resource_details": [
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 39733.28,
+              "filetype": "unknown",
+              "entropy": 6.099343299865723,
+              "sha256": "bdf416043aa8ec9a7e9f57e4cf2052bf6864990b00779e311e00ddebdca4bdf6",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 1848.8,
+              "filetype": "ICO",
+              "entropy": 1.819240689277649,
+              "sha256": "494e4fd717fa1ee0c5c7bb3b4e28fdab4b7f6e95b4f9865f5ab86f03f62ae62c",
+              "type": "RT_GROUP_ICON"
+            }
+          ],
+          "resource_langs": {
+            "PORTUGUESE BRAZILIAN": 2
+          },
+          "resource_types": {
+            "RT_ICON": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 550269.5,
+              "virtual_address": 4096,
+              "entropy": 6.61,
+              "raw_size": 99840,
+              "flags": "rx",
+              "virtual_size": 99551,
+              "md5": "ae34744824787a2258c06e1221060eb6"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 669920.56,
+              "virtual_address": 106496,
+              "entropy": 5.31,
+              "raw_size": 23040,
+              "flags": "r",
+              "virtual_size": 22790,
+              "md5": "22920800827231177d6e10f3208ce48a"
+            },
+            {
+              "name": ".data",
+              "chi2": 657372.44,
+              "virtual_address": 131072,
+              "entropy": 2.43,
+              "raw_size": 4608,
+              "flags": "rw",
+              "virtual_size": 11652,
+              "md5": "06c201131877fbb7dc0eb79133afbe42"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 77823.38,
+              "virtual_address": 143360,
+              "entropy": 5.62,
+              "raw_size": 2560,
+              "flags": "r",
+              "virtual_size": 2400,
+              "md5": "5a926b2e19cead77088a8e23c6fb27f8"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ASM] VS2005 build 50727 count=23",
+            "[ C ] VS2005 build 50727 count=104",
+            "[C++] VS2005 build 50727 count=52",
+            "[ C ] Windows Server 2003 SP1 DDK build 4035 count=2",
+            "[IMP] Windows Server 2003 SP1 DDK build 4035 count=15",
+            "[---] Unmarked objects count=141",
+            "[RES] VS2005 build 50727 count=1",
+            "[LNK] VS2005 build 50727 count=1",
+            "id: 0x7e, version: 50327 count=1",
+            "id: 0x72, version: 50727 count=11"
+          ],
+          "rich_pe_header_hash": "7f0ad01270c8e344dace034df50b361f",
+          "import_list": [
+            {
+              "library_name": "urlmon.dll",
+              "imported_functions": [
+                "URLDownloadToFileA"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringA",
+                "CompareStringW",
+                "CopyFileA",
+                "CreateFileA",
+                "CreateMutexA",
+                "CreatePipe",
+                "CreateProcessA",
+                "DeleteCriticalSection",
+                "DuplicateHandle",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "FindResourceA",
+                "FindResourceExA",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsA",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetComputerNameA",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStrings",
+                "GetEnvironmentStringsW",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetModuleFileNameA",
+                "GetModuleHandleA",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoA",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetThreadLocale",
+                "GetTickCount",
+                "GetVersionExA",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapDestroy",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSection",
+                "InterlockedDecrement",
+                "InterlockedExchange",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadResource",
+                "LockResource",
+                "lstrcmpiA",
+                "lstrlenA",
+                "MultiByteToWideChar",
+                "PeekNamedPipe",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetEnvironmentVariableA",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetLastError",
+                "SetProcessWorkingSetSize",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc",
+                "VirtualFree",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleA",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "MessageBoxA",
+                "UnregisterClassA"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetUserNameA",
+                "RegCloseKey",
+                "RegCreateKeyA",
+                "RegOpenKeyExA",
+                "RegQueryValueExA",
+                "RegSetValueExA"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "CommandLineToArgvW"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CoCreateInstance",
+                "CoInitialize",
+                "CoUninitialize"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "SafeArrayAccessData",
+                "SafeArrayCreateVector",
+                "SafeArrayUnaccessData",
+                "SysAllocString",
+                "SysAllocStringLen",
+                "SysFreeString",
+                "SysStringLen",
+                "VariantClear",
+                "VariantInit"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "detect-debug-environment",
+          "long-sleeps",
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "nhopro"
+            },
+            {
+              "count": 7,
+              "value": "ursu"
+            },
+            {
+              "count": 7,
+              "value": "webdor"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 24,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.nhopro/ursu"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "Trojan.Win32.Nhopro.m!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.193",
+            "engine_update": "20250310",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250313",
+            "category": "malicious",
+            "result": "Gen:Variant.Ser.Ursu.12644"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250313",
+            "category": "malicious",
+            "result": "exe.backdoor.nhopro"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.168488129854ea10"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "GenericRXTT-BG!4CC1B23DAAAA"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "GenericRXTT-BG!4CC1B23DAAAA"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250313",
+            "category": "malicious",
+            "result": "Malware.AI.4032313999"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5316",
+            "engine_update": "20250311",
+            "category": "malicious",
+            "result": "Backdoor.Nhopro.Win32.2"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "f3499a9d9ce3de5dc10de3d7831d0938",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:30.254218",
+      "vt_found": true,
+      "malicious_count": 55,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 17,
+      "total_engines": 76,
+      "first_seen": 1456182779,
+      "last_seen": 1756113758,
+      "reputation": -2,
+      "names": [
+        "b7a8ff27720f050e73f451d99b5ce0051100999e.codex",
+        "taskseng.exe",
+        "f3499a9d9ce3de5dc10de3d7831d0938"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 180184,
+        "type_description": "Win32 EXE",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "md5": "f3499a9d9ce3de5dc10de3d7831d0938",
+        "sha1": "b7a8ff27720f050e73f451d99b5ce0051100999e",
+        "sha256": "212b1951fb4deb11c8496e05efd4a04f86d39bf3b62159f28a9f8db171b0f7c5",
+        "ssdeep": "3072:Lp2SE9F3lab6NFb9TMKLBrGU6k7qAJiO2zBZJt6K4V05o0:Wfab6N/TJ0kxiO2zBZL6Ld0",
+        "tlsh": "T18A049C3236C0C033D567047455EAC6F5EAB6B8B1DA6299477BC40B2D1F306A3DA3A789",
+        "vhash": "015046655d155068z627z3085z41z1hz",
+        "pe_info": {
+          "timestamp": 1384759786,
+          "imphash": "0548c124ed10c0165a801920a3976f9d",
+          "machine_type": 332,
+          "entry_point": 34051,
+          "resource_details": [
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 45609.72,
+              "filetype": "unknown",
+              "entropy": 5.96131706237793,
+              "sha256": "bc606c7d6ab34c463837741b6219b978ca4d29597c46189bc04659c98376b5d5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "PORTUGUESE BRAZILIAN",
+              "chi2": 1848.8,
+              "filetype": "ICO",
+              "entropy": 1.819240689277649,
+              "sha256": "494e4fd717fa1ee0c5c7bb3b4e28fdab4b7f6e95b4f9865f5ab86f03f62ae62c",
+              "type": "RT_GROUP_ICON"
+            }
+          ],
+          "resource_langs": {
+            "PORTUGUESE BRAZILIAN": 2
+          },
+          "resource_types": {
+            "RT_ICON": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "overlay": {
+            "chi2": 5228.34,
+            "filetype": "unknown",
+            "entropy": 7.5368123054504395,
+            "offset": 175104,
+            "md5": "59f3046b2a88eab953fc1c2d648fad98",
+            "size": 5080
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 716081.38,
+              "virtual_address": 4096,
+              "entropy": 6.61,
+              "raw_size": 137216,
+              "flags": "rx",
+              "virtual_size": 136759,
+              "md5": "73167eb599888eba6cf88e3d70bd16ec"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 1053042.0,
+              "virtual_address": 143360,
+              "entropy": 5.14,
+              "raw_size": 28672,
+              "flags": "r",
+              "virtual_size": 28400,
+              "md5": "edb6969cfb21e0a127ab0608922b90df"
+            },
+            {
+              "name": ".data",
+              "chi2": 632458.06,
+              "virtual_address": 172032,
+              "entropy": 3.03,
+              "raw_size": 5632,
+              "flags": "rw",
+              "virtual_size": 13024,
+              "md5": "f446d096260ec02619b3dbf0370e5558"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 85258.16,
+              "virtual_address": 188416,
+              "entropy": 5.48,
+              "raw_size": 2560,
+              "flags": "r",
+              "virtual_size": 2400,
+              "md5": "052d8b259aee2e6c025cb5361fc7c496"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ASM] VS2008 SP1 build 30729 count=24",
+            "[C++] VS2008 SP1 build 30729 count=64",
+            "[ C ] VS2008 SP1 build 30729 count=128",
+            "[ C ] VS2005 build 50727 count=2",
+            "[---] Unmarked objects count=128",
+            "[IMP] VS2005 build 50727 count=13",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 SP1 build 30729 count=1",
+            "id: 0x96, version: 20413 count=1",
+            "id: 0x8a, version: 30729 count=13"
+          ],
+          "rich_pe_header_hash": "310713e060e1eb38106521888e44f21c",
+          "import_list": [
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "CommandLineToArgvW",
+                "SHGetFolderPathA",
+                "SHGetPathFromIDListA",
+                "SHGetSpecialFolderLocation"
+              ]
+            },
+            {
+              "library_name": "urlmon.dll",
+              "imported_functions": [
+                "URLDownloadToFileA"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringA",
+                "CompareStringW",
+                "CreateFileA",
+                "CreateFileW",
+                "CreateMutexA",
+                "CreatePipe",
+                "CreateProcessA",
+                "DeleteCriticalSection",
+                "DuplicateHandle",
+                "EnterCriticalSection",
+                "EnumSystemLocalesA",
+                "ExitProcess",
+                "FindResourceA",
+                "FindResourceExA",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsA",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetComputerNameA",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStrings",
+                "GetEnvironmentStringsW",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetLocaleInfoW",
+                "GetModuleFileNameA",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoA",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetUserDefaultLCID",
+                "GetVersionExA",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapDestroy",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSection",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "IsValidLocale",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadResource",
+                "LocalFree",
+                "LockResource",
+                "lstrlenA",
+                "MultiByteToWideChar",
+                "PeekNamedPipe",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetEndOfFile",
+                "SetEnvironmentVariableA",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetLastError",
+                "SetProcessWorkingSetSize",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc",
+                "VirtualFree",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleA",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetUserNameA",
+                "RegCloseKey",
+                "RegCreateKeyA",
+                "RegOpenKeyExA",
+                "RegQueryValueExA",
+                "RegSetValueExA"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CoCreateInstance",
+                "CoInitialize",
+                "CoUninitialize"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "SafeArrayAccessData",
+                "SafeArrayCreateVector",
+                "SafeArrayUnaccessData",
+                "SysAllocStringLen",
+                "SysFreeString",
+                "SysStringLen",
+                "VariantClear",
+                "VariantInit"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "runtime-modules",
+          "long-sleeps",
+          "invalid-signature",
+          "signed",
+          "direct-cpu-clock-access",
+          "peexe",
+          "overlay"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "webdor"
+            },
+            {
+              "count": 4,
+              "value": "mizzmo"
+            },
+            {
+              "count": 4,
+              "value": "nhopro"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 25,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.webdor/mizzmo"
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "Trojan.Win32.Webdor.m!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.193",
+            "engine_update": "20250310",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250313",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250313",
+            "category": "malicious",
+            "result": "exe.backdoor.webdor"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.16624508821d0938"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "GenericRXGA-MO!F3499A9D9CE3"
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250312",
+            "category": "malicious",
+            "result": "GenericRXGA-MO!F3499A9D9CE3"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250313",
+            "category": "malicious",
+            "result": "Malware.AI.4181508135"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5316",
+            "engine_update": "20250311",
+            "category": "malicious",
+            "result": "Backdoor.Webdor.Win32.200"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "f821eb4be9840feaf77983eb7d55e5f6",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:30.810257",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://akamaihub.com",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:31.498595",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 71,
+      "undetected_count": 18,
+      "total_engines": 90,
+      "first_seen": 1353075709,
+      "last_seen": 1696489686,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Forcepoint ThreatSeeker": "bot networks"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://igdata.net",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:32.143745",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 21,
+      "total_engines": 91,
+      "first_seen": 1452951903,
+      "last_seen": 1705008543,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Xcitium Verdict Cloud": "unknown"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "MalwareURL": {
+            "method": "blacklist",
+            "engine_name": "MalwareURL",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://mozillacdn.com",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:32.709407",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 20,
+      "total_engines": 90,
+      "first_seen": 1450703719,
+      "last_seen": 1688092331,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Forcepoint ThreatSeeker": "content delivery networks",
+          "Xcitium Verdict Cloud": "media sharing"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://msupdatecdn.com",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:33.516129",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 65,
+      "undetected_count": 30,
+      "total_engines": 96,
+      "first_seen": 1353075743,
+      "last_seen": 1740751548,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {},
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://sslverification.net",
+        "sources": [
+          "https://securelist.com/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/73673/"
+        ]
+      },
+      "vt_query_time": "2025-08-31T22:13:34.230965",
+      "vt_found": true,
+      "malicious_count": 1,
+      "suspicious_count": 0,
+      "harmless_count": 69,
+      "undetected_count": 20,
+      "total_engines": 90,
+      "first_seen": 1450706555,
+      "last_seen": 1686811572,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Xcitium Verdict Cloud": "media sharing",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "VX Vault": {
+            "method": "blacklist",
+            "engine_name": "VX Vault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3816 @@
+{
+  "organization": "FIN8",
+  "scan_time": "2025-08-31T21:22:34.576934",
+  "statistics": {
+    "total_iocs": 40,
+    "processed": 40,
+    "found_in_vt": 22,
+    "malicious": 22,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 18
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "104.168.237.21",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:02.381776",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 32,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756474343,
+      "reputation": -1,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "104.168.128.0/17",
+        "asn": 54290,
+        "as_owner": "HOSTWINDS",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "104-168-237-21.sslip.io"
+        },
+        "validity": {
+          "not_after": "2021-05-27 11:09:28",
+          "not_before": "2021-02-26 11:09:28"
+        },
+        "version": "V3",
+        "serial_number": "3e85a6e164b9a75a33a7d7d0455738d86a2",
+        "thumbprint": "0ecd8c823fe758b5438924e3368c05b06a05e550",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00c2d3ab32439fc24d9dd7f222f5c86c295d8d70998ec10d78bec18672f1d1097606fc87896ecd006b43f17ed878db15938779f19421e536f797de251ad1fd64f5af693d057844daa36d04388df4686ec8bf9af7f45e2b68325675c8d31fae21447f183826873e505057f34b52826f2b27f70b295b96cb2991548f21511acfff9e3662bec59055af2d914fbba5c17558442ffd4ccf0bcdb2cee8d32349a064a4ca8be85cf34cc76aa55295ddd6f5b8644837da9bf89ab46472c0f721d78507682369898803739ddd3e2d40dfb5ffc119f6e3ecb3939462a99f4270e5b30998407f65224d04338336ca022da7fd86aa166c91506463cd2727275a2baaeba32bb57d",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "2ad2ad0002ad2ad22c2ad2ad2ad2adce7a321e4956e8298ba917e9f2c22849"
+      },
+      "whois_info": "NetRange: 104.168.128.0 - 104.168.255.255\nCIDR: 104.168.128.0/17\nNetName: HOSTWINDS-17-7\nNetHandle: NET-104-168-128-0-1\nParent: NET104 (NET-104-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Hostwinds LLC. (HL-29)\nRegDate: 2014-09-03\nUpdated: 2021-09-23\nComment: https://www.hostwinds.com\nComment: Abuse Contact: abuse@hostwinds.com\nRef: https://rdap.arin.net/registry/ip/104.168.128.0\nOrgName: Hostwinds LLC.\nOrgId: HL-29\nAddress: 12101 Tukwila International Blvd, 3rd Floor, Suite 320\nCity: Seattle\nStateProv: WA\nPostalCode: 98168\nCountry: US\nRegDate: 2011-11-30\nUpdated: 2024-11-25\nComment: https://www.hostwinds.com\nComment: Abuse Contact: abuse@hostwinds.com\nRef: https://rdap.arin.net/registry/entity/HL-29\nReferralServer: rwhois://rwhois.hostwinds.net:4321\nOrgNOCHandle: HNOC9-ARIN\nOrgNOCName: Hostwinds Network Operations Center\nOrgNOCPhone: +1-206-886-0665 \nOrgNOCEmail: support@hostwinds.com\nOrgNOCRef: https://rdap.arin.net/registry/entity/HNOC9-ARIN\nOrgAbuseHandle: HAC3-ARIN\nOrgAbuseName: Hostwinds Abuse Center\nOrgAbusePhone: +1-206-886-0665 \nOrgAbuseEmail: abuse@hostwinds.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/HAC3-ARIN\nOrgTechHandle: HNOC9-ARIN\nOrgTechName: Hostwinds Network Operations Center\nOrgTechPhone: +1-206-886-0665 \nOrgTechEmail: support@hostwinds.com\nOrgTechRef: https://rdap.arin.net/registry/entity/HNOC9-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "37.10.71.215",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:02.981640",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 0,
+      "harmless_count": 55,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756395830,
+      "reputation": -30,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "37.10.71.0/24",
+        "asn": 212228,
+        "as_owner": "servinga GmbH",
+        "country": "GB",
+        "continent": "EU",
+        "regional_internet_registry": "RIPE NCC"
+      },
+      "certificate_info": {
+        "issuer": {
+          "C": "US",
+          "CN": "R3",
+          "O": "Let's Encrypt"
+        },
+        "subject": {
+          "CN": "zealous-moser.37-10-71-215.plesk.page"
+        },
+        "validity": {
+          "not_after": "2022-07-11 03:55:52",
+          "not_before": "2022-04-12 03:55:53"
+        },
+        "version": "V3",
+        "serial_number": "3d67d6fe2cb36fbe45e1e96b35cb8ab9eed",
+        "thumbprint": "161c2de57a5dd2a7ce209ca14072121699bb3bb5",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00bc01afdd8acbd5e1a4861d728ad755465eecac0833e07ac883e4e040ede7e036762342e0819673f677eecddab2f43e11eb7bec0eb74250e8b5797147cda0146e819c342e859cde7f34051141305f6f0c1325011ffc88ed82320a6bd042c2dbbc40512b79209f0ca927f1bc6d109cc8adbf62271a165a090329a265fc2fa893d00698823b5c8f3a1f32b4ccea462afd641acdafc4f0865125fc5150274ce041dc1db5fac80e64a870feb8b0f1d3bbae7d2b53874f60af92d22d8f6b894172741037536a80707925e54281a934a771da05edd4ae3dcbfc07af508699cbe3aee355c66ed779c705e2daa6ea2d5d272336d6ae651b9125560bf615ee266170ce92c7",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01"
+      },
+      "whois_info": "inetnum: 37.10.71.0 - 37.10.71.255\nnetname: DE-SERVINGA-20111215\ncountry: GB\ngeoloc: 53.4663 -2.1342\norg: ORG-SG288-RIPE\nadmin-c: CL8090-RIPE\ntech-c: CL8090-RIPE\nstatus: ALLOCATED PA\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: MNT-SERVINGA\nmnt-lower: MNT-SERVINGA\nmnt-routes: MNT-SERVINGA\ngeofeed: https://raw.githubusercontent.com/servinga/geofeed/main/geofeed.csv\ncreated: 2015-04-15T18:08:54Z\nlast-modified: 2024-12-11T23:00:20Z\nsource: RIPE\norganisation: ORG-SG288-RIPE\norg-name: servinga GmbH\ncountry: DE\norg-type: LIR\naddress: Ruesselsheimer Str. 22\naddress: 60326\naddress: Frankfurt\naddress: GERMANY\nphone: +49 69 348 75 11 0\nadmin-c: CL8090-RIPE\ntech-c: CL8090-RIPE\nabuse-c: AR46579-RIPE\nmnt-ref: MNT-SERVINGA\nmnt-ref: MNT-CHRISL\nmnt-ref: mnt-de-fraconnect-1\nmnt-ref: MEER-MNT\nmnt-by: RIPE-NCC-HM-MNT\nmnt-by: MNT-SERVINGA\ncreated: 2018-05-22T14:05:29Z\nlast-modified: 2023-01-09T12:24:22Z\nsource: RIPE # Filtered\nperson: Christian Lertes\nremarks: servinga GmbH\naddress: Ruesselsheimer Str. 22\naddress: 60326\naddress: Frankfurt\naddress: GERMANY\nphone: +49 69 348 75 11 0\nnic-hdl: CL8090-RIPE\nmnt-by: MNT-SERVINGA\ncreated: 2018-05-22T14:05:28Z\nlast-modified: 2020-10-05T14:14:53Z\nsource: RIPE\nroute: 37.10.71.0/24\norigin: AS212228\ndescr: IP Routing by servinga GmbH\nmnt-by: MNT-SERVINGA\ncreated: 2020-12-16T21:28:05Z\nlast-modified: 2020-12-16T21:28:05Z\nsource: RIPE\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "89.45.4.192",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:03.555479",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 0,
+      "harmless_count": 56,
+      "undetected_count": 30,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1755061101,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "89.45.4.0/22",
+        "asn": 9009,
+        "as_owner": "M247 Europe SRL",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "jarm": "21d14d00021d21d00042d43d000000107066a9db8d16b0a001ff4969166ce7"
+      },
+      "whois_info": "NetRange: 89.0.0.0 - 89.255.255.255\nCIDR: 89.0.0.0/8\nNetName: 89-RIPE\nNetHandle: NET-89-0-0-0-1\nParent: ()\nNetType: Allocated to RIPE NCC\nOriginAS: \nOrganization: RIPE Network Coordination Centre (RIPE)\nRegDate: 2005-06-30\nUpdated: 2025-02-10\nComment: These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.\nRef: https://rdap.arin.net/registry/ip/89.0.0.0\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nResourceLink: whois.ripe.net\nOrgName: RIPE Network Coordination Centre\nOrgId: RIPE\nAddress: P.O. Box 10096\nCity: Amsterdam\nStateProv: \nPostalCode: 1001EB\nCountry: NL\nRegDate: \nUpdated: 2013-07-29\nRef: https://rdap.arin.net/registry/entity/RIPE\nReferralServer: whois.ripe.net\nResourceLink: https://apps.db.ripe.net/db-web-ui/query\nOrgAbuseHandle: ABUSE3850-ARIN\nOrgAbuseName: Abuse Contact\nOrgAbusePhone: +31205354444 \nOrgAbuseEmail: abuse@ripe.net\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE3850-ARIN\nOrgTechHandle: RNO29-ARIN\nOrgTechName: RIPE NCC Operations\nOrgTechPhone: +31 20 535 4444 \nOrgTechEmail: hostmaster@ripe.net\nOrgTechRef: https://rdap.arin.net/registry/entity/RNO29-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "2bdf39983402c1e50e1d4b85766acf7a",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:04.669860",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "ca0ac8f6655244d2e10e7819bd337bf9",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:05.285163",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "cc89ddac1afe69069eb18bac58c6a9e4",
+        "sources": [
+          "https://web.archive.org/web/20170923102302/https://www.fireeye.com/blog/threat-research/2017/06/obfuscation-in-the-wild.html"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:06.454545",
+      "vt_found": true,
+      "malicious_count": 34,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 33,
+      "total_engines": 76,
+      "first_seen": 1487714169,
+      "last_seen": 1755124064,
+      "reputation": 0,
+      "names": [
+        "cccb193de86fd7ff876e875c32305f33dc48843dc1180fb04be573014e944c09.bin",
+        "cc89ddac1afe69069eb18bac58c6a9e4_COMPLAINT_Homer_Glynn_doc",
+        "COMPLAINT_Homer_Glynn.doc",
+        "COMPLAINT Homer Glynn.doc"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 121092,
+        "type_description": "Office Open XML Document",
+        "magic": "Microsoft Word 2007+",
+        "md5": "cc89ddac1afe69069eb18bac58c6a9e4",
+        "sha1": "fab2e0f0318220914ee4c5a4c24e743e87b4f987",
+        "sha256": "cccb193de86fd7ff876e875c32305f33dc48843dc1180fb04be573014e944c09",
+        "ssdeep": "1536:GZQYCWUGSNcR/49elVZAe5PNiOaH40vX7kx5tIJIEtFhHp47BN9aYnTcEkjLbwAH:8QYAGiWMqViOu1X7s5twl2A0VwHj+BUF",
+        "tlsh": "T1C3C312CAD7487141E2A1E63DA1A950F5D257E086F2D3DD0C10B2B4AFD93B14F9B1AEC1",
+        "vhash": "4a7dea0c159ca628c2155950395bf7b1"
+      },
+      "additional_details": {
+        "tags": [
+          "environ",
+          "auto-open",
+          "hide-app",
+          "obfuscated",
+          "docx",
+          "macros"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "downloader.emodldr/w97m",
+          "popular_threat_category": [
+            {
+              "count": 14,
+              "value": "downloader"
+            },
+            {
+              "count": 6,
+              "value": "trojan"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 8,
+              "value": "emodldr"
+            },
+            {
+              "count": 6,
+              "value": "w97m"
+            },
+            {
+              "count": 3,
+              "value": "msword"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DOCGuard": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "DOCGuard"
+          }
+        },
+        "sample_analysis_results": {
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.MSWord.EmoDldr.a!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "GT:VB.EmoDldr.32.464D4308"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "docx.downloader.w97m"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "W97M/Downloader.bwf"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.Downloader.W97M.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5423",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250811",
+            "category": "malicious",
+            "result": "VBA.Sus.Obf"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha1",
+        "value": "b640a9c0e64704e1e202a07774613a29971fe5aa",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:07.307179",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "05236172591d843b15987de2243ff1bfb41c7b959d7c917949a7533ed60aafd9",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:07.926942",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "0980aa80e52cc18e7b3909a0173a9efb60f9d406993d26fe3af35870ef1604d0",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:09.108959",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "0e11a050369010683a7ed6a51f5ec320cd885128804713bb9df0e056e29dc3b0",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:09.709209",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "1d3e573d432ef094fba33f615aa0564feffa99853af77e10367f54dc6df95509",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:10.297072",
+      "vt_found": true,
+      "malicious_count": 34,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 23,
+      "total_engines": 76,
+      "first_seen": 1671870787,
+      "last_seen": 1756589837,
+      "reputation": -1,
+      "names": [
+        "1d3e573d432ef094fba33f615aa0564feffa99853af77e10367f54dc6df95509.bin",
+        "shvnc.ps1"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 486288,
+        "type_description": "Powershell",
+        "magic": "ASCII text, with very long lines (65480u), with CRLF line terminators",
+        "md5": "10e75f522c3a52532d124e507d1d6561",
+        "sha1": "4e693689526ee28290ddd9cdd242a3c5f0383b8d",
+        "sha256": "1d3e573d432ef094fba33f615aa0564feffa99853af77e10367f54dc6df95509",
+        "ssdeep": "12288:tcghEYrnwA1gQxfk5RcABoR0gD3G/xHB67:t3hnFgQdjX3zG/xHA7",
+        "tlsh": "T142A41230891C6C2F8FBF1B66F0551CDB2CB626B7CC1855EDB64F58EA1A616201D37E28",
+        "vhash": "712eff412e703bf1ec52f6cd3642d080"
+      },
+      "additional_details": {
+        "tags": [
+          "powershell",
+          "long-sleeps",
+          "self-delete",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            }
+          ],
+          "suggested_threat_label": "trojan.powershell/loader",
+          "popular_threat_name": [
+            {
+              "value": "powershell",
+              "count": 11
+            },
+            {
+              "value": "loader",
+              "count": 7
+            },
+            {
+              "value": "msil",
+              "count": 6
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 64
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan.Script.PowerShell.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Generic.PowerShell.Loader.A.BE75ED44"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Win.Loader.PS1EncryptedPayload-10002407-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "powershell.trojan.msil"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan.PowerShell.Agent"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250830",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Generic.PowerShell.Loader.A.BE75ED44"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250829",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.3.56869",
+            "engine_update": "20250830",
+            "category": "malicious",
+            "result": "Trojan ( 0001140e1 )"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "2cd2e79e18849b882ba40a1f3f432a24e3c146bb52137c7543806f22c617d62c",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:10.989240",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "2d39a58887026b99176eb16c1bba4f6971c985ac9acbd9e2747dd0620548aaf3",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:11.636770",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "307c3e23a4ba65749e49932c03d5d3eb58d133bc6623c436756e48de68b9cc45",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:12.839602",
+      "vt_found": true,
+      "malicious_count": 33,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 30,
+      "total_engines": 76,
+      "first_seen": 1691523533,
+      "last_seen": 1753974439,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 299008,
+        "type_description": "Win32 DLL",
+        "magic": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+        "md5": "ff3dcd40799f8645e314f6832a3150a0",
+        "sha1": "6a71a1c8fc2862231f8d7535e85f5bc227aea247",
+        "sha256": "307c3e23a4ba65749e49932c03d5d3eb58d133bc6623c436756e48de68b9cc45",
+        "ssdeep": "6144:6SXy0LjIOVkrTiVZm5md+EF84PmgG8tzrgGfkYtHoD4iZy23:lBIyKEd+EelgG8tXgGf/tHHW",
+        "tlsh": "T1A854128E32160472C10381B9DC838D96E672F54A27F4529F627DD23EEF137CA992B358",
+        "vhash": "125056655d75151az3d?z1",
+        "pe_info": {
+          "timestamp": 1606823074,
+          "imphash": "32408a4db1c8d9f080698f8cfd897f35",
+          "machine_type": 34404,
+          "entry_point": 5340,
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 159844.16,
+              "virtual_address": 4096,
+              "entropy": 6.34,
+              "raw_size": 23552,
+              "flags": "rx",
+              "virtual_size": 23535,
+              "md5": "4626105bf7f809ec5041966fb14dc585"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 242318.0,
+              "virtual_address": 28672,
+              "entropy": 5.38,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 8174,
+              "md5": "228d5723d559937f04c22154be6fa6c4"
+            },
+            {
+              "name": ".data",
+              "chi2": 13110.64,
+              "virtual_address": 36864,
+              "entropy": 7.98,
+              "raw_size": 263168,
+              "flags": "rw",
+              "virtual_size": 266872,
+              "md5": "5e8465aac7f7fd720ddd5d41101bf126"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 132100.92,
+              "virtual_address": 307200,
+              "entropy": 3.78,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1296,
+              "md5": "06005826c58739c190f22f4255324d8e"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 282334.0,
+              "virtual_address": 311296,
+              "entropy": 1.35,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1184,
+              "md5": "3854fa7eda0b473d34eff28bbfe45458"
+            }
+          ],
+          "exports": [
+            "e"
+          ],
+          "compiler_product_versions": [
+            "[C++] VS2008 SP1 build 30729 count=25",
+            "[ASM] VS2008 SP1 build 30729 count=9",
+            "[IMP] VS2005 build 50727 count=3",
+            "[---] Unmarked objects count=76",
+            "[ C ] VS2008 SP1 build 30729 count=69",
+            "[EXP] VS2008 SP1 build 30729 count=1",
+            "[LNK] VS2008 SP1 build 30729 count=1"
+          ],
+          "rich_pe_header_hash": "bd90294e4299b59d0afbd1d723bf3379",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "FlsAlloc",
+                "FlsFree",
+                "FlsGetValue",
+                "FlsSetValue",
+                "FreeEnvironmentStringsA",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStrings",
+                "GetEnvironmentStringsW",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetModuleFileNameA",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapDestroy",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSetInformation",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "MultiByteToWideChar",
+                "QueryPerformanceCounter",
+                "RtlCaptureContext",
+                "RtlLookupFunctionEntry",
+                "RtlUnwindEx",
+                "RtlVirtualUnwind",
+                "SetHandleCount",
+                "SetLastError",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "UnhandledExceptionFilter",
+                "VirtualProtect",
+                "WideCharToMultiByte",
+                "WriteFile"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "detect-debug-environment",
+          "pedll",
+          "long-sleeps",
+          "64bits"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "mimikatz",
+              "count": 3
+            },
+            {
+              "value": "agentb",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 8
+            },
+            {
+              "value": "hacktool",
+              "count": 4
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.mimikatz/agentb"
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 97,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250731",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agentb.X!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Trojan.Agent.GFRR"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250729",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250730",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17297016313150a0"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "BehavesLike.Win64.Generic.dc"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250710",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "Hacktool.Win64.Agent.V8lw"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.250.56545",
+            "engine_update": "20250731",
+            "category": "malicious",
+            "result": "Riskware ( 00584baa1 )"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "356adc348e9a28fc760e75029839da5d374d11db5e41a74147a263290ae77501",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:13.463287",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "48e3add1881d60e0f6a036cfdb24426266f23f624a4cd57b8ea945e9ca98e6fd",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:14.081517",
+      "vt_found": true,
+      "malicious_count": 52,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 20,
+      "total_engines": 76,
+      "first_seen": 1662389082,
+      "last_seen": 1755687977,
+      "reputation": -2,
+      "names": [
+        "Driver.dll",
+        "48e3add1881d60e0f6a036cfdb24426266f23f624a4cd57b8ea945e9ca98e6fd.dll",
+        "Fin8bgijhbhgec9_browsingDll.dll",
+        "download.dat",
+        "decoded_ps.bin"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 364547,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "bd265f2d3e827e2ffa22417a6334d5fa",
+        "sha1": "ea50aa7c4d8b3097a2e7d8a4c575b08cfabbbdd8",
+        "sha256": "48e3add1881d60e0f6a036cfdb24426266f23f624a4cd57b8ea945e9ca98e6fd",
+        "ssdeep": "6144:SThY/IBgLaRoqoTppGGVruA/rl8jHYHrcv6eXs9xnkfnFxm4i2jnT9frhH:shYAIaRKTpRpuAZ8j6rOsgfbm4iiT9fr",
+        "tlsh": "T17C7412A8735433CFC823C5BE46A25E349B11B03B136F9603988B49699C5DCE7EF261B5",
+        "vhash": "33505f7655161511201021020020",
+        "pe_info": {
+          "timestamp": 3265201719,
+          "imphash": "dae02f32a21e03ce65412f6e56942daa",
+          "machine_type": 332,
+          "entry_point": 188426,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 63727.23,
+              "filetype": "unknown",
+              "entropy": 3.149799346923828,
+              "sha256": "1357b42f38092f67a90f9514a9ea33fa11de953bcad029676e8c43ad404f18d9",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 13185.06,
+            "filetype": "unknown",
+            "entropy": 7.971155643463135,
+            "offset": 166912,
+            "md5": "965977dd494d91bafaa4b604df0ca80a",
+            "size": 197635
+          },
+          "sections": [
+            {
+              "name": "c85E#",
+              "chi2": 213.94,
+              "virtual_address": 8192,
+              "entropy": 8.0,
+              "raw_size": 153088,
+              "flags": "rwx",
+              "virtual_size": 152988,
+              "md5": "fc3c76a22cf2a3bc9a2edfe34dc0436c"
+            },
+            {
+              "name": ".text",
+              "chi2": 118396.23,
+              "virtual_address": 163840,
+              "entropy": 5.85,
+              "raw_size": 10752,
+              "flags": "rx",
+              "virtual_size": 10280,
+              "md5": "c54f47a25b28919327b13db2663c5ed2"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 125195.5,
+              "virtual_address": 180224,
+              "entropy": 2.53,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 812,
+              "md5": "12d253562c055e743a68dd4c0206e78f"
+            },
+            {
+              "chi2": 126501.0,
+              "virtual_address": 188416,
+              "entropy": 0.16,
+              "raw_size": 512,
+              "flags": "rx",
+              "virtual_size": 16,
+              "md5": "626f8e1496ae9e68f8e2e116c2551d4a"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 196608,
+              "entropy": 0.1,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "c3a4ecae2e6ec2faaf9144ca99c1c5cb"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorDllMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "assembly",
+          "checks-user-input",
+          "pedll",
+          "overlay",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "msil"
+            },
+            {
+              "count": 6,
+              "value": "gfrr"
+            },
+            {
+              "count": 4,
+              "value": "agentb"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 31,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/gfrr"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware.CS"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agentb.X!c"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Win64:MalwareX-gen [Misc]"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.Agent.GFRR"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "dll.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "Trojan.Malagent.S30640132"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250819",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Trojan.fc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.MSIL.Agent"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Trojan.Agent.MSIL"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "4db89c39db14f4d9f76d06c50fef2d9282e83c03e8c948a863b58dedc43edd31",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:14.947808",
+      "vt_found": true,
+      "malicious_count": 52,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 20,
+      "total_engines": 76,
+      "first_seen": 1683923759,
+      "last_seen": 1756467398,
+      "reputation": 0,
+      "names": [
+        "Driver.dll",
+        "4db89c39db14f4d9f76d06c50fef2d9282e83c03e8c948a863b58dedc43edd31.bin",
+        "base.txt.out"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 166912,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "2dad0e66463869b2565449e4c9e84417",
+        "sha1": "12c3b36ee26b031e6c7b80b7e34b48489bfd108d",
+        "sha256": "4db89c39db14f4d9f76d06c50fef2d9282e83c03e8c948a863b58dedc43edd31",
+        "ssdeep": "3072:EhThY/iDtgLMVxnBgLaRsjoDmtmXmXCY9PpG8JsqrAMFwA/rl8jE:SThY/IBgLaRoqoTppGGVruA/rl8j",
+        "tlsh": "T14EF302E9B35062DFDC53D57AD9521D788311A472037A8B03C447466ADD2D8F7BF264E0",
+        "vhash": "31505f7655161519081810010",
+        "pe_info": {
+          "timestamp": 3265201719,
+          "imphash": "dae02f32a21e03ce65412f6e56942daa",
+          "machine_type": 332,
+          "entry_point": 188426,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 63727.23,
+              "filetype": "unknown",
+              "entropy": 3.149799346923828,
+              "sha256": "1357b42f38092f67a90f9514a9ea33fa11de953bcad029676e8c43ad404f18d9",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": "c85E#",
+              "chi2": 213.94,
+              "virtual_address": 8192,
+              "entropy": 8.0,
+              "raw_size": 153088,
+              "flags": "rwx",
+              "virtual_size": 152988,
+              "md5": "fc3c76a22cf2a3bc9a2edfe34dc0436c"
+            },
+            {
+              "name": ".text",
+              "chi2": 118396.23,
+              "virtual_address": 163840,
+              "entropy": 5.85,
+              "raw_size": 10752,
+              "flags": "rx",
+              "virtual_size": 10280,
+              "md5": "c54f47a25b28919327b13db2663c5ed2"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 125195.5,
+              "virtual_address": 180224,
+              "entropy": 2.53,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 812,
+              "md5": "12d253562c055e743a68dd4c0206e78f"
+            },
+            {
+              "chi2": 126501.0,
+              "virtual_address": 188416,
+              "entropy": 0.16,
+              "raw_size": 512,
+              "flags": "rx",
+              "virtual_size": 16,
+              "md5": "626f8e1496ae9e68f8e2e116c2551d4a"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 196608,
+              "entropy": 0.1,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "c3a4ecae2e6ec2faaf9144ca99c1c5cb"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorDllMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "checks-user-input",
+          "assembly",
+          "pedll",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 32,
+              "value": "trojan"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 12,
+              "value": "msil"
+            },
+            {
+              "count": 6,
+              "value": "gfrr"
+            },
+            {
+              "count": 3,
+              "value": "agentb"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/gfrr"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "W32.Common.B3FF4BC5"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agentb.X!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.222",
+            "engine_update": "20250826",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "Trojan.Agent.GFRR"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "dll.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Trojan.Malagent.S30640132"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Trojan.cc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250829",
+            "category": "malicious",
+            "result": "Trojan.MSIL.Agent"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250828",
+            "category": "malicious",
+            "result": "Trojan.Agent.GFRR"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "4e73e9a546e334f0aee8da7d191c56d25e6360ba7a79dc02fe93efbd41ff7aa4",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:15.536535",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "5b8b732d0bb708aa51ac7f8a4ff5ca5ea99a84112b8b22d13674da7a8ca18c28",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:16.160911",
+      "vt_found": true,
+      "malicious_count": 57,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 15,
+      "total_engines": 76,
+      "first_seen": 1629210002,
+      "last_seen": 1755939633,
+      "reputation": 0,
+      "names": [
+        "MSDAC.dll",
+        "ef071f69df4a7ed21526804830d60a67c604228f",
+        "5b8b732d0bb708aa51ac7f8a4ff5ca5ea99a84112b8b22d13674da7a8ca18c28.exe",
+        "7285d3b9ad2fee1969a22408f7efc324.virus"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 16896,
+        "type_description": "Win32 DLL",
+        "magic": "PE32+ executable (DLL) (console) x86-64 Mono/.Net assembly, for MS Windows",
+        "md5": "7285d3b9ad2fee1969a22408f7efc324",
+        "sha1": "ef071f69df4a7ed21526804830d60a67c604228f",
+        "sha256": "5b8b732d0bb708aa51ac7f8a4ff5ca5ea99a84112b8b22d13674da7a8ca18c28",
+        "ssdeep": "384:YDN5on4oyt/EkGjJCMiA07sNBke2UggqQPGCIXjeF:Yx5on4oyt/EtjJANsbkhe",
+        "tlsh": "T1E472AE55F7AA2732EC3E4B358EE311662A30D6406C13FB6B60C541A77E275EA0A27361",
+        "vhash": "114026751\"z",
+        "pe_info": {
+          "timestamp": 2261829357,
+          "machine_type": 34404,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 67801.49,
+              "filetype": "unknown",
+              "entropy": 3.286625623703003,
+              "sha256": "8388dca30109232b85264a90aa078132748e9a0760b85a947d11a989d2548916",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 28447.39,
+              "virtual_address": 8192,
+              "entropy": 7.63,
+              "raw_size": 15360,
+              "flags": "rx",
+              "virtual_size": 15034,
+              "md5": "b37b53dee3feefee7212d5cea8ca4dda"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 110889.0,
+              "virtual_address": 24576,
+              "entropy": 2.84,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 896,
+              "md5": "9e0edd63cb8929f6deeb9570a7616653"
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "64bits",
+          "pedll",
+          "assembly"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 12
+            },
+            {
+              "value": "flob",
+              "count": 6
+            },
+            {
+              "value": "badhatch",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/flob",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 36
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware.CS"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agent.Y!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.221",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Trojan.Agent.FLOB"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "dll.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250822",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1731737270efc324"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Artemis!Trojan"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250822",
+            "category": "malicious",
+            "result": "Trojan.Agent.Casdet"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5430",
+            "engine_update": "20250822",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.2403357"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "64f8ac7b3b28d763f0a8f6cdb4ce1e5e3892b0338c9240f27057dd9e087e3111",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:17.949145",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "6cba6d8a1a73572a1a49372c9b7adfa471a3a1302dc71c4547685bcbb1eda432",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:18.760688",
+      "vt_found": true,
+      "malicious_count": 39,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 23,
+      "total_engines": 76,
+      "first_seen": 1614339083,
+      "last_seen": 1755770529,
+      "reputation": 1,
+      "names": [
+        "Fin8bgijhbhgec14_browsingPs1.ps1",
+        "sh.txt",
+        "Sardonic1_browsingPs1.ps1"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 126496,
+        "type_description": "Powershell",
+        "magic": "ASCII text, with very long lines (65536u), with no line terminators",
+        "md5": "677803b915f6c0b0e5050d2f4a492439",
+        "sha1": "7e366ea434aa8e84377975bf4a323a3fc96bb980",
+        "sha256": "6cba6d8a1a73572a1a49372c9b7adfa471a3a1302dc71c4547685bcbb1eda432",
+        "ssdeep": "3072:N5kf+9DC8FUxp8QUBzAk3Wax/LYF4jK22:U2DrGz8DBzD3W9F4jZ2",
+        "tlsh": "T16CC31239035B2DE60304527DDF76AB828CDC6CDB625A771AC9C9449E3C2FC3649E91D8",
+        "vhash": "662fd3d2627677f5004774dd0f2cf9d6"
+      },
+      "additional_details": {
+        "tags": [
+          "self-delete",
+          "detect-debug-environment",
+          "powershell",
+          "long-sleeps"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.powershell/loader",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 21
+            },
+            {
+              "value": "dropper",
+              "count": 4
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "powershell",
+              "count": 11
+            },
+            {
+              "value": "loader",
+              "count": 7
+            },
+            {
+              "value": "msil",
+              "count": 5
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250821",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Trojan.Script.PowerShell.b!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Generic.PowerShell.Loader.B.213DE49C"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "Win.Loader.PS1AssemblyReflection-9998769-3"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "powershell.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "PS1.Backdoor.43934"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250820",
+            "category": "malicious",
+            "result": "PS/Agent.gu"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "Trojan.PowerShell.Agent"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250821",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5429",
+            "engine_update": "20250820",
+            "category": "undetected",
+            "result": null
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "72fd2f51f36ba6c842fdc801464a49dce28bd851589c7401f64bbc4f1a468b1a",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:19.901212",
+      "vt_found": true,
+      "malicious_count": 54,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 18,
+      "total_engines": 76,
+      "first_seen": 1629974391,
+      "last_seen": 1755548022,
+      "reputation": 0,
+      "names": [
+        "F25Ua.dll",
+        "cc.txtdd",
+        "72fd2f51f36ba6c842fdc801464a49dce28bd851589c7401f64bbc4f1a46.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 94720,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "43af915af6a0d60cc5875f69c7fa058b",
+        "sha1": "a384c188376b2dc98e855609bb8392f66e3295ac",
+        "sha256": "72fd2f51f36ba6c842fdc801464a49dce28bd851589c7401f64bbc4f1a468b1a",
+        "ssdeep": "1536:hw3+LdtJwIK6YNrT46Y3gkwZTZ4qSDB/jP4vvEJX8Y849ZqKTLDX:hwceHT4hgRsBzvMvE3DX",
+        "tlsh": "T1D79312571BD9DACAD5BBC23C3762414AD3D4E8CEBA3F099725E05B0D3DC92E01A245E2",
+        "vhash": "3940367515121z31z10",
+        "pe_info": {
+          "imphash": "dae02f32a21e03ce65412f6e56942daa",
+          "machine_type": 332,
+          "entry_point": 100734,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 49126.02,
+              "filetype": "unknown",
+              "entropy": 3.1870782375335693,
+              "sha256": "802e6e71fdd8f939f19865237e8d7fafc0e7590fa3f338893e8e4f40b7d7e84a",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 2694.43,
+              "virtual_address": 8192,
+              "entropy": 7.99,
+              "raw_size": 92672,
+              "flags": "rx",
+              "virtual_size": 92548,
+              "md5": "860d9a295422e52eb1153038109917be"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 146638.5,
+              "virtual_address": 106496,
+              "entropy": 2.14,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 664,
+              "md5": "73f473bf50e78c8887b8a20281efc4c4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 114688,
+              "entropy": 0.1,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "2b6d3f66f16b405dc0ca06d042510e6b"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorDllMain"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "assembly",
+          "checks-user-input",
+          "pedll",
+          "idle"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/bulz",
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 13
+            },
+            {
+              "value": "bulz",
+              "count": 6
+            },
+            {
+              "value": "agenttesla",
+              "count": 5
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware.CS"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Win32.AgentTesla.4!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250818",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Gen:Variant.Bulz.569786"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "dll.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250817",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Generic.nc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.MSIL.Agent"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Malware.AI.4227651023"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5427",
+            "engine_update": "20250818",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.2411012"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "78109d8e0fbe32ae7ec7c8d1c16e21bec0a0da3d58d98b6b266fbc53bb5bc00e",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:20.710404",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "827448cf3c7ddc67dca6618f4c8b1197ee2abe3526e27052d09948da2bc500ea",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:21.356718",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "8cfb05cde6af3cf4e0cb025faa597c2641a4ab372268823a29baef37c6c45946",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:21.950523",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "e4e3a4f1c87ff79f99f42b5bbe9727481d43d68582799309785c95d1d0de789a",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:22.546730",
+      "vt_found": true,
+      "malicious_count": 48,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 24,
+      "total_engines": 76,
+      "first_seen": 1671872414,
+      "last_seen": 1755981618,
+      "reputation": 0,
+      "names": [
+        "Driver.dll",
+        "Fin8bgijhbhgec19_browsingDll.dll",
+        "payload_1.dll"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 197632,
+        "type_description": "Win32 DLL",
+        "magic": "PE32+ executable (DLL) (console) x86-64 Mono/.Net assembly, for MS Windows",
+        "md5": "52aa13beb502a784626b674c76169c08",
+        "sha1": "e8d3e810d1752237b2121cde19719c282acecd75",
+        "sha256": "e4e3a4f1c87ff79f99f42b5bbe9727481d43d68582799309785c95d1d0de789a",
+        "ssdeep": "3072:5RbYHcgckcaccjK6eXp/Hq9xnADDbkuvG14xm4iU11A/3wWAT9fBjAkh/YY11:bYHrcv6eXs9xnkfnFxm4i2jnT9frhH",
+        "tlsh": "T1EA1412687228338DC02B85FE07E28F20BE90B12F775F94579C8B08A85C5CDA7D769176",
+        "vhash": "11503f76551\"z",
+        "pe_info": {
+          "timestamp": 3732156794,
+          "machine_type": 34404,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 63727.23,
+              "filetype": "unknown",
+              "entropy": 3.149799346923828,
+              "sha256": "1357b42f38092f67a90f9514a9ea33fa11de953bcad029676e8c43ad404f18d9",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": "Sg=alP",
+              "chi2": 239.79,
+              "virtual_address": 8192,
+              "entropy": 8.0,
+              "raw_size": 185344,
+              "flags": "rwx",
+              "virtual_size": 185112,
+              "md5": "d1093f47a1b9a48da135af661223efb2"
+            },
+            {
+              "name": ".text",
+              "chi2": 90501.21,
+              "virtual_address": 196608,
+              "entropy": 6.0,
+              "raw_size": 10240,
+              "flags": "rx",
+              "virtual_size": 10196,
+              "md5": "874eae917d58de11bdf015cd144162c1"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 125193.0,
+              "virtual_address": 212992,
+              "entropy": 2.53,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 812,
+              "md5": "424b5b77d9add828eb25d9420427efa3"
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "long-sleeps",
+          "idle",
+          "64bits",
+          "pedll",
+          "assembly",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 29
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 9
+            },
+            {
+              "value": "gfrr",
+              "count": 6
+            },
+            {
+              "value": "agentb",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/gfrr"
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware.CS"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agentb.X!c"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Win64:MalwareX-gen [Misc]"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.221",
+            "engine_update": "20250821",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Trojan.Agent.GFRR"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "dll.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250822",
+            "category": "malicious",
+            "result": "Trojan.Malagent.S30640132"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "BehavesLike.Win64.Trojan.cc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250823",
+            "category": "malicious",
+            "result": "Trojan.MSIL.Agent"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Unsafe"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "e7175ae2e0f0279fe3c4d5fc33e77b2bea51e0a7ad29f458b609afca0ab62b0b",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:24.075021",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "ede6ca7c3c3aedeb70e8504e1df70988263aab60ac664d03995bce645dff0935",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:24.731593",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "sha256",
+        "value": "edfd3ae4def3ddffb37bad3424eb73c17e156ba5f63fd1d651df2f5b8e34a6c7",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:25.566335",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://104-168-237-21.sslip.io",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:26.229837",
+      "vt_found": true,
+      "malicious_count": 5,
+      "suspicious_count": 0,
+      "harmless_count": 63,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1627423587,
+      "last_seen": 1756474653,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Information Technology, Malicious (alphaMountain.ai)",
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://104.168.237.21",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:26.958432",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 0,
+      "harmless_count": 64,
+      "undetected_count": 30,
+      "total_engines": 97,
+      "first_seen": 1596553988,
+      "last_seen": 1750653925,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Webroot": "Malware Sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://37.10.71.215",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:27.779057",
+      "vt_found": true,
+      "malicious_count": 9,
+      "suspicious_count": 0,
+      "harmless_count": 59,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1666820429,
+      "last_seen": 1755281137,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Webroot": "Malware Sites",
+          "Forcepoint ThreatSeeker": "entertainment"
+        },
+        "threat_names": [],
+        "crowdsourced_context": [
+          {
+            "source": "ArcSight Threat Intelligence",
+            "timestamp": 1691508566,
+            "details": "Command and Control server\n\nVirusTotal Link: https://www.virustotal.com/gui/ip-address/37.10.71.215/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/37.10.71.215\n\nPostal Code: M40\n\n\nVirusTotal Link: https://www.virustotal.com/gui/ip-address/37.10.71.215/detection\n\nAbuse IPDB Link: https://www.abuseipdb.com/check/37.10.71.215",
+            "severity": "low",
+            "title": "FIN8 Uses Revamped Sardonic Backdoor to Deliver Noberus Ransomware"
+          }
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://89.45.4.192",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:28.778153",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 0,
+      "harmless_count": 61,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1485778829,
+      "last_seen": 1752245428,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ip"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Webroot": "Malware Sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://api-cdn.",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:30.145003",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://api-cdn.net",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:31.164075",
+      "vt_found": true,
+      "malicious_count": 11,
+      "suspicious_count": 1,
+      "harmless_count": 59,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1627423587,
+      "last_seen": 1754007218,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "external-resources"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "newly registered websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://api-cdnw5.net",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:31.767751",
+      "vt_found": true,
+      "malicious_count": 13,
+      "suspicious_count": 1,
+      "harmless_count": 57,
+      "undetected_count": 26,
+      "total_engines": 97,
+      "first_seen": 1627423587,
+      "last_seen": 1755019306,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "information technology"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://git-api.com",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf",
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:32.459454",
+      "vt_found": true,
+      "malicious_count": 12,
+      "suspicious_count": 0,
+      "harmless_count": 57,
+      "undetected_count": 28,
+      "total_engines": 97,
+      "first_seen": 1627423587,
+      "last_seen": 1756489936,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "alphaMountain.ai": "Malicious (alphaMountain.ai)",
+          "Sophos": "spyware and malware",
+          "Forcepoint ThreatSeeker": "parked domain"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "malicious",
+            "result": "malware"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://104-168-237-21.sslip.io/134af6",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:33.039816",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 2,
+      "harmless_count": 64,
+      "undetected_count": 17,
+      "total_engines": 90,
+      "first_seen": 1627423564,
+      "last_seen": 1721348906,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "business",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "compromised websites",
+          "Webroot": "Malware Sites",
+          "Xcitium Verdict Cloud": "media sharing"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://104-168-237-21.sslip.io/edaea0",
+        "sources": [
+          "https://www.bitdefender.com/files/News/CaseStudies/study/401/Bitdefender-PR-Whitepaper-FIN8-creat5619-en-EN.pdf"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:33.944102",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 2,
+      "harmless_count": 63,
+      "undetected_count": 17,
+      "total_engines": 90,
+      "first_seen": 1627423564,
+      "last_seen": 1721348908,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "BitDefender": "business",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "compromised websites",
+          "Webroot": "Malware Sites",
+          "Xcitium Verdict Cloud": "media sharing"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "BlockList": {
+            "method": "blacklist",
+            "engine_name": "BlockList",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://37-10-71-215.nip.io:8443/7ea5fa",
+        "sources": [
+          "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        ]
+      },
+      "vt_query_time": "2025-08-31T21:22:34.576479",
+      "vt_found": true,
+      "malicious_count": 3,
+      "suspicious_count": 1,
+      "harmless_count": 64,
+      "undetected_count": 29,
+      "total_engines": 97,
+      "first_seen": 1688748144,
+      "last_seen": 1744966437,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [
+          "ns-port"
+        ],
+        "categories": {
+          "alphaMountain.ai": "Information Technology, Malicious (alphaMountain.ai)",
+          "BitDefender": "computersandsoftware",
+          "Sophos": "information technology",
+          "Forcepoint ThreatSeeker": "business and economy"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Artists Against 419": {
+            "method": "blacklist",
+            "engine_name": "Artists Against 419",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}

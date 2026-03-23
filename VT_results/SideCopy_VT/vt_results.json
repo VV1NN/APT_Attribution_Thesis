@@ -1,0 +1,1479 @@
+{
+  "organization": "SideCopy",
+  "scan_time": "2025-08-31T23:05:22.731191",
+  "statistics": {
+    "total_iocs": 17,
+    "processed": 17,
+    "found_in_vt": 5,
+    "malicious": 5,
+    "suspicious": 0,
+    "harmless": 0,
+    "errors": 12
+  },
+  "results": [
+    {
+      "ioc": {
+        "type": "ipv4",
+        "value": "144.126.141.41",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:11.906299",
+      "vt_found": true,
+      "malicious_count": 8,
+      "suspicious_count": 0,
+      "harmless_count": 55,
+      "undetected_count": 31,
+      "total_engines": 94,
+      "first_seen": null,
+      "last_seen": 1756480586,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {
+        "network": "144.126.128.0/19",
+        "asn": 40021,
+        "as_owner": "CONTABO-40021",
+        "country": "US",
+        "continent": "NA",
+        "regional_internet_registry": "ARIN"
+      },
+      "certificate_info": {
+        "issuer": {
+          "CN": "Sectigo RSA Domain Validation Secure Server CA",
+          "C": "GB",
+          "L": "Salford",
+          "O": "Sectigo Limited",
+          "ST": "Greater Manchester"
+        },
+        "subject": {
+          "CN": "afcat.xyz"
+        },
+        "validity": {
+          "not_after": "2022-12-29 23:59:59",
+          "not_before": "2021-12-29 00:00:00"
+        },
+        "version": "V3",
+        "serial_number": "4ccc70a87da96fb5b3ce790bdd4e9def",
+        "thumbprint": "d518ea29a94b6b81682d5c97d25eb10bcedc26c5",
+        "signature_algorithm": "sha256RSA",
+        "public_key": {
+          "rsa": {
+            "key_size": 2048,
+            "modulus": "00ec128eee767eaee4fa6d0708ce2ea08b269fcb5ac97f0631be4ff7cd1ee461194cb7fdaa57f50af318b70c0eca3ce77008ba83caef3a3c77b9302b4ef78363e477ed3c62db0380003b196e46ca414961f66d59365a7f663e15d847311f3125864eae436dfc62647f0e57a2b78246eb5b39d40d043a8a18fdd3319f2eef468f0783230bc2a77ec3640a2f0ab52a21a26867e9fced19b848e28442bbe757817c9a7863f6743284a036cb72c3a3bddb235164c095b07d90fc9b6d98bdf75d2873dc26c9b87f9e199a6a21305350c3f2de027b652728c03e66454958b91878fd6e7f154f5bad63f77920aed7138787d43fb900cc0a6133932123077fa0d2cbc357a7",
+            "exponent": "010001"
+          },
+          "algorithm": "RSA"
+        },
+        "jarm": "2ad2ad16d2ad2ad22c42d42d0000006f254909a73bf62f6b28507e9fb451b5"
+      },
+      "whois_info": "NetRange: 144.126.128.0 - 144.126.159.255\nCIDR: 144.126.128.0/19\nNetName: CONTA-48\nNetHandle: NET-144-126-128-0-1\nParent: NET144 (NET-144-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Contabo Inc. (CONTA-48)\nRegDate: 2021-03-16\nUpdated: 2023-05-16\nRef: https://rdap.arin.net/registry/ip/144.126.128.0\nOrgName: Contabo Inc.\nOrgId: CONTA-48\nAddress: 710 N Tucker Blvd. STE 400A\nCity: St. Louis\nStateProv: MO\nPostalCode: 63101\nCountry: US\nRegDate: 2019-12-23\nUpdated: 2024-11-25\nRef: https://rdap.arin.net/registry/entity/CONTA-48\nOrgAbuseHandle: CAD61-ARIN\nOrgAbuseName: Contabo Abuse Department\nOrgAbusePhone: +498921268372 \nOrgAbuseEmail: abuse@contabo.de\nOrgAbuseRef: https://rdap.arin.net/registry/entity/CAD61-ARIN\nOrgRoutingHandle: CONTA393-ARIN\nOrgRoutingName: Contabo NOC\nOrgRoutingPhone: +498921268372 \nOrgRoutingEmail: noc@contabo.de\nOrgRoutingRef: https://rdap.arin.net/registry/entity/CONTA393-ARIN\nOrgNOCHandle: CONTA393-ARIN\nOrgNOCName: Contabo NOC\nOrgNOCPhone: +498921268372 \nOrgNOCEmail: noc@contabo.de\nOrgNOCRef: https://rdap.arin.net/registry/entity/CONTA393-ARIN\nOrgTechHandle: CONTA392-ARIN\nOrgTechName: Contabo Tech\nOrgTechPhone: +498921665862 \nOrgTechEmail: sascha.wintz@contabo.com\nOrgTechRef: https://rdap.arin.net/registry/entity/CONTA392-ARIN\n",
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "sample_analysis_results": {
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Abusix": {
+            "method": "blacklist",
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ADMINUSLabs": {
+            "method": "blacklist",
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Axur": {
+            "method": "blacklist",
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Criminal IP": {
+            "method": "blacklist",
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AILabs (MONITORAPP)": {
+            "method": "blacklist",
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "AlienVault": {
+            "method": "blacklist",
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "alphaMountain.ai": {
+            "method": "blacklist",
+            "engine_name": "alphaMountain.ai",
+            "category": "malicious",
+            "result": "malicious"
+          },
+          "AlphaSOC": {
+            "method": "blacklist",
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "0023a30b3f91fa9989e0843bbeb67cc1",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:12.640441",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "48c165124e151aa2a1f4909e0b34e99c",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:13.263757",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "4e26ccad3fc762ec869f7930a8457e4d",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:13.854727",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "5044027ccb27401b06515f0912eb534a",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:14.654490",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "5f49c816d7d2b6fa274041055cc88ba7",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:15.526460",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "689b9fdbf35b8cefc266a92d1d05a814",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:16.170482",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "7c0a49f3b4a012bade8404a3be353a48",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:16.733158",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "a65d3ab8618e7965b9ae4fae558eb8f2",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:17.271792",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "c2831369728b7247193e2db567900abe",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:17.825432",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "c598a8406e2b9ec599ab9e6ec4e7d7c2",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:18.551957",
+      "vt_found": true,
+      "malicious_count": 50,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 20,
+      "total_engines": 76,
+      "first_seen": 1639158732,
+      "last_seen": 1754509060,
+      "reputation": 0,
+      "names": [
+        "TextShaping.dll"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 434689,
+        "type_description": "Win32 DLL",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "md5": "c598a8406e2b9ec599ab9e6ec4e7d7c2",
+        "sha1": "1ba47b40c2760c89911cde7d65d8b66ac58c988a",
+        "sha256": "43be9704dca2f9bb9d9d80c0495717c128627bc9e28c2cdb05ad367aded14a5b",
+        "ssdeep": "12288:Xsrx9KepuSJcFMPltEX6DWIouQvY6dPWSSF8/3Perz+5+R:qSM8MPltEXKr6PWNYeri",
+        "tlsh": "T1B7949D1134C2C036D9AE1130582EEBA156BDB8314F7995DBABD45A3F6F702C29B31E27",
+        "vhash": "145056655d15556018z67hz25z33zc6z1",
+        "pe_info": {
+          "timestamp": 1635568772,
+          "imphash": "31b26321ad64c18c86fe3709f85861e9",
+          "machine_type": 332,
+          "entry_point": 165858,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 4031.47,
+              "filetype": "XML",
+              "entropy": 4.911615371704102,
+              "sha256": "4bb79dcea0a901f7d9eac5aa05728ae92acb42e0cb22e5dd14134f4421a3d8df",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "overlay": {
+            "chi2": 255.0,
+            "filetype": "unknown",
+            "entropy": 0.0,
+            "offset": 434688,
+            "md5": "93b885adfe0da089cdf634904fd59f71",
+            "size": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 1611301.0,
+              "virtual_address": 4096,
+              "entropy": 6.64,
+              "raw_size": 330752,
+              "flags": "rx",
+              "virtual_size": 330711,
+              "md5": "6ff0973328f34600b2b3d4e107542dfa"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 2864500.5,
+              "virtual_address": 335872,
+              "entropy": 5.45,
+              "raw_size": 80384,
+              "flags": "r",
+              "virtual_size": 80026,
+              "md5": "e1deaa4b3fae5d91bef09fec4e6e2faf"
+            },
+            {
+              "name": ".data",
+              "chi2": 348772.47,
+              "virtual_address": 417792,
+              "entropy": 4.01,
+              "raw_size": 7168,
+              "flags": "rw",
+              "virtual_size": 12164,
+              "md5": "a53939fc34d9ffe1d6ead1c61898b131"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 9288.0,
+              "virtual_address": 430080,
+              "entropy": 4.72,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 480,
+              "md5": "f9c33aaac403d64f9a08c74c7555d19d"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 59338.17,
+              "virtual_address": 434176,
+              "entropy": 6.6,
+              "raw_size": 14848,
+              "flags": "r",
+              "virtual_size": 14812,
+              "md5": "9cde0296820e57eca34216916f6e721e"
+            }
+          ],
+          "exports": [
+            "g_BytesTransferred"
+          ],
+          "compiler_product_versions": [
+            "[---] Unmarked objects count=153",
+            "[LT+] VS2019 v16.10.3 build 30038 count=14",
+            "[EXP] VS2019 v16.10.3 build 30038 count=1",
+            "[RES] VS2019 v16.10.3 build 30038 count=1",
+            "[LNK] VS2019 v16.10.3 build 30038 count=1",
+            "id: 0x103, version: 27412 count=13",
+            "id: 0x105, version: 27412 count=191",
+            "id: 0x104, version: 30034 count=16",
+            "id: 0x103, version: 30034 count=23",
+            "id: 0x105, version: 30034 count=73",
+            "id: 0x104, version: 27412 count=24",
+            "id: 0x106, version: 27412 count=1",
+            "id: 0x101, version: 27412 count=15"
+          ],
+          "rich_pe_header_hash": "6e4432fe47ddb2495f5dc1b175bbadae",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringEx",
+                "CompareStringW",
+                "CreateDirectoryA",
+                "CreateDirectoryW",
+                "CreateEventW",
+                "CreateFileA",
+                "CreateFileW",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "DeleteFileW",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "EnumSystemLocalesW",
+                "ExitProcess",
+                "FileTimeToSystemTime",
+                "FindClose",
+                "FindFirstFileExW",
+                "FindFirstFileW",
+                "FindNextFileW",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsW",
+                "FreeLibrary",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetComputerNameA",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetDateFormatW",
+                "GetEnvironmentStringsW",
+                "GetFileAttributesW",
+                "GetFileSizeEx",
+                "GetFileTime",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoEx",
+                "GetLocaleInfoW",
+                "GetLogicalDriveStringsW",
+                "GetModuleFileNameA",
+                "GetModuleFileNameW",
+                "GetModuleHandleExW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetOverlappedResult",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTempPathW",
+                "GetTimeFormatW",
+                "GetTimeZoneInformation",
+                "GetUserDefaultLCID",
+                "HeapAlloc",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "InitializeCriticalSectionEx",
+                "InitializeSListHead",
+                "InterlockedFlushSList",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "IsValidLocale",
+                "K32EnumProcesses",
+                "K32EnumProcessModules",
+                "K32GetModuleFileNameExA",
+                "LCMapStringEx",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryExW",
+                "MultiByteToWideChar",
+                "OpenProcess",
+                "OutputDebugStringW",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadConsoleW",
+                "ReadFile",
+                "ResetEvent",
+                "RtlUnwind",
+                "SetEndOfFile",
+                "SetEnvironmentVariableW",
+                "SetFilePointerEx",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "WideCharToMultiByte",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetUserNameA"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHGetFolderPathW",
+                "SHGetKnownFolderPath"
+              ]
+            },
+            {
+              "library_name": "WS2_32.dll",
+              "imported_functions": [
+                "closesocket",
+                "connect",
+                "htonl",
+                "htons",
+                "inet_addr",
+                "ntohl",
+                "recv",
+                "send",
+                "setsockopt",
+                "socket",
+                "WSAGetLastError",
+                "WSAStartup"
+              ]
+            },
+            {
+              "library_name": "VERSION.dll",
+              "imported_functions": [
+                "GetFileVersionInfoExW",
+                "GetFileVersionInfoSizeExW",
+                "VerQueryValueW"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "pedll",
+          "overlay",
+          "detect-debug-environment"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.fragtor/nightfury",
+          "popular_threat_name": [
+            {
+              "count": 7,
+              "value": "fragtor"
+            },
+            {
+              "count": 7,
+              "value": "nightfury"
+            },
+            {
+              "count": 2,
+              "value": "mamson"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 24,
+              "value": "trojan"
+            }
+          ]
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 3,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Trojan.Win32.NightFury.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (moderate confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Gen:Variant.Fragtor.104064"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "dll.trojan.nightfury"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250805",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Gen:Variant.Fragtor.104064"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Malware.AI.3541244243"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250806",
+            "category": "malicious",
+            "result": "Gen:Variant.Fragtor.104064"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250804",
+            "category": "malicious",
+            "result": "Trojan.Win32.Agent.Vgjo"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "d52021f350c9c2f8ee87d3b9c070704a",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:19.326127",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "d99491117d3d96da7d01597929be6c8e",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:19.981103",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "e246728aa4679051ed20355ae862b7ef",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:20.533571",
+      "vt_found": false,
+      "malicious_count": 0,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 0,
+      "total_engines": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "reputation": null,
+      "names": [],
+      "error": "Not found",
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {}
+    },
+    {
+      "ioc": {
+        "type": "md5",
+        "value": "ec87ddad01869b58c4c0760a6a7d98f8",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:21.465543",
+      "vt_found": true,
+      "malicious_count": 55,
+      "suspicious_count": 0,
+      "harmless_count": 0,
+      "undetected_count": 17,
+      "total_engines": 76,
+      "first_seen": 1639158435,
+      "last_seen": 1755403313,
+      "reputation": 0,
+      "names": [
+        "auto.exe"
+      ],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {
+        "size": 800768,
+        "type_description": "Win32 EXE",
+        "magic": "PE32+ executable (console) x86-64, for MS Windows",
+        "md5": "ec87ddad01869b58c4c0760a6a7d98f8",
+        "sha1": "2cb6f16f8e1d2b94f01623665ed4616f23fe9cdd",
+        "sha256": "886d8d8f55cbd2ec9e4641d9d6df9acaba5b27cdbc0d3d57cf19388f77240fca",
+        "ssdeep": "12288:SFjJ9s6ZeuJGjioCWsrx9KepuSJcFMPltEX6DWIouQvY6dPWSSF8/3Perz+5+Rv:SlfsUeuJGW3hSM8MPltEXKr6PWNYeri",
+        "tlsh": "T12005BF01F5D180F9D4BF5134886A9A12E779BC360B748ADF27D4463B2F326D19E36B22",
+        "vhash": "085076655d655515555048z6ahz13z1fz",
+        "pe_info": {
+          "timestamp": 1635570165,
+          "imphash": "7750393e234a6d3ce998f8fff0e1ec6f",
+          "machine_type": 34404,
+          "entry_point": 104472,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 4031.47,
+              "filetype": "XML",
+              "entropy": 4.911615371704102,
+              "sha256": "4bb79dcea0a901f7d9eac5aa05728ae92acb42e0cb22e5dd14134f4421a3d8df",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 1567804.62,
+              "virtual_address": 4096,
+              "entropy": 6.46,
+              "raw_size": 246784,
+              "flags": "rx",
+              "virtual_size": 246652,
+              "md5": "68571c30c48858c235f0da7577072391"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 4203882.0,
+              "virtual_address": 253952,
+              "entropy": 5.21,
+              "raw_size": 94208,
+              "flags": "r",
+              "virtual_size": 93788,
+              "md5": "23640740c827cb38c85d4e41bbb97581"
+            },
+            {
+              "name": ".data",
+              "chi2": 3338502.25,
+              "virtual_address": 348160,
+              "entropy": 6.6,
+              "raw_size": 441856,
+              "flags": "rw",
+              "virtual_size": 447756,
+              "md5": "219af476797e77e1765f93a6aec4bbb2"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 354557.94,
+              "virtual_address": 798720,
+              "entropy": 5.52,
+              "raw_size": 12800,
+              "flags": "r",
+              "virtual_size": 12576,
+              "md5": "284afa786831e7750828d0555a74144e"
+            },
+            {
+              "name": "_RDATA",
+              "chi2": 57188.0,
+              "virtual_address": 815104,
+              "entropy": 2.42,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 244,
+              "md5": "3cc4fee1df11628bace4b38bfeac6a7a"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 9294.0,
+              "virtual_address": 819200,
+              "entropy": 4.71,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 480,
+              "md5": "6501b7cb668572b83bec31bc127ba0d6"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 37015.0,
+              "virtual_address": 823296,
+              "entropy": 5.11,
+              "raw_size": 3072,
+              "flags": "r",
+              "virtual_size": 2632,
+              "md5": "f81d90ebedfdf1b8f6a49a646fc72c69"
+            }
+          ],
+          "compiler_product_versions": [
+            "[---] Unmarked objects count=129",
+            "[LT+] VS2019 v16.10.3 build 30038 count=8",
+            "[RES] VS2019 v16.10.3 build 30038 count=1",
+            "[LNK] VS2019 v16.10.3 build 30038 count=1",
+            "id: 0x103, version: 27412 count=10",
+            "id: 0x104, version: 27412 count=19",
+            "id: 0x105, version: 27412 count=172",
+            "id: 0x104, version: 30034 count=17",
+            "id: 0x103, version: 30034 count=10",
+            "id: 0x105, version: 30034 count=80",
+            "id: 0x101, version: 27412 count=11"
+          ],
+          "rich_pe_header_hash": "ac01d1c6d1e1a620a0867a6f293e37ca",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringEx",
+                "CompareStringW",
+                "CopyFileA",
+                "CreateDirectoryA",
+                "CreateEventW",
+                "CreateFileW",
+                "CreateProcessW",
+                "CreateToolhelp32Snapshot",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "DeleteFileA",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "EnumSystemLocalesW",
+                "ExitProcess",
+                "ExpandEnvironmentStringsW",
+                "FindClose",
+                "FindFirstFileExW",
+                "FindNextFileW",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsW",
+                "FreeLibrary",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetConsoleWindow",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStringsW",
+                "GetExitCodeProcess",
+                "GetFileAttributesA",
+                "GetFileAttributesW",
+                "GetFileSizeEx",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoW",
+                "GetModuleFileNameW",
+                "GetModuleHandleExW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetPriorityClass",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemDirectoryW",
+                "GetSystemTimeAsFileTime",
+                "GetUserDefaultLCID",
+                "HeapAlloc",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "InitializeCriticalSectionEx",
+                "InitializeSListHead",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "IsValidLocale",
+                "K32EnumProcesses",
+                "K32EnumProcessModules",
+                "K32GetModuleFileNameExA",
+                "K32GetModuleFileNameExW",
+                "LCMapStringEx",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryExW",
+                "MultiByteToWideChar",
+                "OpenProcess",
+                "Process32FirstW",
+                "Process32NextW",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadConsoleW",
+                "ReadFile",
+                "ResetEvent",
+                "RtlCaptureContext",
+                "RtlLookupFunctionEntry",
+                "RtlPcToFileHeader",
+                "RtlUnwind",
+                "RtlUnwindEx",
+                "RtlVirtualUnwind",
+                "SetEndOfFile",
+                "SetEnvironmentVariableW",
+                "SetEvent",
+                "SetFilePointerEx",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "WaitForSingleObjectEx",
+                "WideCharToMultiByte",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "ShowWindow"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "RegCloseKey",
+                "RegEnumKeyExW",
+                "RegOpenKeyExW",
+                "RegQueryValueExW"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHGetFolderPathW"
+              ]
+            }
+          ]
+        }
+      },
+      "additional_details": {
+        "tags": [
+          "64bits",
+          "direct-cpu-clock-access",
+          "peexe",
+          "spreader",
+          "runtime-modules",
+          "detect-debug-environment",
+          "persistence",
+          "assembly"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "blind",
+              "count": 7
+            },
+            {
+              "value": "doina",
+              "count": 7
+            },
+            {
+              "value": "nightfury",
+              "count": 6
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 24
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.blind/doina"
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 4,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250817",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.Win32.NightFury.m!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.220",
+            "engine_update": "20250814",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Gen:Variant.Doina.Blind.29915"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250817",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17337360097d98f8"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "BehavesLike.Win64.TrojanNukeSped.bh"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Gen:Variant.Doina.Blind.29915"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Malware.AI.3541244243"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5426",
+            "engine_update": "20250816",
+            "category": "malicious",
+            "result": "Trojan.Agent.Win32.2597433"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "http://newsroom247.xyz:8080/streamppt?HostName_UserName",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:22.144549",
+      "vt_found": true,
+      "malicious_count": 7,
+      "suspicious_count": 1,
+      "harmless_count": 75,
+      "undetected_count": 12,
+      "total_engines": 95,
+      "first_seen": 1638463861,
+      "last_seen": 1746781259,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Sophos": "phishing and fraud",
+          "Forcepoint ThreatSeeker": "compromised websites",
+          "Comodo Valkyrie Verdict": "media sharing",
+          "Webroot": "Malware Sites"
+        },
+        "threat_names": [],
+        "sample_analysis_results": {
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "Armis": {
+            "method": "blacklist",
+            "engine_name": "Armis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Comodo Valkyrie Verdict": {
+            "method": "blacklist",
+            "engine_name": "Comodo Valkyrie Verdict",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Cyren": {
+            "method": "blacklist",
+            "engine_name": "Cyren",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          }
+        }
+      }
+    },
+    {
+      "ioc": {
+        "type": "url",
+        "value": "https://afrepublic.xyz/classification/classification.php",
+        "sources": [
+          "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        ]
+      },
+      "vt_query_time": "2025-08-31T23:05:22.730809",
+      "vt_found": true,
+      "malicious_count": 11,
+      "suspicious_count": 1,
+      "harmless_count": 66,
+      "undetected_count": 14,
+      "total_engines": 92,
+      "first_seen": 1638463862,
+      "last_seen": 1679319167,
+      "reputation": 0,
+      "names": [],
+      "error": null,
+      "network_info": {},
+      "certificate_info": {},
+      "whois_info": {},
+      "file_info": {},
+      "additional_details": {
+        "tags": [],
+        "categories": {
+          "Sophos": "spyware and malware",
+          "Xcitium Verdict Cloud": "unknown",
+          "Forcepoint ThreatSeeker": "compromised websites"
+        },
+        "threat_names": [
+          "Mal/HTMLGen-A"
+        ],
+        "sample_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "CMC Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "0xSI_f33d": {
+            "method": "blacklist",
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "ViriBack": {
+            "method": "blacklist",
+            "engine_name": "ViriBack",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "PhishLabs": {
+            "method": "blacklist",
+            "engine_name": "PhishLabs",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "CINS Army": {
+            "method": "blacklist",
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "Quttera": {
+            "method": "blacklist",
+            "engine_name": "Quttera",
+            "category": "harmless",
+            "result": "clean"
+          },
+          "ArcSight Threat Intelligence": {
+            "method": "blacklist",
+            "engine_name": "ArcSight Threat Intelligence",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          "PrecisionSec": {
+            "method": "blacklist",
+            "engine_name": "PrecisionSec",
+            "category": "undetected",
+            "result": "unrated"
+          }
+        }
+      }
+    }
+  ]
+}
