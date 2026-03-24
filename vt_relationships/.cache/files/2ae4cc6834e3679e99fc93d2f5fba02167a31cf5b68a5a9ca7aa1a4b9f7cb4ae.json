@@ -1,22 +1,205 @@
 {
   "sha256": "2ae4cc6834e3679e99fc93d2f5fba02167a31cf5b68a5a9ca7aa1a4b9f7cb4ae",
-  "query_time": "2026-03-19T02:14:42.110096+00:00",
+  "query_time": "2026-03-24T06:19:08.379080+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [
     {
       "id": "2a0e28cddd11b5dfd0d79f9f0c47c8decdd589fc048fbc79468719587492ba48",
       "attributes": {
-        "first_submission_date": 1569346434,
-        "reputation": 0,
-        "sha1": "e1e05f71fc89e477faffd82b0dd7cee8d66feee0",
-        "last_modification_date": 1753809817,
+        "pe_info": {
+          "timestamp": 1247533626,
+          "imphash": "cbb91dbef75b54d8f20a2ec3e1bc8ac2",
+          "machine_type": 332,
+          "entry_point": 18818,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 69571.3359375,
+              "filetype": "data",
+              "entropy": 3.546801805496216,
+              "sha256": "43fd76070ffbbfc326722dfd541a9e1b6f0c029eed06c645e18a6431303680f9",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "virtual_address": 4096,
+              "virtual_size": 47693,
+              "raw_size": 48128,
+              "entropy": 6.63,
+              "md5": "9f611c2b3a4ead779cbd29a2e80c4497"
+            },
+            {
+              "name": ".data",
+              "virtual_address": 53248,
+              "virtual_size": 6624,
+              "raw_size": 6656,
+              "entropy": 3.38,
+              "md5": "6e9572ee5aac09231b2ff79e6ba462c5"
+            },
+            {
+              "name": ".rsrc",
+              "virtual_address": 61440,
+              "virtual_size": 1016,
+              "raw_size": 1024,
+              "entropy": 3.4,
+              "md5": "cb2c0aeb77f382566d6f6111c0c1adf3"
+            },
+            {
+              "name": ".reloc",
+              "virtual_address": 65536,
+              "virtual_size": 2020,
+              "raw_size": 2048,
+              "entropy": 0.0,
+              "md5": "c99a74c555371a433d121f551d6c6398"
+            }
+          ],
+          "exports": [
+            "CDBuildIntegrityVect",
+            "CDBuildVect",
+            "CDFindCommonCSystem",
+            "CDFindCommonCSystemWithKey",
+            "CDGenerateRandomBits",
+            "CDGetIntegrityVect",
+            "CDLocateCSystem",
+            "CDLocateCheckSum",
+            "CDLocateRng",
+            "CDRegisterCSystem",
+            "CDRegisterCheckSum",
+            "CDRegisterRng",
+            "HMACwithSHA",
+            "MD5Final",
+            "MD5Init",
+            "MD5Update",
+            "PBKDF2",
+            "aesCTSDecryptMsg",
+            "aesCTSEncryptMsg"
+          ],
+          "import_list": [
+            {
+              "library_name": "ntdll.dll",
+              "imported_functions": [
+                "RtlDeleteCriticalSection",
+                "RtlUnicodeStringToOemString",
+                "RtlUpcaseUnicodeStringToOemString",
+                "RtlNtStatusToDosError",
+                "RtlInitializeCriticalSection",
+                "RtlLeaveCriticalSection",
+                "RtlFreeOemString",
+                "RtlEnterCriticalSection"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "GetLastError",
+                "FreeLibrary",
+                "QueryPerformanceCounter",
+                "GetTickCount",
+                "DisableThreadLibraryCalls",
+                "GetCurrentProcess",
+                "LoadLibraryExA",
+                "LocalAlloc",
+                "DelayLoadFailureHook",
+                "UnhandledExceptionFilter",
+                "GetProcAddress",
+                "InterlockedCompareExchange",
+                "WideCharToMultiByte",
+                "InterlockedExchange",
+                "SetUnhandledExceptionFilter",
+                "GetSystemTimeAsFileTime",
+                "LocalFree",
+                "TerminateProcess",
+                "Sleep",
+                "GetCurrentThreadId",
+                "GetCurrentProcessId",
+                "SetLastError"
+              ]
+            },
+            {
+              "library_name": "msvcrt.dll",
+              "imported_functions": [
+                "_amsg_exit",
+                "malloc",
+                "memmove",
+                "memset",
+                "free",
+                "_except_handler4_common",
+                "_XcptFilter",
+                "_initterm",
+                "memcpy"
+              ]
+            }
+          ]
+        },
         "magic": "PE32 executable for MS Windows (DLL) (console) Intel 80386 32-bit",
-        "type_description": "Win32 DLL",
+        "md5": "8743bee910b0de591e4f2e314ddf5680",
+        "tags": [
+          "pedll"
+        ],
+        "trid": [
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 61.7
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 14.7
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 10.0
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 4.5
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 4.4
+          }
+        ],
+        "sha256": "2a0e28cddd11b5dfd0d79f9f0c47c8decdd589fc048fbc79468719587492ba48",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "authentihash": "e5537ce3f9927b438a58759f69279da6d6ef384339ed4444edd9714ab408cdda",
+        "first_submission_date": 1569346434,
+        "last_analysis_date": 1570657078,
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
+        "sha1": "e1e05f71fc89e477faffd82b0dd7cee8d66feee0",
+        "type_description": "Win32 DLL",
+        "reputation": 0,
+        "creation_date": 1247533626,
+        "last_analysis_stats": {
+          "malicious": 32,
+          "suspicious": 0,
+          "undetected": 37,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 3
+        },
+        "last_submission_date": 1569346434,
+        "meaningful_name": "cryptdll.dll",
+        "ssdeep": "768:SZOYS2EEMFYGHQeyABX9Fo1H9xllMGCMVFsZ8GViX/vOOmcQRgL0:SfEEMFceywNFo1/VFyA/vHhQWL0",
+        "size": 58880,
         "signature_info": {
           "product": "Microsoft\u00ae Windows\u00ae Operating System",
           "description": "Cryptography Manager",
@@ -25,14 +208,16 @@
           "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
           "internal name": "cryptdll.dll"
         },
-        "meaningful_name": "cryptdll.dll",
-        "times_submitted": 1,
-        "md5": "8743bee910b0de591e4f2e314ddf5680",
+        "last_modification_date": 1753809817,
+        "type_tag": "pedll",
+        "unique_sources": 1,
+        "vhash": "1540466d1515bz16091z8xz13",
         "names": [
           "init",
           "cryptdll.dll",
           "dttcodexgigas.e1e05f71fc89e477faffd82b0dd7cee8d66feee0"
         ],
+        "type_extension": "dll",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -611,214 +796,52 @@
             "result": null
           }
         },
-        "last_submission_date": 1569346434,
-        "type_tag": "pedll",
-        "last_analysis_date": 1570657078,
-        "last_analysis_stats": {
-          "malicious": 32,
-          "suspicious": 0,
-          "undetected": 37,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 3
-        },
-        "ssdeep": "768:SZOYS2EEMFYGHQeyABX9Fo1H9xllMGCMVFsZ8GViX/vOOmcQRgL0:SfEEMFceywNFo1/VFyA/vHhQWL0",
-        "type_extension": "dll",
-        "vhash": "1540466d1515bz16091z8xz13",
-        "trid": [
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 61.7
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 14.7
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 10.0
-          },
-          {
-            "file_type": "OS/2 Executable (generic)",
-            "probability": 4.5
-          },
-          {
-            "file_type": "Generic Win/DOS Executable",
-            "probability": 4.4
-          }
-        ],
-        "creation_date": 1247533626,
-        "unique_sources": 1,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
-        ],
-        "authentihash": "e5537ce3f9927b438a58759f69279da6d6ef384339ed4444edd9714ab408cdda",
-        "sha256": "2a0e28cddd11b5dfd0d79f9f0c47c8decdd589fc048fbc79468719587492ba48",
-        "pe_info": {
-          "timestamp": 1247533626,
-          "imphash": "cbb91dbef75b54d8f20a2ec3e1bc8ac2",
-          "machine_type": 332,
-          "entry_point": 18818,
-          "resource_details": [
-            {
-              "lang": "ENGLISH US",
-              "chi2": 69571.3359375,
-              "filetype": "data",
-              "entropy": 3.546801805496216,
-              "sha256": "43fd76070ffbbfc326722dfd541a9e1b6f0c029eed06c645e18a6431303680f9",
-              "type": "RT_VERSION"
-            }
-          ],
-          "resource_langs": {
-            "ENGLISH US": 1
-          },
-          "resource_types": {
-            "RT_VERSION": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "virtual_address": 4096,
-              "virtual_size": 47693,
-              "raw_size": 48128,
-              "entropy": 6.63,
-              "md5": "9f611c2b3a4ead779cbd29a2e80c4497"
-            },
-            {
-              "name": ".data",
-              "virtual_address": 53248,
-              "virtual_size": 6624,
-              "raw_size": 6656,
-              "entropy": 3.38,
-              "md5": "6e9572ee5aac09231b2ff79e6ba462c5"
-            },
-            {
-              "name": ".rsrc",
-              "virtual_address": 61440,
-              "virtual_size": 1016,
-              "raw_size": 1024,
-              "entropy": 3.4,
-              "md5": "cb2c0aeb77f382566d6f6111c0c1adf3"
-            },
-            {
-              "name": ".reloc",
-              "virtual_address": 65536,
-              "virtual_size": 2020,
-              "raw_size": 2048,
-              "entropy": 0.0,
-              "md5": "c99a74c555371a433d121f551d6c6398"
-            }
-          ],
-          "exports": [
-            "CDBuildIntegrityVect",
-            "CDBuildVect",
-            "CDFindCommonCSystem",
-            "CDFindCommonCSystemWithKey",
-            "CDGenerateRandomBits",
-            "CDGetIntegrityVect",
-            "CDLocateCSystem",
-            "CDLocateCheckSum",
-            "CDLocateRng",
-            "CDRegisterCSystem",
-            "CDRegisterCheckSum",
-            "CDRegisterRng",
-            "HMACwithSHA",
-            "MD5Final",
-            "MD5Init",
-            "MD5Update",
-            "PBKDF2",
-            "aesCTSDecryptMsg",
-            "aesCTSEncryptMsg"
-          ],
-          "import_list": [
-            {
-              "library_name": "ntdll.dll",
-              "imported_functions": [
-                "RtlDeleteCriticalSection",
-                "RtlUnicodeStringToOemString",
-                "RtlUpcaseUnicodeStringToOemString",
-                "RtlNtStatusToDosError",
-                "RtlInitializeCriticalSection",
-                "RtlLeaveCriticalSection",
-                "RtlFreeOemString",
-                "RtlEnterCriticalSection"
-              ]
-            },
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "GetLastError",
-                "FreeLibrary",
-                "QueryPerformanceCounter",
-                "GetTickCount",
-                "DisableThreadLibraryCalls",
-                "GetCurrentProcess",
-                "LoadLibraryExA",
-                "LocalAlloc",
-                "DelayLoadFailureHook",
-                "UnhandledExceptionFilter",
-                "GetProcAddress",
-                "InterlockedCompareExchange",
-                "WideCharToMultiByte",
-                "InterlockedExchange",
-                "SetUnhandledExceptionFilter",
-                "GetSystemTimeAsFileTime",
-                "LocalFree",
-                "TerminateProcess",
-                "Sleep",
-                "GetCurrentThreadId",
-                "GetCurrentProcessId",
-                "SetLastError"
-              ]
-            },
-            {
-              "library_name": "msvcrt.dll",
-              "imported_functions": [
-                "_amsg_exit",
-                "malloc",
-                "memmove",
-                "memset",
-                "free",
-                "_except_handler4_common",
-                "_XcptFilter",
-                "_initterm",
-                "memcpy"
-              ]
-            }
-          ]
-        },
-        "tags": [
-          "pedll"
-        ],
-        "size": 58880
+        "times_submitted": 1
       }
     },
     {
       "id": "439198b6e3dfdca2d94e4626f276f198bdae46a4c9162a246cc9ba0798d49539",
       "attributes": {
-        "first_submission_date": 1569346435,
-        "reputation": 0,
-        "sha1": "847bcdb24a131ca03f8a432be231405c7df3c847",
-        "last_modification_date": 1753809799,
         "magic": "ASCII text, with CRLF line terminators",
-        "type_description": "Text",
+        "md5": "b009999c23b2819cc85fe8b7ce9f8ba0",
+        "tags": [
+          "text"
+        ],
+        "sha256": "439198b6e3dfdca2d94e4626f276f198bdae46a4c9162a246cc9ba0798d49539",
+        "type_tags": [
+          "text"
+        ],
+        "first_submission_date": 1569346435,
+        "last_analysis_date": 1569346435,
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
+        "sha1": "847bcdb24a131ca03f8a432be231405c7df3c847",
+        "type_description": "Text",
+        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 2,
+          "suspicious": 0,
+          "undetected": 55,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 15
+        },
+        "last_submission_date": 1569346435,
         "meaningful_name": "init.cmd",
-        "times_submitted": 1,
-        "md5": "b009999c23b2819cc85fe8b7ce9f8ba0",
+        "ssdeep": "6:QtdOAbJ7Fw0jaQVNK577qSpGOnMFqqSpGOjkiXseLBwkFBcK7dCFHgAY/kFJI:QvOYRF/jRVNK57tEW6eLS4cK0LJzI",
+        "size": 378,
+        "last_modification_date": 1753809799,
+        "type_tag": "text",
+        "unique_sources": 1,
         "names": [
           "init.cmd",
           "dttcodexgigas.847bcdb24a131ca03f8a432be231405c7df3c847"
         ],
+        "type_extension": "txt",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1397,30 +1420,7 @@
             "result": null
           }
         },
-        "last_submission_date": 1569346435,
-        "type_tag": "text",
-        "last_analysis_date": 1569346435,
-        "last_analysis_stats": {
-          "malicious": 2,
-          "suspicious": 0,
-          "undetected": 55,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 15
-        },
-        "ssdeep": "6:QtdOAbJ7Fw0jaQVNK577qSpGOnMFqqSpGOjkiXseLBwkFBcK7dCFHgAY/kFJI:QvOYRF/jRVNK57tEW6eLS4cK0LJzI",
-        "type_extension": "txt",
-        "unique_sources": 1,
-        "type_tags": [
-          "text"
-        ],
-        "sha256": "439198b6e3dfdca2d94e4626f276f198bdae46a4c9162a246cc9ba0798d49539",
-        "tags": [
-          "text"
-        ],
-        "size": 378
+        "times_submitted": 1
       }
     },
     {
@@ -1437,5 +1437,28 @@
     }
   ],
   "execution_parents": [],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "77981af5e5106e5431610e2b326aa44f7e8100c25e506925db98c380937faa34",
+      "attributes": {}
+    },
+    {
+      "id": "b206c9fce0d9a201f80c163d44cbc4a2c606e8362963e42cdcf40b856c670bf9",
+      "attributes": {}
+    },
+    {
+      "id": "148369011cb447a238b262f7c9f19bfc1f29b218cd22d98569154bd75b9822dd",
+      "attributes": {}
+    },
+    {
+      "id": "ae910ed14adaaa1c9f7b83950507c3a1222d33201c3f56fdaf0586894bc31bf7",
+      "attributes": {}
+    },
+    {
+      "id": "06249c9a97a4e8748e298d1da7501a673587af351051b6e39b175704dfb8f64a",
+      "attributes": {}
+    }
+  ]
 }

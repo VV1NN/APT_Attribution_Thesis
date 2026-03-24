@@ -1,13 +1,54 @@
 {
   "sha256": "fa282932f1e65235dc6b7dba2b397a155a6abed9f7bd54afbc9b636d2f698b4b",
-  "query_time": "2026-03-18T03:25:34.326210+00:00",
+  "query_time": "2026-03-24T06:59:55.108925+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [
     {
       "id": "0282e152c5117b8ecfe82550ae681f95e254ee7880ed5fea5867a177b9986824",
       "attributes": {
-        "magika": "PEBIN",
+        "tags": [
+          "pedll"
+        ],
+        "reputation": -1,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "size": 65024,
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "DLL32",
+              "version": "2012 update 4",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "LTCG/C++",
+              "version": "17.00.50727",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "11.00.50727",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2012",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "sha256": "0282e152c5117b8ecfe82550ae681f95e254ee7880ed5fea5867a177b9986824",
+        "type_description": "Win32 DLL",
+        "times_submitted": 1,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -626,75 +667,9 @@
             "result": null
           }
         },
-        "sha1": "796207db8653f0d96e4cabe37815f322634daa01",
-        "first_seen_itw_date": 1629692265,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "md5": "480a23bf15567b25ccd618540669927e",
-        "sha256": "0282e152c5117b8ecfe82550ae681f95e254ee7880ed5fea5867a177b9986824",
-        "signature_info": {
-          "description": "Microsoft ACM Audio Filter",
-          "file version": "10.0.17483.2",
-          "original name": "msfltr32.dll",
-          "product": "Microsoft\u00ae Windows\u00ae Operating System",
-          "internal name": "msfltr32.dll",
-          "copyright": "\u00a9 Microsoft Corporation. All rights reserved."
-        },
-        "ssdeep": "768:QSh008uRvg5FwyI+mPuDUDNt3g0T6AbYzd+Ex0xCFxzBmrgnd/SzNKxWA9qfYTdt:vh0py4Q3gskI2GrgnFRTMfQOhDN",
-        "size": 65024,
-        "meaningful_name": "msfltr32.dll",
-        "authentihash": "bf936813da344644c29d447d6ccf329c3f8aba1ac945212d00c2ee99c7337c0d",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "undetected",
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
-          },
-          "NSFOCUS POMA": {
-            "category": "malicious",
-            "sandbox_name": "NSFOCUS POMA",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          },
-          "Lastline": {
-            "category": "malicious",
-            "sandbox_name": "Lastline",
-            "malware_classification": [
-              "MALWARE",
-              "TROJAN"
-            ]
-          }
-        },
-        "tlsh": "T1DA533A01379080B1D9D2033879A987724D7F7C72AAF990D3BF9A168E5DB01D0BA39767",
-        "reputation": -1,
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 7,
-              "value": "loregun"
-            },
-            {
-              "count": 6,
-              "value": "jobutyve"
-            },
-            {
-              "count": 3,
-              "value": "infostealer"
-            }
-          ],
-          "suggested_threat_label": "trojan.loregun/jobutyve"
-        },
+        "first_submission_date": 1604511122,
+        "creation_date": 1475629405,
+        "unique_sources": 1,
         "last_analysis_stats": {
           "malicious": 49,
           "suspicious": 0,
@@ -705,76 +680,23 @@
           "failure": 1,
           "type-unsupported": 4
         },
-        "unique_sources": 1,
-        "last_submission_date": 1604511122,
-        "first_submission_date": 1604511122,
-        "times_submitted": 1,
-        "type_extension": "dll",
+        "first_seen_itw_date": 1629692265,
+        "signature_info": {
+          "description": "Microsoft ACM Audio Filter",
+          "file version": "10.0.17483.2",
+          "original name": "msfltr32.dll",
+          "product": "Microsoft\u00ae Windows\u00ae Operating System",
+          "internal name": "msfltr32.dll",
+          "copyright": "\u00a9 Microsoft Corporation. All rights reserved."
+        },
+        "last_modification_date": 1754384265,
         "last_analysis_date": 1742305539,
-        "trid": [
-          {
-            "file_type": "Windows Control Panel Item (generic)",
-            "probability": 63.7
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 11.6
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 7.2
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 5.5
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.9
-          }
-        ],
-        "names": [
-          "msfltr32.dll"
-        ],
-        "tags": [
-          "pedll"
-        ],
         "filecondis": {
           "dhash": "f87c785839200800",
           "raw_md5": "696770ca8c6d21bf07abcb0a2a4ebaed"
         },
+        "authentihash": "bf936813da344644c29d447d6ccf329c3f8aba1ac945212d00c2ee99c7337c0d",
         "type_tag": "pedll",
-        "vhash": "164056655d15151018z52hz1031z1ez1",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "DLL32",
-              "version": "2012 update 4",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "LTCG/C++",
-              "version": "17.00.50727",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "11.00.50727",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2012",
-              "type": "Tool",
-              "name": "Visual Studio"
-            }
-          ]
-        },
-        "last_modification_date": 1754384265,
-        "creation_date": 1475629405,
-        "type_description": "Win32 DLL",
         "pe_info": {
           "timestamp": 1475629405,
           "imphash": "243093b56ebc7a48631a74ddf3e918f4",
@@ -990,20 +912,133 @@
             }
           ]
         },
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
+        "magika": "PEBIN",
+        "sha1": "796207db8653f0d96e4cabe37815f322634daa01",
+        "meaningful_name": "msfltr32.dll",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 22
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "loregun",
+              "count": 7
+            },
+            {
+              "value": "jobutyve",
+              "count": 6
+            },
+            {
+              "value": "infostealer",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.loregun/jobutyve"
+        },
+        "ssdeep": "768:QSh008uRvg5FwyI+mPuDUDNt3g0T6AbYzd+Ex0xCFxzBmrgnd/SzNKxWA9qfYTdt:vh0py4Q3gskI2GrgnFRTMfQOhDN",
+        "md5": "480a23bf15567b25ccd618540669927e",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "NSFOCUS POMA": {
+            "category": "malicious",
+            "sandbox_name": "NSFOCUS POMA",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "names": [
+          "msfltr32.dll"
         ],
-        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows"
+        "type_extension": "dll",
+        "trid": [
+          {
+            "file_type": "Windows Control Panel Item (generic)",
+            "probability": 63.7
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 11.6
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 7.2
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 5.5
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.9
+          }
+        ],
+        "last_submission_date": 1604511122,
+        "vhash": "164056655d15151018z52hz1031z1ez1",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "tlsh": "T1DA533A01379080B1D9D2033879A987724D7F7C72AAF990D3BF9A168E5DB01D0BA39767"
       }
     },
     {
       "id": "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e",
       "attributes": {
-        "magika": "PEBIN",
+        "tags": [
+          "peexe"
+        ],
+        "reputation": -1,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "size": 46080,
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "LTCG/C++",
+              "version": "17.00.50727",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "11.00.50727",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2012",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "sha256": "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e",
+        "type_description": "Win32 EXE",
+        "times_submitted": 7,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1614,79 +1649,9 @@
             "result": null
           }
         },
-        "sha1": "287fd7e08214d4875c817f997714cf6510a57717",
-        "first_seen_itw_date": 1629692266,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "md5": "75df22f6a090c4205d5a0d2326851f96",
-        "sha256": "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e",
-        "signature_info": {
-          "file version": "10.0.15632.1",
-          "description": "System Configuration Utility",
-          "original name": "msfilter32.exe",
-          "product": "Microsoft\u00ae Windows\u00ae Operating System",
-          "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
-          "internal name": "msfilter32.exe"
-        },
-        "ssdeep": "768:IBzArI1HXFcinvmbYNXEWBu5kNKYW9XaRaeldpm:E2w3FcUc4R8elnm",
-        "size": 46080,
-        "meaningful_name": "msfilter32.exe",
-        "authentihash": "00cc022274a9441b2e855bcdafb992d2486a390ea1ff407cb542613afc3f944f",
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "confidence": 1,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          },
-          "C2AE": {
-            "category": "undetected",
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
-          },
-          "DAS-Security Orcas": {
-            "category": "harmless",
-            "sandbox_name": "DAS-Security Orcas",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          }
-        },
-        "tlsh": "T1E3233C0276F1C072D9A307784878C7524B7F7CA29A78D6573BC81A8E4EB15D06E353A7",
-        "reputation": -1,
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 19,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "pua"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 4,
-              "value": "agentb"
-            },
-            {
-              "count": 2,
-              "value": "cryptinject"
-            },
-            {
-              "count": 2,
-              "value": "kimsuky"
-            }
-          ],
-          "suggested_threat_label": "trojan.agentb/cryptinject"
-        },
+        "first_submission_date": 1602075833,
+        "creation_date": 1475393045,
+        "unique_sources": 6,
         "last_analysis_stats": {
           "malicious": 36,
           "suspicious": 0,
@@ -1697,76 +1662,23 @@
           "failure": 7,
           "type-unsupported": 4
         },
-        "unique_sources": 6,
-        "last_submission_date": 1686805864,
-        "first_submission_date": 1602075833,
-        "times_submitted": 7,
-        "type_extension": "exe",
+        "first_seen_itw_date": 1629692266,
+        "signature_info": {
+          "file version": "10.0.15632.1",
+          "description": "System Configuration Utility",
+          "original name": "msfilter32.exe",
+          "product": "Microsoft\u00ae Windows\u00ae Operating System",
+          "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+          "internal name": "msfilter32.exe"
+        },
+        "last_modification_date": 1773309757,
         "last_analysis_date": 1773302040,
-        "trid": [
-          {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 50.3
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 10.6
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.5
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 8.1
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 7.2
-          }
-        ],
-        "names": [
-          "msfilter32.exe",
-          "75DF22F6A090C4205D5A0D2326851F96",
-          "287fd7e08214d4875c817f997714cf6510a57717",
-          "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e.exe",
-          "75df22f6a090c4205d5a0d2326851f96",
-          "msic.exe",
-          "dttcodexgigas.287fd7e08214d4875c817f997714cf6510a57717"
-        ],
-        "tags": [
-          "peexe"
-        ],
         "filecondis": {
           "dhash": "f8f87c1ca8100000",
           "raw_md5": "060653bb5e7a2735a2ca08c0123b2ab6"
         },
+        "authentihash": "00cc022274a9441b2e855bcdafb992d2486a390ea1ff407cb542613afc3f944f",
         "type_tag": "peexe",
-        "vhash": "044056655d15151az42!z",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "LTCG/C++",
-              "version": "17.00.50727",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "11.00.50727",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2012",
-              "type": "Tool",
-              "name": "Visual Studio"
-            }
-          ]
-        },
-        "last_modification_date": 1773309757,
-        "creation_date": 1475393045,
-        "type_description": "Win32 EXE",
         "pe_info": {
           "timestamp": 1475393045,
           "imphash": "6d99c53509bfd13d4092fd3ae1b31e9e",
@@ -1936,20 +1848,108 @@
             }
           ]
         },
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
+        "magika": "PEBIN",
+        "sha1": "287fd7e08214d4875c817f997714cf6510a57717",
+        "meaningful_name": "msfilter32.exe",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "agentb",
+              "count": 4
+            },
+            {
+              "value": "cryptinject",
+              "count": 2
+            },
+            {
+              "value": "kimsuky",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.agentb/cryptinject"
+        },
+        "ssdeep": "768:IBzArI1HXFcinvmbYNXEWBu5kNKYW9XaRaeldpm:E2w3FcUc4R8elnm",
+        "md5": "75df22f6a090c4205d5a0d2326851f96",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 1,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "harmless",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
         "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "names": [
+          "msfilter32.exe",
+          "75DF22F6A090C4205D5A0D2326851F96",
+          "287fd7e08214d4875c817f997714cf6510a57717",
+          "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e.exe",
+          "75df22f6a090c4205d5a0d2326851f96",
+          "msic.exe",
+          "dttcodexgigas.287fd7e08214d4875c817f997714cf6510a57717"
+        ],
+        "type_extension": "exe",
+        "trid": [
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 50.3
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 10.6
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.5
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 8.1
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 7.2
+          }
+        ],
+        "last_submission_date": 1686805864,
+        "vhash": "044056655d15151az42!z",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "tlsh": "T1E3233C0276F1C072D9A307784878C7524B7F7CA29A78D6573BC81A8E4EB15D06E353A7",
         "crowdsourced_ai_results": [
           {
             "analysis": "The binary is a malicious loader. It loads a DLL named 'msfltr32.dll', which is not a standard Windows library. It then resolves an obfuscated function from this DLL and executes it in an infinite loop, with a long, randomized sleep of 90-180 minutes between executions. This behavior is characteristic of a backdoor beaconing to a command-and-control (C2) server. The primary IOC is the loading of the payload 'msfltr32.dll'.",
-            "category": "code_insight",
-            "source": "palm",
             "verdict": "malicious",
+            "source": "palm",
+            "category": "code_insight",
             "id": "e4d28fd7e0fc63429fc199c1b683340f725f0bf9834345174ff0b6a3c0b1f60e-file-palm"
           }
         ]
@@ -1965,5 +1965,824 @@
     }
   ],
   "execution_parents": [],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "4bb79dcea0a901f7d9eac5aa05728ae92acb42e0cb22e5dd14134f4421a3d8df",
+      "attributes": {
+        "total_votes": {
+          "harmless": 5,
+          "malicious": 10
+        },
+        "filecondis": {
+          "raw_md5": "d3b67e5ab9d87cc8d7d851e3b66d26c3",
+          "dhash": "f6b2a49414c24480"
+        },
+        "md5": "1e4a89b11eae0fcf8bb5fdd5ec3b6f61",
+        "magic": "XML 1.0 document, ASCII text, with CRLF line terminators",
+        "times_submitted": 2165,
+        "first_submission_date": 1235116197,
+        "last_submission_date": 1774325712,
+        "type_description": "XML",
+        "size": 381,
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "harmless",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE",
+              "UNKNOWN_VERDICT",
+              "CLEAN"
+            ]
+          }
+        },
+        "last_analysis_date": 1774325712,
+        "trusted_verdict": {
+          "organization": "Microsoft Corporation",
+          "verdict": "goodware",
+          "generator": "Microsoft Corporation",
+          "filename": "1"
+        },
+        "sha256": "4bb79dcea0a901f7d9eac5aa05728ae92acb42e0cb22e5dd14134f4421a3d8df",
+        "known_distributors": {
+          "distributors": [
+            "Microsoft",
+            "DxO"
+          ],
+          "filenames": [
+            "_262540C4EB7141EE85D13426974BAE1C",
+            "1",
+            "TvWsetup.exe.manifest",
+            "spawn.exe.manifest",
+            "2",
+            "AutoUpdate.manifest",
+            "_8D462156D3F94A27977E6B922E70D67A",
+            "ISOLATIONAWARE_MANIFEST_RESOURCE_ID",
+            "setup.exe.mt",
+            "RichVideoInstall.exe.manifest"
+          ],
+          "products": [
+            "Windows 11 (consumer editions) Jan 2026",
+            "Where Winds Meet",
+            "StarCraft",
+            "Windows 11 (business editions) Dec 2025",
+            "DxO",
+            "Hertz HMD8 DSP 24V",
+            "3D Aim Trainer",
+            "FILESEEK",
+            "2025-03 .NET 9.0.3 Security Update for x64 Server (KB5054230)",
+            "Microsoft Security Compliance Toolkit",
+            "2025-10 Cumulative Update for Windows 11, version 25H2 for x64-based Systems (KB5066835)",
+            "Windows 11 (consumer editions) Dec 2025",
+            "2025-02 .NET 9.0.2 Update for x64 Server (KB5052979)",
+            "Clair Obscur- Expedition 33",
+            "Cities: Skylines II",
+            "2025-04 .NET 8.0.15 Security Update for x86 Client (KB5056686)",
+            "Python",
+            "Fap Goddess",
+            "Overwatch",
+            "2025-04 .NET 9.0.4 Security Update for ARM64 Client (KB5056687)",
+            "Hertz HMD8 DSP",
+            "2025-03 .NET 8.0.14 Security Update for x64 Server (KB5054229)",
+            "Total Commander (32 bit)",
+            "Hertz DRC HE",
+            "Hearthstone",
+            "Deducto",
+            "2025-02 .NET 8.0.13 Update for x64 Client (KB5052978)",
+            "Total Commander (32 bit & 64 bit)",
+            "Shinobi Warfare",
+            "Enpass"
+          ],
+          "data_sources": [
+            "Microsoft Corporation",
+            "National Software Reference Library (NSRL)"
+          ]
+        },
+        "type_tag": "xml",
+        "type_tags": [
+          "internet",
+          "xml"
+        ],
+        "reputation": 5,
+        "tlsh": "T1D8E0C0C1C1ECD319572001956837C52CDAB55717049F18EC74DC5BAFAB1A74280C30B2",
+        "sha1": "4260284ce14278c397aaf6f389c1609b0ab0ce51",
+        "type_extension": "xml",
+        "unique_sources": 445,
+        "saferpickle": {
+          "classification": "benign",
+          "justification": null
+        },
+        "meaningful_name": "Whois.exe.intermediate.manifest",
+        "tags": [
+          "xml",
+          "trusted",
+          "known-distributor"
+        ],
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.2.0",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.214",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5568",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.43.58972",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.43.58972",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20230417",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1171",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260322",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.75.2070",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.14148",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "8a2a32b:8a2a32b:9b50884:9b50884",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.241.174",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38507",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.26010.1",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.23-113519113",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.43967AVA:64.30897",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1774317663",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.29.3.10609",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.5.1",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2026-03-24.01",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20260324",
+            "category": "undetected",
+            "result": null
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260322",
+            "category": "undetected",
+            "result": null
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20260323",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "260323-00",
+            "engine_update": "20260323",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20260123",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20251216",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20260323",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.253",
+            "engine_update": "20260323",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.761",
+            "engine_update": "20260322",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20260324",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.10.0",
+            "engine_update": "20260224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20260323",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.5.3.1",
+            "engine_update": "20251224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": null,
+            "engine_update": "20260324",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20260324",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "trid": [
+          {
+            "file_type": "Generic XML (ASCII)",
+            "probability": 100.0
+          }
+        ],
+        "magika": "MUM",
+        "names": [
+          "2",
+          "1",
+          "Whois.exe.intermediate.manifest",
+          "manifest.xml",
+          "SASDUPIE.exe.intermediate.manifest",
+          "spsetup.exe.intermediate.manifest",
+          "Reaktor 6.aaxplugin.manifest",
+          "imfx.dll.intermediate.manifest",
+          "imfx.asi.intermediate.manifest",
+          "RichVideoInstall.exe.manifest",
+          "RichVideoUnInstall.exe.manifest",
+          "4",
+          "5",
+          "AutoUpdate.manifest",
+          "spawn.exe.manifest",
+          "ima9887.tmp",
+          "FitObjectsToPathIntl.dll.manifest",
+          "ProjectTimerIntl.dll.manifest",
+          "BorderGrommetIntl.dll.manifest",
+          "autoupdate.manifest",
+          "24",
+          "Qwt.pyd.manifest",
+          "DataFormats.dll.manifest",
+          "DocBookViewer.dll.manifest",
+          "ErrorMessages.dll.manifest",
+          "ExtensionSystem.dll.manifest",
+          "KStdlib.dll.manifest",
+          "VM.dll.manifest",
+          "Widgets.dll.manifest",
+          "docbook2latex.exe.manifest",
+          "kumir2-bc.exe.manifest",
+          "kumir2-checkcourse.exe.manifest",
+          "kumir2-classic.exe.manifest",
+          "kumir2-courseeditor.exe.manifest",
+          "kumir2-ide.exe.manifest",
+          "kumir2-open.exe.manifest",
+          "kumir2-run.exe.manifest",
+          "kumir2-teacher.exe.manifest",
+          "kumir2-xrun.exe.manifest",
+          "ActorComplexNumbers.dll.manifest",
+          "ActorDraw.dll.manifest",
+          "ActorGrasshopper.dll.manifest",
+          "ActorIsometricRobot.dll.manifest",
+          "ActorKeyboard.dll.manifest",
+          "ActorPainter.dll.manifest",
+          "ActorRobot.dll.manifest",
+          "ActorTurtle.dll.manifest"
+        ],
+        "first_seen_itw_date": 1671658489,
+        "last_analysis_stats": {
+          "malicious": 0,
+          "suspicious": 0,
+          "undetected": 62,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "last_modification_date": 1774335596,
+        "ssdeep": "6:TM3iSnjUglRu9TbX+A1WBRu9TNNSTfUTdNciW7N2x8RTdN9TIHG:TM3iSnRuV1aMN2U5Nci62xA5NEG"
+      }
+    },
+    {
+      "id": "8f71481af806b82f4f0c9c32735aeef51db142e852863f28f364e4b1ff01c3eb",
+      "attributes": {}
+    },
+    {
+      "id": "a103eb238fb8cb2d7f350cd33d680cef6b3bb6164f05704f1dbdc26618119db7",
+      "attributes": {}
+    },
+    {
+      "id": "14254f448c2b4c10a0cf13e5e318e5aae7ab1a18071eaf1b7f14ef178618df6e",
+      "attributes": {}
+    },
+    {
+      "id": "947a3e9463a504d1cb310e9b6181fa55b9658d021d08a54ac37ce71b65cb541b",
+      "attributes": {}
+    },
+    {
+      "id": "3ffe22d0ef16cda3789cdc0c008a4b11a6698a32f5a0422f0306aad4607530bb",
+      "attributes": {}
+    },
+    {
+      "id": "3bfccbb3af73c95681c4289d0749bf19d446b4d47b3e6c380fb67f55b3212523",
+      "attributes": {}
+    }
+  ]
 }

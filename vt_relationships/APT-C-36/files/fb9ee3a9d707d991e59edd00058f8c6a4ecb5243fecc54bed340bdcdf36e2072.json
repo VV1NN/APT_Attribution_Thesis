@@ -1,6 +1,6 @@
 {
   "sha256": "fb9ee3a9d707d991e59edd00058f8c6a4ecb5243fecc54bed340bdcdf36e2072",
-  "query_time": "2026-03-16T08:16:45.828214+00:00",
+  "query_time": "2026-03-24T05:48:54.987762+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -34,14 +34,46 @@
             ]
           }
         },
-        "tags": [
-          "contains-pe",
-          "detect-debug-environment",
-          "contains-elf",
-          "long-sleeps",
+        "bundle_info": {
+          "highest_datetime": "2023-08-01 10:09:49",
+          "lowest_datetime": "2014-04-04 16:33:34",
+          "num_children": 1240,
+          "extensions": {
+            "bin": 6,
+            "htm": 27,
+            "EXE": 31,
+            "html": 12,
+            "exe": 527
+          },
+          "file_types": {
+            "XML": 2,
+            "ZIP": 10,
+            "unknown": 66,
+            "JavaScript": 1,
+            "ELF": 5,
+            "HTML": 22,
+            "RAR": 4,
+            "Portable Executable": 880,
+            "PDF": 2,
+            "Microsoft Office": 7
+          },
+          "type": "RAR",
+          "uncompressed_size": 1045137790
+        },
+        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
+        "reputation": 0,
+        "vhash": "a72915e10542b7b5b5f2972fa867565d",
+        "last_submission_date": 1690965341,
+        "unique_sources": 1,
+        "type_tags": [
+          "compressed",
           "rar"
         ],
         "sha1": "3b28fd14a8e2debf3fcdcb609e1f54af7ae0e611",
+        "filecondis": {
+          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
+          "dhash": "0000000000000100"
+        },
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "0122a7f913",
@@ -68,12 +100,22 @@
             "source": "https://github.com/ditekshen/detection"
           }
         ],
-        "size": 661759077,
-        "last_analysis_date": 1773066514,
+        "trid": [
+          {
+            "file_type": "RAR compressed archive (v-4.x)",
+            "probability": 58.3
+          },
+          {
+            "file_type": "RAR compressed archive (gen)",
+            "probability": 41.6
+          }
+        ],
         "last_modification_date": 1773074501,
-        "magic": "RAR archive data, v4, os: Win32",
+        "md5": "93a975c21b06f8483fd37dc34c20a43f",
         "type_description": "RAR",
         "sha256": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
+        "times_submitted": 1,
+        "magic": "RAR archive data, v4, os: Win32",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -684,69 +726,12 @@
             "result": null
           }
         },
+        "last_analysis_date": 1773066514,
+        "names": [],
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
-        "bundle_info": {
-          "highest_datetime": "2023-08-01 10:09:49",
-          "lowest_datetime": "2014-04-04 16:33:34",
-          "num_children": 1240,
-          "extensions": {
-            "bin": 6,
-            "htm": 27,
-            "EXE": 31,
-            "html": 12,
-            "exe": 527
-          },
-          "file_types": {
-            "XML": 2,
-            "ZIP": 10,
-            "unknown": 66,
-            "JavaScript": 1,
-            "ELF": 5,
-            "HTML": 22,
-            "RAR": 4,
-            "Portable Executable": 880,
-            "PDF": 2,
-            "Microsoft Office": 7
-          },
-          "type": "RAR",
-          "uncompressed_size": 1045137790
-        },
-        "type_extension": "rar",
-        "trid": [
-          {
-            "file_type": "RAR compressed archive (v-4.x)",
-            "probability": 58.3
-          },
-          {
-            "file_type": "RAR compressed archive (gen)",
-            "probability": 41.6
-          }
-        ],
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.",
-          "popular_threat_category": [
-            {
-              "count": 6,
-              "value": "trojan"
-            }
-          ]
-        },
-        "names": [],
-        "last_submission_date": 1690965341,
-        "reputation": 0,
-        "type_tags": [
-          "compressed",
-          "rar"
-        ],
-        "filecondis": {
-          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
-          "dhash": "0000000000000100"
-        },
-        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703",
         "last_analysis_stats": {
           "malicious": 14,
           "suspicious": 0,
@@ -757,14 +742,31 @@
           "failure": 6,
           "type-unsupported": 12
         },
+        "size": 661759077,
+        "tags": [
+          "contains-pe",
+          "detect-debug-environment",
+          "contains-elf",
+          "long-sleeps",
+          "rar"
+        ],
         "type_tag": "rar",
-        "unique_sources": 1,
-        "vhash": "a72915e10542b7b5b5f2972fa867565d",
         "first_submission_date": 1690965341,
-        "md5": "93a975c21b06f8483fd37dc34c20a43f",
-        "times_submitted": 1
+        "type_extension": "rar",
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 6
+            }
+          ]
+        },
+        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703"
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

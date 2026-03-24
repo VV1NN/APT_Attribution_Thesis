@@ -1,6 +1,6 @@
 {
   "sha256": "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda",
-  "query_time": "2026-03-19T02:43:41.942527+00:00",
+  "query_time": "2026-03-24T06:20:58.394626+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,7 +8,13 @@
     {
       "id": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
       "attributes": {
-        "unique_sources": 1,
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "f0c56885b2038a264a97eb20eae45577"
+        },
+        "authentihash": "37c26e17fed10f6031076eddd801338dbb145fb8913538efd43caf235cd2f0aa",
+        "times_submitted": 1,
+        "sha256": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
         "type_tags": [
           "executable",
           "windows",
@@ -16,9 +22,46 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 1,
-        "last_submission_date": 1751330003,
-        "type_tag": "peexe",
+        "last_modification_date": 1751421806,
+        "magika": "PEBIN",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "sfx",
+              "name": "WinRAR"
+            },
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "libcmt",
+              "version": "15.00-16.00",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
+            }
+          ]
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "unique_sources": 1,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "tlsh": "T1CB454802994848AFE303C733146663D0D150A87F2A6F675A3E59B10BFF7DD8BA1C275A",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -27,14 +70,6 @@
             "low": 1
           }
         },
-        "creation_date": 1374825217,
-        "tags": [
-          "peexe",
-          "overlay",
-          "calls-wmi",
-          "detect-debug-environment"
-        ],
-        "magika": "PEBIN",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -578,78 +613,21 @@
             }
           ]
         },
-        "tlsh": "T1CB454802994848AFE303C733146663D0D150A87F2A6F675A3E59B10BFF7DD8BA1C275A",
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
-            "rule_id": "1:2047866",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
-            "rule_references": [
-              "https://developers.google.com/speed/public-dns/docs/doh/"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "8.8.8.8",
-                "dest_port": 443,
-                "ja3": [
-                  "b32309a26951912be7dba376398abc3b"
-                ],
-                "ja3s": [
-                  "eb1d94daa7e0344597e756a1fb6e7054"
-                ]
-              }
-            ]
-          }
-        ],
-        "type_extension": "exe",
-        "last_modification_date": 1751421806,
-        "authentihash": "37c26e17fed10f6031076eddd801338dbb145fb8913538efd43caf235cd2f0aa",
-        "type_description": "Win32 EXE",
-        "filecondis": {
-          "raw_md5": "f0c56885b2038a264a97eb20eae45577",
-          "dhash": "0000001d1e150c08"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "creation_date": 1374825217,
+        "first_submission_date": 1751330003,
         "crowdsourced_ids_stats": {
           "high": 0,
           "medium": 0,
           "low": 1,
           "info": 0
         },
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 19,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ],
-          "suggested_threat_label": "trojan.midie/cozybear",
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "midie"
-            },
-            {
-              "count": 6,
-              "value": "cozybear"
-            },
-            {
-              "count": 5,
-              "value": "cozer"
-            }
-          ]
+        "names": [
+          "exemplar"
+        ],
+        "md5": "05f172f92cfdc1205f9a06dfd77ecd3e",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
         },
         "last_analysis_stats": {
           "malicious": 50,
@@ -661,115 +639,40 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "size": 1172089,
-        "first_submission_date": 1751330003,
-        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:Q35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "05f172f92cfdc1205f9a06dfd77ecd3e",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
-            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
-            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=889B99C52A60DD49227C5E485A016679,SHA256=6CBE0E1F046B13B29BFA26F8B368281D2DDA7EB9B718651D5856F22CC3E02910,IMPHASH=30B6D4AA5B2B125B0ABCA749B5D12B3A",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Hashes": "SHA1=712B95FB0820852A0250B64B5130310FFFBCFFED,MD5=5B45C34204257E0E087526D7463057E4,SHA256=C4815EAD0ABE44972AE918CAB9B21289B29CF5D3471FE102C27E1A86601A729C,IMPHASH=CE6ABBD952DD0B6F657F35A471588FD1",
-                  "Description": "Windows host process (Rundll32)",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3668 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
-            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
-                  "Description": "Windows Command Processor",
-                  "EventID": "1",
-                  "ParentCommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 7048 > NUL & DEL /F /Q C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "File Deletion Via Del",
-            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows Command Processor",
-                  "EventID": "1",
-                  "ParentCommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 7048 > NUL & DEL /F /Q C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          }
-        ],
+        "type_extension": "exe",
+        "reputation": 0,
         "sha1": "827847c220c818ab4a08c5ab456cdafab37e6200",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.midie/cozybear",
+          "popular_threat_name": [
+            {
+              "value": "midie",
+              "count": 8
+            },
+            {
+              "value": "cozybear",
+              "count": 6
+            },
+            {
+              "value": "cozer",
+              "count": 5
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1380,35 +1283,128 @@
             "result": null
           }
         },
-        "meaningful_name": "exemplar",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "libcmt",
-              "version": "15.00-16.00",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
-            }
-          ]
+        "tags": [
+          "peexe",
+          "overlay",
+          "calls-wmi",
+          "detect-debug-environment"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
         },
-        "sha256": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=889B99C52A60DD49227C5E485A016679,SHA256=6CBE0E1F046B13B29BFA26F8B368281D2DDA7EB9B718651D5856F22CC3E02910,IMPHASH=30B6D4AA5B2B125B0ABCA749B5D12B3A",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "SHA1=712B95FB0820852A0250B64B5130310FFFBCFFED,MD5=5B45C34204257E0E087526D7463057E4,SHA256=C4815EAD0ABE44972AE918CAB9B21289B29CF5D3471FE102C27E1A86601A729C,IMPHASH=CE6ABBD952DD0B6F657F35A471588FD1",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3668 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 7048 > NUL & DEL /F /Q C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Deletion Via Del",
+            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=7048 \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 7048 > NUL & DEL /F /Q C:\\Users\\Bruno\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
+        "meaningful_name": "exemplar",
+        "last_submission_date": 1751330003,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -1431,37 +1427,47 @@
             "probability": 0.6
           }
         ],
-        "last_analysis_date": 1751330003,
-        "reputation": 0,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
+        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:Q35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
+            "rule_id": "1:2047866",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
+            "rule_references": [
+              "https://developers.google.com/speed/public-dns/docs/doh/"
             ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
+            "alert_context": [
+              {
+                "dest_ip": "8.8.8.8",
+                "dest_port": 443,
+                "ja3": [
+                  "b32309a26951912be7dba376398abc3b"
+                ],
+                "ja3s": [
+                  "eb1d94daa7e0344597e756a1fb6e7054"
+                ]
+              }
+            ]
           }
-        },
-        "names": [
-          "exemplar"
         ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 1
-        }
+        "last_analysis_date": 1751330003,
+        "size": 1172089
       }
     },
     {
       "id": "4664061f93808b5bb426f5b45787e70766c66fb4ecabd365f2da64e21a46964a",
       "attributes": {
-        "unique_sources": 2,
+        "filecondis": {
+          "dhash": "0000001e1f150c08",
+          "raw_md5": "de9a8d545b1c3cdfb57c081f39b385d5"
+        },
+        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
+        "times_submitted": 3,
+        "sha256": "4664061f93808b5bb426f5b45787e70766c66fb4ecabd365f2da64e21a46964a",
         "type_tags": [
           "executable",
           "windows",
@@ -1469,17 +1475,50 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 3,
-        "last_submission_date": 1659994579,
-        "type_tag": "peexe",
-        "creation_date": 1374825217,
-        "tags": [
-          "overlay",
-          "signed",
-          "peexe",
-          "invalid-signature"
-        ],
+        "last_modification_date": 1752615987,
         "magika": "PEBIN",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "sfx",
+              "name": "WinRAR"
+            },
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "C++",
+              "version": "15.00.30729",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "9.00.30729",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
+            }
+          ]
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "unique_sources": 2,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "tlsh": "T128454802994848AFE303C733146663D0D110A87F2A6F679A3D59B11BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -2023,11 +2062,29 @@
             }
           ]
         },
-        "tlsh": "T128454802994848AFE303C733146663D0D110A87F2A6F679A3D59B11BFF7DD8BA1C275A",
+        "creation_date": 1374825217,
+        "first_submission_date": 1658798777,
+        "names": [
+          "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced"
+        ],
+        "md5": "4f8b943b07153158143cdb9b223e94c4",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "last_analysis_stats": {
+          "malicious": 59,
+          "suspicious": 0,
+          "undetected": 13,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
         "type_extension": "exe",
-        "last_modification_date": 1752615987,
-        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
-        "type_description": "Win32 EXE",
+        "reputation": 0,
+        "sha1": "51ef43e49dae0adac67e58ed9af59e40b106373d",
         "signature_info": {
           "verified": "The digital signature of the object did not verify.",
           "signing date": "10:32 AM 03/22/2022",
@@ -2161,61 +2218,37 @@
             ]
           }
         },
-        "filecondis": {
-          "raw_md5": "de9a8d545b1c3cdfb57c081f39b385d5",
-          "dhash": "0000001e1f150c08"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
         "popular_threat_classification": {
           "popular_threat_category": [
             {
-              "count": 25,
-              "value": "trojan"
+              "value": "trojan",
+              "count": 25
             },
             {
-              "count": 2,
-              "value": "downloader"
+              "value": "downloader",
+              "count": 2
             },
             {
-              "count": 2,
-              "value": "dropper"
+              "value": "dropper",
+              "count": 2
             }
           ],
           "suggested_threat_label": "trojan.cozer/midie",
           "popular_threat_name": [
             {
-              "count": 11,
-              "value": "cozer"
+              "value": "cozer",
+              "count": 11
             },
             {
-              "count": 7,
-              "value": "midie"
+              "value": "midie",
+              "count": 7
             },
             {
-              "count": 5,
-              "value": "cozybear"
+              "value": "cozybear",
+              "count": 5
             }
           ]
         },
-        "last_analysis_stats": {
-          "malicious": 59,
-          "suspicious": 0,
-          "undetected": 13,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "size": 1181137,
-        "first_submission_date": 1658798777,
-        "ssdeep": "12288:Lw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJI:M35dPpXWcUEay5OP89xpmi/cgrqWdfjd",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "4f8b943b07153158143cdb9b223e94c4",
-        "sha1": "51ef43e49dae0adac67e58ed9af59e40b106373d",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -2826,45 +2859,28 @@
             "result": null
           }
         },
-        "meaningful_name": "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "C++",
-              "version": "15.00.30729",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "9.00.30729",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2008",
-              "type": "Tool",
-              "name": "Visual Studio"
-            },
-            {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
-            }
-          ]
+        "tags": [
+          "overlay",
+          "signed",
+          "peexe",
+          "invalid-signature"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
+          }
         },
-        "sha256": "4664061f93808b5bb426f5b45787e70766c66fb4ecabd365f2da64e21a46964a",
+        "meaningful_name": "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced",
+        "last_submission_date": 1659994579,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -2887,31 +2903,21 @@
             "probability": 1.5
           }
         ],
+        "ssdeep": "12288:Lw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJI:M35dPpXWcUEay5OP89xpmi/cgrqWdfjd",
         "last_analysis_date": 1752608704,
-        "reputation": 0,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
-        },
-        "names": [
-          "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced"
-        ]
+        "size": 1181137
       }
     },
     {
       "id": "771213c07865737f55ca1f907eb66c2fbb4796e7b76d9f38d88233eaff25ff9e",
       "attributes": {
-        "unique_sources": 1,
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "1acad9e7af265cc56b714a1aeb429418"
+        },
+        "authentihash": "8dd4a0f60c26d1097266ae58ce5a2c8ed9e869899241b8143111cc642bc6059e",
+        "times_submitted": 1,
+        "sha256": "771213c07865737f55ca1f907eb66c2fbb4796e7b76d9f38d88233eaff25ff9e",
         "type_tags": [
           "executable",
           "windows",
@@ -2919,9 +2925,46 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 1,
-        "last_submission_date": 1751330128,
-        "type_tag": "peexe",
+        "last_modification_date": 1751425167,
+        "magika": "PEBIN",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "sfx",
+              "name": "WinRAR"
+            },
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "libcmt",
+              "version": "15.00-16.00",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
+            }
+          ]
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "unique_sources": 1,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 0
+        },
+        "tlsh": "T111454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -2930,12 +2973,6 @@
             "low": 0
           }
         },
-        "creation_date": 1374825217,
-        "tags": [
-          "overlay",
-          "peexe"
-        ],
-        "magika": "PEBIN",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -3468,46 +3505,15 @@
             }
           ]
         },
-        "tlsh": "T111454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
-        "type_extension": "exe",
-        "last_modification_date": 1751425167,
-        "authentihash": "8dd4a0f60c26d1097266ae58ce5a2c8ed9e869899241b8143111cc642bc6059e",
-        "type_description": "Win32 EXE",
-        "filecondis": {
-          "raw_md5": "1acad9e7af265cc56b714a1aeb429418",
-          "dhash": "0000001d1e150c08"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 20,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ],
-          "suggested_threat_label": "trojan.midie/cozer",
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "midie"
-            },
-            {
-              "count": 7,
-              "value": "cozer"
-            },
-            {
-              "count": 7,
-              "value": "cozybear"
-            }
-          ]
+        "creation_date": 1374825217,
+        "first_submission_date": 1751330128,
+        "names": [
+          "exemplar"
+        ],
+        "md5": "ac766f13354309cc6495784c53fb382c",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
         },
         "last_analysis_stats": {
           "malicious": 53,
@@ -3519,85 +3525,40 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "size": 1171577,
-        "first_submission_date": 1751330128,
-        "ssdeep": "12288:Fw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:m35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "ac766f13354309cc6495784c53fb382c",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "New RUN Key Pointing to Suspicious Folder",
-            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
-            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atiuxpag_System"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atimuixx_Plugin"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdocl_ld_x32"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "CurrentVersion Autorun Keys Modification",
-            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
-            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atiuxpag_System"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atimuixx_Plugin"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "EventType": "SetValue",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdocl_ld_x32"
-                }
-              }
-            ]
-          }
-        ],
+        "type_extension": "exe",
+        "reputation": 0,
         "sha1": "773fd25a6bf85bb78644553b80cfe15deeea9a11",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.midie/cozer",
+          "popular_threat_name": [
+            {
+              "value": "midie",
+              "count": 8
+            },
+            {
+              "value": "cozer",
+              "count": 7
+            },
+            {
+              "value": "cozybear",
+              "count": 7
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -4208,7 +4169,126 @@
             "result": null
           }
         },
+        "tags": [
+          "overlay",
+          "peexe"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
+        },
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New RUN Key Pointing to Suspicious Folder",
+            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atiuxpag_System"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atimuixx_Plugin"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdocl_ld_x32"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atiuxpag_System"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atimuixx_Plugin"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "EventType": "SetValue",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atiapfxx.exe %APPDATA%\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdocl_ld_x32"
+                }
+              }
+            ]
+          }
+        ],
         "meaningful_name": "exemplar",
+        "last_submission_date": 1751330128,
+        "trid": [
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 100.0
+          }
+        ],
+        "ssdeep": "12288:Fw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:m35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
+        "last_analysis_date": 1751330128,
+        "size": 1171577
+      }
+    },
+    {
+      "id": "8687def75a2e6585ef4407188179b805a15275aa8c5832c4490b0dd9b0ed1951",
+      "attributes": {
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "fd82aec4d400c25fc149741b59da2b6c"
+        },
+        "authentihash": "3b839196eb688008267b9809376bcb2302998f6a30097009e0899e58bd523eb1",
+        "times_submitted": 1,
+        "sha256": "8687def75a2e6585ef4407188179b805a15275aa8c5832c4490b0dd9b0ed1951",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "last_modification_date": 1751453027,
+        "magika": "PEBIN",
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -4223,10 +4303,20 @@
               "name": "EP:Microsoft Visual C/C++"
             },
             {
-              "info": "libcmt",
-              "version": "15.00-16.00",
+              "info": "C++",
+              "version": "15.00.30729",
               "type": "Compiler",
               "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "9.00.30729",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
             },
             {
               "info": "solid,90.8%,2 files",
@@ -4236,54 +4326,17 @@
             }
           ]
         },
-        "sha256": "771213c07865737f55ca1f907eb66c2fbb4796e7b76d9f38d88233eaff25ff9e",
-        "trid": [
-          {
-            "file_type": "DOS Executable Generic",
-            "probability": 100.0
-          }
-        ],
-        "last_analysis_date": 1751330128,
-        "reputation": 0,
         "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
-        },
-        "names": [
-          "exemplar"
-        ],
+        "type_description": "Win32 EXE",
+        "unique_sources": 1,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
         "sigma_analysis_stats": {
           "critical": 0,
           "high": 1,
           "medium": 1,
           "low": 0
-        }
-      }
-    },
-    {
-      "id": "8687def75a2e6585ef4407188179b805a15275aa8c5832c4490b0dd9b0ed1951",
-      "attributes": {
-        "unique_sources": 1,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "times_submitted": 1,
-        "last_submission_date": 1751330066,
-        "type_tag": "peexe",
+        },
+        "tlsh": "T1B1454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -4292,12 +4345,6 @@
             "low": 0
           }
         },
-        "creation_date": 3689297805,
-        "tags": [
-          "overlay",
-          "peexe"
-        ],
-        "magika": "PEBIN",
         "pe_info": {
           "timestamp": 3689297805,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -4841,42 +4888,15 @@
             }
           ]
         },
-        "tlsh": "T1B1454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
-        "type_extension": "exe",
-        "last_modification_date": 1751453027,
-        "authentihash": "3b839196eb688008267b9809376bcb2302998f6a30097009e0899e58bd523eb1",
-        "type_description": "Win32 EXE",
-        "filecondis": {
-          "raw_md5": "fd82aec4d400c25fc149741b59da2b6c",
-          "dhash": "0000001d1e150c08"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 20,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            }
-          ],
-          "suggested_threat_label": "trojan.midie/cozer",
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "midie"
-            },
-            {
-              "count": 6,
-              "value": "cozer"
-            },
-            {
-              "count": 6,
-              "value": "cozybear"
-            }
-          ]
+        "creation_date": 3689297805,
+        "first_submission_date": 1751330066,
+        "names": [
+          "exemplar"
+        ],
+        "md5": "5935156ad5b15716f4f6cebd08abb1db",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
         },
         "last_analysis_stats": {
           "malicious": 51,
@@ -4888,58 +4908,36 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "size": 1171577,
-        "first_submission_date": 1751330066,
-        "ssdeep": "12288:lw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:G35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "5935156ad5b15716f4f6cebd08abb1db",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "System File Execution Location Anomaly",
-            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
-            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3c0434c2b9b483a1c7879404c2a80556dc54436bf222a970ca7131b1f30079f1",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Use Short Name Path in Command Line",
-            "rule_description": "Detect use of the Windows 8.3 short name. Which could be used as a method to avoid command-line detection",
-            "rule_author": "frack113, Nasreddine Bencherchali",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe\"",
-                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe\" \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2537.pdf\"",
-                  "Image": "C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          }
-        ],
+        "type_extension": "exe",
+        "reputation": 0,
         "sha1": "fdffe49deb027830dc0d6dd0c620e6d9ee1bb9fa",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.midie/cozer",
+          "popular_threat_name": [
+            {
+              "value": "midie",
+              "count": 8
+            },
+            {
+              "value": "cozer",
+              "count": 6
+            },
+            {
+              "value": "cozybear",
+              "count": 6
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -5550,45 +5548,69 @@
             "result": null
           }
         },
-        "meaningful_name": "exemplar",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "C++",
-              "version": "15.00.30729",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "9.00.30729",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2008",
-              "type": "Tool",
-              "name": "Visual Studio"
-            },
-            {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
-            }
-          ]
+        "tags": [
+          "overlay",
+          "peexe"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
         },
-        "sha256": "8687def75a2e6585ef4407188179b805a15275aa8c5832c4490b0dd9b0ed1951",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "System File Execution Location Anomaly",
+            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
+            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3c0434c2b9b483a1c7879404c2a80556dc54436bf222a970ca7131b1f30079f1",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Use Short Name Path in Command Line",
+            "rule_description": "Detect use of the Windows 8.3 short name. Which could be used as a method to avoid command-line detection",
+            "rule_author": "frack113, Nasreddine Bencherchali",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe\"",
+                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe\" \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2537.pdf\"",
+                  "Image": "C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "meaningful_name": "exemplar",
+        "last_submission_date": 1751330066,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -5611,37 +5633,17 @@
             "probability": 1.5
           }
         ],
+        "ssdeep": "12288:lw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:G35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
         "last_analysis_date": 1751330066,
-        "reputation": 0,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
-        },
-        "names": [
-          "exemplar"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 0
-        }
+        "size": 1171577
       }
     },
     {
       "id": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
       "attributes": {
-        "unique_sources": 1,
+        "authentihash": "9d518360e0be6ee02050d287d9d3db79fb4600ee778d6ea6d4128297fd8697c5",
+        "times_submitted": 1,
+        "sha256": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
         "type_tags": [
           "executable",
           "windows",
@@ -5649,9 +5651,45 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 1,
-        "last_submission_date": 1657888903,
-        "type_tag": "peexe",
+        "last_modification_date": 1747871845,
+        "magika": "PEBIN",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "1.1.0.8",
+              "type": "Installer",
+              "name": "InstallShield"
+            },
+            {
+              "info": "LTCG/C",
+              "version": "19.29.30145",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "14.29.30145",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2019 version 16.11",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "vhash": "016056655d15756az33!z",
+        "type_description": "Win32 EXE",
+        "unique_sources": 1,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "tlsh": "T1F8455902A94844AFE303CB33146663D0D111A83F2A2E779A3E59711BFF7DD87A1D275A",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -5660,11 +5698,6 @@
             "low": 1
           }
         },
-        "creation_date": 1656438517,
-        "tags": [
-          "peexe"
-        ],
-        "magika": "PEBIN",
         "pe_info": {
           "timestamp": 1656438517,
           "imphash": "4d1945f332ca350c1127fc475e044a70",
@@ -5874,50 +5907,16 @@
             }
           ]
         },
-        "tlsh": "T1F8455902A94844AFE303CB33146663D0D111A83F2A2E779A3E59711BFF7DD87A1D275A",
-        "type_extension": "exe",
-        "last_modification_date": 1747871845,
-        "authentihash": "9d518360e0be6ee02050d287d9d3db79fb4600ee778d6ea6d4128297fd8697c5",
-        "type_description": "Win32 EXE",
-        "signature_info": {
-          "description": "InstallShield Wizard",
-          "file version": "1.1.0.8",
-          "original name": "InstallShield",
-          "product": "InstallShield",
-          "internal name": "installer.exe",
-          "copyright": "Copyright (c) 2021"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ],
-          "suggested_threat_label": "trojan.cozybear/graftor",
-          "popular_threat_name": [
-            {
-              "count": 9,
-              "value": "cozybear"
-            },
-            {
-              "count": 7,
-              "value": "graftor"
-            },
-            {
-              "count": 5,
-              "value": "cozyduke"
-            }
-          ]
+        "creation_date": 1656438517,
+        "first_submission_date": 1657888903,
+        "names": [
+          "installer.exe",
+          "InstallShield"
+        ],
+        "md5": "5f66341fb7d3e769e2ce0c443e1da4e7",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
         },
         "last_analysis_stats": {
           "malicious": 56,
@@ -5929,98 +5928,48 @@
           "failure": 1,
           "type-unsupported": 4
         },
-        "size": 1261568,
-        "first_submission_date": 1657888903,
-        "ssdeep": "24576:W35dPpXWcUEay5OP89xpmi/cgrqWdfjk:WBDp0Hi/cgNjk",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "5f66341fb7d3e769e2ce0c443e1da4e7",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
-            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
-            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "Description": "Windows host process (Rundll32)",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
-            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6732 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "File Deletion Via Del",
-            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6732 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          }
-        ],
+        "type_extension": "exe",
+        "reputation": 0,
         "sha1": "5defe230dabc4503ffb6e8a57803b89e40da136c",
+        "signature_info": {
+          "description": "InstallShield Wizard",
+          "file version": "1.1.0.8",
+          "original name": "InstallShield",
+          "product": "InstallShield",
+          "internal name": "installer.exe",
+          "copyright": "Copyright (c) 2021"
+        },
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 22
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozybear/graftor",
+          "popular_threat_name": [
+            {
+              "value": "cozybear",
+              "count": 9
+            },
+            {
+              "value": "graftor",
+              "count": 7
+            },
+            {
+              "value": "cozyduke",
+              "count": 5
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -6639,37 +6588,116 @@
             "result": null
           }
         },
+        "tags": [
+          "peexe"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 7,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
+          }
+        },
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6732 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Deletion Via Del",
+            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=6732 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6732 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
         "meaningful_name": "InstallShield",
-        "packers": {
-          "Varist": "rsrc"
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "version": "1.1.0.8",
-              "type": "Installer",
-              "name": "InstallShield"
-            },
-            {
-              "info": "LTCG/C",
-              "version": "19.29.30145",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "14.29.30145",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2019 version 16.11",
-              "type": "Tool",
-              "name": "Visual Studio"
-            }
-          ]
-        },
-        "sha256": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
+        "last_submission_date": 1657888903,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -6692,46 +6720,20 @@
             "probability": 1.2
           }
         ],
+        "ssdeep": "24576:W35dPpXWcUEay5OP89xpmi/cgrqWdfjk:WBDp0Hi/cgNjk",
         "last_analysis_date": 1717596490,
-        "reputation": 0,
-        "vhash": "016056655d15756az33!z",
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "confidence": 7,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
-        },
-        "names": [
-          "installer.exe",
-          "InstallShield"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 1
+        "size": 1261568,
+        "packers": {
+          "Varist": "rsrc"
         }
       }
     },
     {
       "id": "ae840cac7d3baa8e478eeb599b57a4f38418f41f371d65ff544b7fa1553a30f6",
       "attributes": {
-        "unique_sources": 1,
+        "authentihash": "5e323735856385e7799ed9ebcb890b687c69e65d3a9dcdc9276f3b84ab812c37",
+        "times_submitted": 1,
+        "sha256": "ae840cac7d3baa8e478eeb599b57a4f38418f41f371d65ff544b7fa1553a30f6",
         "type_tags": [
           "executable",
           "windows",
@@ -6739,14 +6741,12 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 1,
-        "last_submission_date": 1660571109,
-        "type_tag": "peexe",
-        "creation_date": 1374825217,
-        "tags": [
-          "peexe",
-          "overlay"
-        ],
+        "last_modification_date": 1660694151,
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "unique_sources": 1,
+        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+        "tlsh": "T1BB454802994848AFD303C733146663D0D110A87F2A6F679A3D59B11BFF7DE8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -7290,11 +7290,29 @@
             }
           ]
         },
-        "tlsh": "T1BB454802994848AFD303C733146663D0D110A87F2A6F679A3D59B11BFF7DE8BA1C275A",
+        "creation_date": 1374825217,
+        "first_submission_date": 1660571109,
+        "names": [
+          "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced"
+        ],
+        "md5": "09a1f3ae6bd7a2cea6b79af894f84a65",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "last_analysis_stats": {
+          "malicious": 49,
+          "suspicious": 0,
+          "undetected": 22,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
         "type_extension": "exe",
-        "last_modification_date": 1660694151,
-        "authentihash": "5e323735856385e7799ed9ebcb890b687c69e65d3a9dcdc9276f3b84ab812c37",
-        "type_description": "Win32 EXE",
+        "reputation": 0,
+        "sha1": "b44f9a7f5901a2f01d1fbf11117a3020c1aebf7a",
         "signature_info": {
           "x509": [
             {
@@ -7339,26 +7357,6 @@
             }
           ]
         },
-        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
-        "last_analysis_stats": {
-          "malicious": 49,
-          "suspicious": 0,
-          "undetected": 22,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "size": 1181137,
-        "first_submission_date": 1660571109,
-        "ssdeep": "12288:tw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJY:u35dPpXWcUEay5OP89xpmi/cgrqWdfjd",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "09a1f3ae6bd7a2cea6b79af894f84a65",
-        "sha1": "b44f9a7f5901a2f01d1fbf11117a3020c1aebf7a",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -7961,8 +7959,26 @@
             "result": null
           }
         },
+        "tags": [
+          "peexe",
+          "overlay"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
+          }
+        },
         "meaningful_name": "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced",
-        "sha256": "ae840cac7d3baa8e478eeb599b57a4f38418f41f371d65ff544b7fa1553a30f6",
+        "last_submission_date": 1660571109,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -7985,50 +8001,35 @@
             "probability": 1.5
           }
         ],
+        "ssdeep": "12288:tw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJY:u35dPpXWcUEay5OP89xpmi/cgrqWdfjd",
         "last_analysis_date": 1660571109,
-        "reputation": 0,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
-        },
-        "names": [
-          "e76da232ec020d133530fdd52ffcc38b7c1d7662_sig_replaced"
-        ]
+        "size": 1181137
       }
     },
     {
       "id": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
       "attributes": {
-        "unique_sources": 1,
+        "times_submitted": 1,
+        "sha256": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
         "type_tags": [
           "compressed",
           "zip"
         ],
-        "times_submitted": 1,
-        "last_submission_date": 1726984911,
-        "type_tag": "zip",
-        "tags": [
-          "zip",
-          "checks-user-input",
-          "detect-debug-environment",
-          "long-sleeps"
-        ],
-        "magika": "ZIP",
-        "tlsh": "T1DCB423D2FBD29F4DD15BA7B06605ADE43D3A44174372398B6E848A8E67FBC12580C0BD",
-        "type_extension": "zip",
         "last_modification_date": 1726992165,
+        "magika": "ZIP",
         "type_description": "ZIP",
+        "unique_sources": 1,
         "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "tlsh": "T1DCB423D2FBD29F4DD15BA7B06605ADE43D3A44174372398B6E848A8E67FBC12580C0BD",
+        "first_submission_date": 1726984911,
+        "names": [
+          "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip"
+        ],
+        "md5": "12171382120c87c357166a760f94568f",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
         "last_analysis_stats": {
           "malicious": 2,
           "suspicious": 0,
@@ -8039,14 +8040,8 @@
           "failure": 1,
           "type-unsupported": 10
         },
-        "size": 512808,
-        "first_submission_date": 1726984911,
-        "ssdeep": "12288:uZtpj87n92HLyl25Xo9NVOxMOlQtR3APjat8W43CANKh:stpjS92HLyl2GrsfQtR3gi943C7h",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "md5": "12171382120c87c357166a760f94568f",
+        "type_extension": "zip",
+        "reputation": 0,
         "sha1": "f6f7e3ffe90a70f54d1543e26e090217be5e967d",
         "last_analysis_results": {
           "Bkav": {
@@ -8666,16 +8661,13 @@
             "result": null
           }
         },
-        "meaningful_name": "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip",
-        "sha256": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
-        "trid": [
-          {
-            "file_type": "ZIP compressed archive",
-            "probability": 100.0
-          }
+        "tags": [
+          "zip",
+          "checks-user-input",
+          "detect-debug-environment",
+          "long-sleeps"
         ],
-        "last_analysis_date": 1726984911,
-        "reputation": 0,
+        "type_tag": "zip",
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "harmless",
@@ -8686,15 +8678,29 @@
             "confidence": 94
           }
         },
-        "names": [
-          "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip"
-        ]
+        "meaningful_name": "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip",
+        "last_submission_date": 1726984911,
+        "trid": [
+          {
+            "file_type": "ZIP compressed archive",
+            "probability": 100.0
+          }
+        ],
+        "ssdeep": "12288:uZtpj87n92HLyl25Xo9NVOxMOlQtR3APjat8W43CANKh:stpjS92HLyl2GrsfQtR3gi943C7h",
+        "last_analysis_date": 1726984911,
+        "size": 512808
       }
     },
     {
       "id": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
       "attributes": {
-        "unique_sources": 9,
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "0b2f70590229713af2a47c1e48121f11"
+        },
+        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
+        "times_submitted": 11,
+        "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
         "type_tags": [
           "executable",
           "windows",
@@ -8702,9 +8708,67 @@
           "pe",
           "peexe"
         ],
-        "times_submitted": 11,
-        "last_submission_date": 1741853032,
-        "type_tag": "peexe",
+        "last_modification_date": 1770278820,
+        "first_seen_itw_date": 1424809555,
+        "magika": "PEBIN",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "sfx",
+              "name": "WinRAR"
+            },
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "C++",
+              "version": "15.00.30729",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "9.00.30729",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
+            }
+          ]
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "unique_sources": 9,
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "CozyDuke",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          }
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 2,
+          "medium": 2,
+          "low": 3
+        },
+        "tlsh": "T10A454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
         "sigma_analysis_summary": {
           "SOC Prime Threat Detection Marketplace": {
             "critical": 1,
@@ -8719,29 +8783,6 @@
             "low": 3
           }
         },
-        "creation_date": 1374825217,
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "CozyDuke",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
-          }
-        ],
-        "tags": [
-          "persistence",
-          "calls-wmi",
-          "runtime-modules",
-          "peexe",
-          "long-sleeps",
-          "overlay",
-          "direct-cpu-clock-access",
-          "checks-user-input",
-          "detect-debug-environment"
-        ],
-        "magika": "PEBIN",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -9285,46 +9326,23 @@
             }
           ]
         },
-        "tlsh": "T10A454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
-        "type_extension": "exe",
-        "last_modification_date": 1770278820,
-        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
-        "type_description": "Win32 EXE",
-        "filecondis": {
-          "raw_md5": "0b2f70590229713af2a47c1e48121f11",
-          "dhash": "0000001d1e150c08"
-        },
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 29,
-              "value": "trojan"
-            },
-            {
-              "count": 6,
-              "value": "dropper"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            }
-          ],
-          "suggested_threat_label": "trojan.cozybear/cozer",
-          "popular_threat_name": [
-            {
-              "count": 10,
-              "value": "cozybear"
-            },
-            {
-              "count": 9,
-              "value": "cozer"
-            },
-            {
-              "count": 4,
-              "value": "cozyduke"
-            }
-          ]
+        "creation_date": 1374825217,
+        "first_submission_date": 1424769132,
+        "names": [
+          "2537.ex_",
+          "e76da232ec020d133530fdd52ffcc38b7c1d7662.codex",
+          "\u751f\u7522.bat",
+          "\u7522.js",
+          "install_6336.exe",
+          "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
+          "E76DA232EC020D133530FDD52FFCC38B7C1D7662",
+          "2537.exe",
+          "CozyDuke_62C4CE93050E48D623569C7DCC4D0278.EXE"
+        ],
+        "md5": "62c4ce93050e48d623569c7dcc4d0278",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
         },
         "last_analysis_stats": {
           "malicious": 57,
@@ -9336,416 +9354,40 @@
           "failure": 3,
           "type-unsupported": 4
         },
-        "size": 1171577,
-        "first_submission_date": 1424769132,
-        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:h35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "md5": "62c4ce93050e48d623569c7dcc4d0278",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "critical",
-            "rule_id": "f75c71f7be8a63670e0c606b582900d5a921916b46408da383beb0786cb5588f",
-            "rule_source": "SOC Prime Threat Detection Marketplace",
-            "rule_title": "Glupteba malware detection",
-            "rule_description": "Detects a possible Glupteba behavior. This rule detects modifications in the exclusions of Windows Defender, and the attemtp to execute suspicious code.",
-            "rule_author": "Ariel Millahuel",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "RuleName": "T1060,RunPolicy",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhdl_API"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "RuleName": "T1060,RunKey",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atidxx_Eng"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "RuleName": "T1060,RunKey",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\atikmpag_x32"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "System File Execution Location Anomaly",
-            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
-            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "9c82223957e793a96ef035ed0c34e45da5cda4718210320cc09615a65b0fb5d1",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Renamed Rundll32.exe Execution",
-            "rule_description": "Detects the execution of rundll32.exe that has been renamed to a different name to avoid detection",
-            "rule_author": "Florian Roth",
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "ProcessId": "4192",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-0B74-638F-F105-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "3236",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
-                  "LogonId": "258158",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "UtcTime": "1670318966",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0BF1-638F-0606-000000004100}",
-                  "ProcessId": "4748",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4192",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
-                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" \"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll\", ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
-                  "LogonId": "258158",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "UtcTime": "1670319089",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0BFA-638F-0906-000000004100}",
-                  "ProcessId": "6956",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "ParentImage": "C:\\Windows\\explorer.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4936",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
-                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
-                  "LogonId": "258264",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "Medium",
-                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
-                  "UtcTime": "1670319098",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0C03-638F-0E06-000000004100}",
-                  "ProcessId": "296",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "ParentImage": "C:\\Windows\\explorer.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4936",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
-                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
-                  "LogonId": "258264",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "Medium",
-                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
-                  "UtcTime": "1670319107",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0C0B-638F-1106-000000004100}",
-                  "ProcessId": "5820",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "ParentImage": "C:\\Windows\\explorer.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4936",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
-                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
-                  "LogonId": "258264",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "IntegrityLevel": "Medium",
-                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
-                  "UtcTime": "1670319115",
-                  "RuleName": "-"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3c0434c2b9b483a1c7879404c2a80556dc54436bf222a970ca7131b1f30079f1",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Use Short Name Path in Command Line",
-            "rule_description": "Detect use of the Windows 8.3 short name. Which could be used as a method to avoid command-line detection",
-            "rule_author": "frack113, Nasreddine Bencherchali",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe\"",
-                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe\" \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2537.pdf\"",
-                  "Image": "C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "CurrentVersion Autorun Keys Modification",
-            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
-            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "RuleName": "T1060,RunPolicy",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhdl_API"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "RuleName": "T1060,RunKey",
-                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atidxx_Eng"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "ProcessId": "4192",
-                  "EventType": "SetValue",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "UtcTime": "1670319090",
-                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
-                  "RuleName": "T1060,RunKey",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\atikmpag_x32"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Windows Cmd Delete File",
-            "rule_description": "Adversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0B76-638F-F405-000000004100}",
-                  "ProcessId": "368",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows Command Processor",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "OriginalFileName": "Cmd.Exe",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4192",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 3236 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
-                  "LogonId": "258158",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "UtcTime": "1670318966",
-                  "RuleName": "-"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Creation of an Executable by an Executable",
-            "rule_description": "Detects the creation of an executable by another executable",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "3872",
-                  "Image": "C:\\Users\\george\\Desktop\\executable.exe",
-                  "ProcessGuid": "{C784477D-0B72-638F-F005-000000004100}",
-                  "CreationUtcTime": "1670318963",
-                  "UtcTime": "1670318963",
-                  "RuleName": "EXE",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "3236",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "RuleName": "EXE",
-                  "CreationUtcTime": "1670318966",
-                  "UtcTime": "1670318966",
-                  "ProcessGuid": "{C784477D-0B74-638F-F105-000000004100}",
-                  "Image": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "e77646c39db7fa011a5223aeb73c738046787fc7f62a99394e883d76a54341f7",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Redirect Output in CommandLine",
-            "rule_description": "Use \">\" to redicrect information in commandline",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-0B76-638F-F405-000000004100}",
-                  "ProcessId": "368",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows Command Processor",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "OriginalFileName": "Cmd.Exe",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "4192",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 3236 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
-                  "LogonId": "258158",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "UtcTime": "1670318966",
-                  "RuleName": "-"
-                }
-              }
-            ]
-          }
-        ],
+        "type_extension": "exe",
+        "reputation": -1,
         "sha1": "e76da232ec020d133530fdd52ffcc38b7c1d7662",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 29
+            },
+            {
+              "value": "dropper",
+              "count": 6
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozybear/cozer",
+          "popular_threat_name": [
+            {
+              "value": "cozybear",
+              "count": 10
+            },
+            {
+              "value": "cozer",
+              "count": 9
+            },
+            {
+              "value": "cozyduke",
+              "count": 4
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -10356,48 +9998,437 @@
             "result": null
           }
         },
+        "tags": [
+          "persistence",
+          "calls-wmi",
+          "runtime-modules",
+          "peexe",
+          "long-sleeps",
+          "overlay",
+          "direct-cpu-clock-access",
+          "checks-user-input",
+          "detect-debug-environment"
+        ],
+        "type_tag": "peexe",
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "sigma_analysis_results": [
+          {
+            "rule_level": "critical",
+            "rule_id": "f75c71f7be8a63670e0c606b582900d5a921916b46408da383beb0786cb5588f",
+            "rule_source": "SOC Prime Threat Detection Marketplace",
+            "rule_title": "Glupteba malware detection",
+            "rule_description": "Detects a possible Glupteba behavior. This rule detects modifications in the exclusions of Windows Defender, and the attemtp to execute suspicious code.",
+            "rule_author": "Ariel Millahuel",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "RuleName": "T1060,RunPolicy",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhdl_API"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "RuleName": "T1060,RunKey",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atidxx_Eng"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "RuleName": "T1060,RunKey",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\atikmpag_x32"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "System File Execution Location Anomaly",
+            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
+            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "9c82223957e793a96ef035ed0c34e45da5cda4718210320cc09615a65b0fb5d1",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Renamed Rundll32.exe Execution",
+            "rule_description": "Detects the execution of rundll32.exe that has been renamed to a different name to avoid detection",
+            "rule_author": "Florian Roth",
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "ProcessId": "4192",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-0B74-638F-F105-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "3236",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
+                  "LogonId": "258158",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "UtcTime": "1670318966",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0BF1-638F-0606-000000004100}",
+                  "ProcessId": "4748",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4192",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
+                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" \"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll\", ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
+                  "LogonId": "258158",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "UtcTime": "1670319089",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0BFA-638F-0906-000000004100}",
+                  "ProcessId": "6956",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "ParentImage": "C:\\Windows\\explorer.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4936",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
+                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
+                  "LogonId": "258264",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "Medium",
+                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+                  "UtcTime": "1670319098",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0C03-638F-0E06-000000004100}",
+                  "ProcessId": "296",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "ParentImage": "C:\\Windows\\explorer.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4936",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
+                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
+                  "LogonId": "258264",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "Medium",
+                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+                  "UtcTime": "1670319107",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0C0B-638F-1106-000000004100}",
+                  "ProcessId": "5820",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-7FDA-6384-6C00-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "ParentImage": "C:\\Windows\\explorer.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4936",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\",
+                  "CommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe\" C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-D8F0-030000000000",
+                  "LogonId": "258264",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "IntegrityLevel": "Medium",
+                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+                  "UtcTime": "1670319115",
+                  "RuleName": "-"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3c0434c2b9b483a1c7879404c2a80556dc54436bf222a970ca7131b1f30079f1",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Use Short Name Path in Command Line",
+            "rule_description": "Detect use of the Windows 8.3 short name. Which could be used as a method to avoid command-line detection",
+            "rule_author": "frack113, Nasreddine Bencherchali",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe\"",
+                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe\" \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2537.pdf\"",
+                  "Image": "C:\\Program Files\\Adobe\\Reader 9.0\\Reader\\AcroRd32.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "Image": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "RuleName": "T1060,RunPolicy",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhdl_API"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "RuleName": "T1060,RunKey",
+                  "TargetObject": "HKU\\S-1-5-21-1015118539-3749460369-599379286-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\atidxx_Eng"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "ProcessId": "4192",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "ProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "UtcTime": "1670319090",
+                  "Details": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set",
+                  "RuleName": "T1060,RunKey",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\atikmpag_x32"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Cmd Delete File",
+            "rule_description": "Adversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0B76-638F-F405-000000004100}",
+                  "ProcessId": "368",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "OriginalFileName": "Cmd.Exe",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4192",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 3236 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
+                  "LogonId": "258158",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "UtcTime": "1670318966",
+                  "RuleName": "-"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Creation of an Executable by an Executable",
+            "rule_description": "Detects the creation of an executable by another executable",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "3872",
+                  "Image": "C:\\Users\\george\\Desktop\\executable.exe",
+                  "ProcessGuid": "{C784477D-0B72-638F-F005-000000004100}",
+                  "CreationUtcTime": "1670318963",
+                  "UtcTime": "1670318963",
+                  "RuleName": "EXE",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "3236",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "RuleName": "EXE",
+                  "CreationUtcTime": "1670318966",
+                  "UtcTime": "1670318966",
+                  "ProcessGuid": "{C784477D-0B74-638F-F105-000000004100}",
+                  "Image": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "e77646c39db7fa011a5223aeb73c738046787fc7f62a99394e883d76a54341f7",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Redirect Output in CommandLine",
+            "rule_description": "Use \">\" to redicrect information in commandline",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-0B76-638F-F405-000000004100}",
+                  "ProcessId": "368",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-0B76-638F-F305-000000004100}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "OriginalFileName": "Cmd.Exe",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "4192",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 3236 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-7FD9-6384-6EF0-030000000000",
+                  "LogonId": "258158",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atiapfxx.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amd_opencl32.dll, ADL_Adapter_CrossdisplayInfoX2_Set pid=3236 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "UtcTime": "1670318966",
+                  "RuleName": "-"
+                }
+              }
+            ]
+          }
+        ],
         "meaningful_name": "2537.ex_",
-        "packers": {
-          "F-PROT": "RAR"
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "C++",
-              "version": "15.00.30729",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "9.00.30729",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2008",
-              "type": "Tool",
-              "name": "Visual Studio"
-            },
-            {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
-            }
-          ]
-        },
-        "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
+        "last_submission_date": 1741853032,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -10420,45 +10451,805 @@
             "probability": 1.5
           }
         ],
+        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:h35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
         "last_analysis_date": 1770271258,
-        "reputation": -1,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "first_seen_itw_date": 1424809555,
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "undetected",
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
-          },
-          "DAS-Security Orcas": {
-            "category": "malicious",
-            "sandbox_name": "DAS-Security Orcas",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          }
-        },
-        "names": [
-          "2537.ex_",
-          "e76da232ec020d133530fdd52ffcc38b7c1d7662.codex",
-          "\u751f\u7522.bat",
-          "\u7522.js",
-          "install_6336.exe",
-          "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
-          "E76DA232EC020D133530FDD52FFCC38B7C1D7662",
-          "2537.exe",
-          "CozyDuke_62C4CE93050E48D623569C7DCC4D0278.EXE"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 2,
-          "medium": 2,
-          "low": 3
+        "size": 1171577,
+        "packers": {
+          "F-PROT": "RAR"
         }
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "ae24c42118158d6bfc60067c16358b991ad61238a577c1659ff3949596c18460",
+      "attributes": {
+        "type_description": "HTML",
+        "ssdeep": "6:uvQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQa:uohhhhhhhhhhhhhhhhhhhhhhhha",
+        "magic": "ASCII text, with very long lines (408u), with no line terminators",
+        "filecondis": {
+          "dhash": "8100000000008080",
+          "raw_md5": "2d3519fb7cc76e02e1aac0f688d859ac"
+        },
+        "first_submission_date": 1372749471,
+        "unique_sources": 7,
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20260129",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.206",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.32.58446",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.32.58447",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20230417",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1135",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.74.11120",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5535",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.13486",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20260129",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1769796034",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.237.174",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38374",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25110.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.22-112233526",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.43363AVA:64.30576",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20260205",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.29.1.10604",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.5.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2026-01-30.02",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "d4f2f94:d4f2f94:5a5090d:5a5090d",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20260130",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "260130-00",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20260123",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20251216",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.247",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.741",
+            "engine_update": "20260128",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.8.0",
+            "engine_update": "20260103",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.5.3.1",
+            "engine_update": "20251224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20260130",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "last_modification_date": 1773566097,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          }
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "type_extension": "html",
+        "sha256": "ae24c42118158d6bfc60067c16358b991ad61238a577c1659ff3949596c18460",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "884b7e21f67a56fc9cb312bdbc27e658c101c449662b2f9e25fd463a75715971",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Registry Tampering by Potentially Suspicious Processes",
+            "rule_description": "Detects suspicious registry modifications made by suspicious processes such as script engine processes such as WScript, or CScript etc.\nThese processes are rarely used for legitimate registry modifications, and their activity may indicate an attempt to modify the registry\nwithout using standard tools like regedit.exe or reg.exe, potentially for evasion and persistence.\n",
+            "rule_author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "QWORD (0x00000000-0x00411b3c)",
+                  "EventID": "13",
+                  "Image": "C:\\Windows\\System32\\WScript.exe",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-1070296143-2877979003-364783958-1001\\Software\\Microsoft\\Windows Script\\Settings\\Telemetry\\wscript.exe\\JScriptSetScriptStateStarted"
+                }
+              },
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "Image": "C:\\Windows\\System32\\WScript.exe",
+                  "Details": "Binary Data",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC1C75"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Windows\\System32\\WScript.exe",
+                  "Details": "Binary Data",
+                  "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-1070296143-2877979003-364783958-1001\\\\Device\\HarddiskVolume2\\Windows\\System32\\wscript.exe"
+                }
+              }
+            ]
+          }
+        ],
+        "size": 408,
+        "last_analysis_stats": {
+          "malicious": 0,
+          "suspicious": 0,
+          "undetected": 62,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "reputation": 0,
+        "sha1": "a0ad3939aadc78d5aa3a805d4d8b7ba69f4597c9",
+        "times_submitted": 21,
+        "known_distributors": {
+          "distributors": [
+            "Microsoft"
+          ],
+          "filenames": [
+            ".rsrc_1"
+          ],
+          "products": [
+            "HeapMemView",
+            "Windows 11 (consumer editions)",
+            "Video Studio Pro X10",
+            "Microsoft Vista Home Premium Dell recovery disk",
+            "Windows 11 (consumer editions) Jan 2026",
+            "NetworkInterfacesView",
+            "MSDN Disc 2942",
+            "Avid Broadcast Graphics | Sports",
+            "Windows 11 (consumer editions) Dec 2025",
+            "Windows 10 Pro 64-bit",
+            "Epson WorkForce DS-780N",
+            "Security Update for Microsoft SharePoint Server Subscription Edition (KB5002768)",
+            "Windows Embedded Compact 7",
+            "Windows 11 (business editions) Dec 2025",
+            "Windows Embedded",
+            "Avid AirSpeed 5000 | AirSpeed 5500",
+            "Windows 11 (business editions)",
+            "Windows 8 Pro ASUS recovery DVD",
+            "MSDN Disc 5095"
+          ],
+          "data_sources": [
+            "National Software Reference Library (NSRL)"
+          ]
+        },
+        "tags": [
+          "html",
+          "known-distributor",
+          "idle",
+          "long-sleeps"
+        ],
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 1,
+          "low": 0
+        },
+        "last_submission_date": 1767035120,
+        "meaningful_name": ".rsrc_1",
+        "type_tag": "html",
+        "names": [
+          ".rsrc_1",
+          "[5]",
+          "[4]",
+          "[3]",
+          "exe",
+          "cbe6b542643140cda8c6b1f2521955de",
+          ".rsrc_1_1"
+        ],
+        "last_analysis_date": 1769799264,
+        "vhash": "9eecb7db59d16c80417c72d1e1f4fbf1",
+        "md5": "cbe6b542643140cda8c6b1f2521955de",
+        "type_tags": [
+          "internet",
+          "html"
+        ],
+        "magika": "HTML"
+      }
+    },
+    {
+      "id": "ae39abca50c3eaef40e5124ffe32a74479b139fda86d9e803bf8c635ba4e9cbd",
+      "attributes": {}
+    },
+    {
+      "id": "9500b348def899480ebcb68e2c0bb7c250be3a653e62f99a1d76355595ac22db",
+      "attributes": {}
+    },
+    {
+      "id": "f84838548479884ae1ba98a760648d498d190c90b04a943dfee0d5b12b85ca9e",
+      "attributes": {}
+    },
+    {
+      "id": "d7da57adc04f6afc5dece147f540ae169de8ba34a033827dfcc00509e9acda6d",
+      "attributes": {}
+    },
+    {
+      "id": "46c68ae7cb277fb0c7c34457711393647e15f5b42c86f4386116f2f2267fe967",
+      "attributes": {}
+    },
+    {
+      "id": "67642a190fbe60087b7669606343cad6d860d5669e32223b85de90ccc2cec331",
+      "attributes": {}
+    },
+    {
+      "id": "93c1529dd98efe37c59147ad9756cd2888870cf1b2d3318808a8f531781ab20c",
+      "attributes": {}
+    },
+    {
+      "id": "fe1f40bf0493ad74823fc8b4c0c844068bf2695b5018c737877ffef57dc87ac0",
+      "attributes": {}
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "sha256": "522fd9b35323af55113455d823571f71332e53dde988c2eb41395cf6b0c15805",
-  "query_time": "2026-03-12T07:20:56.222318+00:00",
+  "query_time": "2026-03-24T05:58:44.305737+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,74 +8,6 @@
     {
       "id": "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae",
       "attributes": {
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "SeduploaderPayload",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
-          },
-          {
-            "description": "Detects win.seduploader.",
-            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
-            "ruleset_name": "win.seduploader_auto",
-            "rule_name": "win_seduploader_auto",
-            "ruleset_id": "008e64e385",
-            "match_in_subfile": true,
-            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
-          },
-          {
-            "ruleset_id": "01234b2177",
-            "rule_name": "Office_Document_with_VBA_Project",
-            "ruleset_name": "Office_Document_with_VBA_Project",
-            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
-            "author": "InQuest Labs",
-            "match_date": 1772612807,
-            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          },
-          {
-            "description": "Yara Rule for mvtband.dll malware",
-            "author": "CSE CybSec Enterprise - Z-Lab",
-            "ruleset_name": "apt_sofacy_hospitality",
-            "rule_name": "APT28_HospitalityMalware_mvtband_file",
-            "ruleset_id": "0001fb05a6",
-            "match_in_subfile": true,
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "description": "Detects Sofacy malware reported in October 2017",
-            "author": "Florian Roth (Nextron Systems)",
-            "ruleset_name": "apt_sofacy_oct17_camp",
-            "rule_name": "Sofacy_Oct17_2",
-            "ruleset_id": "000a82d523",
-            "match_in_subfile": true,
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "SeduploaderPayload2",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
-          }
-        ],
-        "size": 341504,
-        "last_submission_date": 1526379434,
-        "creation_date": 1506994560,
-        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
-        "magika": "DOC",
-        "last_modification_date": 1772620003,
-        "names": [
-          "f52ea8f238e57e49bfae304bd656ad98.doc",
-          "94B288154E3D0225F86BB3C012FA8D63",
-          "myvtfile.exe",
-          "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae"
-        ],
-        "first_seen_itw_date": 1508785459,
         "last_analysis_results": {
           "Lionic": {
             "method": "blacklist",
@@ -686,44 +618,147 @@
             "result": null
           }
         },
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 10,
-              "value": "w97m"
-            },
-            {
-              "count": 4,
-              "value": "msword"
-            },
-            {
-              "count": 2,
-              "value": "apt28"
-            }
-          ],
-          "suggested_threat_label": "trojan.w97m/msword",
-          "popular_threat_category": [
-            {
-              "count": 17,
-              "value": "trojan"
-            },
-            {
-              "count": 11,
-              "value": "downloader"
-            },
-            {
-              "count": 4,
-              "value": "dropper"
-            }
-          ]
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 6,
+          "medium": 7,
+          "low": 1
         },
+        "tlsh": "T13A74AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D58334",
+        "md5": "94b288154e3d0225f86bb3c012fa8d63",
         "type_tag": "doc",
+        "size": 341504,
+        "first_submission_date": 1507797401,
+        "first_seen_itw_date": 1508785459,
+        "sha256": "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae",
+        "type_extension": "doc",
+        "unique_sources": 17,
         "type_tags": [
           "document",
           "msoffice",
           "text",
           "word",
           "doc"
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          },
+          {
+            "description": "Detects win.seduploader.",
+            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
+            "ruleset_name": "win.seduploader_auto",
+            "rule_name": "win_seduploader_auto",
+            "ruleset_id": "008e64e385",
+            "match_in_subfile": true,
+            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
+          },
+          {
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "match_date": 1772612807,
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "Yara Rule for mvtband.dll malware",
+            "author": "CSE CybSec Enterprise - Z-Lab",
+            "ruleset_name": "apt_sofacy_hospitality",
+            "rule_name": "APT28_HospitalityMalware_mvtband_file",
+            "ruleset_id": "0001fb05a6",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "description": "Detects Sofacy malware reported in October 2017",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_name": "apt_sofacy_oct17_camp",
+            "rule_name": "Sofacy_Oct17_2",
+            "ruleset_id": "000a82d523",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload2",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          }
+        ],
+        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
+        "last_submission_date": 1526379434,
+        "last_analysis_date": 1772608606,
+        "type_description": "MS Word Document",
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
+            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
+            ],
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "2201d8e006f8f005a6b415f61e677532"
+                ],
+                "ja3s": [
+                  "4192c0a946c5bd9b544b4656d9f624a4"
+                ]
+              },
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2022323"
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA STREAM FIN out of window",
+            "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM FIN out of window\"; stream-event:fin_out_of_window; classtype:protocol-command-decode; sid:2210038; rev:2;)",
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_source": "Suricata",
+            "rule_id": "1:2210038"
+          }
         ],
         "sandbox_verdicts": {
           "Zenbox": {
@@ -751,69 +786,11 @@
             ]
           }
         },
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 6,
-          "medium": 7,
-          "low": 1
+        "filecondis": {
+          "dhash": "00203d3c0e251930",
+          "raw_md5": "74930a07e6f18e39a24aedbc5625297b"
         },
-        "trid": [
-          {
-            "file_type": "Perfect Keyboard macro set",
-            "probability": 38.7
-          },
-          {
-            "file_type": "Microsoft Word document",
-            "probability": 32.2
-          },
-          {
-            "file_type": "Microsoft Word document (old ver.)",
-            "probability": 20.4
-          },
-          {
-            "file_type": "Generic OLE2 / Multistream Compound",
-            "probability": 8.6
-          }
-        ],
-        "type_description": "MS Word Document",
-        "tags": [
-          "doc",
-          "macros",
-          "write-file",
-          "open-file",
-          "handle-file",
-          "auto-open",
-          "calls-wmi",
-          "environ",
-          "run-file",
-          "long-sleeps",
-          "malware"
-        ],
-        "times_submitted": 36,
-        "magic": "ERROR: Output buffer space exceeded 1034+93u",
         "meaningful_name": "f52ea8f238e57e49bfae304bd656ad98.doc",
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 6,
-            "low": 1
-          },
-          "SOC Prime Threat Detection Marketplace": {
-            "critical": 0,
-            "high": 0,
-            "medium": 1,
-            "low": 0
-          }
-        },
-        "vhash": "8f863667845b292bcbe53bef6ea3813d",
-        "unique_sources": 17,
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -1459,157 +1436,113 @@
           "failure": 1,
           "type-unsupported": 12
         },
-        "md5": "94b288154e3d0225f86bb3c012fa8d63",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
+        "magic": "ERROR: Output buffer space exceeded 1034+93u",
+        "magika": "DOC",
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 6,
+            "low": 1
+          },
+          "SOC Prime Threat Detection Marketplace": {
+            "critical": 0,
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          }
         },
-        "sha256": "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae",
+        "trid": [
+          {
+            "file_type": "Perfect Keyboard macro set",
+            "probability": 38.7
+          },
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 32.2
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 20.4
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 8.6
+          }
+        ],
+        "last_modification_date": 1772620003,
+        "creation_date": 1506994560,
         "crowdsourced_ids_stats": {
           "info": 0,
           "high": 1,
           "medium": 0,
           "low": 1
         },
-        "tlsh": "T13A74AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D58334",
-        "last_analysis_date": 1772608606,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
-            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
-            "rule_references": [
-              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
-            ],
-            "alert_context": [
-              {
-                "src_ip": "58.158.177.102",
-                "src_port": 443,
-                "ja3": [
-                  "2201d8e006f8f005a6b415f61e677532"
-                ],
-                "ja3s": [
-                  "4192c0a946c5bd9b544b4656d9f624a4"
-                ]
-              },
-              {
-                "src_ip": "58.158.177.102",
-                "src_port": 443,
-                "ja3": [
-                  "37f463bf4616ecd445d4a1937da06e19"
-                ],
-                "ja3s": [
-                  "e35df3e00ca4ef31d42b34bebaa2f86e"
-                ]
-              }
-            ],
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_id": "1:2022323"
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA STREAM FIN out of window",
-            "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM FIN out of window\"; stream-event:fin_out_of_window; classtype:protocol-command-decode; sid:2210038; rev:2;)",
-            "alert_context": [
-              {
-                "src_ip": "58.158.177.102",
-                "src_port": 443,
-                "ja3": [
-                  "37f463bf4616ecd445d4a1937da06e19"
-                ],
-                "ja3s": [
-                  "e35df3e00ca4ef31d42b34bebaa2f86e"
-                ]
-              }
-            ],
-            "rule_url": "https://www.openinfosecfoundation.org/",
-            "rule_source": "Suricata",
-            "rule_id": "1:2210038"
-          }
-        ],
         "reputation": -86,
+        "names": [
+          "f52ea8f238e57e49bfae304bd656ad98.doc",
+          "94B288154E3D0225F86BB3C012FA8D63",
+          "myvtfile.exe",
+          "e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae"
+        ],
+        "vhash": "8f863667845b292bcbe53bef6ea3813d",
         "sha1": "4873bafe44cff06845faa0ce7c270c4ce3c9f7b9",
-        "filecondis": {
-          "dhash": "00203d3c0e251930",
-          "raw_md5": "74930a07e6f18e39a24aedbc5625297b"
+        "times_submitted": 36,
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 17,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            },
+            {
+              "count": 4,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "w97m"
+            },
+            {
+              "count": 4,
+              "value": "msword"
+            },
+            {
+              "count": 2,
+              "value": "apt28"
+            }
+          ],
+          "suggested_threat_label": "trojan.w97m/msword"
         },
-        "first_submission_date": 1507797401,
-        "type_extension": "doc"
+        "tags": [
+          "doc",
+          "macros",
+          "write-file",
+          "open-file",
+          "handle-file",
+          "auto-open",
+          "calls-wmi",
+          "environ",
+          "run-file",
+          "long-sleeps",
+          "malware"
+        ]
       }
     },
     {
       "id": "efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52",
       "attributes": {
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "SeduploaderPayload",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
-          },
-          {
-            "description": "Detects win.seduploader.",
-            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
-            "ruleset_name": "win.seduploader_auto",
-            "rule_name": "win_seduploader_auto",
-            "ruleset_id": "008e64e385",
-            "match_in_subfile": true,
-            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
-          },
-          {
-            "ruleset_id": "01234b2177",
-            "rule_name": "Office_Document_with_VBA_Project",
-            "ruleset_name": "Office_Document_with_VBA_Project",
-            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
-            "author": "InQuest Labs",
-            "match_date": 1772612293,
-            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          },
-          {
-            "description": "Yara Rule for mvtband.dll malware",
-            "author": "CSE CybSec Enterprise - Z-Lab",
-            "ruleset_name": "apt_sofacy_hospitality",
-            "rule_name": "APT28_HospitalityMalware_mvtband_file",
-            "ruleset_id": "0001fb05a6",
-            "match_in_subfile": true,
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "description": "Detects Sofacy malware reported in October 2017",
-            "author": "Florian Roth (Nextron Systems)",
-            "ruleset_name": "apt_sofacy_oct17_camp",
-            "rule_name": "Sofacy_Oct17_2",
-            "ruleset_id": "000a82d523",
-            "match_in_subfile": true,
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "SeduploaderPayload2",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
-          }
-        ],
-        "size": 341504,
-        "last_submission_date": 1600967077,
-        "creation_date": 1506994560,
-        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
-        "magika": "DOC",
-        "last_modification_date": 1772619488,
-        "names": [
-          "VirusShare_f52ea8f238e57e49bfae304bd656ad98",
-          "F52EA8F238E57E49BFAE304BD656AD98",
-          "f52ea8f238e57e49bfae304bd656ad98.doc"
-        ],
-        "first_seen_itw_date": 1508287092,
         "last_analysis_results": {
           "Lionic": {
             "method": "blacklist",
@@ -2220,44 +2153,126 @@
             "result": null
           }
         },
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 10,
-              "value": "w97m"
-            },
-            {
-              "count": 4,
-              "value": "msword"
-            },
-            {
-              "count": 2,
-              "value": "apt28"
-            }
-          ],
-          "suggested_threat_label": "trojan.w97m/msword",
-          "popular_threat_category": [
-            {
-              "count": 17,
-              "value": "trojan"
-            },
-            {
-              "count": 11,
-              "value": "downloader"
-            },
-            {
-              "count": 4,
-              "value": "dropper"
-            }
-          ]
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 6,
+          "medium": 7,
+          "low": 1
         },
+        "tlsh": "T19274AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D54334",
+        "md5": "f52ea8f238e57e49bfae304bd656ad98",
         "type_tag": "doc",
+        "size": 341504,
+        "first_submission_date": 1507724535,
+        "first_seen_itw_date": 1508287092,
+        "sha256": "efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52",
+        "type_extension": "doc",
+        "unique_sources": 17,
         "type_tags": [
           "document",
           "msoffice",
           "text",
           "word",
           "doc"
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          },
+          {
+            "description": "Detects win.seduploader.",
+            "author": "Felix Bilstein - yara-signator at cocacoding dot com",
+            "ruleset_name": "win.seduploader_auto",
+            "rule_name": "win_seduploader_auto",
+            "ruleset_id": "008e64e385",
+            "match_in_subfile": true,
+            "source": "https://malpedia.caad.fkie.fraunhofer.de/"
+          },
+          {
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "match_date": 1772612293,
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "Yara Rule for mvtband.dll malware",
+            "author": "CSE CybSec Enterprise - Z-Lab",
+            "ruleset_name": "apt_sofacy_hospitality",
+            "rule_name": "APT28_HospitalityMalware_mvtband_file",
+            "ruleset_id": "0001fb05a6",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "description": "Detects Sofacy malware reported in October 2017",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_name": "apt_sofacy_oct17_camp",
+            "rule_name": "Sofacy_Oct17_2",
+            "ruleset_id": "000a82d523",
+            "match_in_subfile": true,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "SeduploaderPayload2",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
+          }
+        ],
+        "ssdeep": "6144:9aZ5a2auBso4RCTStI7Dh4tkX7rETf1I3p2:45a2bBso6DGf7AT9I3p2",
+        "last_submission_date": 1600967077,
+        "last_analysis_date": 1772607572,
+        "type_description": "MS Word Document",
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
+            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
+            "alert_context": [
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "2201d8e006f8f005a6b415f61e677532"
+                ],
+                "ja3s": [
+                  "4192c0a946c5bd9b544b4656d9f624a4"
+                ]
+              },
+              {
+                "src_ip": "58.158.177.102",
+                "src_port": 443,
+                "ja3": [
+                  "37f463bf4616ecd445d4a1937da06e19"
+                ],
+                "ja3s": [
+                  "e35df3e00ca4ef31d42b34bebaa2f86e"
+                ]
+              }
+            ],
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
+            ],
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_id": "1:2022323"
+          }
         ],
         "sandbox_verdicts": {
           "Zenbox": {
@@ -2284,69 +2299,11 @@
             ]
           }
         },
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 6,
-          "medium": 7,
-          "low": 1
+        "filecondis": {
+          "dhash": "00203d3c0e251930",
+          "raw_md5": "64cc74f6b99e82b04f207af7f009d4a1"
         },
-        "trid": [
-          {
-            "file_type": "Perfect Keyboard macro set",
-            "probability": 38.7
-          },
-          {
-            "file_type": "Microsoft Word document",
-            "probability": 32.2
-          },
-          {
-            "file_type": "Microsoft Word document (old ver.)",
-            "probability": 20.4
-          },
-          {
-            "file_type": "Generic OLE2 / Multistream Compound",
-            "probability": 8.6
-          }
-        ],
-        "type_description": "MS Word Document",
-        "tags": [
-          "auto-open",
-          "environ",
-          "doc",
-          "run-file",
-          "long-sleeps",
-          "macros",
-          "malware",
-          "calls-wmi",
-          "handle-file",
-          "open-file",
-          "write-file"
-        ],
-        "times_submitted": 33,
-        "magic": "ERROR: Output buffer space exceeded 1034+93u",
         "meaningful_name": "VirusShare_f52ea8f238e57e49bfae304bd656ad98",
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 6,
-            "low": 1
-          },
-          "SOC Prime Threat Detection Marketplace": {
-            "critical": 0,
-            "high": 0,
-            "medium": 1,
-            "low": 0
-          }
-        },
-        "vhash": "8f863667845b292bcbe53bef6ea3813d",
-        "unique_sources": 17,
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -2984,66 +2941,111 @@
           "failure": 1,
           "type-unsupported": 12
         },
-        "md5": "f52ea8f238e57e49bfae304bd656ad98",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
+        "magic": "ERROR: Output buffer space exceeded 1034+93u",
+        "magika": "DOC",
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 6,
+            "low": 1
+          },
+          "SOC Prime Threat Detection Marketplace": {
+            "critical": 0,
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          }
         },
-        "sha256": "efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52",
+        "trid": [
+          {
+            "file_type": "Perfect Keyboard macro set",
+            "probability": 38.7
+          },
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 32.2
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 20.4
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 8.6
+          }
+        ],
+        "last_modification_date": 1772619488,
+        "creation_date": 1506994560,
         "crowdsourced_ids_stats": {
           "info": 0,
           "high": 1,
           "medium": 0,
           "low": 0
         },
-        "tlsh": "T19274AE3035EB9D09E3AB69384BC4F99E5C19FEA31B4A916A758C731F6B31E108D54334",
-        "last_analysis_date": 1772607572,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)",
-            "rule_raw": "alert tls $EXTERNAL_NET 443 -> $HOME_NET any (msg:\"ET MALWARE Malicious SSL certificate detected (Possible Sinkhole)\"; flow:established,from_server; content:\"|16|\"; content:\"|0b|\"; within:8; content:\"|55 04 0a|\"; distance:0; content:\"|0a|infosec.jp\"; distance:1; within:11; content:\"|55 04 03|\"; distance:0; content:\"|0e|www.infosec.jp\"; distance:1; within:15; content:\"snowyowl@jpnsec.com\"; distance:0; reference:md5,ef5fa2378307338d4e75dece88158d77; classtype:trojan-activity; sid:2022323; rev:2; metadata:attack_target Client_Endpoint, created_at 2016_01_01, deployment Perimeter, signature_severity Major, tag SSL_Malicious_Cert, updated_at 2016_07_01;)",
-            "alert_context": [
-              {
-                "src_ip": "58.158.177.102",
-                "src_port": 443,
-                "ja3": [
-                  "2201d8e006f8f005a6b415f61e677532"
-                ],
-                "ja3s": [
-                  "4192c0a946c5bd9b544b4656d9f624a4"
-                ]
-              },
-              {
-                "src_ip": "58.158.177.102",
-                "src_port": 443,
-                "ja3": [
-                  "37f463bf4616ecd445d4a1937da06e19"
-                ],
-                "ja3s": [
-                  "e35df3e00ca4ef31d42b34bebaa2f86e"
-                ]
-              }
-            ],
-            "rule_references": [
-              "https://www.virustotal.com/gui/search/ef5fa2378307338d4e75dece88158d77"
-            ],
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_id": "1:2022323"
-          }
-        ],
         "reputation": -101,
+        "names": [
+          "VirusShare_f52ea8f238e57e49bfae304bd656ad98",
+          "F52EA8F238E57E49BFAE304BD656AD98",
+          "f52ea8f238e57e49bfae304bd656ad98.doc"
+        ],
+        "vhash": "8f863667845b292bcbe53bef6ea3813d",
         "sha1": "169c8f3e3d22e192c108bc95164d362ce5437465",
-        "filecondis": {
-          "dhash": "00203d3c0e251930",
-          "raw_md5": "64cc74f6b99e82b04f207af7f009d4a1"
+        "times_submitted": 33,
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 17,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            },
+            {
+              "count": 4,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "w97m"
+            },
+            {
+              "count": 4,
+              "value": "msword"
+            },
+            {
+              "count": 2,
+              "value": "apt28"
+            }
+          ],
+          "suggested_threat_label": "trojan.w97m/msword"
         },
-        "first_submission_date": 1507724535,
-        "type_extension": "doc"
+        "tags": [
+          "auto-open",
+          "environ",
+          "doc",
+          "run-file",
+          "long-sleeps",
+          "macros",
+          "malware",
+          "calls-wmi",
+          "handle-file",
+          "open-file",
+          "write-file"
+        ]
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

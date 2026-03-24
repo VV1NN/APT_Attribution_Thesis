@@ -1,6 +1,6 @@
 {
   "sha256": "66b1132a0173910b01ee3a15ef4e69583bbf2f7f1e4462c99efbe1b9ab5bf808",
-  "query_time": "2026-03-20T07:59:38.003879+00:00",
+  "query_time": "2026-03-24T06:24:31.189578+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,19 +8,325 @@
     {
       "id": "178d67b26ceb8adfcbe9a4e7cecd0e8fd98885d86d363091ba3cb51cc9bd3e52",
       "attributes": {
-        "ssdeep": "6291456:A5FxSrlx6Dfv+yN7RhnCzAo8QUTYXJHRyu3BT8sYoQgtB+Pw5tK7PTHW+IMFT3aJ:KMlxWfF1napnZHl2Xgv+PpbTHD9Gew",
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 0,
-            "medium": 1,
-            "critical": 0,
-            "low": 1
+        "sigma_analysis_stats": {
+          "high": 0,
+          "medium": 1,
+          "critical": 0,
+          "low": 1
+        },
+        "vhash": "c858c852da75095b6aa8feee40283812",
+        "sigma_analysis_results": [
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "ProcessId": "7264",
+                  "Product": "7-Zip",
+                  "Description": "7-Zip Console",
+                  "Company": "Igor Pavlov",
+                  "ParentProcessGuid": "{C784477D-FFF8-64A2-2106-000000004400}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
+                  "OriginalFileName": "7z.exe",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
+                  "FileVersion": "18.05",
+                  "ParentProcessId": "7188",
+                  "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
+                  "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\" \"C:\\Users\\george\\Desktop\\625 PCS - @DIAMOND_logscloud.zip\"",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-C809-648A-1DF4-030000000000",
+                  "LogonId": "259101",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\625 PCS - @DIAMOND_logscloud.zip\"",
+                  "UtcTime": "1688403960",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_description": "Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to extract password protected zip files.",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Password Protected Compressed File Extraction Via 7Zip",
+            "rule_id": "22e867c244280c1d01bcddc8355c10d82b6c69577cd784cefbbe4eb5e7a82f65",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403981",
+                  "UtcTime": "1688403981",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\adrDIkOhRURP.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\hlrqsfmPqBP.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\JKeQCJzuIi.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\knDLqHyKlKOogkPaC.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\lxefNgNqLXhHa.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\ScZCcdgzEDYz.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\TdBTUJRgVjWvKjuZxs.docm",
+                  "RuleName": "-",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\TTGkmusMikbkQmyc.docm",
+                  "RuleName": "-",
+                  "CreationUtcTime": "1688403982",
+                  "UtcTime": "1688403982",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403985",
+                  "UtcTime": "1688403985",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\adrDIkOhRURP.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\JKeQCJzuIi.docm",
+                  "RuleName": "-",
+                  "CreationUtcTime": "1688403985",
+                  "UtcTime": "1688403985",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\knDLqHyKlKOogkPaC.docm",
+                  "RuleName": "-",
+                  "CreationUtcTime": "1688403985",
+                  "UtcTime": "1688403985",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403985",
+                  "UtcTime": "1688403985",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\lxefNgNqLXhHa.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403985",
+                  "UtcTime": "1688403986",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\ScZCcdgzEDYz.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688403986",
+                  "UtcTime": "1688403986",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\TdBTUJRgVjWvKjuZxs.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688404034",
+                  "UtcTime": "1688404034",
+                  "RuleName": "-",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA8P18SKX5Z9JAFOHO3NQMXBMKSRWSX3S_2023_07_02T15_02_59_578498\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA[A4C5F9187AB9B3CC3561BEDD215E160E] [2023-07-02T01_37_12.6188832]\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688404048",
+                  "UtcTime": "1688404048",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "7264",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA[EDBB9D5AE1314A3E98785C44E8DE3CD8]@CROWNCLOUD 07-02-2023\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm",
+                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
+                  "CreationUtcTime": "1688404052",
+                  "UtcTime": "1688404052",
+                  "RuleName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_description": "Detects the creation of a new office macro files on the systems",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Office Macro File Creation",
+            "rule_id": "27801b0f98df1ce7686b07b693c59e734c47189ef3db24ea1093f6f00ff2ed67",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
+          }
+        ],
+        "type_tag": "zip",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 76,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "RANSOM",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "Xmrig"
+            ]
+          },
+          "Zenbox Linux": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "Zenbox Linux",
+            "confidence": 99
           }
         },
-        "sha1": "fec522be28722ced50e151b4e681fd4a114010bd",
+        "tlsh": "T14C3933B4A13D7265FC7ADF3A75CAD371EB62091B44821323332E12613A639E525D3ACD",
         "names": [
           "625 PCS - @DIAMOND_logscloud.zip"
         ],
+        "meaningful_name": "625 PCS - @DIAMOND_logscloud.zip",
+        "type_extension": "zip",
+        "reputation": 0,
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=store",
+        "times_submitted": 1,
+        "trid": [
+          {
+            "file_type": "Sweet Home 3D design (generic)",
+            "probability": 46.6
+          },
+          {
+            "file_type": "Mozilla Firefox browser extension",
+            "probability": 35.5
+          },
+          {
+            "file_type": "ZIP compressed archive",
+            "probability": 17.7
+          }
+        ],
+        "size": 505885001,
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 3,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan."
+        },
+        "last_modification_date": 1764468808,
         "last_analysis_stats": {
           "malicious": 4,
           "suspicious": 0,
@@ -31,13 +337,14 @@
           "failure": 2,
           "type-unsupported": 7
         },
-        "sigma_analysis_stats": {
-          "high": 0,
-          "medium": 1,
-          "critical": 0,
-          "low": 1
-        },
-        "last_modification_date": 1764468808,
+        "sha1": "fec522be28722ced50e151b4e681fd4a114010bd",
+        "ssdeep": "6291456:A5FxSrlx6Dfv+yN7RhnCzAo8QUTYXJHRyu3BT8sYoQgtB+Pw5tK7PTHW+IMFT3aJ:KMlxWfF1napnZHl2Xgv+PpbTHD9Gew",
+        "type_tags": [
+          "compressed",
+          "zip"
+        ],
+        "type_description": "ZIP",
+        "md5": "5ea6ed16a5042f701ee222e74bf2e49b",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -632,307 +939,12 @@
             "result": null
           }
         },
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "confidence": 76,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "MALWARE",
-              "RANSOM",
-              "TROJAN",
-              "EVADER"
-            ],
-            "malware_names": [
-              "Xmrig"
-            ]
-          },
-          "Zenbox Linux": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "Zenbox Linux",
-            "confidence": 99
-          }
-        },
-        "size": 505885001,
-        "md5": "5ea6ed16a5042f701ee222e74bf2e49b",
-        "sigma_analysis_results": [
-          {
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "ProcessId": "7264",
-                  "Product": "7-Zip",
-                  "Description": "7-Zip Console",
-                  "Company": "Igor Pavlov",
-                  "ParentProcessGuid": "{C784477D-FFF8-64A2-2106-000000004400}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
-                  "OriginalFileName": "7z.exe",
-                  "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
-                  "FileVersion": "18.05",
-                  "ParentProcessId": "7188",
-                  "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
-                  "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\" \"C:\\Users\\george\\Desktop\\625 PCS - @DIAMOND_logscloud.zip\"",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-C809-648A-1DF4-030000000000",
-                  "LogonId": "259101",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\625 PCS - @DIAMOND_logscloud.zip\"",
-                  "UtcTime": "1688403960",
-                  "RuleName": "-"
-                }
-              }
-            ],
-            "rule_level": "medium",
-            "rule_description": "Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to extract password protected zip files.",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Password Protected Compressed File Extraction Via 7Zip",
-            "rule_id": "22e867c244280c1d01bcddc8355c10d82b6c69577cd784cefbbe4eb5e7a82f65",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-          },
-          {
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403981",
-                  "UtcTime": "1688403981",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\adrDIkOhRURP.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\hlrqsfmPqBP.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\JKeQCJzuIi.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\knDLqHyKlKOogkPaC.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\lxefNgNqLXhHa.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\ScZCcdgzEDYz.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\TdBTUJRgVjWvKjuZxs.docm",
-                  "RuleName": "-",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KRDLGRJ5MNMV1KEDG0I15IC4B2T728F8X_2023_07_02T14_61_16_186638\\FileGrabber\\Users\\Administrator\\Documents\\TTGkmusMikbkQmyc.docm",
-                  "RuleName": "-",
-                  "CreationUtcTime": "1688403982",
-                  "UtcTime": "1688403982",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403985",
-                  "UtcTime": "1688403985",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\adrDIkOhRURP.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\JKeQCJzuIi.docm",
-                  "RuleName": "-",
-                  "CreationUtcTime": "1688403985",
-                  "UtcTime": "1688403985",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\knDLqHyKlKOogkPaC.docm",
-                  "RuleName": "-",
-                  "CreationUtcTime": "1688403985",
-                  "UtcTime": "1688403985",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403985",
-                  "UtcTime": "1688403985",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\lxefNgNqLXhHa.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403985",
-                  "UtcTime": "1688403986",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\ScZCcdgzEDYz.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688403986",
-                  "UtcTime": "1688403986",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\KR[D457825B75CFCD08C1710C62559BBD33] [2023-06-30T19_08_39.0354722]\\FileGrabber\\Users\\Administrator\\Documents\\TdBTUJRgVjWvKjuZxs.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688404034",
-                  "UtcTime": "1688404034",
-                  "RuleName": "-",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA8P18SKX5Z9JAFOHO3NQMXBMKSRWSX3S_2023_07_02T15_02_59_578498\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA[A4C5F9187AB9B3CC3561BEDD215E160E] [2023-07-02T01_37_12.6188832]\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688404048",
-                  "UtcTime": "1688404048",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "7264",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\do4brkyc.rw5\\625 PCS - @DIAMOND_logscloud\\MA[EDBB9D5AE1314A3E98785C44E8DE3CD8]@CROWNCLOUD 07-02-2023\\FileGrabber\\Users\\pc\\Documents\\Doc3.docm",
-                  "ProcessGuid": "{C784477D-FFF8-64A2-2206-000000004400}",
-                  "CreationUtcTime": "1688404052",
-                  "UtcTime": "1688404052",
-                  "RuleName": "-",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe"
-                }
-              }
-            ],
-            "rule_level": "low",
-            "rule_description": "Detects the creation of a new office macro files on the systems",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Office Macro File Creation",
-            "rule_id": "27801b0f98df1ce7686b07b693c59e734c47189ef3db24ea1093f6f00ff2ed67",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-          }
-        ],
+        "unique_sources": 1,
         "last_submission_date": 1688378554,
-        "tlsh": "T14C3933B4A13D7265FC7ADF3A75CAD371EB62091B44821323332E12613A639E525D3ACD",
-        "type_tag": "zip",
-        "type_tags": [
-          "compressed",
-          "zip"
-        ],
-        "magic": "Zip archive data, at least v2.0 to extract, compression method=store",
-        "first_submission_date": 1688378554,
-        "reputation": 0,
-        "times_submitted": 1,
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 3,
-              "value": "trojan"
-            }
-          ],
-          "suggested_threat_label": "trojan."
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
         },
-        "type_extension": "zip",
-        "vhash": "c858c852da75095b6aa8feee40283812",
         "bundle_info": {
           "highest_datetime": "2023-07-03 15:11:26",
           "lowest_datetime": "2023-06-20 18:29:44",
@@ -957,36 +969,26 @@
           "type": "ZIP",
           "uncompressed_size": 57439994
         },
+        "first_submission_date": 1688378554,
+        "sha256": "178d67b26ceb8adfcbe9a4e7cecd0e8fd98885d86d363091ba3cb51cc9bd3e52",
+        "last_analysis_date": 1731262494,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 0,
+            "medium": 1,
+            "critical": 0,
+            "low": 1
+          }
+        },
         "tags": [
           "detect-debug-environment",
           "sets-process-name",
           "zip"
-        ],
-        "trid": [
-          {
-            "file_type": "Sweet Home 3D design (generic)",
-            "probability": 46.6
-          },
-          {
-            "file_type": "Mozilla Firefox browser extension",
-            "probability": 35.5
-          },
-          {
-            "file_type": "ZIP compressed archive",
-            "probability": 17.7
-          }
-        ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "unique_sources": 1,
-        "last_analysis_date": 1731262494,
-        "meaningful_name": "625 PCS - @DIAMOND_logscloud.zip",
-        "type_description": "ZIP",
-        "sha256": "178d67b26ceb8adfcbe9a4e7cecd0e8fd98885d86d363091ba3cb51cc9bd3e52"
+        ]
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

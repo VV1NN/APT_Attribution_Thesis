@@ -1,15 +1,85 @@
 {
   "sha256": "7889fbd40f65cfe21d0c7486b29eb4c5042abff4ac660c12c7936831445cfd6e",
-  "query_time": "2026-03-20T08:15:38.262298+00:00",
+  "query_time": "2026-03-24T06:25:20.368492+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [
     {
       "id": "8e2ca6e93dab27f6bdb6b627272a15a03499aed9fe48de7b7d6078f9ecb1a021",
       "attributes": {
+        "type_description": "Win32 DLL",
+        "last_analysis_date": 1742798274,
+        "md5": "402c516717e0e432933bcfd61d4fffb1",
         "size": 22784,
-        "type_extension": "dll",
-        "magika": "PEBIN",
+        "pe_info": {
+          "timestamp": 1361444573,
+          "machine_type": 332,
+          "entry_point": 8204,
+          "overlay": {
+            "chi2": 256.0,
+            "filetype": "unknown",
+            "entropy": 7.157469749450684,
+            "offset": 22528,
+            "md5": "6f95e8dfdf91bb156c5465de1ab19205",
+            "size": 256
+          },
+          "sections": [
+            {
+              "name": ".edata",
+              "chi2": 119074.0,
+              "virtual_address": 4096,
+              "entropy": 0.43,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 60,
+              "md5": "bc0d43276870cc20bd73ef8bf768178b"
+            },
+            {
+              "name": ".text",
+              "chi2": 212789.25,
+              "virtual_address": 8192,
+              "entropy": 3.66,
+              "raw_size": 2560,
+              "flags": "rx",
+              "virtual_size": 2493,
+              "md5": "6cbea55b15da7719dadd692e2429c79d"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 12288,
+              "entropy": 0.08,
+              "raw_size": 512,
+              "virtual_size": 8,
+              "md5": "5a9303a00141c7dc5d75c4826c628b6a"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 23073.52,
+              "virtual_address": 16384,
+              "entropy": 7.51,
+              "raw_size": 17920,
+              "flags": "r",
+              "virtual_size": 17810,
+              "md5": "f4298d5f86aac516e492baa7904226fa"
+            }
+          ],
+          "exports": [
+            "GqoOlls"
+          ]
+        },
+        "last_analysis_stats": {
+          "malicious": 57,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "ssdeep": "384:QsG/X02iWgj0b6M3qj4Bd3hUOkwErpR4XQploy0iTNm8LosmAQqrc:5Gs21wfM3ogdRmNR0QnhlyAQq4",
+        "last_submission_date": 1582356454,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -628,7 +698,47 @@
             "result": null
           }
         },
-        "md5": "402c516717e0e432933bcfd61d4fffb1",
+        "unique_sources": 1,
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "DLL32",
+              "version": "7.10*",
+              "type": "Compiler",
+              "name": "FASM"
+            }
+          ]
+        },
+        "first_submission_date": 1582356454,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "sha256": "8e2ca6e93dab27f6bdb6b627272a15a03499aed9fe48de7b7d6078f9ecb1a021",
+        "meaningful_name": "boot.dat",
+        "vhash": "1240451611157.z1",
+        "tlsh": "T14DA29F9AA157373DD9DD0FB1852185B7F97319288A24CA7947741C7C3E610AF0D22FD2",
+        "magika": "PEBIN",
+        "tags": [
+          "pedll",
+          "overlay"
+        ],
+        "reputation": 0,
+        "filecondis": {
+          "raw_md5": "6d592a3b4fbce0b1a11e5dd631e59dfb",
+          "dhash": "7474747440200000"
+        },
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "authentihash": "1111c89d1676275f5930d0564619f500cbfb46a0e10a6d30970314a04ed7374c",
+        "type_tag": "pedll",
         "trid": [
           {
             "file_type": "Win32 Executable (generic)",
@@ -651,22 +761,9 @@
             "probability": 15.8
           }
         ],
-        "type_tag": "pedll",
-        "last_analysis_stats": {
-          "malicious": 57,
-          "suspicious": 0,
-          "undetected": 16,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "ssdeep": "384:QsG/X02iWgj0b6M3qj4Bd3hUOkwErpR4XQploy0iTNm8LosmAQqrc:5Gs21wfM3ogdRmNR0QnhlyAQq4",
-        "times_submitted": 1,
-        "creation_date": 1361444573,
+        "type_extension": "dll",
+        "last_modification_date": 1742805520,
         "popular_threat_classification": {
-          "suggested_threat_label": "trojan.miniduke/sandyeva",
           "popular_threat_category": [
             {
               "value": "trojan",
@@ -677,6 +774,7 @@
               "count": 2
             }
           ],
+          "suggested_threat_label": "trojan.miniduke/sandyeva",
           "popular_threat_name": [
             {
               "value": "miniduke",
@@ -692,117 +790,33 @@
             }
           ]
         },
-        "tags": [
-          "pedll",
-          "overlay"
-        ],
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "DLL32",
-              "version": "7.10*",
-              "type": "Compiler",
-              "name": "FASM"
-            }
-          ]
-        },
-        "last_analysis_date": 1742798274,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
-        ],
-        "sha1": "259dfdbd6bb2c913a1969f268a77fe1ecdb2f4d6",
-        "vhash": "1240451611157.z1",
-        "reputation": 0,
-        "unique_sources": 1,
-        "sha256": "8e2ca6e93dab27f6bdb6b627272a15a03499aed9fe48de7b7d6078f9ecb1a021",
-        "last_submission_date": 1582356454,
+        "creation_date": 1361444573,
         "names": [
           "boot.dat"
         ],
-        "filecondis": {
-          "raw_md5": "6d592a3b4fbce0b1a11e5dd631e59dfb",
-          "dhash": "7474747440200000"
-        },
-        "meaningful_name": "boot.dat",
-        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
-        "authentihash": "1111c89d1676275f5930d0564619f500cbfb46a0e10a6d30970314a04ed7374c",
-        "first_submission_date": 1582356454,
-        "pe_info": {
-          "timestamp": 1361444573,
-          "machine_type": 332,
-          "entry_point": 8204,
-          "overlay": {
-            "chi2": 256.0,
-            "filetype": "unknown",
-            "entropy": 7.157469749450684,
-            "offset": 22528,
-            "md5": "6f95e8dfdf91bb156c5465de1ab19205",
-            "size": 256
-          },
-          "sections": [
-            {
-              "name": ".edata",
-              "chi2": 119074.0,
-              "virtual_address": 4096,
-              "entropy": 0.43,
-              "raw_size": 512,
-              "flags": "r",
-              "virtual_size": 60,
-              "md5": "bc0d43276870cc20bd73ef8bf768178b"
-            },
-            {
-              "name": ".text",
-              "chi2": 212789.25,
-              "virtual_address": 8192,
-              "entropy": 3.66,
-              "raw_size": 2560,
-              "flags": "rx",
-              "virtual_size": 2493,
-              "md5": "6cbea55b15da7719dadd692e2429c79d"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128522.0,
-              "virtual_address": 12288,
-              "entropy": 0.08,
-              "raw_size": 512,
-              "virtual_size": 8,
-              "md5": "5a9303a00141c7dc5d75c4826c628b6a"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 23073.52,
-              "virtual_address": 16384,
-              "entropy": 7.51,
-              "raw_size": 17920,
-              "flags": "r",
-              "virtual_size": 17810,
-              "md5": "f4298d5f86aac516e492baa7904226fa"
-            }
-          ],
-          "exports": [
-            "GqoOlls"
-          ]
-        },
-        "type_description": "Win32 DLL",
-        "tlsh": "T14DA29F9AA157373DD9DD0FB1852185B7F97319288A24CA7947741C7C3E610AF0D22FD2",
-        "last_modification_date": 1742805520
+        "sha1": "259dfdbd6bb2c913a1969f268a77fe1ecdb2f4d6",
+        "times_submitted": 1
       }
     },
     {
       "id": "b8e24924fd017837bb5a6a811121aeaf8cdc2f0554ac7185b5ad1ee1d0ef9528",
       "attributes": {
+        "type_description": "Windows shortcut",
+        "last_analysis_date": 1582356454,
+        "md5": "c7f8269bf0472b34d5f2136761e625a7",
         "size": 756,
-        "type_extension": "lnk",
+        "last_analysis_stats": {
+          "malicious": 12,
+          "suspicious": 0,
+          "undetected": 47,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 15
+        },
+        "ssdeep": "12:8AlX7C3pQVe/4VxlyWlzIW+fTWl/8NZhm7DmN0I0Y5yZ7qY:8AipQQeZlzh+fCl0nQhVq",
+        "last_submission_date": 1582356454,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1397,30 +1411,8 @@
             "result": null
           }
         },
-        "md5": "c7f8269bf0472b34d5f2136761e625a7",
-        "trid": [
-          {
-            "file_type": "Windows Shortcut",
-            "probability": 100.0
-          }
-        ],
-        "type_tag": "lnk",
-        "last_analysis_stats": {
-          "malicious": 12,
-          "suspicious": 0,
-          "undetected": 47,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 15
-        },
-        "ssdeep": "12:8AlX7C3pQVe/4VxlyWlzIW+fTWl/8NZhm7DmN0I0Y5yZ7qY:8AipQQeZlzh+fCl0nQhVq",
-        "times_submitted": 1,
-        "tags": [
-          "lnk"
-        ],
-        "last_analysis_date": 1582356454,
+        "unique_sources": 1,
+        "first_submission_date": 1582356454,
         "total_votes": {
           "harmless": 0,
           "malicious": 0
@@ -1429,22 +1421,32 @@
           "windows",
           "lnk"
         ],
-        "sha1": "061e32b9d6ed30f0108d58e55662d84a9b052c79",
-        "reputation": 0,
-        "unique_sources": 1,
         "sha256": "b8e24924fd017837bb5a6a811121aeaf8cdc2f0554ac7185b5ad1ee1d0ef9528",
-        "last_submission_date": 1582356454,
+        "meaningful_name": "ProvMicrosoft.lnk",
+        "tags": [
+          "lnk"
+        ],
+        "reputation": 0,
+        "magic": "MS Windows shortcut",
+        "type_tag": "lnk",
+        "trid": [
+          {
+            "file_type": "Windows Shortcut",
+            "probability": 100.0
+          }
+        ],
+        "type_extension": "lnk",
+        "last_modification_date": 1582356487,
         "names": [
           "ProvMicrosoft.lnk"
         ],
-        "meaningful_name": "ProvMicrosoft.lnk",
-        "magic": "MS Windows shortcut",
-        "first_submission_date": 1582356454,
-        "type_description": "Windows shortcut",
-        "last_modification_date": 1582356487
+        "sha1": "061e32b9d6ed30f0108d58e55662d84a9b052c79",
+        "times_submitted": 1
       }
     }
   ],
   "execution_parents": [],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

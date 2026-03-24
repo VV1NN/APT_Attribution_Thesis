@@ -1,6 +1,6 @@
 {
   "sha256": "1a7239c006a3adf893bdb5c2300b2964ed8bb454e1b622853e4460707dc63c16",
-  "query_time": "2026-03-19T01:52:41.848884+00:00",
+  "query_time": "2026-03-24T06:17:48.132683+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,9 +8,8 @@
     {
       "id": "31b1fbc250ee6a911e0c769365e9c09d696018d93d3f1f0cd08fb4771a362524",
       "attributes": {
-        "last_submission_date": 1660621414,
-        "size": 579936,
-        "creation_date": 1424764179,
+        "times_submitted": 1,
+        "type_tag": "peexe",
         "signature_info": {
           "x509": [
             {
@@ -65,15 +64,258 @@
             }
           ]
         },
-        "tags": [
-          "peexe",
-          "overlay",
-          "direct-cpu-clock-access",
-          "long-sleeps",
-          "runtime-modules"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
+        "authentihash": "b4d570c6859ec3e1544d9ab89a525be985fa3b06eda7089830aacb45cad44670",
+        "pe_info": {
+          "timestamp": 1424764179,
+          "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
+          "machine_type": 332,
+          "entry_point": 76376,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 452.61,
+              "filetype": "unknown",
+              "entropy": 7.999265670776367,
+              "sha256": "9500b348def899480ebcb68e2c0bb7c250be3a653e62f99a1d76355595ac22db",
+              "type": "RT_RCDATA"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 15713.04,
+              "filetype": "unknown",
+              "entropy": 6.046577453613281,
+              "sha256": "f84838548479884ae1ba98a760648d498d190c90b04a943dfee0d5b12b85ca9e",
+              "type": "RT_RCDATA"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 67255.04,
+              "filetype": "unknown",
+              "entropy": 3.425316095352173,
+              "sha256": "da78fb9464887c96f6df1f53c3fddaac76024e3fe417ee1b026053c30f066673",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2,
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_RCDATA": 2,
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 14105.19,
+            "filetype": "unknown",
+            "entropy": 7.436858654022217,
+            "offset": 569344,
+            "size": 10592,
+            "md5": "ced560c0ffe44fb78c3c2423636ce7e4"
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 507394.62,
+              "virtual_address": 4096,
+              "entropy": 6.6,
+              "raw_size": 88064,
+              "flags": "rx",
+              "virtual_size": 87680,
+              "md5": "563169bd552198d90505b780ee49e249"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 774205.25,
+              "virtual_address": 94208,
+              "entropy": 5.28,
+              "raw_size": 19968,
+              "flags": "r",
+              "virtual_size": 19476,
+              "md5": "c9d2f509d8081ca8a29ed7da5f70393c"
+            },
+            {
+              "name": ".data",
+              "chi2": 534148.56,
+              "virtual_address": 114688,
+              "entropy": 3.43,
+              "raw_size": 5120,
+              "flags": "rw",
+              "virtual_size": 12988,
+              "md5": "7e19e719629dfac1451be90936d17560"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 592.43,
+              "virtual_address": 131072,
+              "entropy": 8.0,
+              "raw_size": 447488,
+              "flags": "r",
+              "virtual_size": 447080,
+              "md5": "266e90c25e33953bb25ef15cd90d7ac7"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 483976.81,
+              "virtual_address": 581632,
+              "entropy": 4.35,
+              "raw_size": 7680,
+              "flags": "r",
+              "virtual_size": 7576,
+              "md5": "16bf22f0acf82b5224bd57b26d751a5e"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ASM] VS2010 SP1 build 40219 count=19",
+            "[ C ] VS2010 SP1 build 40219 count=110",
+            "[C++] VS2010 SP1 build 40219 count=48",
+            "[ C ] VS2008 SP1 build 30729 count=2",
+            "[IMP] VS2008 SP1 build 30729 count=17",
+            "[---] Unmarked objects count=143",
+            "id: 175, version: 40219 count=16",
+            "[RES] VS2010 SP1 build 40219 count=1",
+            "[LNK] VS2010 SP1 build 40219 count=1"
+          ],
+          "rich_pe_header_hash": "7269960313c11e8a255d3e9829d8ffa6",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CopyFileW",
+                "CreateDirectoryW",
+                "CreateFileA",
+                "CreateFileW",
+                "CreatePipe",
+                "CreateProcessW",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "ExpandEnvironmentStringsW",
+                "FindResourceW",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineW",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStringsW",
+                "GetFileAttributesW",
+                "GetFileType",
+                "GetLastError",
+                "GetModuleFileNameW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemDirectoryW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetVersionExW",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSetInformation",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadLibraryW",
+                "LoadResource",
+                "LocalFree",
+                "LockResource",
+                "lstrlenA",
+                "MultiByteToWideChar",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetErrorMode",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetHandleInformation",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualProtect",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "SysAllocString",
+                "SysFreeString",
+                "SysStringLen",
+                "VariantClear",
+                "VariantInit"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "CryptAcquireContextW",
+                "CryptReleaseContext",
+                "RegCloseKey",
+                "RegEnumKeyExW",
+                "RegOpenKeyExW",
+                "RegQueryInfoKeyW",
+                "RegQueryValueExW"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CoCreateInstance",
+                "CoInitialize",
+                "CoInitializeEx",
+                "CoSetProxyBlanket",
+                "CoUninitialize"
+              ]
+            },
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "PathAddBackslashW",
+                "PathFileExistsW",
+                "PathQuoteSpacesW",
+                "StrStrIW"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfW"
+              ]
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -676,11 +918,45 @@
             "result": null
           }
         },
+        "first_submission_date": 1660621414,
+        "last_analysis_date": 1660621414,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 1,
+            "medium": 1,
+            "critical": 0,
+            "low": 4
+          }
+        },
+        "sha256": "31b1fbc250ee6a911e0c769365e9c09d696018d93d3f1f0cd08fb4771a362524",
+        "size": 579936,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 46,
+          "suspicious": 0,
+          "undetected": 25,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "vhash": "055056655d15751078z557z5057z41z1fz",
+        "tlsh": "T1A9C41261B5D0C071E6BB457005BCDBA99A79E5318B6844EB73CC4EBA4EA07C0AB3435B",
+        "sha1": "539ed9c5bf812f14279f7aef31e5c8ab9866ec16",
+        "last_modification_date": 1763549937,
         "trid": [
           {
             "file_type": "Win32 Executable MS Visual C++ (generic)",
@@ -703,35 +979,29 @@
             "probability": 7.0
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "bf265227f9a8e22ea1c0035ac4d2449ceed43e2b_sig_replaced"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
+        "last_submission_date": 1660621414,
+        "sigma_analysis_stats": {
+          "high": 1,
+          "medium": 1,
+          "critical": 0,
+          "low": 4
         },
-        "tlsh": "T1A9C41261B5D0C071E6BB457005BCDBA99A79E5318B6844EB73CC4EBA4EA07C0AB3435B",
-        "md5": "3c9647db3fe4488fef3fec7231a8a61b",
+        "tags": [
+          "peexe",
+          "overlay",
+          "direct-cpu-clock-access",
+          "long-sleeps",
+          "runtime-modules"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
+        "type_extension": "exe",
+        "creation_date": 1424764179,
         "meaningful_name": "bf265227f9a8e22ea1c0035ac4d2449ceed43e2b_sig_replaced",
-        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
-        "authentihash": "b4d570c6859ec3e1544d9ab89a525be985fa3b06eda7089830aacb45cad44670",
-        "first_submission_date": 1660621414,
+        "md5": "3c9647db3fe4488fef3fec7231a8a61b",
         "sigma_analysis_results": [
           {
             "match_context": [
@@ -920,359 +1190,575 @@
             "rule_author": "frack113"
           }
         ],
-        "sha256": "31b1fbc250ee6a911e0c769365e9c09d696018d93d3f1f0cd08fb4771a362524",
-        "last_analysis_date": 1660621414,
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
+          }
+        },
+        "ssdeep": "12288:uV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5+:u+PYPaWWIwuUW4aNuTad961vWKTS0"
+      }
+    },
+    {
+      "id": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
+      "attributes": {
+        "times_submitted": 1,
+        "type_tag": "peexe",
+        "authentihash": "37c26e17fed10f6031076eddd801338dbb145fb8913538efd43caf235cd2f0aa",
         "pe_info": {
-          "timestamp": 1424764179,
-          "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
+          "timestamp": 1374825217,
+          "imphash": "3eaa732d4dae53340f9646bdd85dac41",
           "machine_type": 332,
-          "entry_point": 76376,
+          "entry_point": 119608,
           "resource_details": [
             {
-              "lang": "NEUTRAL",
-              "chi2": 452.61,
+              "lang": "ENGLISH US",
+              "chi2": 86289.31,
               "filetype": "unknown",
-              "entropy": 7.999265670776367,
-              "sha256": "9500b348def899480ebcb68e2c0bb7c250be3a653e62f99a1d76355595ac22db",
-              "type": "RT_RCDATA"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 15713.04,
-              "filetype": "unknown",
-              "entropy": 6.046577453613281,
-              "sha256": "f84838548479884ae1ba98a760648d498d190c90b04a943dfee0d5b12b85ca9e",
-              "type": "RT_RCDATA"
+              "entropy": 4.190995693206787,
+              "sha256": "690c938562399f89ad78e3fde2a7edaee8ddf2fafef987a7b37e577a8f6126ea",
+              "type": "RT_BITMAP"
             },
             {
               "lang": "ENGLISH US",
-              "chi2": 67255.04,
+              "chi2": 51022.93,
               "filetype": "unknown",
-              "entropy": 3.425316095352173,
-              "sha256": "da78fb9464887c96f6df1f53c3fddaac76024e3fe417ee1b026053c30f066673",
-              "type": "RT_VERSION"
+              "entropy": 5.5815958976745605,
+              "sha256": "7570d3f78fd1a3eb5e35b01cd5c23e8841dceea888db328d41cb4c8b299cf6a3",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 69703.22,
+              "filetype": "unknown",
+              "entropy": 4.887887477874756,
+              "sha256": "8baf5a8b77c80031baabe64dc6fd35dd34b42c7c93233ca29ee1622655f08dcc",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 130451.7,
+              "filetype": "unknown",
+              "entropy": 3.4417130947113037,
+              "sha256": "5a9bbf1d1517ed342d4e2af6a83601eafb0695dbde749768305e8ec1895aa519",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 5257048.5,
+              "filetype": "unknown",
+              "entropy": 4.963444232940674,
+              "sha256": "8f4e7ba75274499b416bd87303ce7f906fbb538e94b7cb8099a76b55f05c77b7",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 200165.5,
+              "filetype": "unknown",
+              "entropy": 5.055708408355713,
+              "sha256": "8ebe932fe440cf3f2f09f0b477068963da2ec139754203a4c5258201812933a9",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 114873.73,
+              "filetype": "unknown",
+              "entropy": 4.789170742034912,
+              "sha256": "cc71ab854a562a163f296cc3b7c3ae43e479a995f2132a1b7cfc1b46c9f06b62",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 21267.46,
+              "filetype": "unknown",
+              "entropy": 5.252667427062988,
+              "sha256": "ac59f658aa5850269cbf6ed4e8545c1e6ff1264eb5a6e1f7e7386ee2b40c37f0",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 49251.75,
+              "filetype": "unknown",
+              "entropy": 3.4259707927703857,
+              "sha256": "887347f27d903f6652ba35c3dfae297c23435755a63e02a80259ee6dd0b8af86",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 25171.86,
+              "filetype": "unknown",
+              "entropy": 3.33943772315979,
+              "sha256": "2e11a1ed4f812e37fdb32a1310cdcca802c46497c27e33ab66ac127345463d31",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19747.18,
+              "filetype": "unknown",
+              "entropy": 3.161327600479126,
+              "sha256": "44e6a8daef1ac762f8016fc4c8aec52bad42f589b6d8a25d430a619610dd0028",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 26316.91,
+              "filetype": "unknown",
+              "entropy": 3.0892457962036133,
+              "sha256": "30358e9c494ca9d125b34ccb93a2d8f1237042904f6fcecc2f5ca9a83b7dba9d",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 69828.94,
+              "filetype": "unknown",
+              "entropy": 3.319875478744507,
+              "sha256": "a1141852e6fb28826de51733ee35fbfdcf74dd8eb7f73049c7c7ad6c21d0cb33",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 47185.7,
+              "filetype": "unknown",
+              "entropy": 3.516422986984253,
+              "sha256": "0f47dbda4a6e61d3288f63f249d25ab3f6e1fe497879a782d3eb1cd3922f3f4e",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33933.54,
+              "filetype": "unknown",
+              "entropy": 3.1586008071899414,
+              "sha256": "450b4d82a86dba50acea995d6356e0174a242081f2c2438f6f88c29038f7097d",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 32822.23,
+              "filetype": "unknown",
+              "entropy": 3.1168453693389893,
+              "sha256": "89051dca472bd5ebb7b344c05150755b6e3d32cb0dffea086c04186820b188d2",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 37702.55,
+              "filetype": "unknown",
+              "entropy": 3.189058303833008,
+              "sha256": "8bc43669fe84684f720ac1ddffb0624dc59d9912a9de50b70f14d89ffaa8162e",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 24400.78,
+              "filetype": "unknown",
+              "entropy": 2.9972727298736572,
+              "sha256": "1e87eca343221966ecd9472109f3baf9081c821e3f4e905aa34eb8bce73af4e7",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 74720.37,
+              "filetype": "unknown",
+              "entropy": 3.2035984992980957,
+              "sha256": "06b2bd666ed1afbbfc9914b94d703087c18248c5fe28dead42e42f22c3984c5e",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 26340.36,
+              "filetype": "unknown",
+              "entropy": 3.128887414932251,
+              "sha256": "d5755fffe2a9a4baf3593b8fba9a029b23bcc08e77c8d98e07b93baee6b9e6de",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 22597.32,
+              "filetype": "unknown",
+              "entropy": 2.956732988357544,
+              "sha256": "a71a1445d83285856c39bf2f0caa19e88c9be65f0178a6878f321a925a21f97c",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 15886.94,
+              "filetype": "unknown",
+              "entropy": 2.7792787551879883,
+              "sha256": "71966cf60a28c1cdde4196d7909347e3f66661546af21edbacb15c7116944832",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 14872.47,
+              "filetype": "unknown",
+              "entropy": 2.6652255058288574,
+              "sha256": "a8723b6cd67785f8b43dad75a1eb9b383db0e8a9a0b36378c2dcaef003aad4fd",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 7718.77,
+              "filetype": "ICO",
+              "entropy": 2.7178714275360107,
+              "sha256": "b4a86ff543995d1a1dcad86ec767539180bbe55d27b306186eb5fa4bc3d5872f",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 13806.08,
+              "filetype": "XML",
+              "entropy": 5.227919578552246,
+              "sha256": "c410d24baf3bcd455d35b9eb44ca14dee587be9e1e167fc6d8788ef56aa134fd",
+              "type": "RT_MANIFEST"
             }
           ],
           "resource_langs": {
-            "NEUTRAL": 2,
-            "ENGLISH US": 1
+            "ENGLISH US": 25
           },
           "resource_types": {
-            "RT_RCDATA": 2,
-            "RT_VERSION": 1
+            "RT_DIALOG": 6,
+            "RT_ICON": 7,
+            "RT_MANIFEST": 1,
+            "RT_STRING": 9,
+            "RT_BITMAP": 1,
+            "RT_GROUP_ICON": 1
           },
           "overlay": {
-            "chi2": 14105.19,
-            "filetype": "unknown",
-            "entropy": 7.436858654022217,
-            "offset": 569344,
-            "size": 10592,
-            "md5": "ced560c0ffe44fb78c3c2423636ce7e4"
+            "chi2": 529.43,
+            "filetype": "RAR",
+            "entropy": 7.999441623687744,
+            "offset": 485376,
+            "md5": "3bcbae9cfdfb4a44558b2c01f7d1c980",
+            "size": 686713
           },
           "sections": [
             {
               "name": ".text",
-              "chi2": 507394.62,
+              "chi2": 809920.19,
               "virtual_address": 4096,
-              "entropy": 6.6,
-              "raw_size": 88064,
+              "entropy": 6.7,
+              "raw_size": 152064,
               "flags": "rx",
-              "virtual_size": 87680,
-              "md5": "563169bd552198d90505b780ee49e249"
+              "virtual_size": 151918,
+              "md5": "91169bb13f82823bff5caa7a5fc63ddf"
             },
             {
               "name": ".rdata",
-              "chi2": 774205.25,
-              "virtual_address": 94208,
-              "entropy": 5.28,
-              "raw_size": 19968,
+              "chi2": 613389.81,
+              "virtual_address": 159744,
+              "entropy": 5.33,
+              "raw_size": 20480,
               "flags": "r",
-              "virtual_size": 19476,
-              "md5": "c9d2f509d8081ca8a29ed7da5f70393c"
+              "virtual_size": 20291,
+              "md5": "07955898944e5130e7d85a9c19a8552e"
             },
             {
               "name": ".data",
-              "chi2": 534148.56,
-              "virtual_address": 114688,
-              "entropy": 3.43,
+              "chi2": 709285.38,
+              "virtual_address": 180224,
+              "entropy": 2.54,
               "raw_size": 5120,
               "flags": "rw",
-              "virtual_size": 12988,
-              "md5": "7e19e719629dfac1451be90936d17560"
+              "virtual_size": 136672,
+              "md5": "364c31a6fc642180480523f46127a9d9"
             },
             {
               "name": ".rsrc",
-              "chi2": 592.43,
-              "virtual_address": 131072,
-              "entropy": 8.0,
-              "raw_size": 447488,
+              "chi2": 5633375.0,
+              "virtual_address": 319488,
+              "entropy": 5.17,
+              "raw_size": 306176,
               "flags": "r",
-              "virtual_size": 447080,
-              "md5": "266e90c25e33953bb25ef15cd90d7ac7"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 483976.81,
-              "virtual_address": 581632,
-              "entropy": 4.35,
-              "raw_size": 7680,
-              "flags": "r",
-              "virtual_size": 7576,
-              "md5": "16bf22f0acf82b5224bd57b26d751a5e"
+              "virtual_size": 305792,
+              "md5": "af44d83351fb614730009225f03a1bc2"
             }
           ],
           "compiler_product_versions": [
-            "[ASM] VS2010 SP1 build 40219 count=19",
-            "[ C ] VS2010 SP1 build 40219 count=110",
-            "[C++] VS2010 SP1 build 40219 count=48",
-            "[ C ] VS2008 SP1 build 30729 count=2",
-            "[IMP] VS2008 SP1 build 30729 count=17",
-            "[---] Unmarked objects count=143",
-            "id: 175, version: 40219 count=16",
-            "[RES] VS2010 SP1 build 40219 count=1",
-            "[LNK] VS2010 SP1 build 40219 count=1"
+            "[ASM] VS2008 SP1 build 30729 count=27",
+            "[ C ] VS2008 SP1 build 30729 count=128",
+            "[IMP] VS2008 SP1 build 30729 count=21",
+            "[---] Unmarked objects count=237",
+            "[C++] VS2008 SP1 build 30729 count=100",
+            "[EXP] VS2008 SP1 build 30729 count=1",
+            "[RES] VS2008 SP1 [9.0] build 30729 count=1",
+            "[LNK] VS2008 SP1 build 30729 count=1"
           ],
-          "rich_pe_header_hash": "7269960313c11e8a255d3e9829d8ffa6",
+          "rich_pe_header_hash": "3c0b12db306768e0c503d8b146df98c0",
           "import_list": [
+            {
+              "library_name": "COMCTL32.dll",
+              "imported_functions": [
+                "InitCommonControlsEx"
+              ]
+            },
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "SHAutoComplete"
+              ]
+            },
             {
               "library_name": "KERNEL32.dll",
               "imported_functions": [
                 "CloseHandle",
-                "CopyFileW",
+                "CompareStringW",
                 "CreateDirectoryW",
+                "CreateEventW",
                 "CreateFileA",
+                "CreateFileMappingW",
                 "CreateFileW",
-                "CreatePipe",
-                "CreateProcessW",
-                "DecodePointer",
+                "CreateHardLinkW",
+                "CreateSemaphoreW",
+                "CreateThread",
                 "DeleteCriticalSection",
-                "EncodePointer",
+                "DeleteFileW",
+                "DeviceIoControl",
+                "DosDateTimeToFileTime",
                 "EnterCriticalSection",
                 "ExitProcess",
                 "ExpandEnvironmentStringsW",
+                "FileTimeToLocalFileTime",
+                "FileTimeToSystemTime",
+                "FindClose",
+                "FindFirstFileW",
+                "FindNextFileW",
                 "FindResourceW",
                 "FlushFileBuffers",
+                "FreeEnvironmentStringsA",
                 "FreeEnvironmentStringsW",
+                "FreeLibrary",
                 "GetACP",
+                "GetCommandLineA",
                 "GetCommandLineW",
                 "GetConsoleCP",
                 "GetConsoleMode",
+                "GetConsoleOutputCP",
                 "GetCPInfo",
+                "GetCurrentDirectoryW",
                 "GetCurrentProcess",
                 "GetCurrentProcessId",
                 "GetCurrentThreadId",
+                "GetDateFormatW",
+                "GetEnvironmentStrings",
                 "GetEnvironmentStringsW",
+                "GetExitCodeProcess",
                 "GetFileAttributesW",
                 "GetFileType",
+                "GetFullPathNameW",
                 "GetLastError",
+                "GetLocaleInfoA",
+                "GetLocaleInfoW",
+                "GetLongPathNameW",
+                "GetModuleFileNameA",
                 "GetModuleFileNameW",
                 "GetModuleHandleW",
+                "GetNumberFormatW",
                 "GetOEMCP",
                 "GetProcAddress",
-                "GetProcessHeap",
-                "GetStartupInfoW",
+                "GetProcessAffinityMask",
+                "GetShortPathNameW",
+                "GetStartupInfoA",
                 "GetStdHandle",
+                "GetStringTypeA",
                 "GetStringTypeW",
-                "GetSystemDirectoryW",
+                "GetSystemTime",
                 "GetSystemTimeAsFileTime",
+                "GetTempPathW",
                 "GetTickCount",
-                "GetVersionExW",
+                "GetTimeFormatW",
+                "GlobalAlloc",
                 "HeapAlloc",
                 "HeapCreate",
                 "HeapFree",
                 "HeapReAlloc",
-                "HeapSetInformation",
                 "HeapSize",
+                "InitializeCriticalSection",
                 "InitializeCriticalSectionAndSpinCount",
                 "InterlockedDecrement",
                 "InterlockedIncrement",
+                "IsDBCSLeadByte",
                 "IsDebuggerPresent",
-                "IsProcessorFeaturePresent",
                 "IsValidCodePage",
+                "LCMapStringA",
                 "LCMapStringW",
                 "LeaveCriticalSection",
                 "LoadLibraryA",
                 "LoadLibraryW",
-                "LoadResource",
-                "LocalFree",
-                "LockResource",
-                "lstrlenA",
+                "LocalFileTimeToFileTime",
+                "MapViewOfFile",
+                "MoveFileExW",
+                "MoveFileW",
                 "MultiByteToWideChar",
+                "OpenFileMappingW",
                 "QueryPerformanceCounter",
                 "RaiseException",
                 "ReadFile",
+                "ReleaseSemaphore",
+                "RemoveDirectoryW",
+                "ResetEvent",
                 "RtlUnwind",
-                "SetErrorMode",
+                "SetCurrentDirectoryW",
+                "SetEndOfFile",
+                "SetEnvironmentVariableW",
+                "SetEvent",
+                "SetFileAttributesW",
                 "SetFilePointer",
+                "SetFileTime",
                 "SetHandleCount",
-                "SetHandleInformation",
                 "SetLastError",
                 "SetStdHandle",
+                "SetThreadPriority",
                 "SetUnhandledExceptionFilter",
-                "SizeofResource",
                 "Sleep",
+                "SystemTimeToFileTime",
                 "TerminateProcess",
                 "TlsAlloc",
                 "TlsFree",
                 "TlsGetValue",
                 "TlsSetValue",
                 "UnhandledExceptionFilter",
-                "VirtualProtect",
+                "UnmapViewOfFile",
+                "VirtualAlloc",
+                "VirtualFree",
                 "WaitForSingleObject",
                 "WideCharToMultiByte",
+                "WriteConsoleA",
                 "WriteConsoleW",
                 "WriteFile"
               ]
             },
             {
-              "library_name": "OLEAUT32.dll",
+              "library_name": "USER32.dll",
               "imported_functions": [
-                "SysAllocString",
-                "SysFreeString",
-                "SysStringLen",
-                "VariantClear",
-                "VariantInit"
+                "CharUpperW",
+                "CopyRect",
+                "CreateWindowExW",
+                "DefWindowProcW",
+                "DestroyIcon",
+                "DestroyWindow",
+                "DialogBoxParamW",
+                "DispatchMessageW",
+                "EnableWindow",
+                "EndDialog",
+                "FindWindowExW",
+                "GetClassNameW",
+                "GetClientRect",
+                "GetDC",
+                "GetDlgItem",
+                "GetDlgItemTextW",
+                "GetMessageW",
+                "GetParent",
+                "GetSysColor",
+                "GetSystemMetrics",
+                "GetWindow",
+                "GetWindowLongW",
+                "GetWindowRect",
+                "GetWindowTextW",
+                "IsWindow",
+                "IsWindowVisible",
+                "LoadBitmapW",
+                "LoadCursorW",
+                "LoadIconW",
+                "LoadStringW",
+                "MapWindowPoints",
+                "MessageBoxW",
+                "OemToCharBuffA",
+                "PeekMessageW",
+                "PostMessageW",
+                "RegisterClassExW",
+                "ReleaseDC",
+                "SendDlgItemMessageW",
+                "SendMessageW",
+                "SetDlgItemTextW",
+                "SetFocus",
+                "SetForegroundWindow",
+                "SetWindowLongW",
+                "SetWindowPos",
+                "SetWindowTextW",
+                "ShowWindow",
+                "TranslateMessage",
+                "UpdateWindow",
+                "WaitForInputIdle",
+                "wvsprintfW"
+              ]
+            },
+            {
+              "library_name": "GDI32.dll",
+              "imported_functions": [
+                "CreateCompatibleBitmap",
+                "CreateCompatibleDC",
+                "DeleteDC",
+                "DeleteObject",
+                "GetDeviceCaps",
+                "GetObjectW",
+                "SelectObject",
+                "StretchBlt"
+              ]
+            },
+            {
+              "library_name": "COMDLG32.dll",
+              "imported_functions": [
+                "CommDlgExtendedError",
+                "GetOpenFileNameW",
+                "GetSaveFileNameW"
               ]
             },
             {
               "library_name": "ADVAPI32.dll",
               "imported_functions": [
-                "CryptAcquireContextW",
-                "CryptReleaseContext",
+                "AdjustTokenPrivileges",
+                "LookupPrivilegeValueW",
+                "OpenProcessToken",
                 "RegCloseKey",
-                "RegEnumKeyExW",
+                "RegCreateKeyExW",
                 "RegOpenKeyExW",
-                "RegQueryInfoKeyW",
-                "RegQueryValueExW"
+                "RegQueryValueExW",
+                "RegSetValueExW",
+                "SetFileSecurityW"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHBrowseForFolderW",
+                "SHChangeNotify",
+                "ShellExecuteExW",
+                "SHFileOperationW",
+                "SHGetFileInfoW",
+                "SHGetMalloc",
+                "SHGetPathFromIDListW",
+                "SHGetSpecialFolderLocation"
               ]
             },
             {
               "library_name": "ole32.dll",
               "imported_functions": [
+                "CLSIDFromString",
                 "CoCreateInstance",
-                "CoInitialize",
-                "CoInitializeEx",
-                "CoSetProxyBlanket",
-                "CoUninitialize"
+                "CreateStreamOnHGlobal",
+                "OleInitialize",
+                "OleUninitialize"
               ]
             },
             {
-              "library_name": "SHLWAPI.dll",
+              "library_name": "OLEAUT32.dll",
               "imported_functions": [
-                "PathAddBackslashW",
-                "PathFileExistsW",
-                "PathQuoteSpacesW",
-                "StrStrIW"
-              ]
-            },
-            {
-              "library_name": "USER32.dll",
-              "imported_functions": [
-                "wsprintfW"
+                "VariantInit"
               ]
             }
           ]
         },
-        "last_analysis_stats": {
-          "malicious": 46,
-          "suspicious": 0,
-          "undetected": 25,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "f0c56885b2038a264a97eb20eae45577"
         },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1763549937,
-        "vhash": "055056655d15751078z557z5057z41z1fz",
-        "ssdeep": "12288:uV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5+:u+PYPaWWIwuUW4aNuTad961vWKTS0",
-        "sigma_analysis_stats": {
-          "high": 1,
-          "medium": 1,
-          "critical": 0,
-          "low": 4
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 1,
-            "medium": 1,
-            "critical": 0,
-            "low": 4
-          }
-        },
-        "sha1": "539ed9c5bf812f14279f7aef31e5c8ab9866ec16",
-        "type_tag": "peexe"
-      }
-    },
-    {
-      "id": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
-      "attributes": {
-        "last_submission_date": 1751330003,
-        "size": 1172089,
-        "creation_date": 1374825217,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
-            "rule_id": "1:2047866",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
-            "rule_references": [
-              "https://developers.google.com/speed/public-dns/docs/doh/"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "8.8.8.8",
-                "dest_port": 443,
-                "ja3": [
-                  "b32309a26951912be7dba376398abc3b"
-                ],
-                "ja3s": [
-                  "eb1d94daa7e0344597e756a1fb6e7054"
-                ]
-              }
-            ]
-          }
-        ],
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "libcmt",
-              "version": "15.00-16.00",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
-            }
-          ]
-        },
-        "tags": [
-          "peexe",
-          "overlay",
-          "calls-wmi",
-          "detect-debug-environment"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1883,11 +2369,45 @@
             "result": null
           }
         },
+        "first_submission_date": 1751330003,
+        "last_analysis_date": 1751330003,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 1,
+            "low": 1
+          }
+        },
+        "sha256": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
+        "size": 1172089,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 50,
+          "suspicious": 0,
+          "undetected": 20,
+          "harmless": 0,
+          "timeout": 2,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "tlsh": "T1CB454802994848AFE303C733146663D0D150A87F2A6F675A3E59B10BFF7DD8BA1C275A",
+        "sha1": "827847c220c818ab4a08c5ab456cdafab37e6200",
+        "last_modification_date": 1751421806,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -1910,36 +2430,92 @@
             "probability": 0.6
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "exemplar"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.midie/cozybear",
+          "popular_threat_name": [
+            {
+              "value": "midie",
+              "count": 8
+            },
+            {
+              "value": "cozybear",
+              "count": 6
+            },
+            {
+              "value": "cozer",
+              "count": 5
+            }
+          ]
+        },
+        "last_submission_date": 1751330003,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
+            "rule_id": "1:2047866",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
+            "rule_references": [
+              "https://developers.google.com/speed/public-dns/docs/doh/"
             ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
+            "alert_context": [
+              {
+                "dest_ip": "8.8.8.8",
+                "dest_port": 443,
+                "ja3": [
+                  "b32309a26951912be7dba376398abc3b"
+                ],
+                "ja3s": [
+                  "eb1d94daa7e0344597e756a1fb6e7054"
+                ]
+              }
+            ]
           }
+        ],
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "tags": [
+          "peexe",
+          "overlay",
+          "calls-wmi",
+          "detect-debug-environment"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 1,
+          "info": 0
         },
         "magika": "PEBIN",
-        "tlsh": "T1CB454802994848AFE303C733146663D0D150A87F2A6F675A3E59B10BFF7DD8BA1C275A",
-        "md5": "05f172f92cfdc1205f9a06dfd77ecd3e",
+        "type_extension": "exe",
+        "creation_date": 1374825217,
         "meaningful_name": "exemplar",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
-        "authentihash": "37c26e17fed10f6031076eddd801338dbb145fb8913538efd43caf235cd2f0aa",
-        "first_submission_date": 1751330003,
+        "md5": "05f172f92cfdc1205f9a06dfd77ecd3e",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -2040,631 +2616,54 @@
             ]
           }
         ],
-        "sha256": "39f44a5821356be302f2c92e230d4e85f4fc3248ff9fda5f988158e8dec57ed2",
-        "filecondis": {
-          "dhash": "0000001d1e150c08",
-          "raw_md5": "f0c56885b2038a264a97eb20eae45577"
-        },
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 1,
-          "info": 0
-        },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.midie/cozybear",
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "midie"
-            },
-            {
-              "count": 6,
-              "value": "cozybear"
-            },
-            {
-              "count": 5,
-              "value": "cozer"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 19,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ]
-        },
-        "last_analysis_date": 1751330003,
-        "pe_info": {
-          "timestamp": 1374825217,
-          "imphash": "3eaa732d4dae53340f9646bdd85dac41",
-          "machine_type": 332,
-          "entry_point": 119608,
-          "resource_details": [
-            {
-              "lang": "ENGLISH US",
-              "chi2": 86289.31,
-              "filetype": "unknown",
-              "entropy": 4.190995693206787,
-              "sha256": "690c938562399f89ad78e3fde2a7edaee8ddf2fafef987a7b37e577a8f6126ea",
-              "type": "RT_BITMAP"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 51022.93,
-              "filetype": "unknown",
-              "entropy": 5.5815958976745605,
-              "sha256": "7570d3f78fd1a3eb5e35b01cd5c23e8841dceea888db328d41cb4c8b299cf6a3",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 69703.22,
-              "filetype": "unknown",
-              "entropy": 4.887887477874756,
-              "sha256": "8baf5a8b77c80031baabe64dc6fd35dd34b42c7c93233ca29ee1622655f08dcc",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 130451.7,
-              "filetype": "unknown",
-              "entropy": 3.4417130947113037,
-              "sha256": "5a9bbf1d1517ed342d4e2af6a83601eafb0695dbde749768305e8ec1895aa519",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 5257048.5,
-              "filetype": "unknown",
-              "entropy": 4.963444232940674,
-              "sha256": "8f4e7ba75274499b416bd87303ce7f906fbb538e94b7cb8099a76b55f05c77b7",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 200165.5,
-              "filetype": "unknown",
-              "entropy": 5.055708408355713,
-              "sha256": "8ebe932fe440cf3f2f09f0b477068963da2ec139754203a4c5258201812933a9",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 114873.73,
-              "filetype": "unknown",
-              "entropy": 4.789170742034912,
-              "sha256": "cc71ab854a562a163f296cc3b7c3ae43e479a995f2132a1b7cfc1b46c9f06b62",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 21267.46,
-              "filetype": "unknown",
-              "entropy": 5.252667427062988,
-              "sha256": "ac59f658aa5850269cbf6ed4e8545c1e6ff1264eb5a6e1f7e7386ee2b40c37f0",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 49251.75,
-              "filetype": "unknown",
-              "entropy": 3.4259707927703857,
-              "sha256": "887347f27d903f6652ba35c3dfae297c23435755a63e02a80259ee6dd0b8af86",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 25171.86,
-              "filetype": "unknown",
-              "entropy": 3.33943772315979,
-              "sha256": "2e11a1ed4f812e37fdb32a1310cdcca802c46497c27e33ab66ac127345463d31",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 19747.18,
-              "filetype": "unknown",
-              "entropy": 3.161327600479126,
-              "sha256": "44e6a8daef1ac762f8016fc4c8aec52bad42f589b6d8a25d430a619610dd0028",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 26316.91,
-              "filetype": "unknown",
-              "entropy": 3.0892457962036133,
-              "sha256": "30358e9c494ca9d125b34ccb93a2d8f1237042904f6fcecc2f5ca9a83b7dba9d",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 69828.94,
-              "filetype": "unknown",
-              "entropy": 3.319875478744507,
-              "sha256": "a1141852e6fb28826de51733ee35fbfdcf74dd8eb7f73049c7c7ad6c21d0cb33",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 47185.7,
-              "filetype": "unknown",
-              "entropy": 3.516422986984253,
-              "sha256": "0f47dbda4a6e61d3288f63f249d25ab3f6e1fe497879a782d3eb1cd3922f3f4e",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 33933.54,
-              "filetype": "unknown",
-              "entropy": 3.1586008071899414,
-              "sha256": "450b4d82a86dba50acea995d6356e0174a242081f2c2438f6f88c29038f7097d",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 32822.23,
-              "filetype": "unknown",
-              "entropy": 3.1168453693389893,
-              "sha256": "89051dca472bd5ebb7b344c05150755b6e3d32cb0dffea086c04186820b188d2",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 37702.55,
-              "filetype": "unknown",
-              "entropy": 3.189058303833008,
-              "sha256": "8bc43669fe84684f720ac1ddffb0624dc59d9912a9de50b70f14d89ffaa8162e",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 24400.78,
-              "filetype": "unknown",
-              "entropy": 2.9972727298736572,
-              "sha256": "1e87eca343221966ecd9472109f3baf9081c821e3f4e905aa34eb8bce73af4e7",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 74720.37,
-              "filetype": "unknown",
-              "entropy": 3.2035984992980957,
-              "sha256": "06b2bd666ed1afbbfc9914b94d703087c18248c5fe28dead42e42f22c3984c5e",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 26340.36,
-              "filetype": "unknown",
-              "entropy": 3.128887414932251,
-              "sha256": "d5755fffe2a9a4baf3593b8fba9a029b23bcc08e77c8d98e07b93baee6b9e6de",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 22597.32,
-              "filetype": "unknown",
-              "entropy": 2.956732988357544,
-              "sha256": "a71a1445d83285856c39bf2f0caa19e88c9be65f0178a6878f321a925a21f97c",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 15886.94,
-              "filetype": "unknown",
-              "entropy": 2.7792787551879883,
-              "sha256": "71966cf60a28c1cdde4196d7909347e3f66661546af21edbacb15c7116944832",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 14872.47,
-              "filetype": "unknown",
-              "entropy": 2.6652255058288574,
-              "sha256": "a8723b6cd67785f8b43dad75a1eb9b383db0e8a9a0b36378c2dcaef003aad4fd",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 7718.77,
-              "filetype": "ICO",
-              "entropy": 2.7178714275360107,
-              "sha256": "b4a86ff543995d1a1dcad86ec767539180bbe55d27b306186eb5fa4bc3d5872f",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 13806.08,
-              "filetype": "XML",
-              "entropy": 5.227919578552246,
-              "sha256": "c410d24baf3bcd455d35b9eb44ca14dee587be9e1e167fc6d8788ef56aa134fd",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "ENGLISH US": 25
-          },
-          "resource_types": {
-            "RT_DIALOG": 6,
-            "RT_ICON": 7,
-            "RT_MANIFEST": 1,
-            "RT_STRING": 9,
-            "RT_BITMAP": 1,
-            "RT_GROUP_ICON": 1
-          },
-          "overlay": {
-            "chi2": 529.43,
-            "filetype": "RAR",
-            "entropy": 7.999441623687744,
-            "offset": 485376,
-            "md5": "3bcbae9cfdfb4a44558b2c01f7d1c980",
-            "size": 686713
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 809920.19,
-              "virtual_address": 4096,
-              "entropy": 6.7,
-              "raw_size": 152064,
-              "flags": "rx",
-              "virtual_size": 151918,
-              "md5": "91169bb13f82823bff5caa7a5fc63ddf"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 613389.81,
-              "virtual_address": 159744,
-              "entropy": 5.33,
-              "raw_size": 20480,
-              "flags": "r",
-              "virtual_size": 20291,
-              "md5": "07955898944e5130e7d85a9c19a8552e"
-            },
-            {
-              "name": ".data",
-              "chi2": 709285.38,
-              "virtual_address": 180224,
-              "entropy": 2.54,
-              "raw_size": 5120,
-              "flags": "rw",
-              "virtual_size": 136672,
-              "md5": "364c31a6fc642180480523f46127a9d9"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 5633375.0,
-              "virtual_address": 319488,
-              "entropy": 5.17,
-              "raw_size": 306176,
-              "flags": "r",
-              "virtual_size": 305792,
-              "md5": "af44d83351fb614730009225f03a1bc2"
-            }
-          ],
-          "compiler_product_versions": [
-            "[ASM] VS2008 SP1 build 30729 count=27",
-            "[ C ] VS2008 SP1 build 30729 count=128",
-            "[IMP] VS2008 SP1 build 30729 count=21",
-            "[---] Unmarked objects count=237",
-            "[C++] VS2008 SP1 build 30729 count=100",
-            "[EXP] VS2008 SP1 build 30729 count=1",
-            "[RES] VS2008 SP1 [9.0] build 30729 count=1",
-            "[LNK] VS2008 SP1 build 30729 count=1"
-          ],
-          "rich_pe_header_hash": "3c0b12db306768e0c503d8b146df98c0",
-          "import_list": [
-            {
-              "library_name": "COMCTL32.dll",
-              "imported_functions": [
-                "InitCommonControlsEx"
-              ]
-            },
-            {
-              "library_name": "SHLWAPI.dll",
-              "imported_functions": [
-                "SHAutoComplete"
-              ]
-            },
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "CloseHandle",
-                "CompareStringW",
-                "CreateDirectoryW",
-                "CreateEventW",
-                "CreateFileA",
-                "CreateFileMappingW",
-                "CreateFileW",
-                "CreateHardLinkW",
-                "CreateSemaphoreW",
-                "CreateThread",
-                "DeleteCriticalSection",
-                "DeleteFileW",
-                "DeviceIoControl",
-                "DosDateTimeToFileTime",
-                "EnterCriticalSection",
-                "ExitProcess",
-                "ExpandEnvironmentStringsW",
-                "FileTimeToLocalFileTime",
-                "FileTimeToSystemTime",
-                "FindClose",
-                "FindFirstFileW",
-                "FindNextFileW",
-                "FindResourceW",
-                "FlushFileBuffers",
-                "FreeEnvironmentStringsA",
-                "FreeEnvironmentStringsW",
-                "FreeLibrary",
-                "GetACP",
-                "GetCommandLineA",
-                "GetCommandLineW",
-                "GetConsoleCP",
-                "GetConsoleMode",
-                "GetConsoleOutputCP",
-                "GetCPInfo",
-                "GetCurrentDirectoryW",
-                "GetCurrentProcess",
-                "GetCurrentProcessId",
-                "GetCurrentThreadId",
-                "GetDateFormatW",
-                "GetEnvironmentStrings",
-                "GetEnvironmentStringsW",
-                "GetExitCodeProcess",
-                "GetFileAttributesW",
-                "GetFileType",
-                "GetFullPathNameW",
-                "GetLastError",
-                "GetLocaleInfoA",
-                "GetLocaleInfoW",
-                "GetLongPathNameW",
-                "GetModuleFileNameA",
-                "GetModuleFileNameW",
-                "GetModuleHandleW",
-                "GetNumberFormatW",
-                "GetOEMCP",
-                "GetProcAddress",
-                "GetProcessAffinityMask",
-                "GetShortPathNameW",
-                "GetStartupInfoA",
-                "GetStdHandle",
-                "GetStringTypeA",
-                "GetStringTypeW",
-                "GetSystemTime",
-                "GetSystemTimeAsFileTime",
-                "GetTempPathW",
-                "GetTickCount",
-                "GetTimeFormatW",
-                "GlobalAlloc",
-                "HeapAlloc",
-                "HeapCreate",
-                "HeapFree",
-                "HeapReAlloc",
-                "HeapSize",
-                "InitializeCriticalSection",
-                "InitializeCriticalSectionAndSpinCount",
-                "InterlockedDecrement",
-                "InterlockedIncrement",
-                "IsDBCSLeadByte",
-                "IsDebuggerPresent",
-                "IsValidCodePage",
-                "LCMapStringA",
-                "LCMapStringW",
-                "LeaveCriticalSection",
-                "LoadLibraryA",
-                "LoadLibraryW",
-                "LocalFileTimeToFileTime",
-                "MapViewOfFile",
-                "MoveFileExW",
-                "MoveFileW",
-                "MultiByteToWideChar",
-                "OpenFileMappingW",
-                "QueryPerformanceCounter",
-                "RaiseException",
-                "ReadFile",
-                "ReleaseSemaphore",
-                "RemoveDirectoryW",
-                "ResetEvent",
-                "RtlUnwind",
-                "SetCurrentDirectoryW",
-                "SetEndOfFile",
-                "SetEnvironmentVariableW",
-                "SetEvent",
-                "SetFileAttributesW",
-                "SetFilePointer",
-                "SetFileTime",
-                "SetHandleCount",
-                "SetLastError",
-                "SetStdHandle",
-                "SetThreadPriority",
-                "SetUnhandledExceptionFilter",
-                "Sleep",
-                "SystemTimeToFileTime",
-                "TerminateProcess",
-                "TlsAlloc",
-                "TlsFree",
-                "TlsGetValue",
-                "TlsSetValue",
-                "UnhandledExceptionFilter",
-                "UnmapViewOfFile",
-                "VirtualAlloc",
-                "VirtualFree",
-                "WaitForSingleObject",
-                "WideCharToMultiByte",
-                "WriteConsoleA",
-                "WriteConsoleW",
-                "WriteFile"
-              ]
-            },
-            {
-              "library_name": "USER32.dll",
-              "imported_functions": [
-                "CharUpperW",
-                "CopyRect",
-                "CreateWindowExW",
-                "DefWindowProcW",
-                "DestroyIcon",
-                "DestroyWindow",
-                "DialogBoxParamW",
-                "DispatchMessageW",
-                "EnableWindow",
-                "EndDialog",
-                "FindWindowExW",
-                "GetClassNameW",
-                "GetClientRect",
-                "GetDC",
-                "GetDlgItem",
-                "GetDlgItemTextW",
-                "GetMessageW",
-                "GetParent",
-                "GetSysColor",
-                "GetSystemMetrics",
-                "GetWindow",
-                "GetWindowLongW",
-                "GetWindowRect",
-                "GetWindowTextW",
-                "IsWindow",
-                "IsWindowVisible",
-                "LoadBitmapW",
-                "LoadCursorW",
-                "LoadIconW",
-                "LoadStringW",
-                "MapWindowPoints",
-                "MessageBoxW",
-                "OemToCharBuffA",
-                "PeekMessageW",
-                "PostMessageW",
-                "RegisterClassExW",
-                "ReleaseDC",
-                "SendDlgItemMessageW",
-                "SendMessageW",
-                "SetDlgItemTextW",
-                "SetFocus",
-                "SetForegroundWindow",
-                "SetWindowLongW",
-                "SetWindowPos",
-                "SetWindowTextW",
-                "ShowWindow",
-                "TranslateMessage",
-                "UpdateWindow",
-                "WaitForInputIdle",
-                "wvsprintfW"
-              ]
-            },
-            {
-              "library_name": "GDI32.dll",
-              "imported_functions": [
-                "CreateCompatibleBitmap",
-                "CreateCompatibleDC",
-                "DeleteDC",
-                "DeleteObject",
-                "GetDeviceCaps",
-                "GetObjectW",
-                "SelectObject",
-                "StretchBlt"
-              ]
-            },
-            {
-              "library_name": "COMDLG32.dll",
-              "imported_functions": [
-                "CommDlgExtendedError",
-                "GetOpenFileNameW",
-                "GetSaveFileNameW"
-              ]
-            },
-            {
-              "library_name": "ADVAPI32.dll",
-              "imported_functions": [
-                "AdjustTokenPrivileges",
-                "LookupPrivilegeValueW",
-                "OpenProcessToken",
-                "RegCloseKey",
-                "RegCreateKeyExW",
-                "RegOpenKeyExW",
-                "RegQueryValueExW",
-                "RegSetValueExW",
-                "SetFileSecurityW"
-              ]
-            },
-            {
-              "library_name": "SHELL32.dll",
-              "imported_functions": [
-                "SHBrowseForFolderW",
-                "SHChangeNotify",
-                "ShellExecuteExW",
-                "SHFileOperationW",
-                "SHGetFileInfoW",
-                "SHGetMalloc",
-                "SHGetPathFromIDListW",
-                "SHGetSpecialFolderLocation"
-              ]
-            },
-            {
-              "library_name": "ole32.dll",
-              "imported_functions": [
-                "CLSIDFromString",
-                "CoCreateInstance",
-                "CreateStreamOnHGlobal",
-                "OleInitialize",
-                "OleUninitialize"
-              ]
-            },
-            {
-              "library_name": "OLEAUT32.dll",
-              "imported_functions": [
-                "VariantInit"
-              ]
-            }
-          ]
-        },
-        "last_analysis_stats": {
-          "malicious": 50,
-          "suspicious": 0,
-          "undetected": 20,
-          "harmless": 0,
-          "timeout": 2,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1751421806,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:Q35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 1
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 1,
-            "low": 1
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
           }
         },
-        "sha1": "827847c220c818ab4a08c5ab456cdafab37e6200",
-        "type_tag": "peexe"
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "sfx",
+              "name": "WinRAR"
+            },
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "libcmt",
+              "version": "15.00-16.00",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
+            }
+          ]
+        },
+        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:Q35dPpXWcUEay5OP89xpmi/cgrqWdfj9"
       }
     },
     {
       "id": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
       "attributes": {
-        "last_submission_date": 1657888903,
-        "size": 1261568,
-        "creation_date": 1656438517,
+        "times_submitted": 1,
+        "type_tag": "peexe",
         "signature_info": {
           "description": "InstallShield Wizard",
           "file version": "1.1.0.8",
@@ -2673,37 +2672,216 @@
           "internal name": "installer.exe",
           "copyright": "Copyright (c) 2021"
         },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
+        "authentihash": "9d518360e0be6ee02050d287d9d3db79fb4600ee778d6ea6d4128297fd8697c5",
+        "pe_info": {
+          "timestamp": 1656438517,
+          "imphash": "4d1945f332ca350c1127fc475e044a70",
+          "machine_type": 332,
+          "entry_point": 4096,
+          "resource_details": [
             {
-              "version": "1.1.0.8",
-              "type": "Installer",
-              "name": "InstallShield"
+              "lang": "ENGLISH US",
+              "chi2": 418.85,
+              "filetype": "PNG",
+              "entropy": 7.6959357261657715,
+              "sha256": "c34ba18525060bd41f7f7d4cba8017df987a32c5bfdebbdb2ec9964156a12cef",
+              "type": "RT_ICON"
             },
             {
-              "info": "LTCG/C",
-              "version": "19.29.30145",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
+              "lang": "ENGLISH US",
+              "chi2": 423.33,
+              "filetype": "PNG",
+              "entropy": 7.829005241394043,
+              "sha256": "ae3046107be74566874c34bd49394ddf261bee656d98202bc70ba87ba747e257",
+              "type": "RT_ICON"
             },
             {
-              "version": "14.29.30145",
-              "type": "Linker",
-              "name": "Microsoft Linker"
+              "lang": "ENGLISH US",
+              "chi2": 412.66,
+              "filetype": "PNG",
+              "entropy": 7.887531280517578,
+              "sha256": "d13c45704afefbbbaa885be4028590cbc5f4ca046dedf0a71d9717a99c2b4d34",
+              "type": "RT_ICON"
             },
             {
-              "version": "2019 version 16.11",
-              "type": "Tool",
-              "name": "Visual Studio"
+              "lang": "ENGLISH US",
+              "chi2": 439.7,
+              "filetype": "PNG",
+              "entropy": 7.927939414978027,
+              "sha256": "41ed7b31adc4161f999172a51ec1eb8b972c37422c823136dd4bb4cd5fccb6d6",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 4579.03,
+              "filetype": "ICO",
+              "entropy": 2.7119457721710205,
+              "sha256": "b14a6956db046a762e3cdf9d1671624bf758112f82d6e0fcb1825fbf09ed5724",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 57963.02,
+              "filetype": "unknown",
+              "entropy": 3.3491017818450928,
+              "sha256": "c793690b1e74772409db0d6d1c65422a900671811e71b8975dbb3f3cae8b7b31",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 2346912.5,
+              "filetype": "DOS EXE",
+              "entropy": 7.515081882476807,
+              "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
+              "type": "Struct(1001)"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 7
+          },
+          "resource_types": {
+            "Struct(1001)": 1,
+            "RT_ICON": 4,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 271402.44,
+              "virtual_address": 4096,
+              "entropy": 6.6,
+              "raw_size": 48128,
+              "flags": "rx",
+              "virtual_size": 47698,
+              "md5": "a1abcbc9f5b177a24e1c46c374d096c9"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 1235740.62,
+              "virtual_address": 53248,
+              "entropy": 5.01,
+              "raw_size": 24064,
+              "flags": "r",
+              "virtual_size": 23806,
+              "md5": "f107feb932c192185d71bf0fdc8fd668"
+            },
+            {
+              "name": ".data",
+              "chi2": 426553.69,
+              "virtual_address": 77824,
+              "entropy": 1.79,
+              "raw_size": 2560,
+              "flags": "rw",
+              "virtual_size": 4184,
+              "md5": "485b51829e45674c9f37c1c0da4ea77f"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 2364972.75,
+              "virtual_address": 86016,
+              "entropy": 7.52,
+              "raw_size": 1182720,
+              "flags": "r",
+              "virtual_size": 1182464,
+              "md5": "31db00950d3985cd06a9a879b8e7514f"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 28325.75,
+              "virtual_address": 1269760,
+              "entropy": 6.07,
+              "raw_size": 3072,
+              "flags": "r",
+              "virtual_size": 2768,
+              "md5": "b3828053a0e3c7c7e09329511abcd170"
+            }
+          ],
+          "compiler_product_versions": [
+            "[---] Unmarked objects count=86",
+            "[LTC] VS2019 v16.11.15 build 30145 count=7",
+            "[RES] VS2019 v16.11.15 build 30145 count=1",
+            "[LNK] VS2019 v16.11.15 build 30145 count=1",
+            "id: 0x104, version: 30034 count=7",
+            "id: 0x103, version: 30034 count=9",
+            "id: 0x105, version: 30034 count=7",
+            "id: 0x103, version: 27412 count=7",
+            "id: 0x105, version: 27412 count=122",
+            "id: 0x104, version: 27412 count=19",
+            "id: 0x101, version: 30034 count=2",
+            "id: 0x101, version: 27412 count=3"
+          ],
+          "rich_pe_header_hash": "3527411f334b961755adcf12449f47e6",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CreateFileA",
+                "CreateFileW",
+                "CreateProcessW",
+                "DebugBreak",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "DeleteFileA",
+                "DeleteFileW",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "FlushFileBuffers",
+                "FreeLibrary",
+                "GetACP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetLastError",
+                "GetModuleFileNameW",
+                "GetModuleHandleExW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStringTypeW",
+                "GetTempPathW",
+                "HeapAlloc",
+                "HeapFree",
+                "InitializeCriticalSectionAndSpinCount",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "K32GetModuleInformation",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryExW",
+                "MultiByteToWideChar",
+                "RaiseException",
+                "SetFilePointerEx",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "TerminateProcess",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "WideCharToMultiByte",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "VCRUNTIME140.dll",
+              "imported_functions": [
+                "_except_handler4_common",
+                "memcpy",
+                "memmove",
+                "memset",
+                "strrchr",
+                "wcsstr"
+              ]
             }
           ]
         },
-        "tags": [
-          "peexe"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -3322,11 +3500,48 @@
             "result": null
           }
         },
+        "first_submission_date": 1657888903,
+        "last_analysis_date": 1717596490,
+        "type_description": "Win32 EXE",
+        "packers": {
+          "Varist": "rsrc"
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 1,
+            "low": 1
+          }
+        },
+        "sha256": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
+        "size": 1261568,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 56,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 4
+        },
+        "vhash": "016056655d15756az33!z",
+        "tlsh": "T1F8455902A94844AFE303CB33146663D0D111A83F2A2E779A3E59711BFF7DD87A1D275A",
+        "sha1": "5defe230dabc4503ffb6e8a57803b89e40da136c",
+        "last_modification_date": 1747871845,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -3349,48 +3564,58 @@
             "probability": 1.2
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "installer.exe",
           "InstallShield"
         ],
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "confidence": 7,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 22
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozybear/graftor",
+          "popular_threat_name": [
+            {
+              "value": "cozybear",
+              "count": 9
+            },
+            {
+              "value": "graftor",
+              "count": 7
+            },
+            {
+              "value": "cozyduke",
+              "count": 5
+            }
+          ]
         },
+        "last_submission_date": 1657888903,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "tags": [
+          "peexe"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
         "magika": "PEBIN",
-        "tlsh": "T1F8455902A94844AFE303CB33146663D0D111A83F2A2E779A3E59711BFF7DD87A1D275A",
-        "md5": "5f66341fb7d3e769e2ce0c443e1da4e7",
-        "packers": {
-          "Varist": "rsrc"
-        },
+        "type_extension": "exe",
+        "creation_date": 1656438517,
         "meaningful_name": "InstallShield",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "authentihash": "9d518360e0be6ee02050d287d9d3db79fb4600ee778d6ea6d4128297fd8697c5",
-        "first_submission_date": 1657888903,
+        "md5": "5f66341fb7d3e769e2ce0c443e1da4e7",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -3474,294 +3699,61 @@
             ]
           }
         ],
-        "sha256": "a68be840dcd905694d746776f25ac672b9a39a0c7a3eda0407bbda94710fe7d2",
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cozybear/graftor",
-          "popular_threat_name": [
-            {
-              "count": 9,
-              "value": "cozybear"
-            },
-            {
-              "count": 7,
-              "value": "graftor"
-            },
-            {
-              "count": 5,
-              "value": "cozyduke"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ]
-        },
-        "last_analysis_date": 1717596490,
-        "pe_info": {
-          "timestamp": 1656438517,
-          "imphash": "4d1945f332ca350c1127fc475e044a70",
-          "machine_type": 332,
-          "entry_point": 4096,
-          "resource_details": [
-            {
-              "lang": "ENGLISH US",
-              "chi2": 418.85,
-              "filetype": "PNG",
-              "entropy": 7.6959357261657715,
-              "sha256": "c34ba18525060bd41f7f7d4cba8017df987a32c5bfdebbdb2ec9964156a12cef",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 423.33,
-              "filetype": "PNG",
-              "entropy": 7.829005241394043,
-              "sha256": "ae3046107be74566874c34bd49394ddf261bee656d98202bc70ba87ba747e257",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 412.66,
-              "filetype": "PNG",
-              "entropy": 7.887531280517578,
-              "sha256": "d13c45704afefbbbaa885be4028590cbc5f4ca046dedf0a71d9717a99c2b4d34",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 439.7,
-              "filetype": "PNG",
-              "entropy": 7.927939414978027,
-              "sha256": "41ed7b31adc4161f999172a51ec1eb8b972c37422c823136dd4bb4cd5fccb6d6",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 4579.03,
-              "filetype": "ICO",
-              "entropy": 2.7119457721710205,
-              "sha256": "b14a6956db046a762e3cdf9d1671624bf758112f82d6e0fcb1825fbf09ed5724",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 57963.02,
-              "filetype": "unknown",
-              "entropy": 3.3491017818450928,
-              "sha256": "c793690b1e74772409db0d6d1c65422a900671811e71b8975dbb3f3cae8b7b31",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 2346912.5,
-              "filetype": "DOS EXE",
-              "entropy": 7.515081882476807,
-              "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
-              "type": "Struct(1001)"
-            }
-          ],
-          "resource_langs": {
-            "ENGLISH US": 7
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 7,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
           },
-          "resource_types": {
-            "Struct(1001)": 1,
-            "RT_ICON": 4,
-            "RT_VERSION": 1,
-            "RT_GROUP_ICON": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 271402.44,
-              "virtual_address": 4096,
-              "entropy": 6.6,
-              "raw_size": 48128,
-              "flags": "rx",
-              "virtual_size": 47698,
-              "md5": "a1abcbc9f5b177a24e1c46c374d096c9"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 1235740.62,
-              "virtual_address": 53248,
-              "entropy": 5.01,
-              "raw_size": 24064,
-              "flags": "r",
-              "virtual_size": 23806,
-              "md5": "f107feb932c192185d71bf0fdc8fd668"
-            },
-            {
-              "name": ".data",
-              "chi2": 426553.69,
-              "virtual_address": 77824,
-              "entropy": 1.79,
-              "raw_size": 2560,
-              "flags": "rw",
-              "virtual_size": 4184,
-              "md5": "485b51829e45674c9f37c1c0da4ea77f"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 2364972.75,
-              "virtual_address": 86016,
-              "entropy": 7.52,
-              "raw_size": 1182720,
-              "flags": "r",
-              "virtual_size": 1182464,
-              "md5": "31db00950d3985cd06a9a879b8e7514f"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 28325.75,
-              "virtual_address": 1269760,
-              "entropy": 6.07,
-              "raw_size": 3072,
-              "flags": "r",
-              "virtual_size": 2768,
-              "md5": "b3828053a0e3c7c7e09329511abcd170"
-            }
-          ],
-          "compiler_product_versions": [
-            "[---] Unmarked objects count=86",
-            "[LTC] VS2019 v16.11.15 build 30145 count=7",
-            "[RES] VS2019 v16.11.15 build 30145 count=1",
-            "[LNK] VS2019 v16.11.15 build 30145 count=1",
-            "id: 0x104, version: 30034 count=7",
-            "id: 0x103, version: 30034 count=9",
-            "id: 0x105, version: 30034 count=7",
-            "id: 0x103, version: 27412 count=7",
-            "id: 0x105, version: 27412 count=122",
-            "id: 0x104, version: 27412 count=19",
-            "id: 0x101, version: 30034 count=2",
-            "id: 0x101, version: 27412 count=3"
-          ],
-          "rich_pe_header_hash": "3527411f334b961755adcf12449f47e6",
-          "import_list": [
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "CloseHandle",
-                "CreateFileA",
-                "CreateFileW",
-                "CreateProcessW",
-                "DebugBreak",
-                "DecodePointer",
-                "DeleteCriticalSection",
-                "DeleteFileA",
-                "DeleteFileW",
-                "EnterCriticalSection",
-                "ExitProcess",
-                "FlushFileBuffers",
-                "FreeLibrary",
-                "GetACP",
-                "GetConsoleMode",
-                "GetConsoleOutputCP",
-                "GetCPInfo",
-                "GetCurrentProcess",
-                "GetCurrentProcessId",
-                "GetLastError",
-                "GetModuleFileNameW",
-                "GetModuleHandleExW",
-                "GetModuleHandleW",
-                "GetOEMCP",
-                "GetProcAddress",
-                "GetProcessHeap",
-                "GetStringTypeW",
-                "GetTempPathW",
-                "HeapAlloc",
-                "HeapFree",
-                "InitializeCriticalSectionAndSpinCount",
-                "IsDebuggerPresent",
-                "IsProcessorFeaturePresent",
-                "IsValidCodePage",
-                "K32GetModuleInformation",
-                "LCMapStringW",
-                "LeaveCriticalSection",
-                "LoadLibraryExW",
-                "MultiByteToWideChar",
-                "RaiseException",
-                "SetFilePointerEx",
-                "SetLastError",
-                "SetStdHandle",
-                "SetUnhandledExceptionFilter",
-                "TerminateProcess",
-                "TlsGetValue",
-                "TlsSetValue",
-                "UnhandledExceptionFilter",
-                "WideCharToMultiByte",
-                "WriteConsoleW",
-                "WriteFile"
-              ]
-            },
-            {
-              "library_name": "VCRUNTIME140.dll",
-              "imported_functions": [
-                "_except_handler4_common",
-                "memcpy",
-                "memmove",
-                "memset",
-                "strrchr",
-                "wcsstr"
-              ]
-            }
-          ]
-        },
-        "last_analysis_stats": {
-          "malicious": 56,
-          "suspicious": 0,
-          "undetected": 16,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 4
-        },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1747871845,
-        "vhash": "016056655d15756az33!z",
-        "ssdeep": "24576:W35dPpXWcUEay5OP89xpmi/cgrqWdfjk:WBDp0Hi/cgNjk",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 1
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 1,
-            "low": 1
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
           }
         },
-        "sha1": "5defe230dabc4503ffb6e8a57803b89e40da136c",
-        "type_tag": "peexe"
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "1.1.0.8",
+              "type": "Installer",
+              "name": "InstallShield"
+            },
+            {
+              "info": "LTCG/C",
+              "version": "19.29.30145",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "14.29.30145",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2019 version 16.11",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "ssdeep": "24576:W35dPpXWcUEay5OP89xpmi/cgrqWdfjk:WBDp0Hi/cgNjk"
       }
     },
     {
       "id": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
       "attributes": {
-        "last_submission_date": 1726984911,
-        "size": 512808,
-        "tags": [
-          "zip",
-          "checks-user-input",
-          "detect-debug-environment",
-          "long-sleeps"
-        ],
-        "unique_sources": 1,
-        "type_description": "ZIP",
+        "times_submitted": 1,
+        "type_tag": "zip",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -4380,42 +4372,20 @@
             "result": null
           }
         },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "reputation": 0,
-        "trid": [
-          {
-            "file_type": "ZIP compressed archive",
-            "probability": 100.0
-          }
-        ],
+        "first_submission_date": 1726984911,
+        "last_analysis_date": 1726984911,
+        "type_description": "ZIP",
+        "sha256": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
+        "size": 512808,
         "type_tags": [
           "compressed",
           "zip"
         ],
-        "names": [
-          "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip"
-        ],
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "Zenbox",
-            "confidence": 94
-          }
-        },
-        "magika": "ZIP",
-        "tlsh": "T1DCB423D2FBD29F4DD15BA7B06605ADE43D3A44174372398B6E848A8E67FBC12580C0BD",
-        "md5": "12171382120c87c357166a760f94568f",
-        "meaningful_name": "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip",
         "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "first_submission_date": 1726984911,
-        "sha256": "b215fc65bc4e7741b9c3d1334781f9eba4367da0fbc9c78d02bd5ca16d2ccbd7",
-        "last_analysis_date": 1726984911,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
         "last_analysis_stats": {
           "malicious": 2,
           "suspicious": 0,
@@ -4426,20 +4396,49 @@
           "failure": 1,
           "type-unsupported": 10
         },
-        "times_submitted": 1,
-        "type_extension": "zip",
-        "last_modification_date": 1726992165,
-        "ssdeep": "12288:uZtpj87n92HLyl25Xo9NVOxMOlQtR3APjat8W43CANKh:stpjS92HLyl2GrsfQtR3gi943C7h",
+        "tlsh": "T1DCB423D2FBD29F4DD15BA7B06605ADE43D3A44174372398B6E848A8E67FBC12580C0BD",
         "sha1": "f6f7e3ffe90a70f54d1543e26e090217be5e967d",
-        "type_tag": "zip"
+        "last_modification_date": 1726992165,
+        "trid": [
+          {
+            "file_type": "ZIP compressed archive",
+            "probability": 100.0
+          }
+        ],
+        "names": [
+          "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip"
+        ],
+        "last_submission_date": 1726984911,
+        "tags": [
+          "zip",
+          "checks-user-input",
+          "detect-debug-environment",
+          "long-sleeps"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
+        "magika": "ZIP",
+        "type_extension": "zip",
+        "meaningful_name": "418a21d49fe5bca8a3e050f039a0e2aa03db6d2de0fb49e3ff9d987f31b22dda.zip",
+        "md5": "12171382120c87c357166a760f94568f",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 94
+          }
+        },
+        "ssdeep": "12288:uZtpj87n92HLyl25Xo9NVOxMOlQtR3APjat8W43CANKh:stpjS92HLyl2GrsfQtR3gi943C7h"
       }
     },
     {
       "id": "bc5ea30d2798761720ef038d2044906c5fc5faacf5800c298816a3249ef88791",
       "attributes": {
-        "last_submission_date": 1753495073,
-        "size": 570376,
-        "creation_date": 1424764179,
+        "times_submitted": 1,
+        "type_tag": "peexe",
         "signature_info": {
           "verified": "The digital signature of the object did not verify.",
           "x509": [
@@ -4470,31 +4469,250 @@
             }
           ]
         },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
+        "authentihash": "59c932015c9e3726637cb5d8ba322abb8b161a581538495e6220aab4fd1bae72",
+        "pe_info": {
+          "timestamp": 1424764179,
+          "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
+          "machine_type": 332,
+          "entry_point": 76376,
+          "resource_details": [
             {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
+              "lang": "NEUTRAL",
+              "chi2": 452.61,
+              "filetype": "unknown",
+              "entropy": 7.999265670776367,
+              "sha256": "9500b348def899480ebcb68e2c0bb7c250be3a653e62f99a1d76355595ac22db",
+              "type": "RT_RCDATA"
             },
             {
-              "info": "PKCS #7",
-              "version": "2.0",
-              "type": "Sign tool",
-              "name": "Windows Authenticode"
+              "lang": "NEUTRAL",
+              "chi2": 15713.04,
+              "filetype": "unknown",
+              "entropy": 6.046577453613281,
+              "sha256": "f84838548479884ae1ba98a760648d498d190c90b04a943dfee0d5b12b85ca9e",
+              "type": "RT_RCDATA"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 67255.04,
+              "filetype": "unknown",
+              "entropy": 3.425316095352173,
+              "sha256": "da78fb9464887c96f6df1f53c3fddaac76024e3fe417ee1b026053c30f066673",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2,
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_RCDATA": 2,
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 1921.92,
+            "filetype": "unknown",
+            "entropy": 7.182916641235352,
+            "offset": 569344,
+            "md5": "83d2c1b2c7a9cf92e88ea54f66ceddf2",
+            "size": 1032
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 507394.62,
+              "virtual_address": 4096,
+              "entropy": 6.6,
+              "raw_size": 88064,
+              "flags": "rx",
+              "virtual_size": 87680,
+              "md5": "563169bd552198d90505b780ee49e249"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 774205.25,
+              "virtual_address": 94208,
+              "entropy": 5.28,
+              "raw_size": 19968,
+              "flags": "r",
+              "virtual_size": 19476,
+              "md5": "c9d2f509d8081ca8a29ed7da5f70393c"
+            },
+            {
+              "name": ".data",
+              "chi2": 534148.56,
+              "virtual_address": 114688,
+              "entropy": 3.43,
+              "raw_size": 5120,
+              "flags": "rw",
+              "virtual_size": 12988,
+              "md5": "7e19e719629dfac1451be90936d17560"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 592.43,
+              "virtual_address": 131072,
+              "entropy": 8.0,
+              "raw_size": 447488,
+              "flags": "r",
+              "virtual_size": 447080,
+              "md5": "266e90c25e33953bb25ef15cd90d7ac7"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 483976.81,
+              "virtual_address": 581632,
+              "entropy": 4.35,
+              "raw_size": 7680,
+              "flags": "r",
+              "virtual_size": 7576,
+              "md5": "16bf22f0acf82b5224bd57b26d751a5e"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CopyFileW",
+                "CreateDirectoryW",
+                "CreateFileA",
+                "CreateFileW",
+                "CreatePipe",
+                "CreateProcessW",
+                "DecodePointer",
+                "DeleteCriticalSection",
+                "EncodePointer",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "ExpandEnvironmentStringsW",
+                "FindResourceW",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsW",
+                "GetACP",
+                "GetCommandLineW",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetEnvironmentStringsW",
+                "GetFileAttributesW",
+                "GetFileType",
+                "GetLastError",
+                "GetModuleFileNameW",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessHeap",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeW",
+                "GetSystemDirectoryW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetVersionExW",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSetInformation",
+                "HeapSize",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "IsProcessorFeaturePresent",
+                "IsValidCodePage",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadLibraryW",
+                "LoadResource",
+                "LocalFree",
+                "LockResource",
+                "lstrlenA",
+                "MultiByteToWideChar",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetErrorMode",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetHandleInformation",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualProtect",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "wsprintfW"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "CryptAcquireContextW",
+                "CryptReleaseContext",
+                "RegCloseKey",
+                "RegEnumKeyExW",
+                "RegOpenKeyExW",
+                "RegQueryInfoKeyW",
+                "RegQueryValueExW"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CoCreateInstance",
+                "CoInitialize",
+                "CoInitializeEx",
+                "CoSetProxyBlanket",
+                "CoUninitialize"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "SysAllocString",
+                "SysFreeString",
+                "SysStringLen",
+                "VariantClear",
+                "VariantInit"
+              ]
+            },
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "PathAddBackslashW",
+                "PathFileExistsW",
+                "PathQuoteSpacesW",
+                "StrStrIW"
+              ]
             }
           ]
         },
-        "tags": [
-          "overlay",
-          "invalid-signature",
-          "peexe",
-          "signed"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
+        "filecondis": {
+          "dhash": "0000001c1e0d0400",
+          "raw_md5": "e92726a46373bd660eee338c9ae8e263"
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -5105,17 +5323,19 @@
             "result": null
           }
         },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "reputation": 0,
-        "trid": [
-          {
-            "file_type": "DOS Executable Generic",
-            "probability": 100.0
+        "first_submission_date": 1753495073,
+        "last_analysis_date": 1754390927,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 1,
+            "low": 0
           }
-        ],
+        },
+        "sha256": "bc5ea30d2798761720ef038d2044906c5fc5faacf5800c298816a3249ef88791",
+        "size": 570376,
         "type_tags": [
           "executable",
           "windows",
@@ -5123,29 +5343,85 @@
           "pe",
           "peexe"
         ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "last_analysis_stats": {
+          "malicious": 61,
+          "suspicious": 0,
+          "undetected": 10,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 4
+        },
+        "vhash": "055056655d15751078z557z5057z41z1fz",
+        "tlsh": "T155C41261B5C1C070E6BB457049BD9BA99A79E431877844EB73CC0EBE8E607C09B7435B",
+        "sha1": "380829d6c53098002446f9c9043237e6b03a2ae9",
+        "last_modification_date": 1754398181,
+        "trid": [
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 100.0
+          }
+        ],
         "names": [
           "exemplar"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 29
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozer/midie",
+          "popular_threat_name": [
+            {
+              "value": "cozer",
+              "count": 10
+            },
+            {
+              "value": "midie",
+              "count": 7
+            },
+            {
+              "value": "cozybear",
+              "count": 6
+            }
+          ]
         },
+        "last_submission_date": 1753495073,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 0
+        },
+        "tags": [
+          "overlay",
+          "invalid-signature",
+          "peexe",
+          "signed"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
         "magika": "PEBIN",
-        "tlsh": "T155C41261B5C1C070E6BB457049BD9BA99A79E431877844EB73CC0EBE8E607C09B7435B",
-        "md5": "3bf305144e9f9ce82ee262b58dbed609",
+        "type_extension": "exe",
+        "creation_date": 1424764179,
         "meaningful_name": "exemplar",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "authentihash": "59c932015c9e3726637cb5d8ba322abb8b161a581538495e6220aab4fd1bae72",
-        "first_submission_date": 1753495073,
+        "md5": "3bf305144e9f9ce82ee262b58dbed609",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -5216,43 +5492,60 @@
             ]
           }
         ],
-        "sha256": "bc5ea30d2798761720ef038d2044906c5fc5faacf5800c298816a3249ef88791",
-        "filecondis": {
-          "dhash": "0000001c1e0d0400",
-          "raw_md5": "e92726a46373bd660eee338c9ae8e263"
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
         },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cozer/midie",
-          "popular_threat_name": [
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
             {
-              "count": 10,
-              "value": "cozer"
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
             },
             {
-              "count": 7,
-              "value": "midie"
-            },
-            {
-              "count": 6,
-              "value": "cozybear"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 29,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
+              "info": "PKCS #7",
+              "version": "2.0",
+              "type": "Sign tool",
+              "name": "Windows Authenticode"
             }
           ]
         },
-        "last_analysis_date": 1754390927,
+        "ssdeep": "12288:mV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5:m+PYPaWWIwuUW4aNuTad961vWKTS"
+      }
+    },
+    {
+      "id": "d7ac39e790aacfc9b1103ab13e685bb6f235907862dd87f3f2586101a6214c53",
+      "attributes": {
+        "times_submitted": 1,
+        "type_tag": "peexe",
+        "signature_info": {
+          "x509": [
+            {
+              "thumbprint_sha256": "4CB3E00CC0B4B1FA315B3C2E6E93AC94D904C0E2B7A4474A115A0647C1C61080",
+              "name": "Advanced Micro Devices, Inc.",
+              "algorithm": "1.3.14.3.2.29",
+              "thumbprint_md5": "B69A68A6122C27249EB03FB33826C7FE",
+              "valid from": "2015-02-24 07:49:42",
+              "valid to": "2039-12-31 23:59:59",
+              "serial number": "CF 7B 6D 54 2B 87 09 BE 41 BD 13 D0 02 CC 86 51",
+              "cert issuer": "Advanced Micro Devices, Inc.",
+              "thumbprint": "D98DF4736AE4CAED8BA97E13F96E8AE3B3DF6EB8"
+            }
+          ]
+        },
+        "authentihash": "f6562267bc351ad5e9b8c6ff97155e8711ad99f1868c1a4d099a9f8d24ec64bf",
         "pe_info": {
           "timestamp": 1424764179,
           "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
@@ -5296,7 +5589,7 @@
             "chi2": 1921.92,
             "filetype": "unknown",
             "entropy": 7.182916641235352,
-            "offset": 569344,
+            "offset": 569856,
             "md5": "83d2c1b2c7a9cf92e88ea54f66ceddf2",
             "size": 1032
           },
@@ -5352,6 +5645,18 @@
               "md5": "16bf22f0acf82b5224bd57b26d751a5e"
             }
           ],
+          "compiler_product_versions": [
+            "[ASM] VS2010 SP1 build 40219 count=19",
+            "[ C ] VS2010 SP1 build 40219 count=110",
+            "[C++] VS2010 SP1 build 40219 count=48",
+            "[ C ] VS2008 SP1 build 30729 count=2",
+            "[IMP] VS2008 SP1 build 30729 count=17",
+            "[---] Unmarked objects count=143",
+            "[RES] VS2010 SP1 build 40219 count=1",
+            "[LNK] VS2010 SP1 build 40219 count=1",
+            "id: 0xaf, version: 40219 count=16"
+          ],
+          "rich_pe_header_hash": "7269960313c11e8a255d3e9829d8ffa6",
           "import_list": [
             {
               "library_name": "KERNEL32.dll",
@@ -5492,87 +5797,10 @@
             }
           ]
         },
-        "last_analysis_stats": {
-          "malicious": 61,
-          "suspicious": 0,
-          "undetected": 10,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 4
+        "filecondis": {
+          "dhash": "0000001c1e1d0400",
+          "raw_md5": "d6c59e304ee50087ef354348d07a3a52"
         },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1754398181,
-        "vhash": "055056655d15751078z557z5057z41z1fz",
-        "ssdeep": "12288:mV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5:m+PYPaWWIwuUW4aNuTad961vWKTS",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 0
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 1,
-            "low": 0
-          }
-        },
-        "sha1": "380829d6c53098002446f9c9043237e6b03a2ae9",
-        "type_tag": "peexe"
-      }
-    },
-    {
-      "id": "d7ac39e790aacfc9b1103ab13e685bb6f235907862dd87f3f2586101a6214c53",
-      "attributes": {
-        "last_submission_date": 1753495011,
-        "size": 570888,
-        "creation_date": 1424764179,
-        "signature_info": {
-          "x509": [
-            {
-              "thumbprint_sha256": "4CB3E00CC0B4B1FA315B3C2E6E93AC94D904C0E2B7A4474A115A0647C1C61080",
-              "name": "Advanced Micro Devices, Inc.",
-              "algorithm": "1.3.14.3.2.29",
-              "thumbprint_md5": "B69A68A6122C27249EB03FB33826C7FE",
-              "valid from": "2015-02-24 07:49:42",
-              "valid to": "2039-12-31 23:59:59",
-              "serial number": "CF 7B 6D 54 2B 87 09 BE 41 BD 13 D0 02 CC 86 51",
-              "cert issuer": "Advanced Micro Devices, Inc.",
-              "thumbprint": "D98DF4736AE4CAED8BA97E13F96E8AE3B3DF6EB8"
-            }
-          ]
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "PKCS #7",
-              "version": "2.0",
-              "type": "Sign tool",
-              "name": "Windows Authenticode"
-            }
-          ]
-        },
-        "tags": [
-          "peexe",
-          "detect-debug-environment",
-          "persistence",
-          "long-sleeps",
-          "calls-wmi",
-          "overlay"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -6183,11 +6411,45 @@
             "result": null
           }
         },
+        "first_submission_date": 1753495011,
+        "last_analysis_date": 1754258553,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 3,
+            "medium": 2,
+            "low": 1
+          }
+        },
+        "sha256": "d7ac39e790aacfc9b1103ab13e685bb6f235907862dd87f3f2586101a6214c53",
+        "size": 570888,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 62,
+          "suspicious": 0,
+          "undetected": 10,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "vhash": "055056655d15751078z557z5057z41z1fz",
+        "tlsh": "T1FDC41261B5D1C070E6BB457009BD9BA99A7AE431877844DB73CC0EBE8E607C0AB7435B",
+        "sha1": "2f7e12e24afe2bbb13f57392b8f40bda7b471fcd",
+        "last_modification_date": 1754807047,
         "trid": [
           {
             "file_type": "Win64 Executable (generic)",
@@ -6210,36 +6472,62 @@
             "probability": 7.6
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "exemplar"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozybear/cozyduke",
+          "popular_threat_name": [
+            {
+              "value": "cozybear",
+              "count": 7
+            },
+            {
+              "value": "cozyduke",
+              "count": 7
+            },
+            {
+              "value": "midie",
+              "count": 7
+            }
+          ]
         },
+        "last_submission_date": 1753495011,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 3,
+          "medium": 2,
+          "low": 1
+        },
+        "tags": [
+          "peexe",
+          "detect-debug-environment",
+          "persistence",
+          "long-sleeps",
+          "calls-wmi",
+          "overlay"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
         "magika": "PEBIN",
-        "tlsh": "T1FDC41261B5D1C070E6BB457009BD9BA99A7AE431877844DB73CC0EBE8E607C0AB7435B",
-        "md5": "e67a676d5f87f333add1eba44caec540",
+        "type_extension": "exe",
+        "creation_date": 1424764179,
         "meaningful_name": "exemplar",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "authentihash": "f6562267bc351ad5e9b8c6ff97155e8711ad99f1868c1a4d099a9f8d24ec64bf",
-        "first_submission_date": 1753495011,
+        "md5": "e67a676d5f87f333add1eba44caec540",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -6514,43 +6802,60 @@
             ]
           }
         ],
-        "sha256": "d7ac39e790aacfc9b1103ab13e685bb6f235907862dd87f3f2586101a6214c53",
-        "filecondis": {
-          "dhash": "0000001c1e1d0400",
-          "raw_md5": "d6c59e304ee50087ef354348d07a3a52"
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
         },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cozybear/cozyduke",
-          "popular_threat_name": [
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
             {
-              "count": 7,
-              "value": "cozybear"
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
             },
             {
-              "count": 7,
-              "value": "cozyduke"
-            },
-            {
-              "count": 7,
-              "value": "midie"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 27,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
+              "info": "PKCS #7",
+              "version": "2.0",
+              "type": "Sign tool",
+              "name": "Windows Authenticode"
             }
           ]
         },
-        "last_analysis_date": 1754258553,
+        "ssdeep": "12288:2V4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5:2+PYPaWWIwuUW4aNuTad961vWKTS"
+      }
+    },
+    {
+      "id": "ea581e8de046c0defd844f68cde000f70a2184a09d48fac1fa52295280c2f542",
+      "attributes": {
+        "times_submitted": 1,
+        "type_tag": "peexe",
+        "signature_info": {
+          "x509": [
+            {
+              "thumbprint_sha256": "4CB3E00CC0B4B1FA315B3C2E6E93AC94D904C0E2B7A4474A115A0647C1C61080",
+              "name": "Advanced Micro Devices, Inc.",
+              "algorithm": "1.3.14.3.2.29",
+              "thumbprint_md5": "B69A68A6122C27249EB03FB33826C7FE",
+              "valid from": "2015-02-24 07:49:42",
+              "valid to": "2039-12-31 23:59:59",
+              "serial number": "CF 7B 6D 54 2B 87 09 BE 41 BD 13 D0 02 CC 86 51",
+              "cert issuer": "Advanced Micro Devices, Inc.",
+              "thumbprint": "D98DF4736AE4CAED8BA97E13F96E8AE3B3DF6EB8"
+            }
+          ]
+        },
+        "authentihash": "aef4cd69abf601f2c7d71be754c39d16bc4960493b63b076cb9812a7e4f94670",
         "pe_info": {
           "timestamp": 1424764179,
           "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
@@ -6591,12 +6896,12 @@
             "RT_VERSION": 1
           },
           "overlay": {
-            "chi2": 1921.92,
+            "chi2": 1904.35,
             "filetype": "unknown",
-            "entropy": 7.182916641235352,
-            "offset": 569856,
-            "md5": "83d2c1b2c7a9cf92e88ea54f66ceddf2",
-            "size": 1032
+            "entropy": 7.226223945617676,
+            "offset": 569344,
+            "md5": "77eb2b99b2194dfa7009c2e5891813e4",
+            "size": 1082
           },
           "sections": [
             {
@@ -6802,99 +7107,10 @@
             }
           ]
         },
-        "last_analysis_stats": {
-          "malicious": 62,
-          "suspicious": 0,
-          "undetected": 10,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+        "filecondis": {
+          "dhash": "0000001c1e1d0400",
+          "raw_md5": "537815d20e5eb78fd4f8eec0c0bd8a80"
         },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1754807047,
-        "vhash": "055056655d15751078z557z5057z41z1fz",
-        "ssdeep": "12288:2V4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5:2+PYPaWWIwuUW4aNuTad961vWKTS",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 3,
-          "medium": 2,
-          "low": 1
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 3,
-            "medium": 2,
-            "low": 1
-          }
-        },
-        "sha1": "2f7e12e24afe2bbb13f57392b8f40bda7b471fcd",
-        "type_tag": "peexe"
-      }
-    },
-    {
-      "id": "ea581e8de046c0defd844f68cde000f70a2184a09d48fac1fa52295280c2f542",
-      "attributes": {
-        "last_submission_date": 1753495198,
-        "size": 570426,
-        "creation_date": 1424764179,
-        "signature_info": {
-          "x509": [
-            {
-              "thumbprint_sha256": "4CB3E00CC0B4B1FA315B3C2E6E93AC94D904C0E2B7A4474A115A0647C1C61080",
-              "name": "Advanced Micro Devices, Inc.",
-              "algorithm": "1.3.14.3.2.29",
-              "thumbprint_md5": "B69A68A6122C27249EB03FB33826C7FE",
-              "valid from": "2015-02-24 07:49:42",
-              "valid to": "2039-12-31 23:59:59",
-              "serial number": "CF 7B 6D 54 2B 87 09 BE 41 BD 13 D0 02 CC 86 51",
-              "cert issuer": "Advanced Micro Devices, Inc.",
-              "thumbprint": "D98DF4736AE4CAED8BA97E13F96E8AE3B3DF6EB8"
-            }
-          ]
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "EXE32",
-              "version": "2008-2010",
-              "type": "Compiler",
-              "name": "EP:Microsoft Visual C/C++"
-            },
-            {
-              "info": "LTCG/C++",
-              "version": "16.00.40219",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "10.00.40219",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2010",
-              "type": "Tool",
-              "name": "Visual Studio"
-            },
-            {
-              "info": "PKCS #7",
-              "version": "2.0",
-              "type": "Sign tool",
-              "name": "Windows Authenticode"
-            }
-          ]
-        },
-        "tags": [
-          "overlay",
-          "peexe"
-        ],
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -7505,11 +7721,45 @@
             "result": null
           }
         },
+        "first_submission_date": 1753495198,
+        "last_analysis_date": 1754216207,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 1,
+            "low": 0
+          }
+        },
+        "sha256": "ea581e8de046c0defd844f68cde000f70a2184a09d48fac1fa52295280c2f542",
+        "size": 570426,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "reputation": 0,
+        "last_analysis_stats": {
+          "malicious": 61,
+          "suspicious": 0,
+          "undetected": 11,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "vhash": "055056655d15751078z557z5057z41z1fz",
+        "tlsh": "T1A7C41261B5D1C0B0E6BB457009BD9BA99A79E431877844EB73CC0EBE8E607C09B7435B",
+        "sha1": "ed3be480b48d7c4d8fcc73073e521bd42ece19bd",
+        "last_modification_date": 1754223612,
         "trid": [
           {
             "file_type": "Win32 Executable MS Visual C++ (generic)",
@@ -7532,36 +7782,58 @@
             "probability": 6.8
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "exemplar"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 28
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozyduke/cozer",
+          "popular_threat_name": [
+            {
+              "value": "cozyduke",
+              "count": 11
+            },
+            {
+              "value": "cozer",
+              "count": 7
+            },
+            {
+              "value": "midie",
+              "count": 7
+            }
+          ]
         },
+        "last_submission_date": 1753495198,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 0
+        },
+        "tags": [
+          "overlay",
+          "peexe"
+        ],
+        "reputation": 0,
+        "unique_sources": 1,
         "magika": "PEBIN",
-        "tlsh": "T1A7C41261B5D1C0B0E6BB457009BD9BA99A79E431877844EB73CC0EBE8E607C09B7435B",
-        "md5": "c7b949724cf972d787c9240c799151bf",
+        "type_extension": "exe",
+        "creation_date": 1424764179,
         "meaningful_name": "exemplar",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "authentihash": "aef4cd69abf601f2c7d71be754c39d16bc4960493b63b076cb9812a7e4f94670",
-        "first_submission_date": 1753495198,
+        "md5": "c7b949724cf972d787c9240c799151bf",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -7632,340 +7904,22 @@
             ]
           }
         ],
-        "sha256": "ea581e8de046c0defd844f68cde000f70a2184a09d48fac1fa52295280c2f542",
-        "filecondis": {
-          "dhash": "0000001c1e1d0400",
-          "raw_md5": "537815d20e5eb78fd4f8eec0c0bd8a80"
-        },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cozyduke/cozer",
-          "popular_threat_name": [
-            {
-              "count": 11,
-              "value": "cozyduke"
-            },
-            {
-              "count": 7,
-              "value": "cozer"
-            },
-            {
-              "count": 7,
-              "value": "midie"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 28,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ]
-        },
-        "last_analysis_date": 1754216207,
-        "pe_info": {
-          "timestamp": 1424764179,
-          "imphash": "6b26d617da672dd0f81bc0acedbb94f7",
-          "machine_type": 332,
-          "entry_point": 76376,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 452.61,
-              "filetype": "unknown",
-              "entropy": 7.999265670776367,
-              "sha256": "9500b348def899480ebcb68e2c0bb7c250be3a653e62f99a1d76355595ac22db",
-              "type": "RT_RCDATA"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 15713.04,
-              "filetype": "unknown",
-              "entropy": 6.046577453613281,
-              "sha256": "f84838548479884ae1ba98a760648d498d190c90b04a943dfee0d5b12b85ca9e",
-              "type": "RT_RCDATA"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 67255.04,
-              "filetype": "unknown",
-              "entropy": 3.425316095352173,
-              "sha256": "da78fb9464887c96f6df1f53c3fddaac76024e3fe417ee1b026053c30f066673",
-              "type": "RT_VERSION"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 2,
-            "ENGLISH US": 1
-          },
-          "resource_types": {
-            "RT_RCDATA": 2,
-            "RT_VERSION": 1
-          },
-          "overlay": {
-            "chi2": 1904.35,
-            "filetype": "unknown",
-            "entropy": 7.226223945617676,
-            "offset": 569344,
-            "md5": "77eb2b99b2194dfa7009c2e5891813e4",
-            "size": 1082
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 507394.62,
-              "virtual_address": 4096,
-              "entropy": 6.6,
-              "raw_size": 88064,
-              "flags": "rx",
-              "virtual_size": 87680,
-              "md5": "563169bd552198d90505b780ee49e249"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 774205.25,
-              "virtual_address": 94208,
-              "entropy": 5.28,
-              "raw_size": 19968,
-              "flags": "r",
-              "virtual_size": 19476,
-              "md5": "c9d2f509d8081ca8a29ed7da5f70393c"
-            },
-            {
-              "name": ".data",
-              "chi2": 534148.56,
-              "virtual_address": 114688,
-              "entropy": 3.43,
-              "raw_size": 5120,
-              "flags": "rw",
-              "virtual_size": 12988,
-              "md5": "7e19e719629dfac1451be90936d17560"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 592.43,
-              "virtual_address": 131072,
-              "entropy": 8.0,
-              "raw_size": 447488,
-              "flags": "r",
-              "virtual_size": 447080,
-              "md5": "266e90c25e33953bb25ef15cd90d7ac7"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 483976.81,
-              "virtual_address": 581632,
-              "entropy": 4.35,
-              "raw_size": 7680,
-              "flags": "r",
-              "virtual_size": 7576,
-              "md5": "16bf22f0acf82b5224bd57b26d751a5e"
-            }
-          ],
-          "compiler_product_versions": [
-            "[ASM] VS2010 SP1 build 40219 count=19",
-            "[ C ] VS2010 SP1 build 40219 count=110",
-            "[C++] VS2010 SP1 build 40219 count=48",
-            "[ C ] VS2008 SP1 build 30729 count=2",
-            "[IMP] VS2008 SP1 build 30729 count=17",
-            "[---] Unmarked objects count=143",
-            "[RES] VS2010 SP1 build 40219 count=1",
-            "[LNK] VS2010 SP1 build 40219 count=1",
-            "id: 0xaf, version: 40219 count=16"
-          ],
-          "rich_pe_header_hash": "7269960313c11e8a255d3e9829d8ffa6",
-          "import_list": [
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "CloseHandle",
-                "CopyFileW",
-                "CreateDirectoryW",
-                "CreateFileA",
-                "CreateFileW",
-                "CreatePipe",
-                "CreateProcessW",
-                "DecodePointer",
-                "DeleteCriticalSection",
-                "EncodePointer",
-                "EnterCriticalSection",
-                "ExitProcess",
-                "ExpandEnvironmentStringsW",
-                "FindResourceW",
-                "FlushFileBuffers",
-                "FreeEnvironmentStringsW",
-                "GetACP",
-                "GetCommandLineW",
-                "GetConsoleCP",
-                "GetConsoleMode",
-                "GetCPInfo",
-                "GetCurrentProcess",
-                "GetCurrentProcessId",
-                "GetCurrentThreadId",
-                "GetEnvironmentStringsW",
-                "GetFileAttributesW",
-                "GetFileType",
-                "GetLastError",
-                "GetModuleFileNameW",
-                "GetModuleHandleW",
-                "GetOEMCP",
-                "GetProcAddress",
-                "GetProcessHeap",
-                "GetStartupInfoW",
-                "GetStdHandle",
-                "GetStringTypeW",
-                "GetSystemDirectoryW",
-                "GetSystemTimeAsFileTime",
-                "GetTickCount",
-                "GetVersionExW",
-                "HeapAlloc",
-                "HeapCreate",
-                "HeapFree",
-                "HeapReAlloc",
-                "HeapSetInformation",
-                "HeapSize",
-                "InitializeCriticalSectionAndSpinCount",
-                "InterlockedDecrement",
-                "InterlockedIncrement",
-                "IsDebuggerPresent",
-                "IsProcessorFeaturePresent",
-                "IsValidCodePage",
-                "LCMapStringW",
-                "LeaveCriticalSection",
-                "LoadLibraryA",
-                "LoadLibraryW",
-                "LoadResource",
-                "LocalFree",
-                "LockResource",
-                "lstrlenA",
-                "MultiByteToWideChar",
-                "QueryPerformanceCounter",
-                "RaiseException",
-                "ReadFile",
-                "RtlUnwind",
-                "SetErrorMode",
-                "SetFilePointer",
-                "SetHandleCount",
-                "SetHandleInformation",
-                "SetLastError",
-                "SetStdHandle",
-                "SetUnhandledExceptionFilter",
-                "SizeofResource",
-                "Sleep",
-                "TerminateProcess",
-                "TlsAlloc",
-                "TlsFree",
-                "TlsGetValue",
-                "TlsSetValue",
-                "UnhandledExceptionFilter",
-                "VirtualProtect",
-                "WaitForSingleObject",
-                "WideCharToMultiByte",
-                "WriteConsoleW",
-                "WriteFile"
-              ]
-            },
-            {
-              "library_name": "USER32.dll",
-              "imported_functions": [
-                "wsprintfW"
-              ]
-            },
-            {
-              "library_name": "ADVAPI32.dll",
-              "imported_functions": [
-                "CryptAcquireContextW",
-                "CryptReleaseContext",
-                "RegCloseKey",
-                "RegEnumKeyExW",
-                "RegOpenKeyExW",
-                "RegQueryInfoKeyW",
-                "RegQueryValueExW"
-              ]
-            },
-            {
-              "library_name": "ole32.dll",
-              "imported_functions": [
-                "CoCreateInstance",
-                "CoInitialize",
-                "CoInitializeEx",
-                "CoSetProxyBlanket",
-                "CoUninitialize"
-              ]
-            },
-            {
-              "library_name": "OLEAUT32.dll",
-              "imported_functions": [
-                "SysAllocString",
-                "SysFreeString",
-                "SysStringLen",
-                "VariantClear",
-                "VariantInit"
-              ]
-            },
-            {
-              "library_name": "SHLWAPI.dll",
-              "imported_functions": [
-                "PathAddBackslashW",
-                "PathFileExistsW",
-                "PathQuoteSpacesW",
-                "StrStrIW"
-              ]
-            }
-          ]
-        },
-        "last_analysis_stats": {
-          "malicious": 61,
-          "suspicious": 0,
-          "undetected": 11,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "times_submitted": 1,
-        "type_extension": "exe",
-        "last_modification_date": 1754223612,
-        "vhash": "055056655d15751078z557z5057z41z1fz",
-        "ssdeep": "12288:nV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5o:n+PYPaWWIwuUW4aNuTad961vWKTS2",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 0
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 1,
-            "low": 0
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
           }
         },
-        "sha1": "ed3be480b48d7c4d8fcc73073e521bd42ece19bd",
-        "type_tag": "peexe"
-      }
-    },
-    {
-      "id": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
-      "attributes": {
-        "last_submission_date": 1741853032,
-        "size": 1171577,
-        "creation_date": 1374825217,
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
-            {
-              "type": "sfx",
-              "name": "WinRAR"
-            },
             {
               "info": "EXE32",
               "version": "2008-2010",
@@ -7973,42 +7927,585 @@
               "name": "EP:Microsoft Visual C/C++"
             },
             {
-              "info": "C++",
-              "version": "15.00.30729",
+              "info": "LTCG/C++",
+              "version": "16.00.40219",
               "type": "Compiler",
               "name": "Microsoft Visual C/C++"
             },
             {
-              "version": "9.00.30729",
+              "version": "10.00.40219",
               "type": "Linker",
               "name": "Microsoft Linker"
             },
             {
-              "version": "2008",
+              "version": "2010",
               "type": "Tool",
               "name": "Visual Studio"
             },
             {
-              "info": "solid,90.8%,2 files",
-              "version": "4",
-              "type": "Archive",
-              "name": "RAR"
+              "info": "PKCS #7",
+              "version": "2.0",
+              "type": "Sign tool",
+              "name": "Windows Authenticode"
             }
           ]
         },
-        "tags": [
-          "persistence",
-          "calls-wmi",
-          "runtime-modules",
-          "peexe",
-          "long-sleeps",
-          "overlay",
-          "direct-cpu-clock-access",
-          "checks-user-input",
-          "detect-debug-environment"
-        ],
-        "unique_sources": 9,
-        "type_description": "Win32 EXE",
+        "ssdeep": "12288:nV4ZFrWewppaWWIjzS3UvLvSXIA+tkLaNfmbSLUaKYsY68CC4Qt/pdmTS5o:n+PYPaWWIwuUW4aNuTad961vWKTS2"
+      }
+    },
+    {
+      "id": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
+      "attributes": {
+        "times_submitted": 11,
+        "type_tag": "peexe",
+        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
+        "pe_info": {
+          "timestamp": 1374825217,
+          "imphash": "3eaa732d4dae53340f9646bdd85dac41",
+          "machine_type": 332,
+          "entry_point": 119608,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 86289.31,
+              "filetype": "unknown",
+              "entropy": 4.190995693206787,
+              "sha256": "690c938562399f89ad78e3fde2a7edaee8ddf2fafef987a7b37e577a8f6126ea",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 51022.93,
+              "filetype": "unknown",
+              "entropy": 5.5815958976745605,
+              "sha256": "7570d3f78fd1a3eb5e35b01cd5c23e8841dceea888db328d41cb4c8b299cf6a3",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 69703.22,
+              "filetype": "unknown",
+              "entropy": 4.887887477874756,
+              "sha256": "8baf5a8b77c80031baabe64dc6fd35dd34b42c7c93233ca29ee1622655f08dcc",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 130451.7,
+              "filetype": "unknown",
+              "entropy": 3.4417130947113037,
+              "sha256": "5a9bbf1d1517ed342d4e2af6a83601eafb0695dbde749768305e8ec1895aa519",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 5257048.5,
+              "filetype": "unknown",
+              "entropy": 4.963444232940674,
+              "sha256": "8f4e7ba75274499b416bd87303ce7f906fbb538e94b7cb8099a76b55f05c77b7",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 200165.5,
+              "filetype": "unknown",
+              "entropy": 5.055708408355713,
+              "sha256": "8ebe932fe440cf3f2f09f0b477068963da2ec139754203a4c5258201812933a9",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 114873.73,
+              "filetype": "unknown",
+              "entropy": 4.789170742034912,
+              "sha256": "cc71ab854a562a163f296cc3b7c3ae43e479a995f2132a1b7cfc1b46c9f06b62",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 21267.46,
+              "filetype": "unknown",
+              "entropy": 5.252667427062988,
+              "sha256": "ac59f658aa5850269cbf6ed4e8545c1e6ff1264eb5a6e1f7e7386ee2b40c37f0",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 49251.75,
+              "filetype": "unknown",
+              "entropy": 3.4259707927703857,
+              "sha256": "887347f27d903f6652ba35c3dfae297c23435755a63e02a80259ee6dd0b8af86",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 25171.86,
+              "filetype": "unknown",
+              "entropy": 3.33943772315979,
+              "sha256": "2e11a1ed4f812e37fdb32a1310cdcca802c46497c27e33ab66ac127345463d31",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 19747.18,
+              "filetype": "unknown",
+              "entropy": 3.161327600479126,
+              "sha256": "44e6a8daef1ac762f8016fc4c8aec52bad42f589b6d8a25d430a619610dd0028",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 26316.91,
+              "filetype": "unknown",
+              "entropy": 3.0892457962036133,
+              "sha256": "30358e9c494ca9d125b34ccb93a2d8f1237042904f6fcecc2f5ca9a83b7dba9d",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 69828.94,
+              "filetype": "unknown",
+              "entropy": 3.319875478744507,
+              "sha256": "a1141852e6fb28826de51733ee35fbfdcf74dd8eb7f73049c7c7ad6c21d0cb33",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 47185.7,
+              "filetype": "unknown",
+              "entropy": 3.516422986984253,
+              "sha256": "0f47dbda4a6e61d3288f63f249d25ab3f6e1fe497879a782d3eb1cd3922f3f4e",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 33933.54,
+              "filetype": "unknown",
+              "entropy": 3.1586008071899414,
+              "sha256": "450b4d82a86dba50acea995d6356e0174a242081f2c2438f6f88c29038f7097d",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 32822.23,
+              "filetype": "unknown",
+              "entropy": 3.1168453693389893,
+              "sha256": "89051dca472bd5ebb7b344c05150755b6e3d32cb0dffea086c04186820b188d2",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 37702.55,
+              "filetype": "unknown",
+              "entropy": 3.189058303833008,
+              "sha256": "8bc43669fe84684f720ac1ddffb0624dc59d9912a9de50b70f14d89ffaa8162e",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 24400.78,
+              "filetype": "unknown",
+              "entropy": 2.9972727298736572,
+              "sha256": "1e87eca343221966ecd9472109f3baf9081c821e3f4e905aa34eb8bce73af4e7",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 74720.37,
+              "filetype": "unknown",
+              "entropy": 3.2035984992980957,
+              "sha256": "06b2bd666ed1afbbfc9914b94d703087c18248c5fe28dead42e42f22c3984c5e",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 26340.36,
+              "filetype": "unknown",
+              "entropy": 3.128887414932251,
+              "sha256": "d5755fffe2a9a4baf3593b8fba9a029b23bcc08e77c8d98e07b93baee6b9e6de",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 22597.32,
+              "filetype": "unknown",
+              "entropy": 2.956732988357544,
+              "sha256": "a71a1445d83285856c39bf2f0caa19e88c9be65f0178a6878f321a925a21f97c",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 15886.94,
+              "filetype": "unknown",
+              "entropy": 2.7792787551879883,
+              "sha256": "71966cf60a28c1cdde4196d7909347e3f66661546af21edbacb15c7116944832",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 14872.47,
+              "filetype": "unknown",
+              "entropy": 2.6652255058288574,
+              "sha256": "a8723b6cd67785f8b43dad75a1eb9b383db0e8a9a0b36378c2dcaef003aad4fd",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 7718.77,
+              "filetype": "ICO",
+              "entropy": 2.7178714275360107,
+              "sha256": "b4a86ff543995d1a1dcad86ec767539180bbe55d27b306186eb5fa4bc3d5872f",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 13806.08,
+              "filetype": "XML",
+              "entropy": 5.227919578552246,
+              "sha256": "c410d24baf3bcd455d35b9eb44ca14dee587be9e1e167fc6d8788ef56aa134fd",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 25
+          },
+          "resource_types": {
+            "RT_DIALOG": 6,
+            "RT_ICON": 7,
+            "RT_MANIFEST": 1,
+            "RT_STRING": 9,
+            "RT_BITMAP": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "overlay": {
+            "chi2": 529.43,
+            "filetype": "RAR",
+            "entropy": 7.999441623687744,
+            "offset": 484864,
+            "size": 686713,
+            "md5": "3bcbae9cfdfb4a44558b2c01f7d1c980"
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 809920.19,
+              "virtual_address": 4096,
+              "flags": "rx",
+              "raw_size": 152064,
+              "entropy": 6.7,
+              "virtual_size": 151918,
+              "md5": "91169bb13f82823bff5caa7a5fc63ddf"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 613389.81,
+              "virtual_address": 159744,
+              "flags": "r",
+              "raw_size": 20480,
+              "entropy": 5.33,
+              "virtual_size": 20291,
+              "md5": "07955898944e5130e7d85a9c19a8552e"
+            },
+            {
+              "name": ".data",
+              "chi2": 709285.38,
+              "virtual_address": 180224,
+              "flags": "rw",
+              "raw_size": 5120,
+              "entropy": 2.54,
+              "virtual_size": 136672,
+              "md5": "364c31a6fc642180480523f46127a9d9"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 5633375.0,
+              "virtual_address": 319488,
+              "flags": "r",
+              "raw_size": 306176,
+              "entropy": 5.17,
+              "virtual_size": 305792,
+              "md5": "af44d83351fb614730009225f03a1bc2"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ASM] VS2008 SP1 build 30729 count=27",
+            "[ C ] VS2008 SP1 build 30729 count=128",
+            "[IMP] VS2008 SP1 build 30729 count=21",
+            "[---] Unmarked objects count=237",
+            "[C++] VS2008 SP1 build 30729 count=100",
+            "[EXP] VS2008 SP1 build 30729 count=1",
+            "[RES] VS2008 SP1 [9.0] build 30729 count=1",
+            "[LNK] VS2008 SP1 build 30729 count=1"
+          ],
+          "rich_pe_header_hash": "3c0b12db306768e0c503d8b146df98c0",
+          "import_list": [
+            {
+              "library_name": "COMCTL32.dll",
+              "imported_functions": [
+                "InitCommonControlsEx"
+              ]
+            },
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "SHAutoComplete"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "CompareStringW",
+                "CreateDirectoryW",
+                "CreateEventW",
+                "CreateFileA",
+                "CreateFileMappingW",
+                "CreateFileW",
+                "CreateHardLinkW",
+                "CreateSemaphoreW",
+                "CreateThread",
+                "DeleteCriticalSection",
+                "DeleteFileW",
+                "DeviceIoControl",
+                "DosDateTimeToFileTime",
+                "EnterCriticalSection",
+                "ExitProcess",
+                "ExpandEnvironmentStringsW",
+                "FileTimeToLocalFileTime",
+                "FileTimeToSystemTime",
+                "FindClose",
+                "FindFirstFileW",
+                "FindNextFileW",
+                "FindResourceW",
+                "FlushFileBuffers",
+                "FreeEnvironmentStringsA",
+                "FreeEnvironmentStringsW",
+                "FreeLibrary",
+                "GetACP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentDirectoryW",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThreadId",
+                "GetDateFormatW",
+                "GetEnvironmentStrings",
+                "GetEnvironmentStringsW",
+                "GetExitCodeProcess",
+                "GetFileAttributesW",
+                "GetFileType",
+                "GetFullPathNameW",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetLocaleInfoW",
+                "GetLongPathNameW",
+                "GetModuleFileNameA",
+                "GetModuleFileNameW",
+                "GetModuleHandleW",
+                "GetNumberFormatW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetProcessAffinityMask",
+                "GetShortPathNameW",
+                "GetStartupInfoA",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTime",
+                "GetSystemTimeAsFileTime",
+                "GetTempPathW",
+                "GetTickCount",
+                "GetTimeFormatW",
+                "GlobalAlloc",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSection",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedIncrement",
+                "IsDBCSLeadByte",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadLibraryW",
+                "LocalFileTimeToFileTime",
+                "MapViewOfFile",
+                "MoveFileExW",
+                "MoveFileW",
+                "MultiByteToWideChar",
+                "OpenFileMappingW",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "ReleaseSemaphore",
+                "RemoveDirectoryW",
+                "ResetEvent",
+                "RtlUnwind",
+                "SetCurrentDirectoryW",
+                "SetEndOfFile",
+                "SetEnvironmentVariableW",
+                "SetEvent",
+                "SetFileAttributesW",
+                "SetFilePointer",
+                "SetFileTime",
+                "SetHandleCount",
+                "SetLastError",
+                "SetStdHandle",
+                "SetThreadPriority",
+                "SetUnhandledExceptionFilter",
+                "Sleep",
+                "SystemTimeToFileTime",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "UnmapViewOfFile",
+                "VirtualAlloc",
+                "VirtualFree",
+                "WaitForSingleObject",
+                "WideCharToMultiByte",
+                "WriteConsoleA",
+                "WriteConsoleW",
+                "WriteFile"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "CharUpperW",
+                "CopyRect",
+                "CreateWindowExW",
+                "DefWindowProcW",
+                "DestroyIcon",
+                "DestroyWindow",
+                "DialogBoxParamW",
+                "DispatchMessageW",
+                "EnableWindow",
+                "EndDialog",
+                "FindWindowExW",
+                "GetClassNameW",
+                "GetClientRect",
+                "GetDC",
+                "GetDlgItem",
+                "GetDlgItemTextW",
+                "GetMessageW",
+                "GetParent",
+                "GetSysColor",
+                "GetSystemMetrics",
+                "GetWindow",
+                "GetWindowLongW",
+                "GetWindowRect",
+                "GetWindowTextW",
+                "IsWindow",
+                "IsWindowVisible",
+                "LoadBitmapW",
+                "LoadCursorW",
+                "LoadIconW",
+                "LoadStringW",
+                "MapWindowPoints",
+                "MessageBoxW",
+                "OemToCharBuffA",
+                "PeekMessageW",
+                "PostMessageW",
+                "RegisterClassExW",
+                "ReleaseDC",
+                "SendDlgItemMessageW",
+                "SendMessageW",
+                "SetDlgItemTextW",
+                "SetFocus",
+                "SetForegroundWindow",
+                "SetWindowLongW",
+                "SetWindowPos",
+                "SetWindowTextW",
+                "ShowWindow",
+                "TranslateMessage",
+                "UpdateWindow",
+                "WaitForInputIdle",
+                "wvsprintfW"
+              ]
+            },
+            {
+              "library_name": "GDI32.dll",
+              "imported_functions": [
+                "CreateCompatibleBitmap",
+                "CreateCompatibleDC",
+                "DeleteDC",
+                "DeleteObject",
+                "GetDeviceCaps",
+                "GetObjectW",
+                "SelectObject",
+                "StretchBlt"
+              ]
+            },
+            {
+              "library_name": "COMDLG32.dll",
+              "imported_functions": [
+                "CommDlgExtendedError",
+                "GetOpenFileNameW",
+                "GetSaveFileNameW"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "AdjustTokenPrivileges",
+                "LookupPrivilegeValueW",
+                "OpenProcessToken",
+                "RegCloseKey",
+                "RegCreateKeyExW",
+                "RegOpenKeyExW",
+                "RegQueryValueExW",
+                "RegSetValueExW",
+                "SetFileSecurityW"
+              ]
+            },
+            {
+              "library_name": "SHELL32.dll",
+              "imported_functions": [
+                "SHBrowseForFolderW",
+                "SHChangeNotify",
+                "ShellExecuteExW",
+                "SHFileOperationW",
+                "SHGetFileInfoW",
+                "SHGetMalloc",
+                "SHGetPathFromIDListW",
+                "SHGetSpecialFolderLocation"
+              ]
+            },
+            {
+              "library_name": "ole32.dll",
+              "imported_functions": [
+                "CLSIDFromString",
+                "CoCreateInstance",
+                "CreateStreamOnHGlobal",
+                "OleInitialize",
+                "OleUninitialize"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "VariantInit"
+              ]
+            }
+          ]
+        },
+        "filecondis": {
+          "dhash": "0000001d1e150c08",
+          "raw_md5": "0b2f70590229713af2a47c1e48121f11"
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -8619,11 +9116,54 @@
             "result": null
           }
         },
+        "first_submission_date": 1424769132,
+        "last_analysis_date": 1770271258,
+        "type_description": "Win32 EXE",
+        "packers": {
+          "F-PROT": "RAR"
+        },
+        "sigma_analysis_summary": {
+          "SOC Prime Threat Detection Marketplace": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 2,
+            "medium": 2,
+            "low": 3
+          }
+        },
+        "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
+        "size": 1171577,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
         "total_votes": {
           "harmless": 0,
           "malicious": 1
         },
-        "reputation": -1,
+        "last_analysis_stats": {
+          "malicious": 57,
+          "suspicious": 0,
+          "undetected": 11,
+          "harmless": 0,
+          "timeout": 1,
+          "confirmed-timeout": 0,
+          "failure": 3,
+          "type-unsupported": 4
+        },
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "tlsh": "T10A454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
+        "sha1": "e76da232ec020d133530fdd52ffcc38b7c1d7662",
+        "last_modification_date": 1770278820,
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
@@ -8646,13 +9186,6 @@
             "probability": 1.5
           }
         ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
         "names": [
           "2537.ex_",
           "e76da232ec020d133530fdd52ffcc38b7c1d7662.codex",
@@ -8664,32 +9197,73 @@
           "2537.exe",
           "CozyDuke_62C4CE93050E48D623569C7DCC4D0278.EXE"
         ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "undetected",
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
-          },
-          "DAS-Security Orcas": {
-            "category": "malicious",
-            "sandbox_name": "DAS-Security Orcas",
-            "malware_classification": [
-              "MALWARE"
-            ]
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 29
+            },
+            {
+              "value": "dropper",
+              "count": 6
+            },
+            {
+              "value": "downloader",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "trojan.cozybear/cozer",
+          "popular_threat_name": [
+            {
+              "value": "cozybear",
+              "count": 10
+            },
+            {
+              "value": "cozer",
+              "count": 9
+            },
+            {
+              "value": "cozyduke",
+              "count": 4
+            }
+          ]
+        },
+        "last_submission_date": 1741853032,
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 2,
+          "medium": 2,
+          "low": 3
+        },
+        "tags": [
+          "persistence",
+          "calls-wmi",
+          "runtime-modules",
+          "peexe",
+          "long-sleeps",
+          "overlay",
+          "direct-cpu-clock-access",
+          "checks-user-input",
+          "detect-debug-environment"
+        ],
+        "first_seen_itw_date": 1424809555,
+        "reputation": -1,
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "006fbe881a",
+            "rule_name": "CozyDuke",
+            "ruleset_name": "RussianAPT",
+            "match_in_subfile": true,
+            "author": "Intezer Analyze",
+            "source": "https://github.com/intezer/yara-rules"
           }
-        },
+        ],
+        "unique_sources": 9,
         "magika": "PEBIN",
-        "tlsh": "T10A454802994848AFE303C733146663D0D150A87F2A6F679A3D59B10BFF7DD8BA1C275A",
-        "md5": "62c4ce93050e48d623569c7dcc4d0278",
-        "packers": {
-          "F-PROT": "RAR"
-        },
+        "type_extension": "exe",
+        "creation_date": 1374825217,
         "meaningful_name": "2537.ex_",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
-        "authentihash": "f809d7e9053375005a1dfb0cbd3902b97ce86a1b02fb9c703f9a84c12589b3db",
-        "first_submission_date": 1424769132,
+        "md5": "62c4ce93050e48d623569c7dcc4d0278",
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -9091,636 +9665,85 @@
             ]
           }
         ],
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "006fbe881a",
-            "rule_name": "CozyDuke",
-            "ruleset_name": "RussianAPT",
-            "match_in_subfile": true,
-            "author": "Intezer Analyze",
-            "source": "https://github.com/intezer/yara-rules"
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
           }
-        ],
-        "sha256": "f44bead117d2cf34b8e50b81c82fbd1b938b94387cdf84386ace46b1f3b5df1a",
-        "filecondis": {
-          "dhash": "0000001d1e150c08",
-          "raw_md5": "0b2f70590229713af2a47c1e48121f11"
         },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cozybear/cozer",
-          "popular_threat_name": [
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
             {
-              "count": 10,
-              "value": "cozybear"
+              "type": "sfx",
+              "name": "WinRAR"
             },
             {
-              "count": 9,
-              "value": "cozer"
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
             },
             {
-              "count": 4,
-              "value": "cozyduke"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 29,
-              "value": "trojan"
+              "info": "C++",
+              "version": "15.00.30729",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
             },
             {
-              "count": 6,
-              "value": "dropper"
+              "version": "9.00.30729",
+              "type": "Linker",
+              "name": "Microsoft Linker"
             },
             {
-              "count": 2,
-              "value": "downloader"
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
+            },
+            {
+              "info": "solid,90.8%,2 files",
+              "version": "4",
+              "type": "Archive",
+              "name": "RAR"
             }
           ]
         },
-        "last_analysis_date": 1770271258,
-        "pe_info": {
-          "timestamp": 1374825217,
-          "imphash": "3eaa732d4dae53340f9646bdd85dac41",
-          "machine_type": 332,
-          "entry_point": 119608,
-          "resource_details": [
-            {
-              "lang": "ENGLISH US",
-              "chi2": 86289.31,
-              "filetype": "unknown",
-              "entropy": 4.190995693206787,
-              "sha256": "690c938562399f89ad78e3fde2a7edaee8ddf2fafef987a7b37e577a8f6126ea",
-              "type": "RT_BITMAP"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 51022.93,
-              "filetype": "unknown",
-              "entropy": 5.5815958976745605,
-              "sha256": "7570d3f78fd1a3eb5e35b01cd5c23e8841dceea888db328d41cb4c8b299cf6a3",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 69703.22,
-              "filetype": "unknown",
-              "entropy": 4.887887477874756,
-              "sha256": "8baf5a8b77c80031baabe64dc6fd35dd34b42c7c93233ca29ee1622655f08dcc",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 130451.7,
-              "filetype": "unknown",
-              "entropy": 3.4417130947113037,
-              "sha256": "5a9bbf1d1517ed342d4e2af6a83601eafb0695dbde749768305e8ec1895aa519",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 5257048.5,
-              "filetype": "unknown",
-              "entropy": 4.963444232940674,
-              "sha256": "8f4e7ba75274499b416bd87303ce7f906fbb538e94b7cb8099a76b55f05c77b7",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 200165.5,
-              "filetype": "unknown",
-              "entropy": 5.055708408355713,
-              "sha256": "8ebe932fe440cf3f2f09f0b477068963da2ec139754203a4c5258201812933a9",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 114873.73,
-              "filetype": "unknown",
-              "entropy": 4.789170742034912,
-              "sha256": "cc71ab854a562a163f296cc3b7c3ae43e479a995f2132a1b7cfc1b46c9f06b62",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 21267.46,
-              "filetype": "unknown",
-              "entropy": 5.252667427062988,
-              "sha256": "ac59f658aa5850269cbf6ed4e8545c1e6ff1264eb5a6e1f7e7386ee2b40c37f0",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 49251.75,
-              "filetype": "unknown",
-              "entropy": 3.4259707927703857,
-              "sha256": "887347f27d903f6652ba35c3dfae297c23435755a63e02a80259ee6dd0b8af86",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 25171.86,
-              "filetype": "unknown",
-              "entropy": 3.33943772315979,
-              "sha256": "2e11a1ed4f812e37fdb32a1310cdcca802c46497c27e33ab66ac127345463d31",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 19747.18,
-              "filetype": "unknown",
-              "entropy": 3.161327600479126,
-              "sha256": "44e6a8daef1ac762f8016fc4c8aec52bad42f589b6d8a25d430a619610dd0028",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 26316.91,
-              "filetype": "unknown",
-              "entropy": 3.0892457962036133,
-              "sha256": "30358e9c494ca9d125b34ccb93a2d8f1237042904f6fcecc2f5ca9a83b7dba9d",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 69828.94,
-              "filetype": "unknown",
-              "entropy": 3.319875478744507,
-              "sha256": "a1141852e6fb28826de51733ee35fbfdcf74dd8eb7f73049c7c7ad6c21d0cb33",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 47185.7,
-              "filetype": "unknown",
-              "entropy": 3.516422986984253,
-              "sha256": "0f47dbda4a6e61d3288f63f249d25ab3f6e1fe497879a782d3eb1cd3922f3f4e",
-              "type": "RT_DIALOG"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 33933.54,
-              "filetype": "unknown",
-              "entropy": 3.1586008071899414,
-              "sha256": "450b4d82a86dba50acea995d6356e0174a242081f2c2438f6f88c29038f7097d",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 32822.23,
-              "filetype": "unknown",
-              "entropy": 3.1168453693389893,
-              "sha256": "89051dca472bd5ebb7b344c05150755b6e3d32cb0dffea086c04186820b188d2",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 37702.55,
-              "filetype": "unknown",
-              "entropy": 3.189058303833008,
-              "sha256": "8bc43669fe84684f720ac1ddffb0624dc59d9912a9de50b70f14d89ffaa8162e",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 24400.78,
-              "filetype": "unknown",
-              "entropy": 2.9972727298736572,
-              "sha256": "1e87eca343221966ecd9472109f3baf9081c821e3f4e905aa34eb8bce73af4e7",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 74720.37,
-              "filetype": "unknown",
-              "entropy": 3.2035984992980957,
-              "sha256": "06b2bd666ed1afbbfc9914b94d703087c18248c5fe28dead42e42f22c3984c5e",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 26340.36,
-              "filetype": "unknown",
-              "entropy": 3.128887414932251,
-              "sha256": "d5755fffe2a9a4baf3593b8fba9a029b23bcc08e77c8d98e07b93baee6b9e6de",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 22597.32,
-              "filetype": "unknown",
-              "entropy": 2.956732988357544,
-              "sha256": "a71a1445d83285856c39bf2f0caa19e88c9be65f0178a6878f321a925a21f97c",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 15886.94,
-              "filetype": "unknown",
-              "entropy": 2.7792787551879883,
-              "sha256": "71966cf60a28c1cdde4196d7909347e3f66661546af21edbacb15c7116944832",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 14872.47,
-              "filetype": "unknown",
-              "entropy": 2.6652255058288574,
-              "sha256": "a8723b6cd67785f8b43dad75a1eb9b383db0e8a9a0b36378c2dcaef003aad4fd",
-              "type": "RT_STRING"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 7718.77,
-              "filetype": "ICO",
-              "entropy": 2.7178714275360107,
-              "sha256": "b4a86ff543995d1a1dcad86ec767539180bbe55d27b306186eb5fa4bc3d5872f",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 13806.08,
-              "filetype": "XML",
-              "entropy": 5.227919578552246,
-              "sha256": "c410d24baf3bcd455d35b9eb44ca14dee587be9e1e167fc6d8788ef56aa134fd",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "ENGLISH US": 25
-          },
-          "resource_types": {
-            "RT_DIALOG": 6,
-            "RT_ICON": 7,
-            "RT_MANIFEST": 1,
-            "RT_STRING": 9,
-            "RT_BITMAP": 1,
-            "RT_GROUP_ICON": 1
-          },
-          "overlay": {
-            "chi2": 529.43,
-            "filetype": "RAR",
-            "entropy": 7.999441623687744,
-            "offset": 484864,
-            "size": 686713,
-            "md5": "3bcbae9cfdfb4a44558b2c01f7d1c980"
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 809920.19,
-              "virtual_address": 4096,
-              "flags": "rx",
-              "raw_size": 152064,
-              "entropy": 6.7,
-              "virtual_size": 151918,
-              "md5": "91169bb13f82823bff5caa7a5fc63ddf"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 613389.81,
-              "virtual_address": 159744,
-              "flags": "r",
-              "raw_size": 20480,
-              "entropy": 5.33,
-              "virtual_size": 20291,
-              "md5": "07955898944e5130e7d85a9c19a8552e"
-            },
-            {
-              "name": ".data",
-              "chi2": 709285.38,
-              "virtual_address": 180224,
-              "flags": "rw",
-              "raw_size": 5120,
-              "entropy": 2.54,
-              "virtual_size": 136672,
-              "md5": "364c31a6fc642180480523f46127a9d9"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 5633375.0,
-              "virtual_address": 319488,
-              "flags": "r",
-              "raw_size": 306176,
-              "entropy": 5.17,
-              "virtual_size": 305792,
-              "md5": "af44d83351fb614730009225f03a1bc2"
-            }
-          ],
-          "compiler_product_versions": [
-            "[ASM] VS2008 SP1 build 30729 count=27",
-            "[ C ] VS2008 SP1 build 30729 count=128",
-            "[IMP] VS2008 SP1 build 30729 count=21",
-            "[---] Unmarked objects count=237",
-            "[C++] VS2008 SP1 build 30729 count=100",
-            "[EXP] VS2008 SP1 build 30729 count=1",
-            "[RES] VS2008 SP1 [9.0] build 30729 count=1",
-            "[LNK] VS2008 SP1 build 30729 count=1"
-          ],
-          "rich_pe_header_hash": "3c0b12db306768e0c503d8b146df98c0",
-          "import_list": [
-            {
-              "library_name": "COMCTL32.dll",
-              "imported_functions": [
-                "InitCommonControlsEx"
-              ]
-            },
-            {
-              "library_name": "SHLWAPI.dll",
-              "imported_functions": [
-                "SHAutoComplete"
-              ]
-            },
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "CloseHandle",
-                "CompareStringW",
-                "CreateDirectoryW",
-                "CreateEventW",
-                "CreateFileA",
-                "CreateFileMappingW",
-                "CreateFileW",
-                "CreateHardLinkW",
-                "CreateSemaphoreW",
-                "CreateThread",
-                "DeleteCriticalSection",
-                "DeleteFileW",
-                "DeviceIoControl",
-                "DosDateTimeToFileTime",
-                "EnterCriticalSection",
-                "ExitProcess",
-                "ExpandEnvironmentStringsW",
-                "FileTimeToLocalFileTime",
-                "FileTimeToSystemTime",
-                "FindClose",
-                "FindFirstFileW",
-                "FindNextFileW",
-                "FindResourceW",
-                "FlushFileBuffers",
-                "FreeEnvironmentStringsA",
-                "FreeEnvironmentStringsW",
-                "FreeLibrary",
-                "GetACP",
-                "GetCommandLineA",
-                "GetCommandLineW",
-                "GetConsoleCP",
-                "GetConsoleMode",
-                "GetConsoleOutputCP",
-                "GetCPInfo",
-                "GetCurrentDirectoryW",
-                "GetCurrentProcess",
-                "GetCurrentProcessId",
-                "GetCurrentThreadId",
-                "GetDateFormatW",
-                "GetEnvironmentStrings",
-                "GetEnvironmentStringsW",
-                "GetExitCodeProcess",
-                "GetFileAttributesW",
-                "GetFileType",
-                "GetFullPathNameW",
-                "GetLastError",
-                "GetLocaleInfoA",
-                "GetLocaleInfoW",
-                "GetLongPathNameW",
-                "GetModuleFileNameA",
-                "GetModuleFileNameW",
-                "GetModuleHandleW",
-                "GetNumberFormatW",
-                "GetOEMCP",
-                "GetProcAddress",
-                "GetProcessAffinityMask",
-                "GetShortPathNameW",
-                "GetStartupInfoA",
-                "GetStdHandle",
-                "GetStringTypeA",
-                "GetStringTypeW",
-                "GetSystemTime",
-                "GetSystemTimeAsFileTime",
-                "GetTempPathW",
-                "GetTickCount",
-                "GetTimeFormatW",
-                "GlobalAlloc",
-                "HeapAlloc",
-                "HeapCreate",
-                "HeapFree",
-                "HeapReAlloc",
-                "HeapSize",
-                "InitializeCriticalSection",
-                "InitializeCriticalSectionAndSpinCount",
-                "InterlockedDecrement",
-                "InterlockedIncrement",
-                "IsDBCSLeadByte",
-                "IsDebuggerPresent",
-                "IsValidCodePage",
-                "LCMapStringA",
-                "LCMapStringW",
-                "LeaveCriticalSection",
-                "LoadLibraryA",
-                "LoadLibraryW",
-                "LocalFileTimeToFileTime",
-                "MapViewOfFile",
-                "MoveFileExW",
-                "MoveFileW",
-                "MultiByteToWideChar",
-                "OpenFileMappingW",
-                "QueryPerformanceCounter",
-                "RaiseException",
-                "ReadFile",
-                "ReleaseSemaphore",
-                "RemoveDirectoryW",
-                "ResetEvent",
-                "RtlUnwind",
-                "SetCurrentDirectoryW",
-                "SetEndOfFile",
-                "SetEnvironmentVariableW",
-                "SetEvent",
-                "SetFileAttributesW",
-                "SetFilePointer",
-                "SetFileTime",
-                "SetHandleCount",
-                "SetLastError",
-                "SetStdHandle",
-                "SetThreadPriority",
-                "SetUnhandledExceptionFilter",
-                "Sleep",
-                "SystemTimeToFileTime",
-                "TerminateProcess",
-                "TlsAlloc",
-                "TlsFree",
-                "TlsGetValue",
-                "TlsSetValue",
-                "UnhandledExceptionFilter",
-                "UnmapViewOfFile",
-                "VirtualAlloc",
-                "VirtualFree",
-                "WaitForSingleObject",
-                "WideCharToMultiByte",
-                "WriteConsoleA",
-                "WriteConsoleW",
-                "WriteFile"
-              ]
-            },
-            {
-              "library_name": "USER32.dll",
-              "imported_functions": [
-                "CharUpperW",
-                "CopyRect",
-                "CreateWindowExW",
-                "DefWindowProcW",
-                "DestroyIcon",
-                "DestroyWindow",
-                "DialogBoxParamW",
-                "DispatchMessageW",
-                "EnableWindow",
-                "EndDialog",
-                "FindWindowExW",
-                "GetClassNameW",
-                "GetClientRect",
-                "GetDC",
-                "GetDlgItem",
-                "GetDlgItemTextW",
-                "GetMessageW",
-                "GetParent",
-                "GetSysColor",
-                "GetSystemMetrics",
-                "GetWindow",
-                "GetWindowLongW",
-                "GetWindowRect",
-                "GetWindowTextW",
-                "IsWindow",
-                "IsWindowVisible",
-                "LoadBitmapW",
-                "LoadCursorW",
-                "LoadIconW",
-                "LoadStringW",
-                "MapWindowPoints",
-                "MessageBoxW",
-                "OemToCharBuffA",
-                "PeekMessageW",
-                "PostMessageW",
-                "RegisterClassExW",
-                "ReleaseDC",
-                "SendDlgItemMessageW",
-                "SendMessageW",
-                "SetDlgItemTextW",
-                "SetFocus",
-                "SetForegroundWindow",
-                "SetWindowLongW",
-                "SetWindowPos",
-                "SetWindowTextW",
-                "ShowWindow",
-                "TranslateMessage",
-                "UpdateWindow",
-                "WaitForInputIdle",
-                "wvsprintfW"
-              ]
-            },
-            {
-              "library_name": "GDI32.dll",
-              "imported_functions": [
-                "CreateCompatibleBitmap",
-                "CreateCompatibleDC",
-                "DeleteDC",
-                "DeleteObject",
-                "GetDeviceCaps",
-                "GetObjectW",
-                "SelectObject",
-                "StretchBlt"
-              ]
-            },
-            {
-              "library_name": "COMDLG32.dll",
-              "imported_functions": [
-                "CommDlgExtendedError",
-                "GetOpenFileNameW",
-                "GetSaveFileNameW"
-              ]
-            },
-            {
-              "library_name": "ADVAPI32.dll",
-              "imported_functions": [
-                "AdjustTokenPrivileges",
-                "LookupPrivilegeValueW",
-                "OpenProcessToken",
-                "RegCloseKey",
-                "RegCreateKeyExW",
-                "RegOpenKeyExW",
-                "RegQueryValueExW",
-                "RegSetValueExW",
-                "SetFileSecurityW"
-              ]
-            },
-            {
-              "library_name": "SHELL32.dll",
-              "imported_functions": [
-                "SHBrowseForFolderW",
-                "SHChangeNotify",
-                "ShellExecuteExW",
-                "SHFileOperationW",
-                "SHGetFileInfoW",
-                "SHGetMalloc",
-                "SHGetPathFromIDListW",
-                "SHGetSpecialFolderLocation"
-              ]
-            },
-            {
-              "library_name": "ole32.dll",
-              "imported_functions": [
-                "CLSIDFromString",
-                "CoCreateInstance",
-                "CreateStreamOnHGlobal",
-                "OleInitialize",
-                "OleUninitialize"
-              ]
-            },
-            {
-              "library_name": "OLEAUT32.dll",
-              "imported_functions": [
-                "VariantInit"
-              ]
-            }
-          ]
-        },
-        "last_analysis_stats": {
-          "malicious": 57,
-          "suspicious": 0,
-          "undetected": 11,
-          "harmless": 0,
-          "timeout": 1,
-          "confirmed-timeout": 0,
-          "failure": 3,
-          "type-unsupported": 4
-        },
-        "times_submitted": 11,
-        "first_seen_itw_date": 1424809555,
-        "type_extension": "exe",
-        "last_modification_date": 1770278820,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
-        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:h35dPpXWcUEay5OP89xpmi/cgrqWdfj9",
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 2,
-          "medium": 2,
-          "low": 3
-        },
-        "sigma_analysis_summary": {
-          "SOC Prime Threat Detection Marketplace": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 2,
-            "medium": 2,
-            "low": 3
-          }
-        },
-        "sha1": "e76da232ec020d133530fdd52ffcc38b7c1d7662",
-        "type_tag": "peexe"
+        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTcUEaOqJJIZ5+AJOPbg9xsdeL2zi/zxHSJ8:h35dPpXWcUEay5OP89xpmi/cgrqWdfj9"
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "722ea0d047085fd7b44d0d7cb9ab4645746219a29d2803ae1a4961010d081916",
+      "attributes": {}
+    },
+    {
+      "id": "59a573269fe91e1019c989feb87133bb3a4c2fb40afb96b8486c0873c223bd86",
+      "attributes": {}
+    },
+    {
+      "id": "ab69d30dd3b620cdb09e3f2f20403bf41c30b625af640591659841eb4eaf9145",
+      "attributes": {}
+    },
+    {
+      "id": "bd543c930a3fe5e24e843bad9b056289e0b8d9aaddba2bfff7e5326accc5aa97",
+      "attributes": {}
+    },
+    {
+      "id": "c7711c3e4018b2a638b044b23d3fc00b0fdaaeb2a67f5c074e635e04cf2b9b6a",
+      "attributes": {}
+    }
+  ]
 }

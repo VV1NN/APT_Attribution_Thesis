@@ -1,12 +1,51 @@
 {
   "sha256": "9074b8bdb402a8f483c0aa0b2a4498b6d2530a35d2c560f131ceb9e675b0525b",
-  "query_time": "2026-03-17T01:11:30.824490+00:00",
+  "query_time": "2026-03-24T05:55:53.861367+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [
     {
       "id": "0d819f94ab07f70fbd9a141891f8597b30c7c7b53f897ab31ba35d046541735b",
       "attributes": {
+        "md5": "9dc0a7c6ad183a81e32076b438b67dfd",
+        "tags": [
+          "docx"
+        ],
+        "size": 18118,
+        "type_tag": "docx",
+        "bundle_info": {
+          "highest_datetime": "1980-01-01 00:00:00",
+          "lowest_datetime": "1980-01-01 00:00:00",
+          "num_children": 17,
+          "extensions": {
+            "xml": 14
+          },
+          "file_types": {
+            "XML": 17
+          },
+          "type": "DOCX",
+          "uncompressed_size": 88927
+        },
+        "tlsh": "T17F829E3EC2423418C16B57BD69AD94F2F54805D3D226A89D244CBBEC97C89DF6339E88",
+        "creation_date": 1615814760,
+        "last_submission_date": 1692817045,
+        "magic": "Microsoft Word 2007+",
+        "sha1": "96a05a7eca47dff585046c18b793cac5afbb7613",
+        "ssdeep": "384:Jg+LC78AWaRIuGH2izefxY4PzgBYVQF9p0lhS0nhJJP:K8i/wefxYozg+Qvp0lhS0pP",
+        "names": [
+          "Normal.dotm (copy)",
+          "~WRD0000.tmp"
+        ],
+        "last_analysis_stats": {
+          "malicious": 0,
+          "suspicious": 0,
+          "undetected": 57,
+          "harmless": 0,
+          "timeout": 2,
+          "confirmed-timeout": 1,
+          "failure": 3,
+          "type-unsupported": 12
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -609,31 +648,16 @@
             "result": null
           }
         },
-        "last_modification_date": 1692908828,
         "times_submitted": 1,
-        "tags": [
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
           "docx"
         ],
-        "sha256": "0d819f94ab07f70fbd9a141891f8597b30c7c7b53f897ab31ba35d046541735b",
-        "md5": "9dc0a7c6ad183a81e32076b438b67dfd",
-        "last_submission_date": 1692817045,
-        "ssdeep": "384:Jg+LC78AWaRIuGH2izefxY4PzgBYVQF9p0lhS0nhJJP:K8i/wefxYozg+Qvp0lhS0pP",
-        "type_tag": "docx",
-        "first_submission_date": 1692817045,
-        "tlsh": "T17F829E3EC2423418C16B57BD69AD94F2F54805D3D226A89D244CBBEC97C89DF6339E88",
-        "size": 18118,
         "type_extension": "docx",
         "last_analysis_date": 1692817045,
-        "meaningful_name": "Normal.dotm (copy)",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "names": [
-          "Normal.dotm (copy)",
-          "~WRD0000.tmp"
-        ],
-        "creation_date": 1615814760,
         "sandbox_verdicts": {
           "C2AE": {
             "category": "undetected",
@@ -643,21 +667,7 @@
             ]
           }
         },
-        "magic": "Microsoft Word 2007+",
-        "type_description": "Office Open XML Document",
-        "bundle_info": {
-          "highest_datetime": "1980-01-01 00:00:00",
-          "lowest_datetime": "1980-01-01 00:00:00",
-          "num_children": 17,
-          "extensions": {
-            "xml": 14
-          },
-          "file_types": {
-            "XML": 17
-          },
-          "type": "DOCX",
-          "uncompressed_size": 88927
-        },
+        "last_modification_date": 1692908828,
         "trid": [
           {
             "file_type": "Word Microsoft Office Open XML Format document",
@@ -676,58 +686,47 @@
             "probability": 2.1
           }
         ],
+        "type_description": "Office Open XML Document",
+        "vhash": "fce13bcc5d91f8902b430d180a039ae7",
         "unique_sources": 1,
-        "type_tags": [
-          "document",
-          "msoffice",
-          "text",
-          "word",
-          "docx"
-        ],
-        "sha1": "96a05a7eca47dff585046c18b793cac5afbb7613",
-        "last_analysis_stats": {
-          "malicious": 0,
-          "suspicious": 0,
-          "undetected": 57,
+        "total_votes": {
           "harmless": 0,
-          "timeout": 2,
-          "confirmed-timeout": 1,
-          "failure": 3,
-          "type-unsupported": 12
+          "malicious": 0
         },
         "reputation": 0,
-        "vhash": "fce13bcc5d91f8902b430d180a039ae7"
+        "meaningful_name": "Normal.dotm (copy)",
+        "sha256": "0d819f94ab07f70fbd9a141891f8597b30c7c7b53f897ab31ba35d046541735b",
+        "first_submission_date": 1692817045
       }
     },
     {
       "id": "ecb449d83a608c62fc36fd8c284f2b90e56b69a4ab8445260fc29a92378c9d29",
       "attributes": {
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "002bb473a9",
-            "rule_name": "EXE_in_LNK",
-            "ruleset_name": "LNK_Ruleset",
-            "description": "Identifies executable artefacts in shortcut (LNK) files.",
-            "author": "@bartblaze",
-            "source": "https://github.com/bartblaze/Yara-rules"
-          },
-          {
-            "ruleset_id": "002bb473a9",
-            "rule_name": "MSOffice_in_LNK",
-            "ruleset_name": "LNK_Ruleset",
-            "description": "Identifies Microsoft Office artefacts in shortcut (LNK) files.",
-            "author": "@bartblaze",
-            "source": "https://github.com/bartblaze/Yara-rules"
-          },
-          {
-            "ruleset_id": "002bb473a9",
-            "rule_name": "Long_RelativePath_LNK",
-            "ruleset_name": "LNK_Ruleset",
-            "description": "Identifies shortcut (LNK) file with a long relative path. Might be used in an attempt to hide the path.",
-            "author": "@bartblaze",
-            "source": "https://github.com/bartblaze/Yara-rules"
-          }
+        "md5": "822e10c3c23cc09b5153706d50687cf6",
+        "tags": [
+          "lnk"
         ],
+        "size": 1034,
+        "type_tag": "lnk",
+        "tlsh": "T16111231B5A8E1B32D69683B6F9B26155D7773C0AFB541F0E44B4C3044C953003855E2F",
+        "creation_date": 1686819058,
+        "last_submission_date": 1692817149,
+        "magic": "MS Windows shortcut, Item id list present, Points to a file or directory, Has Relative path, Archive, ctime=Thu Jun 15 08:50:58 2023, mtime=Thu Aug 24 01:54:29 2023, atime=Thu Aug 24 01:54:24 2023, length=84148, window=hide",
+        "sha1": "27ae64b7481608157afd258495682a658d5a5cb0",
+        "ssdeep": "12:8DtspRUHKClCHiU2G9DXnQHX+WUYKGlFfAXWjAHBtxDy6g7+lbYqlziiYyPz8bmy:8M29eD9DnkAFDyzab/E0PKmy",
+        "names": [
+          "readme.LNK"
+        ],
+        "last_analysis_stats": {
+          "malicious": 4,
+          "suspicious": 0,
+          "undetected": 54,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 2,
+          "type-unsupported": 15
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1330,12 +1329,6 @@
             "result": null
           }
         },
-        "last_modification_date": 1692940111,
-        "times_submitted": 1,
-        "tags": [
-          "lnk"
-        ],
-        "sha256": "ecb449d83a608c62fc36fd8c284f2b90e56b69a4ab8445260fc29a92378c9d29",
         "lnk_info": {
           "volume_serial_number": "9490-7ded",
           "modification_date": "2023-08-24T01:54:24.630993Z",
@@ -1354,24 +1347,13 @@
           "access_date": "2023-08-24T01:54:29.537239Z",
           "machine_id": "675052"
         },
-        "md5": "822e10c3c23cc09b5153706d50687cf6",
-        "last_submission_date": 1692817149,
-        "ssdeep": "12:8DtspRUHKClCHiU2G9DXnQHX+WUYKGlFfAXWjAHBtxDy6g7+lbYqlziiYyPz8bmy:8M29eD9DnkAFDyzab/E0PKmy",
-        "type_tag": "lnk",
-        "first_submission_date": 1692817149,
-        "tlsh": "T16111231B5A8E1B32D69683B6F9B26155D7773C0AFB541F0E44B4C3044C953003855E2F",
-        "size": 1034,
+        "times_submitted": 1,
+        "type_tags": [
+          "windows",
+          "lnk"
+        ],
         "type_extension": "lnk",
         "last_analysis_date": 1692817149,
-        "meaningful_name": "readme.LNK",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "names": [
-          "readme.LNK"
-        ],
-        "creation_date": 1686819058,
         "sandbox_verdicts": {
           "C2AE": {
             "category": "undetected",
@@ -1381,35 +1363,55 @@
             ]
           }
         },
-        "magic": "MS Windows shortcut, Item id list present, Points to a file or directory, Has Relative path, Archive, ctime=Thu Jun 15 08:50:58 2023, mtime=Thu Aug 24 01:54:29 2023, atime=Thu Aug 24 01:54:24 2023, length=84148, window=hide",
-        "type_description": "Windows shortcut",
+        "last_modification_date": 1692940111,
         "trid": [
           {
             "file_type": "Windows Shortcut",
             "probability": 100.0
           }
         ],
-        "unique_sources": 1,
-        "type_tags": [
-          "windows",
-          "lnk"
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "002bb473a9",
+            "rule_name": "EXE_in_LNK",
+            "ruleset_name": "LNK_Ruleset",
+            "description": "Identifies executable artefacts in shortcut (LNK) files.",
+            "author": "@bartblaze",
+            "source": "https://github.com/bartblaze/Yara-rules"
+          },
+          {
+            "ruleset_id": "002bb473a9",
+            "rule_name": "MSOffice_in_LNK",
+            "ruleset_name": "LNK_Ruleset",
+            "description": "Identifies Microsoft Office artefacts in shortcut (LNK) files.",
+            "author": "@bartblaze",
+            "source": "https://github.com/bartblaze/Yara-rules"
+          },
+          {
+            "ruleset_id": "002bb473a9",
+            "rule_name": "Long_RelativePath_LNK",
+            "ruleset_name": "LNK_Ruleset",
+            "description": "Identifies shortcut (LNK) file with a long relative path. Might be used in an attempt to hide the path.",
+            "author": "@bartblaze",
+            "source": "https://github.com/bartblaze/Yara-rules"
+          }
         ],
-        "sha1": "27ae64b7481608157afd258495682a658d5a5cb0",
-        "last_analysis_stats": {
-          "malicious": 4,
-          "suspicious": 0,
-          "undetected": 54,
+        "type_description": "Windows shortcut",
+        "vhash": "ed1227af5eeb04c5fb3e308bb68df4af",
+        "unique_sources": 1,
+        "total_votes": {
           "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 2,
-          "type-unsupported": 15
+          "malicious": 0
         },
         "reputation": 0,
-        "vhash": "ed1227af5eeb04c5fb3e308bb68df4af"
+        "meaningful_name": "readme.LNK",
+        "sha256": "ecb449d83a608c62fc36fd8c284f2b90e56b69a4ab8445260fc29a92378c9d29",
+        "first_submission_date": 1692817149
       }
     }
   ],
   "execution_parents": [],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

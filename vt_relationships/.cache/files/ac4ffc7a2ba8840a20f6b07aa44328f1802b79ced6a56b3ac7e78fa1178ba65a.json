@@ -1,6 +1,6 @@
 {
   "sha256": "ac4ffc7a2ba8840a20f6b07aa44328f1802b79ced6a56b3ac7e78fa1178ba65a",
-  "query_time": "2026-03-20T09:51:17.083998+00:00",
+  "query_time": "2026-03-24T06:29:54.035916+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,40 +8,22 @@
     {
       "id": "1a67f53e2ab4ab200bce21e13268bc2c352d4afc264b41f2e103d62a88b2a040",
       "attributes": {
-        "sha1": "3bbdbdc1826e1bca71acfd6205d90ffb14942554",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
+        "creation_date": 1374825217,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 0
         },
-        "trid": [
-          {
-            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
-            "probability": 91.0
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 3.6
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 1.7
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 1.5
-          },
-          {
-            "file_type": "OS/2 Executable (generic)",
-            "probability": 0.6
-          }
-        ],
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:Q35dPpXWuil+KBFU4L1onw/VCblTd",
         "tags": [
           "spreader",
           "peexe",
           "overlay"
         ],
+        "size": 1173333,
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cozyduke/zusy",
           "popular_threat_category": [
             {
               "count": 18,
@@ -56,7 +38,6 @@
               "value": "dropper"
             }
           ],
-          "suggested_threat_label": "trojan.cozyduke/zusy",
           "popular_threat_name": [
             {
               "count": 9,
@@ -72,6 +53,42 @@
             }
           ]
         },
+        "names": [
+          "exemplar"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "last_analysis_stats": {
+          "malicious": 52,
+          "suspicious": 0,
+          "undetected": 20,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
+        },
+        "tlsh": "T131454802954884AFE303C73314AA63D0D151A83F2A2F679A3E55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -615,24 +632,8 @@
             }
           ]
         },
-        "md5": "d7792a2ea6e50211425ea5b0e2f89032",
-        "last_analysis_date": 1751674706,
-        "tlsh": "T131454802954884AFE303C73314AA63D0D151A83F2A2F679A3E55711BFF7DD8BA1C275A",
-        "reputation": 0,
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
-        },
-        "ssdeep": "12288:Hw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:Q35dPpXWuil+KBFU4L1onw/VCblTd",
+        "sha1": "3bbdbdc1826e1bca71acfd6205d90ffb14942554",
+        "sha256": "1a67f53e2ab4ab200bce21e13268bc2c352d4afc264b41f2e103d62a88b2a040",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -641,13 +642,89 @@
             "low": 0
           }
         },
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "unique_sources": 1,
+        "type_description": "Win32 EXE",
+        "authentihash": "a8f369dc3139a7d56a071e9ad2df9e40a2dcd7416f70908940f4f62c21b71e73",
+        "last_analysis_date": 1751674706,
+        "last_submission_date": 1751674706,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New RUN Key Pointing to Suspicious Folder",
+            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Resources"
+                }
+              },
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_x64"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\clinfo_System"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Resources"
+                }
+              },
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_x64"
+                }
+              },
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\clinfo_System"
+                }
+              }
+            ]
+          }
+        ],
         "filecondis": {
           "raw_md5": "7b622bd72e36813d5b0b9cdf5f1b7c8c",
           "dhash": "0000001f1e150c08"
         },
-        "type_description": "Win32 EXE",
-        "unique_sources": 1,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "first_submission_date": 1751674706,
+        "last_modification_date": 1751801436,
+        "md5": "d7792a2ea6e50211425ea5b0e2f89032",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1258,85 +1335,14 @@
             "result": null
           }
         },
-        "last_submission_date": 1751674706,
-        "creation_date": 1374825217,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "New RUN Key Pointing to Suspicious Folder",
-            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
-            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Resources"
-                }
-              },
-              {
-                "values": {
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_x64"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\clinfo_System"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "CurrentVersion Autorun Keys Modification",
-            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
-            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Resources"
-                }
-              },
-              {
-                "values": {
-                  "EventType": "SetValue",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_x64"
-                }
-              },
-              {
-                "values": {
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\clinfo_System"
-                }
-              }
-            ]
-          }
-        ],
-        "sha256": "1a67f53e2ab4ab200bce21e13268bc2c352d4afc264b41f2e103d62a88b2a040",
         "type_tag": "peexe",
-        "names": [
-          "exemplar"
-        ],
-        "meaningful_name": "exemplar",
-        "type_extension": "exe",
+        "reputation": 0,
+        "times_submitted": 1,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "magika": "PEBIN",
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -1364,68 +1370,42 @@
             }
           ]
         },
-        "first_submission_date": 1751674706,
-        "times_submitted": 1,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
+        "trid": [
+          {
+            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
+            "probability": 91.0
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 3.6
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 1.7
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 1.5
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 0.6
+          }
         ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 0
-        },
-        "last_analysis_stats": {
-          "malicious": 52,
-          "suspicious": 0,
-          "undetected": 20,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_modification_date": 1751801436,
-        "size": 1173333,
-        "authentihash": "a8f369dc3139a7d56a071e9ad2df9e40a2dcd7416f70908940f4f62c21b71e73"
+        "meaningful_name": "exemplar"
       }
     },
     {
       "id": "3cd961a79b287696c92c5759b92d97dc7e4f723e46711b838e754d5c25af9736",
       "attributes": {
-        "sha1": "dd3d3e0aef671ae5ad557cc08b9f3a8a63f0f44f",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
+        "creation_date": 1374825217,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 2,
+          "medium": 1,
+          "low": 2
         },
-        "trid": [
-          {
-            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
-            "probability": 80.5
-          },
-          {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 9.4
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 3.1
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 1.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 1.5
-          }
-        ],
-        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+        "ssdeep": "12288:Qw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph80:J35dPpXWuil+KBFU4L1onw/VCblT9",
         "tags": [
           "peexe",
           "overlay",
@@ -1438,6 +1418,51 @@
           "invalid-signature",
           "spreader"
         ],
+        "size": 1182381,
+        "names": [
+          "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "last_analysis_stats": {
+          "malicious": 54,
+          "suspicious": 0,
+          "undetected": 17,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 7,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 80,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "malware_names": [
+              "CozyDuke"
+            ]
+          }
+        },
+        "tlsh": "T1B4454802954844AFE303C73314AAA3D0D150A87F2A2E77AA3D55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -1981,10 +2006,8 @@
             }
           ]
         },
-        "md5": "4c4f20b0c61dde21b426e6ce97dd1452",
-        "last_analysis_date": 1659994715,
-        "tlsh": "T1B4454802954844AFE303C73314AAA3D0D150A87F2A2E77AA3D55711BFF7DD8BA1C275A",
-        "reputation": 0,
+        "sha1": "dd3d3e0aef671ae5ad557cc08b9f3a8a63f0f44f",
+        "sha256": "3cd961a79b287696c92c5759b92d97dc7e4f723e46711b838e754d5c25af9736",
         "signature_info": {
           "verified": "The digital signature of the object did not verify.",
           "signing date": "10:32 AM 03/22/2022",
@@ -2103,28 +2126,6 @@
             }
           ]
         },
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "confidence": 7,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 80,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "malware_names": [
-              "CozyDuke"
-            ]
-          }
-        },
-        "ssdeep": "12288:Qw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph80:J35dPpXWuil+KBFU4L1onw/VCblT9",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -2133,9 +2134,269 @@
             "low": 2
           }
         },
-        "type_description": "Win32 EXE",
+        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
         "unique_sources": 2,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "authentihash": "11d02f2f206179c55912714f8fa80434d705241bbc2f586a2af3de0f6200a320",
+        "last_analysis_date": 1659994715,
+        "last_submission_date": 1659994715,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "e4d5f1be0673fa786cc8379c15338af08cdd11eed433bead9e801d6204d42a2d",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Python Initiated Connection",
+            "rule_description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "584",
+                  "DestinationPortName": "-",
+                  "Protocol": "udp",
+                  "Initiated": "true",
+                  "DestinationIp": "255.255.255.255",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "RuleName": "Usermode",
+                  "DestinationHostname": "-",
+                  "UtcTime": "2022-07-25 18:28:09.321",
+                  "User": "work\\admin",
+                  "DestinationPort": "12345",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "SourcePort": "53907",
+                  "SourceIsIpv6": "false",
+                  "SourceHostname": "-",
+                  "SourceIp": "192.168.122.91",
+                  "DestinationIsIpv6": "false"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "584",
+                  "DestinationPortName": "-",
+                  "SourceIsIpv6": "false",
+                  "Initiated": "true",
+                  "DestinationIp": "74.125.142.153",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "RuleName": "Usermode",
+                  "DestinationHostname": "-",
+                  "UtcTime": "2022-07-25 18:28:19.671",
+                  "User": "work\\admin",
+                  "DestinationPort": "443",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "SourcePort": "49168",
+                  "Protocol": "tcp",
+                  "SourceHostname": "-",
+                  "SourceIp": "192.168.122.91",
+                  "DestinationIsIpv6": "false"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "584",
+                  "DestinationPortName": "-",
+                  "SourceIsIpv6": "false",
+                  "Initiated": "true",
+                  "DestinationIp": "74.125.142.153",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "RuleName": "Usermode",
+                  "DestinationHostname": "-",
+                  "UtcTime": "2022-07-25 18:28:20.268",
+                  "User": "work\\admin",
+                  "DestinationPort": "443",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "SourcePort": "49169",
+                  "Protocol": "tcp",
+                  "SourceHostname": "-",
+                  "SourceIp": "192.168.122.91",
+                  "DestinationIsIpv6": "false"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "584",
+                  "DestinationPortName": "-",
+                  "Protocol": "tcp",
+                  "DestinationIp": "74.125.142.153",
+                  "Initiated": "true",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "RuleName": "Usermode",
+                  "DestinationHostname": "-",
+                  "UtcTime": "2022-07-25 18:28:24.338",
+                  "User": "work\\admin",
+                  "DestinationPort": "443",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "SourcePort": "49170",
+                  "SourceIsIpv6": "false",
+                  "SourceHostname": "-",
+                  "SourceIp": "192.168.122.91",
+                  "DestinationIsIpv6": "false"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "584",
+                  "DestinationPortName": "-",
+                  "Protocol": "tcp",
+                  "Initiated": "true",
+                  "DestinationIp": "74.125.142.153",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "RuleName": "Usermode",
+                  "DestinationHostname": "-",
+                  "UtcTime": "2022-07-25 18:28:25.489",
+                  "User": "work\\admin",
+                  "DestinationPort": "443",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "SourcePort": "49171",
+                  "SourceIsIpv6": "false",
+                  "SourceHostname": "-",
+                  "SourceIp": "192.168.122.91",
+                  "DestinationIsIpv6": "false"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6720 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Deletion Via Del",
+            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6720 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Creation of an Executable by an Executable",
+            "rule_description": "Detects the creation of an executable by another executable",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "584",
+                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-4f78d0608e7dfbd474435be2ad80694f\\frida-winjector-helper-32.exe",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "CreationUtcTime": "2022-07-25 18:28:16.390",
+                  "UtcTime": "2022-07-25 18:28:16.390",
+                  "RuleName": "EXE",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "584",
+                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
+                  "CreationUtcTime": "2022-07-25 18:28:17.328",
+                  "UtcTime": "2022-07-25 18:28:17.328",
+                  "RuleName": "EXE",
+                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-4f78d0608e7dfbd474435be2ad80694f\\frida-winjector-helper-64.exe"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "11",
+                  "ProcessId": "2400",
+                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "ProcessGuid": "5240FBE6-E0BF-62DE-9800-000000002400",
+                  "CreationUtcTime": "2022-07-25 18:28:19.125",
+                  "UtcTime": "2022-07-25 18:28:19.125",
+                  "RuleName": "EXE",
+                  "Image": "C:\\Users\\admin\\Downloads\\9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced.exe"
+                }
+              }
+            ]
+          }
+        ],
+        "first_submission_date": 1658798775,
+        "last_modification_date": 1747908842,
+        "md5": "4c4f20b0c61dde21b426e6ce97dd1452",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -2738,303 +2999,9 @@
             "result": null
           }
         },
-        "last_submission_date": 1659994715,
-        "creation_date": 1374825217,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
-            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
-            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "Description": "Windows host process (Rundll32)",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "e4d5f1be0673fa786cc8379c15338af08cdd11eed433bead9e801d6204d42a2d",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Python Initiated Connection",
-            "rule_description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "3",
-                  "ProcessId": "584",
-                  "DestinationPortName": "-",
-                  "Protocol": "udp",
-                  "Initiated": "true",
-                  "DestinationIp": "255.255.255.255",
-                  "SourcePortName": "-",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "RuleName": "Usermode",
-                  "DestinationHostname": "-",
-                  "UtcTime": "2022-07-25 18:28:09.321",
-                  "User": "work\\admin",
-                  "DestinationPort": "12345",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "SourcePort": "53907",
-                  "SourceIsIpv6": "false",
-                  "SourceHostname": "-",
-                  "SourceIp": "192.168.122.91",
-                  "DestinationIsIpv6": "false"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "3",
-                  "ProcessId": "584",
-                  "DestinationPortName": "-",
-                  "SourceIsIpv6": "false",
-                  "Initiated": "true",
-                  "DestinationIp": "74.125.142.153",
-                  "SourcePortName": "-",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "RuleName": "Usermode",
-                  "DestinationHostname": "-",
-                  "UtcTime": "2022-07-25 18:28:19.671",
-                  "User": "work\\admin",
-                  "DestinationPort": "443",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "SourcePort": "49168",
-                  "Protocol": "tcp",
-                  "SourceHostname": "-",
-                  "SourceIp": "192.168.122.91",
-                  "DestinationIsIpv6": "false"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "3",
-                  "ProcessId": "584",
-                  "DestinationPortName": "-",
-                  "SourceIsIpv6": "false",
-                  "Initiated": "true",
-                  "DestinationIp": "74.125.142.153",
-                  "SourcePortName": "-",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "RuleName": "Usermode",
-                  "DestinationHostname": "-",
-                  "UtcTime": "2022-07-25 18:28:20.268",
-                  "User": "work\\admin",
-                  "DestinationPort": "443",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "SourcePort": "49169",
-                  "Protocol": "tcp",
-                  "SourceHostname": "-",
-                  "SourceIp": "192.168.122.91",
-                  "DestinationIsIpv6": "false"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "3",
-                  "ProcessId": "584",
-                  "DestinationPortName": "-",
-                  "Protocol": "tcp",
-                  "DestinationIp": "74.125.142.153",
-                  "Initiated": "true",
-                  "SourcePortName": "-",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "RuleName": "Usermode",
-                  "DestinationHostname": "-",
-                  "UtcTime": "2022-07-25 18:28:24.338",
-                  "User": "work\\admin",
-                  "DestinationPort": "443",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "SourcePort": "49170",
-                  "SourceIsIpv6": "false",
-                  "SourceHostname": "-",
-                  "SourceIp": "192.168.122.91",
-                  "DestinationIsIpv6": "false"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "3",
-                  "ProcessId": "584",
-                  "DestinationPortName": "-",
-                  "Protocol": "tcp",
-                  "Initiated": "true",
-                  "DestinationIp": "74.125.142.153",
-                  "SourcePortName": "-",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "RuleName": "Usermode",
-                  "DestinationHostname": "-",
-                  "UtcTime": "2022-07-25 18:28:25.489",
-                  "User": "work\\admin",
-                  "DestinationPort": "443",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "SourcePort": "49171",
-                  "SourceIsIpv6": "false",
-                  "SourceHostname": "-",
-                  "SourceIp": "192.168.122.91",
-                  "DestinationIsIpv6": "false"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
-            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "EventID": "1",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6720 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "File Deletion Via Del",
-            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6720 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6720 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Creation of an Executable by an Executable",
-            "rule_description": "Detects the creation of an executable by another executable",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "584",
-                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-4f78d0608e7dfbd474435be2ad80694f\\frida-winjector-helper-32.exe",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "CreationUtcTime": "2022-07-25 18:28:16.390",
-                  "UtcTime": "2022-07-25 18:28:16.390",
-                  "RuleName": "EXE",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "584",
-                  "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
-                  "ProcessGuid": "5240FBE6-E0AF-62DE-3B00-000000002400",
-                  "CreationUtcTime": "2022-07-25 18:28:17.328",
-                  "UtcTime": "2022-07-25 18:28:17.328",
-                  "RuleName": "EXE",
-                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-4f78d0608e7dfbd474435be2ad80694f\\frida-winjector-helper-64.exe"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "11",
-                  "ProcessId": "2400",
-                  "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "ProcessGuid": "5240FBE6-E0BF-62DE-9800-000000002400",
-                  "CreationUtcTime": "2022-07-25 18:28:19.125",
-                  "UtcTime": "2022-07-25 18:28:19.125",
-                  "RuleName": "EXE",
-                  "Image": "C:\\Users\\admin\\Downloads\\9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced.exe"
-                }
-              }
-            ]
-          }
-        ],
-        "sha256": "3cd961a79b287696c92c5759b92d97dc7e4f723e46711b838e754d5c25af9736",
         "type_tag": "peexe",
-        "names": [
-          "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
-        ],
-        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced",
-        "type_extension": "exe",
-        "first_submission_date": 1658798775,
+        "reputation": 0,
         "times_submitted": 3,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 2,
-          "medium": 1,
-          "low": 2
-        },
-        "last_analysis_stats": {
-          "malicious": 54,
-          "suspicious": 0,
-          "undetected": 17,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_modification_date": 1747908842,
-        "size": 1182381,
-        "authentihash": "11d02f2f206179c55912714f8fa80434d705241bbc2f586a2af3de0f6200a320"
-      }
-    },
-    {
-      "id": "4eb74b4a13ef98f951df4faa593d97439039c4e121daf209a5bd7938e2f06f78",
-      "attributes": {
-        "sha1": "44caeff1571696e967b636f45991e0d908d554f3",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
@@ -3061,12 +3028,59 @@
             "probability": 1.5
           }
         ],
-        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
+      }
+    },
+    {
+      "id": "4eb74b4a13ef98f951df4faa593d97439039c4e121daf209a5bd7938e2f06f78",
+      "attributes": {
+        "creation_date": 1374825217,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "ssdeep": "12288:Sw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph8U:T35dPpXWuil+KBFU4L1onw/VCblT9",
         "tags": [
           "peexe",
           "spreader",
           "overlay"
         ],
+        "size": 1182381,
+        "names": [
+          "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "last_analysis_stats": {
+          "malicious": 49,
+          "suspicious": 0,
+          "undetected": 22,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "harmless",
+            "confidence": 7,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "CLEAN"
+            ]
+          }
+        },
+        "tlsh": "T1A3454802994844AFD303C73314AAA3D0D150A87F2A2E77AA3D55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -3610,10 +3624,8 @@
             }
           ]
         },
-        "md5": "03bcbff07267ff38be6c28e34539aeba",
-        "last_analysis_date": 1660590618,
-        "tlsh": "T1A3454802994844AFD303C73314AAA3D0D150A87F2A2E77AA3D55711BFF7DD8BA1C275A",
-        "reputation": 0,
+        "sha1": "44caeff1571696e967b636f45991e0d908d554f3",
+        "sha256": "4eb74b4a13ef98f951df4faa593d97439039c4e121daf209a5bd7938e2f06f78",
         "signature_info": {
           "x509": [
             {
@@ -3658,17 +3670,6 @@
             }
           ]
         },
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "harmless",
-            "confidence": 7,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "CLEAN"
-            ]
-          }
-        },
-        "ssdeep": "12288:Sw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph8U:T35dPpXWuil+KBFU4L1onw/VCblT9",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -3677,9 +3678,98 @@
             "low": 1
           }
         },
-        "type_description": "Win32 EXE",
+        "magic": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
         "unique_sources": 1,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "type_description": "Win32 EXE",
+        "authentihash": "7c7fb9daf4476af1f4d23da71fda9e37f9f72000a296e38b0f3a0add69af45e6",
+        "last_analysis_date": 1660590618,
+        "last_submission_date": 1660590618,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
+            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6076 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Deletion Via Del",
+            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
+                  "CommandLine": "/Q /C TASKKILL /F /PID 6076 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
+        "first_submission_date": 1660590618,
+        "last_modification_date": 1747891292,
+        "md5": "03bcbff07267ff38be6c28e34539aeba",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -4282,140 +4372,17 @@
             "result": null
           }
         },
-        "last_submission_date": 1660590618,
-        "creation_date": 1374825217,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
-            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
-            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=D7CA562B0DB4F4DD0F03A89A1FDAD63D,SHA256=4E15AA13A02798E924C63537E458A09415C48DAE0E7AFD5A3D25532A2AA935EE,IMPHASH=BB17B2FBBFF4BBF5EBDCA7D0BB9E4A5B",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "9312dc563b7e9a010a22b457fb7cd94e9c686b75dc20fcf8a10236dda0e5e2b4",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious CMD Shell Output Redirect",
-            "rule_description": "Detects inline Windows shell commands redirecting output via the \">\" symbol to a suspicious location.\nThis technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as \"hostname\" and \"dir\" to files for future exfiltration.\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6076 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "File Deletion Via Del",
-            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=F3BDBE3BB6F734E357235F4D5898582D,SHA256=3685495D051137B1C4EFDE22C26DF0883614B6453B762FA84588DA55ED2E7744,IMPHASH=0AF8419BE362159398343D7B31721726",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\u00ae Windows\u00ae Operating System",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set pid=6076 \"C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe\" ",
-                  "CommandLine": "/Q /C TASKKILL /F /PID 6076 > NUL & DEL /F /Q C:\\Users\\george\\AppData\\Local\\Temp\\reader_sl.exe > NUL",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\ATI_Subsystem\\atibtmon.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          }
-        ],
-        "sha256": "4eb74b4a13ef98f951df4faa593d97439039c4e121daf209a5bd7938e2f06f78",
         "type_tag": "peexe",
-        "names": [
-          "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
-        ],
-        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced",
-        "type_extension": "exe",
-        "first_submission_date": 1660590618,
+        "reputation": 0,
         "times_submitted": 1,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 1
-        },
-        "last_analysis_stats": {
-          "malicious": 49,
-          "suspicious": 0,
-          "undetected": 22,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_modification_date": 1747891292,
-        "size": 1182381,
-        "authentihash": "7c7fb9daf4476af1f4d23da71fda9e37f9f72000a296e38b0f3a0add69af45e6"
-      }
-    },
-    {
-      "id": "509347f4a5b81a65e327363b9eb6773d57cb6df0c834bfdb19eda8defcfecadb",
-      "attributes": {
-        "sha1": "9319bf72000f8e468c182947dd5c82fb8b9ae419",
         "total_votes": {
           "harmless": 0,
-          "malicious": 1
+          "malicious": 0
         },
         "trid": [
           {
             "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
-            "probability": 80.0
+            "probability": 80.5
           },
           {
             "file_type": "Win32 Executable MS Visual C++ (generic)",
@@ -4434,13 +4401,22 @@
             "probability": 1.5
           }
         ],
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419_sig_replaced"
+      }
+    },
+    {
+      "id": "509347f4a5b81a65e327363b9eb6773d57cb6df0c834bfdb19eda8defcfecadb",
+      "attributes": {
+        "creation_date": 1374825217,
+        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:h35dPpXWuil+KBFU4L1onw/VCblTd",
         "tags": [
           "peexe",
           "spreader",
           "overlay"
         ],
+        "size": 1172821,
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cozer/cozyduke",
           "popular_threat_category": [
             {
               "count": 26,
@@ -4455,7 +4431,6 @@
               "value": "pua"
             }
           ],
-          "suggested_threat_label": "trojan.cozer/cozyduke",
           "popular_threat_name": [
             {
               "count": 13,
@@ -4471,6 +4446,51 @@
             }
           ]
         },
+        "names": [
+          "9319bf72000f8e468c182947dd5c82fb8b9ae419.codex",
+          ".js",
+          "9319BF72000F8E468C182947DD5C82FB8B9AE419"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "first_seen_itw_date": 1424919723,
+        "last_analysis_stats": {
+          "malicious": 62,
+          "suspicious": 0,
+          "undetected": 10,
+          "harmless": 0,
+          "timeout": 1,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "crowdsourced_yara_results": [
+          {
+            "rule_name": "CozyDuke",
+            "author": "Intezer Analyze",
+            "ruleset_name": "RussianAPT",
+            "source": "https://github.com/intezer/yara-rules",
+            "ruleset_id": "006fbe881a",
+            "match_in_subfile": true
+          }
+        ],
+        "sandbox_verdicts": {
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "tlsh": "T1DF454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -5014,38 +5034,24 @@
             }
           ]
         },
-        "md5": "1ff0ed11fc6a41db458a75ae71670f94",
-        "crowdsourced_yara_results": [
-          {
-            "rule_name": "CozyDuke",
-            "author": "Intezer Analyze",
-            "ruleset_name": "RussianAPT",
-            "source": "https://github.com/intezer/yara-rules",
-            "ruleset_id": "006fbe881a",
-            "match_in_subfile": true
-          }
-        ],
-        "last_analysis_date": 1742405786,
-        "tlsh": "T1DF454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
-        "reputation": -1,
-        "first_seen_itw_date": 1424919723,
-        "sandbox_verdicts": {
-          "DAS-Security Orcas": {
-            "category": "malicious",
-            "sandbox_name": "DAS-Security Orcas",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          }
+        "sha1": "9319bf72000f8e468c182947dd5c82fb8b9ae419",
+        "sha256": "509347f4a5b81a65e327363b9eb6773d57cb6df0c834bfdb19eda8defcfecadb",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "unique_sources": 10,
+        "type_description": "Win32 EXE",
+        "packers": {
+          "F-PROT": "RAR"
         },
-        "ssdeep": "12288:ow35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:h35dPpXWuil+KBFU4L1onw/VCblTd",
+        "authentihash": "11d02f2f206179c55912714f8fa80434d705241bbc2f586a2af3de0f6200a320",
+        "last_analysis_date": 1742405786,
+        "last_submission_date": 1742405786,
         "filecondis": {
           "raw_md5": "fb2536ee53771d30c4910ad51aec4273",
           "dhash": "0000001f1e150c08"
         },
-        "type_description": "Win32 EXE",
-        "unique_sources": 10,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "first_submission_date": 1424911771,
+        "last_modification_date": 1768219220,
+        "md5": "1ff0ed11fc6a41db458a75ae71670f94",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -5664,17 +5670,14 @@
             "result": null
           }
         },
-        "last_submission_date": 1742405786,
-        "creation_date": 1374825217,
-        "sha256": "509347f4a5b81a65e327363b9eb6773d57cb6df0c834bfdb19eda8defcfecadb",
         "type_tag": "peexe",
-        "names": [
-          "9319bf72000f8e468c182947dd5c82fb8b9ae419.codex",
-          ".js",
-          "9319BF72000F8E468C182947DD5C82FB8B9AE419"
-        ],
-        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419.codex",
-        "type_extension": "exe",
+        "reputation": -1,
+        "times_submitted": 16,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "magika": "PEBIN",
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -5712,55 +5715,50 @@
             }
           ]
         },
-        "first_submission_date": 1424911771,
-        "packers": {
-          "F-PROT": "RAR"
-        },
-        "times_submitted": 16,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
+        "trid": [
+          {
+            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
+            "probability": 80.0
+          },
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 9.4
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 3.1
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 1.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 1.5
+          }
         ],
-        "last_analysis_stats": {
-          "malicious": 62,
-          "suspicious": 0,
-          "undetected": 10,
-          "harmless": 0,
-          "timeout": 1,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_modification_date": 1768219220,
-        "size": 1172821,
-        "authentihash": "11d02f2f206179c55912714f8fa80434d705241bbc2f586a2af3de0f6200a320"
+        "meaningful_name": "9319bf72000f8e468c182947dd5c82fb8b9ae419.codex"
       }
     },
     {
       "id": "9303c6d5bd02f9017a4e377e038bb602b3717b5826a429106b035d3412412ae8",
       "attributes": {
-        "sha1": "2be2776e5f5b3cadf98035f4372d2d29d401e1fc",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
+        "creation_date": 1374825217,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 1,
+          "low": 0
         },
-        "trid": [
-          {
-            "file_type": "DOS Executable Generic",
-            "probability": 100.0
-          }
-        ],
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "ssdeep": "12288:5w35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:i35dPpXWuil+KBFU4L1onw/VCblTd",
         "tags": [
           "spreader",
           "peexe",
           "overlay"
         ],
+        "size": 1172821,
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cozyduke/cozer",
           "popular_threat_category": [
             {
               "count": 17,
@@ -5775,7 +5773,6 @@
               "value": "dropper"
             }
           ],
-          "suggested_threat_label": "trojan.cozyduke/cozer",
           "popular_threat_name": [
             {
               "count": 9,
@@ -5791,6 +5788,42 @@
             }
           ]
         },
+        "names": [
+          "exemplar"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "last_analysis_stats": {
+          "malicious": 51,
+          "suspicious": 0,
+          "undetected": 21,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
+        },
+        "tlsh": "T1C9454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1374825217,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -6323,24 +6356,8 @@
             }
           ]
         },
-        "md5": "87da8d6ea9244a29957b8471b8522f8e",
-        "last_analysis_date": 1751674769,
-        "tlsh": "T1C9454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
-        "reputation": 0,
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
-        },
-        "ssdeep": "12288:5w35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:i35dPpXWuil+KBFU4L1onw/VCblTd",
+        "sha1": "2be2776e5f5b3cadf98035f4372d2d29d401e1fc",
+        "sha256": "9303c6d5bd02f9017a4e377e038bb602b3717b5826a429106b035d3412412ae8",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -6349,13 +6366,89 @@
             "low": 0
           }
         },
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "unique_sources": 1,
+        "type_description": "Win32 EXE",
+        "authentihash": "cc1cc1ab8da4d3b72c7580695e38c31d2d01dca7909b0e09fa2e046c5a0e8f06",
+        "last_analysis_date": 1751674769,
+        "last_submission_date": 1751674769,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New RUN Key Pointing to Suspicious Folder",
+            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\ati2erec_x86_64"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_Resources"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\ati2erec_Win"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\ati2erec_x86_64"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_Resources"
+                }
+              },
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\ati2erec_Win"
+                }
+              }
+            ]
+          }
+        ],
         "filecondis": {
           "raw_md5": "84a4f5202788fc4162ad4cc8876659f0",
           "dhash": "0000001f1e150c08"
         },
-        "type_description": "Win32 EXE",
-        "unique_sources": 1,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "first_submission_date": 1751674769,
+        "last_modification_date": 1751768962,
+        "md5": "87da8d6ea9244a29957b8471b8522f8e",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -6966,85 +7059,14 @@
             "result": null
           }
         },
-        "last_submission_date": 1751674769,
-        "creation_date": 1374825217,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "New RUN Key Pointing to Suspicious Folder",
-            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
-            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\ati2erec_x86_64"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_Resources"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\ati2erec_Win"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "CurrentVersion Autorun Keys Modification",
-            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
-            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
-            "match_context": [
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\ati2erec_x86_64"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\aticalcl_Resources"
-                }
-              },
-              {
-                "values": {
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\ati2erec_Win"
-                }
-              }
-            ]
-          }
-        ],
-        "sha256": "9303c6d5bd02f9017a4e377e038bb602b3717b5826a429106b035d3412412ae8",
         "type_tag": "peexe",
-        "names": [
-          "exemplar"
-        ],
-        "meaningful_name": "exemplar",
-        "type_extension": "exe",
+        "reputation": 0,
+        "times_submitted": 1,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "magika": "PEBIN",
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -7072,74 +7094,34 @@
             }
           ]
         },
-        "first_submission_date": 1751674769,
-        "times_submitted": 1,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
+        "trid": [
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 100.0
+          }
         ],
+        "meaningful_name": "exemplar"
+      }
+    },
+    {
+      "id": "da3aa0403c1a53505310aa83366adf0cb01ecd6a9c94cd35af49a39ac9b85f9a",
+      "attributes": {
+        "creation_date": 1187425683,
         "sigma_analysis_stats": {
           "critical": 0,
           "high": 1,
           "medium": 1,
           "low": 0
         },
-        "last_analysis_stats": {
-          "malicious": 51,
-          "suspicious": 0,
-          "undetected": 21,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_modification_date": 1751768962,
-        "size": 1172821,
-        "authentihash": "cc1cc1ab8da4d3b72c7580695e38c31d2d01dca7909b0e09fa2e046c5a0e8f06"
-      }
-    },
-    {
-      "id": "da3aa0403c1a53505310aa83366adf0cb01ecd6a9c94cd35af49a39ac9b85f9a",
-      "attributes": {
-        "sha1": "b94bf6bff58006c69c4c9161172c63a5c3aa1123",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "trid": [
-          {
-            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
-            "probability": 80.0
-          },
-          {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 9.4
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 3.1
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 1.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 1.5
-          }
-        ],
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "ssdeep": "12288:Qw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:J35dPpXWuil+KBFU4L1onw/VCblTd",
         "tags": [
           "spreader",
           "overlay",
           "peexe"
         ],
+        "size": 1172821,
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cozyduke/zusy",
           "popular_threat_category": [
             {
               "count": 17,
@@ -7154,7 +7136,6 @@
               "value": "dropper"
             }
           ],
-          "suggested_threat_label": "trojan.cozyduke/zusy",
           "popular_threat_name": [
             {
               "count": 9,
@@ -7170,6 +7151,42 @@
             }
           ]
         },
+        "names": [
+          "exemplar"
+        ],
+        "type_extension": "exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "last_analysis_stats": {
+          "malicious": 48,
+          "suspicious": 0,
+          "undetected": 24,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "CozyDuke"
+            ],
+            "confidence": 80
+          }
+        },
+        "tlsh": "T1A4454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
         "pe_info": {
           "timestamp": 1187425683,
           "imphash": "3eaa732d4dae53340f9646bdd85dac41",
@@ -7713,24 +7730,8 @@
             }
           ]
         },
-        "md5": "e83e5061cd562b490cd04054fdd6c373",
-        "last_analysis_date": 1751674831,
-        "tlsh": "T1A4454802954844AFE303C73314AA63D0D150A83F2A6F67AA3E55711BFF7DD8BA1C275A",
-        "reputation": 0,
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "CozyDuke"
-            ],
-            "confidence": 80
-          }
-        },
-        "ssdeep": "12288:Qw35dS4X8AnVyiKdXZcqt/dmzwxCkTuS6y5/me+7U5BXqQPOy6UC4s4lD5o/Ph84:J35dPpXWuil+KBFU4L1onw/VCblTd",
+        "sha1": "b94bf6bff58006c69c4c9161172c63a5c3aa1123",
+        "sha256": "da3aa0403c1a53505310aa83366adf0cb01ecd6a9c94cd35af49a39ac9b85f9a",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -7739,13 +7740,89 @@
             "low": 0
           }
         },
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive",
+        "unique_sources": 1,
+        "type_description": "Win32 EXE",
+        "authentihash": "68dcebcd210d16f470a4bdd82c7658b0b4501f95f84aa82f2fd4f53c0b721022",
+        "last_analysis_date": 1751674831,
+        "last_submission_date": 1751674831,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New RUN Key Pointing to Suspicious Folder",
+            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventID": "13",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Info"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\amdhdl_Addon"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhcp_Host"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "EventType": "SetValue",
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Info"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\amdhdl_Addon"
+                }
+              },
+              {
+                "values": {
+                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
+                  "EventType": "SetValue",
+                  "EventID": "13",
+                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhcp_Host"
+                }
+              }
+            ]
+          }
+        ],
         "filecondis": {
           "raw_md5": "69996e12c2962358ddaf484806043a0f",
           "dhash": "0000001f1e150c08"
         },
-        "type_description": "Win32 EXE",
-        "unique_sources": 1,
-        "vhash": "016046655d1550901031z8007d7z5015z8010032fz",
+        "first_submission_date": 1751674831,
+        "last_modification_date": 1751801439,
+        "md5": "e83e5061cd562b490cd04054fdd6c373",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -8356,85 +8433,14 @@
             "result": null
           }
         },
-        "last_submission_date": 1751674831,
-        "creation_date": 1187425683,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "New RUN Key Pointing to Suspicious Folder",
-            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
-            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventID": "13",
-                  "EventType": "SetValue",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Info"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\amdhdl_Addon"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhcp_Host"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "CurrentVersion Autorun Keys Modification",
-            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
-            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
-            "match_context": [
-              {
-                "values": {
-                  "EventType": "SetValue",
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventID": "13",
-                  "TargetObject": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\clinfo_Info"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\amdhdl_Addon"
-                }
-              },
-              {
-                "values": {
-                  "Details": "%APPDATA%\\ATI_Subsystem\\atibtmon.exe %APPDATA%\\ATI_Subsystem\\amdpcom32.dll, ADL2_Adapter_Crossfire_Set",
-                  "EventType": "SetValue",
-                  "EventID": "13",
-                  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run\\amdhcp_Host"
-                }
-              }
-            ]
-          }
-        ],
-        "sha256": "da3aa0403c1a53505310aa83366adf0cb01ecd6a9c94cd35af49a39ac9b85f9a",
         "type_tag": "peexe",
-        "names": [
-          "exemplar"
-        ],
-        "meaningful_name": "exemplar",
-        "type_extension": "exe",
+        "reputation": 0,
+        "times_submitted": 1,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "magika": "PEBIN",
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -8472,37 +8478,778 @@
             }
           ]
         },
-        "first_submission_date": 1751674831,
-        "times_submitted": 1,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
+        "trid": [
+          {
+            "file_type": "WinRAR Self Extracting archive (4.x-5.x)",
+            "probability": 80.0
+          },
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 9.4
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 3.1
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 1.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 1.5
+          }
         ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 1,
-          "low": 0
+        "meaningful_name": "exemplar"
+      }
+    }
+  ],
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "bb6b6d8ebe918e2796a4ec709a89a07ea3e22942f6ab9311628b80b5e406f09b",
+      "attributes": {
+        "filecondis": {
+          "raw_md5": "2d3519fb7cc76e02e1aac0f688d859ac",
+          "dhash": "8100000000008080"
         },
+        "ssdeep": "6:uvQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQKQa:uohhhhhhhhhhhhhhhhhhhhhhhhhhhhha",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.2.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.211",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5563",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.41.58882",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.41.58882",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20251219",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1165",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.75.2070",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.14035",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "39d0065:39d0065:97528e7:97528e7",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.43856AVA:64.30842",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1773507632",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.241.174",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38482",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.23-113518934",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.26010.1",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.29.1.10604",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.5.1",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2026-03-14.02",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20260313",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20260314",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "260314-00",
+            "engine_update": "20260314",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20260123",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20251216",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20260312",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.252",
+            "engine_update": "20260311",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.758",
+            "engine_update": "20260313",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20260314",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.10.0",
+            "engine_update": "20260224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20260313",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.5.3.1",
+            "engine_update": "20251224",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20260314",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20260314",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "type_description": "Text",
+        "size": 488,
+        "last_analysis_date": 1773515522,
+        "times_submitted": 19,
+        "md5": "ba255e18b41667f56d379c111e5a2810",
+        "magika": "TXT",
+        "magic": "ASCII text, with very long lines (488u), with no line terminators",
+        "type_tags": [
+          "text"
+        ],
+        "tags": [
+          "known-distributor",
+          "text"
+        ],
+        "last_submission_date": 1773515522,
+        "sha256": "bb6b6d8ebe918e2796a4ec709a89a07ea3e22942f6ab9311628b80b5e406f09b",
         "last_analysis_stats": {
-          "malicious": 48,
+          "malicious": 0,
           "suspicious": 0,
-          "undetected": 24,
+          "undetected": 62,
           "harmless": 0,
           "timeout": 0,
           "confirmed-timeout": 0,
           "failure": 0,
-          "type-unsupported": 4
+          "type-unsupported": 14
         },
-        "last_modification_date": 1751801439,
-        "size": 1172821,
-        "authentihash": "68dcebcd210d16f470a4bdd82c7658b0b4501f95f84aa82f2fd4f53c0b721022"
+        "type_extension": "txt",
+        "sha1": "13e0061c237fe4635ea63914397c8af37d4824f5",
+        "names": [
+          ".rsrc_1",
+          "[4]",
+          "[5]",
+          "[3]",
+          "[9]",
+          "[10]",
+          "[0]",
+          "[2]",
+          "16",
+          "[7]",
+          "ba255e18b41667f56d379c111e5a2810",
+          ".rsrc_1_1",
+          "071d5c44d21c365c13133d46b93a94bc.js"
+        ],
+        "meaningful_name": ".rsrc_1",
+        "known_distributors": {
+          "distributors": [
+            "Microsoft"
+          ],
+          "filenames": [
+            ".rsrc_1"
+          ],
+          "products": [
+            "Avid Broadcast Graphics | Sports",
+            "Dynamic Cumulative Update",
+            "Pinnacle Studio",
+            "Cumulative Update Preview",
+            "Windows 10 Pro 64-bit",
+            "Security Update for Microsoft SharePoint Server Subscription Edition (KB5002768)",
+            "Website - www.computernewb.com",
+            "Windows 11 (business editions)",
+            "LXFDVD 142",
+            "MSDN Subscriptions Library",
+            "Norton Utilities",
+            "Cumulative Update for Windows 10 Version 21H1 for ARM64-based Systems (KB5021233)",
+            "MSDN Disc 0722",
+            "Video Studio Pro X10",
+            "Windows 8 Pro ASUS recovery DVD",
+            "MSDN Disc 0757",
+            "Visual SourceSafe 6.0c, Visual FoxPro 7.0 MSDN Disc 0968",
+            "Windows Embedded",
+            "Avid AirSpeed 5000 | AirSpeed 5500",
+            "Windows Server",
+            "Windows 11 (consumer editions)",
+            "Dynamic Cumulative Update for Windows 10 Version 21H1 for x86-based Systems (KB5021233)",
+            "MSDN Disc 2942",
+            "Windows Embedded Compact 7"
+          ],
+          "data_sources": [
+            "National Software Reference Library (NSRL)"
+          ]
+        },
+        "first_seen_itw_date": 1517975440,
+        "last_modification_date": 1773523340,
+        "unique_sources": 7,
+        "first_submission_date": 1372747181,
+        "vhash": "9eecb7db59d16c80417c72d1e1f4fbf1",
+        "type_tag": "text",
+        "reputation": 0
       }
+    },
+    {
+      "id": "260dc52481854b7299fcf01c8974a6875963e72049ec8dfe367973726e7e5ce3",
+      "attributes": {}
+    },
+    {
+      "id": "f6409d5ef16e815059c48f574cc9b4d2a77219b87ae37bd7eeb69a8ff0aaf6fd",
+      "attributes": {}
+    },
+    {
+      "id": "cabb2b3d136da7c3ee48c19f8137f874a9e05599b0f2d29dcefd593c7f14d26c",
+      "attributes": {}
+    },
+    {
+      "id": "5aadc4c21f5dab0ee9b050faf90f12719b04c706d36f81ef770ffe92be4fe0cf",
+      "attributes": {}
+    },
+    {
+      "id": "be101f238d1c27c3302fc3f4150a8834db7ef65cc8227cf724b93253f12b4d16",
+      "attributes": {}
+    },
+    {
+      "id": "2af1f0aa1092be2bf228ecd3c93ff579982d03facfa8ea53da71d6142ab07f20",
+      "attributes": {}
+    },
+    {
+      "id": "896ebcd7c87f328099bedae719a29a5cd1bb4160ff244f569c22a84b67dc030f",
+      "attributes": {}
+    },
+    {
+      "id": "d3ebccd66477986dd262b45fd26de4e6679baf5eb8cc78250dbeb832b0f53347",
+      "attributes": {}
     }
-  ],
-  "errors": []
+  ]
 }

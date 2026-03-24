@@ -1,6 +1,6 @@
 {
   "sha256": "c3b2c7bbd2aa1e3100b9382ed78dfa0041af764e0e02013acdf282410b302ead",
-  "query_time": "2026-03-12T08:35:05.856847+00:00",
+  "query_time": "2026-03-24T06:01:42.577036+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,96 +8,17 @@
     {
       "id": "946beabe8a42fd505b1b2c68c60c46fbbca271c87f907509df5e6d594d5e587e",
       "attributes": {
-        "magika": "DOCX",
-        "tlsh": "T1924423996C0194F7D6A70FB8159D20A7CCEC13FD36B1AB98FB221782C3329142675C6B",
-        "type_description": "Office Open XML Document",
-        "last_analysis_stats": {
-          "malicious": 35,
-          "suspicious": 0,
-          "undetected": 32,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 9
-        },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.cgev/cve2015",
-          "popular_threat_name": [
-            {
-              "count": 7,
-              "value": "cgev"
-            },
-            {
-              "count": 4,
-              "value": "cve2015"
-            },
-            {
-              "count": 3,
-              "value": "msword"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 19,
-              "value": "trojan"
-            },
-            {
-              "count": 3,
-              "value": "dropper"
-            }
-          ]
-        },
-        "type_tags": [
-          "document",
-          "msoffice",
-          "text",
-          "word",
-          "docx"
-        ],
-        "size": 269556,
-        "first_submission_date": 1731485271,
-        "unique_sources": 1,
-        "reputation": 0,
-        "type_tag": "docx",
-        "last_modification_date": 1732777636,
-        "ssdeep": "6144:hxUBwNi8X0Dv0xrIb0f59TRkjj3siJwXT+:hxUYi8X0DvSHQZaK",
-        "creation_date": 1492504860,
-        "bundle_info": {
-          "highest_datetime": "2024-11-13 15:22:22",
-          "lowest_datetime": "2024-11-13 15:22:22",
-          "num_children": 14,
-          "extensions": {
-            "xml": 9,
-            "rels": 1,
-            "docx": 1,
-            "eps": 1
-          },
-          "file_types": {
-            "XML": 11,
-            "unknown": 2,
-            "ZIP": 1
-          },
-          "type": "DOCX",
-          "uncompressed_size": 766449
-        },
-        "names": [
-          "f8e92d8b5488ea76c40601c8f1a08790"
-        ],
-        "tags": [
-          "exploit",
-          "cve-2017-0261",
-          "docx",
-          "cve-2015-2545",
-          "cve-2017-0262"
-        ],
-        "type_extension": "docx",
         "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "vhash": "f8ce4aa6ed196fa9f589c5cdc412f5ab",
-        "md5": "51f0e2c8859010204da40e729a2b4921",
-        "sha256": "946beabe8a42fd505b1b2c68c60c46fbbca271c87f907509df5e6d594d5e587e",
-        "last_submission_date": 1731486189,
-        "times_submitted": 2,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 1,
+          "low": 1
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
         "trid": [
           {
             "file_type": "Word Microsoft Office Open XML Format document",
@@ -112,41 +33,9 @@
             "probability": 8.8
           }
         ],
-        "last_analysis_date": 1732770372,
-        "sandbox_verdicts": {
-          "DOCGuard": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "DOCGuard"
-          },
-          "SecondWrite": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "SecondWrite"
-          },
-          "C2AE": {
-            "category": "undetected",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ],
-            "sandbox_name": "C2AE"
-          }
-        },
-        "sha1": "ee39d3e4f1fa1ab5c28a298324b36753f4fb0184",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 0,
-          "medium": 1,
-          "low": 1
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
+        "names": [
+          "f8e92d8b5488ea76c40601c8f1a08790"
+        ],
         "sigma_analysis_results": [
           {
             "rule_level": "medium",
@@ -186,6 +75,53 @@
             ]
           }
         ],
+        "vhash": "f8ce4aa6ed196fa9f589c5cdc412f5ab",
+        "md5": "51f0e2c8859010204da40e729a2b4921",
+        "creation_date": 1492504860,
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
+          "docx"
+        ],
+        "last_analysis_stats": {
+          "malicious": 35,
+          "suspicious": 0,
+          "undetected": 32,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 9
+        },
+        "last_submission_date": 1731486189,
+        "sandbox_verdicts": {
+          "DOCGuard": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "DOCGuard"
+          },
+          "SecondWrite": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "SecondWrite"
+          },
+          "C2AE": {
+            "category": "undetected",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ],
+            "sandbox_name": "C2AE"
+          }
+        },
+        "unique_sources": 1,
+        "times_submitted": 2,
+        "size": 269556,
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -194,10 +130,44 @@
             "low": 1
           }
         },
+        "first_submission_date": 1731485271,
         "filecondis": {
           "raw_md5": "6dd7a8137e75d2294b69b818efbf78ec",
           "dhash": "14149e0e0f070302"
         },
+        "tags": [
+          "exploit",
+          "cve-2017-0261",
+          "docx",
+          "cve-2015-2545",
+          "cve-2017-0262"
+        ],
+        "sha256": "946beabe8a42fd505b1b2c68c60c46fbbca271c87f907509df5e6d594d5e587e",
+        "type_description": "Office Open XML Document",
+        "last_modification_date": 1732777636,
+        "type_extension": "docx",
+        "reputation": 0,
+        "ssdeep": "6144:hxUBwNi8X0Dv0xrIb0f59TRkjj3siJwXT+:hxUYi8X0DvSHQZaK",
+        "bundle_info": {
+          "highest_datetime": "2024-11-13 15:22:22",
+          "lowest_datetime": "2024-11-13 15:22:22",
+          "num_children": 14,
+          "extensions": {
+            "xml": 9,
+            "rels": 1,
+            "docx": 1,
+            "eps": 1
+          },
+          "file_types": {
+            "XML": 11,
+            "unknown": 2,
+            "ZIP": 1
+          },
+          "type": "DOCX",
+          "uncompressed_size": 766449
+        },
+        "type_tag": "docx",
+        "last_analysis_date": 1732770372,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -807,9 +777,58 @@
             "category": "type-unsupported",
             "result": null
           }
-        }
+        },
+        "tlsh": "T1924423996C0194F7D6A70FB8159D20A7CCEC13FD36B1AB98FB221782C3329142675C6B",
+        "magika": "DOCX",
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "cgev",
+              "count": 7
+            },
+            {
+              "value": "cve2015",
+              "count": 4
+            },
+            {
+              "value": "msword",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.cgev/cve2015",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 19
+            },
+            {
+              "value": "dropper",
+              "count": 3
+            }
+          ]
+        },
+        "sha1": "ee39d3e4f1fa1ab5c28a298324b36753f4fb0184"
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "0a69e6a6f026c6aafab93f119f03eef82734c1895e6b2e2784f1eb52a7301964",
+      "attributes": {}
+    },
+    {
+      "id": "c32b205cabe82b6c37a5c3ec014ab59190d030e5dfcfb190819788ab1518fe63",
+      "attributes": {}
+    },
+    {
+      "id": "793f791d8e36261350b60f28bbba4ae499294f1e0bc015c5b71488d7d2c30188",
+      "attributes": {}
+    },
+    {
+      "id": "68e05c5e069e8530a2c0eead6873436f63bda0fa862be6e687732aedb037d0d7",
+      "attributes": {}
+    }
+  ]
 }

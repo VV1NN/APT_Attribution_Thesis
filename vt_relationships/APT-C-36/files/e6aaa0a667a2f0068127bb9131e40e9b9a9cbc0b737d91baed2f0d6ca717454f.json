@@ -1,6 +1,6 @@
 {
   "sha256": "e6aaa0a667a2f0068127bb9131e40e9b9a9cbc0b737d91baed2f0d6ca717454f",
-  "query_time": "2026-03-16T07:58:45.966783+00:00",
+  "query_time": "2026-03-24T05:48:27.001757+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,8 +8,13 @@
     {
       "id": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
       "attributes": {
+        "last_analysis_date": 1773066514,
+        "md5": "93a975c21b06f8483fd37dc34c20a43f",
+        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703",
+        "vhash": "a72915e10542b7b5b5f2972fa867565d",
         "sha256": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
-        "last_modification_date": 1773074501,
+        "unique_sources": 1,
+        "size": 661759077,
         "last_analysis_stats": {
           "malicious": 14,
           "suspicious": 0,
@@ -20,96 +25,41 @@
           "failure": 6,
           "type-unsupported": 12
         },
-        "reputation": 0,
-        "times_submitted": 1,
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "RANSOM",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "malware_names": [
-              "Njrat"
-            ],
-            "confidence": 72
-          },
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "RAT"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "WarzoneRAT"
-            ]
-          }
+        "filecondis": {
+          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
+          "dhash": "0000000000000100"
         },
-        "crowdsourced_yara_results": [
+        "trid": [
           {
-            "ruleset_id": "0122a7f913",
-            "rule_name": "Windows_API_Function",
-            "ruleset_name": "Windows_API_Function",
-            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
-            "author": "InQuest Labs",
-            "source": "https://github.com/InQuest/yara-rules-vt"
+            "file_type": "RAR compressed archive (v-4.x)",
+            "probability": 58.3
           },
           {
-            "ruleset_id": "0008bd843e",
-            "rule_name": "FourElementSword_Config_File",
-            "ruleset_name": "apt_four_element_sword",
-            "description": "Detects FourElementSword Malware",
-            "author": "Florian Roth (Nextron Systems)",
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "ruleset_id": "00cc803bdc",
-            "rule_name": "MALWARE_Win_AsyncRAT",
-            "ruleset_name": "malware",
-            "description": "Detects AsyncRAT",
-            "author": "ditekSHen",
-            "source": "https://github.com/ditekshen/detection"
+            "file_type": "RAR compressed archive (gen)",
+            "probability": 41.6
           }
         ],
-        "bundle_info": {
-          "highest_datetime": "2023-08-01 10:09:49",
-          "lowest_datetime": "2014-04-04 16:33:34",
-          "num_children": 1240,
-          "extensions": {
-            "bin": 6,
-            "htm": 27,
-            "EXE": 31,
-            "html": 12,
-            "exe": 527
-          },
-          "file_types": {
-            "XML": 2,
-            "ZIP": 10,
-            "unknown": 66,
-            "JavaScript": 1,
-            "ELF": 5,
-            "HTML": 22,
-            "RAR": 4,
-            "Portable Executable": 880,
-            "PDF": 2,
-            "Microsoft Office": 7
-          },
-          "type": "RAR",
-          "uncompressed_size": 1045137790
-        },
+        "first_submission_date": 1690965341,
+        "last_modification_date": 1773074501,
+        "type_description": "RAR",
+        "sha1": "3b28fd14a8e2debf3fcdcb609e1f54af7ae0e611",
+        "tags": [
+          "contains-pe",
+          "detect-debug-environment",
+          "contains-elf",
+          "long-sleeps",
+          "rar"
+        ],
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.",
           "popular_threat_category": [
             {
               "value": "trojan",
               "count": 6
             }
-          ],
-          "suggested_threat_label": "trojan."
+          ]
         },
-        "magic": "RAR archive data, v4, os: Win32",
+        "reputation": 0,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -720,51 +670,103 @@
             "result": null
           }
         },
-        "trid": [
-          {
-            "file_type": "RAR compressed archive (v-4.x)",
-            "probability": 58.3
+        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
+        "bundle_info": {
+          "highest_datetime": "2023-08-01 10:09:49",
+          "lowest_datetime": "2014-04-04 16:33:34",
+          "num_children": 1240,
+          "extensions": {
+            "bin": 6,
+            "htm": 27,
+            "EXE": 31,
+            "html": 12,
+            "exe": 527
           },
-          {
-            "file_type": "RAR compressed archive (gen)",
-            "probability": 41.6
-          }
-        ],
-        "last_submission_date": 1690965341,
+          "file_types": {
+            "XML": 2,
+            "ZIP": 10,
+            "unknown": 66,
+            "JavaScript": 1,
+            "ELF": 5,
+            "HTML": 22,
+            "RAR": 4,
+            "Portable Executable": 880,
+            "PDF": 2,
+            "Microsoft Office": 7
+          },
+          "type": "RAR",
+          "uncompressed_size": 1045137790
+        },
+        "magic": "RAR archive data, v4, os: Win32",
+        "type_tag": "rar",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
-        },
-        "type_extension": "rar",
-        "filecondis": {
-          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
-          "dhash": "0000000000000100"
         },
         "type_tags": [
           "compressed",
           "rar"
         ],
-        "sha1": "3b28fd14a8e2debf3fcdcb609e1f54af7ae0e611",
-        "size": 661759077,
-        "tags": [
-          "contains-pe",
-          "detect-debug-environment",
-          "contains-elf",
-          "long-sleeps",
-          "rar"
-        ],
-        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703",
-        "first_submission_date": 1690965341,
-        "last_analysis_date": 1773066514,
-        "vhash": "a72915e10542b7b5b5f2972fa867565d",
-        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
-        "type_description": "RAR",
-        "md5": "93a975c21b06f8483fd37dc34c20a43f",
-        "unique_sources": 1,
+        "type_extension": "rar",
         "names": [],
-        "type_tag": "rar"
+        "last_submission_date": 1690965341,
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "RANSOM",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "Njrat"
+            ],
+            "confidence": 72
+          },
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "RAT"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "WarzoneRAT"
+            ]
+          }
+        },
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0122a7f913",
+            "rule_name": "Windows_API_Function",
+            "ruleset_name": "Windows_API_Function",
+            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+            "author": "InQuest Labs",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "ruleset_id": "0008bd843e",
+            "rule_name": "FourElementSword_Config_File",
+            "ruleset_name": "apt_four_element_sword",
+            "description": "Detects FourElementSword Malware",
+            "author": "Florian Roth (Nextron Systems)",
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "00cc803bdc",
+            "rule_name": "MALWARE_Win_AsyncRAT",
+            "ruleset_name": "malware",
+            "description": "Detects AsyncRAT",
+            "author": "ditekSHen",
+            "source": "https://github.com/ditekshen/detection"
+          }
+        ],
+        "times_submitted": 1
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }

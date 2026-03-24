@@ -10,7 +10,6 @@
 4. 設計機器學習方法進行 APT 歸因（attribution）
 
 ## 資料規模
-
 - **涵蓋 APT 組織**：150+ 組織（org_iocs/ 內含已提取 IoC）
 - **已建構知識圖譜**：APT12, APT16, APT17, APT18, APT19
 - **已合併統一圖譜**：230 nodes, 338 edges（APT18 + APT19）
@@ -54,7 +53,7 @@
                            ▼
             ┌──────────────────────────────┐
             │  merge_knowledge_graphs.py   │
-            │  跨組織合併 + SQLite 輸出     │
+            │  跨組織合併 + SQLite 輸出      │
             │     → knowledge_graphs/      │
             │       master/                │
             └──────────────┬───────────────┘
@@ -142,7 +141,7 @@ uv run python scripts/merge_knowledge_graphs.py
 # 指定組織
 uv run python scripts/merge_knowledge_graphs.py --orgs APT18,APT19 --visualize
 ```
-
+\
 輸出 JSON + SQLite 資料庫，支援 SQL 查詢：
 
 ```sql

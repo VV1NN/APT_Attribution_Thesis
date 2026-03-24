@@ -62,7 +62,7 @@ class QuotaExhausted(Exception):
 
 
 class RateLimiter:
-    def __init__(self, requests_per_min: float = 4, daily_limit: int = 500,
+    def __init__(self, requests_per_min: float = 600, daily_limit: int = 18000,
                  stop_on_quota: bool = False):
         self.min_interval = 60.0 / requests_per_min   # 15 s at default 4 req/min
         self.daily_limit = daily_limit
@@ -228,8 +228,32 @@ VT_BASE = "https://www.virustotal.com/api/v3"
 FILE_RELATIONSHIPS = [
     "contacted_ips",
     "contacted_domains",
+    "contacted_urls",
     "dropped_files",
     "execution_parents",
+    "bundled_files",
+    # Enterprise-only (403 on academic plan):
+    # "embedded_domains", "embedded_ips", "embedded_urls",
+    # "itw_urls", "itw_domains", "itw_ips", "compressed_parents",
+]
+
+DOMAIN_RELATIONSHIPS = [
+    "resolutions",
+    "communicating_files",
+    "referrer_files",
+    "subdomains",
+    "historical_ssl_certificates",
+    "historical_whois",
+    # Enterprise-only: "downloaded_files",
+]
+
+IP_RELATIONSHIPS = [
+    "resolutions",
+    "communicating_files",
+    "referrer_files",
+    "historical_ssl_certificates",
+    "historical_whois",
+    # Enterprise-only: "downloaded_files",
 ]
 
 
@@ -321,48 +345,87 @@ def fetch_file_relationships(
     return result
 
 
-def fetch_ip_resolutions(
+def fetch_ip_relationships(
     ip: str,
     session: requests.Session,
     rate_limiter: RateLimiter,
     logger: logging.Logger,
 ) -> dict:
-    url = f"{VT_BASE}/ip_addresses/{ip}/resolutions?limit=40"
-    resp = api_call(session, url, rate_limiter, logger)
-    items = extract_items(resp)
-    return {
+    """Call all IP relationship endpoints. Returns combined result dict."""
+    result: dict = {
         "ip": ip,
         "query_time": datetime.now(timezone.utc).isoformat(),
-        "resolutions": [
-            {
-                "host_name": item.get("attributes", {}).get("host_name", ""),
-                "date": item.get("attributes", {}).get("date", 0),
-            }
-            for item in items
-        ],
+        "errors": [],
     }
+    for rel in IP_RELATIONSHIPS:
+        result[rel] = []
+
+    for rel in IP_RELATIONSHIPS:
+        url = f"{VT_BASE}/ip_addresses/{ip}/{rel}?limit=40"
+        resp = api_call(session, url, rate_limiter, logger)
+        if resp is None:
+            result["errors"].append(rel)
+        else:
+            items = extract_items(resp)
+            if rel == "resolutions":
+                result[rel] = [
+                    {
+                        "host_name": item.get("attributes", {}).get("host_name", ""),
+                        "date": item.get("attributes", {}).get("date", 0),
+                    }
+                    for item in items
+                ]
+            else:
+                result[rel] = [
+                    {"id": item.get("id"), "type": item.get("type", ""),
+                     "attributes": item.get("attributes", {})}
+                    for item in items
+                ]
+    return result
 
 
-def fetch_domain_resolutions(
+def fetch_domain_relationships(
     domain: str,
     session: requests.Session,
     rate_limiter: RateLimiter,
     logger: logging.Logger,
 ) -> dict:
-    url = f"{VT_BASE}/domains/{domain}/resolutions?limit=40"
-    resp = api_call(session, url, rate_limiter, logger)
-    items = extract_items(resp)
-    return {
+    """Call all domain relationship endpoints. Returns combined result dict."""
+    result: dict = {
         "domain": domain,
         "query_time": datetime.now(timezone.utc).isoformat(),
-        "resolutions": [
-            {
-                "ip_address": item.get("attributes", {}).get("ip_address", ""),
-                "date": item.get("attributes", {}).get("date", 0),
-            }
-            for item in items
-        ],
+        "errors": [],
     }
+    for rel in DOMAIN_RELATIONSHIPS:
+        result[rel] = []
+
+    for rel in DOMAIN_RELATIONSHIPS:
+        url = f"{VT_BASE}/domains/{domain}/{rel}?limit=40"
+        resp = api_call(session, url, rate_limiter, logger)
+        if resp is None:
+            result["errors"].append(rel)
+        else:
+            items = extract_items(resp)
+            if rel == "resolutions":
+                result[rel] = [
+                    {
+                        "ip_address": item.get("attributes", {}).get("ip_address", ""),
+                        "date": item.get("attributes", {}).get("date", 0),
+                    }
+                    for item in items
+                ]
+            elif rel == "subdomains":
+                result[rel] = [
+                    {"id": item.get("id", ""), "attributes": item.get("attributes", {})}
+                    for item in items
+                ]
+            else:
+                result[rel] = [
+                    {"id": item.get("id"), "type": item.get("type", ""),
+                     "attributes": item.get("attributes", {})}
+                    for item in items
+                ]
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -380,21 +443,22 @@ def make_stats(
     n_file = len(all_sha256) if "file" in ioc_types else 0
     n_ip   = len(all_ips)    if "ip"   in ioc_types else 0
     n_dom  = len(all_domains) if "domain" in ioc_types else 0
-    total_calls = n_file * 4 + n_ip + n_dom
+    total_calls = (n_file * len(FILE_RELATIONSHIPS)
+                   + n_ip * len(IP_RELATIONSHIPS)
+                   + n_dom * len(DOMAIN_RELATIONSHIPS))
 
-    return {
+    stats: dict = {
         "start_time": datetime.now(timezone.utc).isoformat(),
         "last_update": datetime.now(timezone.utc).isoformat(),
         "total_unique_files": n_file,
         "total_unique_ips": n_ip,
         "total_unique_domains": n_dom,
+        "file_endpoints": len(FILE_RELATIONSHIPS),
+        "ip_endpoints": len(IP_RELATIONSHIPS),
+        "domain_endpoints": len(DOMAIN_RELATIONSHIPS),
         "total_api_calls_needed": total_calls,
         "total_api_calls_made": 0,
         "files_queried": 0,
-        "files_with_contacted_ips": 0,
-        "files_with_contacted_domains": 0,
-        "files_with_dropped_files": 0,
-        "files_with_execution_parents": 0,
         "files_all_empty": 0,
         "ips_queried": 0,
         "ips_with_resolutions": 0,
@@ -404,6 +468,10 @@ def make_stats(
         "cache_hits": 0,
         "coverage_rates": {},
     }
+    # Per-relationship counters for files
+    for rel in FILE_RELATIONSHIPS:
+        stats[f"files_with_{rel}"] = 0
+    return stats
 
 
 def update_coverage(stats: dict) -> None:
@@ -413,16 +481,15 @@ def update_coverage(stats: dict) -> None:
     rates: dict[str, str] = {}
 
     if fq:
-        rates["file_contacted_ips"] = f"{stats['files_with_contacted_ips']/fq*100:.1f}%"
-        rates["file_contacted_domains"] = f"{stats['files_with_contacted_domains']/fq*100:.1f}%"
-        rates["file_dropped_files"] = f"{stats['files_with_dropped_files']/fq*100:.1f}%"
-        rates["file_execution_parents"] = f"{stats['files_with_execution_parents']/fq*100:.1f}%"
+        for rel in FILE_RELATIONSHIPS:
+            key = f"files_with_{rel}"
+            rates[f"file_{rel}"] = f"{stats.get(key, 0)/fq*100:.1f}%"
         any_rel = fq - stats["files_all_empty"]
         rates["file_any_relationship"] = f"{any_rel/fq*100:.1f}%"
     else:
-        for k in ("file_contacted_ips","file_contacted_domains","file_dropped_files",
-                  "file_execution_parents","file_any_relationship"):
-            rates[k] = "N/A"
+        for rel in FILE_RELATIONSHIPS:
+            rates[f"file_{rel}"] = "N/A"
+        rates["file_any_relationship"] = "N/A"
 
     rates["ip_resolutions"] = (
         f"{stats['ips_with_resolutions']/iq*100:.1f}%" if iq else "N/A"
@@ -473,8 +540,12 @@ def estimate_and_print(
     need_ips     = sum(1 for ip in all_ips     if not global_cache_path(output_dir, "ips",     ip).exists()) if "ip"     in ioc_types else 0
     need_domains = sum(1 for d  in all_domains if not global_cache_path(output_dir, "domains", d ).exists()) if "domain" in ioc_types else 0
 
-    total_calls     = len(all_sha256) * 4 + len(all_ips) + len(all_domains)
-    remaining_calls = need_files * 4 + need_ips + need_domains
+    total_calls     = (len(all_sha256) * len(FILE_RELATIONSHIPS)
+                       + len(all_ips) * len(IP_RELATIONSHIPS)
+                       + len(all_domains) * len(DOMAIN_RELATIONSHIPS))
+    remaining_calls = (need_files * len(FILE_RELATIONSHIPS)
+                       + need_ips * len(IP_RELATIONSHIPS)
+                       + need_domains * len(DOMAIN_RELATIONSHIPS))
     days_needed     = remaining_calls / daily_limit if daily_limit else float("inf")
 
     logger.info("=" * 60)
@@ -517,7 +588,7 @@ def run(
 
     session = requests.Session()
     session.headers.update({"x-apikey": api_key})
-    rate_limiter = RateLimiter(requests_per_min=4.0, daily_limit=daily_limit,
+    rate_limiter = RateLimiter(requests_per_min=600, daily_limit=daily_limit,
                                stop_on_quota=stop_on_quota)
 
     try:
@@ -601,7 +672,8 @@ def _run_queries(
                 if not org_result_path(output_dir, org_name, "ips", ip).exists()
             ]
             if todo_ips:
-                logger.info(f"  Phase 3b [{org_name}]: Querying {len(todo_ips):,} IPs...")
+                logger.info(f"  Phase 3b [{org_name}]: Querying {len(todo_ips):,} IPs "
+                            f"({len(IP_RELATIONSHIPS)} endpoints each)...")
 
             for i, ip in enumerate(todo_ips, 1):
                 g_path = global_cache_path(output_dir, "ips", ip)
@@ -611,12 +683,15 @@ def _run_queries(
                     save_result(o_path, load_json(g_path))
                     stats["cache_hits"] += 1
                 else:
-                    result = fetch_ip_resolutions(ip, session, rate_limiter, logger)
+                    result = fetch_ip_relationships(ip, session, rate_limiter, logger)
                     save_result(g_path, result)
                     save_result(o_path, result)
 
                     stats["ips_queried"] += 1
-                    stats["total_api_calls_made"] += 1
+                    calls_this_ip = len(IP_RELATIONSHIPS) - len(result.get("errors", []))
+                    stats["total_api_calls_made"] += calls_this_ip
+                    if result.get("errors"):
+                        stats["errors"] += len(result["errors"])
                     if result.get("resolutions"):
                         stats["ips_with_resolutions"] += 1
 
@@ -634,7 +709,8 @@ def _run_queries(
                 if not org_result_path(output_dir, org_name, "domains", d).exists()
             ]
             if todo_domains:
-                logger.info(f"  Phase 3c [{org_name}]: Querying {len(todo_domains):,} domains...")
+                logger.info(f"  Phase 3c [{org_name}]: Querying {len(todo_domains):,} domains "
+                            f"({len(DOMAIN_RELATIONSHIPS)} endpoints each)...")
 
             for i, domain in enumerate(todo_domains, 1):
                 g_path = global_cache_path(output_dir, "domains", domain)
@@ -644,12 +720,15 @@ def _run_queries(
                     save_result(o_path, load_json(g_path))
                     stats["cache_hits"] += 1
                 else:
-                    result = fetch_domain_resolutions(domain, session, rate_limiter, logger)
+                    result = fetch_domain_relationships(domain, session, rate_limiter, logger)
                     save_result(g_path, result)
                     save_result(o_path, result)
 
                     stats["domains_queried"] += 1
-                    stats["total_api_calls_made"] += 1
+                    calls_this_dom = len(DOMAIN_RELATIONSHIPS) - len(result.get("errors", []))
+                    stats["total_api_calls_made"] += calls_this_dom
+                    if result.get("errors"):
+                        stats["errors"] += len(result["errors"])
                     if result.get("resolutions"):
                         stats["domains_with_resolutions"] += 1
 

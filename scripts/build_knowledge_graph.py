@@ -37,7 +37,7 @@ from dotenv import load_dotenv
 # ---------------------------------------------------------------------------
 
 VT_API_BASE = "https://www.virustotal.com/api/v3"
-RATE_LIMIT_SEC = 15.0   # 4 req/min（免費 academic plan）
+RATE_LIMIT_SEC = 0.1    # academic group: 20K req/min，保守設 600 req/min
 MAX_RETRIES = 3          # 429 重試上限
 
 BASE_DIR = Path(__file__).parent.parent  # /thesis/
@@ -648,58 +648,182 @@ def build_graph(org: str, iocs: list[dict], vt_cache: dict[str, dict],
         rel_node_count += 1
         return True
 
-    def _add_rel_edge(source: str, target: str, rel_type: str) -> None:
-        """加入 relationship 邊（去重）。"""
+    def _add_rel_edge(source: str, target: str, rel_type: str,
+                      edge_attrs: dict | None = None) -> None:
+        """加入 relationship 邊（去重），附帶邊屬性。"""
         nonlocal rel_edge_count
         edge_key = (source, target)
         if edge_key not in edges_map:
             edges_map[edge_key] = {
                 "source": source, "target": target,
                 "relationship": rel_type,
-                "attributes": {},
+                "attributes": edge_attrs or {},
             }
             rel_edge_count += 1
+
+    def _extract_edge_attrs(item: dict, rel_type: str) -> dict:
+        """從 VT relationship item 提取邊屬性。"""
+        attrs: dict = {}
+        # resolution date（domain↔IP）
+        if "date" in item:
+            attrs["resolution_date"] = _ts(item["date"])
+        # dropped file / contacted 的偵測統計摘要
+        item_attrs = item.get("attributes") or {}
+        if item_attrs.get("last_analysis_stats"):
+            stats = item_attrs["last_analysis_stats"]
+            attrs["malicious"] = stats.get("malicious", 0)
+            attrs["undetected"] = stats.get("undetected", 0)
+        if item_attrs.get("last_analysis_date"):
+            attrs["last_analysis_date"] = _ts(item_attrs["last_analysis_date"])
+        # type info for dropped files
+        if rel_type == "dropped_file":
+            for key in ("type_tag", "type_description", "meaningful_name"):
+                if item_attrs.get(key):
+                    attrs[key] = item_attrs[key]
+        return attrs
+
+    # ── Helper: 從 relationship items 提取目標並建邊 ──
+    def _process_file_rel_items(nid: str, items: list, rel_type: str,
+                                target_type: str, id_key: str = "id",
+                                id_prefix: str = "", lowercase: bool = False,
+                                skip_self: bool = False) -> None:
+        """通用處理 file relationship items。"""
+        for item in items:
+            val = item.get(id_key, "") if isinstance(item, dict) else str(item)
+            if lowercase:
+                val = val.lower()
+            if not val:
+                continue
+            target_nid = f"{id_prefix}{val}"
+            if skip_self and target_nid == nid:
+                continue
+            if _ensure_node(target_nid, target_type):
+                ea = _extract_edge_attrs(item, rel_type) if isinstance(item, dict) else {}
+                _add_rel_edge(nid, target_nid, rel_type, ea)
+
+    def _extract_url_domain(url_id: str) -> str:
+        """從 URL id 提取 domain。"""
+        try:
+            parsed = urlparse(url_id if "://" in url_id else f"http://{url_id}")
+            return (parsed.hostname or "").lower().strip(".")
+        except Exception:
+            return ""
 
     for nid, rel_data in relationships.items():
         if nid not in seen_nodes:
             continue
 
         if nid.startswith("file_"):
-            for item in rel_data.get("contacted_ips", []):
-                ip = item.get("id", "") if isinstance(item, dict) else str(item)
-                target_nid = f"ip_{ip}"
-                if ip and _ensure_node(target_nid, "ip"):
-                    _add_rel_edge(nid, target_nid, "contacted_ip")
-
-            for item in rel_data.get("contacted_domains", []):
-                domain = item.get("id", "") if isinstance(item, dict) else str(item)
-                target_nid = f"domain_{domain}"
-                if domain and _ensure_node(target_nid, "domain"):
-                    _add_rel_edge(nid, target_nid, "contacted_domain")
-
-            for item in rel_data.get("dropped_files", []):
-                sha256 = (item.get("id", "") if isinstance(item, dict) else str(item)).lower()
-                target_nid = f"file_{sha256}"
-                if sha256 and target_nid != nid and _ensure_node(target_nid, "file"):
-                    _add_rel_edge(nid, target_nid, "dropped_file")
+            # contacted_ips → IP nodes
+            _process_file_rel_items(nid, rel_data.get("contacted_ips", []),
+                                    "contacted_ip", "ip", id_prefix="ip_")
+            # contacted_domains → Domain nodes
+            _process_file_rel_items(nid, rel_data.get("contacted_domains", []),
+                                    "contacted_domain", "domain", id_prefix="domain_")
+            # contacted_urls → Domain nodes (extract domain from URL)
+            for item in rel_data.get("contacted_urls", []):
+                url_id = item.get("id", "") if isinstance(item, dict) else str(item)
+                domain = _extract_url_domain(url_id)
+                if domain:
+                    target_nid = f"domain_{domain}"
+                    if _ensure_node(target_nid, "domain"):
+                        ea = _extract_edge_attrs(item, "contacted_url") if isinstance(item, dict) else {}
+                        _add_rel_edge(nid, target_nid, "contacted_url", ea)
+            # dropped_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("dropped_files", []),
+                                    "dropped_file", "file", id_prefix="file_",
+                                    lowercase=True, skip_self=True)
+            # execution_parents → File nodes
+            _process_file_rel_items(nid, rel_data.get("execution_parents", []),
+                                    "execution_parent", "file", id_prefix="file_",
+                                    lowercase=True, skip_self=True)
+            # embedded_domains → Domain nodes
+            _process_file_rel_items(nid, rel_data.get("embedded_domains", []),
+                                    "embedded_domain", "domain", id_prefix="domain_")
+            # embedded_ips → IP nodes
+            _process_file_rel_items(nid, rel_data.get("embedded_ips", []),
+                                    "embedded_ip", "ip", id_prefix="ip_")
+            # embedded_urls → Domain nodes (extract domain)
+            for item in rel_data.get("embedded_urls", []):
+                url_id = item.get("id", "") if isinstance(item, dict) else str(item)
+                domain = _extract_url_domain(url_id)
+                if domain:
+                    target_nid = f"domain_{domain}"
+                    if _ensure_node(target_nid, "domain"):
+                        ea = _extract_edge_attrs(item, "embedded_url") if isinstance(item, dict) else {}
+                        _add_rel_edge(nid, target_nid, "embedded_url", ea)
+            # itw_urls → Domain nodes (extract domain from distribution URL)
+            for item in rel_data.get("itw_urls", []):
+                url_id = item.get("id", "") if isinstance(item, dict) else str(item)
+                domain = _extract_url_domain(url_id)
+                if domain:
+                    target_nid = f"domain_{domain}"
+                    if _ensure_node(target_nid, "domain"):
+                        ea = _extract_edge_attrs(item, "itw_url") if isinstance(item, dict) else {}
+                        _add_rel_edge(nid, target_nid, "itw_url", ea)
+            # itw_domains → Domain nodes
+            _process_file_rel_items(nid, rel_data.get("itw_domains", []),
+                                    "itw_domain", "domain", id_prefix="domain_")
+            # itw_ips → IP nodes
+            _process_file_rel_items(nid, rel_data.get("itw_ips", []),
+                                    "itw_ip", "ip", id_prefix="ip_")
+            # bundled_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("bundled_files", []),
+                                    "bundled_file", "file", id_prefix="file_",
+                                    lowercase=True, skip_self=True)
+            # compressed_parents → File nodes
+            _process_file_rel_items(nid, rel_data.get("compressed_parents", []),
+                                    "compressed_parent", "file", id_prefix="file_",
+                                    lowercase=True, skip_self=True)
 
         elif nid.startswith("domain_"):
+            # resolutions → IP nodes
             for item in rel_data.get("resolutions", []):
                 ip = item.get("ip_address", "") if isinstance(item, dict) else ""
                 if not ip:
                     ip = (item.get("attributes", {}) or {}).get("ip_address", "")
                 target_nid = f"ip_{ip}"
                 if ip and _ensure_node(target_nid, "ip"):
-                    _add_rel_edge(nid, target_nid, "resolves_to")
+                    ea = _extract_edge_attrs(item, "resolves_to") if isinstance(item, dict) else {}
+                    _add_rel_edge(nid, target_nid, "resolves_to", ea)
+            # communicating_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("communicating_files", []),
+                                    "communicating_file", "file", id_prefix="file_",
+                                    lowercase=True)
+            # downloaded_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("downloaded_files", []),
+                                    "downloaded_file", "file", id_prefix="file_",
+                                    lowercase=True)
+            # referrer_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("referrer_files", []),
+                                    "referrer_file", "file", id_prefix="file_",
+                                    lowercase=True)
+            # subdomains → Domain nodes
+            _process_file_rel_items(nid, rel_data.get("subdomains", []),
+                                    "has_subdomain", "domain", id_prefix="domain_")
 
         elif nid.startswith("ip_"):
+            # resolutions → Domain nodes
             for item in rel_data.get("resolutions", []):
                 host = (item.get("host_name", "") if isinstance(item, dict) else "").lower()
                 if not host:
                     host = ((item.get("attributes", {}) or {}).get("host_name", "")).lower()
                 target_nid = f"domain_{host}"
                 if host and _ensure_node(target_nid, "domain"):
-                    _add_rel_edge(nid, target_nid, "resolves_to")
+                    ea = _extract_edge_attrs(item, "resolves_to") if isinstance(item, dict) else {}
+                    _add_rel_edge(nid, target_nid, "resolves_to", ea)
+            # communicating_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("communicating_files", []),
+                                    "communicating_file", "file", id_prefix="file_",
+                                    lowercase=True)
+            # downloaded_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("downloaded_files", []),
+                                    "downloaded_file", "file", id_prefix="file_",
+                                    lowercase=True)
+            # referrer_files → File nodes
+            _process_file_rel_items(nid, rel_data.get("referrer_files", []),
+                                    "referrer_file", "file", id_prefix="file_",
+                                    lowercase=True)
 
     if logger:
         if rel_node_count > 0:
@@ -894,49 +1018,85 @@ def _discover_relationship_nodes(org: str, graph: dict) -> dict[str, tuple[str, 
     relationships = _load_relationships(org)
     new_nodes: dict[str, tuple[str, str]] = {}
 
+    def _add_ip(ip: str) -> None:
+        if ip:
+            nid = f"ip_{ip}"
+            if nid not in known_nodes:
+                new_nodes[nid] = ("ip_addresses", ip)
+
+    def _add_domain(d: str) -> None:
+        if d:
+            nid = f"domain_{d}"
+            if nid not in known_nodes:
+                new_nodes[nid] = ("domains", d)
+
+    def _add_file(sha256: str) -> None:
+        sha256 = sha256.lower()
+        if sha256:
+            nid = f"file_{sha256}"
+            if nid not in known_nodes:
+                new_nodes[nid] = ("files", sha256)
+
+    def _get_id(item: dict | str) -> str:
+        return item.get("id", "") if isinstance(item, dict) else str(item)
+
+    def _extract_url_domain(url_id: str) -> str:
+        try:
+            parsed = urlparse(url_id if "://" in url_id else f"http://{url_id}")
+            return (parsed.hostname or "").lower().strip(".")
+        except Exception:
+            return ""
+
     for nid, rel_data in relationships.items():
         if nid not in known_nodes:
             continue
 
         if nid.startswith("file_"):
-            # contacted_ips
-            for item in rel_data.get("contacted_ips", []):
-                ip = item.get("id", "") if isinstance(item, dict) else str(item)
-                target_nid = f"ip_{ip}"
-                if target_nid not in known_nodes and ip:
-                    new_nodes[target_nid] = ("ip_addresses", ip)
-
-            # contacted_domains
-            for item in rel_data.get("contacted_domains", []):
-                d = item.get("id", "") if isinstance(item, dict) else str(item)
-                target_nid = f"domain_{d}"
-                if target_nid not in known_nodes and d:
-                    new_nodes[target_nid] = ("domains", d)
-
-            # dropped_files
-            for item in rel_data.get("dropped_files", []):
-                sha256 = (item.get("id", "") if isinstance(item, dict) else str(item)).lower()
-                target_nid = f"file_{sha256}"
-                if target_nid not in known_nodes and sha256:
-                    new_nodes[target_nid] = ("files", sha256)
+            # IP-producing relationships
+            for rel in ("contacted_ips", "embedded_ips", "itw_ips"):
+                for item in rel_data.get(rel, []):
+                    _add_ip(_get_id(item))
+            # Domain-producing relationships
+            for rel in ("contacted_domains", "embedded_domains", "itw_domains"):
+                for item in rel_data.get(rel, []):
+                    _add_domain(_get_id(item))
+            # URL-producing relationships → extract domain
+            for rel in ("contacted_urls", "embedded_urls", "itw_urls"):
+                for item in rel_data.get(rel, []):
+                    domain = _extract_url_domain(_get_id(item))
+                    _add_domain(domain)
+            # File-producing relationships
+            for rel in ("dropped_files", "execution_parents", "bundled_files",
+                        "compressed_parents"):
+                for item in rel_data.get(rel, []):
+                    _add_file(_get_id(item))
 
         elif nid.startswith("domain_"):
+            # resolutions → IP
             for item in rel_data.get("resolutions", []):
                 ip = item.get("ip_address", "") if isinstance(item, dict) else ""
                 if not ip:
                     ip = (item.get("attributes", {}) or {}).get("ip_address", "")
-                target_nid = f"ip_{ip}"
-                if target_nid not in known_nodes and ip:
-                    new_nodes[target_nid] = ("ip_addresses", ip)
+                _add_ip(ip)
+            # File-producing relationships
+            for rel in ("communicating_files", "downloaded_files", "referrer_files"):
+                for item in rel_data.get(rel, []):
+                    _add_file(_get_id(item))
+            # subdomains → Domain
+            for item in rel_data.get("subdomains", []):
+                _add_domain(_get_id(item))
 
         elif nid.startswith("ip_"):
+            # resolutions → Domain
             for item in rel_data.get("resolutions", []):
                 host = (item.get("host_name", "") if isinstance(item, dict) else "").lower()
                 if not host:
                     host = ((item.get("attributes", {}) or {}).get("host_name", "")).lower()
-                target_nid = f"domain_{host}"
-                if target_nid not in known_nodes and host:
-                    new_nodes[target_nid] = ("domains", host)
+                _add_domain(host)
+            # File-producing relationships
+            for rel in ("communicating_files", "downloaded_files", "referrer_files"):
+                for item in rel_data.get(rel, []):
+                    _add_file(_get_id(item))
 
     return new_nodes
 

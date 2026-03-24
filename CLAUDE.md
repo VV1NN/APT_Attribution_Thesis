@@ -57,7 +57,7 @@ org_iocs/ (raw CTI extracts)
 - **Layer 2:** VT-discovered relationships: `contacted_ip`, `contacted_domain`, `dropped_file`, `resolves_to`
 
 ### Key Scripts
-- `scripts/build_knowledge_graph.py` — Core KG builder. Phase 1 queries VT Details, Phase 2 loads VT relationships and expands the graph. Uses NetworkX internally.
+- `scripts/build_knowledge_graph.py` — Core KG builder. Phase 1 queries VT Details API for full metadata (PE info, WHOIS, DNS, ASN). Phase 2 loads VT relationships, discovers third-layer nodes, queries their VT Details, and expands the graph. Edge attributes include: `resolution_date`, `malicious`/`undetected` counts, `last_analysis_date`, `type_tag`, `type_description`, `meaningful_name`. Uses NetworkX internally.
 - `scripts/merge_knowledge_graphs.py` — Merges per-org KGs. Same-ID nodes merge (numeric fields: latest wins; lists: union). Outputs JSON + SQLite with `nodes`, `edges`, `node_orgs` tables.
 - `scripts/fetch_vt_relationships.py` — Fetches VT relationship data with global dedup cache in `vt_relationships/.cache/`.
 - `ioc_clean_code/clean_iocs_v2.py` — Normalization: cross-hash merging, URL-IP collapse, defang restoration, eTLD blacklist (~50 domains), DDNS whitelist.
@@ -67,8 +67,9 @@ org_iocs/ (raw CTI extracts)
 
 ## API Constraints
 
-- **VirusTotal academic plan:** 4 req/min, ~5,800 lookups/day
-- Rate limiting: 15s between requests, 429 retry with exponential backoff (max 3 attempts)
+- **VirusTotal academic plan:** 20,000 req/min, 20,000 lookups/day, 620,000 lookups/month
+- Rate limiting: `RATE_LIMIT_SEC = 0.1` (in `build_knowledge_graph.py`), `requests_per_min = 600` (in `fetch_vt_relationships.py`)
+- 429 retry with exponential backoff (max 3 attempts)
 - API key loaded from `.env` (`VT_API_KEY`)
 
 ## Important Conventions
@@ -77,3 +78,27 @@ org_iocs/ (raw CTI extracts)
 - Emails are stored without VT queries (preserving social engineering context)
 - Private IPs (RFC1918) are filtered from Layer 2 expansion
 - VT response caching is used extensively to avoid redundant API calls across runs and orgs
+- `--skip-query` only rebuilds the graph from existing cache — do NOT use for initial builds where nodes need full VT metadata
+- All nodes (including relationship-discovered third-layer nodes) must have full VT metadata; all edges must have complete attributes
+
+## Current Progress (2026-03-24)
+
+### KGs Built (with full VT metadata + edge attributes)
+| Org | Nodes | Edges |
+|-----|-------|-------|
+| APT1 | 828 | 863 |
+| APT-C-36 | 709 | 1,459 |
+| Kimsuky | 1,112 | 1,451 |
+| APT-C-23 | 1,686 | 2,761 |
+| APT28 | 2,131 | 2,928 |
+| APT29 | 2,492 | 3,515 |
+| APT19 | 122 | 226 |
+
+### KGs Needing Rebuild (built before edge attributes enhancement)
+- APT12, APT16, APT17, APT18
+
+### Remaining Work
+- APT-C-23: ~30 nodes failed (DNS errors during sleep) — rerun to fill gaps
+- Rebuild APT12, APT16, APT17, APT18 with edge attributes
+- Fetch VT relationships for remaining ~150 orgs (~25,354 API calls)
+- Build KGs for all remaining ~150 orgs after relationships fetched

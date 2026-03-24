@@ -1,6 +1,6 @@
 {
   "sha256": "32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77",
-  "query_time": "2026-03-19T02:25:41.345085+00:00",
+  "query_time": "2026-03-24T06:19:49.596372+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,18 +8,7 @@
     {
       "id": "4d2b61052d0d9b78b9e492ec81e97fd0c968e15eabef8924f4bf81a2f68e2fca",
       "attributes": {
-        "reputation": 0,
-        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "last_submission_date": 1683369442,
-        "names": [
-          "task5.zip"
-        ],
-        "sigma_analysis_stats": {
-          "high": 0,
-          "medium": 1,
-          "critical": 0,
-          "low": 0
-        },
+        "type_extension": "zip",
         "last_analysis_stats": {
           "malicious": 2,
           "suspicious": 0,
@@ -30,7 +19,119 @@
           "failure": 0,
           "type-unsupported": 12
         },
+        "last_submission_date": 1683369442,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 0,
+            "medium": 1,
+            "critical": 0,
+            "low": 0
+          }
+        },
+        "size": 369638,
+        "type_description": "ZIP",
+        "last_analysis_date": 1685009137,
+        "unique_sources": 1,
+        "sha1": "bd03d4e9f0089a9aa791390347ebd1282ce99218",
+        "vhash": "96dadbbd11b103895d290bbb0efa24c0",
+        "sigma_analysis_stats": {
+          "high": 0,
+          "medium": 1,
+          "critical": 0,
+          "low": 0
+        },
         "tlsh": "T1A27423438FCEA97EC395C0AF65744D7A73FB64ACA37269C0466521A1EF833411E78893",
+        "sigma_analysis_results": [
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-90B2-6456-AF0A-000000004A00}",
+                  "ProcessId": "6116",
+                  "Product": "7-Zip",
+                  "Description": "7-Zip Console",
+                  "Company": "Igor Pavlov",
+                  "ParentProcessGuid": "{C784477D-90B2-6456-AE0A-000000004A00}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
+                  "OriginalFileName": "7z.exe",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
+                  "FileVersion": "18.05",
+                  "ParentProcessId": "3220",
+                  "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
+                  "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\01ttwt4j.bvw\" \"C:\\Users\\george\\Desktop\\task5.zip\"",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-60B0-6442-3C7D-040000000000",
+                  "LogonId": "294204",
+                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\task5.zip\"",
+                  "UtcTime": "1683394738",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_description": "Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to extract password protected zip files.",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Password Protected Compressed File Extraction Via 7Zip",
+            "rule_id": "22e867c244280c1d01bcddc8355c10d82b6c69577cd784cefbbe4eb5e7a82f65",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
+          }
+        ],
+        "meaningful_name": "task5.zip",
+        "type_tags": [
+          "compressed",
+          "zip"
+        ],
+        "sha256": "4d2b61052d0d9b78b9e492ec81e97fd0c968e15eabef8924f4bf81a2f68e2fca",
+        "trid": [
+          {
+            "file_type": "ZIP compressed archive",
+            "probability": 80.0
+          },
+          {
+            "file_type": "PrintFox/Pagefox bitmap (640x800)",
+            "probability": 20.0
+          }
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "names": [
+          "task5.zip"
+        ],
+        "tags": [
+          "zip",
+          "encrypted",
+          "detect-debug-environment",
+          "long-sleeps",
+          "checks-user-input",
+          "contains-pe"
+        ],
+        "bundle_info": {
+          "highest_datetime": "2023-04-27 18:21:18",
+          "lowest_datetime": "2022-05-05 16:05:44",
+          "num_children": 2,
+          "extensions": {
+            "pdf": 1,
+            "dll": 1
+          },
+          "file_types": {
+            "PDF": 1,
+            "Portable Executable": 1
+          },
+          "password": "infected",
+          "type": "ZIP",
+          "uncompressed_size": 1042179
+        },
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "ssdeep": "6144:UBUIh3UWhb+p15FixDjwjVeMZgfG4JuCIC+0RiUWw0lFY2kzR:UB32WguD0jVeWkGguzC+0RiHtlFrk9",
+        "last_modification_date": 1685016389,
+        "md5": "be7c117ea459d21c6e8c055f84619bf0",
+        "first_submission_date": 1683369442,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -633,99 +734,48 @@
             "result": null
           }
         },
-        "md5": "be7c117ea459d21c6e8c055f84619bf0",
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 0,
-            "medium": 1,
-            "critical": 0,
-            "low": 0
-          }
+        "type_tag": "zip",
+        "times_submitted": 1,
+        "reputation": 0
+      }
+    },
+    {
+      "id": "9df616fdf05eef07c778c1421ed6ced1aabd422f6f23491def13a3e133eb05c3",
+      "attributes": {
+        "type_extension": "zip",
+        "last_analysis_stats": {
+          "malicious": 3,
+          "suspicious": 0,
+          "undetected": 64,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 9
         },
-        "sigma_analysis_results": [
-          {
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-90B2-6456-AF0A-000000004A00}",
-                  "ProcessId": "6116",
-                  "Product": "7-Zip",
-                  "Description": "7-Zip Console",
-                  "Company": "Igor Pavlov",
-                  "ParentProcessGuid": "{C784477D-90B2-6456-AE0A-000000004A00}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
-                  "OriginalFileName": "7z.exe",
-                  "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
-                  "FileVersion": "18.05",
-                  "ParentProcessId": "3220",
-                  "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
-                  "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\01ttwt4j.bvw\" \"C:\\Users\\george\\Desktop\\task5.zip\"",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-60B0-6442-3C7D-040000000000",
-                  "LogonId": "294204",
-                  "Image": "C:\\Windows\\SysWOW64\\7za.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\task5.zip\"",
-                  "UtcTime": "1683394738",
-                  "RuleName": "-"
-                }
-              }
-            ],
-            "rule_level": "medium",
-            "rule_description": "Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to extract password protected zip files.",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Password Protected Compressed File Extraction Via 7Zip",
-            "rule_id": "22e867c244280c1d01bcddc8355c10d82b6c69577cd784cefbbe4eb5e7a82f65",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-          }
-        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "sunburst",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "sunburst"
+        },
+        "last_submission_date": 1715703862,
+        "size": 344135,
         "type_description": "ZIP",
-        "vhash": "96dadbbd11b103895d290bbb0efa24c0",
+        "last_analysis_date": 1715150864,
+        "unique_sources": 2,
+        "sha1": "df37af6b8bc5d5590ea1d873e2bfbd897280293c",
+        "vhash": "048d7138b8aefd3b4c22275fba8aa370",
+        "tlsh": "T1CD742345B547BC249B31407B7AC3CF41223DBC26E342D326F4963629867A3ADFA7DA01",
+        "meaningful_name": "task5.zip",
         "type_tags": [
           "compressed",
           "zip"
         ],
-        "sha1": "bd03d4e9f0089a9aa791390347ebd1282ce99218",
-        "tags": [
-          "zip",
-          "encrypted",
-          "detect-debug-environment",
-          "long-sleeps",
-          "checks-user-input",
-          "contains-pe"
-        ],
-        "type_tag": "zip",
-        "last_modification_date": 1685016389,
-        "first_submission_date": 1683369442,
-        "bundle_info": {
-          "highest_datetime": "2023-04-27 18:21:18",
-          "lowest_datetime": "2022-05-05 16:05:44",
-          "num_children": 2,
-          "extensions": {
-            "pdf": 1,
-            "dll": 1
-          },
-          "file_types": {
-            "PDF": 1,
-            "Portable Executable": 1
-          },
-          "password": "infected",
-          "type": "ZIP",
-          "uncompressed_size": 1042179
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "sha256": "4d2b61052d0d9b78b9e492ec81e97fd0c968e15eabef8924f4bf81a2f68e2fca",
-        "size": 369638,
-        "meaningful_name": "task5.zip",
-        "ssdeep": "6144:UBUIh3UWhb+p15FixDjwjVeMZgfG4JuCIC+0RiUWw0lFY2kzR:UB32WguD0jVeWkGguzC+0RiHtlFrk9",
-        "last_analysis_date": 1685009137,
-        "unique_sources": 1,
-        "times_submitted": 1,
+        "sha256": "9df616fdf05eef07c778c1421ed6ced1aabd422f6f23491def13a3e133eb05c3",
         "trid": [
           {
             "file_type": "ZIP compressed archive",
@@ -736,18 +786,39 @@
             "probability": 20.0
           }
         ],
-        "type_extension": "zip"
-      }
-    },
-    {
-      "id": "9df616fdf05eef07c778c1421ed6ced1aabd422f6f23491def13a3e133eb05c3",
-      "attributes": {
-        "reputation": -9,
-        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "last_submission_date": 1715703862,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
         "names": [
           "task5.zip"
         ],
+        "tags": [
+          "contains-pe",
+          "encrypted",
+          "zip",
+          "checks-user-input",
+          "detect-debug-environment",
+          "long-sleeps"
+        ],
+        "bundle_info": {
+          "highest_datetime": "2023-02-24 16:17:14",
+          "lowest_datetime": "2023-02-24 16:17:14",
+          "num_children": 1,
+          "extensions": {
+            "dll": 1
+          },
+          "file_types": {
+            "Portable Executable": 1
+          },
+          "password": "infected",
+          "type": "ZIP",
+          "uncompressed_size": 1011032
+        },
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "ssdeep": "6144:REEuEssX/JoGzmxHUKDc4kdMiq/NoRxw7TU9eHRBjny:R5FsaBzmx7FkdMiq/+xw7TU9iny",
+        "last_modification_date": 1771889080,
+        "md5": "e630460b90e1aa7c431920fe10e13d66",
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "malicious",
@@ -762,17 +833,7 @@
             "confidence": 56
           }
         },
-        "last_analysis_stats": {
-          "malicious": 3,
-          "suspicious": 0,
-          "undetected": 64,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 9
-        },
-        "tlsh": "T1CD742345B547BC249B31407B7AC3CF41223DBC26E342D326F4963629867A3ADFA7DA01",
+        "first_submission_date": 1715150864,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1391,25 +1452,72 @@
             "result": null
           }
         },
-        "md5": "e630460b90e1aa7c431920fe10e13d66",
+        "type_tag": "zip",
+        "times_submitted": 2,
+        "reputation": -9
+      }
+    },
+    {
+      "id": "d2efae096ccba090d60cd126b44f65bcc2828ecf79658576baf0f59cdbcdd820",
+      "attributes": {
+        "type_extension": "zip",
+        "last_analysis_stats": {
+          "malicious": 3,
+          "suspicious": 0,
+          "undetected": 60,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 3,
+          "type-unsupported": 10
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "sunburst",
+              "count": 2
+            }
+          ],
+          "suggested_threat_label": "sunburst"
+        },
+        "last_submission_date": 1746730655,
+        "filecondis": {
+          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
+          "dhash": "0000000000000100"
+        },
+        "size": 344135,
         "type_description": "ZIP",
+        "last_analysis_date": 1746730655,
+        "unique_sources": 1,
+        "sha1": "7f33d93511449ab294f5753e9e80b946b4677132",
         "vhash": "048d7138b8aefd3b4c22275fba8aa370",
+        "tlsh": "T1407423C89F97CA2CA77C34A54842CE2855172F6975E2A6ECFF5F996C03B0227583C1B1",
+        "meaningful_name": "ilias.php?baseClass",
         "type_tags": [
           "compressed",
           "zip"
         ],
-        "sha1": "df37af6b8bc5d5590ea1d873e2bfbd897280293c",
+        "sha256": "d2efae096ccba090d60cd126b44f65bcc2828ecf79658576baf0f59cdbcdd820",
+        "trid": [
+          {
+            "file_type": "ZIP compressed archive",
+            "probability": 100.0
+          }
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "names": [
+          "ilias.php?baseClass"
+        ],
         "tags": [
-          "contains-pe",
           "encrypted",
+          "contains-pe",
           "zip",
-          "checks-user-input",
           "detect-debug-environment",
           "long-sleeps"
         ],
-        "type_tag": "zip",
-        "last_modification_date": 1771889080,
-        "first_submission_date": 1715150864,
         "bundle_info": {
           "highest_datetime": "2023-02-24 16:17:14",
           "lowest_datetime": "2023-02-24 16:17:14",
@@ -1424,48 +1532,10 @@
           "type": "ZIP",
           "uncompressed_size": 1011032
         },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "sha256": "9df616fdf05eef07c778c1421ed6ced1aabd422f6f23491def13a3e133eb05c3",
-        "size": 344135,
-        "meaningful_name": "task5.zip",
-        "ssdeep": "6144:REEuEssX/JoGzmxHUKDc4kdMiq/NoRxw7TU9eHRBjny:R5FsaBzmx7FkdMiq/+xw7TU9iny",
-        "last_analysis_date": 1715150864,
-        "popular_threat_classification": {
-          "suggested_threat_label": "sunburst",
-          "popular_threat_name": [
-            {
-              "value": "sunburst",
-              "count": 2
-            }
-          ]
-        },
-        "unique_sources": 2,
-        "times_submitted": 2,
-        "trid": [
-          {
-            "file_type": "ZIP compressed archive",
-            "probability": 80.0
-          },
-          {
-            "file_type": "PrintFox/Pagefox bitmap (640x800)",
-            "probability": 20.0
-          }
-        ],
-        "type_extension": "zip"
-      }
-    },
-    {
-      "id": "d2efae096ccba090d60cd126b44f65bcc2828ecf79658576baf0f59cdbcdd820",
-      "attributes": {
-        "reputation": 0,
         "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "last_submission_date": 1746730655,
-        "names": [
-          "ilias.php?baseClass"
-        ],
+        "ssdeep": "6144:0OkKWCMNzHDotjNZQwdp9QpE3XqaFIfqJdivW2H3/jCLL/UVUf6os0oHWo6e3anr:5kKWLjKLzp96sZIfmipH3/S/UVUf1s0T",
+        "last_modification_date": 1746794199,
+        "md5": "8147f64c0fd80c685a4d82647e7829e2",
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "malicious",
@@ -1481,18 +1551,8 @@
             "confidence": 56
           }
         },
-        "last_analysis_stats": {
-          "malicious": 3,
-          "suspicious": 0,
-          "undetected": 60,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 3,
-          "type-unsupported": 10
-        },
-        "tlsh": "T1407423C89F97CA2CA77C34A54842CE2855172F6975E2A6ECFF5F996C03B0227583C1B1",
         "magika": "ZIP",
+        "first_submission_date": 1746730655,
         "last_analysis_results": {
           "Lionic": {
             "method": "blacklist",
@@ -2103,80 +2163,65 @@
             "result": null
           }
         },
-        "md5": "8147f64c0fd80c685a4d82647e7829e2",
+        "type_tag": "zip",
+        "times_submitted": 1,
+        "reputation": 0
+      }
+    },
+    {
+      "id": "e685e104dd4ef22ca57f37e52ed4a82a24408081a78f97cde15c11f38f58ece4",
+      "attributes": {
+        "type_extension": "zip",
+        "last_analysis_stats": {
+          "malicious": 2,
+          "suspicious": 0,
+          "undetected": 64,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 2,
+          "type-unsupported": 8
+        },
+        "last_submission_date": 1705572185,
+        "filecondis": {
+          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3",
+          "dhash": "0000000000000100"
+        },
+        "size": 216845075,
         "type_description": "ZIP",
-        "vhash": "048d7138b8aefd3b4c22275fba8aa370",
+        "last_analysis_date": 1767233630,
+        "unique_sources": 2,
+        "sha1": "4a2e78ee3a82602da0891f055d277179684482c7",
+        "tlsh": "T146A833E5AA35FB3F5B5164351528C80A1FE5F9102EEF3062212FC27344DAED1FAEA581",
+        "meaningful_name": "13066296132.zip",
         "type_tags": [
           "compressed",
           "zip"
         ],
-        "sha1": "7f33d93511449ab294f5753e9e80b946b4677132",
-        "tags": [
-          "encrypted",
-          "contains-pe",
-          "zip",
-          "detect-debug-environment",
-          "long-sleeps"
-        ],
-        "type_tag": "zip",
-        "last_modification_date": 1746794199,
-        "first_submission_date": 1746730655,
-        "bundle_info": {
-          "highest_datetime": "2023-02-24 16:17:14",
-          "lowest_datetime": "2023-02-24 16:17:14",
-          "num_children": 1,
-          "extensions": {
-            "dll": 1
-          },
-          "file_types": {
-            "Portable Executable": 1
-          },
-          "password": "infected",
-          "type": "ZIP",
-          "uncompressed_size": 1011032
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 0
-        },
-        "sha256": "d2efae096ccba090d60cd126b44f65bcc2828ecf79658576baf0f59cdbcdd820",
-        "size": 344135,
-        "meaningful_name": "ilias.php?baseClass",
-        "ssdeep": "6144:0OkKWCMNzHDotjNZQwdp9QpE3XqaFIfqJdivW2H3/jCLL/UVUf6os0oHWo6e3anr:5kKWLjKLzp96sZIfmipH3/S/UVUf1s0T",
-        "filecondis": {
-          "dhash": "0000000000000100",
-          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3"
-        },
-        "last_analysis_date": 1746730655,
-        "popular_threat_classification": {
-          "suggested_threat_label": "sunburst",
-          "popular_threat_name": [
-            {
-              "value": "sunburst",
-              "count": 2
-            }
-          ]
-        },
-        "unique_sources": 1,
-        "times_submitted": 1,
+        "sha256": "e685e104dd4ef22ca57f37e52ed4a82a24408081a78f97cde15c11f38f58ece4",
         "trid": [
           {
             "file_type": "ZIP compressed archive",
             "probability": 100.0
           }
         ],
-        "type_extension": "zip"
-      }
-    },
-    {
-      "id": "e685e104dd4ef22ca57f37e52ed4a82a24408081a78f97cde15c11f38f58ece4",
-      "attributes": {
-        "reputation": 0,
-        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
-        "last_submission_date": 1705572185,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
         "names": [
           "13066296132.zip"
         ],
+        "tags": [
+          "checks-user-input",
+          "detect-debug-environment",
+          "long-sleeps",
+          "zip"
+        ],
+        "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+        "ssdeep": "6291456:qwYR6klIRcofLVpTnhKP7D8pcJhF326/d1sa:rOof70sShF326/d19",
+        "last_modification_date": 1767242865,
+        "md5": "968b23b98cd35145c668a9d2c8cb1090",
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "malicious",
@@ -2191,18 +2236,8 @@
             ]
           }
         },
-        "last_analysis_stats": {
-          "malicious": 2,
-          "suspicious": 0,
-          "undetected": 64,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 2,
-          "type-unsupported": 8
-        },
-        "tlsh": "T146A833E5AA35FB3F5B5164351528C80A1FE5F9102EEF3062212FC27344DAED1FAEA581",
         "magika": "ZIP",
+        "first_submission_date": 1705560905,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -2813,46 +2848,734 @@
             "result": null
           }
         },
-        "md5": "968b23b98cd35145c668a9d2c8cb1090",
-        "type_description": "ZIP",
-        "type_tags": [
-          "compressed",
-          "zip"
-        ],
-        "sha1": "4a2e78ee3a82602da0891f055d277179684482c7",
-        "tags": [
-          "checks-user-input",
-          "detect-debug-environment",
-          "long-sleeps",
-          "zip"
-        ],
         "type_tag": "zip",
-        "last_modification_date": 1767242865,
-        "first_submission_date": 1705560905,
+        "times_submitted": 2,
+        "reputation": 0
+      }
+    }
+  ],
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": [
+    {
+      "id": "bd7c92c8a1817dac7e4ae81f9a5010eec7ccb1aaf7f10c571163d1b022855d96",
+      "attributes": {
+        "unique_sources": 1,
+        "size": 1001472,
+        "magika": "ISO",
+        "tags": [
+          "isoimage"
+        ],
+        "last_analysis_date": 1726597594,
+        "times_submitted": 1,
+        "ssdeep": "12288:0x7m/z9aEBzvnvLtYAi6uLlYQ69BBpIvF1tjpH7BKi+0A8vca9ow:PaEBTvRBi6uL6dIvDtjpH9+0A8vca9o",
+        "reputation": 0,
+        "sha256": "bd7c92c8a1817dac7e4ae81f9a5010eec7ccb1aaf7f10c571163d1b022855d96",
+        "type_extension": "iso",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
-        "sha256": "e685e104dd4ef22ca57f37e52ed4a82a24408081a78f97cde15c11f38f58ece4",
-        "size": 216845075,
-        "meaningful_name": "13066296132.zip",
-        "ssdeep": "6291456:qwYR6klIRcofLVpTnhKP7D8pcJhF326/d1sa:rOof70sShF326/d19",
-        "filecondis": {
-          "dhash": "0000000000000100",
-          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3"
-        },
-        "last_analysis_date": 1767233630,
-        "unique_sources": 2,
-        "times_submitted": 2,
-        "trid": [
+        "type_tags": [
+          "compressed",
+          "isoimage"
+        ],
+        "meaningful_name": ".text",
+        "last_modification_date": 1726604808,
+        "magic": "data",
+        "tlsh": "T1A325C40173EC8A49F5FF2774AAB441680B73B85A9A7AD74D154C619E0FB3B008E11BB7",
+        "crowdsourced_yara_results": [
           {
-            "file_type": "ZIP compressed archive",
-            "probability": 100.0
+            "ruleset_id": "0122a7f913",
+            "rule_name": "Windows_API_Function",
+            "ruleset_name": "Windows_API_Function",
+            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+            "author": "InQuest Labs",
+            "match_date": 1726597595,
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "ruleset_id": "000cc6f081",
+            "rule_name": "APT_Backdoor_SUNBURST_1",
+            "ruleset_name": "apt_solarwinds_sunburst",
+            "description": "This rule is looking for portions of the SUNBURST backdoor that are vital to how it functions. The first signature fnv_xor matches a magic byte xor that the sample performs on process, service, and driver names/paths. SUNBURST is a backdoor that has the ability to spawn and kill processes, write and delete files, set and create registry keys, gather system information, and disable a set of forensic analysis tools and services.",
+            "author": "FireEye",
+            "match_date": 1726597595,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "000cc6f081",
+            "rule_name": "APT_Backdoor_SUNBURST_2",
+            "ruleset_name": "apt_solarwinds_sunburst",
+            "description": "The SUNBURST backdoor uses a domain generation algorithm (DGA) as part of C2 communications. This rule is looking for each branch of the code that checks for which HTTP method is being used. This is in one large conjunction, and all branches are then tied together via disjunction. The grouping is intentionally designed so that if any part of the DGA is re-used in another sample, this signature should match that re-used portion. SUNBURST is a backdoor that has the ability to spawn and kill processes, write and delete files, set and create registry keys, gather system information, and disable a set of forensic analysis tools and services.",
+            "author": "FireEye",
+            "match_date": 1726597595,
+            "source": "https://github.com/Neo23x0/signature-base"
           }
         ],
-        "type_extension": "zip"
+        "type_tag": "isoimage",
+        "last_analysis_stats": {
+          "malicious": 2,
+          "suspicious": 0,
+          "undetected": 61,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": null,
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.1.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20240915",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20240916",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5196",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.25.10.0",
+            "engine_update": "20240912",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20230417",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.189.53297",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.189.53294",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2022.0.0.18",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.789",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "29904",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "10.0.0.1040",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20240917",
+            "category": "malicious",
+            "result": "MSIL:SunBurst-B [Bd]"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.1.1",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.146.25796",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.1.0.53752",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.65.5230",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "11.0.0.1006",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "2.5.5.0",
+            "engine_update": "20240913",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "089e4ee:089e4ee:7aa142f:7aa142f",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20240916",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.20",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20240725",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.187.174",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37055",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.24080.9",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "1.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "A:25.38907B:27.37493",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1726594236",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.26.1.10507",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2024-09-17.02",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.0.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.3.23.0",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20240916",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "None",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20240917",
+            "category": "malicious",
+            "result": "MSIL:SunBurst-B [Bd]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20240917",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20240910",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "240917-00",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20240103",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20240128",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.7977",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20240905",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.576",
+            "engine_update": "20240916",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.16.213",
+            "engine_update": "20240826",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.0.0.403",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20240905",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "24.2.1.1",
+            "engine_update": "20240417",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.163",
+            "engine_update": "20240917",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "type_description": "ISO image",
+        "sha1": "57fd6514452fa10677ed091081a719f84719174c",
+        "md5": "ac9dc455a67c7f2c9f10725d66c115d1",
+        "names": [
+          ".text"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "msil/sunburst",
+          "popular_threat_name": [
+            {
+              "count": 2,
+              "value": "msil"
+            },
+            {
+              "count": 2,
+              "value": "sunburst"
+            }
+          ]
+        },
+        "first_submission_date": 1622065788,
+        "last_submission_date": 1622065788
       }
+    },
+    {
+      "id": "76ae8ddd83a43f9a5b028f2c494f84cb1dfd2cd75f814b6aaa7c3fdb6efc4b32",
+      "attributes": {}
+    },
+    {
+      "id": "b1ca8c79be6eafb7baebc7de6644fa4a4775dcaceac8b68d6a11b28b5b78cb3d",
+      "attributes": {}
+    },
+    {
+      "id": "1d0a9753f09b02f71d538c31c4328b91843a47c8b5c60b9c3a24cef675bfe589",
+      "attributes": {}
     }
-  ],
-  "errors": []
+  ]
 }

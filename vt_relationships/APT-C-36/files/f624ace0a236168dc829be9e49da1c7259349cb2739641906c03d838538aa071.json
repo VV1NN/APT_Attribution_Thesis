@@ -1,6 +1,6 @@
 {
   "sha256": "f624ace0a236168dc829be9e49da1c7259349cb2739641906c03d838538aa071",
-  "query_time": "2026-03-16T08:08:45.941047+00:00",
+  "query_time": "2026-03-24T05:48:41.639085+00:00",
   "contacted_ips": [],
   "contacted_domains": [],
   "dropped_files": [],
@@ -8,17 +8,124 @@
     {
       "id": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
       "attributes": {
+        "md5": "93a975c21b06f8483fd37dc34c20a43f",
+        "size": 661759077,
+        "magic": "RAR archive data, v4, os: Win32",
+        "type_extension": "rar",
         "total_votes": {
           "harmless": 0,
           "malicious": 0
         },
+        "type_tag": "rar",
+        "filecondis": {
+          "dhash": "0000000000000100",
+          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3"
+        },
         "names": [],
+        "trid": [
+          {
+            "file_type": "RAR compressed archive (v-4.x)",
+            "probability": 58.3
+          },
+          {
+            "file_type": "RAR compressed archive (gen)",
+            "probability": 41.6
+          }
+        ],
+        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703",
+        "sha256": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
+        "vhash": "a72915e10542b7b5b5f2972fa867565d",
         "sha1": "3b28fd14a8e2debf3fcdcb609e1f54af7ae0e611",
+        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 6,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan."
+        },
+        "type_description": "RAR",
+        "last_modification_date": 1773074501,
+        "last_analysis_stats": {
+          "malicious": 14,
+          "suspicious": 0,
+          "undetected": 25,
+          "harmless": 0,
+          "timeout": 19,
+          "confirmed-timeout": 0,
+          "failure": 6,
+          "type-unsupported": 12
+        },
+        "unique_sources": 1,
+        "reputation": 0,
+        "times_submitted": 1,
+        "tags": [
+          "contains-pe",
+          "detect-debug-environment",
+          "contains-elf",
+          "long-sleeps",
+          "rar"
+        ],
         "type_tags": [
           "compressed",
           "rar"
         ],
-        "unique_sources": 1,
+        "last_submission_date": 1690965341,
+        "bundle_info": {
+          "highest_datetime": "2023-08-01 10:09:49",
+          "lowest_datetime": "2014-04-04 16:33:34",
+          "num_children": 1240,
+          "extensions": {
+            "bin": 6,
+            "htm": 27,
+            "EXE": 31,
+            "html": 12,
+            "exe": 527
+          },
+          "file_types": {
+            "XML": 2,
+            "ZIP": 10,
+            "unknown": 66,
+            "JavaScript": 1,
+            "ELF": 5,
+            "HTML": 22,
+            "RAR": 4,
+            "Portable Executable": 880,
+            "PDF": 2,
+            "Microsoft Office": 7
+          },
+          "type": "RAR",
+          "uncompressed_size": 1045137790
+        },
+        "last_analysis_date": 1773066514,
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "RANSOM",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "Njrat"
+            ],
+            "confidence": 72
+          },
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "RAT"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "WarzoneRAT"
+            ]
+          }
+        },
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "0122a7f913",
@@ -45,18 +152,7 @@
             "source": "https://github.com/ditekshen/detection"
           }
         ],
-        "type_extension": "rar",
         "first_submission_date": 1690965341,
-        "trid": [
-          {
-            "file_type": "RAR compressed archive (v-4.x)",
-            "probability": 58.3
-          },
-          {
-            "file_type": "RAR compressed archive (gen)",
-            "probability": 41.6
-          }
-        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -666,105 +762,11 @@
             "category": "type-unsupported",
             "result": null
           }
-        },
-        "magic": "RAR archive data, v4, os: Win32",
-        "last_modification_date": 1773074501,
-        "type_tag": "rar",
-        "size": 661759077,
-        "type_description": "RAR",
-        "filecondis": {
-          "dhash": "0000000000000100",
-          "raw_md5": "aae0ed89054a1507db23b62ce7c853b3"
-        },
-        "times_submitted": 1,
-        "last_analysis_stats": {
-          "malicious": 14,
-          "suspicious": 0,
-          "undetected": 25,
-          "harmless": 0,
-          "timeout": 19,
-          "confirmed-timeout": 0,
-          "failure": 6,
-          "type-unsupported": 12
-        },
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "RANSOM",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "malware_names": [
-              "Njrat"
-            ],
-            "confidence": 72
-          },
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "RAT"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "WarzoneRAT"
-            ]
-          }
-        },
-        "tlsh": "T11869336503F1ACD9E8D913BD53641962B783DAD69720EC4F1BC82E1F49CBB89D229703",
-        "bundle_info": {
-          "highest_datetime": "2023-08-01 10:09:49",
-          "lowest_datetime": "2014-04-04 16:33:34",
-          "num_children": 1240,
-          "extensions": {
-            "bin": 6,
-            "htm": 27,
-            "EXE": 31,
-            "html": 12,
-            "exe": 527
-          },
-          "file_types": {
-            "XML": 2,
-            "ZIP": 10,
-            "unknown": 66,
-            "JavaScript": 1,
-            "ELF": 5,
-            "HTML": 22,
-            "RAR": 4,
-            "Portable Executable": 880,
-            "PDF": 2,
-            "Microsoft Office": 7
-          },
-          "type": "RAR",
-          "uncompressed_size": 1045137790
-        },
-        "md5": "93a975c21b06f8483fd37dc34c20a43f",
-        "ssdeep": "12582912:RgMStodiC5HsFYZaUDlPkTgnPehV/VeVBUknF4HmwB8J2PORkZUF:Rg5GwO58TmeD/QVBUblNgkOF",
-        "last_analysis_date": 1773066514,
-        "sha256": "c47a803a988d521ddce30987b5fa2ddc1657ecd59aa7dd2dc976b119bda4157d",
-        "vhash": "a72915e10542b7b5b5f2972fa867565d",
-        "last_submission_date": 1690965341,
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.",
-          "popular_threat_category": [
-            {
-              "count": 6,
-              "value": "trojan"
-            }
-          ]
-        },
-        "tags": [
-          "contains-pe",
-          "detect-debug-environment",
-          "contains-elf",
-          "long-sleeps",
-          "rar"
-        ],
-        "reputation": 0
+        }
       }
     }
   ],
-  "errors": []
+  "errors": [],
+  "contacted_urls": [],
+  "bundled_files": []
 }
