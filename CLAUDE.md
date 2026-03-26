@@ -81,7 +81,34 @@ org_iocs/ (raw CTI extracts)
 - `--skip-query` only rebuilds the graph from existing cache — do NOT use for initial builds where nodes need full VT metadata
 - All nodes (including relationship-discovered third-layer nodes) must have full VT metadata; all edges must have complete attributes
 
-## Current Progress (2026-03-24)
+## Current Progress (2026-03-25)
+
+### VT Relationships Fetched (21/176 orgs)
+| Org | Files | IPs | Domains | 狀態 |
+|-----|-------|-----|---------|------|
+| APT-C-23 | 29 | 4 | 190 | ✅ |
+| APT-C-36 | 100 | 8 | 8 | ✅ |
+| APT1 | 10 | 4 | 43 | ✅ |
+| APT12 | 12 | 0 | 2 | ✅ |
+| APT16 | 2 | 1 | 5 | ✅ |
+| APT17 | 0 | 0 | 1 | ✅ |
+| APT18 | 3 | 0 | 0 | ✅ |
+| APT19 | 2 | 3 | 7 | ✅ |
+| APT28 | 101 | 36 | 113 | ✅ |
+| APT29 | 360 | 159 | 135 | ✅ |
+| APT32 | 57 | 62 | 95 | ✅ |
+| FIN7 | 202 | 80 | 69 | ✅ |
+| Gamaredon_Group | 261 | 28 | 224 | ✅ |
+| Kimsuky | 48 | 21 | 102 | ✅ |
+| Lazarus_Group | 127 | 66 | 159 | ✅ |
+| Magic_Hound | 45 | 103 | 706 | ✅ |
+| MuddyWater | 114 | 33 | 82 | ✅ |
+| OilRig | 65 | 17 | 41 | ✅ |
+| Sandworm_Team | 96 | 73 | 115 | ✅ |
+| Turla | 77 | 4 | 62 | ✅ |
+| Wizard_Spider | 12 | 249 | 222/278 | ⚠️ 剩 ~56 domains |
+
+Global cache: files=1,716 / ips=942 / domains=2,274
 
 ### KGs Built (with full VT metadata + edge attributes)
 | Org | Nodes | Edges |
@@ -100,5 +127,8 @@ org_iocs/ (raw CTI extracts)
 ### Remaining Work
 - APT-C-23: ~30 nodes failed (DNS errors during sleep) — rerun to fill gaps
 - Rebuild APT12, APT16, APT17, APT18 with edge attributes
-- Fetch VT relationships for remaining ~150 orgs (~25,354 API calls)
-- Build KGs for all remaining ~150 orgs after relationships fetched
+- Wizard_Spider: finish remaining ~56 domains (next run auto-resumes)
+- Build KGs for 10 newly relationship-fetched orgs: APT32, FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, OilRig, Sandworm_Team, Turla, Wizard_Spider
+- Fetch VT relationships for remaining 155 orgs
+- Build KGs for all remaining orgs after relationships fetched
+- Fix OilRig bad IoC: `192.121.22..46` (double dot — IoC cleaning missed it)

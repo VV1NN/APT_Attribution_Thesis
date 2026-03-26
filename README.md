@@ -10,10 +10,22 @@
 4. 設計機器學習方法進行 APT 歸因（attribution）
 
 ## 資料規模
-- **涵蓋 APT 組織**：150+ 組織（org_iocs/ 內含已提取 IoC）
-- **已建構知識圖譜**：APT12, APT16, APT17, APT18, APT19
-- **已合併統一圖譜**：230 nodes, 338 edges（APT18 + APT19）
-- **VT 關聯資料**：已擷取 10+ 組織的 VT Relationship 資料
+- **涵蓋 APT 組織**：176 組織（org_iocs/ 內含已提取 IoC，其中 146 組織有 >0 IoCs）
+- **VT Relationship 已擷取**：21 組織（全域快取：files=1,716 / ips=942 / domains=2,274）
+- **已建構知識圖譜（含完整 metadata + edge attributes）**：7 組織
+
+| 組織 | Nodes | Edges |
+|------|-------|-------|
+| APT1 | 828 | 863 |
+| APT-C-36 | 709 | 1,459 |
+| Kimsuky | 1,112 | 1,451 |
+| APT-C-23 | 1,686 | 2,761 |
+| APT28 | 2,131 | 2,928 |
+| APT29 | 2,492 | 3,515 |
+| APT19 | 122 | 226 |
+
+- **待重建 KG**（缺 edge attributes）：APT12, APT16, APT17, APT18
+- **待建構 KG**（relationships 已就緒）：APT32, FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, OilRig, Sandworm_Team, Turla, Wizard_Spider
 
 ## 系統架構
 
@@ -117,7 +129,7 @@ uv run python scripts/fetch_vt_metadata.py --org APT18
 uv run python scripts/fetch_vt_relationships.py --org APT18
 ```
 
-> ⚠️ VT Academic Plan 限制：4 req/min，約 5,800 lookups/day。腳本內建 15 秒間隔與 429 自動重試。
+> ⚠️ VT Academic Plan 限制：20,000 req/min，20,000 lookups/day，620,000 lookups/month。腳本內建速率控制與 429 自動重試。
 
 ### 3. 建構知識圖譜
 
