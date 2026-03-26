@@ -593,6 +593,7 @@ def build_graph(org: str, iocs: list[dict], vt_cache: dict[str, dict],
                 "id":         canonical_nid,
                 "type":       ntype,
                 "vt_found":   vt_found,
+                "depth":      0,
                 "attributes": attributes,
             })
             seen_nodes.add(canonical_nid)

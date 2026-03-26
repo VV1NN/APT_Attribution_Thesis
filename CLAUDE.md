@@ -54,12 +54,17 @@ org_iocs/ (raw CTI extracts)
 
 ### Two-Layer Knowledge Graph
 - **Layer 1:** `apt --has_ioc--> file/domain/ip/email` (from CTI reports)
-- **Layer 2:** VT-discovered relationships: `contacted_ip`, `contacted_domain`, `dropped_file`, `resolves_to`
+- **Layer 2:** VT-discovered relationships (11 edge types active, 8 more defined for future API plans):
+  - **File → Network:** `contacted_ip`, `contacted_domain`, `contacted_url`
+  - **File → File:** `dropped_file`, `execution_parent`, `bundled_file`
+  - **DNS:** `resolves_to` (domain ↔ ip), `has_subdomain` (domain → domain)
+  - **Reverse (Domain/IP → File):** `communicating_file`, `referrer_file`
+  - **Code-only (Enterprise API):** `embedded_domain`, `embedded_ip`, `embedded_url`, `itw_domain`, `itw_ip`, `itw_url`, `downloaded_file`, `compressed_parent`
 
 ### Key Scripts
 - `scripts/build_knowledge_graph.py` — Core KG builder. Phase 1 queries VT Details API for full metadata (PE info, WHOIS, DNS, ASN). Phase 2 loads VT relationships, discovers third-layer nodes, queries their VT Details, and expands the graph. Edge attributes include: `resolution_date`, `malicious`/`undetected` counts, `last_analysis_date`, `type_tag`, `type_description`, `meaningful_name`. Uses NetworkX internally.
 - `scripts/merge_knowledge_graphs.py` — Merges per-org KGs. Same-ID nodes merge (numeric fields: latest wins; lists: union). Outputs JSON + SQLite with `nodes`, `edges`, `node_orgs` tables.
-- `scripts/fetch_vt_relationships.py` — Fetches VT relationship data with global dedup cache in `vt_relationships/.cache/`.
+- `scripts/fetch_vt_relationships.py` — Fetches VT relationship data with global dedup cache in `vt_relationships/.cache/`. File: `contacted_ips/domains/urls`, `dropped_files`, `execution_parents`, `bundled_files`. Domain: `resolutions`, `communicating_files`, `referrer_files`, `subdomains`, `historical_ssl_certificates`, `historical_whois`. IP: `resolutions`, `communicating_files`, `referrer_files`, `historical_ssl_certificates`, `historical_whois`.
 - `ioc_clean_code/clean_iocs_v2.py` — Normalization: cross-hash merging, URL-IP collapse, defang restoration, eTLD blacklist (~50 domains), DDNS whitelist.
 
 ### Node Types & IDs
@@ -67,9 +72,10 @@ org_iocs/ (raw CTI extracts)
 
 ## API Constraints
 
-- **VirusTotal academic plan:** 20,000 req/min, 20,000 lookups/day, 620,000 lookups/month
-- Rate limiting: `RATE_LIMIT_SEC = 0.1` (in `build_knowledge_graph.py`), `requests_per_min = 600` (in `fetch_vt_relationships.py`)
-- 429 retry with exponential backoff (max 3 attempts)
+- **VirusTotal academic plan:** 20,000 req/min, 20,000 lookups/day, 620,000 lookups/month (group shared quota)
+- Rate limiting: both scripts use ~600 req/min (`RATE_LIMIT_SEC = 0.1` / `requests_per_min = 600`)
+- 429 retry: `build_knowledge_graph.py` max 3 attempts (interval = 0.1s × attempt); `fetch_vt_relationships.py` **unlimited** retries with exponential backoff (60s → 120s → 300s → 600s)
+- `fetch_vt_relationships.py` daily limit: 18,000 (with buffer from 20K plan quota)
 - API key loaded from `.env` (`VT_API_KEY`)
 
 ## Important Conventions
@@ -81,7 +87,7 @@ org_iocs/ (raw CTI extracts)
 - `--skip-query` only rebuilds the graph from existing cache — do NOT use for initial builds where nodes need full VT metadata
 - All nodes (including relationship-discovered third-layer nodes) must have full VT metadata; all edges must have complete attributes
 
-## Current Progress (2026-03-25)
+## Current Progress (2026-03-26)
 
 ### VT Relationships Fetched (21/176 orgs)
 | Org | Files | IPs | Domains | 狀態 |
@@ -110,25 +116,31 @@ org_iocs/ (raw CTI extracts)
 
 Global cache: files=1,716 / ips=942 / domains=2,274
 
-### KGs Built (with full VT metadata + edge attributes)
-| Org | Nodes | Edges |
-|-----|-------|-------|
-| APT1 | 828 | 863 |
-| APT-C-36 | 709 | 1,459 |
-| Kimsuky | 1,112 | 1,451 |
-| APT-C-23 | 1,686 | 2,761 |
-| APT28 | 2,131 | 2,928 |
-| APT29 | 2,492 | 3,515 |
-| APT19 | 122 | 226 |
+### KGs Built (13 complete, with full VT metadata + edge attributes + depth field)
+| Org | Nodes | Edges | L0 | L1 | EdgeAttr% |
+|-----|-------|-------|----|----|-----------|
+| APT-C-23 | 3,334 | 4,857 | 252 | 3,081 | 94% |
+| APT-C-36 | 1,135 | 2,063 | 118 | 1,016 | 62% |
+| APT1 | 2,444 | 2,570 | 81 | 2,362 | 98% |
+| APT12 | 321 | 372 | 19 | 301 | 69% |
+| APT16 | 399 | 427 | 10 | 388 | 95% |
+| APT18 | 126 | 146 | 6 | 119 | 69% |
+| APT19 | 184 | 304 | 27 | 156 | 96% |
+| APT28 | 4,888 | 6,274 | 285 | 4,602 | 91% |
+| APT29 | 2,662 | 4,640 | 739 | 1,922 | 77% |
+| APT32 | 1,235 | 1,724 | 283 | 951 | 82% |
+| Kimsuky | 1,107 | 1,687 | 182 | 924 | 92% |
+| OilRig | 3,173 | 3,964 | 193 | 2,979 | 83% |
+| Turla | 3,544 | 4,383 | 198 | 3,345 | 79% |
 
-### KGs Needing Rebuild (built before edge attributes enhancement)
-- APT12, APT16, APT17, APT18
+> APT17 僅 1 個 domain IoC，KG 只有 apt 根節點，非 pipeline 問題。
+> EdgeAttr% < 100% 是因為 VT 404 節點的邊無 `last_analysis_stats`，屬正常。
+> `fetch_vt_metadata.py` 已被 `build_knowledge_graph.py` 取代（自行查 VT Details API），`VT_results/` 為舊版產出，僅 `fetch_vt_relationships.py` 仍讀取。
 
 ### Remaining Work
-- APT-C-23: ~30 nodes failed (DNS errors during sleep) — rerun to fill gaps
-- Rebuild APT12, APT16, APT17, APT18 with edge attributes
 - Wizard_Spider: finish remaining ~56 domains (next run auto-resumes)
-- Build KGs for 10 newly relationship-fetched orgs: APT32, FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, OilRig, Sandworm_Team, Turla, Wizard_Spider
+- Build KGs for 7 orgs with relationships ready (needs VT API): FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, Sandworm_Team, Wizard_Spider
 - Fetch VT relationships for remaining 155 orgs
 - Build KGs for all remaining orgs after relationships fetched
 - Fix OilRig bad IoC: `192.121.22..46` (double dot — IoC cleaning missed it)
+- URL 節點評估：2,078 個 C2 候選 URL（32.5%）值得新增為獨立節點類型（分析腳本：`scripts/analyze_url_quality.py`）
