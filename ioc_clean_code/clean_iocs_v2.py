@@ -17,6 +17,7 @@ Changes from v1:
 
 from __future__ import annotations
 
+import ipaddress
 import json
 import logging
 import re
@@ -39,7 +40,7 @@ logger = logging.getLogger(__name__)
 
 # ── Allowed IoC types ────────────────────────────────────────────────
 # email is excluded by default; attacker emails are rare and noisy
-ALLOWED_TYPES = {"ipv4", "domain", "url", "md5", "sha1", "sha256"}
+ALLOWED_TYPES = {"ipv4", "ipv6", "domain", "url", "md5", "sha1", "sha256"}
 
 # ── eTLD+1 Blacklist (noise domains) ────────────────────────────────
 ETLD_BLACKLIST = {
@@ -89,6 +90,7 @@ ATTACKER_EMAIL_INDICATORS = {
 
 # ── Regex ────────────────────────────────────────────────────────────
 _RE_IPV4 = re.compile(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
+_RE_IPV6 = re.compile(r"^[0-9a-fA-F:]+$")  # coarse check, ipaddress validates
 
 
 # =====================================================================
@@ -126,7 +128,12 @@ def extract_host_from_url(url: str) -> Optional[str]:
 
 
 def is_ip_address(value: str) -> bool:
-    return bool(_RE_IPV4.match(value))
+    """Check if value is a valid IPv4 or IPv6 address."""
+    try:
+        ipaddress.ip_address(value)
+        return True
+    except ValueError:
+        return False
 
 
 def is_blacklisted_domain(domain: str) -> bool:
@@ -288,19 +295,28 @@ def cross_hash_merge(iocs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return non_hash_records + merged_hashes
 
 
+def _detect_ip_type(value: str) -> str | None:
+    """Return 'ipv4' or 'ipv6' if value is a valid IP, else None."""
+    try:
+        addr = ipaddress.ip_address(value)
+        return "ipv4" if addr.version == 4 else "ipv6"
+    except ValueError:
+        return None
+
+
 def collapse_url_ips(iocs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    URLs like 'http://1.2.3.4' or 'http://1.2.3.4/path' where the host
-    is a bare IP — merge into the corresponding ipv4 record if it exists,
-    otherwise convert to ipv4.
+    URLs like 'http://1.2.3.4' or 'http://[::1]/path' where the host
+    is a bare IP — merge into the corresponding ipv4/ipv6 record if it exists,
+    otherwise convert to the appropriate IP type.
     """
-    ipv4_records: Dict[str, Dict[str, Any]] = {}
+    ip_records: Dict[str, Dict[str, Any]] = {}
     url_records: List[Dict[str, Any]] = []
     other_records: List[Dict[str, Any]] = []
 
     for item in iocs:
-        if item["type"] == "ipv4":
-            ipv4_records[item["value_normalized"]] = item
+        if item["type"] in ("ipv4", "ipv6"):
+            ip_records[item["value_normalized"]] = item
         elif item["type"] == "url":
             url_records.append(item)
         else:
@@ -313,27 +329,28 @@ def collapse_url_ips(iocs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         host = extract_host_from_url(url_rec["value"])
         if host and is_ip_address(host):
             ip_norm = host.lower()
-            if ip_norm in ipv4_records:
-                # Merge sources into existing ipv4 record
-                existing = set(ipv4_records[ip_norm].get("sources", []))
+            ip_type = _detect_ip_type(host) or "ipv4"
+            if ip_norm in ip_records:
+                # Merge sources into existing IP record
+                existing = set(ip_records[ip_norm].get("sources", []))
                 new = set(url_rec.get("sources", []))
-                ipv4_records[ip_norm]["sources"] = list(existing | new)
+                ip_records[ip_norm]["sources"] = list(existing | new)
             else:
-                # Convert URL to ipv4
+                # Convert URL to IP record
                 converted = deepcopy(url_rec)
-                converted["type"] = "ipv4"
+                converted["type"] = ip_type
                 converted["value"] = host
                 converted["value_normalized"] = ip_norm
                 converted.pop("domain", None)
-                ipv4_records[ip_norm] = converted
+                ip_records[ip_norm] = converted
             collapsed_count += 1
         else:
             kept_urls.append(url_rec)
 
     if collapsed_count > 0:
-        logger.info(f"  URL-IP collapse: {collapsed_count} bare-IP URLs merged into ipv4 records")
+        logger.info(f"  URL-IP collapse: {collapsed_count} bare-IP URLs merged into IP records")
 
-    return other_records + list(ipv4_records.values()) + kept_urls
+    return other_records + list(ip_records.values()) + kept_urls
 
 
 # =====================================================================
@@ -394,7 +411,7 @@ def clean_iocs(iocs: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], Dict[s
         ioc_type = item.get("type", "")
         value = item.get("value", "")
 
-        if ioc_type == "ipv4":
+        if ioc_type in ("ipv4", "ipv6"):
             if ip_filter.is_private_ip(value):
                 dropped_private_ip += 1
                 continue

@@ -12,20 +12,27 @@
 ## 資料規模
 - **涵蓋 APT 組織**：176 組織（org_iocs/ 內含已提取 IoC，其中 146 組織有 >0 IoCs）
 - **VT Relationship 已擷取**：21 組織（全域快取：files=1,716 / ips=942 / domains=2,274）
-- **已建構知識圖譜（含完整 metadata + edge attributes）**：7 組織
+- **已建構知識圖譜（含完整 VT metadata + edge attributes + depth 欄位）**：13 組織
 
-| 組織 | Nodes | Edges |
-|------|-------|-------|
-| APT1 | 828 | 863 |
-| APT-C-36 | 709 | 1,459 |
-| Kimsuky | 1,112 | 1,451 |
-| APT-C-23 | 1,686 | 2,761 |
-| APT28 | 2,131 | 2,928 |
-| APT29 | 2,492 | 3,515 |
-| APT19 | 122 | 226 |
+| 組織 | Nodes | Edges | L0 | L1 |
+|------|-------|-------|----|----|
+| APT28 | 4,888 | 6,274 | 285 | 4,602 |
+| APT32 | 4,240 | 5,368 | 283 | 3,956 |
+| Turla | 3,544 | 4,383 | 198 | 3,345 |
+| APT-C-23 | 3,334 | 4,857 | 252 | 3,081 |
+| OilRig | 3,173 | 3,964 | 193 | 2,979 |
+| APT29 | 2,662 | 4,640 | 739 | 1,922 |
+| APT1 | 2,444 | 2,570 | 81 | 2,362 |
+| APT-C-36 | 1,135 | 2,063 | 118 | 1,016 |
+| Kimsuky | 1,107 | 1,687 | 182 | 924 |
+| APT16 | 399 | 427 | 10 | 388 |
+| APT12 | 321 | 372 | 19 | 301 |
+| APT19 | 184 | 304 | 27 | 156 |
+| APT18 | 126 | 146 | 6 | 119 |
 
-- **待重建 KG**（缺 edge attributes）：APT12, APT16, APT17, APT18
-- **待建構 KG**（relationships 已就緒）：APT32, FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, OilRig, Sandworm_Team, Turla, Wizard_Spider
+> APT17 僅 1 個 domain IoC，KG 只有 apt 根節點（1 node, 0 edges），非 pipeline 問題。
+
+- **待建構 KG**（VT relationships 已就緒，需 VT API）：FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, Sandworm_Team, Wizard_Spider
 
 ## 系統架構
 
@@ -47,21 +54,16 @@
                │           → org_iocs_cleaned/   │
                └─────────────────┬───────────────┘
                                  ▼
-          ┌──────────────────────┴──────────────────────┐
-          ▼                                             ▼
-┌──────────────────────┐                 ┌───────────────────────────┐
-│ VT Details API       │                 │ VT Relationship API       │
-│ (fetch_vt_metadata)  │                 │ (fetch_vt_relationships)  │
-│   → VT_results/      │                 │   → vt_relationships/     │
-└──────────┬───────────┘                 └─────────────┬─────────────┘
-           └──────────────┬────────────────────────────┘
-                          ▼
-            ┌──────────────────────────────┐
-            │  build_knowledge_graph.py    │
-            │  Phase 1: IoC + VT Details   │
-            │  Phase 2: VT Relationships   │
-            │     → knowledge_graphs/      │
-            └──────────────┬───────────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    ▼                         ▼
+     ┌───────────────────────────┐  ┌──────────────────────────────┐
+     │ VT Relationship API       │  │  build_knowledge_graph.py    │
+     │ (fetch_vt_relationships)  │  │  Phase 1: IoC + VT Details   │
+     │   → vt_relationships/     │  │  Phase 2: VT Relationships   │
+     └─────────────┬─────────────┘  │  （自行查詢 VT Details API）   │
+                   └──────────────▶ │     → knowledge_graphs/      │
+                                    └──────────────┬───────────────┘
                            ▼
             ┌──────────────────────────────┐
             │  merge_knowledge_graphs.py   │
@@ -325,17 +327,53 @@ uv run python ioc_clean_code/clean_iocs_v2.py
 # 輸出: org_iocs_cleaned/{org}/iocs.json + cleaning_stats.json
 ```
 
-清洗步驟：type filter → refang → email filter → dedup（合併 sources）→ cross-hash merge → URL-IP collapse → blacklist filter
+清洗 Pipeline 共 8 步，依序處理：
+
+```
+Step 1: Type Filter
+  ↓  僅保留 ipv4, ipv6, domain, url, md5, sha1, sha256, email 八種類型，其餘丟棄
+Step 2: Normalize（Refang + 小寫 + URL domain 提取）
+  ↓  還原 defanged IoC：hxxp:// → http://, [.] → ., [:] → :, [at] → @
+  ↓  所有值轉小寫以利比對；URL 類型額外提取 domain 欄位
+Step 3: Email Filter
+  ↓  移除政府/資安廠商聯絡信箱等噪音，僅保留攻擊者相關 email
+  ↓  已知攻擊者常用：mail.com, protonmail.com, tutanota.com, yandex.*, mail.ru 等
+  ↓  若 domain 在黑名單中 → 移除；未知 domain → 保留（可能為攻擊者基礎設施）
+Step 4: Dedup + Source Merge
+  ↓  以 (type, normalized_value) 為 key 去重
+  ↓  重複 IoC 的 sources 列表合併（保留所有出處報告 URL）
+Step 5: Cross-Hash Merge
+  ↓  同一檔案若以 MD5/SHA-1/SHA-256 三種 hash 出現，合併為一筆
+  ↓  透過 VT file_info 中的交叉雜湊識別同一檔案
+  ↓  以 SHA-256 為 canonical type，其餘 hash 保留於 alt_hashes
+Step 6: URL-IP Collapse
+  ↓  http://1.2.3.4/path 或 http://[::1]/path 形式的 URL → 轉為 ipv4/ipv6 類型
+  ↓  若該 IP 已存在 → 合併 sources；否則新建 IP 紀錄
+Step 7: Domain / IP Blacklist Filter
+  ↓  移除私有/保留 IP：IPv4 RFC 1918（10.x, 172.16-31.x, 192.168.x）、
+  ↓    IPv6 loopback（::1）、link-local（fe80::）、ULA（fd00::）等
+  ↓  移除 eTLD+1 黑名單 domain（~50 個），涵蓋：
+  ↓    • 新聞媒體：bbc.com, cnn.com, reuters.com 等
+  ↓    • 大型平台：google.com, microsoft.com, github.com, twitter.com 等
+  ↓    • 資安廠商：fireeye.com, kaspersky.com, crowdstrike.com 等（報告來源非 IoC）
+  ↓    • CDN/雲端：amazonaws.com, cloudflare.com, azure.com 等（過於泛用會產生超級節點）
+  ↓    • 政府機構：us-cert.gov, cisa.gov, nist.gov 等
+  ↓  例外：DDNS 服務（no-ip.com, dyndns.org 等 ~20 個）即使符合黑名單也保留
+  ↓        （APT 常濫用 DDNS 作為 C2）
+Step 8: Orphan Check
+     標記無 source 歸屬的 IoC（不影響輸出，僅記錄於 cleaning_stats.json）
+```
+
+每次執行會產出 `cleaning_stats.json`，記錄各步驟的處理數量，確保可重現性。
 
 ### 2. VT 資料擷取
 
 ```bash
-# VT Details（每個 IoC 的完整 metadata）
-uv run python scripts/fetch_vt_metadata.py --org APT18
-
 # VT Relationships（file/domain/ip 的關聯發現）
 uv run python scripts/fetch_vt_relationships.py --org APT18
 ```
+
+> `fetch_vt_metadata.py` 已被 `build_knowledge_graph.py` 取代（Phase 1 自行查詢 VT Details API），`VT_results/` 為舊版產出。
 
 > ⚠️ VT Academic Plan 限制：20,000 req/min，20,000 lookups/day，620,000 lookups/month。腳本內建速率控制與 429 自動重試。
 
@@ -389,10 +427,11 @@ uv run python scripts/run_validation.py
 
 ```
 ├── scripts/                      # 主要 pipeline 腳本
-│   ├── build_knowledge_graph.py  # 知識圖譜建構（Phase 1 + 2）
+│   ├── build_knowledge_graph.py  # 知識圖譜建構（Phase 1 + 2 + VT Details 查詢）
 │   ├── merge_knowledge_graphs.py # 跨組織圖譜合併
-│   ├── fetch_vt_metadata.py      # VT Details API 擷取
 │   ├── fetch_vt_relationships.py # VT Relationship API 擷取
+│   ├── batch_visualize.py        # 批次產出 KG 視覺化 PNG
+│   ├── fetch_vt_metadata.py      # （舊版，已被 build_knowledge_graph.py 取代）
 │   ├── run_validation.py         # 資料驗證套件
 │   ├── run_experiments.py        # 實驗執行
 │   └── visualize_prototype.py    # 視覺化原型
@@ -402,12 +441,13 @@ uv run python scripts/run_validation.py
 │
 ├── org_iocs/                     # 原始 IoC 提取（150+ APT 組織）
 ├── org_iocs_cleaned/             # 清洗後 IoC + 統計
-├── VT_results/                   # VT Details API 回應快取
+├── VT_results/                   # VT Details API 回應快取（舊版，僅供參考）
 ├── vt_relationships/             # VT Relationship API 資料
 ├── knowledge_graphs/             # 產出的知識圖譜
 │   ├── {org}/{org}.json          # 單一組織 KG
+│   ├── {org}/{org}_graph.png    # 單一組織 KG 視覺化
 │   ├── {org}/{org}_vt_cache.json # VT 查詢快取（斷點續傳）
-│   └── master/                   # 合併資料庫（JSON + SQLite）
+│   └── master/                   # 合併資料庫（JSON + SQLite + PNG）
 │
 ├── _碩士論文__黃廷翰_/            # 論文 LaTeX 文件
 ├── 文獻/                         # 參考文獻
@@ -424,6 +464,7 @@ uv run python scripts/run_validation.py
 | `pandas` | 資料處理 |
 | `scikit-learn` | ML 分析 |
 | `matplotlib` | 圖譜視覺化 |
+| `scipy` | NetworkX spring layout 計算 |
 
 ## 詳細文件
 

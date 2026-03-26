@@ -16,6 +16,7 @@ Rate limit: 4 req/min, ~500 lookups/day (academic shared group quota).
 from __future__ import annotations
 
 import argparse
+import ipaddress
 import json
 import logging
 import re
@@ -112,6 +113,15 @@ class RateLimiter:
 _IP_RE = re.compile(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
 
 
+def _is_ip(value: str) -> bool:
+    """Check if value is a valid IPv4 or IPv6 address."""
+    try:
+        ipaddress.ip_address(value)
+        return True
+    except ValueError:
+        return False
+
+
 def collect_iocs(
     vt_results_dir: Path,
     org_filter: set[str] | None,
@@ -172,7 +182,7 @@ def collect_iocs(
                     sha256_set.add(ioc_value.lower())
                 # md5/sha1 without sha256 mapping → skip
 
-            elif ioc_type == "ipv4":
+            elif ioc_type in ("ipv4", "ipv6"):
                 ip_set.add(ioc_value)
 
             elif ioc_type == "domain":
@@ -184,7 +194,7 @@ def collect_iocs(
                 except Exception:
                     hostname = ""
                 if hostname:
-                    if _IP_RE.match(hostname):
+                    if _is_ip(hostname):
                         ip_set.add(hostname)
                     else:
                         domain_set.add(hostname.lower())
