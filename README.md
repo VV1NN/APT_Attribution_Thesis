@@ -54,17 +54,115 @@
 ### 方法架構
 
 ```
-未知 IoC → VT 查詢 → 子圖展開 → 四層特徵提取 → XGBoost → Top-K APT 預測
+未知 IoC → VT Details 查詢 → VT Relationships 展開 → 四層特徵提取 (209d) → XGBoost → Top-K APT 預測
 ```
 
-四層特徵各自捕捉不同的歸因信號：
+四層特徵各自捕捉不同的歸因信號，最終串接為固定維度的特徵向量 $\mathbf{x} = [\mathbf{x}^{(1)} \| \mathbf{x}^{(2)} \| \mathbf{x}^{(3)} \| \mathbf{x}^{(4)}] \in \mathbb{R}^{209}$：
 
-| Layer | 名稱 | 維度 | 核心問題 |
-|-------|------|------|---------|
-| L1 | 節點自身特徵 | 88d | 這個 IoC 本身的技術屬性像哪個 APT？ |
-| L2 | 鄰域統計 | 35d | 它的鄰居行為模式像哪個 APT？ |
-| L3 | Overlap Detection | 22d | 它的鄰居有沒有已知屬於某 APT？ |
-| L4 | Node2Vec | 64d | 它在拓撲空間中離哪個 APT cluster 最近？ |
+| Layer | 名稱 | 維度 | 核心問題 | 資料來源 |
+|-------|------|------|---------|---------|
+| L1 | 節點自身特徵 | 88d | IoC 本身的技術屬性像哪個 APT？ | VT Details API |
+| L2 | 鄰域統計 | 35d | 鄰居的行為模式像哪個 APT？ | 圖結構遍歷 |
+| L3 | Overlap Detection | 22d | 鄰居有沒有已知屬於某 APT？ | Master KG 字典查詢 |
+| L4 | Node2Vec | 64d | 在拓撲空間中離哪個 APT 最近？ | 圖嵌入 |
+
+---
+
+### Layer 1：節點自身特徵（88 維）
+
+將 VirusTotal Details API 回傳的異構 JSON metadata 轉換為統一數值向量。不同節點類型（file/domain/ip/email）具有不同的屬性欄位，採用**聯集寬表（Union Schema）**方式編碼：每個屬性欄位佔獨立的 feature index，不適用的欄位填 `NaN`，由 XGBoost 的 default direction 機制自動處理。
+
+> 此設計避免了 zero-padding 的語意混淆——在 zero-padding 中，File 的 `log(size)` 和 Domain 的 `registrar` 可能共用同一個 index，導致決策樹混合不同語意的數值進行分裂。
+
+**共用特徵（10 維）**：`detection_ratio`、`malicious`/`suspicious`/`harmless`/`undetected`（偵測引擎統計）、`reputation`（VT 社群評分）、`is_file`/`is_domain`/`is_ip`/`is_email`（類型 one-hot）。
+
+**File 專屬（37 維）**：
+- 檔案屬性：`log1p(size)`、`type_tag`（ordinal encoding）
+- PE 結構（12d）：`section_count`、`avg/max/std_entropy`（偵測加殼行為）、`imphash_frequency`（此 import hash 在 KG 中的出現次數——高頻代表通用工具，低頻代表客製化武器）、`resource_lang`（PE 資源語言，部分 APT 留下所屬國家的語言標記）
+- 時間戳（5d）：`creation_time`、`first_seen_itw`、`first_submission`、`last_submission` 距參考日期的天數，以及 `first_seen` 到 `first_submission` 的時間差
+- 威脅分類（4d）：VT 自動推斷的 `threat_label` 和 `threat_category`（ordinal encoding + 頻率維度）
+- 其他：`signature_verified`（竊取的合法簽章用於規避偵測）、`has_packer`、`bundle_info`
+
+**Domain 專屬（20 維）**：`registrar`、`tld`（不同 APT 偏好不同的廉價 TLD）、`creation_age_days`（C2 域名通常為新註冊）、`cat_malware`/`cat_phishing`/`cat_c2` 分類標籤、DNS 記錄（`has_A`/`has_MX`——C2 域名通常沒有 MX 記錄）、`JARM` TLS 指紋（可識別特定 C2 框架如 Cobalt Strike）。
+
+**IP 專屬（15 維）**：`country`、`ASN`、`as_owner`（不同 APT 的地理偏好——Gamaredon 集中東歐，APT28 分散多國 VPS）、`JARM`、`is_self_signed`（自簽憑證是 C2 伺服器的常見特徵）。
+
+**Email 專屬（6 維）**：`is_protonmail`/`is_tutanota`（隱私信箱，常被 APT 用於匿名通訊）、`is_yandex`/`is_mailru`（俄語系）、`is_mainstream`（Gmail/Outlook，用於釣魚）。
+
+---
+
+### Layer 2：鄰域統計特徵（35 維）
+
+透過圖結構遍歷（1-hop + 2-hop），計算 IoC 鄰居的統計量，捕捉攻擊行為模式：
+
+**A. 邊類型分布（12 維）**：`log1p(count)` 各邊類型數量。大量 `contacted_domain` 暗示 C2 通訊，大量 `dropped_file` 暗示多階段 payload。
+
+**B. 1-hop 鄰居統計（10 維）**：
+- 鄰居 `detection_ratio` 的 mean/max/std — 鄰居群的整體惡意程度
+- 鄰居類型比例（file/domain/ip/email 各佔多少）
+- **IP 國家 Shannon entropy** — Gamaredon（東歐集中，entropy 低）vs APT28（多國 VPS，entropy 高）
+- ASN entropy、TLD entropy
+
+**C. 2-hop 統計（5 維）**：2-hop 可達節點數（攻擊基礎設施的規模）、2-hop 偵測率、節點類型分布。截斷上限 500 個鄰居，避免超級節點爆炸。
+
+**D. 邊屬性統計（8 維）**：邊上的 `malicious` count mean/max、`undetected` mean、resolution 數量、dropped file type 多樣性、L0/L1 depth 比例。
+
+---
+
+### Layer 3：Overlap Detection（7 + K 維）
+
+**核心概念**：將未知 IoC 的每個 VT 鄰居拿去 Master KG 的 overlap 字典中查詢——如果某個鄰居已知屬於 APT28，那未知 IoC 大概率也屬於 APT28。
+
+```
+未知 IoC → VT Relationships → 鄰居 [ip_X, domain_Y, file_Z]
+                                  ↓         ↓          ↓
+                              查 overlap_dict（66,423 個帶 org 標記的節點）
+                                  ↓         ↓          ↓
+                              {APT28}   {APT28,   {APT28}
+                                         Turla}
+                                  ↓
+                          加權投票 → APT28: 2.8, Turla: 0.6
+                                  ↓
+                          per-org 正規化 → [... APT28=0.82, Turla=0.18 ...]
+```
+
+**IDF 加權投票**：結合 detection_ratio 和節點共享度：
+
+```
+w(n) = w_dr(n) × IDF(n)
+
+w_dr: dr ≥ 0.3 → 1.0 / 0.1 ≤ dr < 0.3 → 0.5 / dr < 0.1 → 0.1
+IDF:  1 / log₂(1 + n_orgs)  — 被越多 org 共用的節點，投票權重越低
+```
+
+**輸出特徵（7 + K 維）**：
+- 直接 overlap（3d）：此 IoC 本身被幾個 APT 引用
+- 鄰居 overlap 統計（4d）：`overlap_ratio`（有多少鄰居被查到）、`distinct_orgs`（涉及幾個 APT）、`dominant_ratio`（最多票 APT 佔比）、`entropy`（分布的確定性）
+- Per-org 正規化投票（K 維）：每個候選 APT 的正規化票數，K=15
+
+**Leakage 處理**：5-fold CV 中，每個 fold 的 test IoC 從 overlap_dict 移除（防止自投票），但不做 exclude_org（保留 same-org 投票，與真實推論一致）。
+
+---
+
+### Layer 4：Node2Vec 圖嵌入（64 維）
+
+在 Master KG 上訓練 Node2Vec，學習每個節點在拓撲空間中的 64 維嵌入。同一 APT 的 IoC 因共享 C2 基礎設施而緊密相連，在嵌入空間中自然聚集。
+
+**配置**：dimensions=64, walk_length=30, num_walks=20, p=1.0, q=0.5（偏 BFS，捕捉社群結構），移除 apt 節點後轉無向圖訓練。
+
+**推論時新節點處理**：未知 IoC 無預訓練嵌入 → 取 detection_ratio 最高的 overlap 鄰居的 embedding（避免跨社群平均的 mean fallacy）；無 overlap → 零向量。
+
+---
+
+### XGBoost 分類器
+
+**選擇理由**：(1) 原生處理 NaN（聯集寬表 ~50% 欄位為 NaN），(2) 適合中小規模表格資料（5,961 樣本 × 209 維），(3) 搭配 SHAP 提供可解釋的歸因證據。
+
+**超參數**：`n_estimators=500, max_depth=8, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, min_child_weight=3`，balanced `sample_weight` 處理類別不平衡。
+
+**信心度門檻**：模型輸出的最高機率低於門檻時判定為 Unknown（拒絕歸因）。推薦門檻 0.3：覆蓋率 81.1%，Micro-F1 95.7%。此機制解決了 OilRig 的 false positive 問題（precision 從 18% 提升到 89%）。
+
+---
 
 ### 實驗結果
 
