@@ -1,23 +1,37 @@
 # APT 威脅情資知識圖譜建構與歸因系統
 
-> 碩士論文研究專案 — 自動化建構 APT 組織知識圖譜，基於 VirusTotal 豐富化與多源 IoC 整合，支援後續機器學習歸因分析。
+> 碩士論文研究專案 — 自動化建構 APT 組織知識圖譜，基於 VirusTotal 豐富化與多源 IoC 整合，透過四層特徵工程 + XGBoost 實現 APT 歸因。
 
 ## 研究目標
 
 1. 從公開 CTI（Cyber Threat Intelligence）報告中提取 IoC（Indicators of Compromise）
 2. 透過 VirusTotal API 進行兩層式豐富化，建構完整的 APT 知識圖譜
 3. 合併多組織圖譜為統一資料庫，發現跨 APT 共享基礎設施
-4. 設計機器學習方法進行 APT 歸因（attribution）
+4. 基於四層特徵工程（VT Metadata + 鄰域統計 + Overlap Detection + Node2Vec）實現 APT 歸因
+
+## 主要成果
+
+- **Master KG（21 orgs）**：66,444 nodes / 109,443 edges
+- **歸因模型**：Micro-F1 = **76.4%**, Top-5 = **92.6%**（15 個 major APT, 5,961 L0 IoCs, 5-fold CV）
+- **Simulated Inference**：Micro-F1 = 52.1%–76.4%（下界–上界）
 
 ## 資料規模
-- **涵蓋 APT 組織**：176 組織（org_iocs/ 內含已提取 IoC，其中 146 組織有 >0 IoCs）
-- **VT Relationship 已擷取**：21 組織（全域快取：files=1,716 / ips=942 / domains=2,274）
-- **已建構知識圖譜（含完整 VT metadata + edge attributes + depth 欄位）**：13 組織
 
-| 組織 | Nodes | Edges | L0 | L1 |
-|------|-------|-------|----|----|
+- **涵蓋 APT 組織**：176 組織（org_iocs/ 內含已提取 IoC，其中 146 組織有 >0 IoCs）
+- **VT Relationship 已擷取**：22 組織（全域快取：files=1,716 / ips=942 / domains=2,274）
+- **已建構知識圖譜**：21 組織（含完整 VT metadata + edge attributes + depth 欄位）
+
+| 組織 | Nodes | Edges | L0 (CTI IoC) | L1 (VT 發現) |
+|------|------:|------:|-------------:|-------------:|
+| Lazarus_Group | 11,529 | 14,424 | 434 | 11,094 |
+| Gamaredon_Group | 7,515 | 15,811 | 725 | 6,789 |
+| MuddyWater | 6,725 | 8,644 | 256 | 6,468 |
+| Sandworm_Team | 6,713 | 7,965 | 383 | 6,329 |
+| Wizard_Spider | 6,503 | 12,134 | 799 | 5,703 |
+| FIN7 | 5,083 | 6,876 | 365 | 4,717 |
 | APT28 | 4,888 | 6,274 | 285 | 4,602 |
-| APT32 | 4,240 | 5,368 | 283 | 3,956 |
+| APT32 | 4,250 | 5,378 | 293 | 3,956 |
+| Magic_Hound | 3,878 | 6,524 | 910 | 2,967 |
 | Turla | 3,544 | 4,383 | 198 | 3,345 |
 | APT-C-23 | 3,334 | 4,857 | 252 | 3,081 |
 | OilRig | 3,173 | 3,964 | 193 | 2,979 |
@@ -29,10 +43,155 @@
 | APT12 | 321 | 372 | 19 | 301 |
 | APT19 | 184 | 304 | 27 | 156 |
 | APT18 | 126 | 146 | 6 | 119 |
+| APT17 | 1 | 0 | 0 | 0 |
 
-> APT17 僅 1 個 domain IoC，KG 只有 apt 根節點（1 node, 0 edges），非 pipeline 問題。
+**Master KG（21 orgs 合併）**：66,444 nodes / 109,443 edges
+- 節點：file=34,005 / domain=19,525 / ip=12,751 / email=142 / apt=21
+- 跨 org 共享節點：4,330 個；獨有節點：62,114 個
 
-- **待建構 KG**（VT relationships 已就緒，需 VT API）：FIN7, Gamaredon_Group, Lazarus_Group, Magic_Hound, MuddyWater, Sandworm_Team, Wizard_Spider
+## 歸因系統
+
+### 方法架構
+
+```
+未知 IoC → VT 查詢 → 子圖展開 → 四層特徵提取 → XGBoost → Top-K APT 預測
+```
+
+四層特徵各自捕捉不同的歸因信號：
+
+| Layer | 名稱 | 維度 | 核心問題 |
+|-------|------|------|---------|
+| L1 | 節點自身特徵 | 88d | 這個 IoC 本身的技術屬性像哪個 APT？ |
+| L2 | 鄰域統計 | 35d | 它的鄰居行為模式像哪個 APT？ |
+| L3 | Overlap Detection | 22d | 它的鄰居有沒有已知屬於某 APT？ |
+| L4 | Node2Vec | 64d | 它在拓撲空間中離哪個 APT cluster 最近？ |
+
+### 實驗結果
+
+評估方式：ALL-nodes overlap dict + per-fold test IoC 移除 + 不做 exclude_org（最接近真實推論的 CV 設定）。
+訓練：5,961 筆 L0 IoC / 15 APT orgs / XGBoost / 5-fold Stratified CV。
+
+| 指標 | 無門檻 | 信心度門檻 0.3 |
+|------|--------|--------------|
+| Coverage | 100% | 81.1% |
+| Micro-F1 | **80.0%** | **95.7%** |
+| Macro-F1 | 81.8% | 95.2% |
+| Top-3 | 90.1% | — |
+| Top-5 | 93.3% | — |
+
+信心度門檻曲線（分析師可依需求調整）：
+
+| 門檻 | Coverage | Micro-F1 | 適用場景 |
+|------|----------|----------|---------|
+| 0.15 | 90.3% | 87.2% | 寬鬆：盡量不遺漏 |
+| 0.30 | 81.1% | 95.7% | 推薦：精準與覆蓋的平衡 |
+| 0.50 | 78.8% | 97.7% | 保守：高信心才歸因 |
+| 0.70 | 76.7% | 99.0% | 鑑識等級 |
+
+### 對未知 IoC 歸因
+
+```bash
+# 首次使用：訓練模型（只需跑一次）
+uv run python scripts/build_vocabularies.py
+uv run python scripts/train_node2vec.py
+uv run python scripts/train_and_save_model.py
+
+# 歸因單一 IoC（需 VT API Key）
+uv run python scripts/inference.py d54fa56f1a0b1b63c4e8fa1cc170...
+
+# 歸因結果範例：
+#   #1  APT28        72.3%  ████████████████████ ←
+#   #2  Sandworm      8.1%  ██
+#   #3  APT29         5.2%  █
+#   ✅ 歸因結果：APT28（信心度 72.3% ≥ 門檻 30%）
+#   Overlap: 75% 鄰居匹配, 2 候選 org
+
+# 批次歸因
+uv run python scripts/inference.py --file suspicious_iocs.txt
+
+# JSON 輸出（供自動化串接）
+uv run python scripts/inference.py --json 185.45.67.89
+```
+
+### 訓練 Pipeline（重新訓練或更新模型）
+
+```bash
+# Step 1: 建立 vocabulary
+uv run python scripts/build_vocabularies.py
+
+# Step 2: 訓練 Node2Vec 嵌入
+uv run python scripts/train_node2vec.py
+
+# Step 3: 提取四層特徵 + 存檔
+uv run python scripts/build_features.py
+
+# Step 4: 消融實驗（4 exp × 3 clf × 5-fold = 60 runs）
+uv run python scripts/train_classifier.py
+
+# Step 5: 存出最終模型
+uv run python scripts/train_and_save_model.py
+
+# Step 6: SHAP 可解釋性分析
+uv run python scripts/run_shap_analysis.py
+
+# Step 7: 信心度門檻分析
+uv run python scripts/eval_confidence_threshold.py
+```
+
+---
+
+## Quick Start：對單一組織跑完整 Pipeline
+
+以下以 `APT18` 為例，從清洗 IoC 到建構知識圖譜的完整流程：
+
+### 前置條件
+
+```bash
+uv sync                          # 安裝依賴
+echo 'VT_API_KEY=your_key' > .env  # 設定 VT API Key
+```
+
+### Step 1：IoC 清洗
+
+```bash
+uv run python ioc_clean_code/clean_iocs_v2.py
+```
+
+> 一次清洗所有 org，已清洗過的不會重複處理。輸出在 `org_iocs_cleaned/{org}/iocs.json`。
+
+### Step 2：擷取 VT Relationships
+
+```bash
+uv run python scripts/fetch_vt_relationships.py --org APT18
+```
+
+> 從 `VT_results/` 讀取 IoC，查詢每個 file/domain/ip 的 VT 關聯資料，輸出到 `vt_relationships/`。
+> 支援斷點續傳，中途中斷後重跑會自動跳過已快取的項目。
+
+### Step 3：建構知識圖譜
+
+```bash
+uv run python scripts/build_knowledge_graph.py --org APT18
+```
+
+> Phase 1：查詢每個 L0 IoC 的 VT Details（metadata、偵測率、PE 資訊等）。
+> Phase 2：載入 VT Relationships，展開 L1 節點並查詢其 VT Details。
+> 輸出：`knowledge_graphs/APT18/APT18.json`
+
+> ⚠️ 若要從現有快取重建圖譜（不呼叫 VT API）：
+> ```bash
+> uv run python scripts/build_knowledge_graph.py --org APT18 --skip-query
+> ```
+
+### Step 4：合併進 Master KG
+
+```bash
+uv run python scripts/merge_knowledge_graphs.py
+```
+
+> 自動偵測所有 `knowledge_graphs/{org}/{org}.json`，合併輸出至 `knowledge_graphs/master/`。
+
+---
 
 ## 系統架構
 
@@ -73,7 +232,9 @@
             └──────────────┬───────────────┘
                            ▼
             ┌──────────────────────────────┐
-            │  ML Attribution (開發中)      │
+            │  ML Attribution              │
+            │  四層特徵 + XGBoost          │
+            │  Micro-F1 = 76.4%           │
             └──────────────────────────────┘
 ```
 
@@ -426,32 +587,68 @@ uv run python scripts/run_validation.py
 ## 目錄結構
 
 ```
-├── scripts/                      # 主要 pipeline 腳本
-│   ├── build_knowledge_graph.py  # 知識圖譜建構（Phase 1 + 2 + VT Details 查詢）
-│   ├── merge_knowledge_graphs.py # 跨組織圖譜合併
-│   ├── fetch_vt_relationships.py # VT Relationship API 擷取
-│   ├── batch_visualize.py        # 批次產出 KG 視覺化 PNG
-│   ├── fetch_vt_metadata.py      # （舊版，已被 build_knowledge_graph.py 取代）
-│   ├── run_validation.py         # 資料驗證套件
-│   ├── run_experiments.py        # 實驗執行
-│   └── visualize_prototype.py    # 視覺化原型
+├── scripts/                              # 主要腳本
+│   │
+│   │  # ── KG 建構 Pipeline ──
+│   ├── build_knowledge_graph.py          # KG 建構（Phase 1 + 2 + VT Details）
+│   ├── merge_knowledge_graphs.py         # 跨組織 KG 合併
+│   ├── fetch_vt_relationships.py         # VT Relationship API 擷取
+│   ├── feasibility_analysis.py           # 歸因可行性分析（7 部分）
+│   │
+│   │  # ── 歸因系統：訓練 ──
+│   ├── build_vocabularies.py             # Vocabulary 預建構
+│   ├── build_features.py                 # 四層特徵提取（L1+L2+L3+L4, 209d）
+│   ├── train_node2vec.py                 # Node2Vec 嵌入訓練（64d）
+│   ├── train_classifier.py               # XGBoost/RF/MLP 消融實驗
+│   ├── train_and_save_model.py           # 訓練最終模型並存檔
+│   │
+│   │  # ── 歸因系統：推論 ──
+│   ├── inference.py                      # 單筆/批次 IoC 歸因（VT API → 特徵 → Top-K）
+│   │
+│   │  # ── 歸因系統：評估 ──
+│   ├── run_shap_analysis.py              # SHAP 特徵重要性分析
+│   ├── eval_confidence_threshold.py      # 信心度門檻分析
+│   ├── eval_simulated_inference.py       # Simulated inference 評估
+│   ├── eval_correct_cv.py               # Per-fold removal CV（L0-only dict）
+│   ├── eval_allnodes_correct_cv.py      # Per-fold removal CV（ALL-nodes dict）
+│   │
+│   │  # ── 產出檔案 ──
+│   ├── model/                            # 訓練好的模型
+│   │   ├── xgboost_model.json           # XGBoost 模型
+│   │   ├── imputer.pkl                  # SimpleImputer
+│   │   ├── label_encoder.pkl            # LabelEncoder（15 orgs）
+│   │   └── config.json                  # org_list, feature_names, threshold
+│   ├── features/                         # 特徵矩陣
+│   │   ├── features_all.npz             # 全四層特徵（5961×209）
+│   │   ├── node2vec_embeddings.npz      # Node2Vec 嵌入（64736×64）
+│   │   └── feature_names.json           # 特徵名稱與 org 列表
+│   ├── results/                          # 實驗結果
+│   │   ├── results_ablation.json        # 消融實驗（4 exp × 3 clf）
+│   │   ├── shap_analysis.json           # SHAP 全域/per-class 分析
+│   │   ├── confidence_threshold.json    # 信心度門檻曲線
+│   │   └── allnodes_correct_cv.json     # 正式評估結果
+│   │
+│   ├── batch_visualize.py                # 批次產出 KG 視覺化 PNG
+│   └── fetch_vt_metadata.py              # （舊版，已被 build_knowledge_graph.py 取代）
 │
-├── ioc_clean_code/               # IoC 清洗腳本
-│   └── clean_iocs_v2.py          # v2 清洗（跨hash合併、URL-IP collapse 等）
+├── ioc_clean_code/                       # IoC 清洗腳本
+│   └── clean_iocs_v2.py                  # v2 清洗（跨hash合併、URL-IP collapse 等）
 │
-├── org_iocs/                     # 原始 IoC 提取（150+ APT 組織）
-├── org_iocs_cleaned/             # 清洗後 IoC + 統計
-├── VT_results/                   # VT Details API 回應快取（舊版，僅供參考）
-├── vt_relationships/             # VT Relationship API 資料
-├── knowledge_graphs/             # 產出的知識圖譜
-│   ├── {org}/{org}.json          # 單一組織 KG
-│   ├── {org}/{org}_graph.png    # 單一組織 KG 視覺化
-│   ├── {org}/{org}_vt_cache.json # VT 查詢快取（斷點續傳）
-│   └── master/                   # 合併資料庫（JSON + SQLite + PNG）
+├── org_iocs/                             # 原始 IoC 提取（150+ APT 組織）
+├── org_iocs_cleaned/                     # 清洗後 IoC + 統計
+├── VT_results/                           # VT Details API 回應快取（舊版）
+├── vt_relationships/                     # VT Relationship API 資料
+├── knowledge_graphs/                     # 產出的知識圖譜
+│   ├── {org}/{org}.json                  # 單一組織 KG
+│   ├── {org}/{org}_graph.png            # 單一組織 KG 視覺化
+│   ├── {org}/{org}_vt_cache.json        # VT 查詢快取（斷點續傳）
+│   └── master/                           # 合併資料庫
+│       ├── merged_kg.json               # NetworkX node_link_graph 格式
+│       └── merged_kg.db                 # SQLite（nodes, edges, node_orgs）
 │
-├── _碩士論文__黃廷翰_/            # 論文 LaTeX 文件
-├── 文獻/                         # 參考文獻
-└── archive/                      # 舊版程式碼
+├── _碩士論文__黃廷翰_/                    # 論文 LaTeX 文件
+├── 文獻/                                 # 參考文獻
+└── archive/                              # 舊版程式碼
 ```
 
 ## 核心依賴
@@ -461,10 +658,12 @@ uv run python scripts/run_validation.py
 | `requests` | VT API 呼叫 |
 | `python-dotenv` | 環境變數（API Key） |
 | `networkx` | 圖資料結構 |
-| `pandas` | 資料處理 |
-| `scikit-learn` | ML 分析 |
+| `xgboost` | 歸因分類器（主力） |
+| `scikit-learn` | ML Pipeline（CV, imputer, metrics） |
+| `node2vec` | 圖嵌入（Layer 4） |
+| `shap` | 模型可解釋性分析 |
 | `matplotlib` | 圖譜視覺化 |
-| `scipy` | NetworkX spring layout 計算 |
+| `numpy`, `scipy` | 數值運算 |
 
 ## 詳細文件
 

@@ -1,0 +1,213 @@
+
+════════════════════════════════════════════════════════════
+APT IoC 歸因可行性分析報告
+分析時間: 2026-03-29 16:05:21
+════════════════════════════════════════════════════════════
+
+資料規模: 66,444 nodes, 105,888 edges, 21 orgs
+  節點類型: {'apt': 21, 'file': 34005, 'ip': 12751, 'domain': 19525, 'email': 142}
+  邊類型:   {'has_ioc': 6275, 'contacted_ip': 9224, 'contacted_domain': 5004, 'contacted_url': 2027, 'dropped_file': 11527, 'bundled_file': 9773, 'execution_parent': 1753, 'resolves_to': 30869, 'communicating_file': 8132, 'referrer_file': 13155, 'has_subdomain': 8149}
+
+────────────────────────────────────────────────────────────
+Overlap Detection:
+  L0 IoC 總數:        6182
+  連通率 (有 VT 鄰居): 72.7%
+  Overlap 率:          48.5%
+  Overlap 歸因準確率:  95.7%
+  全體歸因準確率:      46.4%
+  結論: 可行（準確率 ≥ 70%）
+
+  按節點類型:
+    domain    n=2399  connectivity=87.0%  overlap=61.9%  accuracy=97.2%
+    email     n= 142  connectivity=0.0%  overlap=0.0%  accuracy=0.0%
+    file      n=2691  connectivity=59.1%  overlap=34.8%  accuracy=90.9%
+    ip        n= 950  connectivity=86.1%  overlap=60.7%  accuracy=99.7%
+
+  按組織:
+    Magic_Hound           n= 910  connectivity=80.9%  overlap=65.6%  accuracy=98.8%
+    Wizard_Spider         n= 799  connectivity=67.5%  overlap=65.5%  accuracy=99.4%
+    APT29                 n= 739  connectivity=55.8%  overlap=44.0%  accuracy=88.6%
+    Gamaredon_Group       n= 725  connectivity=70.6%  overlap=49.9%  accuracy=97.2%
+    Lazarus_Group         n= 434  connectivity=74.9%  overlap=39.9%  accuracy=95.4%
+    Sandworm_Team         n= 383  connectivity=69.5%  overlap=33.9%  accuracy=100.0%
+    FIN7                  n= 365  connectivity=92.3%  overlap=35.6%  accuracy=90.0%
+    APT32                 n= 293  connectivity=69.3%  overlap=41.6%  accuracy=95.9%
+    APT28                 n= 285  connectivity=79.0%  overlap=40.7%  accuracy=87.9%
+    MuddyWater            n= 256  connectivity=84.0%  overlap=51.2%  accuracy=96.2%
+    APT-C-23              n= 252  connectivity=86.1%  overlap=42.1%  accuracy=96.2%
+    Turla                 n= 198  connectivity=68.2%  overlap=38.9%  accuracy=88.3%
+    OilRig                n= 193  connectivity=62.2%  overlap=34.7%  accuracy=88.1%
+    Kimsuky               n= 182  connectivity=80.2%  overlap=65.4%  accuracy=100.0%
+    APT-C-36              n= 118  connectivity=85.6%  overlap=26.3%  accuracy=77.4%
+    APT1                  n=  81  connectivity=63.0%  overlap=12.3%  accuracy=90.0%
+    APT19                 n=  27  connectivity=44.4%  overlap=25.9%  accuracy=100.0%
+    APT12                 n=  19  connectivity=73.7%  overlap=26.3%  accuracy=100.0%
+    APT16                 n=  10  connectivity=80.0%  overlap=50.0%  accuracy=100.0%
+    APT18                 n=   6  connectivity=50.0%  overlap=0.0%  accuracy=0.0%
+    APT17                 n=   0  connectivity=0.0%  overlap=0.0%  accuracy=0.0%
+
+────────────────────────────────────────────────────────────
+跨 org 共享:
+  共享節點數 (L0 直接): 62
+  按類型: {'domain': 42, 'email': 4, 'file': 8, 'ip': 8}
+  L1 間接共享節點數:    5306
+  結論: 共享中等（62 個共享節點）
+
+  Top-5 共享 org pairs:
+    APT28                ↔ Sandworm_Team         共享 33 個節點
+    APT28                ↔ APT29                 共享 11 個節點
+    APT28                ↔ Lazarus_Group         共享 7 個節點
+    Lazarus_Group        ↔ Sandworm_Team         共享 7 個節點
+    APT29                ↔ Sandworm_Team         共享 6 個節點
+
+────────────────────────────────────────────────────────────
+VT Metadata 區分力 (KL divergence, 只看 L0 IoC):
+  強區分力 (KL>1.0): ['file.threat_label', 'file.pe_imphash', 'ip.asn', 'ip.as_owner', 'domain.registrar', 'ip.jarm', 'domain.jarm', 'ip.country', 'domain.creation_year', 'domain.tld', 'file.type_tag', 'file.pe_resource_lang']
+  弱區分力 (KL<0.3): ['file.pe_machine']
+
+  file.threat_label          KL=5.176  unique= 868  top3: trojan.miniduke/sandyeva(31), trojan.msil/basic(25), trojan.(19)
+  file.pe_imphash            KL=5.053  unique= 510  top3: f34d5f2d4577ed6d9ceec516c1f5a744(119), f6baa5eaa8231d4fe8e922a2e6d240ea(53), 524711ec9c5a149fe3bf3479d0b505b6(26)
+  ip.asn                     KL=4.528  unique= 243  top3: 20473(69), 3356(51), 16276(44)
+  ip.as_owner                KL=4.495  unique= 230  top3: The Constant Company, LLC(69), Level 3 Parent, LLC(51), OVH SAS(44)
+  domain.registrar           KL=3.750  unique= 187  top3: Alibaba Cloud Computing Ltd. d/b/a HiChina (www.net.cn)(191), REGRU-RU(128), GoDaddy.com, LLC(99)
+  ip.jarm                    KL=2.551  unique= 120  top3: 15d3fd16d29d29d00042(32), 2ad2ad0002ad2ad00042(22), 3fd3fd0003fd3fd21c42(17)
+  domain.jarm                KL=2.446  unique= 145  top3: 2ad2ad0002ad2ad00042(132), 2ad2ad0002ad2ad22c2a(131), 15d3fd16d29d29d00042(91)
+  ip.country                 KL=2.074  unique=  66  top3: US(312), NL(93), RU(87)
+  domain.creation_year       KL=1.699  unique=  40  top3: 2024(284), 2020(183), 2023(170)
+  domain.tld                 KL=1.417  unique= 133  top3: com(1074), ru(166), net(146)
+  file.type_tag              KL=1.310  unique=  33  top3: peexe(819), pedll(243), docx(121)
+  file.pe_resource_lang      KL=1.299  unique=  67  top3: ENGLISH US(578), NEUTRAL(254), RUSSIAN(140)
+  ip.rir                     KL=0.922  unique=   5  top3: RIPE NCC(501), ARIN(332), APNIC(93)
+  ip.continent               KL=0.827  unique=   6  top3: EU(471), NA(337), AS(118)
+  file.pe_machine            KL=0.139  unique=   2  top3: 332(940), 34404(122)
+
+────────────────────────────────────────────────────────────
+圖結構:
+  連通分量數: 2
+  最大分量:   66,443 nodes (20 orgs)
+  分量大小分布: {'>1000': 1, '100-1000': 0, '10-99': 0, '2-9': 0, '1 (isolated)': 1}
+  L0 平均 degree: 17.96
+  L1 平均 degree: 1.57
+  圖密度: 2.4e-05
+
+  平均 degree by type:
+    apt       mean=298.8  median=252  max=910
+    domain    mean=3.7  median=1  max=372
+    email     mean=1.0  median=1  max=2
+    file      mean=2.5  median=1  max=154
+    ip        mean=3.7  median=1  max=310
+
+────────────────────────────────────────────────────────────
+ML Baseline (XGBoost):
+  樣本數:    6120
+  特徵維度:  34
+  Micro-F1:  65.58%
+  Macro-F1:  46.02%
+  Top-3 Acc: 16.34%
+  結論: 資料可用（Micro-F1 = 65.58%），精細化特徵工程可進一步提升
+
+  Per-class F1:
+    Magic_Hound           F1=78.67%
+    APT-C-23              F1=76.47%
+    Gamaredon_Group       F1=72.68%
+    Kimsuky               F1=71.43%
+    Wizard_Spider         F1=67.72%
+    APT29                 F1=65.86%
+    MuddyWater            F1=63.16%
+    APT32                 F1=62.22%
+    FIN7                  F1=58.45%
+    APT28                 F1=55.45%
+    Lazarus_Group         F1=55.30%
+    Turla                 F1=51.28%
+    APT-C-36              F1=50.00%
+    Sandworm_Team         F1=46.38%
+    OilRig                F1=45.33%
+    APT1                  F1=0.00%
+    APT12                 F1=0.00%
+    APT16                 F1=0.00%
+    APT18                 F1=0.00%
+    APT19                 F1=0.00%
+
+  Feature importance top-10:
+    org_vote_Magic_Hound       0.1594
+    org_vote_Wizard_Spider     0.1578
+    org_vote_Gamaredon_Group   0.0897
+    org_vote_APT29             0.0753
+    detection_ratio            0.0558
+    org_vote_Lazarus_Group     0.0483
+    degree                     0.0390
+    org_vote_MuddyWater        0.0373
+    org_vote_Kimsuky           0.0364
+    org_vote_FIN7              0.0318
+
+────────────────────────────────────────────────────────────
+過濾低惡意度節點後的 Overlap 分析 (detection_ratio < 0.1):
+  過濾前 overlap 準確率: 95.7% (2997 IoCs with overlap)
+  過濾後 overlap 準確率: 99.2% (2003 IoCs with overlap)
+  準確率變化:            +3.5%
+  過濾後連通率:          57.1%
+  過濾後 overlap 率:     32.4%
+  過濾後全體歸因準確率:  32.1%
+
+  過濾後按節點類型:
+    domain    n=2399  connectivity=58.8%  overlap=35.8%  accuracy=98.8%
+    email     n= 142  connectivity=0.0%  overlap=0.0%  accuracy=0.0%
+    file      n=2691  connectivity=55.0%  overlap=24.0%  accuracy=99.7%
+    ip        n= 950  connectivity=67.5%  overlap=52.4%  accuracy=99.0%
+
+  過濾後按組織:
+    Magic_Hound           n= 910  connectivity=37.8%  overlap=30.7%  accuracy=99.6%
+    Wizard_Spider         n= 799  connectivity=66.8%  overlap=61.3%  accuracy=100.0%
+    APT29                 n= 739  connectivity=44.6%  overlap=31.0%  accuracy=96.5%
+    Gamaredon_Group       n= 725  connectivity=63.2%  overlap=43.2%  accuracy=99.7%
+    Lazarus_Group         n= 434  connectivity=65.0%  overlap=21.9%  accuracy=99.0%
+    Sandworm_Team         n= 383  connectivity=49.9%  overlap=11.0%  accuracy=92.9%
+    FIN7                  n= 365  connectivity=79.7%  overlap=21.6%  accuracy=100.0%
+    APT32                 n= 293  connectivity=51.9%  overlap=24.2%  accuracy=100.0%
+    APT28                 n= 285  connectivity=64.9%  overlap=31.6%  accuracy=100.0%
+    MuddyWater            n= 256  connectivity=78.1%  overlap=32.4%  accuracy=100.0%
+    APT-C-23              n= 252  connectivity=65.9%  overlap=24.6%  accuracy=100.0%
+    Turla                 n= 198  connectivity=61.6%  overlap=30.8%  accuracy=96.7%
+    OilRig                n= 193  connectivity=58.0%  overlap=26.4%  accuracy=96.1%
+    Kimsuky               n= 182  connectivity=37.4%  overlap=23.6%  accuracy=100.0%
+    APT-C-36              n= 118  connectivity=79.7%  overlap=18.6%  accuracy=100.0%
+    APT1                  n=  81  connectivity=49.4%  overlap=4.9%  accuracy=100.0%
+    APT19                 n=  27  connectivity=37.0%  overlap=11.1%  accuracy=100.0%
+    APT12                 n=  19  connectivity=68.4%  overlap=10.5%  accuracy=100.0%
+    APT16                 n=  10  connectivity=80.0%  overlap=30.0%  accuracy=100.0%
+    APT18                 n=   6  connectivity=50.0%  overlap=0.0%  accuracy=0.0%
+    APT17                 n=   0  connectivity=0.0%  overlap=0.0%  accuracy=0.0%
+
+  Top-20 共享節點（標記合法基礎設施）:
+  （其中 12/20 為合法基礎設施，20/20 detection_ratio < 0.1）
+    ip_20.99.133.109                                    ip       L1  orgs=18  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    ip_23.216.147.76                                    ip       L1  orgs=17  dr=0.000  as_owner=Akamai International B.V. ⚠️ LEGIT(akamai)
+    ip_192.229.211.108                                  ip       L1  orgs=17  dr=0.000  as_owner=Edgecast Inc.
+    ip_20.99.186.246                                    ip       L1  orgs=17  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    ip_23.216.147.64                                    ip       L1  orgs=17  dr=0.000  as_owner=Akamai International B.V. ⚠️ LEGIT(akamai)
+    domain_www.microsoft.com                            domain   L1  orgs=17  dr=0.000  as_owner=None ⚠️ LEGIT(microsoft)
+    ip_20.99.184.37                                     ip       L1  orgs=17  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    ip_114.114.114.114                                  ip       L1  orgs=16  dr=0.021  as_owner=Zenlayer Inc
+    ip_20.99.185.48                                     ip       L1  orgs=16  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    ip_204.79.197.203                                   ip       L1  orgs=16  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    domain_crt.sectigo.com                              domain   L1  orgs=16  dr=0.000  as_owner=None
+    domain_microsoft.com                                domain   L1  orgs=16  dr=0.000  as_owner=None ⚠️ LEGIT(microsoft)
+    domain_sectigo.com                                  domain   L1  orgs=16  dr=0.000  as_owner=None
+    ip_218.85.157.99                                    ip       L1  orgs=15  dr=0.053  as_owner=Chinanet
+    ip_23.216.81.152                                    ip       L1  orgs=15  dr=0.000  as_owner=Akamai Technologies, Inc. ⚠️ LEGIT(akamai)
+    ip_20.99.132.105                                    ip       L1  orgs=15  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    ip_127.0.0.1                                        ip       L1  orgs=14  dr=0.011  as_owner=None
+    ip_192.229.221.95                                   ip       L1  orgs=14  dr=0.000  as_owner=None
+    ip_131.107.255.255                                  ip       L1  orgs=14  dr=0.000  as_owner=Microsoft Corporation ⚠️ LEGIT(microsoft)
+    domain_dns.msftncsi.com                             domain   L1  orgs=14  dr=0.000  as_owner=None
+
+  L1 共享節點 detection_ratio 統計:
+    總數:                        5297
+    detection_ratio < 0.1:      4054 (76.5%)
+    detection_ratio 未知:        240
+    低惡意度+未知 佔比:          81.1%
+  結論: ✅ 過濾後準確率 ≥ 85%，overlap 方法 solid
+
+════════════════════════════════════════════════════════════
+整體結論: 方法可行，建議繼續擴充資料並精細化歸因模型
+════════════════════════════════════════════════════════════

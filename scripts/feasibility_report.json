@@ -1,0 +1,5747 @@
+{
+  "timestamp": "2026-03-29T16:05:21.419345",
+  "part1_basic_stats": {
+    "total_nodes": 66444,
+    "total_edges": 105888,
+    "num_orgs": 21,
+    "node_types": {
+      "apt": 21,
+      "file": 34005,
+      "ip": 12751,
+      "domain": 19525,
+      "email": 142
+    },
+    "edge_types": {
+      "has_ioc": 6275,
+      "contacted_ip": 9224,
+      "contacted_domain": 5004,
+      "contacted_url": 2027,
+      "dropped_file": 11527,
+      "bundled_file": 9773,
+      "execution_parent": 1753,
+      "resolves_to": 30869,
+      "communicating_file": 8132,
+      "referrer_file": 13155,
+      "has_subdomain": 8149
+    },
+    "org_stats": {
+      "APT-C-23": {
+        "l0_iocs": 252,
+        "l1_nodes": 3081,
+        "total_nodes": 3334
+      },
+      "APT-C-36": {
+        "l0_iocs": 118,
+        "l1_nodes": 1016,
+        "total_nodes": 1135
+      },
+      "APT1": {
+        "l0_iocs": 81,
+        "l1_nodes": 2362,
+        "total_nodes": 2444
+      },
+      "APT12": {
+        "l0_iocs": 19,
+        "l1_nodes": 301,
+        "total_nodes": 321
+      },
+      "APT16": {
+        "l0_iocs": 10,
+        "l1_nodes": 388,
+        "total_nodes": 399
+      },
+      "APT17": {
+        "l0_iocs": 0,
+        "l1_nodes": 0,
+        "total_nodes": 1
+      },
+      "APT18": {
+        "l0_iocs": 6,
+        "l1_nodes": 119,
+        "total_nodes": 126
+      },
+      "APT19": {
+        "l0_iocs": 27,
+        "l1_nodes": 156,
+        "total_nodes": 184
+      },
+      "APT28": {
+        "l0_iocs": 285,
+        "l1_nodes": 4602,
+        "total_nodes": 4888
+      },
+      "APT29": {
+        "l0_iocs": 739,
+        "l1_nodes": 1922,
+        "total_nodes": 2662
+      },
+      "APT32": {
+        "l0_iocs": 293,
+        "l1_nodes": 3956,
+        "total_nodes": 4250
+      },
+      "FIN7": {
+        "l0_iocs": 365,
+        "l1_nodes": 4717,
+        "total_nodes": 5083
+      },
+      "Gamaredon_Group": {
+        "l0_iocs": 725,
+        "l1_nodes": 6789,
+        "total_nodes": 7515
+      },
+      "Kimsuky": {
+        "l0_iocs": 182,
+        "l1_nodes": 924,
+        "total_nodes": 1107
+      },
+      "Lazarus_Group": {
+        "l0_iocs": 434,
+        "l1_nodes": 11094,
+        "total_nodes": 11529
+      },
+      "Magic_Hound": {
+        "l0_iocs": 910,
+        "l1_nodes": 2967,
+        "total_nodes": 3878
+      },
+      "MuddyWater": {
+        "l0_iocs": 256,
+        "l1_nodes": 6468,
+        "total_nodes": 6725
+      },
+      "OilRig": {
+        "l0_iocs": 193,
+        "l1_nodes": 2979,
+        "total_nodes": 3173
+      },
+      "Sandworm_Team": {
+        "l0_iocs": 383,
+        "l1_nodes": 6329,
+        "total_nodes": 6713
+      },
+      "Turla": {
+        "l0_iocs": 198,
+        "l1_nodes": 3345,
+        "total_nodes": 3544
+      },
+      "Wizard_Spider": {
+        "l0_iocs": 799,
+        "l1_nodes": 5703,
+        "total_nodes": 6503
+      }
+    },
+    "metadata_coverage": {
+      "domain.categories": 0.2445,
+      "domain.creation_date": 0.7399,
+      "domain.crowdsourced_context": 0.0033,
+      "domain.detection_ratio": 1.0,
+      "domain.harmless": 1.0,
+      "domain.has_whois": 1.0,
+      "domain.jarm": 0.6063,
+      "domain.last_analysis": 0.7324,
+      "domain.last_dns_records": 0.8522,
+      "domain.last_dns_records_date": 0.8522,
+      "domain.last_https_certificate": 0.5879,
+      "domain.last_update_date": 0.7118,
+      "domain.malicious": 1.0,
+      "domain.popularity_ranks": 0.137,
+      "domain.registrar": 0.5877,
+      "domain.reputation": 1.0,
+      "domain.suspicious": 1.0,
+      "domain.tags": 0.1602,
+      "domain.tld": 1.0,
+      "domain.total_engines": 1.0,
+      "domain.total_votes": 1.0,
+      "domain.undetected": 1.0,
+      "domain.whois": 0.9403,
+      "file.authentihash": 0.3773,
+      "file.bundle_info": 0.1544,
+      "file.creation_time": 0.5108,
+      "file.detection_ratio": 1.0,
+      "file.detectiteasy": 0.2902,
+      "file.file_version_info": 0.2398,
+      "file.first_seen_itw": 0.2223,
+      "file.first_submission": 1.0,
+      "file.harmless": 1.0,
+      "file.last_analysis": 1.0,
+      "file.last_submission": 1.0,
+      "file.magic": 0.9995,
+      "file.magika": 0.5586,
+      "file.malicious": 1.0,
+      "file.md5": 1.0,
+      "file.meaningful_name": 0.8875,
+      "file.names": 0.9113,
+      "file.packers": 0.2018,
+      "file.pe_info": 0.3795,
+      "file.peid_packer": 1.0,
+      "file.popular_threat_classification": 0.3376,
+      "file.reputation": 1.0,
+      "file.sha1": 1.0,
+      "file.sha256": 1.0,
+      "file.signature_verified": 0.0807,
+      "file.size": 1.0,
+      "file.ssdeep": 0.9996,
+      "file.suspicious": 1.0,
+      "file.tags": 0.9614,
+      "file.times_submitted": 1.0,
+      "file.tlsh": 0.8797,
+      "file.total_engines": 1.0,
+      "file.total_votes": 1.0,
+      "file.trid": 0.8856,
+      "file.type_description": 1.0,
+      "file.type_extension": 0.923,
+      "file.type_tag": 0.9476,
+      "file.type_tags": 0.9477,
+      "file.undetected": 1.0,
+      "file.unique_sources": 1.0,
+      "file.vhash": 0.75,
+      "ip.as_owner": 0.9384,
+      "ip.asn": 0.9384,
+      "ip.continent": 0.9241,
+      "ip.country": 0.9241,
+      "ip.crowdsourced_context": 0.0187,
+      "ip.detection_ratio": 1.0,
+      "ip.harmless": 1.0,
+      "ip.jarm": 0.5958,
+      "ip.last_https_certificate": 0.609,
+      "ip.malicious": 1.0,
+      "ip.network": 0.9384,
+      "ip.regional_internet_registry": 0.9241,
+      "ip.reputation": 1.0,
+      "ip.suspicious": 1.0,
+      "ip.tags": 0.0856,
+      "ip.total_engines": 1.0,
+      "ip.total_votes": 1.0,
+      "ip.undetected": 1.0,
+      "ip.whois": 0.9442
+    }
+  },
+  "part2_overlap_detection": {
+    "total_l0_iocs": 6182,
+    "connectivity_rate": 0.7271,
+    "overlap_rate": 0.4848,
+    "overlap_accuracy": 0.957,
+    "overlap_accuracy_all": 0.4639,
+    "by_type": {
+      "file": {
+        "total": 2691,
+        "has_neighbor": 1589,
+        "has_overlap": 936,
+        "correct": 851,
+        "connectivity": 0.5905,
+        "overlap_rate": 0.3478,
+        "accuracy": 0.9092
+      },
+      "ip": {
+        "total": 950,
+        "has_neighbor": 818,
+        "has_overlap": 577,
+        "correct": 575,
+        "connectivity": 0.8611,
+        "overlap_rate": 0.6074,
+        "accuracy": 0.9965
+      },
+      "domain": {
+        "total": 2399,
+        "has_neighbor": 2088,
+        "has_overlap": 1484,
+        "correct": 1442,
+        "connectivity": 0.8704,
+        "overlap_rate": 0.6186,
+        "accuracy": 0.9717
+      },
+      "email": {
+        "total": 142,
+        "has_neighbor": 0,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.0,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      }
+    },
+    "by_org": {
+      "APT-C-23": {
+        "total": 252,
+        "has_neighbor": 217,
+        "has_overlap": 106,
+        "correct": 102,
+        "connectivity": 0.8611,
+        "overlap_rate": 0.4206,
+        "accuracy": 0.9623
+      },
+      "APT-C-36": {
+        "total": 118,
+        "has_neighbor": 101,
+        "has_overlap": 31,
+        "correct": 24,
+        "connectivity": 0.8559,
+        "overlap_rate": 0.2627,
+        "accuracy": 0.7742
+      },
+      "APT1": {
+        "total": 81,
+        "has_neighbor": 51,
+        "has_overlap": 10,
+        "correct": 9,
+        "connectivity": 0.6296,
+        "overlap_rate": 0.1235,
+        "accuracy": 0.9
+      },
+      "APT12": {
+        "total": 19,
+        "has_neighbor": 14,
+        "has_overlap": 5,
+        "correct": 5,
+        "connectivity": 0.7368,
+        "overlap_rate": 0.2632,
+        "accuracy": 1.0
+      },
+      "APT16": {
+        "total": 10,
+        "has_neighbor": 8,
+        "has_overlap": 5,
+        "correct": 5,
+        "connectivity": 0.8,
+        "overlap_rate": 0.5,
+        "accuracy": 1.0
+      },
+      "APT17": {
+        "total": 0,
+        "has_neighbor": 0,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.0,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "APT18": {
+        "total": 6,
+        "has_neighbor": 3,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.5,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "APT19": {
+        "total": 27,
+        "has_neighbor": 12,
+        "has_overlap": 7,
+        "correct": 7,
+        "connectivity": 0.4444,
+        "overlap_rate": 0.2593,
+        "accuracy": 1.0
+      },
+      "APT28": {
+        "total": 285,
+        "has_neighbor": 225,
+        "has_overlap": 116,
+        "correct": 102,
+        "connectivity": 0.7895,
+        "overlap_rate": 0.407,
+        "accuracy": 0.8793
+      },
+      "APT29": {
+        "total": 739,
+        "has_neighbor": 412,
+        "has_overlap": 325,
+        "correct": 288,
+        "connectivity": 0.5575,
+        "overlap_rate": 0.4398,
+        "accuracy": 0.8862
+      },
+      "APT32": {
+        "total": 293,
+        "has_neighbor": 203,
+        "has_overlap": 122,
+        "correct": 117,
+        "connectivity": 0.6928,
+        "overlap_rate": 0.4164,
+        "accuracy": 0.959
+      },
+      "FIN7": {
+        "total": 365,
+        "has_neighbor": 337,
+        "has_overlap": 130,
+        "correct": 117,
+        "connectivity": 0.9233,
+        "overlap_rate": 0.3562,
+        "accuracy": 0.9
+      },
+      "Gamaredon_Group": {
+        "total": 725,
+        "has_neighbor": 512,
+        "has_overlap": 362,
+        "correct": 352,
+        "connectivity": 0.7062,
+        "overlap_rate": 0.4993,
+        "accuracy": 0.9724
+      },
+      "Kimsuky": {
+        "total": 182,
+        "has_neighbor": 146,
+        "has_overlap": 119,
+        "correct": 119,
+        "connectivity": 0.8022,
+        "overlap_rate": 0.6538,
+        "accuracy": 1.0
+      },
+      "Lazarus_Group": {
+        "total": 434,
+        "has_neighbor": 325,
+        "has_overlap": 173,
+        "correct": 165,
+        "connectivity": 0.7488,
+        "overlap_rate": 0.3986,
+        "accuracy": 0.9538
+      },
+      "Magic_Hound": {
+        "total": 910,
+        "has_neighbor": 736,
+        "has_overlap": 597,
+        "correct": 590,
+        "connectivity": 0.8088,
+        "overlap_rate": 0.656,
+        "accuracy": 0.9883
+      },
+      "MuddyWater": {
+        "total": 256,
+        "has_neighbor": 215,
+        "has_overlap": 131,
+        "correct": 126,
+        "connectivity": 0.8398,
+        "overlap_rate": 0.5117,
+        "accuracy": 0.9618
+      },
+      "OilRig": {
+        "total": 193,
+        "has_neighbor": 120,
+        "has_overlap": 67,
+        "correct": 59,
+        "connectivity": 0.6218,
+        "overlap_rate": 0.3472,
+        "accuracy": 0.8806
+      },
+      "Sandworm_Team": {
+        "total": 383,
+        "has_neighbor": 266,
+        "has_overlap": 130,
+        "correct": 130,
+        "connectivity": 0.6945,
+        "overlap_rate": 0.3394,
+        "accuracy": 1.0
+      },
+      "Turla": {
+        "total": 198,
+        "has_neighbor": 135,
+        "has_overlap": 77,
+        "correct": 68,
+        "connectivity": 0.6818,
+        "overlap_rate": 0.3889,
+        "accuracy": 0.8831
+      },
+      "Wizard_Spider": {
+        "total": 799,
+        "has_neighbor": 539,
+        "has_overlap": 523,
+        "correct": 520,
+        "connectivity": 0.6746,
+        "overlap_rate": 0.6546,
+        "accuracy": 0.9943
+      }
+    }
+  },
+  "part3_shared_nodes": {
+    "total_shared_nodes": 62,
+    "shared_by_type": {
+      "domain": 42,
+      "email": 4,
+      "file": 8,
+      "ip": 8
+    },
+    "top_org_pairs": [
+      {
+        "pair": [
+          "APT28",
+          "Sandworm_Team"
+        ],
+        "shared_count": 33
+      },
+      {
+        "pair": [
+          "APT28",
+          "APT29"
+        ],
+        "shared_count": 11
+      },
+      {
+        "pair": [
+          "APT28",
+          "Lazarus_Group"
+        ],
+        "shared_count": 7
+      },
+      {
+        "pair": [
+          "Lazarus_Group",
+          "Sandworm_Team"
+        ],
+        "shared_count": 7
+      },
+      {
+        "pair": [
+          "APT29",
+          "Sandworm_Team"
+        ],
+        "shared_count": 6
+      },
+      {
+        "pair": [
+          "APT29",
+          "Turla"
+        ],
+        "shared_count": 5
+      },
+      {
+        "pair": [
+          "Lazarus_Group",
+          "Turla"
+        ],
+        "shared_count": 5
+      },
+      {
+        "pair": [
+          "APT28",
+          "Turla"
+        ],
+        "shared_count": 4
+      },
+      {
+        "pair": [
+          "Sandworm_Team",
+          "Turla"
+        ],
+        "shared_count": 4
+      },
+      {
+        "pair": [
+          "APT29",
+          "Lazarus_Group"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "APT28",
+          "FIN7"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "APT29",
+          "OilRig"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "APT32",
+          "Lazarus_Group"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "FIN7",
+          "Lazarus_Group"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "FIN7",
+          "Sandworm_Team"
+        ],
+        "shared_count": 3
+      },
+      {
+        "pair": [
+          "APT-C-23",
+          "APT28"
+        ],
+        "shared_count": 2
+      },
+      {
+        "pair": [
+          "APT-C-23",
+          "Lazarus_Group"
+        ],
+        "shared_count": 2
+      },
+      {
+        "pair": [
+          "APT-C-23",
+          "Magic_Hound"
+        ],
+        "shared_count": 2
+      },
+      {
+        "pair": [
+          "APT-C-23",
+          "Sandworm_Team"
+        ],
+        "shared_count": 2
+      },
+      {
+        "pair": [
+          "APT-C-23",
+          "Turla"
+        ],
+        "shared_count": 2
+      }
+    ],
+    "top_shared_nodes": [
+      {
+        "node_id": "domain_raw.githubusercontent.com",
+        "type": "domain",
+        "num_orgs": 11,
+        "orgs": [
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Kimsuky",
+          "Lazarus_Group",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ]
+      },
+      {
+        "node_id": "domain_aka.ms",
+        "type": "domain",
+        "num_orgs": 10,
+        "orgs": [
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Kimsuky",
+          "Lazarus_Group",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ]
+      },
+      {
+        "node_id": "domain_securelist.com",
+        "type": "domain",
+        "num_orgs": 7,
+        "orgs": [
+          "APT-C-23",
+          "APT28",
+          "APT29",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "Sandworm_Team",
+          "Turla"
+        ]
+      },
+      {
+        "node_id": "domain_www.welivesecurity.com",
+        "type": "domain",
+        "num_orgs": 5,
+        "orgs": [
+          "APT-C-23",
+          "APT28",
+          "Lazarus_Group",
+          "Sandworm_Team",
+          "Turla"
+        ]
+      },
+      {
+        "node_id": "domain_www.justice.gov",
+        "type": "domain",
+        "num_orgs": 4,
+        "orgs": [
+          "APT28",
+          "FIN7",
+          "Lazarus_Group",
+          "Magic_Hound"
+        ]
+      },
+      {
+        "node_id": "domain_www.clearskysec.com",
+        "type": "domain",
+        "num_orgs": 3,
+        "orgs": [
+          "APT-C-23",
+          "Magic_Hound",
+          "MuddyWater"
+        ]
+      },
+      {
+        "node_id": "domain_www",
+        "type": "domain",
+        "num_orgs": 3,
+        "orgs": [
+          "APT1",
+          "APT29",
+          "Turla"
+        ]
+      },
+      {
+        "node_id": "domain_www.washingtonpost.com",
+        "type": "domain",
+        "num_orgs": 3,
+        "orgs": [
+          "APT1",
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "domain_www.securityweek.com",
+        "type": "domain",
+        "num_orgs": 3,
+        "orgs": [
+          "APT28",
+          "Lazarus_Group",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "domain_securityxploded.com",
+        "type": "domain",
+        "num_orgs": 2,
+        "orgs": [
+          "APT1",
+          "APT32"
+        ]
+      },
+      {
+        "node_id": "email_commod2023@masterofdigital.org",
+        "type": "email",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "email_openai@chatgpt4beta.com",
+        "type": "email",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "email_spacesupport@passport-ua.online",
+        "type": "email",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "file_40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "APT29"
+        ]
+      },
+      {
+        "node_id": "file_4845761c9bed0563d0aa83613311191e075a9b58861e80392914d61a21bad976",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "APT29"
+        ]
+      },
+      {
+        "node_id": "file_4f0b12caa97e52f3d2edada9133f2e4a3442953d14c8ed12deb7219c722ea197",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "file_6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "APT29"
+        ]
+      },
+      {
+        "node_id": "file_b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "APT29"
+        ]
+      },
+      {
+        "node_id": "file_c80656fe59bdeb3e701d1f7eeaaba2ef673368b2c4947945f598e3e84a6cb7f8",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "Sandworm_Team"
+        ]
+      },
+      {
+        "node_id": "file_fd39d2837b30e7233bc54598ff51bdc2f8c418fa5b94dea2cadb24cf40f395e5",
+        "type": "file",
+        "num_orgs": 2,
+        "orgs": [
+          "APT28",
+          "APT29"
+        ]
+      }
+    ],
+    "l1_indirect_shared": 5306
+  },
+  "part4_discriminative": {
+    "features": {
+      "file.threat_label": {
+        "kl_divergence": 5.1756,
+        "total_values": 1558,
+        "unique_values": 868,
+        "global_top5": [
+          {
+            "value": "trojan.miniduke/sandyeva",
+            "count": 31
+          },
+          {
+            "value": "trojan.msil/basic",
+            "count": 25
+          },
+          {
+            "value": "trojan.",
+            "count": 19
+          },
+          {
+            "value": "trojan.w97m/jeki",
+            "count": 17
+          },
+          {
+            "value": "trojan.gamaredon",
+            "count": 17
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "trojan.spyagent/spyc23",
+              "count": 5
+            },
+            {
+              "value": "trojan.fqfv/spyagent",
+              "count": 3
+            },
+            {
+              "value": "trojan.bobik/ulise",
+              "count": 2
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "trojan.msil/basic",
+              "count": 25
+            },
+            {
+              "value": "trojan.msil/msilheracles",
+              "count": 9
+            },
+            {
+              "value": "trojan.",
+              "count": 6
+            }
+          ],
+          "APT1": [
+            {
+              "value": "trojan.pedrp/favh",
+              "count": 1
+            },
+            {
+              "value": "trojan.invader/agentbypass",
+              "count": 1
+            },
+            {
+              "value": "trojan.binder/pedrp",
+              "count": 1
+            }
+          ],
+          "APT12": [
+            {
+              "value": "trojan.msword/shellcode",
+              "count": 4
+            },
+            {
+              "value": "trojan.shellcode/msword",
+              "count": 1
+            },
+            {
+              "value": "trojan.ixeshe/fragtor",
+              "count": 1
+            }
+          ],
+          "APT16": [
+            {
+              "value": "trojan.r8xe52ib/elmer",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "trojan.hancitor/heur2",
+              "count": 1
+            },
+            {
+              "value": "trojan.cometer/cobaltstrike",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "trojan.sofacy/sednit",
+              "count": 12
+            },
+            {
+              "value": "trojan.sednit/sofacy",
+              "count": 9
+            },
+            {
+              "value": "trojan.msil/oceanmap",
+              "count": 8
+            }
+          ],
+          "APT29": [
+            {
+              "value": "trojan.miniduke/sandyeva",
+              "count": 31
+            },
+            {
+              "value": "trojan.cozer/cozyduke",
+              "count": 16
+            },
+            {
+              "value": "trojan.cozyduke/cozer",
+              "count": 14
+            }
+          ],
+          "APT32": [
+            {
+              "value": "trojan.w97m/applockbypass",
+              "count": 8
+            },
+            {
+              "value": "trojan.oceanlotus/ulise",
+              "count": 7
+            },
+            {
+              "value": "hacktool.cobalt/bkdr",
+              "count": 2
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "trojan.fin7/runner",
+              "count": 11
+            },
+            {
+              "value": "trojan.poweliks/fin7",
+              "count": 9
+            },
+            {
+              "value": "trojan.w97m/jeki",
+              "count": 7
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "trojan.gamaredon",
+              "count": 17
+            },
+            {
+              "value": "trojan.",
+              "count": 10
+            },
+            {
+              "value": "trojan.pterodo/doina",
+              "count": 7
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "trojan.stolpen/sysnokki",
+              "count": 8
+            },
+            {
+              "value": "trojan.w97m/casdet",
+              "count": 3
+            },
+            {
+              "value": "trojan.blind/doina",
+              "count": 2
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "trojan.nukesped/lazarus",
+              "count": 8
+            },
+            {
+              "value": "trojan.nukesped/nukespeed",
+              "count": 6
+            },
+            {
+              "value": "trojan.joanap/doina",
+              "count": 6
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "trojan.doina/stealer",
+              "count": 7
+            },
+            {
+              "value": "trojan.msil/rapidstealer",
+              "count": 3
+            },
+            {
+              "value": "trojan.scar/marsilia",
+              "count": 2
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "trojan.w97m/jeki",
+              "count": 10
+            },
+            {
+              "value": "trojan.acan/based",
+              "count": 5
+            },
+            {
+              "value": "trojan.powershell/malgent",
+              "count": 4
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "trojan.pwshell/heur2",
+              "count": 14
+            },
+            {
+              "value": "trojan.powershell",
+              "count": 3
+            },
+            {
+              "value": "trojan.powbow/asusd",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "trojan.blackenergy/rootkit",
+              "count": 11
+            },
+            {
+              "value": "trojan.blackenergy/blakken",
+              "count": 6
+            },
+            {
+              "value": "trojan.python/telebot",
+              "count": 4
+            }
+          ],
+          "Turla": [
+            {
+              "value": "trojan.turla/turlacarbon",
+              "count": 9
+            },
+            {
+              "value": "trojan.turla/aptturla",
+              "count": 6
+            },
+            {
+              "value": "trojan.turla/gazer",
+              "count": 5
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "trojan.bazar/bazarloader",
+              "count": 3
+            },
+            {
+              "value": "ransomware.ryuk/smthc",
+              "count": 2
+            },
+            {
+              "value": "trojan.hermes/encoder",
+              "count": 2
+            }
+          ]
+        }
+      },
+      "file.pe_imphash": {
+        "kl_divergence": 5.0534,
+        "total_values": 1012,
+        "unique_values": 510,
+        "global_top5": [
+          {
+            "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+            "count": 119
+          },
+          {
+            "value": "f6baa5eaa8231d4fe8e922a2e6d240ea",
+            "count": 53
+          },
+          {
+            "value": "524711ec9c5a149fe3bf3479d0b505b6",
+            "count": 26
+          },
+          {
+            "value": "28fddcffc23c8d6bd8c14acfa01b5fae",
+            "count": 12
+          },
+          {
+            "value": "8c6e7f4173c53dba1b28c9d4280d4bd9",
+            "count": 12
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "9cbefe68f395e67356e2a5d8d1b285c0",
+              "count": 4
+            },
+            {
+              "value": "a1d7fd1283c632860ed1d70fd37a2e90",
+              "count": 2
+            },
+            {
+              "value": "7c607bbb79593dec12050994eb1759b0",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 62
+            }
+          ],
+          "APT1": [
+            {
+              "value": "7c288db16cf83dd5773894085587de4a",
+              "count": 1
+            },
+            {
+              "value": "183a27ac08cc9d2c81873b6ec147ac91",
+              "count": 1
+            },
+            {
+              "value": "c443456a82bf0d5334d0533e06bba304",
+              "count": 1
+            }
+          ],
+          "APT12": [
+            {
+              "value": "dcfaa2650d29ec1bd88e262d11d3236f",
+              "count": 1
+            },
+            {
+              "value": "ead55ef2b18a80c00786c25211981570",
+              "count": 1
+            },
+            {
+              "value": "864cd776c24a3c653fd89899ca32fe0b",
+              "count": 1
+            }
+          ],
+          "APT16": [
+            {
+              "value": "87bed5a7cba00c7e1f4015f1bdae2183",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "53f7d489c21079f3039817feb1b0a825",
+              "count": 3
+            }
+          ],
+          "APT19": [
+            {
+              "value": "e66a62b251fcfbbc930b074503d08542",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 12
+            },
+            {
+              "value": "13344e2a717849489bcd93692f9646f7",
+              "count": 3
+            },
+            {
+              "value": "8b14abfb3ff3b0c61117e57ad35c61eb",
+              "count": 2
+            }
+          ],
+          "APT29": [
+            {
+              "value": "28fddcffc23c8d6bd8c14acfa01b5fae",
+              "count": 12
+            },
+            {
+              "value": "8c6e7f4173c53dba1b28c9d4280d4bd9",
+              "count": 12
+            },
+            {
+              "value": "6b26d617da672dd0f81bc0acedbb94f7",
+              "count": 10
+            }
+          ],
+          "APT32": [
+            {
+              "value": "e458cce35c71bd9e823f2c0aff2541dd",
+              "count": 8
+            },
+            {
+              "value": "49091c5c46d1ed156931ed11f43d3afa",
+              "count": 6
+            },
+            {
+              "value": "1ad14a0a5b4ebf0f701a3e4f6e0e5dd1",
+              "count": 1
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "22a3415da73e700a9d1776edf816228e",
+              "count": 4
+            },
+            {
+              "value": "40a58608c7879ccf4325298cfaa95fd4",
+              "count": 3
+            },
+            {
+              "value": "f9ade0aa18f660a34a4fa23392e21838",
+              "count": 3
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "f6baa5eaa8231d4fe8e922a2e6d240ea",
+              "count": 53
+            },
+            {
+              "value": "524711ec9c5a149fe3bf3479d0b505b6",
+              "count": 26
+            },
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 15
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "f1b839b88f3cc617f470936d31dfd318",
+              "count": 2
+            },
+            {
+              "value": "481bc1427885be4db6de76e0f1c47931",
+              "count": 2
+            },
+            {
+              "value": "e679e4b08033f8d73d512e75a0fca09f",
+              "count": 2
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "a209009a3f8968e0c14165e01e51100b",
+              "count": 4
+            },
+            {
+              "value": "ea7287004b905433e99ffc9bd5188838",
+              "count": 3
+            },
+            {
+              "value": "baa93d47220682c04d92f7797d9224ce",
+              "count": 2
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 8
+            },
+            {
+              "value": "bc70c4fa605f17c85050b7c7b6d42e44",
+              "count": 7
+            },
+            {
+              "value": "95840020a6d4afb6f5ae54365a06421d",
+              "count": 4
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 10
+            },
+            {
+              "value": "5290f9c5c5c777fb0fc2069fbd051d63",
+              "count": 3
+            },
+            {
+              "value": "4e3e7ce958acceeb80e70eeb7d75870e",
+              "count": 2
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+              "count": 6
+            },
+            {
+              "value": "dae02f32a21e03ce65412f6e56942daa",
+              "count": 2
+            },
+            {
+              "value": "0c9116b26820fba2dce26eec158b2151",
+              "count": 1
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "e165f5712c4f582f18b1365c1107cb30",
+              "count": 6
+            },
+            {
+              "value": "a6360a33ab43f0e49d6d629cf4228f08",
+              "count": 5
+            },
+            {
+              "value": "8e9f968bdc749603c012464514e26eaa",
+              "count": 5
+            }
+          ],
+          "Turla": [
+            {
+              "value": "b0095e22735d357ddb128c7622371b25",
+              "count": 3
+            },
+            {
+              "value": "af5386cd0fc89fdabd757b762233042a",
+              "count": 3
+            },
+            {
+              "value": "cd918073f209c5da7a16b6c125d73746",
+              "count": 2
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "c7a0309d45fd007c2ce268b7218e075c",
+              "count": 3
+            },
+            {
+              "value": "dbf52393dd7977a767f4606daa263dbf",
+              "count": 1
+            },
+            {
+              "value": "7bf8efb019225f85c5c0e465c53569e7",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "ip.asn": {
+        "kl_divergence": 4.5276,
+        "total_values": 900,
+        "unique_values": 243,
+        "global_top5": [
+          {
+            "value": "20473",
+            "count": 69
+          },
+          {
+            "value": "3356",
+            "count": 51
+          },
+          {
+            "value": "16276",
+            "count": 44
+          },
+          {
+            "value": "61272",
+            "count": 42
+          },
+          {
+            "value": "30823",
+            "count": 33
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "209847",
+              "count": 2
+            },
+            {
+              "value": "22653",
+              "count": 1
+            },
+            {
+              "value": "214036",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "40861",
+              "count": 8
+            }
+          ],
+          "APT1": [
+            {
+              "value": "18450",
+              "count": 1
+            },
+            {
+              "value": "9812",
+              "count": 1
+            },
+            {
+              "value": "29141",
+              "count": 1
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "152194",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "14061",
+              "count": 3
+            }
+          ],
+          "APT28": [
+            {
+              "value": "49367",
+              "count": 3
+            },
+            {
+              "value": "61272",
+              "count": 2
+            },
+            {
+              "value": "51177",
+              "count": 2
+            }
+          ],
+          "APT29": [
+            {
+              "value": "3356",
+              "count": 30
+            },
+            {
+              "value": "16509",
+              "count": 12
+            },
+            {
+              "value": "14618",
+              "count": 10
+            }
+          ],
+          "APT32": [
+            {
+              "value": "14061",
+              "count": 8
+            },
+            {
+              "value": "6939",
+              "count": 8
+            },
+            {
+              "value": "20473",
+              "count": 7
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "14576",
+              "count": 6
+            },
+            {
+              "value": "51852",
+              "count": 6
+            },
+            {
+              "value": "59580",
+              "count": 6
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "9123",
+              "count": 23
+            },
+            {
+              "value": "15169",
+              "count": 1
+            },
+            {
+              "value": "24940",
+              "count": 1
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "7489",
+              "count": 4
+            },
+            {
+              "value": "16509",
+              "count": 2
+            },
+            {
+              "value": "45996",
+              "count": 2
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "3356",
+              "count": 19
+            },
+            {
+              "value": "9318",
+              "count": 5
+            },
+            {
+              "value": "4766",
+              "count": 3
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "16276",
+              "count": 22
+            },
+            {
+              "value": "32097",
+              "count": 12
+            },
+            {
+              "value": "10297",
+              "count": 11
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "16276",
+              "count": 3
+            },
+            {
+              "value": "24940",
+              "count": 3
+            },
+            {
+              "value": "36352",
+              "count": 3
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "16276",
+              "count": 4
+            },
+            {
+              "value": "24940",
+              "count": 2
+            },
+            {
+              "value": "20860",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "24940",
+              "count": 5
+            },
+            {
+              "value": "62041",
+              "count": 4
+            },
+            {
+              "value": "57043",
+              "count": 3
+            }
+          ],
+          "Turla": [
+            {
+              "value": "36892",
+              "count": 1
+            },
+            {
+              "value": "43076",
+              "count": 1
+            },
+            {
+              "value": "12684",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "20473",
+              "count": 60
+            },
+            {
+              "value": "61272",
+              "count": 39
+            },
+            {
+              "value": "30823",
+              "count": 32
+            }
+          ]
+        }
+      },
+      "ip.as_owner": {
+        "kl_divergence": 4.4952,
+        "total_values": 900,
+        "unique_values": 230,
+        "global_top5": [
+          {
+            "value": "The Constant Company, LLC",
+            "count": 69
+          },
+          {
+            "value": "Level 3 Parent, LLC",
+            "count": 51
+          },
+          {
+            "value": "OVH SAS",
+            "count": 44
+          },
+          {
+            "value": "Informacines sistemos ir technologijos, UAB",
+            "count": 42
+          },
+          {
+            "value": "aurologic GmbH",
+            "count": 33
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "WorkTitans B.V.",
+              "count": 2
+            },
+            {
+              "value": "Cyber Wurx LLC",
+              "count": 1
+            },
+            {
+              "value": "Ultahost, Inc.",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "Paradise Networks LLC",
+              "count": 8
+            }
+          ],
+          "APT1": [
+            {
+              "value": "WebNX, Inc.",
+              "count": 1
+            },
+            {
+              "value": "Oriental Cable Network Co., Ltd.",
+              "count": 1
+            },
+            {
+              "value": "Bradler & Krantz GmbH & Co. KG",
+              "count": 1
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "CTG Server Limited",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "DigitalOcean, LLC",
+              "count": 3
+            }
+          ],
+          "APT28": [
+            {
+              "value": "Seflow s.r.l.",
+              "count": 3
+            },
+            {
+              "value": "Informacines sistemos ir technologijos, UAB",
+              "count": 2
+            },
+            {
+              "value": "Tipzor Media Srl",
+              "count": 2
+            }
+          ],
+          "APT29": [
+            {
+              "value": "Level 3 Parent, LLC",
+              "count": 30
+            },
+            {
+              "value": "Amazon.com, Inc.",
+              "count": 22
+            },
+            {
+              "value": "Tele Asia Limited",
+              "count": 5
+            }
+          ],
+          "APT32": [
+            {
+              "value": "DigitalOcean, LLC",
+              "count": 8
+            },
+            {
+              "value": "Hurricane Electric LLC",
+              "count": 8
+            },
+            {
+              "value": "The Constant Company, LLC",
+              "count": 7
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "Sia Nano IT",
+              "count": 9
+            },
+            {
+              "value": "Green Floid LLC",
+              "count": 8
+            },
+            {
+              "value": "Hosting Solution Ltd.",
+              "count": 6
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "Jsc timeweb",
+              "count": 23
+            },
+            {
+              "value": "Google LLC",
+              "count": 1
+            },
+            {
+              "value": "Hetzner Online GmbH",
+              "count": 1
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "HostUS",
+              "count": 4
+            },
+            {
+              "value": "Amazon.com, Inc.",
+              "count": 2
+            },
+            {
+              "value": "DAOU TECHNOLOGY",
+              "count": 2
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "Level 3 Parent, LLC",
+              "count": 19
+            },
+            {
+              "value": "SK Broadband Co Ltd",
+              "count": 5
+            },
+            {
+              "value": "Korea Telecom",
+              "count": 3
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "OVH SAS",
+              "count": 22
+            },
+            {
+              "value": "WholeSale Internet, Inc.",
+              "count": 12
+            },
+            {
+              "value": "eNET Inc.",
+              "count": 11
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "OVH SAS",
+              "count": 3
+            },
+            {
+              "value": "Hetzner Online GmbH",
+              "count": 3
+            },
+            {
+              "value": "HostPapa",
+              "count": 3
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "OVH SAS",
+              "count": 4
+            },
+            {
+              "value": "Hetzner Online GmbH",
+              "count": 2
+            },
+            {
+              "value": "Iomart Cloud Services Limited",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "Hetzner Online GmbH",
+              "count": 5
+            },
+            {
+              "value": "Telegram Messenger Inc",
+              "count": 4
+            },
+            {
+              "value": "Hostkey B.v.",
+              "count": 3
+            }
+          ],
+          "Turla": [
+            {
+              "value": "IPTECH",
+              "count": 1
+            },
+            {
+              "value": "Global Broadband Solution Inc",
+              "count": 1
+            },
+            {
+              "value": "Ses Astra S.A.",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "The Constant Company, LLC",
+              "count": 60
+            },
+            {
+              "value": "Informacines sistemos ir technologijos, UAB",
+              "count": 39
+            },
+            {
+              "value": "aurologic GmbH",
+              "count": 32
+            }
+          ]
+        }
+      },
+      "domain.registrar": {
+        "kl_divergence": 3.7499,
+        "total_values": 1473,
+        "unique_values": 187,
+        "global_top5": [
+          {
+            "value": "Alibaba Cloud Computing Ltd. d/b/a HiChina (www.net.cn)",
+            "count": 191
+          },
+          {
+            "value": "REGRU-RU",
+            "count": 128
+          },
+          {
+            "value": "GoDaddy.com, LLC",
+            "count": 99
+          },
+          {
+            "value": "MarkMonitor Inc.",
+            "count": 90
+          },
+          {
+            "value": "NAMECHEAP INC",
+            "count": 88
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "NAMECHEAP INC",
+              "count": 23
+            },
+            {
+              "value": "MarkMonitor Inc.",
+              "count": 23
+            },
+            {
+              "value": "NameCheap, Inc.",
+              "count": 12
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "ALIBABA.COM SINGAPORE E-COMMERCE PRIVATE LIMITED",
+              "count": 3
+            },
+            {
+              "value": "HOSTINGER operations, UAB",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "MarkMonitor Inc.",
+              "count": 3
+            },
+            {
+              "value": "Alibaba Cloud Computing (Beijing) Co., Ltd.",
+              "count": 2
+            },
+            {
+              "value": "get.gov",
+              "count": 2
+            }
+          ],
+          "APT12": [
+            {
+              "value": "Porkbun LLC",
+              "count": 1
+            }
+          ],
+          "APT16": [
+            {
+              "value": "GMO INTERNET, INC.",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 2
+            }
+          ],
+          "APT19": [
+            {
+              "value": "TurnCommerce, Inc. DBA NameBright.com",
+              "count": 7
+            },
+            {
+              "value": "CSC Corporate Domains, Inc.",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+              "count": 12
+            },
+            {
+              "value": "GANDI SAS",
+              "count": 8
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 8
+            }
+          ],
+          "APT29": [
+            {
+              "value": "NameSilo, LLC",
+              "count": 10
+            },
+            {
+              "value": "MarkMonitor Inc.",
+              "count": 9
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 8
+            }
+          ],
+          "APT32": [
+            {
+              "value": "Alibaba Cloud Computing Ltd. d/b/a HiChina (www.net.cn)",
+              "count": 16
+            },
+            {
+              "value": "GMO Internet Group, Inc. d/b/a Onamae.com",
+              "count": 6
+            },
+            {
+              "value": "GMO INTERNET, INC.",
+              "count": 5
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "NAMECHEAP INC",
+              "count": 10
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 6
+            },
+            {
+              "value": "PDR LTD. D/B/A PUBLICDOMAINREGISTRY.COM",
+              "count": 3
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "REGRU-RU",
+              "count": 128
+            },
+            {
+              "value": "Vitalwerks Internet Solutions, LLC / No-IP.com",
+              "count": 24
+            },
+            {
+              "value": "RU-CENTER-RU",
+              "count": 10
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+              "count": 6
+            },
+            {
+              "value": "NAMECHEAP INC",
+              "count": 5
+            },
+            {
+              "value": "TUCOWS.COM, CO.",
+              "count": 3
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 20
+            },
+            {
+              "value": "MarkMonitor Inc.",
+              "count": 5
+            },
+            {
+              "value": "Gabia, Inc.",
+              "count": 5
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "OnlineNIC, Inc.",
+              "count": 76
+            },
+            {
+              "value": "ONLINENIC, INC.",
+              "count": 54
+            },
+            {
+              "value": "MarkMonitor, Inc (TLDs)",
+              "count": 48
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 8
+            },
+            {
+              "value": "Dynadot Inc",
+              "count": 3
+            },
+            {
+              "value": "MarkMonitor Inc.",
+              "count": 2
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+              "count": 5
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 5
+            },
+            {
+              "value": "Dynadot Inc",
+              "count": 3
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "Dynadot LLC",
+              "count": 11
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 6
+            },
+            {
+              "value": "GANDI SAS",
+              "count": 4
+            }
+          ],
+          "Turla": [
+            {
+              "value": "Dynu Systems Incorporated",
+              "count": 4
+            },
+            {
+              "value": "CSL Computer Service Langenbach GmbH d/b/a joker.com",
+              "count": 1
+            },
+            {
+              "value": "CSC Corporate Domains",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "Alibaba Cloud Computing Ltd. d/b/a HiChina (www.net.cn)",
+              "count": 170
+            },
+            {
+              "value": "NAMECHEAP INC",
+              "count": 21
+            },
+            {
+              "value": "GoDaddy.com, LLC",
+              "count": 15
+            }
+          ]
+        }
+      },
+      "ip.jarm": {
+        "kl_divergence": 2.5514,
+        "total_values": 456,
+        "unique_values": 120,
+        "global_top5": [
+          {
+            "value": "15d3fd16d29d29d00042",
+            "count": 32
+          },
+          {
+            "value": "2ad2ad0002ad2ad00042",
+            "count": 22
+          },
+          {
+            "value": "3fd3fd0003fd3fd21c42",
+            "count": 17
+          },
+          {
+            "value": "2ad2ad16d2ad2ad00042",
+            "count": 17
+          },
+          {
+            "value": "29d29d00029d29d00042",
+            "count": 15
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "3fd21b20d3fd3fd21c43",
+              "count": 1
+            },
+            {
+              "value": "40d40d40d00000000043",
+              "count": 1
+            },
+            {
+              "value": "29d3fd00029d29d21c42",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [],
+          "APT1": [],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "3fd3fd0003fd3fd21c42",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "29d29d15d29d29d21c29",
+              "count": 1
+            },
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "2ad2ad16d2ad2ad22c2a",
+              "count": 2
+            },
+            {
+              "value": "29d29d00029d29d21c41",
+              "count": 1
+            },
+            {
+              "value": "27d27d27d00027d1dc42",
+              "count": 1
+            }
+          ],
+          "APT29": [
+            {
+              "value": "29d29d20d29d29d21c29",
+              "count": 10
+            },
+            {
+              "value": "29d29d00029d29d00042",
+              "count": 4
+            },
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 3
+            }
+          ],
+          "APT32": [
+            {
+              "value": "05d10d20d21d20d05c05",
+              "count": 5
+            },
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad16d2ad2ad00042",
+              "count": 2
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "05d02d12d04d04d05c05",
+              "count": 2
+            },
+            {
+              "value": "29d29d00029d29d21c29",
+              "count": 2
+            },
+            {
+              "value": "3fd3fd0003fd3fd21c42",
+              "count": 2
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 3
+            },
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 3
+            },
+            {
+              "value": "21d19d00021d21d00042",
+              "count": 2
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "05d02d20d21d20d05c05",
+              "count": 2
+            },
+            {
+              "value": "2ad2ad16d2ad2ad22c42",
+              "count": 2
+            },
+            {
+              "value": "05d2ad20d21d20d05c05",
+              "count": 1
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "2ad2ad16d00000022c2a",
+              "count": 2
+            },
+            {
+              "value": "29d29d15d29d29d00042",
+              "count": 2
+            },
+            {
+              "value": "26d26d16d26d26d22b26",
+              "count": 2
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad16d2ad2ad0002a",
+              "count": 3
+            },
+            {
+              "value": "29d29d00029d29d00042",
+              "count": 2
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "05d10d20d21d20d05c05",
+              "count": 2
+            },
+            {
+              "value": "25d3fd00025d25d00042",
+              "count": 2
+            },
+            {
+              "value": "06d06d07d06d06d06c06",
+              "count": 1
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 2
+            },
+            {
+              "value": "28d28d28d00028d00042",
+              "count": 1
+            },
+            {
+              "value": "28d28d28d00000000042",
+              "count": 1
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad16d2ad2ad22c2a",
+              "count": 2
+            }
+          ],
+          "Turla": [],
+          "Wizard_Spider": [
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 14
+            },
+            {
+              "value": "2ad2ad16d2ad2ad00042",
+              "count": 10
+            },
+            {
+              "value": "07d14d16d21d21d07c42",
+              "count": 10
+            }
+          ]
+        }
+      },
+      "domain.jarm": {
+        "kl_divergence": 2.4458,
+        "total_values": 1537,
+        "unique_values": 145,
+        "global_top5": [
+          {
+            "value": "2ad2ad0002ad2ad00042",
+            "count": 132
+          },
+          {
+            "value": "2ad2ad0002ad2ad22c2a",
+            "count": 131
+          },
+          {
+            "value": "15d3fd16d29d29d00042",
+            "count": 91
+          },
+          {
+            "value": "27d40d40d00040d00042",
+            "count": 83
+          },
+          {
+            "value": "3fd3fd20d00000000043",
+            "count": 64
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "05d02d20d21d20d05c05",
+              "count": 15
+            },
+            {
+              "value": "3fd3fd0003fd3fd21c42",
+              "count": 12
+            },
+            {
+              "value": "27d40d40d29d40d1dc42",
+              "count": 11
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "27d40d40d00040d1dc42",
+              "count": 1
+            },
+            {
+              "value": "40d1db40d00040d1dc43",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 5
+            },
+            {
+              "value": "29d3fd00029d29d00041",
+              "count": 2
+            },
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 2
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "29d29d00029d29d21c29",
+              "count": 1
+            },
+            {
+              "value": "29d29d15d29d29d00029",
+              "count": 1
+            },
+            {
+              "value": "29d29d00029d29d00041",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "3fd3fd20d00000000043",
+              "count": 1
+            },
+            {
+              "value": "29d3fd00029d29d00041",
+              "count": 1
+            },
+            {
+              "value": "29d3fd00029d29d00029",
+              "count": 1
+            }
+          ],
+          "APT19": [
+            {
+              "value": "28d28d28d00000000042",
+              "count": 6
+            },
+            {
+              "value": "27d27d27d00027d00042",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 11
+            },
+            {
+              "value": "21d19d00021d21d00042",
+              "count": 7
+            },
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 6
+            }
+          ],
+          "APT29": [
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 12
+            },
+            {
+              "value": "2ad2ad16d2ad2ad00042",
+              "count": 5
+            },
+            {
+              "value": "28d28d28d00028d00042",
+              "count": 5
+            }
+          ],
+          "APT32": [
+            {
+              "value": "05d02d20d21d20d05c05",
+              "count": 17
+            },
+            {
+              "value": "29d29d00029d29d21c29",
+              "count": 16
+            },
+            {
+              "value": "2ad2ad0002ad2ad22c2a",
+              "count": 9
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "27d27d27d00027d1dc42",
+              "count": 19
+            },
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 14
+            },
+            {
+              "value": "07d19d20d21d20d07c07",
+              "count": 4
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 48
+            },
+            {
+              "value": "07d19d1ad21d21d07c42",
+              "count": 47
+            },
+            {
+              "value": "3fd3fd0003fd3fd00042",
+              "count": 10
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "05d02d20d21d20d05c05",
+              "count": 15
+            },
+            {
+              "value": "29d3fd00029d29d00042",
+              "count": 5
+            },
+            {
+              "value": "15d2ad16d29d29d09c15",
+              "count": 3
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 12
+            },
+            {
+              "value": "2ad2ad16d00000022c2a",
+              "count": 11
+            },
+            {
+              "value": "27d40d40d00040d1dc42",
+              "count": 10
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 79
+            },
+            {
+              "value": "2ad2ad16d00000022c2a",
+              "count": 15
+            },
+            {
+              "value": "2ad2ad0002ad2ad22c2a",
+              "count": 11
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 9
+            },
+            {
+              "value": "27d40d40d00040d1dc42",
+              "count": 8
+            },
+            {
+              "value": "15d3fd16d29d29d00042",
+              "count": 4
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 3
+            },
+            {
+              "value": "3fd21b20d3fd3fd21c43",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad16d2ad2ad00042",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "29d29d15d29d29d21c29",
+              "count": 22
+            },
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 13
+            },
+            {
+              "value": "27d40d40d00040d1dc42",
+              "count": 10
+            }
+          ],
+          "Turla": [
+            {
+              "value": "2ad2ad0002ad2ad00042",
+              "count": 3
+            },
+            {
+              "value": "2ad2ad0002ad2ad22c2a",
+              "count": 3
+            },
+            {
+              "value": "27d40d40d00040d00042",
+              "count": 3
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "2ad2ad0002ad2ad22c2a",
+              "count": 101
+            },
+            {
+              "value": "21d19d00021d21d00042",
+              "count": 31
+            },
+            {
+              "value": "3fd3fd20d00000000043",
+              "count": 30
+            }
+          ]
+        }
+      },
+      "ip.country": {
+        "kl_divergence": 2.0736,
+        "total_values": 940,
+        "unique_values": 66,
+        "global_top5": [
+          {
+            "value": "US",
+            "count": 312
+          },
+          {
+            "value": "NL",
+            "count": 93
+          },
+          {
+            "value": "RU",
+            "count": 87
+          },
+          {
+            "value": "DE",
+            "count": 72
+          },
+          {
+            "value": "FR",
+            "count": 46
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "DE",
+              "count": 2
+            },
+            {
+              "value": "US",
+              "count": 1
+            },
+            {
+              "value": "RU",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "CR",
+              "count": 3
+            },
+            {
+              "value": "US",
+              "count": 3
+            },
+            {
+              "value": "AR",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "CN",
+              "count": 2
+            },
+            {
+              "value": "US",
+              "count": 1
+            },
+            {
+              "value": "DE",
+              "count": 1
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "HK",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "US",
+              "count": 3
+            }
+          ],
+          "APT28": [
+            {
+              "value": "US",
+              "count": 8
+            },
+            {
+              "value": "IT",
+              "count": 3
+            },
+            {
+              "value": "LT",
+              "count": 3
+            }
+          ],
+          "APT29": [
+            {
+              "value": "US",
+              "count": 73
+            },
+            {
+              "value": "HK",
+              "count": 14
+            },
+            {
+              "value": "NL",
+              "count": 7
+            }
+          ],
+          "APT32": [
+            {
+              "value": "US",
+              "count": 24
+            },
+            {
+              "value": "SG",
+              "count": 19
+            },
+            {
+              "value": "NL",
+              "count": 3
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "US",
+              "count": 16
+            },
+            {
+              "value": "RU",
+              "count": 12
+            },
+            {
+              "value": "NL",
+              "count": 9
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "RU",
+              "count": 26
+            },
+            {
+              "value": "US",
+              "count": 1
+            },
+            {
+              "value": "DE",
+              "count": 1
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "US",
+              "count": 11
+            },
+            {
+              "value": "KR",
+              "count": 5
+            },
+            {
+              "value": "SG",
+              "count": 2
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "US",
+              "count": 31
+            },
+            {
+              "value": "KR",
+              "count": 12
+            },
+            {
+              "value": "FR",
+              "count": 4
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "US",
+              "count": 32
+            },
+            {
+              "value": "NL",
+              "count": 32
+            },
+            {
+              "value": "FR",
+              "count": 15
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "US",
+              "count": 6
+            },
+            {
+              "value": "DE",
+              "count": 6
+            },
+            {
+              "value": "RU",
+              "count": 4
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "FR",
+              "count": 4
+            },
+            {
+              "value": "GB",
+              "count": 4
+            },
+            {
+              "value": "DE",
+              "count": 3
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "US",
+              "count": 10
+            },
+            {
+              "value": "NL",
+              "count": 9
+            },
+            {
+              "value": "DE",
+              "count": 7
+            }
+          ],
+          "Turla": [
+            {
+              "value": "SS",
+              "count": 1
+            },
+            {
+              "value": "CD",
+              "count": 1
+            },
+            {
+              "value": "US",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "US",
+              "count": 89
+            },
+            {
+              "value": "DE",
+              "count": 33
+            },
+            {
+              "value": "NL",
+              "count": 31
+            }
+          ]
+        }
+      },
+      "domain.creation_year": {
+        "kl_divergence": 1.6986,
+        "total_values": 1768,
+        "unique_values": 40,
+        "global_top5": [
+          {
+            "value": "2024",
+            "count": 284
+          },
+          {
+            "value": "2020",
+            "count": 183
+          },
+          {
+            "value": "2023",
+            "count": 170
+          },
+          {
+            "value": "2022",
+            "count": 121
+          },
+          {
+            "value": "2021",
+            "count": 106
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "2019",
+              "count": 34
+            },
+            {
+              "value": "2021",
+              "count": 20
+            },
+            {
+              "value": "2012",
+              "count": 14
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "2020",
+              "count": 3
+            },
+            {
+              "value": "2019",
+              "count": 2
+            },
+            {
+              "value": "2021",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "2010",
+              "count": 2
+            },
+            {
+              "value": "2006",
+              "count": 2
+            },
+            {
+              "value": "1997",
+              "count": 2
+            }
+          ],
+          "APT12": [
+            {
+              "value": "2002",
+              "count": 1
+            },
+            {
+              "value": "2024",
+              "count": 1
+            }
+          ],
+          "APT16": [
+            {
+              "value": "2020",
+              "count": 2
+            },
+            {
+              "value": "1994",
+              "count": 1
+            },
+            {
+              "value": "2015",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "2018",
+              "count": 1
+            },
+            {
+              "value": "1993",
+              "count": 1
+            },
+            {
+              "value": "2015",
+              "count": 1
+            }
+          ],
+          "APT19": [
+            {
+              "value": "2019",
+              "count": 5
+            },
+            {
+              "value": "2018",
+              "count": 2
+            },
+            {
+              "value": "2010",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "2021",
+              "count": 11
+            },
+            {
+              "value": "2023",
+              "count": 9
+            },
+            {
+              "value": "2024",
+              "count": 9
+            }
+          ],
+          "APT29": [
+            {
+              "value": "2019",
+              "count": 7
+            },
+            {
+              "value": "2022",
+              "count": 6
+            },
+            {
+              "value": "2018",
+              "count": 6
+            }
+          ],
+          "APT32": [
+            {
+              "value": "2024",
+              "count": 23
+            },
+            {
+              "value": "2021",
+              "count": 17
+            },
+            {
+              "value": "2023",
+              "count": 14
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "2022",
+              "count": 24
+            },
+            {
+              "value": "2025",
+              "count": 12
+            },
+            {
+              "value": "2021",
+              "count": 9
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "2001",
+              "count": 13
+            },
+            {
+              "value": "2008",
+              "count": 7
+            },
+            {
+              "value": "1999",
+              "count": 7
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "2022",
+              "count": 20
+            },
+            {
+              "value": "2024",
+              "count": 7
+            },
+            {
+              "value": "2023",
+              "count": 6
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "1999",
+              "count": 8
+            },
+            {
+              "value": "2004",
+              "count": 7
+            },
+            {
+              "value": "2012",
+              "count": 7
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "2020",
+              "count": 115
+            },
+            {
+              "value": "2017",
+              "count": 75
+            },
+            {
+              "value": "2023",
+              "count": 59
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "2011",
+              "count": 7
+            },
+            {
+              "value": "2014",
+              "count": 5
+            },
+            {
+              "value": "2004",
+              "count": 5
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "2023",
+              "count": 9
+            },
+            {
+              "value": "2025",
+              "count": 5
+            },
+            {
+              "value": "2022",
+              "count": 4
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "2022",
+              "count": 17
+            },
+            {
+              "value": "2021",
+              "count": 9
+            },
+            {
+              "value": "2023",
+              "count": 7
+            }
+          ],
+          "Turla": [
+            {
+              "value": "2001",
+              "count": 4
+            },
+            {
+              "value": "2024",
+              "count": 3
+            },
+            {
+              "value": "2016",
+              "count": 3
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "2024",
+              "count": 198
+            },
+            {
+              "value": "2023",
+              "count": 34
+            },
+            {
+              "value": "2020",
+              "count": 28
+            }
+          ]
+        }
+      },
+      "domain.tld": {
+        "kl_divergence": 1.4173,
+        "total_values": 2361,
+        "unique_values": 133,
+        "global_top5": [
+          {
+            "value": "com",
+            "count": 1074
+          },
+          {
+            "value": "ru",
+            "count": 166
+          },
+          {
+            "value": "net",
+            "count": 146
+          },
+          {
+            "value": "site",
+            "count": 135
+          },
+          {
+            "value": "org",
+            "count": 115
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "com",
+              "count": 64
+            },
+            {
+              "value": "info",
+              "count": 17
+            },
+            {
+              "value": "site",
+              "count": 14
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "com",
+              "count": 6
+            },
+            {
+              "value": "club",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "com",
+              "count": 16
+            },
+            {
+              "value": "net",
+              "count": 6
+            },
+            {
+              "value": "edu.cn",
+              "count": 4
+            }
+          ],
+          "APT12": [
+            {
+              "value": "com",
+              "count": 2
+            }
+          ],
+          "APT16": [
+            {
+              "value": "com",
+              "count": 2
+            },
+            {
+              "value": "net",
+              "count": 1
+            },
+            {
+              "value": "taipei",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "com",
+              "count": 3
+            }
+          ],
+          "APT19": [
+            {
+              "value": "com",
+              "count": 5
+            },
+            {
+              "value": "net",
+              "count": 2
+            },
+            {
+              "value": "co",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "com",
+              "count": 53
+            },
+            {
+              "value": "org",
+              "count": 15
+            },
+            {
+              "value": "net",
+              "count": 8
+            }
+          ],
+          "APT29": [
+            {
+              "value": "com",
+              "count": 72
+            },
+            {
+              "value": "org",
+              "count": 15
+            },
+            {
+              "value": "net",
+              "count": 5
+            }
+          ],
+          "APT32": [
+            {
+              "value": "com",
+              "count": 53
+            },
+            {
+              "value": "net",
+              "count": 12
+            },
+            {
+              "value": "org",
+              "count": 9
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "com",
+              "count": 63
+            },
+            {
+              "value": "ms",
+              "count": 1
+            },
+            {
+              "value": "gov",
+              "count": 1
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "ru",
+              "count": 164
+            },
+            {
+              "value": "net",
+              "count": 15
+            },
+            {
+              "value": "com",
+              "count": 9
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "com",
+              "count": 51
+            },
+            {
+              "value": "ga",
+              "count": 8
+            },
+            {
+              "value": "org",
+              "count": 6
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "com",
+              "count": 83
+            },
+            {
+              "value": "org",
+              "count": 12
+            },
+            {
+              "value": "co.kr",
+              "count": 10
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "com",
+              "count": 212
+            },
+            {
+              "value": "site",
+              "count": 108
+            },
+            {
+              "value": "bid",
+              "count": 68
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "com",
+              "count": 42
+            },
+            {
+              "value": "org",
+              "count": 6
+            },
+            {
+              "value": "com.pk",
+              "count": 4
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "com",
+              "count": 18
+            },
+            {
+              "value": "site",
+              "count": 5
+            },
+            {
+              "value": "club",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "com",
+              "count": 36
+            },
+            {
+              "value": "org",
+              "count": 12
+            },
+            {
+              "value": "net",
+              "count": 8
+            }
+          ],
+          "Turla": [
+            {
+              "value": "com",
+              "count": 21
+            },
+            {
+              "value": "tk",
+              "count": 11
+            },
+            {
+              "value": "org",
+              "count": 8
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "com",
+              "count": 263
+            },
+            {
+              "value": "net",
+              "count": 7
+            },
+            {
+              "value": "org",
+              "count": 3
+            }
+          ]
+        }
+      },
+      "file.type_tag": {
+        "kl_divergence": 1.3099,
+        "total_values": 1673,
+        "unique_values": 33,
+        "global_top5": [
+          {
+            "value": "peexe",
+            "count": 819
+          },
+          {
+            "value": "pedll",
+            "count": 243
+          },
+          {
+            "value": "docx",
+            "count": 121
+          },
+          {
+            "value": "doc",
+            "count": 95
+          },
+          {
+            "value": "rtf",
+            "count": 90
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "peexe",
+              "count": 14
+            },
+            {
+              "value": "android",
+              "count": 12
+            },
+            {
+              "value": "macho",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "peexe",
+              "count": 62
+            },
+            {
+              "value": "rar",
+              "count": 9
+            },
+            {
+              "value": "email",
+              "count": 1
+            }
+          ],
+          "APT1": [
+            {
+              "value": "peexe",
+              "count": 8
+            },
+            {
+              "value": "pedll",
+              "count": 2
+            }
+          ],
+          "APT12": [
+            {
+              "value": "doc",
+              "count": 9
+            },
+            {
+              "value": "peexe",
+              "count": 3
+            }
+          ],
+          "APT16": [
+            {
+              "value": "peexe",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "peexe",
+              "count": 3
+            }
+          ],
+          "APT19": [
+            {
+              "value": "xlsx",
+              "count": 1
+            },
+            {
+              "value": "pedll",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "peexe",
+              "count": 42
+            },
+            {
+              "value": "pedll",
+              "count": 25
+            },
+            {
+              "value": "rtf",
+              "count": 20
+            }
+          ],
+          "APT29": [
+            {
+              "value": "peexe",
+              "count": 218
+            },
+            {
+              "value": "pedll",
+              "count": 95
+            },
+            {
+              "value": "elf",
+              "count": 19
+            }
+          ],
+          "APT32": [
+            {
+              "value": "peexe",
+              "count": 18
+            },
+            {
+              "value": "pedll",
+              "count": 11
+            },
+            {
+              "value": "rtf",
+              "count": 6
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "rtf",
+              "count": 61
+            },
+            {
+              "value": "docx",
+              "count": 40
+            },
+            {
+              "value": "doc",
+              "count": 35
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "peexe",
+              "count": 172
+            },
+            {
+              "value": "shell",
+              "count": 19
+            },
+            {
+              "value": "bat",
+              "count": 14
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "pedll",
+              "count": 17
+            },
+            {
+              "value": "docx",
+              "count": 17
+            },
+            {
+              "value": "peexe",
+              "count": 14
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "peexe",
+              "count": 38
+            },
+            {
+              "value": "docx",
+              "count": 31
+            },
+            {
+              "value": "pedll",
+              "count": 23
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "peexe",
+              "count": 42
+            },
+            {
+              "value": "android",
+              "count": 2
+            },
+            {
+              "value": "lnk",
+              "count": 1
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "peexe",
+              "count": 31
+            },
+            {
+              "value": "doc",
+              "count": 28
+            },
+            {
+              "value": "docx",
+              "count": 16
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "xls",
+              "count": 34
+            },
+            {
+              "value": "peexe",
+              "count": 11
+            },
+            {
+              "value": "doc",
+              "count": 5
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "peexe",
+              "count": 74
+            },
+            {
+              "value": "pedll",
+              "count": 10
+            },
+            {
+              "value": "vba",
+              "count": 3
+            }
+          ],
+          "Turla": [
+            {
+              "value": "pedll",
+              "count": 32
+            },
+            {
+              "value": "peexe",
+              "count": 26
+            },
+            {
+              "value": "elf",
+              "count": 9
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "peexe",
+              "count": 12
+            }
+          ]
+        }
+      },
+      "file.pe_resource_lang": {
+        "kl_divergence": 1.2993,
+        "total_values": 1186,
+        "unique_values": 67,
+        "global_top5": [
+          {
+            "value": "ENGLISH US",
+            "count": 578
+          },
+          {
+            "value": "NEUTRAL",
+            "count": 254
+          },
+          {
+            "value": "RUSSIAN",
+            "count": 140
+          },
+          {
+            "value": "NEUTRAL DEFAULT",
+            "count": 39
+          },
+          {
+            "value": "RUSSIAN NEUTRAL",
+            "count": 19
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "ENGLISH US",
+              "count": 8
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 8
+            },
+            {
+              "value": "NEUTRAL DEFAULT",
+              "count": 3
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "NEUTRAL",
+              "count": 62
+            }
+          ],
+          "APT1": [
+            {
+              "value": "ENGLISH US",
+              "count": 7
+            },
+            {
+              "value": "CHINESE SIMPLIFIED",
+              "count": 2
+            }
+          ],
+          "APT12": [
+            {
+              "value": "ENGLISH US",
+              "count": 3
+            },
+            {
+              "value": "CHINESE SIMPLIFIED",
+              "count": 1
+            },
+            {
+              "value": "ENGLISH UK",
+              "count": 1
+            }
+          ],
+          "APT16": [
+            {
+              "value": "NEUTRAL",
+              "count": 2
+            },
+            {
+              "value": "CHINESE SIMPLIFIED",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "ENGLISH US",
+              "count": 3
+            },
+            {
+              "value": "CHINESE SIMPLIFIED",
+              "count": 3
+            }
+          ],
+          "APT19": [
+            {
+              "value": "ENGLISH US",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "ENGLISH US",
+              "count": 33
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 26
+            },
+            {
+              "value": "ENGLISH UK",
+              "count": 2
+            }
+          ],
+          "APT29": [
+            {
+              "value": "ENGLISH US",
+              "count": 117
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 70
+            },
+            {
+              "value": "RUSSIAN",
+              "count": 27
+            }
+          ],
+          "APT32": [
+            {
+              "value": "ENGLISH US",
+              "count": 26
+            },
+            {
+              "value": "NEUTRAL DEFAULT",
+              "count": 3
+            },
+            {
+              "value": "HEBREW DEFAULT",
+              "count": 2
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "ENGLISH US",
+              "count": 21
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 5
+            },
+            {
+              "value": "SPANISH *unknown*",
+              "count": 3
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "ENGLISH US",
+              "count": 124
+            },
+            {
+              "value": "RUSSIAN",
+              "count": 102
+            },
+            {
+              "value": "NEUTRAL DEFAULT",
+              "count": 29
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "ENGLISH US",
+              "count": 29
+            },
+            {
+              "value": "KOREAN",
+              "count": 8
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "ENGLISH US",
+              "count": 43
+            },
+            {
+              "value": "KOREAN",
+              "count": 8
+            },
+            {
+              "value": "FRENCH",
+              "count": 2
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "ENGLISH US",
+              "count": 32
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 10
+            },
+            {
+              "value": "ENGLISH UK",
+              "count": 2
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "NEUTRAL",
+              "count": 24
+            },
+            {
+              "value": "ENGLISH US",
+              "count": 8
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "NEUTRAL",
+              "count": 8
+            },
+            {
+              "value": "ENGLISH US",
+              "count": 7
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "ENGLISH US",
+              "count": 58
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 15
+            },
+            {
+              "value": "RUSSIAN",
+              "count": 5
+            }
+          ],
+          "Turla": [
+            {
+              "value": "ENGLISH US",
+              "count": 48
+            },
+            {
+              "value": "RUSSIAN",
+              "count": 2
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 2
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "ENGLISH US",
+              "count": 10
+            },
+            {
+              "value": "NEUTRAL",
+              "count": 3
+            },
+            {
+              "value": "SLOVENIAN DEFAULT",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "ip.rir": {
+        "kl_divergence": 0.9223,
+        "total_values": 940,
+        "unique_values": 5,
+        "global_top5": [
+          {
+            "value": "RIPE NCC",
+            "count": 501
+          },
+          {
+            "value": "ARIN",
+            "count": 332
+          },
+          {
+            "value": "APNIC",
+            "count": 93
+          },
+          {
+            "value": "LACNIC",
+            "count": 10
+          },
+          {
+            "value": "AFRINIC",
+            "count": 4
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "RIPE NCC",
+              "count": 3
+            },
+            {
+              "value": "ARIN",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "LACNIC",
+              "count": 5
+            },
+            {
+              "value": "ARIN",
+              "count": 3
+            }
+          ],
+          "APT1": [
+            {
+              "value": "APNIC",
+              "count": 2
+            },
+            {
+              "value": "ARIN",
+              "count": 1
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 1
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "APNIC",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "ARIN",
+              "count": 3
+            }
+          ],
+          "APT28": [
+            {
+              "value": "RIPE NCC",
+              "count": 23
+            },
+            {
+              "value": "ARIN",
+              "count": 8
+            },
+            {
+              "value": "APNIC",
+              "count": 2
+            }
+          ],
+          "APT29": [
+            {
+              "value": "ARIN",
+              "count": 75
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 49
+            },
+            {
+              "value": "APNIC",
+              "count": 32
+            }
+          ],
+          "APT32": [
+            {
+              "value": "ARIN",
+              "count": 24
+            },
+            {
+              "value": "APNIC",
+              "count": 23
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 14
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "RIPE NCC",
+              "count": 60
+            },
+            {
+              "value": "ARIN",
+              "count": 18
+            },
+            {
+              "value": "APNIC",
+              "count": 2
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "RIPE NCC",
+              "count": 27
+            },
+            {
+              "value": "ARIN",
+              "count": 1
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "ARIN",
+              "count": 11
+            },
+            {
+              "value": "APNIC",
+              "count": 7
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 3
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "ARIN",
+              "count": 35
+            },
+            {
+              "value": "APNIC",
+              "count": 17
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 11
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "RIPE NCC",
+              "count": 66
+            },
+            {
+              "value": "ARIN",
+              "count": 37
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "RIPE NCC",
+              "count": 22
+            },
+            {
+              "value": "ARIN",
+              "count": 6
+            },
+            {
+              "value": "LACNIC",
+              "count": 3
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "RIPE NCC",
+              "count": 13
+            },
+            {
+              "value": "ARIN",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "RIPE NCC",
+              "count": 57
+            },
+            {
+              "value": "ARIN",
+              "count": 12
+            },
+            {
+              "value": "APNIC",
+              "count": 3
+            }
+          ],
+          "Turla": [
+            {
+              "value": "AFRINIC",
+              "count": 2
+            },
+            {
+              "value": "ARIN",
+              "count": 1
+            },
+            {
+              "value": "RIPE NCC",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "RIPE NCC",
+              "count": 151
+            },
+            {
+              "value": "ARIN",
+              "count": 94
+            },
+            {
+              "value": "APNIC",
+              "count": 3
+            }
+          ]
+        }
+      },
+      "ip.continent": {
+        "kl_divergence": 0.827,
+        "total_values": 940,
+        "unique_values": 6,
+        "global_top5": [
+          {
+            "value": "EU",
+            "count": 471
+          },
+          {
+            "value": "NA",
+            "count": 337
+          },
+          {
+            "value": "AS",
+            "count": 118
+          },
+          {
+            "value": "SA",
+            "count": 5
+          },
+          {
+            "value": "OC",
+            "count": 5
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "EU",
+              "count": 3
+            },
+            {
+              "value": "NA",
+              "count": 1
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "NA",
+              "count": 6
+            },
+            {
+              "value": "SA",
+              "count": 2
+            }
+          ],
+          "APT1": [
+            {
+              "value": "AS",
+              "count": 2
+            },
+            {
+              "value": "NA",
+              "count": 1
+            },
+            {
+              "value": "EU",
+              "count": 1
+            }
+          ],
+          "APT12": [],
+          "APT16": [
+            {
+              "value": "AS",
+              "count": 1
+            }
+          ],
+          "APT17": [],
+          "APT18": [],
+          "APT19": [
+            {
+              "value": "NA",
+              "count": 3
+            }
+          ],
+          "APT28": [
+            {
+              "value": "EU",
+              "count": 21
+            },
+            {
+              "value": "NA",
+              "count": 8
+            },
+            {
+              "value": "AS",
+              "count": 4
+            }
+          ],
+          "APT29": [
+            {
+              "value": "NA",
+              "count": 75
+            },
+            {
+              "value": "EU",
+              "count": 44
+            },
+            {
+              "value": "AS",
+              "count": 34
+            }
+          ],
+          "APT32": [
+            {
+              "value": "AS",
+              "count": 24
+            },
+            {
+              "value": "NA",
+              "count": 24
+            },
+            {
+              "value": "EU",
+              "count": 13
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "EU",
+              "count": 47
+            },
+            {
+              "value": "NA",
+              "count": 18
+            },
+            {
+              "value": "AS",
+              "count": 15
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "EU",
+              "count": 27
+            },
+            {
+              "value": "NA",
+              "count": 1
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "NA",
+              "count": 11
+            },
+            {
+              "value": "AS",
+              "count": 7
+            },
+            {
+              "value": "EU",
+              "count": 3
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "NA",
+              "count": 35
+            },
+            {
+              "value": "AS",
+              "count": 18
+            },
+            {
+              "value": "EU",
+              "count": 9
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "EU",
+              "count": 66
+            },
+            {
+              "value": "NA",
+              "count": 37
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "EU",
+              "count": 19
+            },
+            {
+              "value": "NA",
+              "count": 8
+            },
+            {
+              "value": "AS",
+              "count": 4
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "EU",
+              "count": 13
+            },
+            {
+              "value": "NA",
+              "count": 2
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "EU",
+              "count": 54
+            },
+            {
+              "value": "NA",
+              "count": 12
+            },
+            {
+              "value": "AS",
+              "count": 5
+            }
+          ],
+          "Turla": [
+            {
+              "value": "AF",
+              "count": 2
+            },
+            {
+              "value": "NA",
+              "count": 1
+            },
+            {
+              "value": "AS",
+              "count": 1
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "EU",
+              "count": 151
+            },
+            {
+              "value": "NA",
+              "count": 94
+            },
+            {
+              "value": "AS",
+              "count": 3
+            }
+          ]
+        }
+      },
+      "file.pe_machine": {
+        "kl_divergence": 0.1385,
+        "total_values": 1062,
+        "unique_values": 2,
+        "global_top5": [
+          {
+            "value": "332",
+            "count": 940
+          },
+          {
+            "value": "34404",
+            "count": 122
+          }
+        ],
+        "org_top3": {
+          "APT-C-23": [
+            {
+              "value": "332",
+              "count": 12
+            },
+            {
+              "value": "34404",
+              "count": 2
+            }
+          ],
+          "APT-C-36": [
+            {
+              "value": "332",
+              "count": 62
+            }
+          ],
+          "APT1": [
+            {
+              "value": "332",
+              "count": 10
+            }
+          ],
+          "APT12": [
+            {
+              "value": "332",
+              "count": 3
+            }
+          ],
+          "APT16": [
+            {
+              "value": "332",
+              "count": 2
+            }
+          ],
+          "APT17": [],
+          "APT18": [
+            {
+              "value": "332",
+              "count": 3
+            }
+          ],
+          "APT19": [
+            {
+              "value": "332",
+              "count": 1
+            }
+          ],
+          "APT28": [
+            {
+              "value": "332",
+              "count": 56
+            },
+            {
+              "value": "34404",
+              "count": 11
+            }
+          ],
+          "APT29": [
+            {
+              "value": "332",
+              "count": 284
+            },
+            {
+              "value": "34404",
+              "count": 29
+            }
+          ],
+          "APT32": [
+            {
+              "value": "332",
+              "count": 28
+            },
+            {
+              "value": "34404",
+              "count": 1
+            }
+          ],
+          "FIN7": [
+            {
+              "value": "332",
+              "count": 38
+            },
+            {
+              "value": "34404",
+              "count": 1
+            }
+          ],
+          "Gamaredon_Group": [
+            {
+              "value": "332",
+              "count": 184
+            }
+          ],
+          "Kimsuky": [
+            {
+              "value": "332",
+              "count": 19
+            },
+            {
+              "value": "34404",
+              "count": 12
+            }
+          ],
+          "Lazarus_Group": [
+            {
+              "value": "332",
+              "count": 44
+            },
+            {
+              "value": "34404",
+              "count": 17
+            }
+          ],
+          "Magic_Hound": [
+            {
+              "value": "332",
+              "count": 42
+            }
+          ],
+          "MuddyWater": [
+            {
+              "value": "332",
+              "count": 27
+            },
+            {
+              "value": "34404",
+              "count": 5
+            }
+          ],
+          "OilRig": [
+            {
+              "value": "332",
+              "count": 10
+            },
+            {
+              "value": "34404",
+              "count": 5
+            }
+          ],
+          "Sandworm_Team": [
+            {
+              "value": "332",
+              "count": 65
+            },
+            {
+              "value": "34404",
+              "count": 19
+            }
+          ],
+          "Turla": [
+            {
+              "value": "332",
+              "count": 42
+            },
+            {
+              "value": "34404",
+              "count": 16
+            }
+          ],
+          "Wizard_Spider": [
+            {
+              "value": "332",
+              "count": 8
+            },
+            {
+              "value": "34404",
+              "count": 4
+            }
+          ]
+        }
+      }
+    }
+  },
+  "part5_graph_structure": {
+    "num_components": 2,
+    "largest_component_size": 66443,
+    "component_size_distribution": {
+      ">1000": 1,
+      "100-1000": 0,
+      "10-99": 0,
+      "2-9": 0,
+      "1 (isolated)": 1
+    },
+    "orgs_in_largest_component": [
+      "APT-C-23",
+      "APT-C-36",
+      "APT1",
+      "APT12",
+      "APT16",
+      "APT18",
+      "APT19",
+      "APT28",
+      "APT29",
+      "APT32",
+      "FIN7",
+      "Gamaredon_Group",
+      "Kimsuky",
+      "Lazarus_Group",
+      "Magic_Hound",
+      "MuddyWater",
+      "OilRig",
+      "Sandworm_Team",
+      "Turla",
+      "Wizard_Spider"
+    ],
+    "avg_degree_by_type": {
+      "apt": {
+        "mean": 298.81,
+        "median": 252.0,
+        "max": 910,
+        "count": 21
+      },
+      "file": {
+        "mean": 2.54,
+        "median": 1.0,
+        "max": 154,
+        "count": 34005
+      },
+      "ip": {
+        "mean": 3.67,
+        "median": 1.0,
+        "max": 310,
+        "count": 12751
+      },
+      "domain": {
+        "mean": 3.7,
+        "median": 1.0,
+        "max": 372,
+        "count": 19525
+      },
+      "email": {
+        "mean": 1.03,
+        "median": 1.0,
+        "max": 2,
+        "count": 142
+      }
+    },
+    "l0_avg_degree": 17.96,
+    "l1_avg_degree": 1.57,
+    "density": 2.4e-05
+  },
+  "part6_ml_baseline": {
+    "num_samples": 6120,
+    "num_features": 34,
+    "num_classes": 21,
+    "train_size": 4284,
+    "test_size": 1836,
+    "micro_f1": 0.6558,
+    "macro_f1": 0.4602,
+    "top3_accuracy": 0.1634,
+    "per_class_f1": {
+      "APT-C-23": 0.7647,
+      "APT-C-36": 0.5,
+      "APT1": 0.0,
+      "APT12": 0.0,
+      "APT16": 0.0,
+      "APT18": 0.0,
+      "APT19": 0.0,
+      "APT28": 0.5545,
+      "APT29": 0.6586,
+      "APT32": 0.6222,
+      "FIN7": 0.5845,
+      "Gamaredon_Group": 0.7268,
+      "Kimsuky": 0.7143,
+      "Lazarus_Group": 0.553,
+      "Magic_Hound": 0.7867,
+      "MuddyWater": 0.6316,
+      "OilRig": 0.4533,
+      "Sandworm_Team": 0.4638,
+      "Turla": 0.5128,
+      "Wizard_Spider": 0.6772
+    },
+    "feature_importance_top10": [
+      {
+        "feature": "org_vote_Magic_Hound",
+        "importance": 0.1594
+      },
+      {
+        "feature": "org_vote_Wizard_Spider",
+        "importance": 0.1578
+      },
+      {
+        "feature": "org_vote_Gamaredon_Group",
+        "importance": 0.0897
+      },
+      {
+        "feature": "org_vote_APT29",
+        "importance": 0.0753
+      },
+      {
+        "feature": "detection_ratio",
+        "importance": 0.0558
+      },
+      {
+        "feature": "org_vote_Lazarus_Group",
+        "importance": 0.0483
+      },
+      {
+        "feature": "degree",
+        "importance": 0.039
+      },
+      {
+        "feature": "org_vote_MuddyWater",
+        "importance": 0.0373
+      },
+      {
+        "feature": "org_vote_Kimsuky",
+        "importance": 0.0364
+      },
+      {
+        "feature": "org_vote_FIN7",
+        "importance": 0.0318
+      }
+    ]
+  },
+  "part7_filtered_overlap": {
+    "dr_threshold": 0.1,
+    "total_l0_iocs": 6182,
+    "original_overlap_accuracy": 0.957,
+    "original_has_overlap": 2997,
+    "filtered_connectivity_rate": 0.5713,
+    "filtered_overlap_rate": 0.324,
+    "filtered_overlap_accuracy": 0.9915,
+    "filtered_overlap_accuracy_all": 0.3213,
+    "filtered_has_overlap": 2003,
+    "accuracy_delta": 0.0345,
+    "filtered_by_type": {
+      "file": {
+        "total": 2691,
+        "has_neighbor": 1481,
+        "has_overlap": 646,
+        "correct": 644,
+        "connectivity": 0.5504,
+        "overlap_rate": 0.2401,
+        "accuracy": 0.9969
+      },
+      "ip": {
+        "total": 950,
+        "has_neighbor": 641,
+        "has_overlap": 498,
+        "correct": 493,
+        "connectivity": 0.6747,
+        "overlap_rate": 0.5242,
+        "accuracy": 0.99
+      },
+      "domain": {
+        "total": 2399,
+        "has_neighbor": 1410,
+        "has_overlap": 859,
+        "correct": 849,
+        "connectivity": 0.5877,
+        "overlap_rate": 0.3581,
+        "accuracy": 0.9884
+      },
+      "email": {
+        "total": 142,
+        "has_neighbor": 0,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.0,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      }
+    },
+    "filtered_by_org": {
+      "APT-C-23": {
+        "total": 252,
+        "has_neighbor": 166,
+        "has_overlap": 62,
+        "correct": 62,
+        "connectivity": 0.6587,
+        "overlap_rate": 0.246,
+        "accuracy": 1.0
+      },
+      "APT-C-36": {
+        "total": 118,
+        "has_neighbor": 94,
+        "has_overlap": 22,
+        "correct": 22,
+        "connectivity": 0.7966,
+        "overlap_rate": 0.1864,
+        "accuracy": 1.0
+      },
+      "APT1": {
+        "total": 81,
+        "has_neighbor": 40,
+        "has_overlap": 4,
+        "correct": 4,
+        "connectivity": 0.4938,
+        "overlap_rate": 0.0494,
+        "accuracy": 1.0
+      },
+      "APT12": {
+        "total": 19,
+        "has_neighbor": 13,
+        "has_overlap": 2,
+        "correct": 2,
+        "connectivity": 0.6842,
+        "overlap_rate": 0.1053,
+        "accuracy": 1.0
+      },
+      "APT16": {
+        "total": 10,
+        "has_neighbor": 8,
+        "has_overlap": 3,
+        "correct": 3,
+        "connectivity": 0.8,
+        "overlap_rate": 0.3,
+        "accuracy": 1.0
+      },
+      "APT17": {
+        "total": 0,
+        "has_neighbor": 0,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.0,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "APT18": {
+        "total": 6,
+        "has_neighbor": 3,
+        "has_overlap": 0,
+        "correct": 0,
+        "connectivity": 0.5,
+        "overlap_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "APT19": {
+        "total": 27,
+        "has_neighbor": 10,
+        "has_overlap": 3,
+        "correct": 3,
+        "connectivity": 0.3704,
+        "overlap_rate": 0.1111,
+        "accuracy": 1.0
+      },
+      "APT28": {
+        "total": 285,
+        "has_neighbor": 185,
+        "has_overlap": 90,
+        "correct": 90,
+        "connectivity": 0.6491,
+        "overlap_rate": 0.3158,
+        "accuracy": 1.0
+      },
+      "APT29": {
+        "total": 739,
+        "has_neighbor": 330,
+        "has_overlap": 229,
+        "correct": 221,
+        "connectivity": 0.4465,
+        "overlap_rate": 0.3099,
+        "accuracy": 0.9651
+      },
+      "APT32": {
+        "total": 293,
+        "has_neighbor": 152,
+        "has_overlap": 71,
+        "correct": 71,
+        "connectivity": 0.5188,
+        "overlap_rate": 0.2423,
+        "accuracy": 1.0
+      },
+      "FIN7": {
+        "total": 365,
+        "has_neighbor": 291,
+        "has_overlap": 79,
+        "correct": 79,
+        "connectivity": 0.7973,
+        "overlap_rate": 0.2164,
+        "accuracy": 1.0
+      },
+      "Gamaredon_Group": {
+        "total": 725,
+        "has_neighbor": 458,
+        "has_overlap": 313,
+        "correct": 312,
+        "connectivity": 0.6317,
+        "overlap_rate": 0.4317,
+        "accuracy": 0.9968
+      },
+      "Kimsuky": {
+        "total": 182,
+        "has_neighbor": 68,
+        "has_overlap": 43,
+        "correct": 43,
+        "connectivity": 0.3736,
+        "overlap_rate": 0.2363,
+        "accuracy": 1.0
+      },
+      "Lazarus_Group": {
+        "total": 434,
+        "has_neighbor": 282,
+        "has_overlap": 95,
+        "correct": 94,
+        "connectivity": 0.6498,
+        "overlap_rate": 0.2189,
+        "accuracy": 0.9895
+      },
+      "Magic_Hound": {
+        "total": 910,
+        "has_neighbor": 344,
+        "has_overlap": 279,
+        "correct": 278,
+        "connectivity": 0.378,
+        "overlap_rate": 0.3066,
+        "accuracy": 0.9964
+      },
+      "MuddyWater": {
+        "total": 256,
+        "has_neighbor": 200,
+        "has_overlap": 83,
+        "correct": 83,
+        "connectivity": 0.7812,
+        "overlap_rate": 0.3242,
+        "accuracy": 1.0
+      },
+      "OilRig": {
+        "total": 193,
+        "has_neighbor": 112,
+        "has_overlap": 51,
+        "correct": 49,
+        "connectivity": 0.5803,
+        "overlap_rate": 0.2642,
+        "accuracy": 0.9608
+      },
+      "Sandworm_Team": {
+        "total": 383,
+        "has_neighbor": 191,
+        "has_overlap": 42,
+        "correct": 39,
+        "connectivity": 0.4987,
+        "overlap_rate": 0.1097,
+        "accuracy": 0.9286
+      },
+      "Turla": {
+        "total": 198,
+        "has_neighbor": 122,
+        "has_overlap": 61,
+        "correct": 59,
+        "connectivity": 0.6162,
+        "overlap_rate": 0.3081,
+        "accuracy": 0.9672
+      },
+      "Wizard_Spider": {
+        "total": 799,
+        "has_neighbor": 534,
+        "has_overlap": 490,
+        "correct": 490,
+        "connectivity": 0.6683,
+        "overlap_rate": 0.6133,
+        "accuracy": 1.0
+      }
+    },
+    "top20_shared_nodes": [
+      {
+        "node_id": "ip_20.99.133.109",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 18,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT16",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_23.216.147.76",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT16",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "akamai",
+        "as_owner": "Akamai International B.V.",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_192.229.211.108",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": null,
+        "as_owner": "Edgecast Inc.",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_20.99.186.246",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_23.216.147.64",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT12",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "akamai",
+        "as_owner": "Akamai International B.V.",
+        "country": "US"
+      },
+      {
+        "node_id": "domain_www.microsoft.com",
+        "type": "domain",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": null,
+        "country": null
+      },
+      {
+        "node_id": "ip_20.99.184.37",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 17,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT16",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_114.114.114.114",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0213,
+        "is_legit_infra": null,
+        "as_owner": "Zenlayer Inc",
+        "country": "CN"
+      },
+      {
+        "node_id": "ip_20.99.185.48",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_204.79.197.203",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT16",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Turla"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "domain_crt.sectigo.com",
+        "type": "domain",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": null,
+        "as_owner": null,
+        "country": null
+      },
+      {
+        "node_id": "domain_microsoft.com",
+        "type": "domain",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": null,
+        "country": null
+      },
+      {
+        "node_id": "domain_sectigo.com",
+        "type": "domain",
+        "layer": "L1",
+        "num_orgs": 16,
+        "orgs": [
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": null,
+        "as_owner": null,
+        "country": null
+      },
+      {
+        "node_id": "ip_218.85.157.99",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 15,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0532,
+        "is_legit_infra": null,
+        "as_owner": "Chinanet",
+        "country": "CN"
+      },
+      {
+        "node_id": "ip_23.216.81.152",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 15,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT18",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "akamai",
+        "as_owner": "Akamai Technologies, Inc.",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_20.99.132.105",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 15,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT12",
+          "APT16",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Magic_Hound",
+          "MuddyWater",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "ip_127.0.0.1",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 14,
+        "orgs": [
+          "APT-C-23",
+          "APT16",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0106,
+        "is_legit_infra": null,
+        "as_owner": null,
+        "country": null
+      },
+      {
+        "node_id": "ip_192.229.221.95",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 14,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT28",
+          "APT29",
+          "APT32",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Lazarus_Group",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": null,
+        "as_owner": null,
+        "country": "US"
+      },
+      {
+        "node_id": "ip_131.107.255.255",
+        "type": "ip",
+        "layer": "L1",
+        "num_orgs": 14,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT16",
+          "APT29",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": "microsoft",
+        "as_owner": "Microsoft Corporation",
+        "country": "US"
+      },
+      {
+        "node_id": "domain_dns.msftncsi.com",
+        "type": "domain",
+        "layer": "L1",
+        "num_orgs": 14,
+        "orgs": [
+          "APT-C-23",
+          "APT-C-36",
+          "APT1",
+          "APT16",
+          "APT29",
+          "FIN7",
+          "Gamaredon_Group",
+          "Kimsuky",
+          "Magic_Hound",
+          "MuddyWater",
+          "OilRig",
+          "Sandworm_Team",
+          "Turla",
+          "Wizard_Spider"
+        ],
+        "detection_ratio": 0.0,
+        "is_legit_infra": null,
+        "as_owner": null,
+        "country": null
+      }
+    ],
+    "top20_legit_infra_count": 12,
+    "top20_low_dr_count": 20,
+    "l1_shared_total": 5297,
+    "l1_shared_low_dr": 4054,
+    "l1_shared_no_dr": 240,
+    "l1_shared_low_dr_ratio": 0.7653,
+    "l1_shared_low_dr_with_unknown_ratio": 0.8106
+  }
+}

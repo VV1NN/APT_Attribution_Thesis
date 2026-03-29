@@ -1,0 +1,590 @@
+{
+  "global_top30": [
+    {
+      "rank": 1,
+      "feature": "file_log_times_submitted",
+      "importance": 0.2580092251300812
+    },
+    {
+      "rank": 2,
+      "feature": "file_log_size",
+      "importance": 0.20376859605312347
+    },
+    {
+      "rank": 3,
+      "feature": "malicious",
+      "importance": 0.15268591046333313
+    },
+    {
+      "rank": 4,
+      "feature": "file_tag_count",
+      "importance": 0.13822339475154877
+    },
+    {
+      "rank": 5,
+      "feature": "undetected",
+      "importance": 0.11663077771663666
+    },
+    {
+      "rank": 6,
+      "feature": "harmless",
+      "importance": 0.11492851376533508
+    },
+    {
+      "rank": 7,
+      "feature": "overlap_vote_Lazarus_Group",
+      "importance": 0.11410894244909286
+    },
+    {
+      "rank": 8,
+      "feature": "overlap_vote_MuddyWater",
+      "importance": 0.1140219047665596
+    },
+    {
+      "rank": 9,
+      "feature": "file_days_since_first_sub",
+      "importance": 0.11296399682760239
+    },
+    {
+      "rank": 10,
+      "feature": "overlap_vote_Sandworm_Team",
+      "importance": 0.10507701337337494
+    },
+    {
+      "rank": 11,
+      "feature": "overlap_vote_APT28",
+      "importance": 0.1025940403342247
+    },
+    {
+      "rank": 12,
+      "feature": "domain_dns_record_count",
+      "importance": 0.09864727407693863
+    },
+    {
+      "rank": 13,
+      "feature": "n2v_25",
+      "importance": 0.09160354733467102
+    },
+    {
+      "rank": 14,
+      "feature": "overlap_vote_APT32",
+      "importance": 0.09130559861660004
+    },
+    {
+      "rank": 15,
+      "feature": "is_file",
+      "importance": 0.08717279881238937
+    },
+    {
+      "rank": 16,
+      "feature": "ea_ratio_depth1",
+      "importance": 0.08602151274681091
+    },
+    {
+      "rank": 17,
+      "feature": "overlap_vote_FIN7",
+      "importance": 0.08429987728595734
+    },
+    {
+      "rank": 18,
+      "feature": "overlap_vote_OilRig",
+      "importance": 0.08145541697740555
+    },
+    {
+      "rank": 19,
+      "feature": "overlap_vote_Magic_Hound",
+      "importance": 0.0804915800690651
+    },
+    {
+      "rank": 20,
+      "feature": "overlap_vote_Turla",
+      "importance": 0.07609663158655167
+    },
+    {
+      "rank": 21,
+      "feature": "overlap_entropy",
+      "importance": 0.0749020054936409
+    },
+    {
+      "rank": 22,
+      "feature": "n2v_24",
+      "importance": 0.07199655473232269
+    },
+    {
+      "rank": 23,
+      "feature": "hop2_log_count",
+      "importance": 0.07185246050357819
+    },
+    {
+      "rank": 24,
+      "feature": "detection_ratio",
+      "importance": 0.0700710266828537
+    },
+    {
+      "rank": 25,
+      "feature": "overlap_vote_APT-C-23",
+      "importance": 0.06798866391181946
+    },
+    {
+      "rank": 26,
+      "feature": "is_domain",
+      "importance": 0.06521129608154297
+    },
+    {
+      "rank": 27,
+      "feature": "domain_tld_2",
+      "importance": 0.06431927531957626
+    },
+    {
+      "rank": 28,
+      "feature": "file_log_unique_sources",
+      "importance": 0.06307358294725418
+    },
+    {
+      "rank": 29,
+      "feature": "overlap_vote_Gamaredon_Group",
+      "importance": 0.06251272559165955
+    },
+    {
+      "rank": 30,
+      "feature": "ea_undet_mean",
+      "importance": 0.06023401394486427
+    }
+  ],
+  "layer_importance": {
+    "L1 (Node Self)": 2.451296329498291,
+    "L2 (Neighborhood)": 0.841580867767334,
+    "L3 (Overlap)": 1.2490310668945312,
+    "L4 (Node2Vec)": 2.4138760566711426
+  },
+  "layer_importance_pct": {
+    "L1 (Node Self)": 35.241120432056924,
+    "L2 (Neighborhood)": 12.09900751590232,
+    "L3 (Overlap)": 17.956725069147303,
+    "L4 (Node2Vec)": 34.70314698289345
+  },
+  "per_class_top5": {
+    "APT-C-23": [
+      [
+        "file_log_times_submitted",
+        1.023803949356079
+      ],
+      [
+        "overlap_vote_APT-C-23",
+        0.8435370922088623
+      ],
+      [
+        "n2v_25",
+        0.3442809581756592
+      ],
+      [
+        "nb_ratio_ip",
+        0.25448670983314514
+      ],
+      [
+        "domain_tld_2",
+        0.21960316598415375
+      ]
+    ],
+    "APT-C-36": [
+      [
+        "file_days_since_first_sub",
+        1.0848618745803833
+      ],
+      [
+        "file_tag_count",
+        1.017232060432434
+      ],
+      [
+        "file_log_times_submitted",
+        0.2917836308479309
+      ],
+      [
+        "n2v_41",
+        0.27019140124320984
+      ],
+      [
+        "overlap_vote_APT-C-36",
+        0.21280521154403687
+      ]
+    ],
+    "APT28": [
+      [
+        "overlap_vote_APT28",
+        1.3194224834442139
+      ],
+      [
+        "undetected",
+        0.2503065764904022
+      ],
+      [
+        "file_days_since_last_sub",
+        0.22168317437171936
+      ],
+      [
+        "overlap_vote_MuddyWater",
+        0.20438869297504425
+      ],
+      [
+        "overlap_vote_Sandworm_Team",
+        0.18916593492031097
+      ]
+    ],
+    "APT29": [
+      [
+        "ea_ratio_depth1",
+        0.8518534302711487
+      ],
+      [
+        "overlap_vote_APT29",
+        0.5557913184165955
+      ],
+      [
+        "file_days_since_first_sub",
+        0.296274334192276
+      ],
+      [
+        "ea_undet_mean",
+        0.2930876910686493
+      ],
+      [
+        "log_degree",
+        0.2656778395175934
+      ]
+    ],
+    "APT32": [
+      [
+        "overlap_vote_APT32",
+        1.0885566473007202
+      ],
+      [
+        "file_tag_count",
+        0.4899660646915436
+      ],
+      [
+        "is_ip",
+        0.27287381887435913
+      ],
+      [
+        "undetected",
+        0.24233593046665192
+      ],
+      [
+        "n2v_5",
+        0.21043138206005096
+      ]
+    ],
+    "FIN7": [
+      [
+        "overlap_vote_FIN7",
+        1.0247180461883545
+      ],
+      [
+        "overlap_vote_MuddyWater",
+        0.3279450237751007
+      ],
+      [
+        "n2v_9",
+        0.22380200028419495
+      ],
+      [
+        "n2v_26",
+        0.19946245849132538
+      ],
+      [
+        "n2v_48",
+        0.18677908182144165
+      ]
+    ],
+    "Gamaredon_Group": [
+      [
+        "overlap_vote_Gamaredon_Group",
+        0.8876320719718933
+      ],
+      [
+        "file_log_times_submitted",
+        0.42063894867897034
+      ],
+      [
+        "file_log_size",
+        0.38377732038497925
+      ],
+      [
+        "hop2_dr_mean",
+        0.3701185882091522
+      ],
+      [
+        "n2v_17",
+        0.2597745656967163
+      ]
+    ],
+    "Kimsuky": [
+      [
+        "ea_ratio_depth0",
+        0.31404706835746765
+      ],
+      [
+        "ea_undet_mean",
+        0.3126756548881531
+      ],
+      [
+        "ea_mal_max",
+        0.3111356496810913
+      ],
+      [
+        "email_is_mainstream",
+        0.30060920119285583
+      ],
+      [
+        "n2v_24",
+        0.22761090099811554
+      ]
+    ],
+    "Lazarus_Group": [
+      [
+        "overlap_vote_Lazarus_Group",
+        1.4528167247772217
+      ],
+      [
+        "file_log_size",
+        0.24073146283626556
+      ],
+      [
+        "log_degree",
+        0.23482458293437958
+      ],
+      [
+        "overlap_distinct_orgs",
+        0.22530145943164825
+      ],
+      [
+        "file_log_times_submitted",
+        0.22456848621368408
+      ]
+    ],
+    "Magic_Hound": [
+      [
+        "overlap_vote_Magic_Hound",
+        0.8607481718063354
+      ],
+      [
+        "is_file",
+        0.5673843026161194
+      ],
+      [
+        "n2v_55",
+        0.3832744061946869
+      ],
+      [
+        "domain_dns_record_count",
+        0.3741249144077301
+      ],
+      [
+        "is_email",
+        0.2596537172794342
+      ]
+    ],
+    "MuddyWater": [
+      [
+        "overlap_vote_MuddyWater",
+        1.0132147073745728
+      ],
+      [
+        "file_log_times_submitted",
+        0.24685969948768616
+      ],
+      [
+        "n2v_41",
+        0.2395642101764679
+      ],
+      [
+        "n2v_24",
+        0.22785787284374237
+      ],
+      [
+        "n2v_36",
+        0.1884540319442749
+      ]
+    ],
+    "OilRig": [
+      [
+        "overlap_vote_OilRig",
+        1.0432008504867554
+      ],
+      [
+        "file_log_size",
+        0.825075626373291
+      ],
+      [
+        "n2v_18",
+        0.29551294445991516
+      ],
+      [
+        "overlap_entropy",
+        0.2902061641216278
+      ],
+      [
+        "n2v_58",
+        0.1942470371723175
+      ]
+    ],
+    "Sandworm_Team": [
+      [
+        "overlap_vote_Sandworm_Team",
+        1.0335314273834229
+      ],
+      [
+        "malicious",
+        0.2266373634338379
+      ],
+      [
+        "harmless",
+        0.2061772495508194
+      ],
+      [
+        "overlap_vote_Turla",
+        0.19640681147575378
+      ],
+      [
+        "n2v_6",
+        0.1654469519853592
+      ]
+    ],
+    "Turla": [
+      [
+        "overlap_vote_Turla",
+        0.8819158673286438
+      ],
+      [
+        "file_log_size",
+        0.4688466489315033
+      ],
+      [
+        "malicious",
+        0.2101239264011383
+      ],
+      [
+        "overlap_vote_Sandworm_Team",
+        0.1739387959241867
+      ],
+      [
+        "hop2_log_count",
+        0.16458332538604736
+      ]
+    ],
+    "Wizard_Spider": [
+      [
+        "file_log_times_submitted",
+        0.7843969464302063
+      ],
+      [
+        "n2v_25",
+        0.4726220965385437
+      ],
+      [
+        "overlap_vote_Wizard_Spider",
+        0.43353354930877686
+      ],
+      [
+        "malicious",
+        0.32980552315711975
+      ],
+      [
+        "n2v_37",
+        0.30852210521698
+      ]
+    ]
+  },
+  "per_class_layer_pct": {
+    "APT-C-23": {
+      "L1 (Node Self)": 33.84837179925931,
+      "L2 (Neighborhood)": 13.827325323938929,
+      "L3 (Overlap)": 18.855524189756746,
+      "L4 (Node2Vec)": 33.46877868704502
+    },
+    "APT-C-36": {
+      "L1 (Node Self)": 57.354787708297216,
+      "L2 (Neighborhood)": 12.948612299431133,
+      "L3 (Overlap)": 5.30769178043956,
+      "L4 (Node2Vec)": 24.388908211832092
+    },
+    "APT28": {
+      "L1 (Node Self)": 32.150224088902284,
+      "L2 (Neighborhood)": 6.0685814374390015,
+      "L3 (Overlap)": 31.903174555361247,
+      "L4 (Node2Vec)": 29.878019918297465
+    },
+    "APT29": {
+      "L1 (Node Self)": 43.375999325685996,
+      "L2 (Neighborhood)": 31.254567081251533,
+      "L3 (Overlap)": 9.820107476637203,
+      "L4 (Node2Vec)": 15.549326116425272
+    },
+    "APT32": {
+      "L1 (Node Self)": 36.03633339047641,
+      "L2 (Neighborhood)": 3.9763895907901254,
+      "L3 (Overlap)": 22.700911576395043,
+      "L4 (Node2Vec)": 37.28636544233842
+    },
+    "FIN7": {
+      "L1 (Node Self)": 30.735309236464296,
+      "L2 (Neighborhood)": 9.010903953355786,
+      "L3 (Overlap)": 23.781734782542326,
+      "L4 (Node2Vec)": 36.47205202763759
+    },
+    "Gamaredon_Group": {
+      "L1 (Node Self)": 29.109847453194387,
+      "L2 (Neighborhood)": 11.727804394662956,
+      "L3 (Overlap)": 14.322583074506506,
+      "L4 (Node2Vec)": 44.83976507763615
+    },
+    "Kimsuky": {
+      "L1 (Node Self)": 35.225102903441815,
+      "L2 (Neighborhood)": 26.06124049665466,
+      "L3 (Overlap)": 2.884576100716205,
+      "L4 (Node2Vec)": 35.82908049918732
+    },
+    "Lazarus_Group": {
+      "L1 (Node Self)": 28.61187464877056,
+      "L2 (Neighborhood)": 12.75475478242521,
+      "L3 (Overlap)": 27.0566268957579,
+      "L4 (Node2Vec)": 31.57674367304633
+    },
+    "Magic_Hound": {
+      "L1 (Node Self)": 40.512105183779,
+      "L2 (Neighborhood)": 9.620742298183057,
+      "L3 (Overlap)": 13.993617148860723,
+      "L4 (Node2Vec)": 35.873535369177226
+    },
+    "MuddyWater": {
+      "L1 (Node Self)": 28.51388841142101,
+      "L2 (Neighborhood)": 8.095235512943365,
+      "L3 (Overlap)": 23.116581602206182,
+      "L4 (Node2Vec)": 40.27429447342944
+    },
+    "OilRig": {
+      "L1 (Node Self)": 31.934988824943783,
+      "L2 (Neighborhood)": 6.662004346972977,
+      "L3 (Overlap)": 23.9536692862636,
+      "L4 (Node2Vec)": 37.44933754181964
+    },
+    "Sandworm_Team": {
+      "L1 (Node Self)": 35.09157800315863,
+      "L2 (Neighborhood)": 7.299192235004291,
+      "L3 (Overlap)": 23.85493726044333,
+      "L4 (Node2Vec)": 33.75429250139375
+    },
+    "Turla": {
+      "L1 (Node Self)": 36.33186650895454,
+      "L2 (Neighborhood)": 9.654749372283492,
+      "L3 (Overlap)": 19.160612485271812,
+      "L4 (Node2Vec)": 34.85277163349016
+    },
+    "Wizard_Spider": {
+      "L1 (Node Self)": 31.797753265428174,
+      "L2 (Neighborhood)": 11.783083534040752,
+      "L3 (Overlap)": 8.774541523441387,
+      "L4 (Node2Vec)": 47.64462167708969
+    }
+  }
+}
