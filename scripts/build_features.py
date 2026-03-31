@@ -528,7 +528,7 @@ def extract_l3(nid, adj, overlap_dict, org_list, exclude_org=None):
 
         overlap_count += 1
 
-        # 加權投票：dr-based weight × IDF degree penalty
+        # 加權投票：dr-based × node-IDF × org-size normalization
         nb_attrs = _node_attrs.get(n, {})
         dr = nb_attrs.get("detection_ratio", 0) or 0
         if dr < 0.1:
@@ -538,13 +538,17 @@ def extract_l3(nid, adj, overlap_dict, org_list, exclude_org=None):
         else:
             w_dr = 1.0
 
-        # IDF: 被越多 org 共用的節點，單次投票權重越低
+        # Node-IDF: 被越多 org 共用的節點，權重越低
         n_orgs = len(overlap_dict.get(n, set()))
-        idf = 1.0 / math.log2(1 + n_orgs)  # 1 org → 1.0, 2 orgs → 0.63, 5 orgs → 0.39, 10 orgs → 0.29
+        idf = 1.0 / math.log2(1 + n_orgs)
 
-        w = w_dr * idf
+        w_base = w_dr * idf
 
+        # Org-size normalization: 大 org 的每一票除以 log(org_size)
+        # 防止 Lazarus (11K nodes) 天生獲得 10x 多於 Kimsuky (1K nodes) 的投票
         for org in orgs:
+            org_size = _org_sizes.get(org, 1)
+            w = w_base / math.log2(1 + org_size)  # Lazarus: /13.5, Kimsuky: /10.1
             votes[org] += w
 
     # Part A: 直接 Overlap (3d)
@@ -575,8 +579,9 @@ def extract_l3(nid, adj, overlap_dict, org_list, exclude_org=None):
     return np.concatenate([[f0, f1, f2, f3, f4, f5, f6], per_org])
 
 
-# 全域引用，供 extract_l3 讀取 detection_ratio
+# 全域引用，供 extract_l3 讀取
 _node_attrs = {}
+_org_sizes = {}  # org -> 該 org 在 overlap_dict 中的節點數
 
 
 def get_l3_names(org_list):
@@ -630,7 +635,7 @@ def extract_l4(nid, adj, n2v_embeddings):
 # ════════════════════════════════════════════════════════════
 
 def main():
-    global _node_attrs
+    global _node_attrs, _org_sizes
 
     nodes, adj, edge_by_node, has_ioc_orgs = load_kg()
     _node_attrs = {nid: nd["attributes"] for nid, nd in nodes.items()}
@@ -644,6 +649,14 @@ def main():
 
     overlap_dict = build_overlap_dict(has_ioc_orgs)
     logger.info(f"Overlap dict: {len(overlap_dict)} L0 IoCs (has_ioc targets only)")
+
+    # 預計算各 org 在 overlap_dict 中的節點數，供 org-size normalization 使用
+    _org_sizes = Counter()
+    for nid, orgs in overlap_dict.items():
+        for org in orgs:
+            _org_sizes[org] += 1
+    logger.info(f"Org sizes: max={_org_sizes.most_common(1)[0] if _org_sizes else 'N/A'}, "
+                f"min={_org_sizes.most_common()[-1] if _org_sizes else 'N/A'}")
 
     n2v_embeddings = load_node2vec()
     logger.info(f"Node2Vec embeddings: {len(n2v_embeddings)} nodes")

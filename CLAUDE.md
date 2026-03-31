@@ -224,10 +224,63 @@ Global cache: files=1,716 / ips=942 / domains=2,274
 - `scripts/eval_allnodes_correct_cv.py` — 正式 CV 評估（ALL-nodes per-fold removal）
 - `scripts/eval_simulated_inference.py` — Simulated inference（移除 test IoC）
 
+### Organization Selection (2026-03-31)
+
+已移除 5 個不堪用組織（APT12/16/17/18/19 — IoC 不足、KG 過小）。
+保留 **16 個有效 org**（考慮移除 APT-C-36，僅 141 cleaned IoCs / 1 report）。
+Transparent_Tribe VT relationships 已完成，KG 建構中斷待恢復（`--skip-query` 續建）。
+
+### TTP Context Extraction Pipeline (2026-03-31, Phase 1 進行中)
+
+**目標：** 從 203 份 CTI 報告提取攻擊語境實體，作為 L5 特徵融入歸因系統。
+
+**NER 模型：** [NER-BERT-CRF-for-CTI](https://github.com/stwater20/NER-BERT-CRF-for-CTI)
+- 架構：BERT-base-cased → Linear → CRF（BIO 標注，13 種實體）
+- Checkpoint：`NER-BERT-CRF-for-CTI/outputs/ner_bert_crf_checkpoint.pt`（433 MB）
+- 採用的 6 種實體：Tool, Way, Exp, Purp, Idus, Area
+- 忽略的 7 種實體：HackOrg（label leakage）, SecTeam, Org, OffAct, SamFile, Features, Time
+
+**Pipeline scripts：**
+```bash
+# 批次 NER 推論（203 份報告）
+uv run python scripts/ttp_extraction/run_ner_on_reports.py
+uv run python scripts/ttp_extraction/run_ner_on_reports.py --org APT28  # 單一組織
+
+# （待開發）實體正規化
+uv run python scripts/ttp_extraction/normalize_entities.py
+
+# （待開發）IoC → Report → TTP 對應
+uv run python scripts/ttp_extraction/build_ioc_ttp_mapping.py
+
+# （待開發）L5 TTP 特徵提取
+uv run python scripts/build_ttp_features.py
+```
+
+**NER 輸出格式：** `scripts/ttp_extraction/{org}/{report_hash}.json`
+```json
+{
+  "report_file": "securelist_sofacy_2017.txt",
+  "org": "APT28",
+  "entities": {"Tool": [...], "Way": [...], "Exp": [...], ...},
+  "entity_counts": {"Tool": 5, "Way": 3, "Exp": 2, ...}
+}
+```
+
+**進度：** APT-C-23（4 份）完成，其餘 199 份待跑（建議用 GPU 加速）。
+
+### Planned: Attack Path Prediction (Phase 3)
+
+歸因完成後，根據被歸因 APT 的歷史 TTP 序列，預測下一步攻擊技術。
+- 將 NER 實體映射到 ATT&CK Kill Chain 14 階段
+- 統計每個 APT 的階段轉移機率（transition model）
+- 擴充 `inference.py`：歸因結果 + 當前攻擊階段 + 下一步預測 + 防禦建議
+
 ### Remaining Work
-- Fetch VT relationships for remaining 154 orgs
-- Build KGs for all remaining orgs after relationships fetched
-- Fix OilRig bad IoC: `192.121.22..46` (double dot — IoC cleaning missed it)
-- URL 節點評估：2,078 個 C2 候選 URL（32.5%）值得新增為獨立節點類型
-- 以更多 org 的 KG 重新訓練，預期 F1 隨 org 數增加而提升
-- Time window 過濾：只採納近 2 年內的 VT Relationships，減少時間雜訊
+- [ ] 完成 203 份報告的 NER 推論（Phase 1A，建議用 GPU）
+- [ ] 實體正規化 + 詞彙表建構（Phase 1C）
+- [ ] IoC-Report-TTP 對應建立（Phase 1D）
+- [ ] L5 TTP 特徵實作 + 消融實驗（Phase 2）
+- [ ] 攻擊路徑預測框架（Phase 3）
+- [ ] Transparent_Tribe KG 續建
+- [ ] Fix OilRig bad IoC: `192.121.22..46`
+- [ ] 完整計畫書：`PLAN_zh.md`

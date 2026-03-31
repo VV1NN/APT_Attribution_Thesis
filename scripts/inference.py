@@ -136,7 +136,7 @@ def query_vt_relationships(ioc_type: str, ioc_value: str) -> dict:
 
     result = {}
     for rel in rels:
-        url = f"{VT_BASE}/{endpoint}/{ioc_value}/{rel}?limit=50"
+        url = f"{VT_BASE}/{endpoint}/{ioc_value}/{rel}?limit=40"
         time.sleep(RATE_LIMIT)
         data = vt_request(url)
         if data is None:

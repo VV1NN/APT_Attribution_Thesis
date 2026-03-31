@@ -68,6 +68,12 @@ def main():
     overlap_dict_full = build_allnodes_overlap_dict(nodes)
     logger.info(f"ALL-nodes overlap dict: {len(overlap_dict_full)} nodes")
 
+    # 設定 org-size normalization 用的全域變數
+    bf._org_sizes = Counter()
+    for nid, orgs in overlap_dict_full.items():
+        for org in orgs:
+            bf._org_sizes[org] += 1
+
     n2v = load_node2vec()
 
     # Collect samples (L0 IoCs only)
