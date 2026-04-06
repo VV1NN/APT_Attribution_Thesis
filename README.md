@@ -1,19 +1,24 @@
 # APT 威脅情資知識圖譜建構與歸因系統
 
-> 碩士論文研究專案 — 自動化建構 APT 組織知識圖譜，基於 VirusTotal 豐富化與多源 IoC 整合，透過四層特徵工程 + XGBoost 實現 APT 歸因。
+> 碩士論文研究專案 — 自動化建構 APT 組織知識圖譜，基於 VirusTotal 豐富化與多源 IoC 整合，並以 **honest evaluation + calibrated abstention** 實現可信歸因。
 
 ## 研究目標
 
 1. 從公開 CTI（Cyber Threat Intelligence）報告中提取 IoC（Indicators of Compromise）
 2. 透過 VirusTotal API 進行兩層式豐富化，建構完整的 APT 知識圖譜
 3. 合併多組織圖譜為統一資料庫，發現跨 APT 共享基礎設施
-4. 基於四層特徵工程（VT Metadata + 鄰域統計 + Overlap Detection + Node2Vec）實現 APT 歸因
+4. 建立不洩漏的歸因流程：report-connected split、fold-aware L5、L4 honest mode
+5. 建立可信決策層：multiclass calibration、selective classification、open-set abstain
 
 ## 主要成果
 
 - **Master KG（21 orgs）**：66,444 nodes / 109,443 edges
-- **歸因模型**：Micro-F1 = **76.4%**, Top-5 = **92.6%**（15 個 major APT, 5,961 L0 IoCs, 5-fold CV）
-- **Simulated Inference**：Micro-F1 = 52.1%–76.4%（下界–上界）
+- **切分防洩漏**：report-connected GroupKFold（92 groups）+ 每 fold leak check
+- **L5 主實驗改為 fold-aware**：legacy global L5 `0.1839/0.2103` → fold-aware weighted L5 `0.1049/0.1571`（micro/macro）
+- **L4 honest mode**：`l4_mode=off`（主文）vs `transductive`（附錄比較），GroupKFold micro 差 `+0.0286`
+- **校準與拒判**：ECE `0.2844 → 0.0462`、Brier `1.0754 → 0.9295`、AURC 改善 `-0.004368`
+- **Open-set（actor holdout）**：AUROC mean `0.7644`，FPR@95TPR mean `0.4456`
+- **False-flag 韌性**：最傷攻擊 `tool_mimicry`；`abstain` 顯著降低誤歸因但有 coverage 代價
 
 ## 資料規模
 
@@ -49,192 +54,180 @@
 - 節點：file=34,005 / domain=19,525 / ip=12,751 / email=142 / apt=21
 - 跨 org 共享節點：4,330 個；獨有節點：62,114 個
 
-## 歸因系統
+## 歸因系統（2026-04 更新）
 
-### 方法架構
+### 方法架構（主線）
 
-```
-未知 IoC → VT Details 查詢 → VT Relationships 展開 → 四層特徵提取 (209d) → XGBoost → Top-K APT 預測
-```
-
-四層特徵各自捕捉不同的歸因信號，最終串接為固定維度的特徵向量 $\mathbf{x} = [\mathbf{x}^{(1)} \| \mathbf{x}^{(2)} \| \mathbf{x}^{(3)} \| \mathbf{x}^{(4)}] \in \mathbb{R}^{209}$：
-
-| Layer | 名稱 | 維度 | 核心問題 | 資料來源 |
-|-------|------|------|---------|---------|
-| L1 | 節點自身特徵 | 88d | IoC 本身的技術屬性像哪個 APT？ | VT Details API |
-| L2 | 鄰域統計 | 35d | 鄰居的行為模式像哪個 APT？ | 圖結構遍歷 |
-| L3 | Overlap Detection | 22d | 鄰居有沒有已知屬於某 APT？ | Master KG 字典查詢 |
-| L4 | Node2Vec | 64d | 在拓撲空間中離哪個 APT 最近？ | 圖嵌入 |
-
----
-
-### Layer 1：節點自身特徵（88 維）
-
-將 VirusTotal Details API 回傳的異構 JSON metadata 轉換為統一數值向量。不同節點類型（file/domain/ip/email）具有不同的屬性欄位，採用**聯集寬表（Union Schema）**方式編碼：每個屬性欄位佔獨立的 feature index，不適用的欄位填 `NaN`，由 XGBoost 的 default direction 機制自動處理。
-
-> 此設計避免了 zero-padding 的語意混淆——在 zero-padding 中，File 的 `log(size)` 和 Domain 的 `registrar` 可能共用同一個 index，導致決策樹混合不同語意的數值進行分裂。
-
-**共用特徵（10 維）**：`detection_ratio`、`malicious`/`suspicious`/`harmless`/`undetected`（偵測引擎統計）、`reputation`（VT 社群評分）、`is_file`/`is_domain`/`is_ip`/`is_email`（類型 one-hot）。
-
-**File 專屬（37 維）**：
-- 檔案屬性：`log1p(size)`、`type_tag`（ordinal encoding）
-- PE 結構（12d）：`section_count`、`avg/max/std_entropy`（偵測加殼行為）、`imphash_frequency`（此 import hash 在 KG 中的出現次數——高頻代表通用工具，低頻代表客製化武器）、`resource_lang`（PE 資源語言，部分 APT 留下所屬國家的語言標記）
-- 時間戳（5d）：`creation_time`、`first_seen_itw`、`first_submission`、`last_submission` 距參考日期的天數，以及 `first_seen` 到 `first_submission` 的時間差
-- 威脅分類（4d）：VT 自動推斷的 `threat_label` 和 `threat_category`（ordinal encoding + 頻率維度）
-- 其他：`signature_verified`（竊取的合法簽章用於規避偵測）、`has_packer`、`bundle_info`
-
-**Domain 專屬（20 維）**：`registrar`、`tld`（不同 APT 偏好不同的廉價 TLD）、`creation_age_days`（C2 域名通常為新註冊）、`cat_malware`/`cat_phishing`/`cat_c2` 分類標籤、DNS 記錄（`has_A`/`has_MX`——C2 域名通常沒有 MX 記錄）、`JARM` TLS 指紋（可識別特定 C2 框架如 Cobalt Strike）。
-
-**IP 專屬（15 維）**：`country`、`ASN`、`as_owner`（不同 APT 的地理偏好——Gamaredon 集中東歐，APT28 分散多國 VPS）、`JARM`、`is_self_signed`（自簽憑證是 C2 伺服器的常見特徵）。
-
-**Email 專屬（6 維）**：`is_protonmail`/`is_tutanota`（隱私信箱，常被 APT 用於匿名通訊）、`is_yandex`/`is_mailru`（俄語系）、`is_mainstream`（Gmail/Outlook，用於釣魚）。
-
----
-
-### Layer 2：鄰域統計特徵（35 維）
-
-透過圖結構遍歷（1-hop + 2-hop），計算 IoC 鄰居的統計量，捕捉攻擊行為模式：
-
-**A. 邊類型分布（12 維）**：`log1p(count)` 各邊類型數量。大量 `contacted_domain` 暗示 C2 通訊，大量 `dropped_file` 暗示多階段 payload。
-
-**B. 1-hop 鄰居統計（10 維）**：
-- 鄰居 `detection_ratio` 的 mean/max/std — 鄰居群的整體惡意程度
-- 鄰居類型比例（file/domain/ip/email 各佔多少）
-- **IP 國家 Shannon entropy** — Gamaredon（東歐集中，entropy 低）vs APT28（多國 VPS，entropy 高）
-- ASN entropy、TLD entropy
-
-**C. 2-hop 統計（5 維）**：2-hop 可達節點數（攻擊基礎設施的規模）、2-hop 偵測率、節點類型分布。截斷上限 500 個鄰居，避免超級節點爆炸。
-
-**D. 邊屬性統計（8 維）**：邊上的 `malicious` count mean/max、`undetected` mean、resolution 數量、dropped file type 多樣性、L0/L1 depth 比例。
-
----
-
-### Layer 3：Overlap Detection（7 + K 維）
-
-**核心概念**：將未知 IoC 的每個 VT 鄰居拿去 Master KG 的 overlap 字典中查詢——如果某個鄰居已知屬於 APT28，那未知 IoC 大概率也屬於 APT28。
-
-```
-未知 IoC → VT Relationships → 鄰居 [ip_X, domain_Y, file_Z]
-                                  ↓         ↓          ↓
-                              查 overlap_dict（66,423 個帶 org 標記的節點）
-                                  ↓         ↓          ↓
-                              {APT28}   {APT28,   {APT28}
-                                         Turla}
-                                  ↓
-                          加權投票 → APT28: 2.8, Turla: 0.6
-                                  ↓
-                          per-org 正規化 → [... APT28=0.82, Turla=0.18 ...]
+```text
+未知 IoC
+  → VT Details + Relationships
+  → L1/L2/L3 + (可選 L4) + Fold-aware L5(Tool/Way/Exp)
+  → XGBoost
+  → Calibration (temperature scaling)
+  → Decision Layer: PREDICT / ABSTAIN
 ```
 
-**IDF 加權投票**：結合 detection_ratio 和節點共享度：
+目前主線重點是 **honest evaluation + trustworthy attribution**：
+- 切分採 `report-connected GroupKFold`（避免 report/source leakage）
+- L5 採 fold-aware train-only TF-IDF（避免 transductive leakage）
+- L4 以 `--l4-mode off` 作主結果，`transductive` 僅做比較
+- 推論輸出 calibrated confidence + abstain reason（可拒判）
 
+### 特徵層總覽
+
+| Layer | 名稱 | 維度 | 使用建議 | 說明 |
+|---|---|---:|---|---|
+| L1 | VT metadata | 88d | 主線保留 | 節點自身屬性 |
+| L2 | 鄰域統計 | 35d | 主線保留 | 1-hop/2-hop 統計 |
+| L3 | overlap 投票 | 22d | 主線保留 | graph overlap evidence |
+| L4 | Node2Vec | 64d | 主結果關閉 | `off` 避免 transductive leakage |
+| L5 | TTP 特徵 | fold-dependent | 主線保留 | Tool/Way/Exp TF-IDF + source/age weighting |
+
+### L5（fold-aware + weighted）
+
+L5 主實驗不再使用全域 `features_l5_ttp_matrix.npz` 作唯一設定，而是每 fold：
+1. 只用 train 節點 fit `TfidfVectorizer`（Tool/Way/Exp）
+2. transform train/test
+3. 套用權重：
+
+```text
+weighted_tfidf = tfidf * source_reliability_score * exp(-lambda * age_days)
 ```
-w(n) = w_dr(n) × IDF(n)
 
-w_dr: dr ≥ 0.3 → 1.0 / 0.1 ≤ dr < 0.3 → 0.5 / dr < 0.1 → 0.1
-IDF:  1 / log₂(1 + n_orgs)  — 被越多 org 共用的節點，投票權重越低
-```
+4. 加入 consistency features：
+- `source_disagreement_rate`
+- `ttp_conflict_entropy`
+- `num_independent_sources`
 
-**輸出特徵（7 + K 維）**：
-- 直接 overlap（3d）：此 IoC 本身被幾個 APT 引用
-- 鄰居 overlap 統計（4d）：`overlap_ratio`（有多少鄰居被查到）、`distinct_orgs`（涉及幾個 APT）、`dominant_ratio`（最多票 APT 佔比）、`entropy`（分布的確定性）
-- Per-org 正規化投票（K 維）：每個候選 APT 的正規化票數，K=15
+同時保留 legacy global L5 做基線比較。
 
-**Leakage 處理**：5-fold CV 中，每個 fold 的 test IoC 從 overlap_dict 移除（防止自投票），但不做 exclude_org（保留 same-org 投票，與真實推論一致）。
+### L4（honest mode）
 
----
-
-### Layer 4：Node2Vec 圖嵌入（64 維）
-
-在 Master KG 上訓練 Node2Vec，學習每個節點在拓撲空間中的 64 維嵌入。同一 APT 的 IoC 因共享 C2 基礎設施而緊密相連，在嵌入空間中自然聚集。
-
-**配置**：dimensions=64, walk_length=30, num_walks=20, p=1.0, q=0.5（偏 BFS，捕捉社群結構），移除 apt 節點後轉無向圖訓練。
-
-**推論時新節點處理**：未知 IoC 無預訓練嵌入 → 取 detection_ratio 最高的 overlap 鄰居的 embedding（避免跨社群平均的 mean fallacy）；無 overlap → 零向量。
-
----
-
-### XGBoost 分類器
-
-**選擇理由**：(1) 原生處理 NaN（聯集寬表 ~50% 欄位為 NaN），(2) 適合中小規模表格資料（5,961 樣本 × 209 維），(3) 搭配 SHAP 提供可解釋的歸因證據。
-
-**超參數**：`n_estimators=500, max_depth=8, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, min_child_weight=3`，balanced `sample_weight` 處理類別不平衡。
-
-**信心度門檻**：模型輸出的最高機率低於門檻時判定為 Unknown（拒絕歸因）。推薦門檻 0.3：覆蓋率 81.1%，Micro-F1 95.7%。此機制解決了 OilRig 的 false positive 問題（precision 從 18% 提升到 89%）。
-
----
-
-### 實驗結果
-
-評估方式：ALL-nodes overlap dict + per-fold test IoC 移除 + 不做 exclude_org（最接近真實推論的 CV 設定）。
-訓練：5,961 筆 L0 IoC / 15 APT orgs / XGBoost / 5-fold Stratified CV。
-
-| 指標 | 無門檻 | 信心度門檻 0.3 |
-|------|--------|--------------|
-| Coverage | 100% | 81.1% |
-| Micro-F1 | **80.0%** | **95.7%** |
-| Macro-F1 | 81.8% | 95.2% |
-| Top-3 | 90.1% | — |
-| Top-5 | 93.3% | — |
-
-信心度門檻曲線（分析師可依需求調整）：
-
-| 門檻 | Coverage | Micro-F1 | 適用場景 |
-|------|----------|----------|---------|
-| 0.15 | 90.3% | 87.2% | 寬鬆：盡量不遺漏 |
-| 0.30 | 81.1% | 95.7% | 推薦：精準與覆蓋的平衡 |
-| 0.50 | 78.8% | 97.7% | 保守：高信心才歸因 |
-| 0.70 | 76.7% | 99.0% | 鑑識等級 |
-
-### 對未知 IoC 歸因
+`eval_groupkfold_ablation.py` 與 `eval_groupkfold_ttp.py` 均支援：
 
 ```bash
-# 首次使用：訓練模型（只需跑一次）
-uv run python scripts/build_vocabularies.py
-uv run python scripts/train_node2vec.py
-uv run python scripts/train_and_save_model.py
+--l4-mode off           # 主結果（推薦）
+--l4-mode transductive  # 舊做法（附錄/比較）
+```
 
-# 歸因單一 IoC（需 VT API Key）
+在 `off` 模式下，不納入 L4 欄位。
+
+### Decision Layer：校準 + 可拒判
+
+推論流程新增：
+- `scripts/model/calibrator.pkl`（temperature scaling）
+- calibrated confidence
+- `decision: PREDICT / ABSTAIN`
+- `abstain_reason`：
+  - `low_confidence`
+  - `high_conflict`
+  - `open_set`
+
+`inference.py` 目前會同時輸出 raw 與 calibrated 機率（含 Top-K）。
+
+---
+
+### 最新核心結果（2026-04）
+
+#### 1) Leakage 修補結果
+
+- report-connected groups：**92 groups**
+- `eval_groupkfold_ablation.py` / `eval_groupkfold_ttp.py` folds 全部 leak check PASS
+
+#### 2) L5 legacy vs fold-aware
+
+| 設定 | micro-F1 | macro-F1 |
+|---|---:|---:|
+| Legacy global L5 | 0.1839 | 0.2103 |
+| Fold-aware weighted L5 | 0.1049 | 0.1571 |
+
+> 分數下降代表 leakage 去除後更貼近真實難度，主文應使用 fold-aware 結果。
+
+#### 3) L4 off vs transductive（GroupKFold, L1+L2+L3+L4）
+
+| 模式 | micro-F1 | macro-F1 |
+|---|---:|---:|
+| `l4_mode=off` | 0.1219 | 0.0982 |
+| `l4_mode=transductive` | 0.1505 | 0.1173 |
+| 差距 | +0.0286 | +0.0191 |
+
+#### 4) Calibration / Selective / Open-set
+
+Calibration（temperature scaling）：
+- ECE：`0.2844 -> 0.0462`（`-0.2381`）
+- Brier：`1.0754 -> 0.9295`（`-0.1459`）
+
+Selective classification：
+- AURC(raw) = `0.771402`
+- AURC(calibrated) = `0.767033`
+- ΔAURC = `-0.004368`
+
+Open-set（actor holdout）：
+- AUROC mean = `0.7644 ± 0.0382`
+- FPR@95TPR mean = `0.4456 ± 0.0518`
+- Unknown 誤歸因率 mean = `0.7775 ± 0.0998`
+
+#### 5) False-flag robustness
+
+攻擊：`tool_mimicry`, `way_mimicry`, `source_poisoning`（`r=0.1,0.3,0.5`）
+
+關鍵結論：
+- 最傷攻擊：`tool_mimicry`
+- Utility 排名（avg attacked micro-F1）：`baseline_raw > weighted_l5 ≈ weighted_l5_calibrated > weighted_l5_calibrated_abstain`
+- Safety 排名（avg misattribution，越低越好）：`weighted_l5_calibrated_abstain` 最佳
+- Risk-aware（限制 abstain<=0.4）：`baseline_raw > weighted_l5 ≈ weighted_l5_calibrated`
+
+---
+
+### 對未知 IoC 歸因（最新版）
+
+```bash
+# 先完成模型與校準（建議）
+uv run python scripts/train_and_save_model.py
+uv run python scripts/model/calibrate_probs.py
+
+# 單筆推論（需 VT_API_KEY）
 uv run python scripts/inference.py d54fa56f1a0b1b63c4e8fa1cc170...
 
-# 歸因結果範例：
-#   #1  APT28        72.3%  ████████████████████ ←
-#   #2  Sandworm      8.1%  ██
-#   #3  APT29         5.2%  █
-#   ✅ 歸因結果：APT28（信心度 72.3% ≥ 門檻 30%）
-#   Overlap: 75% 鄰居匹配, 2 候選 org
-
-# 批次歸因
+# 批次推論
 uv run python scripts/inference.py --file suspicious_iocs.txt
 
 # JSON 輸出（供自動化串接）
 uv run python scripts/inference.py --json 185.45.67.89
 ```
 
-### 訓練 Pipeline（重新訓練或更新模型）
+輸出重點欄位：
+- `decision`：`PREDICT` / `ABSTAIN`
+- `abstain_reason`：`low_confidence` / `high_conflict` / `open_set`
+- `confidence_raw` / `confidence_calibrated`
+
+### 評估 Pipeline（建議順序）
 
 ```bash
-# Step 1: 建立 vocabulary
-uv run python scripts/build_vocabularies.py
+# 1) Leakage-aware split / ablation
+uv run python scripts/eval_groupkfold_ablation.py --l4-mode off
+uv run python scripts/eval_groupkfold_ablation.py --l4-mode transductive
 
-# Step 2: 訓練 Node2Vec 嵌入
-uv run python scripts/train_node2vec.py
+# 2) L5 fold-aware TTP
+uv run python scripts/ttp_extraction/build_source_quality_table.py
+uv run python scripts/eval_groupkfold_ttp.py --l4-mode off
 
-# Step 3: 提取四層特徵 + 存檔
-uv run python scripts/build_features.py
+# 3) Calibration + selective + open-set
+uv run python scripts/model/calibrate_probs.py
+uv run python scripts/evaluate_selective.py
+uv run python scripts/evaluate_openset.py
 
-# Step 4: 消融實驗（4 exp × 3 clf × 5-fold = 60 runs）
-uv run python scripts/train_classifier.py
-
-# Step 5: 存出最終模型
-uv run python scripts/train_and_save_model.py
-
-# Step 6: SHAP 可解釋性分析
-uv run python scripts/run_shap_analysis.py
-
-# Step 7: 信心度門檻分析
-uv run python scripts/eval_confidence_threshold.py
+# 4) False-flag robustness
+uv run python scripts/eval_false_flag.py
 ```
+
+主要結果檔：
+- `scripts/results/eval_groupkfold_ablation.json`
+- `scripts/results/eval_groupkfold_ttp.json`
+- `scripts/model/calibration_metrics.json`
+- `scripts/results/evaluate_selective.json`
+- `scripts/results/evaluate_openset.json`
+- `scripts/results/eval_false_flag.json`
 
 ---
 
@@ -331,8 +324,8 @@ uv run python scripts/merge_knowledge_graphs.py
                            ▼
             ┌──────────────────────────────┐
             │  ML Attribution              │
-            │  四層特徵 + XGBoost          │
-            │  Micro-F1 = 76.4%           │
+            │  Honest Split + Fold-aware L5│
+            │  Calibration + Abstain       │
             └──────────────────────────────┘
 ```
 
@@ -679,7 +672,12 @@ WHERE e.org = 'APT18' AND e.relationship = 'contacted_ip';
 ### 5. 驗證
 
 ```bash
-uv run python scripts/run_validation.py
+uv run python scripts/eval_groupkfold_ablation.py --l4-mode off
+uv run python scripts/eval_groupkfold_ttp.py --l4-mode off
+uv run python scripts/model/calibrate_probs.py
+uv run python scripts/evaluate_selective.py
+uv run python scripts/evaluate_openset.py
+uv run python scripts/eval_false_flag.py
 ```
 
 ## 目錄結構
@@ -695,36 +693,55 @@ uv run python scripts/run_validation.py
 │   │
 │   │  # ── 歸因系統：訓練 ──
 │   ├── build_vocabularies.py             # Vocabulary 預建構
-│   ├── build_features.py                 # 四層特徵提取（L1+L2+L3+L4, 209d）
+│   ├── build_features.py                 # L1+L2+L3+L4 特徵提取（209d）
 │   ├── train_node2vec.py                 # Node2Vec 嵌入訓練（64d）
 │   ├── train_classifier.py               # XGBoost/RF/MLP 消融實驗
 │   ├── train_and_save_model.py           # 訓練最終模型並存檔
+│   ├── split_utils.py                    # report-connected split + leak check
 │   │
 │   │  # ── 歸因系統：推論 ──
-│   ├── inference.py                      # 單筆/批次 IoC 歸因（VT API → 特徵 → Top-K）
+│   ├── inference.py                      # 單筆/批次 IoC 歸因（calibrated + abstain）
 │   │
 │   │  # ── 歸因系統：評估 ──
-│   ├── run_shap_analysis.py              # SHAP 特徵重要性分析
-│   ├── eval_confidence_threshold.py      # 信心度門檻分析
-│   ├── eval_simulated_inference.py       # Simulated inference 評估
-│   ├── eval_correct_cv.py               # Per-fold removal CV（L0-only dict）
-│   ├── eval_allnodes_correct_cv.py      # Per-fold removal CV（ALL-nodes dict）
+│   ├── eval_groupkfold_ablation.py       # L1-L4 消融（含 --l4-mode）
+│   ├── eval_groupkfold_ttp.py            # L5 fold-aware/legacy 比較（含 --l4-mode）
+│   ├── evaluate_selective.py             # coverage-risk curve + AURC
+│   ├── evaluate_openset.py               # actor holdout open-set 評估
+│   ├── eval_false_flag.py                # 偽旗攻擊韌性評估
+│   ├── eval_multisignal_fusion.py        # 多信號融合評估
+│   ├── eval_ttp_tiebreak.py              # TTP tie-breaking 評估
+│   ├── eval_infra_discovery.py           # 歸因後基礎設施探索評估
+│   ├── eval_edge_type_analysis.py        # edge type 歸因力分析
+│   ├── eval_noise_filter_sweep.py        # noise filter / confidence 分析
+│   ├── eval_overlap_by_report.py         # overlap report-level 分析
 │   │
-│   │  # ── 產出檔案 ──
+│   │  # ── TTP Pipeline ──
+│   ├── ttp_extraction/build_ioc_ttp_mapping.py
+│   ├── ttp_extraction/build_source_quality_table.py
+│   ├── build_ttp_features.py
+│   │
+│   │  # ── 模型與校準輸出 ──
 │   ├── model/                            # 訓練好的模型
 │   │   ├── xgboost_model.json           # XGBoost 模型
 │   │   ├── imputer.pkl                  # SimpleImputer
 │   │   ├── label_encoder.pkl            # LabelEncoder（15 orgs）
-│   │   └── config.json                  # org_list, feature_names, threshold
+│   │   ├── config.json                  # org_list, feature_names, threshold
+│   │   ├── calibrator.pkl               # temperature scaling calibrator
+│   │   ├── calibration_metrics.json     # ECE/Brier 前後比較
+│   │   └── calibration_data.npz         # selective/open-set 評估資料
 │   ├── features/                         # 特徵矩陣
 │   │   ├── features_all.npz             # 全四層特徵（5961×209）
 │   │   ├── node2vec_embeddings.npz      # Node2Vec 嵌入（64736×64）
 │   │   └── feature_names.json           # 特徵名稱與 org 列表
 │   ├── results/                          # 實驗結果
-│   │   ├── results_ablation.json        # 消融實驗（4 exp × 3 clf）
-│   │   ├── shap_analysis.json           # SHAP 全域/per-class 分析
-│   │   ├── confidence_threshold.json    # 信心度門檻曲線
-│   │   └── allnodes_correct_cv.json     # 正式評估結果
+│   │   ├── eval_groupkfold_ablation.json
+│   │   ├── eval_groupkfold_ttp.json
+│   │   ├── evaluate_selective.json
+│   │   ├── evaluate_openset.json
+│   │   ├── eval_false_flag.json
+│   │   ├── eval_multisignal_fusion.json
+│   │   ├── eval_ttp_tiebreak.json
+│   │   └── eval_infra_discovery.json
 │   │
 │   ├── batch_visualize.py                # 批次產出 KG 視覺化 PNG
 │   └── fetch_vt_metadata.py              # （舊版，已被 build_knowledge_graph.py 取代）
@@ -745,8 +762,7 @@ uv run python scripts/run_validation.py
 │       └── merged_kg.db                 # SQLite（nodes, edges, node_orgs）
 │
 ├── _碩士論文__黃廷翰_/                    # 論文 LaTeX 文件
-├── 文獻/                                 # 參考文獻
-└── archive/                              # 舊版程式碼
+└── 文獻/                                 # 參考文獻
 ```
 
 ## 核心依賴

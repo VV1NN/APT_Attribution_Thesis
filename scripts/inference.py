@@ -45,6 +45,7 @@ MODEL_DIR = Path("scripts/model")
 KG_JSON = Path("knowledge_graphs/master/merged_kg.json")
 VOCAB_PATH = Path("scripts/vocabularies.json")
 N2V_PATH = Path("scripts/features/node2vec_embeddings.npz")
+CALIBRATOR_PATH = MODEL_DIR / "calibrator.pkl"
 
 
 # ════════════════════════════════════════════════════════════
@@ -203,7 +204,42 @@ class APTInferenceEngine:
             self.le = pickle.load(f)
         self.org_list = self.config["org_list"]
         self.threshold = self.config["confidence_threshold"]
-        logger.info(f"  Model: {self.config['n_total']}d, {len(self.org_list)} orgs, threshold={self.threshold}")
+        self.calibrator = {
+            "method": "identity",
+            "temperature": 1.0,
+            "low_confidence_threshold": float(self.threshold),
+            "open_set_conf_threshold": float(max(self.threshold + 0.12, 0.42)),
+            "conflict_margin_threshold": 0.08,
+        }
+        if CALIBRATOR_PATH.exists():
+            with open(CALIBRATOR_PATH, "rb") as f:
+                loaded = pickle.load(f)
+            if isinstance(loaded, dict):
+                self.calibrator.update(loaded)
+
+        self.low_confidence_threshold = float(self.calibrator.get("low_confidence_threshold", self.threshold))
+        self.open_set_conf_threshold = float(
+            self.calibrator.get("open_set_conf_threshold", max(self.threshold + 0.12, 0.42))
+        )
+        self.conflict_margin_threshold = float(self.calibrator.get("conflict_margin_threshold", 0.08))
+        logger.info(
+            f"  Model: {self.config['n_total']}d, {len(self.org_list)} orgs, "
+            f"threshold={self.threshold}, calibrator={self.calibrator.get('method', 'identity')}"
+        )
+
+    @staticmethod
+    def _softmax(v):
+        z = v - np.max(v)
+        ez = np.exp(z)
+        return ez / max(float(np.sum(ez)), 1e-12)
+
+    def _calibrate_proba(self, proba):
+        method = str(self.calibrator.get("method", "identity"))
+        if method != "temperature_scaling":
+            return proba.astype(np.float32)
+        t = max(float(self.calibrator.get("temperature", 1.0)), 1e-6)
+        logits = np.log(np.clip(proba.astype(np.float64), 1e-12, 1.0))
+        return self._softmax(logits / t).astype(np.float32)
 
     def _load_kg(self):
         logger.info("  Loading Master KG (for overlap dict + adjacency)...")
@@ -323,27 +359,61 @@ class APTInferenceEngine:
         x_imp = self.imputer.transform(x)
 
         # Step 5: 預測
-        proba = self.clf.predict_proba(x_imp)[0]
-        top_indices = np.argsort(proba)[::-1][:top_k]
+        proba_raw = self.clf.predict_proba(x_imp)[0]
+        proba_cal = self._calibrate_proba(proba_raw)
+        top_indices = np.argsort(proba_cal)[::-1][:top_k]
 
         predictions = []
         for idx in top_indices:
             org = self.le.classes_[idx]
-            prob = float(proba[idx])
-            predictions.append({"org": org, "probability": prob})
+            prob_cal = float(proba_cal[idx])
+            prob_raw = float(proba_raw[idx])
+            predictions.append(
+                {"org": org, "probability": prob_cal, "probability_raw": prob_raw}
+            )
 
-        confidence = float(proba[top_indices[0]])
-        attributed = confidence >= self.threshold
+        confidence_raw = float(proba_raw[top_indices[0]])
+        confidence_cal = float(proba_cal[top_indices[0]])
+        margin = float(proba_cal[top_indices[0]] - proba_cal[top_indices[1]]) if len(top_indices) > 1 else confidence_cal
 
-        result["status"] = "attributed" if attributed else "unknown"
-        result["confidence"] = confidence
-        result["threshold"] = self.threshold
-        result["top_k"] = predictions
-        result["overlap_stats"] = {
+        overlap_stats = {
             "overlap_ratio": float(l3[3]) if len(l3) > 3 else 0.0,
             "distinct_orgs": int(l3[4]) if len(l3) > 4 else 0,
             "dominant_ratio": float(l3[5]) if len(l3) > 5 else 0.0,
         }
+
+        abstain_reason = None
+        # High conflict: small class margin OR KG overlap suggests fragmented attribution.
+        if margin < self.conflict_margin_threshold or (
+            overlap_stats["distinct_orgs"] >= 3 and overlap_stats["dominant_ratio"] < 0.40
+        ):
+            abstain_reason = "high_conflict"
+        # Open-set suspicion: low confidence with weak KG overlap.
+        elif confidence_cal < self.open_set_conf_threshold and overlap_stats["overlap_ratio"] < 0.05:
+            abstain_reason = "open_set"
+        # Generic confidence fallback.
+        elif confidence_cal < self.low_confidence_threshold:
+            abstain_reason = "low_confidence"
+
+        decision = "ABSTAIN" if abstain_reason else "PREDICT"
+        attributed = decision == "PREDICT"
+
+        result["status"] = "attributed" if attributed else "unknown"
+        result["decision"] = decision
+        result["abstain_reason"] = abstain_reason
+        result["confidence"] = confidence_cal
+        result["confidence_raw"] = confidence_raw
+        result["confidence_calibrated"] = confidence_cal
+        result["confidence_margin"] = margin
+        result["open_set_score"] = float(1.0 - confidence_cal)
+        result["threshold"] = self.low_confidence_threshold
+        result["thresholds"] = {
+            "low_confidence": self.low_confidence_threshold,
+            "open_set": self.open_set_conf_threshold,
+            "conflict_margin": self.conflict_margin_threshold,
+        }
+        result["top_k"] = predictions
+        result["overlap_stats"] = overlap_stats
 
         # 還原臨時修改
         self.adj[node_id] = orig_adj
@@ -481,13 +551,21 @@ def print_result(result: dict):
         print(f"  #{i}  {pred['org']:<22} {prob:>6.1%}  {bar}{marker}")
 
     print()
-    conf = result.get("confidence", 0)
+    conf = result.get("confidence_calibrated", result.get("confidence", 0))
+    conf_raw = result.get("confidence_raw", conf)
     thr = result.get("threshold", 0.3)
 
-    if result["status"] == "attributed":
-        print(f"✅ 歸因結果：{result['top_k'][0]['org']}（信心度 {conf:.1%} ≥ 門檻 {thr:.0%}）")
+    if result.get("decision") == "PREDICT":
+        print(
+            f"✅ 歸因結果：{result['top_k'][0]['org']}（calibrated {conf:.1%}, "
+            f"raw {conf_raw:.1%}, 門檻 {thr:.0%}）"
+        )
     else:
-        print(f"⚠️ 信心度不足（{conf:.1%} < 門檻 {thr:.0%}），判定為 Unknown")
+        reason = result.get("abstain_reason", "low_confidence")
+        print(
+            f"⚠️ 拒判（{reason}）：calibrated {conf:.1%}, raw {conf_raw:.1%}, "
+            f"門檻 {thr:.0%}"
+        )
 
     # Overlap stats
     ov = result.get("overlap_stats", {})

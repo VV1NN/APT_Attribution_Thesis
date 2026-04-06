@@ -1,0 +1,124 @@
+flowchart TB
+    %% Thesis system architecture for threat infrastructure prediction
+
+    subgraph A["A. Data Sources"]
+        A1["CTI reports<br/>public threat reports / PDFs / blogs"]
+        A2["IoC extraction results<br/>file / domain / IP / email"]
+        A3["VirusTotal Details API<br/>metadata enrichment"]
+        A4["VirusTotal Relationships API<br/>11 relation types"]
+        A5["Optional semantic source<br/>NER-based TTP entities"]
+    end
+
+    subgraph B["B. Data Preparation"]
+        B1["IoC cleaning and normalization<br/>defang restore / hash merge / URL-IP folding / blacklist filtering / deduplication"]
+        B2["Per-org VT enrichment<br/>L0 metadata + L1 neighbor discovery"]
+        B3["Per-org knowledge graphs<br/>APT root + has_ioc + VT relation edges"]
+        B4["Master KG merge<br/>node merge / edge union / org mapping"]
+        B5["Master storage<br/>merged_kg.json + merged_kg.db"]
+    end
+
+    subgraph C["C. Heterogeneous Threat Infrastructure Graph"]
+        C1["Node types<br/>apt / file / domain / ip / email"]
+        C2["Relation types<br/>has_ioc, resolves_to, contacted_ip, contacted_domain,<br/>contacted_url, dropped_file, bundled_file, execution_parent,<br/>communicating_file, referrer_file, has_subdomain"]
+        C3["Node attributes<br/>VT metadata / depth / org membership / optional TTP features"]
+        C4["Edge attributes<br/>resolution_date / last_analysis_date / analysis stats / source reports"]
+    end
+
+    subgraph D["D. Split Builder and Evaluation Protocols"]
+        D1["Protocol A<br/>random edge split<br/>80 / 10 / 10"]
+        D2["Protocol B<br/>temporal split<br/>train <= 2024 / valid = 2025 / test >= 2026"]
+        D3["Protocol B variants<br/>B-Pragmatic / B-Strict / B-DNS"]
+        D4["Transductive vs Inductive partition<br/>seen-node vs unseen-node temporal prediction"]
+        D5["Protocol C<br/>report-group split<br/>incident-conditioned evaluation"]
+    end
+
+    subgraph E["E. Representation and Prediction Engine"]
+        E1["Type-constrained candidate generator<br/>relation-specific tail node space"]
+        E2["Baselines<br/>random / degree / common-neighbor / relation frequency"]
+        E3["KG embedding models<br/>TransE / DistMult / ComplEx"]
+        E4["Heterogeneous graph encoder<br/>R-GCN or feature-aware message passing"]
+        E5["Split-aware feature construction<br/>train-only vocabularies / train-only statistics / optional temporal encoding"]
+        E6["Link scoring head<br/>score(h, r, t)"]
+        E7["Training strategy<br/>type-constrained negative sampling + filtered ranking"]
+    end
+
+    subgraph F["F. Tasks and Outputs"]
+        F1["Task 1: temporal heterogeneous link prediction<br/>predict missing infrastructure edges"]
+        F2["Task 2: incident-conditioned IoC expansion<br/>given seed IoCs, recover related L1 infrastructure"]
+        F3["Task 3: prediction-driven attribution<br/>predicted neighbors -> org overlap voting"]
+        F4["Outputs<br/>ranked candidate edges / expanded infrastructure set / attribution evidence chain"]
+    end
+
+    subgraph G["G. Metrics and Analysis"]
+        G1["Link prediction metrics<br/>MRR / Hits@1 / Hits@10<br/>per-relation + micro / macro"]
+        G2["IoC expansion metrics<br/>Recall@K / Precision@K / NDCG@K"]
+        G3["Attribution metrics<br/>coverage / deterministic accuracy / tie rate / AP@Coverage"]
+        G4["Analysis layer<br/>temporal drift / relation ablation / per-org behavior / case studies"]
+    end
+
+    A1 --> A2
+    A2 --> B1
+    A3 --> B2
+    A4 --> B2
+    A5 --> E5
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> B5
+
+    B5 --> C1
+    B5 --> C2
+    B5 --> C3
+    B5 --> C4
+
+    B5 --> D1
+    B5 --> D2
+    D2 --> D3
+    D2 --> D4
+    B5 --> D5
+
+    C1 --> E5
+    C2 --> E1
+    C3 --> E5
+    C4 --> E5
+    D1 --> E2
+    D1 --> E3
+    D2 --> E3
+    D2 --> E4
+    D3 --> E4
+    D4 --> G4
+    D5 --> F2
+    D5 --> F3
+
+    E5 --> E4
+    E1 --> E6
+    E2 --> E6
+    E3 --> E6
+    E4 --> E6
+    E7 --> E6
+
+    E6 --> F1
+    E6 --> F2
+    F2 --> F3
+    F1 --> F4
+    F2 --> F4
+    F3 --> F4
+
+    F1 --> G1
+    F2 --> G2
+    F3 --> G3
+    F4 --> G4
+
+    classDef source fill:#e8f1fb,stroke:#5b8bd8,color:#1d2a44;
+    classDef prep fill:#eaf7ee,stroke:#5ca06a,color:#15331d;
+    classDef kgblock fill:#fff5e6,stroke:#d49b38,color:#4a2d00;
+    classDef split fill:#f9ebf2,stroke:#c15a88,color:#4a1830;
+    classDef model fill:#eef0ff,stroke:#6b74d6,color:#20275c;
+    classDef task fill:#f4f4f4,stroke:#666,color:#222;
+
+    class A1,A2,A3,A4,A5 source;
+    class B1,B2,B3,B4,B5 prep;
+    class C1,C2,C3,C4 kgblock;
+    class D1,D2,D3,D4,D5 split;
+    class E1,E2,E3,E4,E5,E6,E7 model;
+    class F1,F2,F3,F4,G1,G2,G3,G4 task;

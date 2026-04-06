@@ -14,6 +14,7 @@ dependencies = [
     "xgboost",
     "torch>=2.11.0",
     "transformers>=5.4.0",
+    "torch-geometric>=2.6.0",
 ]
 
 [[tool.uv.index]]
@@ -22,4 +23,6 @@ url = "https://download.pytorch.org/whl/cu128"
 explicit = true
 
 [tool.uv.sources]
-torch = [{ index = "pytorch-cu128" }]
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux'" },
+]

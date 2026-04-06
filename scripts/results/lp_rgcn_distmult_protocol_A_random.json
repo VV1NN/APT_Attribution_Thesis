@@ -1,0 +1,37 @@
+{
+  "model": "rgcn_distmult",
+  "protocol": "protocol_A_random",
+  "config": {
+    "dim": 64,
+    "n_bases": 4,
+    "decoder": "distmult",
+    "epochs_trained": 5,
+    "lr": 0.001,
+    "neg_ratio": 10,
+    "dropout": 0.2,
+    "n_params": 4313568,
+    "train_time_sec": 107.8
+  },
+  "aggregate": {
+    "MRR": 0.019303,
+    "Hits@1": 0.0,
+    "Hits@3": 0.04,
+    "Hits@10": 0.06,
+    "mean_rank": 1194.02,
+    "median_rank": 1055.5
+  },
+  "per_relation": {
+    "contacted_ip": {
+      "count": 50,
+      "candidate_pool_size": 12751,
+      "MRR": 0.019303,
+      "Hits@1": 0.0,
+      "Hits@3": 0.04,
+      "Hits@10": 0.06,
+      "mean_rank": 1194.02,
+      "median_rank": 1055.5
+    }
+  },
+  "total_evaluated": 50,
+  "elapsed_seconds": 0.4
+}

@@ -1,0 +1,362 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- 標題 -->
+    <mxCell id="2" parent="1" style="text;fontSize=18;fontStyle=1;align=center;fillColor=none;strokeColor=none;fontColor=#333333;" value="多信號 APT 歸因框架" vertex="1">
+      <mxGeometry height="30" width="400" x="210" y="8" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸入：IoCs -->
+    <mxCell id="10" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;whiteSpace=wrap;fontColor=#333;" value="入侵指標 (IoCs)&#xa;hash / ip / domain" vertex="1">
+      <mxGeometry height="36" width="140" x="20" y="44" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸入：VT API -->
+    <mxCell id="11" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;size=0.12;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;whiteSpace=wrap;fontColor=#333;" value="VirusTotal API&#xa;(詳情 + 關聯查詢)" vertex="1">
+      <mxGeometry height="40" width="170" x="185" y="42" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸入：CTI 報告 -->
+    <mxCell id="12" parent="1" style="shape=document;size=0.1;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;whiteSpace=wrap;fontColor=#333;" value="CTI 威脅情報報告&#xa;(207 份, 17 個組織)" vertex="1">
+      <mxGeometry height="44" width="145" x="515" y="38" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸入：NER 模型 -->
+    <mxCell id="13" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;whiteSpace=wrap;fontColor=#333;" value="NER-BERT-CRF&#xa;(13 種實體類型)" vertex="1">
+      <mxGeometry height="32" width="108" x="685" y="44" as="geometry"/>
+    </mxCell>
+
+    <!-- 邊：IoC -> VT API -->
+    <mxCell id="14" edge="1" parent="1" source="10" style="endArrow=classic;strokeColor=#6c8ebf;strokeWidth=1.5;" target="11">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 知識圖譜建構區塊 ===== -->
+    <mxCell id="100" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=35;" value="" vertex="1">
+      <mxGeometry height="215" width="410" x="10" y="94" as="geometry"/>
+    </mxCell>
+    <mxCell id="101" parent="1" style="text;fontSize=12;fontStyle=1;align=left;fillColor=none;strokeColor=none;fontColor=#333;" value="IoC 知識圖譜建構" vertex="1">
+      <mxGeometry height="18" width="200" x="22" y="97" as="geometry"/>
+    </mxCell>
+
+    <!-- KG 節點 -->
+    <mxCell id="110" parent="1" style="ellipse;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;fontColor=#333;" value="APT" vertex="1">
+      <mxGeometry height="32" width="45" x="28" y="172" as="geometry"/>
+    </mxCell>
+    <mxCell id="111" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#6c8ebf;fontSize=9;fontColor=#333;" value="檔案" vertex="1">
+      <mxGeometry height="24" width="50" x="98" y="132" as="geometry"/>
+    </mxCell>
+    <mxCell id="112" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#6c8ebf;fontSize=9;fontColor=#333;" value="網域" vertex="1">
+      <mxGeometry height="24" width="50" x="98" y="172" as="geometry"/>
+    </mxCell>
+    <mxCell id="113" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#6c8ebf;fontSize=9;fontColor=#333;" value="IP" vertex="1">
+      <mxGeometry height="24" width="50" x="98" y="212" as="geometry"/>
+    </mxCell>
+
+    <!-- L1 節點 -->
+    <mxCell id="114" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#82b366;fontSize=8;dashed=1;fontColor=#333;" value="L1 檔案" vertex="1">
+      <mxGeometry height="20" width="50" x="178" y="124" as="geometry"/>
+    </mxCell>
+    <mxCell id="115" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#82b366;fontSize=8;dashed=1;fontColor=#333;" value="L1 網域" vertex="1">
+      <mxGeometry height="20" width="50" x="178" y="164" as="geometry"/>
+    </mxCell>
+    <mxCell id="116" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#82b366;fontSize=8;dashed=1;fontColor=#333;" value="L1 IP" vertex="1">
+      <mxGeometry height="20" width="50" x="178" y="204" as="geometry"/>
+    </mxCell>
+
+    <!-- KG 邊：APT -> L0 -->
+    <mxCell id="117" edge="1" parent="1" source="110" style="endArrow=classic;strokeColor=#b85450;strokeWidth=1;" target="111">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="118" edge="1" parent="1" source="110" style="endArrow=classic;strokeColor=#b85450;strokeWidth=1;" target="112">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="119" edge="1" parent="1" source="110" style="endArrow=classic;strokeColor=#b85450;strokeWidth=1;" target="113">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- KG 邊：L0 -> L1 -->
+    <mxCell id="120" edge="1" parent="1" source="111" style="endArrow=classic;strokeColor=#82b366;strokeWidth=1;dashed=1;" target="114">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="121" edge="1" parent="1" source="112" style="endArrow=classic;strokeColor=#82b366;strokeWidth=1;dashed=1;" target="115">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="122" edge="1" parent="1" source="113" style="endArrow=classic;strokeColor=#82b366;strokeWidth=1;dashed=1;" target="116">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- KG 註解 -->
+    <mxCell id="125" parent="1" style="text;fontSize=8;align=left;fillColor=none;strokeColor=none;fontColor=#666;whiteSpace=wrap;" value="L0: CTI 報告提取 (6,182)&#xa;L1: VT 發現 (60,262)&#xa;11 種 VT 邊類型" vertex="1">
+      <mxGeometry height="38" width="140" x="245" y="118" as="geometry"/>
+    </mxCell>
+    <mxCell id="126" parent="1" style="text;fontSize=8;align=left;fillColor=none;strokeColor=none;fontColor=#888;whiteSpace=wrap;" value="VT 元資料擴充：&#xa;PE 資訊、WHOIS、ASN、&#xa;DNS、偵測統計" vertex="1">
+      <mxGeometry height="35" width="140" x="245" y="160" as="geometry"/>
+    </mxCell>
+    <mxCell id="127" parent="1" style="text;fontSize=9;fontStyle=2;align=left;fillColor=none;strokeColor=none;fontColor=#4a6fa5;whiteSpace=wrap;" value="66,444 節點&#xa;109,443 條邊&#xa;21 個 APT 組織" vertex="1">
+      <mxGeometry height="38" width="110" x="245" y="200" as="geometry"/>
+    </mxCell>
+    <mxCell id="128" parent="1" style="text;fontSize=7;align=left;fillColor=#f0f4fa;strokeColor=#ccc;fontColor=#555;whiteSpace=wrap;rounded=1;spacingLeft=4;" value="contacted_ip / contacted_domain&#xa;dropped_file / execution_parent&#xa;bundled_file / resolves_to&#xa;communicating_file / referrer_file&#xa;has_subdomain / contacted_url" vertex="1">
+      <mxGeometry height="50" width="175" x="28" y="250" as="geometry"/>
+    </mxCell>
+
+    <!-- 邊：VT API -> KG 區塊 -->
+    <mxCell id="129" edge="1" parent="1" source="11" style="endArrow=classic;strokeColor=#6c8ebf;strokeWidth=1.5;" target="100">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="262" y="94" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ===== TTP 語境提取區塊 ===== -->
+    <mxCell id="200" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=35;" value="" vertex="1">
+      <mxGeometry height="215" width="375" x="435" y="94" as="geometry"/>
+    </mxCell>
+    <mxCell id="201" parent="1" style="text;fontSize=12;fontStyle=1;align=left;fillColor=none;strokeColor=none;fontColor=#333;" value="TTP 攻擊語境提取" vertex="1">
+      <mxGeometry height="18" width="200" x="448" y="97" as="geometry"/>
+    </mxCell>
+
+    <!-- TTP pipeline 節點 -->
+    <mxCell id="210" parent="1" style="shape=document;size=0.12;rounded=1;fillColor=#fff;strokeColor=#d6b656;fontSize=9;whiteSpace=wrap;fontColor=#333;" value="報告&#xa;全文" vertex="1">
+      <mxGeometry height="36" width="58" x="452" y="124" as="geometry"/>
+    </mxCell>
+    <mxCell id="211" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#d6b656;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="NER&#xa;推論" vertex="1">
+      <mxGeometry height="30" width="62" x="536" y="120" as="geometry"/>
+    </mxCell>
+
+    <!-- 實體類型標籤 -->
+    <mxCell id="212" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="工具" vertex="1">
+      <mxGeometry height="17" width="35" x="622" y="112" as="geometry"/>
+    </mxCell>
+    <mxCell id="213" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="手法" vertex="1">
+      <mxGeometry height="17" width="35" x="661" y="112" as="geometry"/>
+    </mxCell>
+    <mxCell id="214" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="漏洞" vertex="1">
+      <mxGeometry height="17" width="35" x="700" y="112" as="geometry"/>
+    </mxCell>
+    <mxCell id="215" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="目的" vertex="1">
+      <mxGeometry height="17" width="35" x="622" y="133" as="geometry"/>
+    </mxCell>
+    <mxCell id="216" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="產業" vertex="1">
+      <mxGeometry height="17" width="35" x="661" y="133" as="geometry"/>
+    </mxCell>
+    <mxCell id="217" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#333;" value="地區" vertex="1">
+      <mxGeometry height="17" width="35" x="700" y="133" as="geometry"/>
+    </mxCell>
+
+    <!-- 正規化 + 映射 -->
+    <mxCell id="220" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#d6b656;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="實體正規化&#xa;+ ATT&amp;CK 白名單過濾" vertex="1">
+      <mxGeometry height="32" width="135" x="506" y="170" as="geometry"/>
+    </mxCell>
+    <mxCell id="221" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#888;whiteSpace=wrap;" value="10,086 → 2,124 實體&#xa;工具: 6,700 → 345 unique" vertex="1">
+      <mxGeometry height="24" width="130" x="665" y="170" as="geometry"/>
+    </mxCell>
+    <mxCell id="222" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#d6b656;fontSize=9;whiteSpace=wrap;fontColor=#333;" value="IoC → 報告 → TTP&#xa;映射 (6,054 IoCs)" vertex="1">
+      <mxGeometry height="32" width="125" x="455" y="218" as="geometry"/>
+    </mxCell>
+    <mxCell id="223" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#e6a117;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;strokeWidth=2;" value="TF-IDF 特徵&#xa;(L5: 1,538 維稀疏)" vertex="1">
+      <mxGeometry height="32" width="125" x="610" y="218" as="geometry"/>
+    </mxCell>
+    <mxCell id="224" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#e6a117;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;strokeWidth=2;" value="各 APT 組織&#xa;TTP 側寫 (TF-IDF)" vertex="1">
+      <mxGeometry height="30" width="125" x="610" y="262" as="geometry"/>
+    </mxCell>
+
+    <!-- TTP pipeline 邊 -->
+    <mxCell id="230" edge="1" parent="1" source="210" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;" target="211">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="231" edge="1" parent="1" source="211" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;" target="212">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="232" edge="1" parent="1" source="211" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;" target="220">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="233" edge="1" parent="1" source="220" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;" target="222">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="234" edge="1" parent="1" source="222" style="endArrow=classic;strokeColor=#e6a117;strokeWidth=1.5;" target="223">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="235" edge="1" parent="1" source="223" style="endArrow=classic;strokeColor=#e6a117;strokeWidth=1;" target="224">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="236" edge="1" parent="1" source="12" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1.5;" target="210">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="237" edge="1" parent="1" source="13" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;exitX=0.5;exitY=1;" target="211">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 三信號歸因區塊 ===== -->
+    <mxCell id="300" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=35;" value="" vertex="1">
+      <mxGeometry height="110" width="800" x="10" y="320" as="geometry"/>
+    </mxCell>
+    <mxCell id="301" parent="1" style="text;fontSize=11;fontStyle=1;align=left;fillColor=none;strokeColor=none;fontColor=#333;" value="三種歸因信號（Per-Report Leave-One-Out 評估）" vertex="1">
+      <mxGeometry height="16" width="380" x="22" y="323" as="geometry"/>
+    </mxCell>
+
+    <!-- 信號 1 -->
+    <mxCell id="310" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="信號 1&#xa;圖譜重疊匹配" vertex="1">
+      <mxGeometry height="36" width="165" x="22" y="346" as="geometry"/>
+    </mxCell>
+    <mxCell id="311" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;" value="1-hop 鄰居 → 組織投票&#xa;唯一贏家 = 100% 精確率&#xa;覆蓋率 = 25.5%" vertex="1">
+      <mxGeometry height="32" width="165" x="22" y="385" as="geometry"/>
+    </mxCell>
+
+    <!-- 信號 2 -->
+    <mxCell id="320" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="信號 2&#xa;TTP 餘弦相似度" vertex="1">
+      <mxGeometry height="36" width="165" x="310" y="346" as="geometry"/>
+    </mxCell>
+    <mxCell id="321" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;" value="IoC TTP → 比對各 APT 側寫&#xa;GroupKFold micro-F1 = 34.1%&#xa;Tie-break 準確率 = 50.7%" vertex="1">
+      <mxGeometry height="32" width="175" x="310" y="385" as="geometry"/>
+    </mxCell>
+
+    <!-- 信號 3 -->
+    <mxCell id="330" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="信號 3&#xa;VT 元資料分類器" vertex="1">
+      <mxGeometry height="36" width="165" x="610" y="346" as="geometry"/>
+    </mxCell>
+    <mxCell id="331" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;" value="88 維特徵 → XGBoost&#xa;GroupKFold micro-F1 = 14.0%&#xa;僅作為兜底方案" vertex="1">
+      <mxGeometry height="32" width="165" x="610" y="385" as="geometry"/>
+    </mxCell>
+
+    <!-- 邊：資料源 -> 信號 -->
+    <mxCell id="340" edge="1" parent="1" source="100" style="endArrow=classic;strokeColor=#6c8ebf;strokeWidth=1.5;entryX=0.5;entryY=0;curved=1;" target="310">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="341" edge="1" parent="1" source="224" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1.5;entryX=0.5;entryY=0;" target="320">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="342" edge="1" parent="1" source="100" style="endArrow=classic;strokeColor=#9673a6;strokeWidth=1.5;entryX=0.5;entryY=0;exitX=0.9;exitY=1;curved=1;" target="330">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="343" edge="1" parent="1" source="223" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;dashed=1;entryX=0.3;entryY=0;exitX=0.5;exitY=1;curved=1;" target="330">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 信心度級聯區塊 ===== -->
+    <mxCell id="400" parent="1" style="rounded=1;fillColor=#f5f5f5;strokeColor=#bbb;opacity=50;" value="" vertex="1">
+      <mxGeometry height="108" width="800" x="10" y="445" as="geometry"/>
+    </mxCell>
+    <mxCell id="401" parent="1" style="text;fontSize=12;fontStyle=1;align=left;fillColor=none;strokeColor=none;fontColor=#333;" value="信心度級聯決策" vertex="1">
+      <mxGeometry height="18" width="200" x="22" y="448" as="geometry"/>
+    </mxCell>
+
+    <!-- 階段 1 -->
+    <mxCell id="410" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="階段 1&#xa;圖譜唯一贏家" vertex="1">
+      <mxGeometry height="32" width="130" x="28" y="474" as="geometry"/>
+    </mxCell>
+    <mxCell id="411" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;fontColor=#333;" value="高信心" vertex="1">
+      <mxGeometry height="22" width="52" x="28" y="514" as="geometry"/>
+    </mxCell>
+    <mxCell id="412" parent="1" style="text;fontSize=7;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;align=left;" value="100% 準確率&#xa;25.5% 覆蓋率" vertex="1">
+      <mxGeometry height="24" width="72" x="85" y="512" as="geometry"/>
+    </mxCell>
+
+    <!-- 階段 2 -->
+    <mxCell id="420" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="階段 2&#xa;TTP 打破平局" vertex="1">
+      <mxGeometry height="32" width="130" x="220" y="474" as="geometry"/>
+    </mxCell>
+    <mxCell id="421" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1;fontColor=#333;" value="中信心" vertex="1">
+      <mxGeometry height="22" width="52" x="220" y="514" as="geometry"/>
+    </mxCell>
+    <mxCell id="422" parent="1" style="text;fontSize=7;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;align=left;" value="50.7% 準確率&#xa;46.3% 覆蓋率" vertex="1">
+      <mxGeometry height="24" width="72" x="277" y="512" as="geometry"/>
+    </mxCell>
+
+    <!-- 階段 3 -->
+    <mxCell id="430" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;" value="階段 3&#xa;ML 分類器 (L1+L5)" vertex="1">
+      <mxGeometry height="32" width="140" x="440" y="474" as="geometry"/>
+    </mxCell>
+    <mxCell id="431" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;fontStyle=1;fontColor=#333;" value="低信心" vertex="1">
+      <mxGeometry height="22" width="52" x="440" y="514" as="geometry"/>
+    </mxCell>
+    <mxCell id="432" parent="1" style="text;fontSize=7;fillColor=none;strokeColor=none;fontColor=#555;whiteSpace=wrap;align=left;" value="30.7% 準確率&#xa;98.5% 覆蓋率" vertex="1">
+      <mxGeometry height="24" width="72" x="497" y="512" as="geometry"/>
+    </mxCell>
+
+    <!-- 級聯邊 -->
+    <mxCell id="413" edge="1" parent="1" source="410" style="endArrow=classic;strokeColor=#999;strokeWidth=1.5;fontSize=8;fontColor=#999;labelBackgroundColor=#f5f5f5;" target="420" value="平局">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="423" edge="1" parent="1" source="420" style="endArrow=classic;strokeColor=#999;strokeWidth=1.5;fontSize=8;fontColor=#999;labelBackgroundColor=#f5f5f5;" target="430" value="無匹配 / 未打破">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="414" edge="1" parent="1" source="410" style="endArrow=classic;strokeColor=#82b366;strokeWidth=1;" target="411">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="424" edge="1" parent="1" source="420" style="endArrow=classic;strokeColor=#d6b656;strokeWidth=1;" target="421">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="434" edge="1" parent="1" source="430" style="endArrow=classic;strokeColor=#b85450;strokeWidth=1;" target="431">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- 階段 1 無匹配跳轉 -->
+    <mxCell id="435" edge="1" parent="1" source="410" style="endArrow=classic;strokeColor=#999;strokeWidth=1;dashed=1;fontSize=7;fontColor=#999;exitX=0.5;exitY=1;entryX=0.3;entryY=1;curved=1;labelBackgroundColor=#f5f5f5;" target="430" value="無匹配">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="93" y="546"/>
+          <mxPoint x="482" y="546"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 整體結果 -->
+    <mxCell id="440" parent="1" style="rounded=1;fillColor=#fff;strokeColor=#333;fontSize=9;fontStyle=1;whiteSpace=wrap;fontColor=#333;strokeWidth=2;align=left;spacingLeft=8;" value="整體：micro-F1 = 52.8%&#xa;macro-F1 = 63.5%&#xa;覆蓋率 = 98.5%" vertex="1">
+      <mxGeometry height="44" width="165" x="640" y="468" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 輸出區塊 ===== -->
+    <mxCell id="500" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;whiteSpace=wrap;fontColor=#333;strokeWidth=2;" value="APT 歸因結果&#xa;+ 信心度等級" vertex="1">
+      <mxGeometry height="40" width="170" x="130" y="568" as="geometry"/>
+    </mxCell>
+    <mxCell id="501" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;whiteSpace=wrap;fontColor=#333;strokeWidth=2;" value="關聯攻擊&#xa;基礎設施" vertex="1">
+      <mxGeometry height="40" width="170" x="500" y="568" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸出邊 -->
+    <mxCell id="502" edge="1" parent="1" source="400" style="endArrow=classic;strokeColor=#555;strokeWidth=2;exitX=0.3;exitY=1;curved=1;entryX=0.5;entryY=0;" target="500">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="503" edge="1" parent="1" source="400" style="endArrow=classic;strokeColor=#555;strokeWidth=2;exitX=0.7;exitY=1;curved=1;entryX=0.5;entryY=0;" target="501">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- 基礎設施發現註解 -->
+    <mxCell id="504" edge="1" parent="1" source="310" style="endArrow=classic;strokeColor=#82b366;strokeWidth=1;dashed=1;fontSize=7;fontColor=#82b366;labelBackgroundColor=#fff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;curved=1;" target="501" value="匹配路徑&#xa;(平均 12 節點, P@K=1.0)">
+      <mxGeometry relative="1" x="0.2" y="10" as="geometry"/>
+    </mxCell>
+
+    <!-- 輸出註解 -->
+    <mxCell id="510" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#666;whiteSpace=wrap;" value="Top-K APT 組織&#xa;信心度：高 / 中 / 低&#xa;各階段歸因來源" vertex="1">
+      <mxGeometry height="32" width="170" x="130" y="610" as="geometry"/>
+    </mxCell>
+    <mxCell id="511" parent="1" style="text;fontSize=7;align=left;fillColor=none;strokeColor=none;fontColor=#666;whiteSpace=wrap;" value="新發現基礎設施：97.6%&#xa;IP: 9,554 / 檔案: 6,232&#xa;網域: 2,855" vertex="1">
+      <mxGeometry height="32" width="170" x="500" y="610" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 研究貢獻列 ===== -->
+    <mxCell id="600" parent="1" style="rounded=1;fillColor=#f5f5f5;strokeColor=#ccc;" value="" vertex="1">
+      <mxGeometry height="50" width="800" x="10" y="650" as="geometry"/>
+    </mxCell>
+    <mxCell id="601" parent="1" style="text;fontSize=10;fontStyle=1;align=left;fillColor=none;strokeColor=none;fontColor=#333;" value="研究貢獻" vertex="1">
+      <mxGeometry height="14" width="100" x="22" y="652" as="geometry"/>
+    </mxCell>
+    <mxCell id="610" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;whiteSpace=wrap;fontColor=#333;" value="C1: VT 擴充知識圖譜&#xa;(66K 節點, 21 組織)" vertex="1">
+      <mxGeometry height="20" width="135" x="22" y="672" as="geometry"/>
+    </mxCell>
+    <mxCell id="611" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;whiteSpace=wrap;fontColor=#333;" value="C2: 圖譜重疊&#xa;100% 確定性精確率" vertex="1">
+      <mxGeometry height="20" width="130" x="165" y="672" as="geometry"/>
+    </mxCell>
+    <mxCell id="612" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;whiteSpace=wrap;fontColor=#333;" value="C3: 多信號融合&#xa;(52.8% F1, 98.5% 覆蓋)" vertex="1">
+      <mxGeometry height="20" width="140" x="303" y="672" as="geometry"/>
+    </mxCell>
+    <mxCell id="613" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;whiteSpace=wrap;fontColor=#333;" value="C4: Campaign 記憶&#xa;分析 (-50% 差距)" vertex="1">
+      <mxGeometry height="20" width="130" x="451" y="672" as="geometry"/>
+    </mxCell>
+    <mxCell id="614" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;whiteSpace=wrap;fontColor=#333;" value="C5: 基礎設施發現&#xa;(P@K=1.0, 97.6% 新)" vertex="1">
+      <mxGeometry height="20" width="140" x="589" y="672" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
